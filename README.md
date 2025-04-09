@@ -42,7 +42,7 @@ Prerequisites
 Installation Steps
 	1.	Clone the repository:
 
-git clone https://github.com/YourUsername/hopfield-pebal-project.git
+git clone 
 cd hopfield-pebal-project
 
 
@@ -60,4 +60,64 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.7 -c pytorch -c nvid
 
 pip install tqdm numpy
 
+Dataset Setup
+
+This project follows the dataset conventions as described in the original PEBAL repository. For proper evaluation and training, prepare the datasets as follows:
+
+Cityscapes (Inlier Data)
+	•	Images & Annotations:
+Please download the Cityscapes dataset from the official Cityscapes website.
+	•	Use the “fine” annotations for training and validation.
+	•	The repository’s structure assumes that the Cityscapes images and annotations are organized into separate folders (one for images and one for labels).
+	•	The annotation files should include the *_gtFine_labelIds.png images, which are required for training the segmentation model.
+
+COCO (Auxiliary Outlier Data)
+	•	Auxiliary Images:
+The auxiliary outlier data comes from the COCO dataset. Please refer to the official COCO website and download the training images (e.g., from the 2017 release).
+	•	In our experiments (and as in the original PEBAL repository), the auxiliary dataset is used without annotations.
+	•	The images should be extracted into a directory that your dataset loader can read.
+
+Cityscapes/
+├── images/
+│    ├── train/
+│    ├── val/
+│    └── test/  (if available)
+└── annotations/
+     ├── train/       (contains gtFine_labelIds)
+     ├── val/         (contains gtFine_labelIds)
+     └── test/        (if available)
+
+COCO/
+├── train2017/        # All training images used as auxiliary outlier data.
+└── annotations/      # (Optional) COCO annotation files if needed.
+
+Training
+
+To train the model, run:
+
+python main.py 
+
+Inference
+
+You can use the inference() function provided in Hopfield_PEBAL.py to run a prediction on a single image. For examplz
+python -c "from Hopfield_PEBAL import inference; import torch; \
+             img = torch.randn(3, 512, 1024); \
+             model = torch.load('checkpoints/best_model.pth'); \
+             out = inference(model, img, torch.device('cuda')); print(out['prediction'])"
+
+Configuration
+
+Configuration options such as paths, batch size, learning rates, margins, and network hyperparameters are set via command-line arguments using the helper in utils.py. They have default values in the code which you can override.
+
+Memory & Performance
+
+If you encounter CUDA out-of-memory errors, try reducing the batch size or image resolution. Also, you can set the environment variable to allow expandable segments:
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+Acknowledgements
+
+This project builds upon recent research in out-of-distribution detection using energy-based models and modern Hopfield networks. Many thanks to the original authors of the PEBAL and Hopfield Boosting approaches.
+Contact
+
+For questions or contributions, please open an issue or contact Rohith Thota at rohiththota79@gmail.com
 
