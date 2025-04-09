@@ -42,7 +42,7 @@ Prerequisites
 Installation Steps
 	1.	Clone the repository:
 
-git clone 
+git clone https://github.com/RohithThota97/hopfield-pebal-project
 cd hopfield-pebal-project
 
 
