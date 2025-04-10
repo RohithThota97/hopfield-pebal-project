@@ -23,24 +23,21 @@ def train_hopfield_pebal(train_loader, val_loader, aux_loader, model, criterion,
         hopfield_losses = 0.0
         
         pbar = tqdm(train_loader, desc=f"Training Epoch {epoch}")
-        # Create auxiliary data iterator
         aux_iter = iter(aux_loader)
         for batch_idx, (images, masks) in enumerate(pbar):
             images = images.to(device)
             masks = masks.to(device)
             
-            # Retrieve OOD samples from auxiliary dataset every 3rd batch (if available)
+            # Get OOD samples from auxiliary dataset every 3rd batch, if available.
             try:
-                aux_data = next(aux_iter)
+                aux_images, _ = next(aux_iter)
             except StopIteration:
                 aux_iter = iter(aux_loader)
-                aux_data = next(aux_iter)
+                aux_images, _ = next(aux_iter)
             
-            aux_images = aux_data.to(device)
-            # For auxiliary samples, assume all pixels are anomalies (using ignore index 255)
+            aux_images = aux_images.to(device)
             aux_masks = 255 * torch.ones_like(masks)
             
-            # Mix in OOD samples every 3rd batch
             if batch_idx % 3 == 0 and aux_images.size(0) > 0:
                 num_ood = min(images.size(0) // 2, aux_images.size(0))
                 combined_images = torch.cat([images, aux_images[:num_ood]], dim=0)
@@ -55,16 +52,11 @@ def train_hopfield_pebal(train_loader, val_loader, aux_loader, model, criterion,
                 is_anomaly = None
             
             optimizer.zero_grad()
-            # Here, we assume that our model forward accepts an optional argument 
-            # "return_all_outputs" to return a dictionary of outputs.
             outputs = model(combined_images, return_all_outputs=True)
             loss_dict = criterion(outputs, combined_masks, is_anomaly=is_anomaly)
             loss = loss_dict['loss']
             loss.backward()
-            
-            # Gradient clipping
             torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
-            
             optimizer.step()
             
             running_loss += loss.item()
@@ -88,12 +80,15 @@ def train_hopfield_pebal(train_loader, val_loader, aux_loader, model, criterion,
         avg_seg_loss = seg_losses / len(train_loader)
         avg_energy_loss = energy_losses / len(train_loader)
         avg_hopfield_loss = hopfield_losses / len(train_loader)
-        logger.info(f"Epoch {epoch}: Training Loss: {avg_loss:.4f}, Seg: {avg_seg_loss:.4f}, "
-                    f"Energy: {avg_energy_loss:.4f}, Hopfield: {avg_hopfield_loss:.4f}")
+        logger.info(f"Epoch {epoch}: Training Loss: {avg_loss:.4f}, "
+                    f"Seg: {avg_seg_loss:.4f}, Energy: {avg_energy_loss:.4f}, "
+                    f"Hopfield: {avg_hopfield_loss:.4f}")
         
-        val_loss, val_seg_loss, val_energy_loss, val_hopfield_loss = validate(val_loader, model, criterion, device)
-        logger.info(f"Epoch {epoch}: Validation Loss: {val_loss:.4f}, Seg: {val_seg_loss:.4f}, "
-                    f"Energy: {val_energy_loss:.4f}, Hopfield: {val_hopfield_loss:.4f}")
+        val_loss, val_seg_loss, val_energy_loss, val_hopfield_loss = validate(
+            val_loader, model, criterion, device)
+        logger.info(f"Epoch {epoch}: Validation Loss: {val_loss:.4f}, "
+                    f"Seg: {val_seg_loss:.4f}, Energy: {val_energy_loss:.4f}, "
+                    f"Hopfield: {val_hopfield_loss:.4f}")
         scheduler.step(val_loss)
         
         update_memory_from_loader(model, train_loader, device, num_batches=5)
@@ -108,7 +103,7 @@ def train_hopfield_pebal(train_loader, val_loader, aux_loader, model, criterion,
                 'val_loss': val_loss,
             }, checkpoint_path)
             logger.info(f"Saved checkpoint to {checkpoint_path}")
-        
+            
         latest_path = os.path.join(save_path, "latest_model.pth")
         torch.save({
             'epoch': epoch,
@@ -144,9 +139,9 @@ def validate(val_loader, model, criterion, device):
 def update_memory_with_features(model, features, masks=None, is_anomaly=None):
     """
     Update memory bank using features and corresponding masks.
-    Instead of simply flattening masks, downsample masks to match the model's output resolution.
+    Downsample masks to match the spatial resolution of the model's output
+    to ensure the flattened mask size aligns with flattened features.
     """
-    # If an anomaly mask is provided, adjust features accordingly.
     if is_anomaly is not None:
         is_anomaly_flat = is_anomaly.view(-1)
         if is_anomaly_flat.shape[0] != features.shape[0]:
@@ -160,11 +155,10 @@ def update_memory_with_features(model, features, masks=None, is_anomaly=None):
     
     if features.size(0) > 0:
         if masks is not None:
-            # Assuming that your model outputs logits (or features) with spatial resolution (H_logits, W_logits)
-            # and that the original masks are of a higher resolution, we downsample masks to the target size.
-            # Here we set a target size. Adjust this value to match your model's output.
-            target_size = (32, 32)  # <-- Replace with your actual target spatial resolution if different.
-            # Make sure masks are of shape [B, 1, H, W] before interpolation
+            # Obtain the target spatial resolution from the logits (or output energy map)
+            # For example, assume the target resolution is the same as the energy map size.
+            # Here we use a fixed target, adjust if needed.
+            target_size = (32, 32)  # Modify this value as required.
             downsampled_masks = F.interpolate(masks.unsqueeze(1).float(), size=target_size, mode='nearest')
             flattened_masks = downsampled_masks.view(-1).long()
         else:
@@ -172,8 +166,10 @@ def update_memory_with_features(model, features, masks=None, is_anomaly=None):
         
         model.update_memory(features, labels=flattened_masks, is_anomaly=None)
 
-def update_memory_from_loader(model, loader, device, num_batches=5):
-    """Update memory bank using a few random batches from the loader."""
+def update_memory_from_loader(model, loader, device, num_batches=5, downsample_size=(256,256)):
+    """Update memory bank using a few batches from the loader.
+    Optionally downsample images to reduce memory consumption.
+    """
     model.eval()
     all_features = []
     with torch.no_grad():
@@ -182,12 +178,12 @@ def update_memory_from_loader(model, loader, device, num_batches=5):
                 break
             images = images.to(device)
             masks = masks.to(device)
-            # Try to obtain features using the segmentation model's return_all_outputs if available.
+            # Downsample images before passing to the model to reduce memory usage.
+            images = F.interpolate(images, size=downsample_size, mode='bilinear', align_corners=False)
             outputs = model(images, return_all_outputs=True)
             features = outputs.get('features', None)
             if features is None:
                 continue
-            # If features have spatial dimensions, average them to create a feature vector per image.
             if features.dim() > 2:
                 features = features.view(features.shape[0], features.shape[1], -1).mean(dim=2)
             all_features.append(features.cpu())

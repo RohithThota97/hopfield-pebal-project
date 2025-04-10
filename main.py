@@ -14,6 +14,10 @@ from datasets import SegmentationDataset, SimpleImageDataset
 from Hopfield_PEBAL import HopfieldPEBALSegmentation
 from hopfield import HopfieldPEBALLoss
 from trainer import train_hopfield_pebal, update_memory_from_loader
+os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
+
+# Optional: Set reasonable defaults for tensor allocation
+torch.backends.cudnn.benchmark = True
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
