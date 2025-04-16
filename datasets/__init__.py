@@ -1,1 +1,4 @@
-from .datasets import SegmentationDataset, SimpleImageDataset, convert_label
+from datasets.datasets import SegmentationDataset, SimpleImageDataset
+from .fishyscapes_dataset import FishyscapesDataset
+
+__all__ = ['SegmentationDataset', 'SimpleImageDataset', 'FishyscapesDataset']
