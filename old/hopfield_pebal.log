@@ -1,0 +1,139 @@
+2025-04-07 10:52:45,352 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 10:52:45,428 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 10:52:45,444 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 10:52:59,450 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 10:52:59,452 - Hopfield-PEBAL - WARNING - No cached memory bank found. Creating a random memory bank.
+2025-04-07 10:52:59,592 - Hopfield-PEBAL - INFO - Added /home/ha51dybi/PEBAL/code to sys.path
+2025-04-07 10:52:59,592 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: No module named 'model.wide_network'; 'model' is not a package
+2025-04-07 10:58:09,458 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 10:58:09,534 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 10:58:09,548 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 10:58:23,401 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 10:58:23,402 - Hopfield-PEBAL - WARNING - No cached memory bank found. Creating a random memory bank.
+2025-04-07 10:58:23,404 - Hopfield-PEBAL - INFO - Added /home/ha51dybi/PEBAL/code to sys.path
+2025-04-07 10:58:23,404 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: No module named 'model.wide_network'; 'model' is not a package
+2025-04-07 10:58:43,084 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 10:58:43,159 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 10:58:43,173 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 10:58:57,253 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 10:58:57,254 - Hopfield-PEBAL - WARNING - No cached memory bank found. Creating a random memory bank.
+2025-04-07 10:58:57,256 - Hopfield-PEBAL - INFO - Added /home/ha51dybi/PEBAL/code to sys.path
+2025-04-07 10:58:57,256 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: No module named 'model.wide_network'; 'model' is not a package
+2025-04-07 14:56:37,598 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 14:56:38,163 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 14:56:38,311 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 14:56:53,539 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 14:56:53,540 - Hopfield-PEBAL - WARNING - No cached memory bank found. Creating a random memory bank.
+2025-04-07 14:56:53,658 - Hopfield-PEBAL - INFO - Added /home/ha51dybi/PEBAL/code to sys.path
+2025-04-07 14:56:53,676 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: No module named 'model.mynn'; 'model' is not a package
+2025-04-07 15:12:30,020 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 15:12:30,096 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 15:12:30,112 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 15:12:43,982 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 15:12:43,983 - Hopfield-PEBAL - WARNING - No cached memory bank found. Creating a random memory bank.
+2025-04-07 15:12:43,985 - Hopfield-PEBAL - INFO - Added /home/ha51dybi/PEBAL/code to sys.path
+2025-04-07 15:12:43,995 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: attempted relative import with no known parent package
+2025-04-07 15:13:53,761 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 15:13:53,851 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 15:13:53,867 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 15:14:07,374 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 15:14:07,375 - Hopfield-PEBAL - WARNING - No cached memory bank found. Creating a random memory bank.
+2025-04-07 15:14:07,377 - Hopfield-PEBAL - INFO - Added /home/ha51dybi/PEBAL/code to sys.path
+2025-04-07 15:14:07,387 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: No module named 'model.mynn'; 'model' is not a package
+2025-04-07 15:55:00,977 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 15:55:01,055 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 15:55:01,081 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 15:55:16,061 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 17:49:09,383 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 17:49:09,456 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 17:49:09,471 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 17:49:24,481 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 17:50:22,810 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 17:50:22,892 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 17:50:22,918 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 17:50:36,325 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 17:51:07,088 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 17:51:07,163 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 17:51:07,178 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 17:51:21,144 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 17:57:29,189 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 17:57:29,263 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 17:57:29,277 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 17:57:43,247 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 18:02:05,172 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-07 18:02:05,246 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-07 18:02:05,260 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-07 18:02:19,157 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-07 18:02:19,157 - Hopfield-PEBAL - INFO - Added False to sys.path
+2025-04-07 18:02:19,161 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: No module named 'wide_network'
+2025-04-08 13:17:10,398 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 13:17:10,398 - Hopfield-PEBAL - INFO - Using device: cpu
+2025-04-08 13:17:10,918 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 13:17:11,068 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 13:17:25,783 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 13:22:23,714 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 13:22:23,714 - Hopfield-PEBAL - ERROR - CUDA is not available. Please make sure a GPU is accessible.
+2025-04-08 13:24:49,495 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 13:24:49,495 - Hopfield-PEBAL - ERROR - CUDA is not available. Please make sure a GPU is accessible.
+2025-04-08 14:11:39,922 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 14:11:39,922 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 14:11:40,002 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 14:11:40,017 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 14:11:53,886 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 14:17:58,309 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 14:17:58,309 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 14:17:58,389 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 14:17:58,404 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 14:18:12,707 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 14:22:06,660 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 14:22:06,661 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 14:22:06,739 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 14:22:06,753 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 14:22:21,567 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 14:22:21,580 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: No module named 'model.mynn'; 'model' is not a package
+2025-04-08 14:25:11,766 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 14:25:11,766 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 14:25:11,847 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 14:25:11,862 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 14:25:25,921 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 14:25:25,933 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: attempted relative import with no known parent package
+2025-04-08 14:34:32,464 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 14:34:32,464 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 14:34:32,546 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 14:34:32,561 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 14:34:46,923 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 14:34:46,923 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: No module named 'model.wide_network'; 'model' is not a package
+2025-04-08 14:42:04,003 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 14:42:04,003 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 14:42:04,085 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 14:42:04,101 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 14:42:18,382 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 14:42:18,383 - Hopfield-PEBAL - ERROR - Failed to import DeepWV3Plus: No module named 'model.wide_network'; 'model' is not a package
+2025-04-08 15:45:17,724 - Hopfield-PEBAL - INFO - CUDA is available. Device count: 1, current device: 0
+2025-04-08 15:45:17,724 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 15:45:17,724 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 15:45:17,811 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 15:45:17,825 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 15:45:32,093 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 15:45:32,099 - Hopfield-PEBAL - INFO - Successfully imported DeepWV3Plus.
+2025-04-08 15:49:17,340 - Hopfield-PEBAL - INFO - CUDA is available. Device count: 1, current device: 0
+2025-04-08 15:49:17,340 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 15:49:17,341 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 15:49:17,427 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 15:49:17,442 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 15:49:31,494 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 15:49:31,502 - Hopfield-PEBAL - INFO - Successfully imported DeepWV3Plus.
+2025-04-08 15:54:42,765 - Hopfield-PEBAL - INFO - CUDA is available. Device count: 1, current device: 0
+2025-04-08 15:54:42,766 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 15:54:42,767 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 15:54:42,859 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 15:54:42,874 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 15:54:57,402 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 15:54:57,409 - Hopfield-PEBAL - INFO - Successfully imported DeepWV3Plus.
+2025-04-08 15:59:34,886 - Hopfield-PEBAL - INFO - CUDA is available. Device count: 1, current device: 0
+2025-04-08 15:59:34,886 - Hopfield-PEBAL - INFO - Set random seed to 42
+2025-04-08 15:59:34,887 - Hopfield-PEBAL - INFO - Using device: cuda:0
+2025-04-08 15:59:34,966 - Hopfield-PEBAL - INFO - SegmentationDataset: 2975 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/train
+2025-04-08 15:59:34,981 - Hopfield-PEBAL - INFO - SegmentationDataset: 500 samples from /home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/val + /home/ha51dybi/PEBAL/cityscapes/annotation/city_gt_fine/val
+2025-04-08 15:59:49,330 - Hopfield-PEBAL - INFO - Found 10000 outlier images in /home/ha51dybi/PEBAL/coco/train2017
+2025-04-08 15:59:49,337 - Hopfield-PEBAL - INFO - Successfully imported DeepWV3Plus.
