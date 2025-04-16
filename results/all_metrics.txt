@@ -1,5 +1,0 @@
-lostandfound:
-  auroc: 0.5000
-  auprc: 0.5000
-  fpr95: 1.0000
-
