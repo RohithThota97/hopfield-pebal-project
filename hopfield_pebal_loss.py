@@ -1,267 +1,260 @@
 # hopfield_pebal_loss.py
-# -*- coding: utf-8 -*-
-"""
-Loss function combining standard segmentation loss with energy-based OOD loss
-and a Hopfield-based contrastive loss for the Hopfield-PEBAL model.
-"""
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import logging
+from typing import Dict, Optional
+import logging # Import logging
 
+# Get logger instance (might be configured by main script)
 logger = logging.getLogger(__name__)
+
+if not logger.hasHandlers(): # Add handler if none exists
+    handler = logging.StreamHandler()
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    logger.setLevel(logging.INFO)
+
 
 class HopfieldPEBALLoss(nn.Module):
     """
-    Combined loss function for Hopfield-PEBAL.
+    Combined loss for PEBAL-like OOD detection with Hopfield memory energy.
+    Calculates segmentation loss, energy-based OOD loss, and potentially
+    a Hopfield contrastive loss (currently placeholder).
 
-    Includes:
-    1. Standard Semantic Segmentation Loss (Cross-Entropy).
-    2. Energy-based Out-of-Distribution (OOD) Loss (Margin-based).
-    3. Hopfield-based Contrastive Loss (Placeholder - requires specific implementation).
+    Expects targets to contain values in [0, num_classes-1] or ignore_index.
     """
     def __init__(self,
                  num_classes: int,
                  seg_weight: float = 1.0,
-                 energy_weight: float = 0.5, # Added energy_weight parameter
-                 hopfield_weight: float = 0.5,
+                 energy_weight: float = 0.1,
+                 hopfield_weight: float = 0.0, # Placeholder weight for Hopfield contrastive loss
                  inlier_margin: float = 1.0,
                  outlier_margin: float = 10.0,
-                 temperature: float = 1.0,
-                 ignore_index: int = 255):
-        """
-        Initializes the HopfieldPEBALLoss.
-
-        Args:
-            num_classes (int): Number of segmentation classes.
-            seg_weight (float): Weight multiplier for the segmentation loss.
-            energy_weight (float): Weight multiplier for the energy-based OOD loss.
-            hopfield_weight (float): Weight multiplier for the Hopfield contrastive loss.
-            inlier_margin (float): Target maximum energy for in-distribution samples.
-                                    Loss is incurred if energy > inlier_margin.
-            outlier_margin (float): Target minimum energy for out-of-distribution samples.
-                                     Loss is incurred if energy < outlier_margin.
-            temperature (float): Temperature scaling for energy calculation (often applied
-                                 before this loss, e.g., logsumexp(logits/T)). This parameter
-                                 might be used differently depending on the energy definition.
-                                 Here it's stored but not directly used in the example loss.
-            ignore_index (int): Class index to ignore in segmentation loss calculation.
-        """
+                 temperature: float = 1.0, # Temperature for PEBAL energy scaling (used in model, not directly here)
+                 ignore_index: int = 255,
+                 use_combined_energy: bool = True # Use combined energy from model if available
+                 ):
         super().__init__()
+        # Input validation
+        if num_classes <= 0:
+            raise ValueError("num_classes must be positive.")
+        if seg_weight < 0 or energy_weight < 0 or hopfield_weight < 0:
+             logger.warning("Loss weights should ideally be non-negative.")
+        if inlier_margin < 0 or outlier_margin < 0:
+             logger.warning("Energy margins should ideally be non-negative.")
+
         self.num_classes = num_classes
         self.seg_weight = seg_weight
-        self.energy_weight = energy_weight # Store the energy weight
+        self.energy_weight = energy_weight
         self.hopfield_weight = hopfield_weight
         self.inlier_margin = inlier_margin
         self.outlier_margin = outlier_margin
-        self.temperature = temperature # Store temperature, may be used by energy calculation method
+        # self.temperature = temperature # Temperature is applied in the model's energy calculation logic
         self.ignore_index = ignore_index
+        self.use_combined_energy = use_combined_energy
 
-        # Standard segmentation loss component
-        self.segmentation_loss_fn = nn.CrossEntropyLoss(ignore_index=self.ignore_index, reduction='mean')
+        # Use CrossEntropyLoss with reduction='none' to calculate per-pixel loss
+        # Ensure ignore_index is correctly passed
+        # **CRITICAL:** Ensure num_classes matches the range of valid IDs in the target masks (e.g., 19 for Cityscapes trainIds 0-18)
+        self.ce_loss = nn.CrossEntropyLoss(ignore_index=self.ignore_index, reduction='none')
+        logger.info(f"Initialized CrossEntropyLoss with ignore_index={self.ignore_index} for {self.num_classes} classes.")
 
-        logger.info(f"HopfieldPEBALLoss initialized with weights: Seg={self.seg_weight}, "
-                    f"Energy={self.energy_weight}, Hopfield={self.hopfield_weight}")
-        logger.info(f"Energy margins: Inlier={self.inlier_margin}, Outlier={self.outlier_margin}")
-
-    def _calculate_segmentation_loss(self, predictions, targets):
-        """Calculates the weighted segmentation loss."""
-        if self.seg_weight <= 0:
-            return torch.tensor(0.0, device=predictions.device, requires_grad=True)
-
-        # Ensure targets are long type
-        targets = targets.long()
-
-        # Calculate loss only on valid pixels
-        valid_pixel_mask = targets != self.ignore_index
-        if not valid_pixel_mask.any():
-            # Avoid calculating loss if the target mask is entirely ignored pixels
-            return torch.tensor(0.0, device=predictions.device, requires_grad=True)
-
-        loss = self.segmentation_loss_fn(predictions, targets)
-        return loss * self.seg_weight
-
-    def _calculate_energy_loss(self, energies, is_ood):
+    def forward(self,
+                outputs: Dict[str, torch.Tensor],
+                targets: Optional[torch.Tensor],
+                ood_images: Optional[torch.Tensor] = None, # <-- ACCEPTED ARGUMENT
+                model: Optional[nn.Module] = None         # <-- ACCEPTED ARGUMENT
+                ) -> Dict[str, torch.Tensor]:
         """
-        Calculates the weighted energy-based margin loss.
-        Assumes lower energy is better for inliers, higher for outliers.
-        """
-        if self.energy_weight <= 0 or energies is None or is_ood is None:
-            return torch.tensor(0.0, device=energies.device if energies is not None else is_ood.device if is_ood is not None else 'cpu', requires_grad=True)
-
-        # Ensure energies are flattened per sample (B,)
-        # Handle different potential input shapes (e.g., B,1,H,W or B,)
-        if energies.ndim == 4: # Assume shape B, 1, H, W -> average over H, W
-             energies_flat = energies.mean(dim=[1, 2, 3])
-        elif energies.ndim == 2 and energies.shape[1] == 1: # Assume shape B, 1
-             energies_flat = energies.squeeze(1)
-        elif energies.ndim == 1: # Assume shape B,
-             energies_flat = energies
-        else:
-             logger.warning(f"Unexpected energy shape: {energies.shape}. Cannot compute energy loss.")
-             return torch.tensor(0.0, device=energies.device, requires_grad=True)
-
-        inlier_energies = energies_flat[~is_ood]
-        outlier_energies = energies_flat[is_ood]
-
-        loss_in = torch.tensor(0.0, device=energies.device)
-        if inlier_energies.numel() > 0:
-            # Penalize inliers with energy > inlier_margin
-            loss_in = torch.relu(inlier_energies - self.inlier_margin).mean()
-
-        loss_out = torch.tensor(0.0, device=energies.device)
-        if outlier_energies.numel() > 0:
-            # Penalize outliers with energy < outlier_margin
-            loss_out = torch.relu(self.outlier_margin - outlier_energies).mean()
-
-        # Combine inlier and outlier losses (simple average)
-        # Handle cases where one type might be missing in the batch
-        num_terms = (inlier_energies.numel() > 0) + (outlier_energies.numel() > 0)
-        if num_terms > 0:
-            energy_loss = (loss_in + loss_out) / max(1, num_terms) # Avoid division by zero
-        else:
-            energy_loss = torch.tensor(0.0, device=energies.device) # No samples to compute loss on
-
-        return energy_loss * self.energy_weight
-
-    def _calculate_hopfield_loss(self, hopfield_associations, targets, is_ood):
-        """
-        Placeholder for the Hopfield-based contrastive loss.
-        This needs to be implemented based on the specific output of the
-        Hopfield layer and the desired contrastive learning strategy.
-        """
-        if self.hopfield_weight <= 0 or hopfield_associations is None:
-            return torch.tensor(0.0, device=targets.device, requires_grad=True) # Use target device as fallback
-
-        # --- Placeholder Logic ---
-        # The actual implementation depends heavily on what `hopfield_associations` contains.
-        # Example possibilities:
-        # 1. Contrast features against memory bank items.
-        # 2. Measure consistency between input features and retrieved patterns.
-        # 3. Use Hopfield energy/attention scores directly in a loss.
-
-        # Example: Assume hopfield_associations contains retrieved patterns (B, H*W, C)
-        # and original features (B, H*W, C). We might want retrieved patterns for
-        # inliers to be close to original features, and far for outliers.
-        # This is highly speculative and needs adaptation.
-
-        # retrieved_patterns, original_features = hopfield_associations # Example structure
-        # loss = some_contrastive_function(retrieved_patterns, original_features, targets, is_ood)
-
-        logger.warning("Hopfield loss calculation is currently a placeholder. "
-                       "Implement the specific contrastive logic.")
-        hopfield_loss_raw = torch.tensor(0.0, device=targets.device, requires_grad=True) # Return 0 for now
-
-        # --- End Placeholder Logic ---
-
-        return hopfield_loss_raw * self.hopfield_weight
-
-    def forward(self, model_outputs, targets):
-        """
-        Calculate the combined loss based on model outputs and ground truth.
+        Calculate the combined loss.
 
         Args:
-            model_outputs (dict): A dictionary containing outputs from the HopfieldPEBALModel.
-                                  Expected keys:
-                                  - 'seg_logits' (Tensor): Raw segmentation logits (B, C, H, W).
-                                  - 'energy' (Tensor, optional): Energy score per sample/pixel.
-                                  - 'is_ood' (Tensor, optional): Boolean tensor indicating OOD status (B,).
-                                  - 'hopfield_output' (Any, optional): Output from the Hopfield layer
-                                     (e.g., retrieved patterns, attention scores, features).
-            targets (Tensor): Ground truth segmentation mask (B, H, W).
+            outputs (Dict[str, torch.Tensor]): Dictionary from the model, expected keys:
+                'seg_logits': Logits [B, C, H, W] (Note: C should be num_classes, not C+1).
+                'combined_energy': Final energy score [B, 1, H, W] (preferred).
+                'pebal_energy', 'memory_energy', 'feature_energy' (optional for logging/alternatives).
+                'is_ood' (Optional): Boolean tensor [B] indicating OOD samples in the batch.
+            targets (Optional[torch.Tensor]): Ground truth segmentation masks [B, H, W].
+                                           Should contain values in [0, num_classes-1] or ignore_index.
+                                           Should be None or contain ignore_index for OOD samples.
+                                           Expected dtype: torch.long.
+            ood_images (Optional[torch.Tensor]): Separate batch of OOD images [B_ood, 3, H, W].
+                                                 Used if energy needs calculation within the loss.
+            model (Optional[nn.Module]): The model instance, needed to calculate energy
+                                         for `ood_images`.
 
         Returns:
-            Tensor: The total combined loss, ready for backpropagation.
-            dict: A dictionary containing the individual weighted loss components
-                  (e.g., 'seg_loss', 'energy_loss', 'hopfield_loss', 'total_loss').
+            Dict[str, torch.Tensor]: Dictionary containing loss components:
+                                     'total_loss', 'seg_loss', 'energy_loss', 'hopfield_loss'.
+                                     Returns dict with zero losses if critical inputs are missing.
         """
-        predictions = model_outputs.get('seg_logits')
-        energies = model_outputs.get('energy')
-        is_ood = model_outputs.get('is_ood')
-        hopfield_associations = model_outputs.get('hopfield_output') # Or specific key
+        # --- Input Validation ---
+        if 'seg_logits' not in outputs:
+             logger.error("Loss calculation failed: 'seg_logits' missing from model outputs.")
+             zero = torch.tensor(0.0, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'))
+             return {'total_loss': zero, 'seg_loss': zero, 'energy_loss': zero, 'hopfield_loss': zero}
+        if self.energy_weight > 0 and 'combined_energy' not in outputs and ood_images is None:
+             logger.warning("'combined_energy' missing and no ood_images provided. Cannot calculate energy loss component from OOD images.")
+             # Proceed without energy loss from external OOD images
 
-        if predictions is None:
-            raise ValueError("Model output dictionary must contain 'seg_logits'.")
+        device = outputs['seg_logits'].device
+        losses = {
+            'total_loss': torch.tensor(0.0, device=device),
+            'seg_loss': torch.tensor(0.0, device=device),
+            'energy_loss': torch.tensor(0.0, device=device),
+            'hopfield_loss': torch.tensor(0.0, device=device) # Placeholder
+        }
 
-        # --- Initialize Loss Dictionary ---
-        losses = {}
-        total_loss = torch.tensor(0.0, device=predictions.device, requires_grad=True)
+        seg_logits = outputs['seg_logits']
+        batch_size = seg_logits.shape[0]
 
-        # --- 1. Segmentation Loss ---
-        seg_loss = self._calculate_segmentation_loss(predictions, targets)
-        losses['seg_loss'] = seg_loss
-        total_loss = total_loss + seg_loss
+        # Ensure logits have the correct number of channels (num_classes, not num_classes+1)
+        if seg_logits.shape[1] != self.num_classes:
+            logger.error(f"Loss Error: seg_logits channel dimension ({seg_logits.shape[1]}) does not match num_classes ({self.num_classes}).")
+            zero = torch.tensor(0.0, device=device)
+            return {'total_loss': zero, 'seg_loss': zero, 'energy_loss': zero, 'hopfield_loss': zero}
 
-        # --- 2. Energy-Based OOD Loss ---
-        energy_loss = self._calculate_energy_loss(energies, is_ood)
-        losses['energy_loss'] = energy_loss
-        total_loss = total_loss + energy_loss
 
-        # --- 3. Hopfield Contrastive Loss ---
-        hopfield_loss = self._calculate_hopfield_loss(hopfield_associations, targets, is_ood)
-        losses['hopfield_loss'] = hopfield_loss
-        total_loss = total_loss + hopfield_loss
+        # Determine which samples are In-Distribution (ID) and Out-of-Distribution (OOD) within the batch
+        is_ood_mask_batch = outputs.get('is_ood', torch.zeros(batch_size, dtype=torch.bool, device=device))
+        id_indices_batch = torch.where(~is_ood_mask_batch)[0]
+        ood_indices_batch = torch.where(is_ood_mask_batch)[0]
 
-        # --- Store Total Loss ---
-        losses['total_loss'] = total_loss
+        # --- 1. Segmentation Loss (only for ID samples in the batch) ---
+        if self.seg_weight > 0 and len(id_indices_batch) > 0 and targets is not None:
+            id_logits = seg_logits[id_indices_batch]
+            id_targets = None
+            if targets.shape[0] == batch_size: # Targets provided for the whole batch
+                 id_targets = targets[id_indices_batch]
+            elif targets.shape[0] == len(id_indices_batch): # Targets provided only for ID samples
+                 id_targets = targets
+            else:
+                 logger.error(f"Target shape {targets.shape} incompatible with ID indices count {len(id_indices_batch)}. Skipping seg loss.")
 
-        return total_loss, losses
+            if id_targets is not None:
+                # Ensure targets are Long type
+                if id_targets.dtype != torch.long:
+                     logger.warning(f"Targets dtype is {id_targets.dtype}, converting to torch.long for CrossEntropy.")
+                     id_targets = id_targets.long()
 
-# Example usage (for testing the loss function standalone)
-if __name__ == '__main__':
-    # Setup dummy data
-    B, C, H, W = 2, 19, 64, 128
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+                # Calculate per-pixel cross-entropy loss
+                try:
+                     # Validate dimensions
+                     if id_logits.ndim != 4 or id_targets.ndim != 3:
+                          raise ValueError(f"Incorrect dimensions for CE Loss. Logits: {id_logits.shape}, Targets: {id_targets.shape}")
+                     if id_logits.shape[0] != id_targets.shape[0] or id_logits.shape[2:] != id_targets.shape[1:]:
+                          raise ValueError(f"Mismatched shapes for CE Loss. Logits: {id_logits.shape}, Targets: {id_targets.shape}")
 
-    # Dummy model outputs
-    dummy_logits = torch.randn(B, C, H, W, device=device, requires_grad=True)
-    dummy_targets = torch.randint(0, C, (B, H, W), device=device).long()
-    # Add some ignored pixels
-    dummy_targets[0, 10:20, 10:20] = 255
+                     # **CRITICAL CHECK (Optional but recommended for debugging):**
+                     # unique_targets = torch.unique(id_targets)
+                     # invalid_targets = unique_targets[(unique_targets != self.ignore_index) & ((unique_targets < 0) | (unique_targets >= self.num_classes))]
+                     # if len(invalid_targets) > 0:
+                     #     logger.error(f"!!!!!!!! Invalid target values detected BEFORE CE loss: {invalid_targets.tolist()}. Num_classes={self.num_classes}, Ignore={self.ignore_index}")
+                     #     # Consider raising an error here or handling it upstream
+                     #     # raise ValueError(f"Invalid target values found: {invalid_targets}")
 
-    # Simulate energy scores and OOD flags for a mixed batch
-    dummy_energies = torch.randn(B, device=device) * 5.0 # Example energy values
-    dummy_is_ood = torch.tensor([False, True], device=device) # First sample is ID, second is OOD
+                     pixel_seg_loss = self.ce_loss(id_logits, id_targets) # Output shape: [B_id, H, W]
 
-    # Dummy Hopfield output (replace with actual structure later)
-    dummy_hopfield_output = {
-        'retrieved': torch.randn(B, H*W, 64, device=device),
-        'original': torch.randn(B, H*W, 64, device=device)
-    }
+                     # Average loss over valid pixels (those not ignored)
+                     valid_mask = (id_targets != self.ignore_index)
+                     num_valid_pixels = valid_mask.sum()
 
-    model_outputs = {
-        'seg_logits': dummy_logits,
-        'energy': dummy_energies,
-        'is_ood': dummy_is_ood,
-        'hopfield_output': dummy_hopfield_output
-    }
+                     if num_valid_pixels > 0:
+                          # Apply mask and calculate mean only on valid pixels
+                          seg_loss_val = torch.sum(pixel_seg_loss * valid_mask.float()) / num_valid_pixels
 
-    # Instantiate the loss
-    criterion = HopfieldPEBALLoss(
-        num_classes=C,
-        seg_weight=1.0,
-        energy_weight=0.5,
-        hopfield_weight=0.2,
-        inlier_margin=2.0,
-        outlier_margin=8.0,
-        temperature=1.0,
-        ignore_index=255
-    ).to(device)
+                          if not torch.isnan(seg_loss_val).item() and not torch.isinf(seg_loss_val).item():
+                              losses['seg_loss'] = seg_loss_val * self.seg_weight
+                              losses['total_loss'] += losses['seg_loss']
+                          else:
+                               logger.warning("NaN/Inf detected in segmentation loss value. Setting seg_loss to 0.")
+                               losses['seg_loss'] = torch.tensor(0.0, device=device)
+                     else:
+                          losses['seg_loss'] = torch.tensor(0.0, device=device) # No valid pixels
+                          logger.debug("Seg loss is 0 because all target pixels were ignored.")
 
-    # Calculate loss
-    total_loss, loss_components = criterion(model_outputs, dummy_targets)
+                except RuntimeError as e:
+                     # Catch device-side asserts specifically if possible, though they often raise later
+                     if "CUDA error: device-side assert triggered" in str(e):
+                         logger.error(f"CUDA device-side assert triggered during segmentation loss calculation. This usually means target labels are out of bounds [0, {self.num_classes-1}] and not ignore_index ({self.ignore_index}). Check dataset preprocessing/label mapping.", exc_info=False)
+                         # Print target stats to help debug
+                         unique_targets = torch.unique(id_targets)
+                         logger.error(f"Unique target values in problematic batch: {unique_targets.tolist()}")
+                         min_target, max_target = id_targets.min().item(), id_targets.max().item()
+                         logger.error(f"Min/Max target values: {min_target}/{max_target}")
+                     else:
+                         logger.error(f"Error calculating segmentation loss: {e}", exc_info=True)
+                     losses['seg_loss'] = torch.tensor(0.0, device=device) # Assign 0 on error
+                except Exception as e:
+                     logger.error(f"Unhandled error calculating segmentation loss: {e}", exc_info=True)
+                     losses['seg_loss'] = torch.tensor(0.0, device=device) # Assign 0 on error
 
-    print(f"Total Loss: {total_loss.item()}")
-    print("Loss Components:")
-    for name, value in loss_components.items():
-        print(f"  {name}: {value.item()}")
 
-    # Test backward pass
-    try:
-        total_loss.backward()
-        print("\nBackward pass successful.")
-        # Check gradients (optional)
-        # print(f"Gradient for logits (sample): {dummy_logits.grad.abs().mean().item()}")
-    except Exception as e:
-        print(f"\nError during backward pass: {e}")
+        # --- 2. Energy-based OOD Loss ---
+        if self.energy_weight > 0:
+            energy_loss_val = torch.tensor(0.0, device=device)
+            combined_energy = outputs.get('combined_energy')
+
+            if combined_energy is None:
+                logger.warning("'combined_energy' not found in model outputs. Cannot calculate energy loss from batch outputs.")
+            else:
+                # Energy loss for ID samples in the batch
+                if len(id_indices_batch) > 0:
+                    id_energy = combined_energy[id_indices_batch]
+                    # Margin loss: max(0, energy - margin) for in-distribution
+                    id_energy_loss = torch.relu(id_energy - self.inlier_margin).mean()
+                    if not torch.isnan(id_energy_loss).item(): energy_loss_val += id_energy_loss
+
+                # Energy loss for OOD samples *in the batch*
+                if len(ood_indices_batch) > 0:
+                    ood_energy_batch = combined_energy[ood_indices_batch]
+                    # Margin loss: max(0, margin - energy) for out-of-distribution
+                    ood_energy_loss_batch = torch.relu(self.outlier_margin - ood_energy_batch).mean()
+                    if not torch.isnan(ood_energy_loss_batch).item(): energy_loss_val += ood_energy_loss_batch
+
+            # Energy loss for separately provided OOD images
+            if ood_images is not None and model is not None:
+                if ood_images.shape[0] > 0:
+                    try:
+                        original_mode = model.training
+                        if original_mode: model.eval()
+
+                        with torch.no_grad():
+                            ood_images_dev = ood_images.to(device)
+                            ood_outputs = model(ood_images_dev)
+                            ood_energy_calc = ood_outputs.get('combined_energy')
+
+                        if ood_energy_calc is not None:
+                            ood_energy_loss_provided = torch.relu(self.outlier_margin - ood_energy_calc).mean()
+                            if not torch.isnan(ood_energy_loss_provided).item(): energy_loss_val += ood_energy_loss_provided
+                        else:
+                            logger.warning("OOD images provided, but 'combined_energy' not found in their output during loss calculation.")
+
+                        if original_mode: model.train()
+                        del ood_images_dev, ood_outputs, ood_energy_calc
+                    except Exception as e:
+                         logger.error(f"Error calculating energy for provided OOD images: {e}", exc_info=True)
+                         if 'original_mode' in locals() and original_mode: model.train()
+
+            # Apply weight to the accumulated energy loss
+            losses['energy_loss'] = energy_loss_val * self.energy_weight
+            if not torch.isnan(losses['energy_loss']).item() and not torch.isinf(losses['energy_loss']).item():
+                losses['total_loss'] += losses['energy_loss']
+            else:
+                 logger.warning("NaN/Inf detected in energy loss. Excluding from total_loss.")
+                 losses['energy_loss'] = torch.tensor(0.0, device=device)
+
+
+        # --- 3. Hopfield Contrastive Loss (Placeholder) ---
+        losses['hopfield_loss'] = torch.tensor(0.0, device=device) # Explicitly set to 0
+
+
+        # --- Final Check ---
+        if torch.isnan(losses['total_loss']).item() or torch.isinf(losses['total_loss']).item():
+            logger.error(f"NaN/Inf detected in final total_loss (Seg: {losses['seg_loss']:.4f}, Energy: {losses['energy_loss']:.4f}). Returning zero loss.")
+            zero_loss = torch.tensor(0.0, device=device)
+            return {'total_loss': zero_loss, 'seg_loss': zero_loss, 'energy_loss': zero_loss, 'hopfield_loss': zero_loss}
+
+        return losses
