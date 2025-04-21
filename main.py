@@ -107,9 +107,9 @@ def parse_args() -> argparse.Namespace:
     model_group.add_argument('--target_feature_dim', type=int, default=None, help='Target dim after backbone/head adapter. Default inferred.')
     model_group.add_argument('--use_efficient_memory', action='store_true', default=False, help='Enable memory-efficient techniques (sampling, cache clearing).')
     model_group.add_argument('--use_faiss', action='store_true', default=False, help='Use FAISS for accelerated nearest neighbor search.')
-    model_group.add_argument('--pq_bytes', type=int, default=8, help='Bytes for Product Quantization in FAISS (if used).')
+    # model_group.add_argument('--pq_bytes', type=int, default=8, help='Bytes for Product Quantization in FAISS (if used).') # <-- REMOVED based on error
     model_group.add_argument('--sampling_stride', type=int, default=2, help='Stride for spatial sampling before memory interaction.')
-    model_group.add_argument('--chunk_size', type=int, default=1000, help='Chunk size for processing large sequences (Efficient Decoder).')
+    model_group.add_argument('--chunk_size', type=int, default=1000, help='Chunk size for processing large sequences (Efficient Decoder).') # This might be specific to EffDec, check usage
     model_group.add_argument('--use_efficient_decoder', action='store_true', default=False, help='Use the EfficientSegmentationDecoder.')
     model_group.add_argument('--use_simple_model', action='store_true', default=False, help='Use a basic CNN model instead of DeepWV3Plus.')
 
@@ -168,7 +168,7 @@ def parse_args() -> argparse.Namespace:
     if args.target_feature_dim is None:
         if args.insertion_point == 'after_backbone':
              # Initial guess, might be refined later based on actual backbone output
-             args.target_feature_dim = 128 if args.use_simple_model else 4096
+             args.target_feature_dim = 128 if args.use_simple_model else 4096 # Rough guess
              logger.info(f"Setting initial target_feature_dim guess for 'after_backbone': {args.target_feature_dim}")
         elif args.insertion_point == 'after_seghead':
              logger.info("target_feature_dim not specified for 'after_seghead'. Model will attempt to infer.")
@@ -782,7 +782,14 @@ def main():
     # Create the main Hopfield-PEBAL model
     try:
         # Define efficient_decoder_kwargs conditionally
-        eff_decoder_kwargs = {'chunk_size': args.chunk_size} if args.use_efficient_decoder else None
+        # Pass relevant args if needed by EfficientSegmentationDecoder init
+        eff_decoder_kwargs = {
+             # Add any relevant args from parser if needed by EfficientSegmentationDecoder
+             # e.g., 'attention_heads': args.eff_decoder_heads (if added to parser)
+             # 'feature_dim': args.eff_decoder_dim (if added to parser)
+             'attn_max_tokens': args.chunk_size # Use chunk_size as attn_max_tokens? Check HopfieldPEBALModel usage
+        } if args.use_efficient_decoder else None
+
         if eff_decoder_kwargs:
              logger.info(f"Passing efficient_decoder_kwargs: {eff_decoder_kwargs}")
 
@@ -797,7 +804,7 @@ def main():
             target_feature_dim=args.target_feature_dim, # Can be None if insertion='after_seghead'
             use_efficient_memory=args.use_efficient_memory,
             use_faiss=args.use_faiss,
-            pq_bytes=args.pq_bytes,
+            # pq_bytes=args.pq_bytes, # <-- REMOVED based on error
             sampling_stride=args.sampling_stride,
             use_efficient_decoder=args.use_efficient_decoder,
             efficient_decoder_kwargs=eff_decoder_kwargs # Pass the dictionary here
@@ -883,6 +890,13 @@ def main():
         # Check for efficient decoder instance only if it's different
         if hasattr(model, '_efficient_decoder_instance') and isinstance(model._efficient_decoder_instance, nn.Module) and model._efficient_decoder_instance is not model.segmentation_head:
             param_map['_efficient_decoder_instance'] = (model._efficient_decoder_instance, head_related_params)
+        # Also include the final_seghead_proj if it exists and is not Identity
+        if hasattr(model, 'final_seghead_proj') and isinstance(model.final_seghead_proj, nn.Module) and not isinstance(model.final_seghead_proj, nn.Identity):
+             param_map['final_seghead_proj'] = (model.final_seghead_proj, head_related_params)
+        # Also include the final_classifier if it exists and is not Identity
+        if hasattr(model, 'final_classifier') and isinstance(model.final_classifier, nn.Module) and not isinstance(model.final_classifier, nn.Identity):
+             param_map['final_classifier'] = (model.final_classifier, head_related_params)
+
 
         # Iterate through all trainable parameters
         all_named_params = list(model.named_parameters()) # Get list once
