@@ -13,7 +13,7 @@ import traceback
 from feature_extractor import FeatureExtractor
 from projection_head import ProjectionHead
 from border_energy import BorderEnergy
-from memory_utils import update_memory_banks
+from memory import update_memory_banks
 import torch.nn.functional as F
 from tqdm import tqdm
 
