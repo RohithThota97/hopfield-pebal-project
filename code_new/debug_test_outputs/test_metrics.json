@@ -1,9 +1,0 @@
-{
-    "auroc_static": 0.85,
-    "fpr95_static": 0.12,
-    "auprs_static": 0.78,
-    "auroc_lf": 0.82,
-    "fpr95_lf": 0.15,
-    "auprs_lf": 0.75,
-    "semantic_miou": 0.68
-}
