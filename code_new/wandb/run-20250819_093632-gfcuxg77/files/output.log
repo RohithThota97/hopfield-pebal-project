@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "run_training.py", line 216, in <module>
+    main()
+  File "run_training.py", line 212, in main
+    trainer = CleanHopfieldTrainer(train_config, train_loader, id_memory, ood_memory)
+  File "run_training.py", line 64, in __init__
+    self._init_training_components()
+  File "run_training.py", line 86, in _init_training_components
+    self.ce_criterion = nn.CrossEntropyLoss(ignore_index=255)
+NameError: name 'nn' is not defined

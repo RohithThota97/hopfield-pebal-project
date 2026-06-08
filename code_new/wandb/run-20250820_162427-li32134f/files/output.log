@@ -1,0 +1,26 @@
+🔄 Boosting Update at Epoch 1
+
+🔄 Boosting Step 1: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|████████████████████████████████████████████████████████████████| 3268/3268 [03:38<00:00, 14.99it/s]
+✅ Built global pool of 20122 OOD pixels.
+Training Epoch 1:   1%|▍                               | 42/3268 [00:11<14:37,  3.68it/s, L_CE=0.7545, L_OOD=-2.2815, L_DIV=0.0689, LR=0.001000]
+Traceback (most recent call last):
+  File "run_training.py", line 343, in <module>
+    main()
+  File "run_training.py", line 340, in main
+    trainer.train()
+  File "run_training.py", line 186, in train
+    loss_ce, loss_ood, diversity_loss, total_loss = self._compute_composite_loss(batch)
+  File "run_training.py", line 141, in _compute_composite_loss
+    loss_ood = compute_ood_loss_efficient(
+  File "run_training.py", line 38, in compute_ood_loss_efficient
+    total_energy += energy_calc(chunk).sum()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 148, in forward
+    b_lse_all[i:i+self.batch_size] = lse(self.beta_b, b_sim, dim=-1)
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 42, in lse
+    return (1 / beta) * torch.logsumexp(beta * tensor, dim=dim, keepdim=keepdim)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 26.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 14.38 MiB is free. Including non-PyTorch memory, this process has 7.58 GiB memory in use. Of the allocated memory 7.12 GiB is allocated by PyTorch, and 339.22 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

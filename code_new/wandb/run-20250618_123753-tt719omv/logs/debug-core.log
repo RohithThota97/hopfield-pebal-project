@@ -1,0 +1,7 @@
+{"time":"2025-06-18T12:37:53.086075533+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpec_j43lp/port-3145574.txt","pid":3145574,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-06-18T12:37:53.11641789+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3145574}
+{"time":"2025-06-18T12:37:53.116402876+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":44583,"Zone":""}}
+{"time":"2025-06-18T12:37:53.277781159+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:42116"}
+{"time":"2025-06-18T12:37:53.339277601+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"tt719omv","id":"127.0.0.1:42116"}
+{"time":"2025-06-18T12:37:53.593468126+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"tt719omv","id":"127.0.0.1:42116"}
+{"time":"2025-06-18T20:38:07.818595941+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

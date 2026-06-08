@@ -1,0 +1,39 @@
+2025-09-10 17:30:09,223 - INFO - Initializing models...
+2025-09-10 17:30:10,296 - INFO - Loaded 268/268 model parameters flexibly
+2025-09-10 17:30:10,296 - WARNING - Skipped keys: ['criterion.nll_loss.weight']
+2025-09-10 17:30:10,361 - INFO - Missing keys: []
+2025-09-10 17:30:10,361 - INFO - Unexpected keys: []
+2025-09-10 17:30:10,362 - INFO - Loaded 100.0% of parameters successfully
+2025-09-10 17:30:10,595 - INFO - Initializing training components...
+2025-09-10 17:30:10,597 - INFO - SegmentationTrainer initialization complete!
+2025-09-10 17:30:10,597 - INFO - 
+Starting Epoch 1/100
+2025-09-10 17:30:10,597 - INFO - ============================================================
+2025-09-10 17:34:27,034 - INFO - Epoch 1 - Avg CE: 2.4850
+2025-09-10 17:36:03,560 - INFO - Checkpoint saved for epoch 1
+2025-09-10 17:36:12,381 - INFO - 
+Starting Epoch 2/100
+2025-09-10 17:36:12,381 - INFO - ============================================================
+2025-09-10 17:40:31,207 - INFO - Epoch 2 - Avg CE: 2.6172
+2025-09-10 17:42:01,954 - INFO - 
+Starting Epoch 3/100
+2025-09-10 17:42:01,955 - INFO - ============================================================
+2025-09-10 17:46:21,361 - INFO - Epoch 3 - Avg CE: 2.8813
+2025-09-10 17:47:52,137 - INFO - 
+Starting Epoch 4/100
+2025-09-10 17:47:52,138 - INFO - ============================================================
+2025-09-10 17:52:12,150 - INFO - Epoch 4 - Avg CE: 2.9330
+2025-09-10 17:53:42,967 - INFO - 
+Starting Epoch 5/100
+2025-09-10 17:53:42,969 - INFO - ============================================================
+2025-09-10 17:58:02,362 - INFO - Epoch 5 - Avg CE: 2.9440
+2025-09-10 17:58:02,363 - INFO - 
+Running evaluation...
+2025-09-10 17:58:02,364 - INFO - 
+Visualizing results...
+2025-09-10 17:58:02,370 - WARNING - Converting labels from torch.uint8 to torch.long
+2025-09-10 17:58:03,066 - WARNING - Converting labels from torch.uint8 to torch.long
+2025-09-10 17:58:03,733 - WARNING - Converting labels from torch.uint8 to torch.long
+2025-09-10 17:59:35,388 - INFO - 
+Starting Epoch 6/100
+2025-09-10 17:59:35,389 - INFO - ============================================================

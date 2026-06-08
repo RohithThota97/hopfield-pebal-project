@@ -1,0 +1,33 @@
+🚀 Started W&B run: comprehensive_T_10000_N_200_mem_50000_beta_64.0
+🏗️ Initializing models...
+✅ Models initialized on cuda
+⚙️ Initializing training components...
+✅ Training components initialized
+📊 Initializing data components...
+✅ Data components initialized
+📈 Initializing evaluation...
+Initialized dataset with 30 images
+✅ Evaluation initialized
+🚀 Starting comprehensive Hopfield Boosting training
+Configuration: T=10000, N=200, Beta=64.0
+🔍 Validating optimized implementation...
+Validating optimized implementation on cuda
+Testing optimized border energy...
+
+❌ Training failed with error: CUDA out of memory. Tried to allocate 9.31 GiB. GPU 0 has a total capacity of 7.60 GiB of which 6.82 GiB is free. Including non-PyTorch memory, this process has 790.00 MiB memory in use. Of the allocated memory 661.68 MiB is allocated by PyTorch, and 20.32 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "run_training.py", line 725, in main
+    trainer.train(train_loader)
+  File "run_training.py", line 527, in train
+    if not validate_optimized_implementation():
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 591, in validate_optimized_implementation
+    border_calc = OptimizedPixelWiseHopfieldEnergyCalculator.create_border_energy(
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 433, in create_border_energy
+    return OptimizedPixelWiseBorderEnergy(
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 167, in __init__
+    self._compute_memory_quality()
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 173, in _compute_memory_quality
+    a_similarities = torch.mm(self.a_memory.T, self.a_memory)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 9.31 GiB. GPU 0 has a total capacity of 7.60 GiB of which 6.82 GiB is free. Including non-PyTorch memory, this process has 790.00 MiB memory in use. Of the allocated memory 661.68 MiB is allocated by PyTorch, and 20.32 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+💾 Checkpoint saved: checkpoints_comprehensive/hopfield_comprehensive_error_0.pth
+✅ Training script completed

@@ -1,0 +1,67 @@
+2025-07-04 17:31:40,366 - __main__ - INFO - Training dataset size: 3268
+2025-07-04 17:31:40,367 - Pixel_Utils - INFO - Analyzing Fishyscapes dataset for OOD content...
+2025-07-04 17:31:40,408 - Pixel_Utils - INFO - Sample image_0.png:
+2025-07-04 17:31:40,408 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 17:31:40,408 - Pixel_Utils - INFO -   ID pixels (0): 1,801,918
+2025-07-04 17:31:40,408 - Pixel_Utils - INFO -   OOD pixels (1): 59,867
+2025-07-04 17:31:40,409 - Pixel_Utils - INFO -   Ignore pixels (2/255): 235,367
+2025-07-04 17:31:40,438 - Pixel_Utils - INFO - Sample image_1.png:
+2025-07-04 17:31:40,438 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 17:31:40,438 - Pixel_Utils - INFO -   ID pixels (0): 1,799,432
+2025-07-04 17:31:40,438 - Pixel_Utils - INFO -   OOD pixels (1): 47,165
+2025-07-04 17:31:40,438 - Pixel_Utils - INFO -   Ignore pixels (2/255): 250,555
+2025-07-04 17:31:40,467 - Pixel_Utils - INFO - Sample image_10.png:
+2025-07-04 17:31:40,467 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 17:31:40,467 - Pixel_Utils - INFO -   ID pixels (0): 1,825,295
+2025-07-04 17:31:40,467 - Pixel_Utils - INFO -   OOD pixels (1): 18,661
+2025-07-04 17:31:40,467 - Pixel_Utils - INFO -   Ignore pixels (2/255): 253,196
+2025-07-04 17:31:40,496 - Pixel_Utils - INFO - Sample image_11.png:
+2025-07-04 17:31:40,497 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 17:31:40,497 - Pixel_Utils - INFO -   ID pixels (0): 1,861,327
+2025-07-04 17:31:40,497 - Pixel_Utils - INFO -   OOD pixels (1): 4,777
+2025-07-04 17:31:40,497 - Pixel_Utils - INFO -   Ignore pixels (2/255): 231,048
+2025-07-04 17:31:40,527 - Pixel_Utils - INFO - Sample image_12.png:
+2025-07-04 17:31:40,527 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 17:31:40,527 - Pixel_Utils - INFO -   ID pixels (0): 1,825,428
+2025-07-04 17:31:40,527 - Pixel_Utils - INFO -   OOD pixels (1): 39,394
+2025-07-04 17:31:40,527 - Pixel_Utils - INFO -   Ignore pixels (2/255): 232,330
+2025-07-04 17:31:40,534 - Pixel_Utils - INFO - Found 30 valid images from 30 total
+2025-07-04 17:31:40,535 - Pixel_Utils - INFO - Total OOD pixels in sample: 169,864
+2025-07-04 17:31:40,535 - __main__ - INFO - Validation dataset size: 30
+2025-07-04 17:31:40,535 - __main__ - INFO - Building initial Hopfield memories...
+Building memories:  18%|███████████████▌                                                                     | 298/1634 [02:34<11:31,  1.93it/s]
+Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1131, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/queue.py", line 179, in get
+    self.not_empty.wait(remaining)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/signal_handling.py", line 67, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 1987014) is killed by signal: Segmentation fault.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 716, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 710, in main
+    results = trainer.train(num_epochs=NUM_EPOCHS, batch_size=BATCH_SIZE)
+  File "train_pixel_hopfield_boosting.py", line 631, in train
+    self.build_initial_memories(train_loader)
+  File "train_pixel_hopfield_boosting.py", line 177, in build_initial_memories
+    self.memory_builder.process_all_images_for_memories(full_dataloader)
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 49, in process_all_images_for_memories
+    for batch_idx, batch in enumerate(tqdm(dataloader, desc="Building memories")):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1327, in _next_data
+    idx, data = self._get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1283, in _get_data
+    success, data = self._try_get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1144, in _try_get_data
+    raise RuntimeError(f'DataLoader worker (pid(s) {pids_str}) exited unexpectedly') from e
+RuntimeError: DataLoader worker (pid(s) 1987014) exited unexpectedly

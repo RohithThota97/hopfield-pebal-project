@@ -1,0 +1,14 @@
+{"time":"2025-08-21T20:03:35.141443871+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpkaca72cy/port-3424372.txt","pid":3424372,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-08-21T20:03:35.171641436+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3424372}
+{"time":"2025-08-21T20:03:35.171650788+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":38863,"Zone":""}}
+{"time":"2025-08-21T20:03:35.32385364+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:38346"}
+{"time":"2025-08-21T20:03:35.353494922+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"ikuh2udo","id":"127.0.0.1:38346"}
+{"time":"2025-08-21T20:03:35.61214193+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"ikuh2udo","id":"127.0.0.1:38346"}
+{"time":"2025-08-21T20:03:36.029108316+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:38346"}
+{"time":"2025-08-21T20:03:36.029220334+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:38346"}
+{"time":"2025-08-21T20:03:36.029261882+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-08-21T20:03:36.029404279+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:38346"}
+{"time":"2025-08-21T20:03:36.257651574+02:00","level":"ERROR","msg":"processOutgoingData: flush error","error":"write tcp 127.0.0.1:38863->127.0.0.1:38346: use of closed network connection","id":"127.0.0.1:38346"}
+{"time":"2025-08-21T20:03:37.10552304+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:38346"}
+{"time":"2025-08-21T20:03:37.105551775+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:38346"}
+{"time":"2025-08-21T20:03:37.10557054+02:00","level":"INFO","msg":"server is closed"}

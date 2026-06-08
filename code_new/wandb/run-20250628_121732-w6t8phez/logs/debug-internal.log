@@ -1,0 +1,16 @@
+{"time":"2025-06-28T12:17:32.609829982+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250628_121732-w6t8phez/logs/debug-core.log"}
+{"time":"2025-06-28T12:17:32.879680441+02:00","level":"INFO","msg":"stream: created new stream","id":"w6t8phez"}
+{"time":"2025-06-28T12:17:32.87978739+02:00","level":"INFO","msg":"stream: started","id":"w6t8phez"}
+{"time":"2025-06-28T12:17:32.879828333+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"w6t8phez"}
+{"time":"2025-06-28T12:17:32.879900541+02:00","level":"INFO","msg":"handler: started","stream_id":"w6t8phez"}
+{"time":"2025-06-28T12:17:32.880059006+02:00","level":"INFO","msg":"sender: started","stream_id":"w6t8phez"}
+{"time":"2025-06-28T12:17:33.163697139+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-28T12:31:55.93448764+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-28T12:31:55.934867194+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-28T12:31:56.529012241+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-28T12:31:56.711251174+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-06-28T12:31:56.719190954+02:00","level":"INFO","msg":"stream: closing","id":"w6t8phez"}
+{"time":"2025-06-28T12:31:56.719204257+02:00","level":"INFO","msg":"handler: closed","stream_id":"w6t8phez"}
+{"time":"2025-06-28T12:31:56.7192109+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"w6t8phez"}
+{"time":"2025-06-28T12:31:56.719253075+02:00","level":"INFO","msg":"sender: closed","stream_id":"w6t8phez"}
+{"time":"2025-06-28T12:31:56.721060467+02:00","level":"INFO","msg":"stream: closed","id":"w6t8phez"}

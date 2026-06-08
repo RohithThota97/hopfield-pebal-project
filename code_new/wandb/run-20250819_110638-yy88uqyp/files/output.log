@@ -1,0 +1,40 @@
+
+🚀 Starting Production-Ready Hopfield Boosting Training for 50 epochs
+
+--- Epoch 1/50 ---
+In warm-up phase (updating every 2 epochs).
+
+🔄 Boosting Step 1: Updating OOD pixel weight distribution...
+✅ ID memory validation passed: 128D features, 65322 patterns
+✅ AUX memory validation passed: 128D features, 50000 patterns
+✅ Memory format validated:
+   ID memory (X): [128, 65322] = 128D features, 65322 patterns
+   AUX memory (O): [128, 50000] = 128D features, 50000 patterns
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████| 3268/3268 [04:20<00:00, 12.55it/s]
+✅ Built global pool of 75993 OOD pixels.
+Training Epoch 1:   0%|                                                                                  | 0/3268 [00:00<?, ?it/s]
+✅ ID memory validation passed: 128D features, 65322 patterns
+✅ AUX memory validation passed: 128D features, 50000 patterns
+✅ Memory format validated:
+   ID memory (X): [128, 65322] = 128D features, 65322 patterns
+   AUX memory (O): [128, 50000] = 128D features, 50000 patterns
+Traceback (most recent call last):
+  File "run_training.py", line 224, in <module>
+    main()
+  File "run_training.py", line 221, in main
+    trainer.train()
+  File "run_training.py", line 159, in train
+    loss_ce, loss_ood, total_loss = self._compute_composite_loss(batch)
+  File "run_training.py", line 121, in _compute_composite_loss
+    loss_ood = compute_ood_loss_efficient(
+  File "run_training.py", line 41, in compute_ood_loss_efficient
+    total_energy += energy_calc(chunk).sum()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 188, in forward
+    a_lse_all[i:i+self.batch_size] = lse(self.beta_a, a_sim, dim=-1)
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 42, in lse
+    return (1 / beta) * torch.logsumexp(beta * tensor, dim=dim, keepdim=keepdim)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 66.38 MiB is free. Including non-PyTorch memory, this process has 7.53 GiB memory in use. Of the allocated memory 6.98 GiB is allocated by PyTorch, and 446.73 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

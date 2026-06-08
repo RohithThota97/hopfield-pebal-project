@@ -1,0 +1,13 @@
+{"time":"2025-08-18T09:19:08.058501725+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp1umios3n/port-14054.txt","pid":14054,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-08-18T09:19:08.059997449+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":34195,"Zone":""}}
+{"time":"2025-08-18T09:19:08.060050131+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":14054}
+{"time":"2025-08-18T09:19:08.248371494+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:57234"}
+{"time":"2025-08-18T09:19:08.305322165+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"5v6rak9c","id":"127.0.0.1:57234"}
+{"time":"2025-08-18T09:19:08.563049576+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"5v6rak9c","id":"127.0.0.1:57234"}
+{"time":"2025-08-18T09:19:11.185087087+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:57234"}
+{"time":"2025-08-18T09:19:11.185164934+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:57234"}
+{"time":"2025-08-18T09:19:11.185224293+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-08-18T09:19:11.185394131+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:57234"}
+{"time":"2025-08-18T09:19:12.378119122+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:57234"}
+{"time":"2025-08-18T09:19:12.37814274+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:57234"}
+{"time":"2025-08-18T09:19:12.378176958+02:00","level":"INFO","msg":"server is closed"}

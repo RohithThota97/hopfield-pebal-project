@@ -1,0 +1,15 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Backbone fully frozen as per request.
+INFO:__main__:Building initial memories...
+INFO:feature_extractor:Feature stats: mean=0.0003, std=0.0150
+INFO:hopfield_memory_builder:Starting improved memory building with diversity sampling...
+Collecting features:   0%|                                                                                      | 0/890 [00:00<?, ?it/s]INFO:feature_extractor:Feature stats: mean=0.0002, std=0.0163
+ERROR:hopfield_memory_builder:Error in batch 0: not enough values to unpack (expected 4, got 2)
+Collecting features:   0%|                                                                              | 1/890 [00:03<49:16,  3.33s/it]INFO:feature_extractor:Feature stats: mean=0.0002, std=0.0165
+ERROR:hopfield_memory_builder:Error in batch 1: not enough values to unpack (expected 4, got 2)
+Collecting features:   0%|▏                                                                             | 2/890 [00:06<47:58,  3.24s/it]

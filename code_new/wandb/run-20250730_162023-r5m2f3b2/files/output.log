@@ -1,0 +1,1188 @@
+2025-07-30 16:20:24,150 - SimplifiedHopfieldTrainer - INFO - Loading pretrained model for Engine: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+2025-07-30 16:20:24,338 - SimplifiedHopfieldTrainer - INFO - Pretrained model loaded successfully for Engine initialization.
+2025-07-30 16:20:24,339 - SimplifiedHopfieldTrainer - INFO - Engine instance created successfully for dataloader.
+2025-07-30 16:20:24,425 - SimplifiedHopfieldTrainer - INFO - DataLoader created with 1634 batches.
+2025-07-30 16:20:24,425 - SimplifiedHopfieldTrainer - INFO - Starting training...
+2025-07-30 16:20:24,425 - SimplifiedHopfieldTrainer - INFO - Building initial memories...
+2025-07-30 16:20:24,425 - hopfield_memory_builder - INFO - HopfieldMemoryBuilder initialized.
+2025-07-30 16:20:24,426 - hopfield_memory_builder - INFO - Starting to collect pixels for memory building...
+Collecting pixels:  90%|██████████████████████████████████████████████████████████████████▉       | 1477/1634 [13:08<01:23,  1.87it/s]2025-07-30 16:33:33,273 - hopfield_memory_builder - INFO - Sufficient pixels collected. Stopping data loading.
+Collecting pixels:  90%|██████████████████████████████████████████████████████████████████▉       | 1477/1634 [13:08<01:23,  1.87it/s]
+2025-07-30 16:33:33,291 - hopfield_memory_builder - INFO - Finished collecting pixels for memory building.
+2025-07-30 16:33:33,291 - hopfield_memory_builder - INFO - Building final ID and AUX memories...
+2025-07-30 16:33:33,331 - hopfield_memory_builder - INFO - Final ID memory size before tensor conversion: 50000.
+2025-07-30 16:33:33,348 - hopfield_memory_builder - INFO - Final AUX memory size before tensor conversion: 50000.
+2025-07-30 16:33:33,354 - hopfield_memory_builder - INFO - ID Memory tensor shape: torch.Size([50000, 128])
+2025-07-30 16:33:33,354 - hopfield_memory_builder - INFO - AUX Memory tensor shape: torch.Size([50000, 128])
+2025-07-30 16:33:33,355 - hopfield_memory_builder - INFO - Initial energy function created successfully.
+2025-07-30 16:33:33,356 - SimplifiedHopfieldTrainer - INFO - Built ID memory: torch.Size([50000, 128]), AUX memory: torch.Size([50000, 128])
+2025-07-30 16:33:33,356 - SimplifiedHopfieldTrainer - ERROR - Error initializing energy_calculator: create_border_energy() got an unexpected keyword argument 'id_features'
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 168, in build_initial_memories
+    self.energy_calculator = PixelWiseHopfieldEnergyCalculator.create_border_energy(
+TypeError: create_border_energy() got an unexpected keyword argument 'id_features'
+Epoch 1:   0%|                                                                                               | 0/1634 [00:00<?, ?it/s]2025-07-30 16:33:34,552 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   0%|                          | 1/1634 [00:01<33:39,  1.24s/it, Loss=4.6221, CE=4.6221, OOD=0.0000, Acc=0.1225, LR=0.010000]2025-07-30 16:33:35,091 - SimplifiedHopfieldTrainer - ERROR - Error in batch 1: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   0%|                          | 2/1634 [00:01<21:49,  1.25it/s, Loss=4.6221, CE=4.6221, OOD=0.0000, Acc=0.1225, LR=0.010000]2025-07-30 16:33:35,613 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   0%|                          | 3/1634 [00:02<18:18,  1.48it/s, Loss=2.6557, CE=2.6557, OOD=0.0000, Acc=0.3475, LR=0.010000]2025-07-30 16:33:36,143 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   0%|                          | 4/1634 [00:02<16:41,  1.63it/s, Loss=5.6685, CE=5.6685, OOD=0.0000, Acc=0.0400, LR=0.010000]2025-07-30 16:33:36,625 - SimplifiedHopfieldTrainer - ERROR - Error in batch 4: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   0%|                          | 5/1634 [00:03<15:23,  1.76it/s, Loss=5.6685, CE=5.6685, OOD=0.0000, Acc=0.0400, LR=0.010000]2025-07-30 16:33:37,159 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   0%|                          | 6/1634 [00:03<15:04,  1.80it/s, Loss=3.0441, CE=3.0441, OOD=0.0000, Acc=0.1325, LR=0.010000]2025-07-30 16:33:37,648 - SimplifiedHopfieldTrainer - ERROR - Error in batch 6: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 70.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 188.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 70.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 188.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   0%|                          | 7/1634 [00:04<14:28,  1.87it/s, Loss=3.0441, CE=3.0441, OOD=0.0000, Acc=0.1325, LR=0.010000]2025-07-30 16:33:38,181 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   0%|▏                         | 8/1634 [00:04<14:27,  1.87it/s, Loss=5.2537, CE=5.2537, OOD=0.0000, Acc=0.0750, LR=0.010000]2025-07-30 16:33:38,712 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▏                         | 9/1634 [00:05<14:25,  1.88it/s, Loss=2.7086, CE=2.7086, OOD=0.0000, Acc=0.3350, LR=0.010000]2025-07-30 16:33:39,206 - SimplifiedHopfieldTrainer - ERROR - Error in batch 9: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   1%|▏                        | 10/1634 [00:05<14:05,  1.92it/s, Loss=2.7086, CE=2.7086, OOD=0.0000, Acc=0.3350, LR=0.010000]2025-07-30 16:33:39,751 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▏                        | 11/1634 [00:06<14:17,  1.89it/s, Loss=3.3477, CE=3.3477, OOD=0.0000, Acc=0.1150, LR=0.010000]2025-07-30 16:33:40,240 - SimplifiedHopfieldTrainer - ERROR - Error in batch 11: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 70.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 189.49 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 70.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 189.49 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   1%|▏                        | 12/1634 [00:06<13:57,  1.94it/s, Loss=3.3477, CE=3.3477, OOD=0.0000, Acc=0.1150, LR=0.010000]2025-07-30 16:33:40,774 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▏                        | 13/1634 [00:07<14:05,  1.92it/s, Loss=3.5691, CE=3.5691, OOD=0.0000, Acc=0.1550, LR=0.010000]2025-07-30 16:33:41,308 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▏                        | 14/1634 [00:07<14:11,  1.90it/s, Loss=3.2585, CE=3.2585, OOD=0.0000, Acc=0.2800, LR=0.010000]2025-07-30 16:33:41,792 - SimplifiedHopfieldTrainer - ERROR - Error in batch 14: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   1%|▏                        | 15/1634 [00:08<13:50,  1.95it/s, Loss=3.2585, CE=3.2585, OOD=0.0000, Acc=0.2800, LR=0.010000]2025-07-30 16:33:42,333 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▏                        | 16/1634 [00:08<14:03,  1.92it/s, Loss=2.9281, CE=2.9281, OOD=0.0000, Acc=0.2450, LR=0.010000]2025-07-30 16:33:42,825 - SimplifiedHopfieldTrainer - ERROR - Error in batch 16: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   1%|▎                        | 17/1634 [00:09<13:50,  1.95it/s, Loss=2.9281, CE=2.9281, OOD=0.0000, Acc=0.2450, LR=0.010000]2025-07-30 16:33:43,366 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▎                        | 18/1634 [00:10<14:02,  1.92it/s, Loss=4.4259, CE=4.4259, OOD=0.0000, Acc=0.0825, LR=0.010000]2025-07-30 16:33:43,900 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▎                        | 19/1634 [00:10<14:07,  1.91it/s, Loss=3.9462, CE=3.9462, OOD=0.0000, Acc=0.1850, LR=0.010000]2025-07-30 16:33:44,384 - SimplifiedHopfieldTrainer - ERROR - Error in batch 19: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   1%|▎                        | 20/1634 [00:11<13:46,  1.95it/s, Loss=3.9462, CE=3.9462, OOD=0.0000, Acc=0.1850, LR=0.010000]2025-07-30 16:33:44,922 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▎                        | 21/1634 [00:11<13:59,  1.92it/s, Loss=1.9257, CE=1.9257, OOD=0.0000, Acc=0.5700, LR=0.010000]2025-07-30 16:33:45,412 - SimplifiedHopfieldTrainer - ERROR - Error in batch 21: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   1%|▎                        | 22/1634 [00:12<13:43,  1.96it/s, Loss=1.9257, CE=1.9257, OOD=0.0000, Acc=0.5700, LR=0.010000]2025-07-30 16:33:45,952 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▎                        | 23/1634 [00:12<13:57,  1.92it/s, Loss=3.5475, CE=3.5475, OOD=0.0000, Acc=0.2725, LR=0.010000]2025-07-30 16:33:46,485 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   1%|▎                        | 24/1634 [00:13<14:03,  1.91it/s, Loss=3.4731, CE=3.4731, OOD=0.0000, Acc=0.1200, LR=0.010000]2025-07-30 16:33:46,974 - SimplifiedHopfieldTrainer - ERROR - Error in batch 24: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   2%|▍                        | 25/1634 [00:13<13:45,  1.95it/s, Loss=3.4731, CE=3.4731, OOD=0.0000, Acc=0.1200, LR=0.010000]2025-07-30 16:33:47,515 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   2%|▍                        | 26/1634 [00:14<13:58,  1.92it/s, Loss=3.7427, CE=3.7427, OOD=0.0000, Acc=0.2025, LR=0.010000]2025-07-30 16:33:48,004 - SimplifiedHopfieldTrainer - ERROR - Error in batch 26: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   2%|▍                        | 27/1634 [00:14<13:42,  1.95it/s, Loss=3.7427, CE=3.7427, OOD=0.0000, Acc=0.2025, LR=0.010000]2025-07-30 16:33:48,540 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   2%|▍                        | 28/1634 [00:15<13:53,  1.93it/s, Loss=3.4716, CE=3.4716, OOD=0.0000, Acc=0.2225, LR=0.010000]2025-07-30 16:33:49,082 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   2%|▍                        | 29/1634 [00:15<14:04,  1.90it/s, Loss=3.3071, CE=3.3071, OOD=0.0000, Acc=0.3625, LR=0.010000]2025-07-30 16:33:49,574 - SimplifiedHopfieldTrainer - ERROR - Error in batch 29: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   2%|▍                        | 30/1634 [00:16<13:46,  1.94it/s, Loss=3.3071, CE=3.3071, OOD=0.0000, Acc=0.3625, LR=0.010000]2025-07-30 16:33:50,116 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   2%|▍                        | 31/1634 [00:16<13:59,  1.91it/s, Loss=2.4289, CE=2.4289, OOD=0.0000, Acc=0.5225, LR=0.010000]2025-07-30 16:33:50,615 - SimplifiedHopfieldTrainer - ERROR - Error in batch 31: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   2%|▍                        | 32/1634 [00:17<13:46,  1.94it/s, Loss=2.4289, CE=2.4289, OOD=0.0000, Acc=0.5225, LR=0.010000]2025-07-30 16:33:51,153 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   2%|▌                        | 33/1634 [00:17<13:57,  1.91it/s, Loss=2.6925, CE=2.6925, OOD=0.0000, Acc=0.3650, LR=0.010000]2025-07-30 16:33:51,686 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   2%|▌                        | 34/1634 [00:18<14:01,  1.90it/s, Loss=3.4352, CE=3.4352, OOD=0.0000, Acc=0.3800, LR=0.010000]2025-07-30 16:33:52,170 - SimplifiedHopfieldTrainer - ERROR - Error in batch 34: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   2%|▌                        | 35/1634 [00:18<13:40,  1.95it/s, Loss=3.4352, CE=3.4352, OOD=0.0000, Acc=0.3800, LR=0.010000]2025-07-30 16:33:52,714 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   2%|▌                        | 36/1634 [00:19<13:55,  1.91it/s, Loss=1.9613, CE=1.9613, OOD=0.0000, Acc=0.5825, LR=0.010000]2025-07-30 16:33:53,205 - SimplifiedHopfieldTrainer - ERROR - Error in batch 36: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   2%|▌                        | 37/1634 [00:19<13:38,  1.95it/s, Loss=1.9613, CE=1.9613, OOD=0.0000, Acc=0.5825, LR=0.010000]2025-07-30 16:33:53,743 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   2%|▌                        | 38/1634 [00:20<13:50,  1.92it/s, Loss=3.8995, CE=3.8995, OOD=0.0000, Acc=0.1100, LR=0.010000]2025-07-30 16:33:54,281 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   2%|▌                        | 39/1634 [00:20<13:58,  1.90it/s, Loss=4.0216, CE=4.0216, OOD=0.0000, Acc=0.2075, LR=0.010000]2025-07-30 16:33:54,772 - SimplifiedHopfieldTrainer - ERROR - Error in batch 39: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   2%|▌                        | 40/1634 [00:21<13:41,  1.94it/s, Loss=4.0216, CE=4.0216, OOD=0.0000, Acc=0.2075, LR=0.010000]2025-07-30 16:33:55,312 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▋                        | 41/1634 [00:21<13:52,  1.91it/s, Loss=2.4768, CE=2.4768, OOD=0.0000, Acc=0.5100, LR=0.010000]2025-07-30 16:33:55,802 - SimplifiedHopfieldTrainer - ERROR - Error in batch 41: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   3%|▋                        | 42/1634 [00:22<13:36,  1.95it/s, Loss=2.4768, CE=2.4768, OOD=0.0000, Acc=0.5100, LR=0.010000]2025-07-30 16:33:56,345 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▋                        | 43/1634 [00:22<13:50,  1.92it/s, Loss=2.7956, CE=2.7956, OOD=0.0000, Acc=0.3575, LR=0.010000]2025-07-30 16:33:56,879 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▋                        | 44/1634 [00:23<13:55,  1.90it/s, Loss=1.7888, CE=1.7888, OOD=0.0000, Acc=0.6400, LR=0.010000]2025-07-30 16:33:57,366 - SimplifiedHopfieldTrainer - ERROR - Error in batch 44: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   3%|▋                        | 45/1634 [00:24<13:36,  1.95it/s, Loss=1.7888, CE=1.7888, OOD=0.0000, Acc=0.6400, LR=0.010000]2025-07-30 16:33:57,909 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▋                        | 46/1634 [00:24<13:50,  1.91it/s, Loss=3.3501, CE=3.3501, OOD=0.0000, Acc=0.2350, LR=0.010000]2025-07-30 16:33:58,401 - SimplifiedHopfieldTrainer - ERROR - Error in batch 46: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   3%|▋                        | 47/1634 [00:25<13:34,  1.95it/s, Loss=3.3501, CE=3.3501, OOD=0.0000, Acc=0.2350, LR=0.010000]2025-07-30 16:33:58,937 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▋                        | 48/1634 [00:25<13:45,  1.92it/s, Loss=3.5639, CE=3.5639, OOD=0.0000, Acc=0.3325, LR=0.010000]2025-07-30 16:33:59,470 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▋                        | 49/1634 [00:26<13:50,  1.91it/s, Loss=2.2448, CE=2.2448, OOD=0.0000, Acc=0.5700, LR=0.010000]2025-07-30 16:33:59,956 - SimplifiedHopfieldTrainer - ERROR - Error in batch 49: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   3%|▊                        | 50/1634 [00:26<13:31,  1.95it/s, Loss=2.2448, CE=2.2448, OOD=0.0000, Acc=0.5700, LR=0.010000]2025-07-30 16:34:00,497 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▊                        | 51/1634 [00:27<13:45,  1.92it/s, Loss=3.3813, CE=3.3813, OOD=0.0000, Acc=0.3700, LR=0.010000]2025-07-30 16:34:00,985 - SimplifiedHopfieldTrainer - ERROR - Error in batch 51: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   3%|▊                        | 52/1634 [00:27<13:28,  1.96it/s, Loss=3.3813, CE=3.3813, OOD=0.0000, Acc=0.3700, LR=0.010000]2025-07-30 16:34:01,522 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▊                        | 53/1634 [00:28<13:40,  1.93it/s, Loss=1.2071, CE=1.2071, OOD=0.0000, Acc=0.7325, LR=0.010000]2025-07-30 16:34:02,053 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▊                        | 54/1634 [00:28<13:45,  1.91it/s, Loss=1.8508, CE=1.8508, OOD=0.0000, Acc=0.5050, LR=0.010000]2025-07-30 16:34:02,547 - SimplifiedHopfieldTrainer - ERROR - Error in batch 54: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   3%|▊                        | 55/1634 [00:29<13:31,  1.95it/s, Loss=1.8508, CE=1.8508, OOD=0.0000, Acc=0.5050, LR=0.010000]2025-07-30 16:34:03,086 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▊                        | 56/1634 [00:29<13:43,  1.92it/s, Loss=2.4150, CE=2.4150, OOD=0.0000, Acc=0.4350, LR=0.010000]2025-07-30 16:34:03,621 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   3%|▊                        | 57/1634 [00:30<13:48,  1.90it/s, Loss=1.7273, CE=1.7273, OOD=0.0000, Acc=0.5750, LR=0.010000]2025-07-30 16:34:04,112 - SimplifiedHopfieldTrainer - ERROR - Error in batch 57: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   4%|▉                        | 58/1634 [00:30<13:31,  1.94it/s, Loss=1.7273, CE=1.7273, OOD=0.0000, Acc=0.5750, LR=0.010000]2025-07-30 16:34:04,654 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   4%|▉                        | 59/1634 [00:31<13:44,  1.91it/s, Loss=1.5584, CE=1.5584, OOD=0.0000, Acc=0.6725, LR=0.010000]2025-07-30 16:34:05,149 - SimplifiedHopfieldTrainer - ERROR - Error in batch 59: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   4%|▉                        | 60/1634 [00:31<13:29,  1.94it/s, Loss=1.5584, CE=1.5584, OOD=0.0000, Acc=0.6725, LR=0.010000]2025-07-30 16:34:05,689 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   4%|▉                        | 61/1634 [00:32<13:42,  1.91it/s, Loss=2.3711, CE=2.3711, OOD=0.0000, Acc=0.4150, LR=0.010000]2025-07-30 16:34:06,228 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   4%|▉                        | 62/1634 [00:32<13:49,  1.90it/s, Loss=3.6280, CE=3.6280, OOD=0.0000, Acc=0.1900, LR=0.010000]2025-07-30 16:34:06,714 - SimplifiedHopfieldTrainer - ERROR - Error in batch 62: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   4%|▉                        | 63/1634 [00:33<13:28,  1.94it/s, Loss=3.6280, CE=3.6280, OOD=0.0000, Acc=0.1900, LR=0.010000]2025-07-30 16:34:07,256 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   4%|▉                        | 64/1634 [00:33<13:41,  1.91it/s, Loss=2.1398, CE=2.1398, OOD=0.0000, Acc=0.5925, LR=0.010000]2025-07-30 16:34:07,745 - SimplifiedHopfieldTrainer - ERROR - Error in batch 64: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   4%|▉                        | 65/1634 [00:34<13:24,  1.95it/s, Loss=2.1398, CE=2.1398, OOD=0.0000, Acc=0.5925, LR=0.010000]2025-07-30 16:34:08,284 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   4%|█                        | 66/1634 [00:34<13:36,  1.92it/s, Loss=2.3877, CE=2.3877, OOD=0.0000, Acc=0.4675, LR=0.010000]2025-07-30 16:34:08,822 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   4%|█                        | 67/1634 [00:35<13:44,  1.90it/s, Loss=2.1779, CE=2.1779, OOD=0.0000, Acc=0.4350, LR=0.010000]2025-07-30 16:34:09,314 - SimplifiedHopfieldTrainer - ERROR - Error in batch 67: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   4%|█                        | 68/1634 [00:35<13:27,  1.94it/s, Loss=2.1779, CE=2.1779, OOD=0.0000, Acc=0.4350, LR=0.010000]2025-07-30 16:34:09,856 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   4%|█                        | 69/1634 [00:36<13:39,  1.91it/s, Loss=2.5315, CE=2.5315, OOD=0.0000, Acc=0.2600, LR=0.010000]2025-07-30 16:34:10,354 - SimplifiedHopfieldTrainer - ERROR - Error in batch 69: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 68.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 191.68 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 68.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 191.68 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   4%|█                        | 70/1634 [00:36<13:26,  1.94it/s, Loss=2.5315, CE=2.5315, OOD=0.0000, Acc=0.2600, LR=0.010000]2025-07-30 16:34:10,893 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   4%|█                        | 71/1634 [00:37<13:37,  1.91it/s, Loss=2.5018, CE=2.5018, OOD=0.0000, Acc=0.4825, LR=0.010000]2025-07-30 16:34:11,430 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   4%|█                        | 72/1634 [00:38<13:43,  1.90it/s, Loss=1.6182, CE=1.6182, OOD=0.0000, Acc=0.5925, LR=0.010000]2025-07-30 16:34:11,920 - SimplifiedHopfieldTrainer - ERROR - Error in batch 72: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   4%|█                        | 73/1634 [00:38<13:24,  1.94it/s, Loss=1.6182, CE=1.6182, OOD=0.0000, Acc=0.5925, LR=0.010000]2025-07-30 16:34:12,462 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   5%|█▏                       | 74/1634 [00:39<13:37,  1.91it/s, Loss=1.3788, CE=1.3788, OOD=0.0000, Acc=0.6150, LR=0.010000]2025-07-30 16:34:12,958 - SimplifiedHopfieldTrainer - ERROR - Error in batch 74: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   5%|█▏                       | 75/1634 [00:39<13:23,  1.94it/s, Loss=1.3788, CE=1.3788, OOD=0.0000, Acc=0.6150, LR=0.010000]2025-07-30 16:34:13,497 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   5%|█▏                       | 76/1634 [00:40<13:34,  1.91it/s, Loss=1.7308, CE=1.7308, OOD=0.0000, Acc=0.5250, LR=0.010000]2025-07-30 16:34:14,032 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   5%|█▏                       | 77/1634 [00:40<13:39,  1.90it/s, Loss=0.8291, CE=0.8291, OOD=0.0000, Acc=0.7950, LR=0.010000]2025-07-30 16:34:14,521 - SimplifiedHopfieldTrainer - ERROR - Error in batch 77: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 94.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.42 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 164.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 94.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.42 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 164.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   5%|█▏                       | 78/1634 [00:41<13:21,  1.94it/s, Loss=0.8291, CE=0.8291, OOD=0.0000, Acc=0.7950, LR=0.010000]2025-07-30 16:34:15,061 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   5%|█▏                       | 79/1634 [00:41<13:32,  1.91it/s, Loss=1.5618, CE=1.5618, OOD=0.0000, Acc=0.5675, LR=0.010000]2025-07-30 16:34:15,556 - SimplifiedHopfieldTrainer - ERROR - Error in batch 79: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 72.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.44 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 187.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   5%|█▏                       | 80/1634 [00:42<13:18,  1.95it/s, Loss=1.5618, CE=1.5618, OOD=0.0000, Acc=0.5675, LR=0.010000]2025-07-30 16:34:16,098 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   5%|█▏                       | 81/1634 [00:42<13:31,  1.91it/s, Loss=1.9656, CE=1.9656, OOD=0.0000, Acc=0.5025, LR=0.010000]2025-07-30 16:34:16,635 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   5%|█▎                       | 82/1634 [00:43<13:37,  1.90it/s, Loss=2.4564, CE=2.4564, OOD=0.0000, Acc=0.3550, LR=0.010000]2025-07-30 16:34:17,124 - SimplifiedHopfieldTrainer - ERROR - Error in batch 82: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 96.38 MiB is free. Process 3463629 has 1.59 GiB memory in use. Process 3465108 has 1.59 GiB memory in use. Process 116436 has 1.30 GiB memory in use. Process 3529702 has 1.60 GiB memory in use. Including non-PyTorch memory, this process has 1.41 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 163.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Epoch 1:   5%|█▎                       | 83/1634 [00:43<13:19,  1.94it/s, Loss=2.4564, CE=2.4564, OOD=0.0000, Acc=0.3550, LR=0.010000]2025-07-30 16:34:17,661 - SimplifiedHopfieldTrainer - WARNING - Energy calculator not available or memories are empty for OOD loss. OOD loss is 0.
+Epoch 1:   5%|█▎                       | 84/1634 [00:44<13:46,  1.88it/s, Loss=1.3226, CE=1.3226, OOD=0.0000, Acc=0.6400, LR=0.010000]
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 979, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 976, in main
+    trainer.train(train_loader, num_epochs=training_config['num_epochs'])
+  File "train_pixel_hopfield_boosting.py", line 755, in train
+    epoch_metrics = self.train_epoch(dataloader, epoch)
+  File "train_pixel_hopfield_boosting.py", line 671, in train_epoch
+    batch_data = self.feature_extractor.extract_features_batch(batch)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 274, in extract_features_batch
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 150, in forward
+    dec0 = torch.cat(dec0, 1)
+KeyboardInterrupt

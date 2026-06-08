@@ -1,0 +1,7 @@
+{"time":"2025-09-01T14:22:31.242121994+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpa8eydt6i/port-4024759.txt","pid":4024759,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-01T14:22:31.247622619+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":33327,"Zone":""}}
+{"time":"2025-09-01T14:22:31.247648657+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":4024759}
+{"time":"2025-09-01T14:22:31.432063625+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:45508"}
+{"time":"2025-09-01T14:22:31.464223352+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"bgbtz60n","id":"127.0.0.1:45508"}
+{"time":"2025-09-01T14:22:31.719410602+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"bgbtz60n","id":"127.0.0.1:45508"}
+{"time":"2025-09-01T20:55:17.567347101+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

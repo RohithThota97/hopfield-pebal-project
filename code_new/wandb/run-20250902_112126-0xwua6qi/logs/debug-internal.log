@@ -1,0 +1,18 @@
+{"time":"2025-09-02T11:21:27.020344736+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250902_112126-0xwua6qi/logs/debug-core.log"}
+{"time":"2025-09-02T11:21:27.274320684+02:00","level":"INFO","msg":"stream: created new stream","id":"0xwua6qi"}
+{"time":"2025-09-02T11:21:27.274404091+02:00","level":"INFO","msg":"stream: started","id":"0xwua6qi"}
+{"time":"2025-09-02T11:21:27.274430299+02:00","level":"INFO","msg":"handler: started","stream_id":"0xwua6qi"}
+{"time":"2025-09-02T11:21:27.274453792+02:00","level":"INFO","msg":"sender: started","stream_id":"0xwua6qi"}
+{"time":"2025-09-02T11:21:27.274484812+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"0xwua6qi"}
+{"time":"2025-09-02T11:21:27.519300214+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-02T12:41:57.759721885+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.23:39040->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-02T12:42:12.759043348+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.23:49992->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-02T17:33:32.185498337+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-02T17:33:32.185855543+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-02T17:33:33.195881469+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.434360638,"progress":"524.6KB/524.6KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.148104111,"progress":"467B/467B"}],"total_operations":2}}
+{"time":"2025-09-02T17:33:33.727493829+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-02T17:33:33.920304462+02:00","level":"INFO","msg":"stream: closing","id":"0xwua6qi"}
+{"time":"2025-09-02T17:33:33.920318125+02:00","level":"INFO","msg":"handler: closed","stream_id":"0xwua6qi"}
+{"time":"2025-09-02T17:33:33.92032354+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"0xwua6qi"}
+{"time":"2025-09-02T17:33:33.920330785+02:00","level":"INFO","msg":"sender: closed","stream_id":"0xwua6qi"}
+{"time":"2025-09-02T17:33:33.922517778+02:00","level":"INFO","msg":"stream: closed","id":"0xwua6qi"}

@@ -1,0 +1,7 @@
+{"time":"2025-09-04T11:28:51.689581543+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp_abfus02/port-3039237.txt","pid":3039237,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-04T11:28:51.70097598+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3039237}
+{"time":"2025-09-04T11:28:51.702091626+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":34623,"Zone":""}}
+{"time":"2025-09-04T11:28:51.739692452+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:45332"}
+{"time":"2025-09-04T11:28:51.866011647+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"quuknpia","id":"127.0.0.1:45332"}
+{"time":"2025-09-04T11:28:52.130897779+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"quuknpia","id":"127.0.0.1:45332"}
+{"time":"2025-09-04T12:15:11.775055095+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

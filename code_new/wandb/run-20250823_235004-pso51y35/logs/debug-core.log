@@ -1,0 +1,13 @@
+{"time":"2025-08-23T23:50:04.34822446+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpwut_rldy/port-3741920.txt","pid":3741920,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-08-23T23:50:04.377504578+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3741920}
+{"time":"2025-08-23T23:50:04.377477198+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":34099,"Zone":""}}
+{"time":"2025-08-23T23:50:04.539117935+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:37444"}
+{"time":"2025-08-23T23:50:04.591067735+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"pso51y35","id":"127.0.0.1:37444"}
+{"time":"2025-08-23T23:50:04.848614588+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"pso51y35","id":"127.0.0.1:37444"}
+{"time":"2025-08-24T00:09:53.368669986+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:37444"}
+{"time":"2025-08-24T00:09:53.369232938+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:37444"}
+{"time":"2025-08-24T00:09:53.369281167+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-08-24T00:09:53.369355352+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:37444"}
+{"time":"2025-08-24T00:09:56.486150707+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:37444"}
+{"time":"2025-08-24T00:09:56.486185064+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:37444"}
+{"time":"2025-08-24T00:09:56.486202876+02:00","level":"INFO","msg":"server is closed"}

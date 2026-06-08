@@ -1,0 +1,47 @@
+2025-09-03 08:01:37,338 - INFO - Starting lightweight debug program on device: cuda:0
+2025-09-03 08:01:37,338 - INFO - Output directory: debug_energy_light_20250903_080137
+2025-09-03 08:01:37,338 - INFO - Creating synthetic data...
+2025-09-03 08:04:48,546 - INFO - Starting lightweight debug program on device: cuda:0
+2025-09-03 08:04:48,546 - INFO - Output directory: debug_energy_light_20250903_080448
+2025-09-03 08:04:48,578 - INFO - Initial GPU memory usage: 0.00 MB
+2025-09-03 08:04:48,578 - INFO - Creating synthetic data...
+2025-09-03 08:04:48,770 - INFO - Created synthetic data: ID=torch.Size([1024, 128]), OOD=torch.Size([1024, 128])
+2025-09-03 08:04:48,770 - INFO - Testing energy calculations with synthetic data...
+2025-09-03 08:04:48,770 - INFO - Testing with 1024 ID features and 1024 OOD features
+2025-09-03 08:04:48,770 - INFO - Testing beta=4.0...
+2025-09-03 08:04:48,856 - INFO -   Border Energy: ID=0.6626±0.0824, OOD=0.6644±0.0852, AUC=0.4954
+2025-09-03 08:04:49,201 - WARNING - Poor separation (0.001) at fixed β=8 - consider manual adjustment if persists
+2025-09-03 08:04:49,203 - INFO -   OOD Loss: -0.2472
+2025-09-03 08:04:49,206 - INFO -   Inference Score: ID=0.3318±0.0548, OOD=-0.3305±0.0569, AUC=0.0000
+2025-09-03 08:04:49,557 - INFO - Testing beta=8.0...
+2025-09-03 08:04:49,561 - INFO -   Border Energy: ID=0.1723±0.0564, OOD=0.1736±0.0596, AUC=0.4984
+2025-09-03 08:04:49,872 - WARNING - Poor separation (0.001) at fixed β=8 - consider manual adjustment if persists
+2025-09-03 08:04:49,872 - INFO -   OOD Loss: -0.2472
+2025-09-03 08:04:49,874 - INFO -   Inference Score: ID=0.3879±0.0446, OOD=-0.3874±0.0462, AUC=0.0000
+2025-09-03 08:04:50,188 - INFO - Testing beta=16.0...
+2025-09-03 08:04:50,192 - INFO -   Border Energy: ID=0.0001±0.0000, OOD=0.0001±0.0000, AUC=0.5085
+2025-09-03 08:04:50,481 - WARNING - Poor separation (0.001) at fixed β=8 - consider manual adjustment if persists
+2025-09-03 08:04:50,481 - INFO -   OOD Loss: -0.2472
+2025-09-03 08:04:50,483 - INFO -   Inference Score: ID=0.6779±0.0284, OOD=-0.6786±0.0297, AUC=0.0000
+2025-09-03 08:04:50,807 - INFO - Testing feature enhancement methods...
+2025-09-03 08:04:50,819 - INFO - Testing feature enhancement: l2...
+2025-09-03 08:04:50,883 - INFO - Feature enhancement 'l2':
+2025-09-03 08:04:50,883 - INFO -   ID-to-ID similarity: 0.1669±0.1020
+2025-09-03 08:04:50,883 - INFO -   ID-to-OOD similarity: -0.1611±0.0838
+2025-09-03 08:04:50,883 - INFO -   Separation: 0.3280
+2025-09-03 08:04:51,152 - INFO - Testing adaptive beta values...
+2025-09-03 08:04:51,169 - INFO - Testing adaptive beta: 1.0
+2025-09-03 08:04:51,171 - INFO -   Beta 1.0: ID=0.3268, OOD=-0.3252, Separation=0.6520
+2025-09-03 08:04:51,207 - INFO - Testing adaptive beta: 2.0
+2025-09-03 08:04:51,210 - INFO -   Beta 2.0: ID=0.3276, OOD=-0.3260, Separation=0.6536
+2025-09-03 08:04:51,244 - INFO - Testing adaptive beta: 4.0
+2025-09-03 08:04:51,247 - INFO -   Beta 4.0: ID=0.3317, OOD=-0.3303, Separation=0.6620
+2025-09-03 08:04:51,283 - INFO - Testing adaptive beta: 8.0
+2025-09-03 08:04:51,286 - INFO -   Beta 8.0: ID=0.3889, OOD=-0.3883, Separation=0.7772
+2025-09-03 08:04:51,321 - INFO - Testing adaptive beta: 16.0
+2025-09-03 08:04:51,324 - INFO -   Beta 16.0: ID=0.6793, OOD=-0.6799, Separation=1.3591
+2025-09-03 08:04:51,360 - INFO - Testing adaptive beta: 32.0
+2025-09-03 08:04:51,363 - INFO -   Beta 32.0: ID=0.8445, OOD=-0.8459, Separation=1.6904
+2025-09-03 08:04:51,714 - INFO - Saving results...
+2025-09-03 08:04:51,717 - INFO - Debug program completed. Results saved to debug_energy_light_20250903_080448
+2025-09-03 08:04:51,751 - INFO - Final GPU memory usage: 9.14 MB

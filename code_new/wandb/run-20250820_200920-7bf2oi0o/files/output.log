@@ -1,0 +1,210 @@
+Building real memory banks...
+Building real memory (ID=3000, OOD=1500)
+Processing Images: 100%|████████████████████████████████████████████████████████████████████████████████████████████| 150/150 [00:37<00:00,  4.03it/s]
+Raw collection complete. Building final tensors...
+Building final memory tensors...
+Building memory with 12 valid classes
+Final ID Memory Shape: torch.Size([3000, 128])
+Final OOD Memory Shape: torch.Size([1500, 128])
+Real memory banks built - ID: torch.Size([128, 3000]), OOD: torch.Size([128, 1500])
+Training Epoch 1: 100%|█████████████████████████████████████| 1634/1634 [03:51<00:00,  7.04it/s, L_CE=1.4368, L_OOD=0.0000, L_DIV=0.0654, LR=0.000499]
+Epoch 1 Averages - CE: 2.7654, OOD: 0.0071, DIV: 0.0483
+Training Epoch 2: 100%|█████████████████████████████████████| 1634/1634 [04:04<00:00,  6.67it/s, L_CE=2.5534, L_OOD=0.0000, L_DIV=0.0383, LR=0.000495]
+Epoch 2 Averages - CE: 1.1494, OOD: 0.0074, DIV: 0.0446
+Training Epoch 3: 100%|█████████████████████████████████████| 1634/1634 [04:00<00:00,  6.78it/s, L_CE=0.4788, L_OOD=0.0000, L_DIV=0.0317, LR=0.000488]
+Epoch 3 Averages - CE: 0.8523, OOD: 0.0060, DIV: 0.0413
+Training Epoch 4: 100%|█████████████████████████████████████| 1634/1634 [04:00<00:00,  6.79it/s, L_CE=0.5576, L_OOD=0.0000, L_DIV=0.0409, LR=0.000478]
+Epoch 4 Averages - CE: 0.7130, OOD: 0.0059, DIV: 0.0387
+Training Epoch 5: 100%|█████████████████████████████████████| 1634/1634 [04:00<00:00,  6.78it/s, L_CE=0.5860, L_OOD=0.0000, L_DIV=0.0296, LR=0.000467]
+Epoch 5 Averages - CE: 0.6309, OOD: 0.0067, DIV: 0.0375
+Evaluating at Epoch 5
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 3000])
+AUX memory shape: torch.Size([128, 1500])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=862, ood_pixels=138
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24766, Out: 5234
+In-scores range: [-1.718, -1.585]
+Out-scores range: [-1.719, -1.586]
+✅ AUROC: 0.3714
+✅ FPR95: 0.9790
+✅ AUPRS: 0.7620
+Evaluation Results - AUROC: 0.3714, FPR95: 0.9790
+Training Epoch 6: 100%|█████████████████████████████████████| 1634/1634 [04:01<00:00,  6.77it/s, L_CE=0.3750, L_OOD=0.0000, L_DIV=0.0468, LR=0.000452]
+Epoch 6 Averages - CE: 0.5808, OOD: 0.0074, DIV: 0.0351
+Training Epoch 7: 100%|█████████████████████████████████████| 1634/1634 [04:01<00:00,  6.77it/s, L_CE=0.6973, L_OOD=0.0000, L_DIV=0.0149, LR=0.000436]
+Epoch 7 Averages - CE: 0.5338, OOD: 0.0064, DIV: 0.0340
+Training Epoch 8: 100%|█████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.4087, L_OOD=0.0000, L_DIV=0.0433, LR=0.000417]
+Epoch 8 Averages - CE: 0.4836, OOD: 0.0067, DIV: 0.0340
+Training Epoch 9: 100%|█████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.8477, L_OOD=0.0000, L_DIV=0.0290, LR=0.000397]
+Epoch 9 Averages - CE: 0.4563, OOD: 0.0071, DIV: 0.0334
+Training Epoch 10: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.2823, L_OOD=0.0000, L_DIV=0.0199, LR=0.000375]
+Epoch 10 Averages - CE: 0.4567, OOD: 0.0069, DIV: 0.0331
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_real_memory/checkpoint_epoch_10.pth
+Evaluating at Epoch 10
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 3000])
+AUX memory shape: torch.Size([128, 1500])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=863, ood_pixels=137
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=859, ood_pixels=141
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24762, Out: 5238
+In-scores range: [-1.719, -1.587]
+Out-scores range: [-1.718, -1.592]
+✅ AUROC: 0.3858
+✅ FPR95: 0.9769
+✅ AUPRS: 0.7685
+Evaluation Results - AUROC: 0.3858, FPR95: 0.9769
+Training Epoch 11: 100%|████████████████████████████████████| 1634/1634 [04:03<00:00,  6.72it/s, L_CE=0.3430, L_OOD=0.0000, L_DIV=0.0602, LR=0.000352]
+Epoch 11 Averages - CE: 0.4261, OOD: 0.0074, DIV: 0.0323
+Training Epoch 12: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.4505, L_OOD=0.0000, L_DIV=0.0315, LR=0.000328]
+Epoch 12 Averages - CE: 0.4202, OOD: 0.0061, DIV: 0.0324
+Training Epoch 13: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.77it/s, L_CE=0.5268, L_OOD=0.0000, L_DIV=0.0205, LR=0.000302]
+Epoch 13 Averages - CE: 0.4093, OOD: 0.0068, DIV: 0.0318
+Training Epoch 14: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.3520, L_OOD=0.0000, L_DIV=0.0246, LR=0.000277]
+Epoch 14 Averages - CE: 0.3940, OOD: 0.0067, DIV: 0.0314
+Training Epoch 15: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.77it/s, L_CE=0.4419, L_OOD=0.0951, L_DIV=0.0286, LR=0.000250]
+Epoch 15 Averages - CE: 0.3951, OOD: 0.0061, DIV: 0.0314
+Evaluating at Epoch 15
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 3000])
+AUX memory shape: torch.Size([128, 1500])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=865, ood_pixels=135
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24779, Out: 5221
+In-scores range: [-1.719, -1.585]
+Out-scores range: [-1.720, -1.583]
+✅ AUROC: 0.3789
+✅ FPR95: 0.9747
+✅ AUPRS: 0.7662
+Evaluation Results - AUROC: 0.3789, FPR95: 0.9747
+Training Epoch 16: 100%|████████████████████████████████████| 1634/1634 [04:02<00:00,  6.75it/s, L_CE=0.4951, L_OOD=0.0000, L_DIV=0.0219, LR=0.000224]
+Epoch 16 Averages - CE: 0.3823, OOD: 0.0068, DIV: 0.0311
+Training Epoch 17: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.4588, L_OOD=0.0000, L_DIV=0.0313, LR=0.000199]
+Epoch 17 Averages - CE: 0.3678, OOD: 0.0063, DIV: 0.0308
+Training Epoch 18: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.1816, L_OOD=0.0000, L_DIV=0.0193, LR=0.000173]
+Epoch 18 Averages - CE: 0.3788, OOD: 0.0069, DIV: 0.0309
+Training Epoch 19: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.1038, L_OOD=0.0000, L_DIV=0.0308, LR=0.000149]
+Epoch 19 Averages - CE: 0.3753, OOD: 0.0070, DIV: 0.0304
+Training Epoch 20: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.0860, L_OOD=0.0000, L_DIV=0.0291, LR=0.000126]
+Epoch 20 Averages - CE: 0.3694, OOD: 0.0066, DIV: 0.0305
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_real_memory/checkpoint_epoch_20.pth
+Evaluating at Epoch 20
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 3000])
+AUX memory shape: torch.Size([128, 1500])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=861, ood_pixels=139
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24757, Out: 5243
+In-scores range: [-1.719, -1.589]
+Out-scores range: [-1.719, -1.589]
+✅ AUROC: 0.3949
+✅ FPR95: 0.9735
+✅ AUPRS: 0.7736
+Evaluation Results - AUROC: 0.3949, FPR95: 0.9735
+Training Epoch 21: 100%|████████████████████████████████████| 1634/1634 [04:03<00:00,  6.72it/s, L_CE=0.1700, L_OOD=0.0000, L_DIV=0.0294, LR=0.000104]
+Epoch 21 Averages - CE: 0.3601, OOD: 0.0069, DIV: 0.0303
+Training Epoch 22: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.75it/s, L_CE=0.1889, L_OOD=0.0964, L_DIV=0.0373, LR=0.000084]
+Epoch 22 Averages - CE: 0.3626, OOD: 0.0065, DIV: 0.0304
+Training Epoch 23: 100%|████████████████████████████████████| 1634/1634 [04:02<00:00,  6.75it/s, L_CE=0.1444, L_OOD=0.0000, L_DIV=0.0322, LR=0.000065]
+Epoch 23 Averages - CE: 0.3559, OOD: 0.0075, DIV: 0.0307
+Training Epoch 24: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.75it/s, L_CE=0.1043, L_OOD=0.0000, L_DIV=0.0267, LR=0.000049]
+Epoch 24 Averages - CE: 0.3582, OOD: 0.0069, DIV: 0.0303
+Training Epoch 25: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.1010, L_OOD=0.0000, L_DIV=0.0279, LR=0.000034]
+Epoch 25 Averages - CE: 0.3664, OOD: 0.0068, DIV: 0.0301
+Evaluating at Epoch 25
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 3000])
+AUX memory shape: torch.Size([128, 1500])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=864, ood_pixels=136
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=855, ood_pixels=145
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=853, ood_pixels=147
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24759, Out: 5241
+In-scores range: [-1.719, -1.590]
+Out-scores range: [-1.718, -1.596]
+✅ AUROC: 0.3888
+✅ FPR95: 0.9716
+✅ AUPRS: 0.7672
+Evaluation Results - AUROC: 0.3888, FPR95: 0.9716
+Training Epoch 26: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.75it/s, L_CE=0.1553, L_OOD=0.0000, L_DIV=0.0185, LR=0.000023]
+Epoch 26 Averages - CE: 0.3604, OOD: 0.0064, DIV: 0.0301
+Training Epoch 27: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.77it/s, L_CE=0.1877, L_OOD=0.0000, L_DIV=0.0375, LR=0.000013]
+Epoch 27 Averages - CE: 0.3566, OOD: 0.0068, DIV: 0.0303
+Training Epoch 28: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.75it/s, L_CE=0.2836, L_OOD=0.0000, L_DIV=0.0352, LR=0.000006]
+Epoch 28 Averages - CE: 0.3506, OOD: 0.0069, DIV: 0.0303
+Training Epoch 29: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.2444, L_OOD=0.0000, L_DIV=0.0309, LR=0.000002]
+Epoch 29 Averages - CE: 0.3529, OOD: 0.0072, DIV: 0.0300
+Training Epoch 30: 100%|████████████████████████████████████| 1634/1634 [04:01<00:00,  6.76it/s, L_CE=0.3617, L_OOD=0.0000, L_DIV=0.0144, LR=0.000001]
+Epoch 30 Averages - CE: 0.3596, OOD: 0.0071, DIV: 0.0302
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_real_memory/checkpoint_epoch_30.pth
+Evaluating at Epoch 30
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 3000])
+AUX memory shape: torch.Size([128, 1500])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=867, ood_pixels=133
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=855, ood_pixels=145
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24778, Out: 5222
+In-scores range: [-1.720, -1.587]
+Out-scores range: [-1.719, -1.592]
+✅ AUROC: 0.3853
+✅ FPR95: 0.9757
+✅ AUPRS: 0.7688
+Evaluation Results - AUROC: 0.3853, FPR95: 0.9757

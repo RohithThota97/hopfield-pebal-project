@@ -1,0 +1,27 @@
+{
+    "static": {
+        "loading_success": true,
+        "samples": [
+            {
+                "idx": 0,
+                "ood_scores_computed": true
+            },
+            {
+                "idx": 1,
+                "ood_scores_computed": true
+            },
+            {
+                "idx": 2,
+                "ood_scores_computed": true
+            },
+            {
+                "idx": 3,
+                "ood_scores_computed": true
+            },
+            {
+                "idx": 4,
+                "ood_scores_computed": true
+            }
+        ],
+        "all_in_scores": [
+            

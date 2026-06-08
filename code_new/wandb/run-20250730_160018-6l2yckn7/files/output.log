@@ -1,0 +1,1022 @@
+2025-07-30 16:00:19,972 - SimplifiedHopfieldTrainer - INFO - Loading pretrained model for Engine: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+2025-07-30 16:00:20,168 - SimplifiedHopfieldTrainer - INFO - Pretrained model loaded successfully for Engine initialization.
+2025-07-30 16:00:20,169 - SimplifiedHopfieldTrainer - INFO - Engine instance created successfully for dataloader.
+2025-07-30 16:00:20,259 - SimplifiedHopfieldTrainer - INFO - DataLoader created with 1634 batches.
+2025-07-30 16:00:20,259 - SimplifiedHopfieldTrainer - INFO - Starting training...
+2025-07-30 16:00:20,259 - SimplifiedHopfieldTrainer - INFO - Building initial memories...
+2025-07-30 16:00:20,259 - hopfield_memory_builder - INFO - HopfieldMemoryBuilder initialized.
+2025-07-30 16:00:20,260 - hopfield_memory_builder - INFO - Starting to collect pixels for memory building...
+Collecting pixels:   0%|                                                                                            | 0/1634 [00:00<?, ?it/s]2025-07-30 16:00:21,169 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   0%|                                                                                    | 1/1634 [00:00<24:45,  1.10it/s]2025-07-30 16:00:21,174 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:21,182 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:21,190 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:21,845 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   0%|▎                                                                                   | 5/1634 [00:01<07:34,  3.58it/s]2025-07-30 16:00:21,850 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:21,853 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:21,858 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:22,411 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   1%|▍                                                                                   | 9/1634 [00:02<05:30,  4.91it/s]2025-07-30 16:00:22,415 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:22,484 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:22,488 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:22,949 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   1%|▋                                                                                  | 13/1634 [00:02<04:40,  5.77it/s]2025-07-30 16:00:22,953 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:22,956 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:22,960 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:23,619 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   1%|▊                                                                                  | 17/1634 [00:03<04:36,  5.85it/s]2025-07-30 16:00:23,623 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:23,626 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:23,629 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:24,077 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   1%|█                                                                                  | 21/1634 [00:03<04:03,  6.63it/s]2025-07-30 16:00:24,080 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:24,083 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:24,089 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:24,408 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   2%|█▎                                                                                 | 25/1634 [00:04<03:25,  7.81it/s]2025-07-30 16:00:24,412 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:24,415 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:24,419 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:25,079 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   2%|█▍                                                                                 | 29/1634 [00:04<03:46,  7.10it/s]2025-07-30 16:00:25,082 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:25,086 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:25,089 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:25,566 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   2%|█▋                                                                                 | 33/1634 [00:05<03:35,  7.42it/s]2025-07-30 16:00:25,569 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:25,572 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:25,575 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:25,996 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   2%|█▉                                                                                 | 37/1634 [00:05<03:21,  7.92it/s]2025-07-30 16:00:25,999 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:26,002 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:26,005 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:26,563 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   3%|██                                                                                 | 41/1634 [00:06<03:28,  7.63it/s]2025-07-30 16:00:26,566 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:26,569 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:26,572 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:27,157 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   3%|██▎                                                                                | 45/1634 [00:06<03:36,  7.33it/s]2025-07-30 16:00:27,161 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:27,164 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:27,166 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:27,778 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   3%|██▍                                                                                | 49/1634 [00:07<03:45,  7.04it/s]2025-07-30 16:00:27,782 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:27,785 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:27,788 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:28,225 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   3%|██▋                                                                                | 53/1634 [00:07<03:30,  7.52it/s]2025-07-30 16:00:28,228 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:28,231 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:28,235 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:28,687 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   3%|██▉                                                                                | 57/1634 [00:08<03:21,  7.83it/s]2025-07-30 16:00:28,691 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:28,694 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:28,697 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:29,282 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   4%|███                                                                                | 61/1634 [00:09<03:30,  7.46it/s]2025-07-30 16:00:29,286 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:29,290 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:29,294 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:29,741 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   4%|███▎                                                                               | 65/1634 [00:09<03:21,  7.80it/s]2025-07-30 16:00:29,745 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:29,748 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:29,751 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:30,082 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   4%|███▌                                                                               | 69/1634 [00:09<03:00,  8.67it/s]2025-07-30 16:00:30,087 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:30,090 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:30,094 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:30,461 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   4%|███▋                                                                               | 73/1634 [00:10<02:50,  9.16it/s]2025-07-30 16:00:30,465 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:30,468 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:30,471 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:30,935 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   5%|███▉                                                                               | 77/1634 [00:10<02:54,  8.93it/s]2025-07-30 16:00:31,171 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   5%|███▉                                                                               | 78/1634 [00:10<03:12,  8.07it/s]2025-07-30 16:00:31,174 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:31,178 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:31,324 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   5%|████                                                                               | 81/1634 [00:11<02:39,  9.75it/s]2025-07-30 16:00:31,450 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:31,453 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   5%|████▏                                                                              | 83/1634 [00:11<02:26, 10.61it/s]2025-07-30 16:00:31,457 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:31,640 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   5%|████▎                                                                              | 85/1634 [00:11<02:25, 10.62it/s]2025-07-30 16:00:31,845 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:31,849 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   5%|████▍                                                                              | 87/1634 [00:11<02:29, 10.35it/s]2025-07-30 16:00:31,899 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:32,328 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   5%|████▌                                                                              | 89/1634 [00:12<03:28,  7.43it/s]2025-07-30 16:00:32,331 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:32,334 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:32,354 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:32,950 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   6%|████▋                                                                              | 93/1634 [00:12<03:41,  6.96it/s]2025-07-30 16:00:32,954 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:32,957 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:32,960 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:33,453 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   6%|████▉                                                                              | 97/1634 [00:13<03:30,  7.31it/s]2025-07-30 16:00:33,458 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:33,464 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:33,481 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:33,872 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   6%|█████                                                                             | 101/1634 [00:13<03:12,  7.96it/s]2025-07-30 16:00:33,896 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:33,970 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:33,974 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   6%|█████▏                                                                            | 104/1634 [00:13<02:33,  9.96it/s]2025-07-30 16:00:34,398 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:34,402 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   6%|█████▎                                                                            | 106/1634 [00:14<03:09,  8.07it/s]2025-07-30 16:00:34,533 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:34,537 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   7%|█████▍                                                                            | 108/1634 [00:14<02:49,  9.01it/s]2025-07-30 16:00:34,964 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:34,968 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   7%|█████▌                                                                            | 110/1634 [00:14<03:28,  7.32it/s]2025-07-30 16:00:35,088 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:35,092 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   7%|█████▌                                                                            | 112/1634 [00:14<02:58,  8.52it/s]2025-07-30 16:00:35,398 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:35,402 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   7%|█████▋                                                                            | 114/1634 [00:15<03:13,  7.84it/s]2025-07-30 16:00:35,624 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:35,628 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   7%|█████▊                                                                            | 116/1634 [00:15<03:07,  8.10it/s]2025-07-30 16:00:35,889 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   7%|█████▊                                                                            | 117/1634 [00:15<03:42,  6.82it/s]2025-07-30 16:00:35,896 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:35,974 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:35,978 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:36,343 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   7%|██████                                                                            | 121/1634 [00:16<03:17,  7.67it/s]2025-07-30 16:00:36,347 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:36,446 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   8%|██████▏                                                                           | 123/1634 [00:16<02:46,  9.09it/s]2025-07-30 16:00:36,451 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:36,690 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   8%|██████▎                                                                           | 125/1634 [00:16<02:50,  8.84it/s]2025-07-30 16:00:36,694 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:36,921 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   8%|██████▎                                                                           | 127/1634 [00:16<02:51,  8.79it/s]2025-07-30 16:00:36,924 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:37,082 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   8%|██████▍                                                                           | 129/1634 [00:16<02:37,  9.58it/s]2025-07-30 16:00:37,302 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:37,306 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   8%|██████▌                                                                           | 131/1634 [00:17<02:40,  9.38it/s]2025-07-30 16:00:37,317 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:37,752 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   8%|██████▋                                                                           | 133/1634 [00:17<03:30,  7.12it/s]2025-07-30 16:00:37,776 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:37,780 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:37,785 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:38,129 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   8%|██████▉                                                                           | 137/1634 [00:17<02:58,  8.37it/s]2025-07-30 16:00:38,211 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:38,215 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:38,218 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+2025-07-30 16:00:38,472 - hopfield_memory_builder - ERROR - Feature extraction failed for a batch: 'FeatureExtractor' object has no attribute 'device'
+Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 94, in _process_batch_for_memories
+    batch_features_dict = self.feature_extractor.extract_features_batch(batch_data)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 243, in extract_features_batch
+    images = batch['data'].to(self.device)
+AttributeError: 'FeatureExtractor' object has no attribute 'device'
+Collecting pixels:   9%|███████                                                                           | 141/1634 [00:18<03:13,  7.73it/s]
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 979, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 976, in main
+    trainer.train(train_loader, num_epochs=training_config['num_epochs'])
+  File "train_pixel_hopfield_boosting.py", line 740, in train
+    self.build_initial_memories(dataloader)
+  File "train_pixel_hopfield_boosting.py", line 155, in build_initial_memories
+    memory_builder.process_all_images_for_memories(dataloader)
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 50, in process_all_images_for_memories
+    for batch_idx, batch_data in enumerate(tqdm(dataloader, desc="Collecting pixels")):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1327, in _next_data
+    idx, data = self._get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1283, in _get_data
+    success, data = self._try_get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1131, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/queue.py", line 179, in get
+    self.not_empty.wait(remaining)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

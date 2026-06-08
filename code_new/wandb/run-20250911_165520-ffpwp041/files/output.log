@@ -1,0 +1,81 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Unfreezing entire backbone for fine-tuning
+INFO:__main__:Trainable parameters: 146,942,291
+INFO:__main__:Total parameters: 146,942,291
+INFO:__main__:
+============================================================
+INFO:__main__:RUNNING DIAGNOSTIC TESTS
+INFO:__main__:============================================================
+INFO:__main__:
+1. Testing pretrained feature extraction...
+INFO:feature_extractor:Processing images of shape torch.Size([1, 3, 512, 1024]), min: 0.0000, max: 1.0000
+INFO:__main__:   Feature shape: torch.Size([1, 1280, 64, 128])
+INFO:__main__:   Feature mean: 0.0509, std: 0.1043
+INFO:__main__:   ✓ Feature extraction working correctly
+INFO:__main__:
+2. Testing segmentation head initialization...
+INFO:__main__:   Logits shape: torch.Size([1, 19, 32, 64])
+INFO:__main__:   Mean probability per class: tensor([0.0777, 0.0003, 0.0484, 0.0185, 0.0386, 0.0552, 0.1366, 0.0312, 0.0734,
+        0.0191, 0.0548, 0.1743, 0.0836, 0.1014, 0.0623, 0.0115, 0.0026, 0.0080,
+        0.0027], device='cuda:0')
+INFO:__main__:   Expected uniform: ~0.0526
+INFO:__main__:   ✓ Segmentation head initialization looks good
+INFO:__main__:
+3. Testing data loader labels...
+INFO:__main__:   Unique labels in first batch: [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 17, 18, 255]
+INFO:__main__:   ✓ Found 15 ID classes in batch
+INFO:__main__:
+============================================================
+INFO:__main__:DIAGNOSTIC TESTS COMPLETE
+INFO:__main__:============================================================
+
+INFO:__main__:Initializing training components...
+/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:Training components initialized
+INFO:__main__:
+============================================================
+INFO:__main__:Epoch 1/150
+INFO:__main__:============================================================
+Training Epoch 1:   0%|                                                                           | 0/816 [00:00<?, ?it/s]INFO:feature_extractor:Processing images of shape torch.Size([4, 3, 512, 1024]), min: 0.0000, max: 1.0000
+ERROR:feature_extractor:Error in forward: CUDA out of memory. Tried to allocate 608.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 59.38 MiB is free. Including non-PyTorch memory, this process has 7.53 GiB memory in use. Of the allocated memory 7.14 GiB is allocated by PyTorch, and 280.39 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR:feature_extractor:Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 237, in forward
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 150, in forward
+    dec0 = torch.cat(dec0, 1)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 608.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 59.38 MiB is free. Including non-PyTorch memory, this process has 7.53 GiB memory in use. Of the allocated memory 7.14 GiB is allocated by PyTorch, and 280.39 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+ERROR:feature_extractor:Error in extract_features_batch: CUDA out of memory. Tried to allocate 160.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 59.38 MiB is free. Including non-PyTorch memory, this process has 7.53 GiB memory in use. Of the allocated memory 7.14 GiB is allocated by PyTorch, and 280.39 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+INFO:feature_extractor:Possibly bad files: ['cologne_000005_000019', 'hanover_000000_013205', 'dusseldorf_000131_000019', 'weimar_000035_000019']
+ERROR:__main__:Loss computation error: CUDA out of memory. Tried to allocate 246.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 59.38 MiB is free. Including non-PyTorch memory, this process has 7.53 GiB memory in use. Of the allocated memory 7.14 GiB is allocated by PyTorch, and 280.39 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Training Epoch 1:   0%|                                                                           | 0/816 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 989, in <module>
+    main()
+  File "run_training.py", line 986, in main
+    trainer.train()
+  File "run_training.py", line 644, in train
+    self.scaler.scale(loss).backward()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/autograd/graph.py", line 769, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn

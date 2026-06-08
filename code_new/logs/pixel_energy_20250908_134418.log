@@ -1,0 +1,32 @@
+2025-09-08 13:54:26,835 - INFO - Initializing models...
+2025-09-08 13:54:28,163 - INFO - Initializing training components...
+2025-09-08 13:54:28,164 - INFO - Initializing advanced boosting components...
+2025-09-08 13:54:28,164 - INFO - 
+Building memory with β = 32...
+2025-09-08 13:54:28,165 - ERROR - Failed to initialize boosting: type object 'SimplifiedMemoryBuilder' has no attribute 'build_from_loader'
+2025-09-08 13:54:28,340 - INFO - Monitoring - ID Mean: 0.132, OOD Mean: 0.136, Separation: 0.004
+2025-09-08 13:54:28,340 - ERROR - Error during initial separation check: Low initial ID/OOD separation - rebuild memories
+2025-09-08 13:54:28,340 - INFO - HopfieldBoostingManager initialized with aligned beta=32, lambda_ood=1.0
+2025-09-08 13:54:28,341 - INFO - PixelWiseHopfieldTrainer initialization complete with β=32!
+2025-09-08 13:54:28,342 - INFO - 
+Starting Epoch 1/100
+2025-09-08 13:54:28,343 - INFO - ============================================================
+2025-09-08 13:54:28,345 - INFO - 
+Updating Hopfield boosting weights at epoch 1...
+2025-09-08 13:54:37,879 - INFO - Weights updated successfully
+2025-09-08 13:54:42,785 - INFO - Energy stats: β=32, min=0.0433, max=0.7039, mean=0.4659, id_mean=0.4250, ood_mean=0.5293, id_hist=[2000.0, 0.0, 0.0, 0.0, 0.0], ood_hist=[1290.0, 0.0, 0.0, 0.0, 0.0], id_quantiles=[0.20318730175495148, 0.42947933077812195, 0.6652117967605591], ood_quantiles=[0.6074639558792114, 0.6556788086891174, 0.6680906414985657]
+2025-09-08 13:54:42,786 - INFO - Boosted OOD loss: 0.8155
+2025-09-08 13:54:42,787 - ERROR - Loss computation error: Feature dimension mismatch. Memory: 128, Features: 1. Ensure consistent dims upstream.
+2025-09-08 13:54:42,789 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-08 13:54:50,928 - INFO - Energy stats: β=32, min=0.1056, max=0.6951, mean=0.4832, id_mean=0.4567, ood_mean=0.5173, id_hist=[2000.0, 0.0, 0.0, 0.0, 0.0], ood_hist=[1558.0, 0.0, 0.0, 0.0, 0.0], id_quantiles=[0.25382769107818604, 0.4470480680465698, 0.663145899772644], ood_quantiles=[0.28064167499542236, 0.647752046585083, 0.6659368276596069]
+2025-09-08 13:54:50,929 - INFO - Boosted OOD loss: 0.8501
+2025-09-08 13:54:50,930 - ERROR - Loss computation error: Feature dimension mismatch. Memory: 128, Features: 1. Ensure consistent dims upstream.
+2025-09-08 13:54:50,932 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-08 13:54:57,701 - INFO - Energy stats: β=32, min=0.0919, max=0.6945, mean=0.5667, id_mean=0.5219, ood_mean=0.6561, id_hist=[2000.0, 0.0, 0.0, 0.0, 0.0], ood_hist=[1003.0, 0.0, 0.0, 0.0, 0.0], id_quantiles=[0.3730033040046692, 0.5507481098175049, 0.6679933071136475], ood_quantiles=[0.6499485373497009, 0.6629396677017212, 0.6709245443344116]
+2025-09-08 13:54:57,702 - INFO - Boosted OOD loss: 0.9709
+2025-09-08 13:54:57,702 - ERROR - Loss computation error: Feature dimension mismatch. Memory: 128, Features: 1. Ensure consistent dims upstream.
+2025-09-08 13:54:57,705 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-08 13:54:59,654 - INFO - Energy stats: β=32, min=0.0868, max=0.7073, mean=0.4696, id_mean=0.4306, ood_mean=0.5273, id_hist=[2000.0, 0.0, 0.0, 0.0, 0.0], ood_hist=[1350.0, 0.0, 0.0, 0.0, 0.0], id_quantiles=[0.19448044896125793, 0.45500481128692627, 0.6650726795196533], ood_quantiles=[0.2315472662448883, 0.6545528769493103, 0.667934775352478]
+2025-09-08 13:54:59,655 - INFO - Boosted OOD loss: 0.8181
+2025-09-08 13:54:59,656 - ERROR - Loss computation error: Feature dimension mismatch. Memory: 128, Features: 1. Ensure consistent dims upstream.
+2025-09-08 13:54:59,658 - WARNING - Invalid total_loss: 0.0. Skipping batch.

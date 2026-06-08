@@ -1,0 +1,7 @@
+{"time":"2025-08-25T22:57:41.051135575+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp2osrz2x6/port-3435750.txt","pid":3435750,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-08-25T22:57:41.056740836+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3435750}
+{"time":"2025-08-25T22:57:41.05674314+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":44353,"Zone":""}}
+{"time":"2025-08-25T22:57:41.24202628+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:37350"}
+{"time":"2025-08-25T22:57:41.302357472+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"nokybhar","id":"127.0.0.1:37350"}
+{"time":"2025-08-25T22:57:41.57652132+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"nokybhar","id":"127.0.0.1:37350"}
+{"time":"2025-08-26T09:16:48.813532695+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

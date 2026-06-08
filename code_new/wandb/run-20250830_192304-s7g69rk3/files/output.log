@@ -1,0 +1,25 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+
+================================================================================
+INITIALIZING HOPFIELD BOOSTING WITH PAPER-ALIGNED PARAMETERS
+================================================================================
+Building memory with updated, paper-aligned approach...
+Collecting Features: 100%|██████████████████████████████████████████████████████████| 408/408 [03:21<00:00,  2.03it/s]
+WARNING: Negative energies detected—check normalization!
+HopfieldBoostingManager initialized with aligned beta=4.0
+Memory balance check:
+  ID memory: 49991 samples
+  AUX memory: 50000 samples
+  AUX/ID ratio: 1.00
+Traceback (most recent call last):
+  File "run_training.py", line 590, in <module>
+    main()
+  File "run_training.py", line 579, in main
+    trainer = PixelWiseHopfieldTrainer(train_config, train_loader, val_loader, evaluator)
+  File "run_training.py", line 63, in __init__
+    self._initialize_advanced_boosting_components()
+  File "run_training.py", line 118, in _initialize_advanced_boosting_components
+    self.boosting_manager.save_memory_checkpoint(initial_memory_path)
+AttributeError: 'HopfieldBoostingManager' object has no attribute 'save_memory_checkpoint'

@@ -1,0 +1,15 @@
+{"time":"2025-08-19T10:38:11.496008203+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250819_103811-xmr4iwxt/logs/debug-core.log"}
+{"time":"2025-08-19T10:38:11.756698115+02:00","level":"INFO","msg":"stream: created new stream","id":"xmr4iwxt"}
+{"time":"2025-08-19T10:38:11.756762535+02:00","level":"INFO","msg":"stream: started","id":"xmr4iwxt"}
+{"time":"2025-08-19T10:38:11.756788572+02:00","level":"INFO","msg":"handler: started","stream_id":"xmr4iwxt"}
+{"time":"2025-08-19T10:38:11.756846256+02:00","level":"INFO","msg":"sender: started","stream_id":"xmr4iwxt"}
+{"time":"2025-08-19T10:38:11.756880101+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"xmr4iwxt"}
+{"time":"2025-08-19T10:38:12.023318531+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-19T10:42:18.336429356+02:00","level":"INFO","msg":"stream: closing","id":"xmr4iwxt"}
+{"time":"2025-08-19T10:42:18.336528031+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-19T10:42:18.336881578+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-19T10:42:18.804353495+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-19T10:42:19.028197616+02:00","level":"INFO","msg":"handler: closed","stream_id":"xmr4iwxt"}
+{"time":"2025-08-19T10:42:19.02827026+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"xmr4iwxt"}
+{"time":"2025-08-19T10:42:19.028287616+02:00","level":"INFO","msg":"sender: closed","stream_id":"xmr4iwxt"}
+{"time":"2025-08-19T10:42:19.030590562+02:00","level":"INFO","msg":"stream: closed","id":"xmr4iwxt"}

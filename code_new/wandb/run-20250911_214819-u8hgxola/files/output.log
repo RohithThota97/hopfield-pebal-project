@@ -1,0 +1,45 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Trainable parameters: 3,163,491
+INFO:__main__:Total parameters: 140,267,427
+INFO:__main__:
+============================================================
+INFO:__main__:RUNNING DIAGNOSTIC TESTS
+INFO:__main__:============================================================
+INFO:__main__:
+1. Testing pretrained feature extraction...
+INFO:__main__:   Feature shape: torch.Size([1, 1280, 64, 128])
+INFO:__main__:   Feature mean: -0.0004, std: 0.0164
+INFO:__main__:   ✓ Feature extraction working correctly
+INFO:__main__:
+2. Testing segmentation head initialization...
+INFO:__main__:   Logits shape: torch.Size([2, 19, 64, 128])
+INFO:__main__:   Mean probability per class: tensor([0.1094, 0.0079, 0.0321, 0.1688, 0.0289, 0.0025, 0.0369, 0.1686, 0.0173,
+        0.0036, 0.1598, 0.0018, 0.0030, 0.2198, 0.0103, 0.0025, 0.0188, 0.0014,
+        0.0069], device='cuda:0')
+INFO:__main__:   Expected uniform: ~0.0526
+INFO:__main__:   ✓ Segmentation head initialization looks good
+INFO:__main__:
+3. Testing data loader labels...
+INFO:__main__:   Unique labels in first batch: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 18, 255]
+INFO:__main__:   ✓ Found 14 ID classes in batch
+INFO:__main__:
+============================================================
+INFO:__main__:DIAGNOSTIC TESTS COMPLETE
+INFO:__main__:============================================================
+
+INFO:__main__:Initializing training components...
+/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:Training components initialized
+INFO:__main__:
+============================================================
+INFO:__main__:Epoch 1/150
+INFO:__main__:============================================================
+Training Epoch 1:   0%|                                                                                          | 0/1632 [00:00<?, ?it/s]/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:216: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+Training Epoch 1:   3%|██▎                                                                 | 54/1632 [01:11<33:54,  1.29s/it, Loss=4.0359]

@@ -1,0 +1,30 @@
+{"time":"2025-06-30T13:24:31.120557936+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250630_132430-qfhdb34v/logs/debug-core.log"}
+{"time":"2025-06-30T13:24:31.378894586+02:00","level":"INFO","msg":"stream: created new stream","id":"qfhdb34v"}
+{"time":"2025-06-30T13:24:31.378980581+02:00","level":"INFO","msg":"stream: started","id":"qfhdb34v"}
+{"time":"2025-06-30T13:24:31.379046366+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"qfhdb34v"}
+{"time":"2025-06-30T13:24:31.379071575+02:00","level":"INFO","msg":"handler: started","stream_id":"qfhdb34v"}
+{"time":"2025-06-30T13:24:31.3790937+02:00","level":"INFO","msg":"sender: started","stream_id":"qfhdb34v"}
+{"time":"2025-06-30T13:24:31.728111026+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-30T16:56:57.516831361+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/qfhdb34v/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-06-30T18:15:30.293466903+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/qfhdb34v/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-06-30T23:19:09.36812853+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/qfhdb34v/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-06-30T23:19:16.682847683+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/qfhdb34v/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-06-30T23:19:32.378775374+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-30T23:43:02.395803963+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-30T23:43:28.716199428+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/qfhdb34v/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-06-30T23:43:34.401437421+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-30T23:48:31.613471377+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/qfhdb34v/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-06-30T23:48:38.951830629+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/qfhdb34v/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-06-30T23:48:47.398323822+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-06-30T23:50:26.883722923+02:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/qfhdb34v/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-06-30T23:50:47.399754357+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-07-01T00:57:30.197350996+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/qfhdb34v/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-07-01T02:00:02.500923102+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-07-01T12:26:37.677071125+02:00","level":"INFO","msg":"stream: closing","id":"qfhdb34v"}
+{"time":"2025-07-01T12:26:37.677165773+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-01T12:26:37.677634342+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-01T12:26:40.880929514+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-01T12:26:41.202825151+02:00","level":"INFO","msg":"handler: closed","stream_id":"qfhdb34v"}
+{"time":"2025-07-01T12:26:41.202913371+02:00","level":"INFO","msg":"sender: closed","stream_id":"qfhdb34v"}
+{"time":"2025-07-01T12:26:41.202895592+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"qfhdb34v"}
+{"time":"2025-07-01T12:26:41.205244864+02:00","level":"INFO","msg":"stream: closed","id":"qfhdb34v"}

@@ -1,0 +1,18 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:✓ Feature extractor FROZEN
+INFO:__main__:Segmentation head parameters: 399,123
+INFO:__main__:Projection head parameters: 985,216
+INFO:__main__:Total trainable parameters: 1,384,339
+INFO:__main__:Building initial memories using HopfieldBoostingManager...
+INFO:hopfield_weight_updater:Building memories from loader...
+/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+INFO:hopfield_memory_builder:Starting modified memory building over full dataset...
+Collecting Features (Modified):   1%|▍                                                         | 19/2226 [00:24<46:43,  1.27s/it]

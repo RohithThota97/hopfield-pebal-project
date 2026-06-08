@@ -1,0 +1,21 @@
+{"time":"2025-09-03T19:28:08.98142682+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250903_192808-b0em7rzl/logs/debug-core.log"}
+{"time":"2025-09-03T19:28:09.231873982+02:00","level":"INFO","msg":"stream: created new stream","id":"b0em7rzl"}
+{"time":"2025-09-03T19:28:09.231956874+02:00","level":"INFO","msg":"stream: started","id":"b0em7rzl"}
+{"time":"2025-09-03T19:28:09.231988244+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"b0em7rzl"}
+{"time":"2025-09-03T19:28:09.232109713+02:00","level":"INFO","msg":"sender: started","stream_id":"b0em7rzl"}
+{"time":"2025-09-03T19:28:09.232115971+02:00","level":"INFO","msg":"handler: started","stream_id":"b0em7rzl"}
+{"time":"2025-09-03T19:28:09.532949393+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-03T19:33:54.693124109+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.28:46866->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-03T19:36:09.69454864+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.28:40534->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-03T20:29:39.715771517+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-03T20:34:27.154918535+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-pebal-aligned/b0em7rzl/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-09-03T20:56:39.726922445+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-04T02:59:36.94925707+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-04T02:59:36.950048073+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-04T02:59:37.916019857+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.619086619,"progress":"1.6MB/6.4MB"}],"total_operations":1}}
+{"time":"2025-09-04T02:59:38.583817119+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-04T02:59:38.780897059+02:00","level":"INFO","msg":"stream: closing","id":"b0em7rzl"}
+{"time":"2025-09-04T02:59:38.780933699+02:00","level":"INFO","msg":"handler: closed","stream_id":"b0em7rzl"}
+{"time":"2025-09-04T02:59:38.780940729+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"b0em7rzl"}
+{"time":"2025-09-04T02:59:38.780972743+02:00","level":"INFO","msg":"sender: closed","stream_id":"b0em7rzl"}
+{"time":"2025-09-04T02:59:38.782291267+02:00","level":"INFO","msg":"stream: closed","id":"b0em7rzl"}

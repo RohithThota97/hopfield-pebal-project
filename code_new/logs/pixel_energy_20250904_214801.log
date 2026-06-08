@@ -1,0 +1,2173 @@
+2025-09-04 21:48:03,781 - INFO - 
+Building memory with β = 32...
+2025-09-04 21:48:03,782 - INFO - Building memories from loader...
+2025-09-04 21:48:04,225 - INFO - Starting simplified memory building over full dataset...
+2025-09-04 22:02:19,763 - WARNING - Class 16 has only 960 pixels, below min 3000
+2025-09-04 22:02:19,765 - WARNING - Class 14 has only 1790 pixels, below min 3000
+2025-09-04 22:02:19,777 - WARNING - Class 15 has only 1440 pixels, below min 3000
+2025-09-04 22:02:19,783 - WARNING - Class 17 has only 1630 pixels, below min 3000
+2025-09-04 22:02:19,788 - INFO - Pixels collected after entire dataset:
+2025-09-04 22:02:19,788 - INFO - Class 0: 33820 pixels
+2025-09-04 22:02:19,789 - INFO - Class 1: 27360 pixels
+2025-09-04 22:02:19,789 - INFO - Class 2: 31210 pixels
+2025-09-04 22:02:19,789 - INFO - Class 3: 5610 pixels
+2025-09-04 22:02:19,789 - INFO - Class 4: 7680 pixels
+2025-09-04 22:02:19,789 - INFO - Class 5: 25400 pixels
+2025-09-04 22:02:19,789 - INFO - Class 6: 6640 pixels
+2025-09-04 22:02:19,789 - INFO - Class 7: 14580 pixels
+2025-09-04 22:02:19,789 - INFO - Class 8: 28890 pixels
+2025-09-04 22:02:19,789 - INFO - Class 9: 9890 pixels
+2025-09-04 22:02:19,790 - INFO - Class 10: 18520 pixels
+2025-09-04 22:02:19,790 - INFO - Class 11: 14610 pixels
+2025-09-04 22:02:19,790 - INFO - Class 12: 3720 pixels
+2025-09-04 22:02:19,790 - INFO - Class 13: 27340 pixels
+2025-09-04 22:02:19,790 - INFO - Class 14: 1790 pixels
+2025-09-04 22:02:19,790 - INFO - Class 15: 1440 pixels
+2025-09-04 22:02:19,790 - INFO - Class 16: 960 pixels
+2025-09-04 22:02:19,790 - INFO - Class 17: 1630 pixels
+2025-09-04 22:02:19,790 - INFO - Class 18: 7600 pixels
+2025-09-04 22:02:19,790 - INFO - OOD (254): 31200 pixels
+2025-09-04 22:02:19,857 - INFO - Within-class average cosine similarities:
+2025-09-04 22:02:20,079 - INFO - Class 0: 0.788
+2025-09-04 22:02:20,155 - INFO - Class 1: 0.769
+2025-09-04 22:02:20,257 - INFO - Class 2: 0.778
+2025-09-04 22:02:20,264 - INFO - Class 4: 0.792
+2025-09-04 22:02:20,329 - INFO - Class 5: 0.791
+2025-09-04 22:02:20,416 - INFO - Class 8: 0.812
+2025-09-04 22:02:20,428 - INFO - Class 9: 0.793
+2025-09-04 22:02:20,464 - INFO - Class 10: 0.867
+2025-09-04 22:02:20,487 - INFO - Class 11: 0.802
+2025-09-04 22:02:20,564 - INFO - Class 13: 0.793
+2025-09-04 22:02:20,571 - INFO - Class 18: 0.807
+2025-09-04 22:02:20,572 - INFO - Class 16: 0.796
+2025-09-04 22:02:20,573 - INFO - Class 14: 0.781
+2025-09-04 22:02:20,576 - INFO - Class 3: 0.785
+2025-09-04 22:02:20,599 - INFO - Class 7: 0.791
+2025-09-04 22:02:20,599 - INFO - Class 15: 0.790
+2025-09-04 22:02:20,602 - INFO - Class 12: 0.810
+2025-09-04 22:02:20,607 - INFO - Class 6: 0.812
+2025-09-04 22:02:20,608 - INFO - Class 17: 0.809
+2025-09-04 22:02:20,608 - INFO - Between-class average cosine similarities:
+2025-09-04 22:02:21,143 - INFO - Average between ID classes: 0.776
+2025-09-04 22:02:21,177 - INFO - Average ID-OOD cosine similarity: 0.771
+2025-09-04 22:02:21,178 - INFO - ID-OOD Separation Rate: 0.123
+2025-09-04 22:02:21,474 - INFO - Memories saved.
+2025-09-04 22:02:21,477 - INFO - Memory building completed in 857.3 seconds
+2025-09-04 22:02:21,480 - INFO - Memory sizes - ID: 10000, OOD: 10000
+2025-09-04 22:02:21,481 - INFO - Memory norms - ID: 1.0000, OOD: 1.0000
+2025-09-04 22:02:21,494 - INFO - Energy check - Mean: -0.1387
+2025-09-04 22:02:21,494 - WARNING - Negative energies detected—check normalization!
+2025-09-04 22:02:21,555 - INFO - Monitoring - ID Mean: -0.047, OOD Mean: -0.046, Separation: 0.001
+2025-09-04 22:02:21,556 - WARNING - Low initial ID/OOD separation - check memory quality.
+2025-09-04 22:02:21,558 - INFO - HopfieldBoostingManager initialized with aligned beta=32, lambda_ood=0.5
+2025-09-04 22:02:21,558 - INFO - Memory built with β=32:
+2025-09-04 22:02:21,559 - INFO -  ID: 10000, AUX: 10000, Ratio: 1.00
+2025-09-04 22:02:21,565 - INFO - Memory debug: ID energies mean=-0.0491, min=-0.0924, max=-0.0433
+2025-09-04 22:02:21,566 - INFO - Memory debug: AUX energies mean=-0.0474, min=-0.0823, max=-0.0433
+2025-09-04 22:02:21,806 - INFO - PixelWiseHopfieldTrainer initialization complete with β=32!
+2025-09-04 22:02:21,808 - INFO - 
+Starting Epoch 1/100
+2025-09-04 22:02:21,811 - INFO - ============================================================
+2025-09-04 22:02:21,812 - INFO - 
+Updating Hopfield boosting weights at epoch 1...
+2025-09-04 22:02:21,894 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 22:02:21,901 - INFO - Weights updated successfully
+2025-09-04 22:02:24,838 - INFO - Step 0: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 254 255], OOD(254) count=110471, Ignore(255) count=835036, is_ood=tensor([False, False, False, False, False, False,  True, False])
+2025-09-04 22:02:26,750 - INFO - First epoch batch energies: ID mean=-0.1090, min=-0.1439, max=-0.0546
+2025-09-04 22:02:26,750 - INFO - First epoch batch energies: OOD mean=-0.0803, min=-0.1366, max=-0.0433
+2025-09-04 22:02:26,792 - INFO - Boosted OOD loss: -0.0147
+2025-09-04 22:02:26,793 - INFO - Step 0 Loss Debug:
+2025-09-04 22:02:26,794 - INFO -  CE: 2.9462
+2025-09-04 22:02:26,794 - INFO -  OOD: -0.0147
+2025-09-04 22:02:26,794 - INFO -  β: 32.00
+2025-09-04 22:02:26,795 - INFO -  ID: 28006, OOD(254): 552
+2025-09-04 22:02:26,796 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:02:26,797 - INFO - First epoch batch losses: CE=2.9462, OOD=-0.0147
+2025-09-04 22:02:27,386 - INFO - Step 1: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  17  18 254 255], OOD(254) count=21108, Ignore(255) count=528121, is_ood=tensor([False, False, False,  True, False, False, False, False])
+2025-09-04 22:02:29,245 - INFO - First epoch batch energies: ID mean=-0.1954, min=-0.2340, max=-0.1322
+2025-09-04 22:02:29,246 - INFO - First epoch batch energies: OOD mean=-0.1942, min=-0.2464, max=-0.0963
+2025-09-04 22:02:29,252 - INFO - Boosted OOD loss: -0.0154
+2025-09-04 22:02:29,526 - INFO - Step 2: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  17  18
+ 255], OOD(254) count=0, Ignore(255) count=1715286, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-04 22:02:31,626 - INFO - Step 3: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18
+ 255], OOD(254) count=0, Ignore(255) count=1603902, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-04 22:02:33,732 - INFO - Step 4: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 254 255], OOD(254) count=7354, Ignore(255) count=1138140, is_ood=tensor([False, False,  True, False, False, False, False, False])
+2025-09-04 22:02:35,593 - INFO - First epoch batch energies: ID mean=-0.2396, min=-0.2717, max=-0.2075
+2025-09-04 22:02:35,593 - INFO - First epoch batch energies: OOD mean=-0.2074, min=-0.2740, max=-0.1408
+2025-09-04 22:02:35,599 - INFO - Boosted OOD loss: -0.0174
+2025-09-04 22:02:35,838 - INFO - Step 5: labels=[  0   1   2   3   5   6   7   8   9  10  11  13  14  15  16  18 254 255], OOD(254) count=20285, Ignore(255) count=446109, is_ood=tensor([False, False, False, False, False, False, False,  True])
+2025-09-04 22:02:37,701 - INFO - First epoch batch energies: ID mean=-0.1964, min=-0.2538, max=-0.1240
+2025-09-04 22:02:37,701 - INFO - First epoch batch energies: OOD mean=-0.2144, min=-0.3086, max=-0.0748
+2025-09-04 22:02:37,708 - INFO - Boosted OOD loss: -0.0162
+2025-09-04 22:02:38,160 - INFO - Step 6: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], OOD(254) count=0, Ignore(255) count=343016, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-04 22:02:40,266 - INFO - Step 7: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 254 255], OOD(254) count=66039, Ignore(255) count=663375, is_ood=tensor([False, False, False, False, False, False, False,  True])
+2025-09-04 22:02:42,138 - INFO - First epoch batch energies: ID mean=-0.1088, min=-0.1896, max=-0.0478
+2025-09-04 22:02:42,138 - INFO - First epoch batch energies: OOD mean=-0.1087, min=-0.1872, max=-0.0442
+2025-09-04 22:02:42,145 - INFO - Boosted OOD loss: -0.0144
+2025-09-04 22:02:42,391 - INFO - Step 8: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18
+ 254 255], OOD(254) count=827, Ignore(255) count=1349076, is_ood=tensor([False, False, False, False, False,  True, False, False])
+2025-09-04 22:02:44,261 - INFO - First epoch batch energies: ID mean=-0.2957, min=-0.3069, max=-0.2692
+2025-09-04 22:02:44,261 - INFO - First epoch batch energies: OOD mean=-0.3167, min=-0.3443, max=-0.2746
+2025-09-04 22:02:44,267 - INFO - Boosted OOD loss: -0.0144
+2025-09-04 22:02:44,492 - INFO - Step 9: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], OOD(254) count=0, Ignore(255) count=1333130, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-04 22:02:53,967 - INFO - First epoch batch energies: ID mean=-0.1235, min=-0.2333, max=-0.0515
+2025-09-04 22:02:53,967 - INFO - First epoch batch energies: OOD mean=-0.1249, min=-0.1854, max=-0.0456
+2025-09-04 22:02:53,973 - INFO - Boosted OOD loss: -0.0154
+2025-09-04 22:03:01,724 - INFO - First epoch batch energies: ID mean=-0.2841, min=-0.4505, max=-0.1999
+2025-09-04 22:03:01,724 - INFO - First epoch batch energies: OOD mean=-0.2033, min=-0.2440, max=-0.1553
+2025-09-04 22:03:01,730 - INFO - Boosted OOD loss: -0.0181
+2025-09-04 22:03:03,696 - INFO - First epoch batch energies: ID mean=-0.0738, min=-0.1734, max=-0.0433
+2025-09-04 22:03:03,696 - INFO - First epoch batch energies: OOD mean=-0.0581, min=-0.1135, max=-0.0433
+2025-09-04 22:03:03,704 - INFO - Boosted OOD loss: -0.0131
+2025-09-04 22:03:05,679 - INFO - First epoch batch energies: ID mean=-0.1195, min=-0.2196, max=-0.0573
+2025-09-04 22:03:05,679 - INFO - First epoch batch energies: OOD mean=-0.1088, min=-0.2005, max=-0.0435
+2025-09-04 22:03:05,687 - INFO - Boosted OOD loss: -0.0145
+2025-09-04 22:03:09,600 - INFO - First epoch batch energies: ID mean=-0.1475, min=-0.1604, max=-0.1305
+2025-09-04 22:03:09,600 - INFO - First epoch batch energies: OOD mean=-0.1507, min=-0.1630, max=-0.1339
+2025-09-04 22:03:09,606 - INFO - Boosted OOD loss: -0.0167
+2025-09-04 22:03:13,521 - INFO - First epoch batch energies: ID mean=-0.2031, min=-0.2425, max=-0.1502
+2025-09-04 22:03:13,521 - INFO - First epoch batch energies: OOD mean=-0.1767, min=-0.2260, max=-0.1155
+2025-09-04 22:03:13,527 - INFO - Boosted OOD loss: -0.0195
+2025-09-04 22:03:17,451 - INFO - First epoch batch energies: ID mean=-0.0882, min=-0.1382, max=-0.0454
+2025-09-04 22:03:17,451 - INFO - First epoch batch energies: OOD mean=-0.0921, min=-0.1695, max=-0.0433
+2025-09-04 22:03:17,460 - INFO - Boosted OOD loss: -0.0147
+2025-09-04 22:03:21,393 - INFO - First epoch batch energies: ID mean=-0.1829, min=-0.2775, max=-0.1158
+2025-09-04 22:03:21,393 - INFO - First epoch batch energies: OOD mean=-0.2186, min=-0.3449, max=-0.1091
+2025-09-04 22:03:21,400 - INFO - Boosted OOD loss: -0.0166
+2025-09-04 22:03:23,380 - INFO - First epoch batch energies: ID mean=-0.2124, min=-0.2491, max=-0.1537
+2025-09-04 22:03:23,380 - INFO - First epoch batch energies: OOD mean=-0.2092, min=-0.3200, max=-0.1151
+2025-09-04 22:03:23,387 - INFO - Boosted OOD loss: -0.0166
+2025-09-04 22:03:29,257 - INFO - First epoch batch energies: ID mean=-0.1079, min=-0.1859, max=-0.0764
+2025-09-04 22:03:29,257 - INFO - First epoch batch energies: OOD mean=-0.0881, min=-0.2091, max=-0.0433
+2025-09-04 22:03:29,264 - INFO - Boosted OOD loss: -0.0155
+2025-09-04 22:03:31,222 - INFO - First epoch batch energies: ID mean=-0.1028, min=-0.2220, max=-0.0433
+2025-09-04 22:03:31,222 - INFO - First epoch batch energies: OOD mean=-0.0858, min=-0.1173, max=-0.0515
+2025-09-04 22:03:31,228 - INFO - Boosted OOD loss: -0.0158
+2025-09-04 22:03:35,142 - INFO - First epoch batch energies: ID mean=-0.1002, min=-0.1592, max=-0.0436
+2025-09-04 22:03:35,142 - INFO - First epoch batch energies: OOD mean=-0.0818, min=-0.1521, max=-0.0433
+2025-09-04 22:03:35,150 - INFO - Boosted OOD loss: -0.0150
+2025-09-04 22:03:37,129 - INFO - First epoch batch energies: ID mean=-0.2696, min=-0.3507, max=-0.2202
+2025-09-04 22:03:37,129 - INFO - First epoch batch energies: OOD mean=-0.2455, min=-0.3092, max=-0.1730
+2025-09-04 22:03:37,136 - INFO - Boosted OOD loss: -0.0205
+2025-09-04 22:03:41,059 - INFO - First epoch batch energies: ID mean=-0.1554, min=-0.2485, max=-0.0486
+2025-09-04 22:03:41,059 - INFO - First epoch batch energies: OOD mean=-0.1648, min=-0.2247, max=-0.0435
+2025-09-04 22:03:41,067 - INFO - Boosted OOD loss: -0.0180
+2025-09-04 22:03:46,934 - INFO - First epoch batch energies: ID mean=-0.1107, min=-0.1697, max=-0.0516
+2025-09-04 22:03:46,934 - INFO - First epoch batch energies: OOD mean=-0.1120, min=-0.2068, max=-0.0433
+2025-09-04 22:03:46,942 - INFO - Boosted OOD loss: -0.0161
+2025-09-04 22:03:46,942 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:03:46,943 - INFO - First epoch batch losses: CE=2.8971, OOD=-0.0161
+2025-09-04 22:03:48,905 - INFO - First epoch batch energies: ID mean=-0.2001, min=-0.2844, max=-0.1464
+2025-09-04 22:03:48,906 - INFO - First epoch batch energies: OOD mean=-0.1500, min=-0.2274, max=-0.0866
+2025-09-04 22:03:48,912 - INFO - Boosted OOD loss: -0.0248
+2025-09-04 22:03:52,817 - INFO - First epoch batch energies: ID mean=-0.0924, min=-0.1327, max=-0.0621
+2025-09-04 22:03:52,818 - INFO - First epoch batch energies: OOD mean=-0.0607, min=-0.1664, max=-0.0434
+2025-09-04 22:03:52,824 - INFO - Boosted OOD loss: -0.0180
+2025-09-04 22:03:56,728 - INFO - First epoch batch energies: ID mean=-0.1278, min=-0.1804, max=-0.0938
+2025-09-04 22:03:56,729 - INFO - First epoch batch energies: OOD mean=-0.1097, min=-0.1720, max=-0.0608
+2025-09-04 22:03:56,735 - INFO - Boosted OOD loss: -0.0199
+2025-09-04 22:04:02,575 - INFO - First epoch batch energies: ID mean=-0.2605, min=-0.2728, max=-0.2433
+2025-09-04 22:04:02,575 - INFO - First epoch batch energies: OOD mean=-0.2254, min=-0.2896, max=-0.1721
+2025-09-04 22:04:02,581 - INFO - Boosted OOD loss: -0.0317
+2025-09-04 22:04:08,406 - INFO - First epoch batch energies: ID mean=-0.1260, min=-0.1971, max=-0.0641
+2025-09-04 22:04:08,407 - INFO - First epoch batch energies: OOD mean=-0.1350, min=-0.2430, max=-0.0435
+2025-09-04 22:04:08,414 - INFO - Boosted OOD loss: -0.0198
+2025-09-04 22:04:10,381 - INFO - First epoch batch energies: ID mean=-0.1098, min=-0.1811, max=-0.0434
+2025-09-04 22:04:10,382 - INFO - First epoch batch energies: OOD mean=-0.0761, min=-0.1067, max=-0.0457
+2025-09-04 22:04:10,388 - INFO - Boosted OOD loss: -0.0211
+2025-09-04 22:04:12,362 - INFO - First epoch batch energies: ID mean=-0.1301, min=-0.2483, max=-0.0663
+2025-09-04 22:04:12,362 - INFO - First epoch batch energies: OOD mean=-0.1108, min=-0.2157, max=-0.0433
+2025-09-04 22:04:12,370 - INFO - Boosted OOD loss: -0.0189
+2025-09-04 22:04:16,275 - INFO - First epoch batch energies: ID mean=-0.2103, min=-0.2545, max=-0.1695
+2025-09-04 22:04:16,276 - INFO - First epoch batch energies: OOD mean=-0.1737, min=-0.2752, max=-0.0844
+2025-09-04 22:04:16,282 - INFO - Boosted OOD loss: -0.0291
+2025-09-04 22:04:18,243 - INFO - First epoch batch energies: ID mean=-0.1138, min=-0.1373, max=-0.0902
+2025-09-04 22:04:18,243 - INFO - First epoch batch energies: OOD mean=-0.1123, min=-0.1128, max=-0.1118
+2025-09-04 22:04:18,249 - INFO - Boosted OOD loss: -0.0286
+2025-09-04 22:04:20,208 - INFO - First epoch batch energies: ID mean=-0.2288, min=-0.2601, max=-0.1354
+2025-09-04 22:04:20,208 - INFO - First epoch batch energies: OOD mean=-0.1798, min=-0.3039, max=-0.0695
+2025-09-04 22:04:20,216 - INFO - Boosted OOD loss: -0.0302
+2025-09-04 22:04:22,185 - INFO - First epoch batch energies: ID mean=-0.1569, min=-0.2421, max=-0.0817
+2025-09-04 22:04:22,185 - INFO - First epoch batch energies: OOD mean=-0.1850, min=-0.3803, max=-0.0433
+2025-09-04 22:04:22,193 - INFO - Boosted OOD loss: -0.0239
+2025-09-04 22:04:24,161 - INFO - First epoch batch energies: ID mean=-0.2156, min=-0.2963, max=-0.1604
+2025-09-04 22:04:24,161 - INFO - First epoch batch energies: OOD mean=-0.1893, min=-0.2949, max=-0.1199
+2025-09-04 22:04:24,168 - INFO - Boosted OOD loss: -0.0296
+2025-09-04 22:04:30,000 - INFO - First epoch batch energies: ID mean=-0.2250, min=-0.2849, max=-0.1157
+2025-09-04 22:04:30,000 - INFO - First epoch batch energies: OOD mean=-0.2265, min=-0.3037, max=-0.1303
+2025-09-04 22:04:30,007 - INFO - Boosted OOD loss: -0.0255
+2025-09-04 22:04:31,978 - INFO - First epoch batch energies: ID mean=-0.2489, min=-0.2809, max=-0.1655
+2025-09-04 22:04:31,979 - INFO - First epoch batch energies: OOD mean=-0.2352, min=-0.3054, max=-0.1479
+2025-09-04 22:04:31,985 - INFO - Boosted OOD loss: -0.0268
+2025-09-04 22:04:35,897 - INFO - First epoch batch energies: ID mean=-0.1546, min=-0.2520, max=-0.0668
+2025-09-04 22:04:35,897 - INFO - First epoch batch energies: OOD mean=-0.1647, min=-0.3352, max=-0.0477
+2025-09-04 22:04:35,905 - INFO - Boosted OOD loss: -0.0231
+2025-09-04 22:04:37,876 - INFO - First epoch batch energies: ID mean=-0.2386, min=-0.3133, max=-0.1710
+2025-09-04 22:04:37,876 - INFO - First epoch batch energies: OOD mean=-0.2106, min=-0.4118, max=-0.0556
+2025-09-04 22:04:37,885 - INFO - Boosted OOD loss: -0.0309
+2025-09-04 22:04:39,852 - INFO - First epoch batch energies: ID mean=-0.3392, min=-0.4239, max=-0.2492
+2025-09-04 22:04:39,852 - INFO - First epoch batch energies: OOD mean=-0.3144, min=-0.4712, max=-0.1671
+2025-09-04 22:04:39,860 - INFO - Boosted OOD loss: -0.0420
+2025-09-04 22:04:43,769 - INFO - First epoch batch energies: ID mean=-0.3616, min=-0.4346, max=-0.2259
+2025-09-04 22:04:43,769 - INFO - First epoch batch energies: OOD mean=-0.2989, min=-0.4123, max=-0.2357
+2025-09-04 22:04:43,775 - INFO - Boosted OOD loss: -0.0307
+2025-09-04 22:04:45,741 - INFO - First epoch batch energies: ID mean=-0.3028, min=-0.4232, max=-0.1021
+2025-09-04 22:04:45,741 - INFO - First epoch batch energies: OOD mean=-0.3130, min=-0.4149, max=-0.1938
+2025-09-04 22:04:45,749 - INFO - Boosted OOD loss: -0.0424
+2025-09-04 22:04:45,750 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:04:45,751 - INFO - First epoch batch losses: CE=2.8436, OOD=-0.0424
+2025-09-04 22:04:47,721 - INFO - First epoch batch energies: ID mean=-0.3024, min=-0.4699, max=-0.0477
+2025-09-04 22:04:47,721 - INFO - First epoch batch energies: OOD mean=-0.2207, min=-0.4004, max=-0.0436
+2025-09-04 22:04:47,729 - INFO - Boosted OOD loss: -0.0347
+2025-09-04 22:04:53,543 - INFO - First epoch batch energies: ID mean=-0.4550, min=-0.5226, max=-0.3349
+2025-09-04 22:04:53,544 - INFO - First epoch batch energies: OOD mean=-0.5024, min=-0.5958, max=-0.2945
+2025-09-04 22:04:53,549 - INFO - Boosted OOD loss: -0.0471
+2025-09-04 22:04:57,439 - INFO - First epoch batch energies: ID mean=-0.3680, min=-0.5283, max=-0.1668
+2025-09-04 22:04:57,439 - INFO - First epoch batch energies: OOD mean=-0.3618, min=-0.5437, max=-0.1409
+2025-09-04 22:04:57,446 - INFO - Boosted OOD loss: -0.0355
+2025-09-04 22:05:01,343 - INFO - First epoch batch energies: ID mean=-0.5919, min=-0.6011, max=-0.5844
+2025-09-04 22:05:01,343 - INFO - First epoch batch energies: OOD mean=-0.5589, min=-0.6171, max=-0.4919
+2025-09-04 22:05:01,350 - INFO - Boosted OOD loss: -0.0434
+2025-09-04 22:05:03,314 - INFO - First epoch batch energies: ID mean=-0.2036, min=-0.3639, max=-0.0965
+2025-09-04 22:05:03,314 - INFO - First epoch batch energies: OOD mean=-0.2121, min=-0.3230, max=-0.0606
+2025-09-04 22:05:03,322 - INFO - Boosted OOD loss: -0.0305
+2025-09-04 22:05:05,284 - INFO - First epoch batch energies: ID mean=-0.3864, min=-0.5229, max=-0.2232
+2025-09-04 22:05:05,284 - INFO - First epoch batch energies: OOD mean=-0.3965, min=-0.6053, max=-0.1529
+2025-09-04 22:05:05,292 - INFO - Boosted OOD loss: -0.0454
+2025-09-04 22:05:05,292 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:05:05,293 - INFO - First epoch batch losses: CE=2.8011, OOD=-0.0454
+2025-09-04 22:05:07,253 - INFO - First epoch batch energies: ID mean=-0.3439, min=-0.5420, max=-0.1927
+2025-09-04 22:05:07,253 - INFO - First epoch batch energies: OOD mean=-0.3248, min=-0.5271, max=-0.1352
+2025-09-04 22:05:07,260 - INFO - Boosted OOD loss: -0.0377
+2025-09-04 22:05:09,225 - INFO - First epoch batch energies: ID mean=-0.4021, min=-0.6398, max=-0.1777
+2025-09-04 22:05:09,225 - INFO - First epoch batch energies: OOD mean=-0.3635, min=-0.5486, max=-0.1618
+2025-09-04 22:05:09,232 - INFO - Boosted OOD loss: -0.0466
+2025-09-04 22:05:13,121 - INFO - First epoch batch energies: ID mean=-0.2597, min=-0.4628, max=-0.1444
+2025-09-04 22:05:13,122 - INFO - First epoch batch energies: OOD mean=-0.3206, min=-0.5342, max=-0.1018
+2025-09-04 22:05:13,130 - INFO - Boosted OOD loss: -0.0389
+2025-09-04 22:05:15,077 - INFO - First epoch batch energies: ID mean=-0.2875, min=-0.5105, max=-0.1181
+2025-09-04 22:05:15,077 - INFO - First epoch batch energies: OOD mean=-0.2455, min=-0.5206, max=-0.0589
+2025-09-04 22:05:15,086 - INFO - Boosted OOD loss: -0.0390
+2025-09-04 22:05:17,039 - INFO - First epoch batch energies: ID mean=-0.4343, min=-0.6370, max=-0.2517
+2025-09-04 22:05:17,040 - INFO - First epoch batch energies: OOD mean=-0.3846, min=-0.5488, max=-0.2421
+2025-09-04 22:05:17,046 - INFO - Boosted OOD loss: -0.0454
+2025-09-04 22:05:19,003 - INFO - First epoch batch energies: ID mean=-0.3607, min=-0.5295, max=-0.1992
+2025-09-04 22:05:19,003 - INFO - First epoch batch energies: OOD mean=-0.3720, min=-0.6205, max=-0.2192
+2025-09-04 22:05:19,009 - INFO - Boosted OOD loss: -0.0380
+2025-09-04 22:05:22,903 - INFO - First epoch batch energies: ID mean=-0.1959, min=-0.3412, max=-0.0670
+2025-09-04 22:05:22,903 - INFO - First epoch batch energies: OOD mean=-0.2113, min=-0.5841, max=-0.0589
+2025-09-04 22:05:22,912 - INFO - Boosted OOD loss: -0.0314
+2025-09-04 22:05:28,740 - INFO - First epoch batch energies: ID mean=-0.5306, min=-0.6245, max=-0.3740
+2025-09-04 22:05:28,740 - INFO - First epoch batch energies: OOD mean=-0.5441, min=-0.7498, max=-0.3033
+2025-09-04 22:05:28,749 - INFO - Boosted OOD loss: -0.0634
+2025-09-04 22:05:30,713 - INFO - First epoch batch energies: ID mean=-0.4896, min=-0.7504, max=-0.2618
+2025-09-04 22:05:30,714 - INFO - First epoch batch energies: OOD mean=-0.5153, min=-0.7393, max=-0.2547
+2025-09-04 22:05:30,721 - INFO - Boosted OOD loss: -0.0547
+2025-09-04 22:05:32,669 - INFO - First epoch batch energies: ID mean=-0.1921, min=-0.2168, max=-0.1701
+2025-09-04 22:05:32,669 - INFO - First epoch batch energies: OOD mean=-0.2389, min=-0.5021, max=-0.1319
+2025-09-04 22:05:32,675 - INFO - Boosted OOD loss: -0.0411
+2025-09-04 22:05:34,625 - INFO - First epoch batch energies: ID mean=-0.4760, min=-0.6990, max=-0.1530
+2025-09-04 22:05:34,626 - INFO - First epoch batch energies: OOD mean=-0.4900, min=-0.7069, max=-0.1661
+2025-09-04 22:05:34,633 - INFO - Boosted OOD loss: -0.0471
+2025-09-04 22:05:36,581 - INFO - First epoch batch energies: ID mean=-0.4534, min=-0.6341, max=-0.0734
+2025-09-04 22:05:36,581 - INFO - First epoch batch energies: OOD mean=-0.4068, min=-0.6068, max=-0.0716
+2025-09-04 22:05:36,590 - INFO - Boosted OOD loss: -0.0580
+2025-09-04 22:05:38,539 - INFO - First epoch batch energies: ID mean=-0.5102, min=-0.7136, max=-0.3208
+2025-09-04 22:05:38,540 - INFO - First epoch batch energies: OOD mean=-0.4852, min=-0.5815, max=-0.3422
+2025-09-04 22:05:38,547 - INFO - Boosted OOD loss: -0.0568
+2025-09-04 22:05:42,419 - INFO - First epoch batch energies: ID mean=-0.5813, min=-0.7078, max=-0.4350
+2025-09-04 22:05:42,419 - INFO - First epoch batch energies: OOD mean=-0.5350, min=-0.8063, max=-0.3820
+2025-09-04 22:05:42,429 - INFO - Boosted OOD loss: -0.0703
+2025-09-04 22:05:44,381 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 22:05:48,225 - INFO - First epoch batch energies: ID mean=-0.2297, min=-0.5750, max=-0.1144
+2025-09-04 22:05:48,225 - INFO - First epoch batch energies: OOD mean=-0.2284, min=-0.4347, max=-0.0692
+2025-09-04 22:05:48,234 - INFO - Boosted OOD loss: -0.0335
+2025-09-04 22:05:50,183 - INFO - First epoch batch energies: ID mean=-0.4943, min=-0.8256, max=-0.1614
+2025-09-04 22:05:50,184 - INFO - First epoch batch energies: OOD mean=-0.3609, min=-0.5376, max=-0.1472
+2025-09-04 22:05:50,190 - INFO - Boosted OOD loss: -0.0527
+2025-09-04 22:05:52,140 - INFO - First epoch batch energies: ID mean=-0.5841, min=-0.7732, max=-0.2710
+2025-09-04 22:05:52,140 - INFO - First epoch batch energies: OOD mean=-0.5086, min=-0.7400, max=-0.2707
+2025-09-04 22:05:52,147 - INFO - Boosted OOD loss: -0.0535
+2025-09-04 22:05:54,098 - INFO - First epoch batch energies: ID mean=-0.6549, min=-0.8255, max=-0.4810
+2025-09-04 22:05:54,098 - INFO - First epoch batch energies: OOD mean=-0.7387, min=-0.8218, max=-0.4117
+2025-09-04 22:05:54,105 - INFO - Boosted OOD loss: -0.0505
+2025-09-04 22:05:57,984 - INFO - First epoch batch energies: ID mean=-0.6345, min=-0.7822, max=-0.3873
+2025-09-04 22:05:57,984 - INFO - First epoch batch energies: OOD mean=-0.6440, min=-0.7828, max=-0.3777
+2025-09-04 22:05:57,991 - INFO - Boosted OOD loss: -0.0608
+2025-09-04 22:05:59,945 - INFO - First epoch batch energies: ID mean=-0.5720, min=-0.7362, max=-0.4141
+2025-09-04 22:05:59,945 - INFO - First epoch batch energies: OOD mean=-0.5714, min=-0.8173, max=-0.3112
+2025-09-04 22:05:59,952 - INFO - Boosted OOD loss: -0.0569
+2025-09-04 22:06:07,688 - INFO - First epoch batch energies: ID mean=-0.3914, min=-0.5915, max=-0.1506
+2025-09-04 22:06:07,688 - INFO - First epoch batch energies: OOD mean=-0.3868, min=-0.5536, max=-0.1694
+2025-09-04 22:06:07,697 - INFO - Boosted OOD loss: -0.0520
+2025-09-04 22:06:09,649 - INFO - First epoch batch energies: ID mean=-0.7789, min=-0.9170, max=-0.5585
+2025-09-04 22:06:09,649 - INFO - First epoch batch energies: OOD mean=-0.7268, min=-0.8165, max=-0.5842
+2025-09-04 22:06:09,656 - INFO - Boosted OOD loss: -0.0691
+2025-09-04 22:06:11,601 - INFO - First epoch batch energies: ID mean=-0.6933, min=-0.9203, max=-0.4508
+2025-09-04 22:06:11,602 - INFO - First epoch batch energies: OOD mean=-0.5873, min=-0.7140, max=-0.4321
+2025-09-04 22:06:11,608 - INFO - Boosted OOD loss: -0.0596
+2025-09-04 22:06:13,559 - INFO - First epoch batch energies: ID mean=-0.4630, min=-0.6499, max=-0.2279
+2025-09-04 22:06:13,559 - INFO - First epoch batch energies: OOD mean=-0.3916, min=-0.5234, max=-0.2947
+2025-09-04 22:06:13,566 - INFO - Boosted OOD loss: -0.0545
+2025-09-04 22:06:17,442 - INFO - First epoch batch energies: ID mean=-0.7088, min=-0.8660, max=-0.5570
+2025-09-04 22:06:17,442 - INFO - First epoch batch energies: OOD mean=-0.6682, min=-0.8042, max=-0.5409
+2025-09-04 22:06:17,448 - INFO - Boosted OOD loss: -0.0652
+2025-09-04 22:06:25,178 - INFO - First epoch batch energies: ID mean=-0.5034, min=-0.7378, max=-0.1991
+2025-09-04 22:06:25,179 - INFO - First epoch batch energies: OOD mean=-0.5251, min=-0.6846, max=-0.1662
+2025-09-04 22:06:25,188 - INFO - Boosted OOD loss: -0.0681
+2025-09-04 22:06:27,139 - INFO - First epoch batch energies: ID mean=-0.6818, min=-0.8463, max=-0.5236
+2025-09-04 22:06:27,139 - INFO - First epoch batch energies: OOD mean=-0.6945, min=-0.9572, max=-0.4441
+2025-09-04 22:06:27,146 - INFO - Boosted OOD loss: -0.0706
+2025-09-04 22:06:29,100 - INFO - First epoch batch energies: ID mean=-0.5906, min=-0.6855, max=-0.4786
+2025-09-04 22:06:29,101 - INFO - First epoch batch energies: OOD mean=-0.5525, min=-0.6436, max=-0.4722
+2025-09-04 22:06:29,107 - INFO - Boosted OOD loss: -0.0644
+2025-09-04 22:06:31,061 - INFO - First epoch batch energies: ID mean=-0.3163, min=-0.4891, max=-0.1088
+2025-09-04 22:06:31,061 - INFO - First epoch batch energies: OOD mean=-0.4313, min=-0.8172, max=-0.0946
+2025-09-04 22:06:31,070 - INFO - Boosted OOD loss: -0.0513
+2025-09-04 22:06:42,664 - INFO - First epoch batch energies: ID mean=-0.4597, min=-0.6043, max=-0.2372
+2025-09-04 22:06:42,664 - INFO - First epoch batch energies: OOD mean=-0.4904, min=-0.7464, max=-0.2766
+2025-09-04 22:06:42,673 - INFO - Boosted OOD loss: -0.0650
+2025-09-04 22:06:42,673 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:06:42,674 - INFO - First epoch batch losses: CE=2.7724, OOD=-0.0650
+2025-09-04 22:06:44,630 - INFO - First epoch batch energies: ID mean=-0.6532, min=-0.7802, max=-0.5066
+2025-09-04 22:06:44,631 - INFO - First epoch batch energies: OOD mean=-0.6305, min=-0.8222, max=-0.4688
+2025-09-04 22:06:44,637 - INFO - Boosted OOD loss: -0.0562
+2025-09-04 22:06:46,584 - INFO - First epoch batch energies: ID mean=-0.7045, min=-0.9000, max=-0.5229
+2025-09-04 22:06:46,585 - INFO - First epoch batch energies: OOD mean=-0.6589, min=-0.7882, max=-0.5394
+2025-09-04 22:06:46,591 - INFO - Boosted OOD loss: -0.0513
+2025-09-04 22:06:48,542 - INFO - First epoch batch energies: ID mean=-0.6268, min=-0.8456, max=-0.2250
+2025-09-04 22:06:48,542 - INFO - First epoch batch energies: OOD mean=-0.6466, min=-0.8168, max=-0.1678
+2025-09-04 22:06:48,551 - INFO - Boosted OOD loss: -0.0810
+2025-09-04 22:06:50,506 - INFO - First epoch batch energies: ID mean=-0.4885, min=-0.7027, max=-0.3010
+2025-09-04 22:06:50,506 - INFO - First epoch batch energies: OOD mean=-0.5207, min=-0.7325, max=-0.2441
+2025-09-04 22:06:50,513 - INFO - Boosted OOD loss: -0.0470
+2025-09-04 22:06:54,374 - INFO - First epoch batch energies: ID mean=-0.4980, min=-0.6541, max=-0.1879
+2025-09-04 22:06:54,374 - INFO - First epoch batch energies: OOD mean=-0.4549, min=-0.6144, max=-0.2292
+2025-09-04 22:06:54,380 - INFO - Boosted OOD loss: -0.0508
+2025-09-04 22:06:56,333 - INFO - First epoch batch energies: ID mean=-0.4232, min=-0.8157, max=-0.1270
+2025-09-04 22:06:56,334 - INFO - First epoch batch energies: OOD mean=-0.3484, min=-0.7841, max=-0.1279
+2025-09-04 22:06:56,340 - INFO - Boosted OOD loss: -0.0431
+2025-09-04 22:07:04,066 - INFO - First epoch batch energies: ID mean=-0.5784, min=-0.7373, max=-0.3575
+2025-09-04 22:07:04,066 - INFO - First epoch batch energies: OOD mean=-0.5183, min=-0.7044, max=-0.3339
+2025-09-04 22:07:04,074 - INFO - Boosted OOD loss: -0.0743
+2025-09-04 22:07:07,948 - INFO - First epoch batch energies: ID mean=-0.5308, min=-0.7777, max=-0.2030
+2025-09-04 22:07:07,948 - INFO - First epoch batch energies: OOD mean=-0.5951, min=-0.7872, max=-0.1782
+2025-09-04 22:07:07,957 - INFO - Boosted OOD loss: -0.0727
+2025-09-04 22:07:17,599 - INFO - First epoch batch energies: ID mean=-0.5573, min=-0.8024, max=-0.1617
+2025-09-04 22:07:17,599 - INFO - First epoch batch energies: OOD mean=-0.5054, min=-0.7225, max=-0.1773
+2025-09-04 22:07:17,607 - INFO - Boosted OOD loss: -0.0634
+2025-09-04 22:07:21,479 - INFO - First epoch batch energies: ID mean=-0.5104, min=-0.7674, max=-0.2529
+2025-09-04 22:07:21,479 - INFO - First epoch batch energies: OOD mean=-0.5559, min=-0.7270, max=-0.2472
+2025-09-04 22:07:21,486 - INFO - Boosted OOD loss: -0.0541
+2025-09-04 22:07:21,486 - INFO - Step 150 Loss Debug:
+2025-09-04 22:07:21,487 - INFO -  CE: 2.7350
+2025-09-04 22:07:21,488 - INFO -  OOD: -0.0541
+2025-09-04 22:07:21,489 - INFO -  β: 32.00
+2025-09-04 22:07:21,490 - INFO -  ID: 30768, OOD(254): 245
+2025-09-04 22:07:21,490 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:07:21,490 - INFO - First epoch batch losses: CE=2.7350, OOD=-0.0541
+2025-09-04 22:07:23,444 - INFO - First epoch batch energies: ID mean=-0.5387, min=-0.8848, max=-0.1957
+2025-09-04 22:07:23,444 - INFO - First epoch batch energies: OOD mean=-0.6436, min=-0.8753, max=-0.0988
+2025-09-04 22:07:23,453 - INFO - Boosted OOD loss: -0.0685
+2025-09-04 22:07:27,326 - INFO - First epoch batch energies: ID mean=-0.8242, min=-0.9466, max=-0.6267
+2025-09-04 22:07:27,327 - INFO - First epoch batch energies: OOD mean=-0.8726, min=-1.0403, max=-0.5680
+2025-09-04 22:07:27,333 - INFO - Boosted OOD loss: -0.0773
+2025-09-04 22:07:29,286 - INFO - First epoch batch energies: ID mean=-0.4470, min=-0.6400, max=-0.2693
+2025-09-04 22:07:29,287 - INFO - First epoch batch energies: OOD mean=-0.4907, min=-0.7437, max=-0.2595
+2025-09-04 22:07:29,293 - INFO - Boosted OOD loss: -0.0462
+2025-09-04 22:07:31,238 - INFO - First epoch batch energies: ID mean=-0.6216, min=-0.9369, max=-0.2997
+2025-09-04 22:07:31,238 - INFO - First epoch batch energies: OOD mean=-0.4486, min=-0.5720, max=-0.3190
+2025-09-04 22:07:31,245 - INFO - Boosted OOD loss: -0.0535
+2025-09-04 22:07:33,194 - INFO - First epoch batch energies: ID mean=-0.7456, min=-0.9973, max=-0.5840
+2025-09-04 22:07:33,195 - INFO - First epoch batch energies: OOD mean=-0.7594, min=-0.9084, max=-0.5319
+2025-09-04 22:07:33,201 - INFO - Boosted OOD loss: -0.0695
+2025-09-04 22:07:35,145 - INFO - First epoch batch energies: ID mean=-0.3955, min=-0.6659, max=-0.1873
+2025-09-04 22:07:35,145 - INFO - First epoch batch energies: OOD mean=-0.4200, min=-0.6401, max=-0.0795
+2025-09-04 22:07:35,154 - INFO - Boosted OOD loss: -0.0559
+2025-09-04 22:07:37,109 - INFO - First epoch batch energies: ID mean=-0.6412, min=-0.9566, max=-0.1922
+2025-09-04 22:07:37,110 - INFO - First epoch batch energies: OOD mean=-0.5205, min=-0.8350, max=-0.2079
+2025-09-04 22:07:37,118 - INFO - Boosted OOD loss: -0.0654
+2025-09-04 22:07:39,062 - INFO - First epoch batch energies: ID mean=-0.3968, min=-0.7347, max=-0.1074
+2025-09-04 22:07:39,062 - INFO - First epoch batch energies: OOD mean=-0.3687, min=-0.7585, max=-0.1217
+2025-09-04 22:07:39,069 - INFO - Boosted OOD loss: -0.0489
+2025-09-04 22:07:44,855 - INFO - First epoch batch energies: ID mean=-0.5861, min=-0.7830, max=-0.4432
+2025-09-04 22:07:44,855 - INFO - First epoch batch energies: OOD mean=-0.5539, min=-0.8125, max=-0.3867
+2025-09-04 22:07:44,862 - INFO - Boosted OOD loss: -0.0602
+2025-09-04 22:07:46,804 - INFO - First epoch batch energies: ID mean=-0.3867, min=-0.6142, max=-0.1551
+2025-09-04 22:07:46,804 - INFO - First epoch batch energies: OOD mean=-0.5386, min=-0.9207, max=-0.1366
+2025-09-04 22:07:46,813 - INFO - Boosted OOD loss: -0.0628
+2025-09-04 22:07:50,687 - INFO - First epoch batch energies: ID mean=-0.2429, min=-0.3769, max=-0.1190
+2025-09-04 22:07:50,687 - INFO - First epoch batch energies: OOD mean=-0.2707, min=-0.7646, max=-0.0758
+2025-09-04 22:07:50,695 - INFO - Boosted OOD loss: -0.0372
+2025-09-04 22:07:52,638 - INFO - First epoch batch energies: ID mean=-0.6425, min=-0.7445, max=-0.1541
+2025-09-04 22:07:52,638 - INFO - First epoch batch energies: OOD mean=-0.6450, min=-0.8796, max=-0.1669
+2025-09-04 22:07:52,644 - INFO - Boosted OOD loss: -0.0519
+2025-09-04 22:07:56,503 - INFO - First epoch batch energies: ID mean=-0.7539, min=-0.8018, max=-0.6484
+2025-09-04 22:07:56,503 - INFO - First epoch batch energies: OOD mean=-0.7499, min=-0.8395, max=-0.6728
+2025-09-04 22:07:56,509 - INFO - Boosted OOD loss: -0.0744
+2025-09-04 22:08:02,319 - INFO - First epoch batch energies: ID mean=-0.6168, min=-0.8569, max=-0.3933
+2025-09-04 22:08:02,319 - INFO - First epoch batch energies: OOD mean=-0.5477, min=-0.6984, max=-0.4120
+2025-09-04 22:08:02,326 - INFO - Boosted OOD loss: -0.0614
+2025-09-04 22:08:06,197 - INFO - First epoch batch energies: ID mean=-0.5097, min=-0.7053, max=-0.2739
+2025-09-04 22:08:06,198 - INFO - First epoch batch energies: OOD mean=-0.5098, min=-0.7822, max=-0.2803
+2025-09-04 22:08:06,205 - INFO - Boosted OOD loss: -0.0580
+2025-09-04 22:08:08,148 - INFO - First epoch batch energies: ID mean=-0.6191, min=-0.8301, max=-0.3490
+2025-09-04 22:08:08,148 - INFO - First epoch batch energies: OOD mean=-0.5919, min=-0.8883, max=-0.3472
+2025-09-04 22:08:08,157 - INFO - Boosted OOD loss: -0.0743
+2025-09-04 22:08:13,958 - INFO - First epoch batch energies: ID mean=-0.4676, min=-0.7453, max=-0.2503
+2025-09-04 22:08:13,959 - INFO - First epoch batch energies: OOD mean=-0.4939, min=-0.7714, max=-0.2254
+2025-09-04 22:08:13,966 - INFO - Boosted OOD loss: -0.0544
+2025-09-04 22:08:15,913 - INFO - First epoch batch energies: ID mean=-0.6170, min=-0.9268, max=-0.2638
+2025-09-04 22:08:15,913 - INFO - First epoch batch energies: OOD mean=-0.5330, min=-0.7193, max=-0.2642
+2025-09-04 22:08:15,920 - INFO - Boosted OOD loss: -0.0651
+2025-09-04 22:08:19,803 - INFO - First epoch batch energies: ID mean=-0.6234, min=-0.7763, max=-0.2496
+2025-09-04 22:08:19,803 - INFO - First epoch batch energies: OOD mean=-0.5612, min=-0.7977, max=-0.3013
+2025-09-04 22:08:19,812 - INFO - Boosted OOD loss: -0.0783
+2025-09-04 22:08:19,813 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:08:19,814 - INFO - First epoch batch losses: CE=2.6410, OOD=-0.0783
+2025-09-04 22:08:23,688 - INFO - First epoch batch energies: ID mean=-0.5157, min=-0.8333, max=-0.2795
+2025-09-04 22:08:23,689 - INFO - First epoch batch energies: OOD mean=-0.5574, min=-0.7661, max=-0.2156
+2025-09-04 22:08:23,696 - INFO - Boosted OOD loss: -0.0611
+2025-09-04 22:08:27,577 - INFO - First epoch batch energies: ID mean=-0.6706, min=-0.9201, max=-0.3504
+2025-09-04 22:08:27,578 - INFO - First epoch batch energies: OOD mean=-0.6082, min=-0.7724, max=-0.3376
+2025-09-04 22:08:27,586 - INFO - Boosted OOD loss: -0.0792
+2025-09-04 22:08:33,384 - INFO - First epoch batch energies: ID mean=-0.6791, min=-0.8680, max=-0.5430
+2025-09-04 22:08:33,385 - INFO - First epoch batch energies: OOD mean=-0.6569, min=-0.7614, max=-0.5235
+2025-09-04 22:08:33,391 - INFO - Boosted OOD loss: -0.0567
+2025-09-04 22:08:37,253 - INFO - First epoch batch energies: ID mean=-0.6559, min=-0.7778, max=-0.3360
+2025-09-04 22:08:37,254 - INFO - First epoch batch energies: OOD mean=-0.6789, min=-0.9028, max=-0.3626
+2025-09-04 22:08:37,261 - INFO - Boosted OOD loss: -0.0699
+2025-09-04 22:08:41,141 - INFO - First epoch batch energies: ID mean=-0.6922, min=-0.9224, max=-0.4947
+2025-09-04 22:08:41,142 - INFO - First epoch batch energies: OOD mean=-0.6405, min=-0.8452, max=-0.4862
+2025-09-04 22:08:41,148 - INFO - Boosted OOD loss: -0.0702
+2025-09-04 22:08:43,106 - INFO - First epoch batch energies: ID mean=-0.7052, min=-0.8515, max=-0.4130
+2025-09-04 22:08:43,106 - INFO - First epoch batch energies: OOD mean=-0.8689, min=-0.9967, max=-0.3316
+2025-09-04 22:08:43,114 - INFO - Boosted OOD loss: -0.0694
+2025-09-04 22:08:45,077 - INFO - First epoch batch energies: ID mean=-0.4417, min=-0.7320, max=-0.2121
+2025-09-04 22:08:45,077 - INFO - First epoch batch energies: OOD mean=-0.4662, min=-0.6908, max=-0.2083
+2025-09-04 22:08:45,087 - INFO - Boosted OOD loss: -0.0617
+2025-09-04 22:08:47,036 - INFO - First epoch batch energies: ID mean=-0.4740, min=-0.8902, max=-0.1548
+2025-09-04 22:08:47,037 - INFO - First epoch batch energies: OOD mean=-0.5065, min=-0.9181, max=-0.1129
+2025-09-04 22:08:47,043 - INFO - Boosted OOD loss: -0.0487
+2025-09-04 22:08:48,990 - INFO - First epoch batch energies: ID mean=-0.5308, min=-0.7436, max=-0.1973
+2025-09-04 22:08:48,990 - INFO - First epoch batch energies: OOD mean=-0.4040, min=-0.6494, max=-0.2725
+2025-09-04 22:08:48,997 - INFO - Boosted OOD loss: -0.0557
+2025-09-04 22:08:50,948 - INFO - First epoch batch energies: ID mean=-1.0182, min=-1.0918, max=-0.7857
+2025-09-04 22:08:50,948 - INFO - First epoch batch energies: OOD mean=-0.8864, min=-0.9363, max=-0.8312
+2025-09-04 22:08:50,954 - INFO - Boosted OOD loss: -0.0553
+2025-09-04 22:08:52,900 - INFO - First epoch batch energies: ID mean=-0.6598, min=-0.8402, max=-0.1827
+2025-09-04 22:08:52,901 - INFO - First epoch batch energies: OOD mean=-0.6919, min=-0.9752, max=-0.2106
+2025-09-04 22:08:52,910 - INFO - Boosted OOD loss: -0.0841
+2025-09-04 22:08:54,857 - INFO - First epoch batch energies: ID mean=-0.9158, min=-1.0419, max=-0.7189
+2025-09-04 22:08:54,857 - INFO - First epoch batch energies: OOD mean=-0.8726, min=-1.0176, max=-0.6725
+2025-09-04 22:08:54,864 - INFO - Boosted OOD loss: -0.0883
+2025-09-04 22:08:56,819 - INFO - First epoch batch energies: ID mean=-0.5165, min=-0.7576, max=-0.2327
+2025-09-04 22:08:56,820 - INFO - First epoch batch energies: OOD mean=-0.4656, min=-0.7829, max=-0.2315
+2025-09-04 22:08:56,828 - INFO - Boosted OOD loss: -0.0674
+2025-09-04 22:08:58,787 - INFO - First epoch batch energies: ID mean=-0.4667, min=-0.7133, max=-0.2729
+2025-09-04 22:08:58,787 - INFO - First epoch batch energies: OOD mean=-0.4910, min=-0.7737, max=-0.2344
+2025-09-04 22:08:58,796 - INFO - Boosted OOD loss: -0.0644
+2025-09-04 22:08:58,797 - INFO - Step 200 Loss Debug:
+2025-09-04 22:08:58,797 - INFO -  CE: 2.6755
+2025-09-04 22:08:58,798 - INFO -  OOD: -0.0644
+2025-09-04 22:08:58,798 - INFO -  β: 32.00
+2025-09-04 22:08:58,798 - INFO -  ID: 25896, OOD(254): 2471
+2025-09-04 22:08:58,798 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:08:58,799 - INFO - First epoch batch losses: CE=2.6755, OOD=-0.0644
+2025-09-04 22:09:02,688 - INFO - First epoch batch energies: ID mean=-0.5755, min=-0.7734, max=-0.3859
+2025-09-04 22:09:02,689 - INFO - First epoch batch energies: OOD mean=-0.5531, min=-0.6796, max=-0.4497
+2025-09-04 22:09:02,696 - INFO - Boosted OOD loss: -0.0476
+2025-09-04 22:09:06,572 - INFO - First epoch batch energies: ID mean=-0.5148, min=-0.7772, max=-0.2753
+2025-09-04 22:09:06,573 - INFO - First epoch batch energies: OOD mean=-0.4870, min=-0.7360, max=-0.2608
+2025-09-04 22:09:06,579 - INFO - Boosted OOD loss: -0.0537
+2025-09-04 22:09:14,331 - INFO - First epoch batch energies: ID mean=-0.5725, min=-0.8752, max=-0.2937
+2025-09-04 22:09:14,331 - INFO - First epoch batch energies: OOD mean=-0.6052, min=-0.8365, max=-0.2537
+2025-09-04 22:09:14,339 - INFO - Boosted OOD loss: -0.0696
+2025-09-04 22:09:18,223 - INFO - First epoch batch energies: ID mean=-0.6047, min=-0.7223, max=-0.3170
+2025-09-04 22:09:18,223 - INFO - First epoch batch energies: OOD mean=-0.5031, min=-0.6820, max=-0.3370
+2025-09-04 22:09:18,229 - INFO - Boosted OOD loss: -0.0634
+2025-09-04 22:09:18,230 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:09:18,230 - INFO - First epoch batch losses: CE=2.6394, OOD=-0.0634
+2025-09-04 22:09:22,104 - INFO - First epoch batch energies: ID mean=-0.6676, min=-0.9000, max=-0.3780
+2025-09-04 22:09:22,105 - INFO - First epoch batch energies: OOD mean=-0.5974, min=-0.7006, max=-0.4545
+2025-09-04 22:09:22,113 - INFO - Boosted OOD loss: -0.0804
+2025-09-04 22:09:24,071 - INFO - First epoch batch energies: ID mean=-0.7559, min=-0.9293, max=-0.4989
+2025-09-04 22:09:24,072 - INFO - First epoch batch energies: OOD mean=-0.7373, min=-0.8710, max=-0.4800
+2025-09-04 22:09:24,078 - INFO - Boosted OOD loss: -0.0731
+2025-09-04 22:09:26,046 - INFO - First epoch batch energies: ID mean=-0.6193, min=-0.9674, max=-0.2969
+2025-09-04 22:09:26,047 - INFO - First epoch batch energies: OOD mean=-0.5117, min=-0.7274, max=-0.3020
+2025-09-04 22:09:26,053 - INFO - Boosted OOD loss: -0.0642
+2025-09-04 22:09:28,004 - INFO - First epoch batch energies: ID mean=-0.6142, min=-0.8755, max=-0.2620
+2025-09-04 22:09:28,004 - INFO - First epoch batch energies: OOD mean=-0.4947, min=-0.7024, max=-0.2733
+2025-09-04 22:09:28,011 - INFO - Boosted OOD loss: -0.0582
+2025-09-04 22:09:29,963 - INFO - First epoch batch energies: ID mean=-0.7380, min=-0.9526, max=-0.5515
+2025-09-04 22:09:29,964 - INFO - First epoch batch energies: OOD mean=-0.7734, min=-0.9911, max=-0.5462
+2025-09-04 22:09:29,970 - INFO - Boosted OOD loss: -0.0694
+2025-09-04 22:09:31,921 - INFO - First epoch batch energies: ID mean=-0.4619, min=-0.5971, max=-0.2315
+2025-09-04 22:09:31,921 - INFO - First epoch batch energies: OOD mean=-0.5120, min=-0.7518, max=-0.2221
+2025-09-04 22:09:31,930 - INFO - Boosted OOD loss: -0.0655
+2025-09-04 22:09:33,894 - INFO - First epoch batch energies: ID mean=-0.6349, min=-0.7102, max=-0.5281
+2025-09-04 22:09:33,894 - INFO - First epoch batch energies: OOD mean=-0.7191, min=-1.0695, max=-0.4319
+2025-09-04 22:09:33,901 - INFO - Boosted OOD loss: -0.0680
+2025-09-04 22:09:35,855 - INFO - First epoch batch energies: ID mean=-0.5050, min=-0.7265, max=-0.2226
+2025-09-04 22:09:35,856 - INFO - First epoch batch energies: OOD mean=-0.6005, min=-0.8121, max=-0.2107
+2025-09-04 22:09:35,865 - INFO - Boosted OOD loss: -0.0724
+2025-09-04 22:09:37,810 - INFO - First epoch batch energies: ID mean=-0.4939, min=-0.6532, max=-0.3366
+2025-09-04 22:09:37,810 - INFO - First epoch batch energies: OOD mean=-0.4743, min=-0.6934, max=-0.3121
+2025-09-04 22:09:37,817 - INFO - Boosted OOD loss: -0.0601
+2025-09-04 22:09:37,817 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:09:37,818 - INFO - First epoch batch losses: CE=2.6742, OOD=-0.0601
+2025-09-04 22:09:41,716 - INFO - First epoch batch energies: ID mean=-0.4540, min=-0.6695, max=-0.2522
+2025-09-04 22:09:41,716 - INFO - First epoch batch energies: OOD mean=-0.5443, min=-0.9039, max=-0.1480
+2025-09-04 22:09:41,725 - INFO - Boosted OOD loss: -0.0655
+2025-09-04 22:09:43,693 - INFO - First epoch batch energies: ID mean=-0.3699, min=-0.7236, max=-0.1404
+2025-09-04 22:09:43,693 - INFO - First epoch batch energies: OOD mean=-0.4543, min=-0.9236, max=-0.1101
+2025-09-04 22:09:43,702 - INFO - Boosted OOD loss: -0.0550
+2025-09-04 22:09:45,664 - INFO - First epoch batch energies: ID mean=-0.5271, min=-0.7834, max=-0.2470
+2025-09-04 22:09:45,665 - INFO - First epoch batch energies: OOD mean=-0.5731, min=-0.8505, max=-0.1918
+2025-09-04 22:09:45,674 - INFO - Boosted OOD loss: -0.0698
+2025-09-04 22:09:47,634 - INFO - First epoch batch energies: ID mean=-0.7658, min=-0.9200, max=-0.6161
+2025-09-04 22:09:47,635 - INFO - First epoch batch energies: OOD mean=-0.7628, min=-0.9407, max=-0.6031
+2025-09-04 22:09:47,641 - INFO - Boosted OOD loss: -0.0749
+2025-09-04 22:09:49,601 - INFO - First epoch batch energies: ID mean=-0.8838, min=-1.0396, max=-0.7466
+2025-09-04 22:09:49,601 - INFO - First epoch batch energies: OOD mean=-0.8896, min=-0.9985, max=-0.7358
+2025-09-04 22:09:49,607 - INFO - Boosted OOD loss: -0.0728
+2025-09-04 22:09:53,487 - INFO - First epoch batch energies: ID mean=-0.5409, min=-0.7994, max=-0.0618
+2025-09-04 22:09:53,488 - INFO - First epoch batch energies: OOD mean=-0.5014, min=-0.7231, max=-0.0733
+2025-09-04 22:09:53,495 - INFO - Boosted OOD loss: -0.0608
+2025-09-04 22:09:57,384 - INFO - First epoch batch energies: ID mean=-0.6336, min=-0.6675, max=-0.5734
+2025-09-04 22:09:57,384 - INFO - First epoch batch energies: OOD mean=-0.6709, min=-0.7823, max=-0.5373
+2025-09-04 22:09:57,389 - INFO - Boosted OOD loss: -0.0631
+2025-09-04 22:09:57,390 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:09:57,391 - INFO - First epoch batch losses: CE=2.6824, OOD=-0.0631
+2025-09-04 22:09:59,343 - INFO - First epoch batch energies: ID mean=-0.4655, min=-0.7413, max=-0.2742
+2025-09-04 22:09:59,343 - INFO - First epoch batch energies: OOD mean=-0.3908, min=-0.5113, max=-0.2712
+2025-09-04 22:09:59,349 - INFO - Boosted OOD loss: -0.0451
+2025-09-04 22:10:01,313 - INFO - First epoch batch energies: ID mean=-0.8881, min=-0.9877, max=-0.5678
+2025-09-04 22:10:01,314 - INFO - First epoch batch energies: OOD mean=-0.8124, min=-0.9086, max=-0.5759
+2025-09-04 22:10:01,320 - INFO - Boosted OOD loss: -0.0624
+2025-09-04 22:10:05,224 - INFO - First epoch batch energies: ID mean=-0.4702, min=-0.7494, max=-0.1612
+2025-09-04 22:10:05,225 - INFO - First epoch batch energies: OOD mean=-0.4621, min=-0.6507, max=-0.1760
+2025-09-04 22:10:05,233 - INFO - Boosted OOD loss: -0.0643
+2025-09-04 22:10:07,202 - INFO - First epoch batch energies: ID mean=-0.5874, min=-0.7658, max=-0.3387
+2025-09-04 22:10:07,202 - INFO - First epoch batch energies: OOD mean=-0.7335, min=-0.9918, max=-0.2511
+2025-09-04 22:10:07,211 - INFO - Boosted OOD loss: -0.0844
+2025-09-04 22:10:09,174 - INFO - First epoch batch energies: ID mean=-0.7510, min=-0.9524, max=-0.4283
+2025-09-04 22:10:09,174 - INFO - First epoch batch energies: OOD mean=-0.6043, min=-0.7728, max=-0.4356
+2025-09-04 22:10:09,181 - INFO - Boosted OOD loss: -0.0717
+2025-09-04 22:10:13,070 - INFO - First epoch batch energies: ID mean=-0.5251, min=-0.7018, max=-0.2606
+2025-09-04 22:10:13,070 - INFO - First epoch batch energies: OOD mean=-0.4822, min=-0.7683, max=-0.2212
+2025-09-04 22:10:13,077 - INFO - Boosted OOD loss: -0.0549
+2025-09-04 22:10:15,034 - INFO - First epoch batch energies: ID mean=-0.5328, min=-0.7456, max=-0.3486
+2025-09-04 22:10:15,034 - INFO - First epoch batch energies: OOD mean=-0.5881, min=-0.8582, max=-0.2658
+2025-09-04 22:10:15,043 - INFO - Boosted OOD loss: -0.0644
+2025-09-04 22:10:16,997 - INFO - First epoch batch energies: ID mean=-0.7508, min=-0.8960, max=-0.5381
+2025-09-04 22:10:16,997 - INFO - First epoch batch energies: OOD mean=-0.7673, min=-0.9623, max=-0.5546
+2025-09-04 22:10:17,005 - INFO - Boosted OOD loss: -0.0793
+2025-09-04 22:10:17,005 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:10:17,006 - INFO - First epoch batch losses: CE=2.6959, OOD=-0.0793
+2025-09-04 22:10:18,958 - INFO - First epoch batch energies: ID mean=-0.8485, min=-0.8742, max=-0.7898
+2025-09-04 22:10:18,959 - INFO - First epoch batch energies: OOD mean=-0.8400, min=-0.9098, max=-0.7624
+2025-09-04 22:10:18,965 - INFO - Boosted OOD loss: -0.0758
+2025-09-04 22:10:24,782 - INFO - First epoch batch energies: ID mean=-0.6107, min=-0.8419, max=-0.2269
+2025-09-04 22:10:24,782 - INFO - First epoch batch energies: OOD mean=-0.5485, min=-0.7949, max=-0.2434
+2025-09-04 22:10:24,789 - INFO - Boosted OOD loss: -0.0632
+2025-09-04 22:10:26,743 - INFO - First epoch batch energies: ID mean=-0.6270, min=-0.8474, max=-0.3121
+2025-09-04 22:10:26,744 - INFO - First epoch batch energies: OOD mean=-0.5539, min=-0.7956, max=-0.3622
+2025-09-04 22:10:26,750 - INFO - Boosted OOD loss: -0.0566
+2025-09-04 22:10:28,708 - INFO - First epoch batch energies: ID mean=-0.7323, min=-0.9604, max=-0.3740
+2025-09-04 22:10:28,709 - INFO - First epoch batch energies: OOD mean=-0.6407, min=-0.9325, max=-0.3870
+2025-09-04 22:10:28,715 - INFO - Boosted OOD loss: -0.0691
+2025-09-04 22:10:30,677 - INFO - First epoch batch energies: ID mean=-0.4686, min=-0.7253, max=-0.2344
+2025-09-04 22:10:30,678 - INFO - First epoch batch energies: OOD mean=-0.4881, min=-0.7315, max=-0.2401
+2025-09-04 22:10:30,688 - INFO - Boosted OOD loss: -0.0638
+2025-09-04 22:10:32,644 - INFO - First epoch batch energies: ID mean=-0.6868, min=-0.8433, max=-0.4778
+2025-09-04 22:10:32,645 - INFO - First epoch batch energies: OOD mean=-0.7105, min=-0.9290, max=-0.5202
+2025-09-04 22:10:32,651 - INFO - Boosted OOD loss: -0.0646
+2025-09-04 22:10:38,471 - INFO - First epoch batch energies: ID mean=-0.4111, min=-0.6185, max=-0.1684
+2025-09-04 22:10:38,471 - INFO - First epoch batch energies: OOD mean=-0.4290, min=-0.9496, max=-0.1372
+2025-09-04 22:10:38,478 - INFO - Boosted OOD loss: -0.0487
+2025-09-04 22:10:42,369 - INFO - First epoch batch energies: ID mean=-0.4076, min=-0.5420, max=-0.2712
+2025-09-04 22:10:42,369 - INFO - First epoch batch energies: OOD mean=-0.6092, min=-1.0443, max=-0.2195
+2025-09-04 22:10:42,376 - INFO - Boosted OOD loss: -0.0450
+2025-09-04 22:10:46,258 - INFO - First epoch batch energies: ID mean=-0.7282, min=-0.9373, max=-0.4897
+2025-09-04 22:10:46,258 - INFO - First epoch batch energies: OOD mean=-0.8878, min=-1.0904, max=-0.4317
+2025-09-04 22:10:46,265 - INFO - Boosted OOD loss: -0.0705
+2025-09-04 22:10:48,231 - INFO - First epoch batch energies: ID mean=-0.8193, min=-0.9597, max=-0.6477
+2025-09-04 22:10:48,231 - INFO - First epoch batch energies: OOD mean=-0.7420, min=-0.8828, max=-0.5945
+2025-09-04 22:10:48,237 - INFO - Boosted OOD loss: -0.0818
+2025-09-04 22:10:50,192 - INFO - First epoch batch energies: ID mean=-0.7020, min=-0.8278, max=-0.6169
+2025-09-04 22:10:50,192 - INFO - First epoch batch energies: OOD mean=-0.8801, min=-1.0082, max=-0.5531
+2025-09-04 22:10:50,198 - INFO - Boosted OOD loss: -0.0635
+2025-09-04 22:10:52,161 - INFO - First epoch batch energies: ID mean=-0.4451, min=-0.7660, max=-0.2050
+2025-09-04 22:10:52,161 - INFO - First epoch batch energies: OOD mean=-0.4055, min=-0.6397, max=-0.1730
+2025-09-04 22:10:52,169 - INFO - Boosted OOD loss: -0.0561
+2025-09-04 22:10:54,137 - INFO - First epoch batch energies: ID mean=-0.8848, min=-0.9371, max=-0.7758
+2025-09-04 22:10:54,138 - INFO - First epoch batch energies: OOD mean=-0.9519, min=-1.0674, max=-0.7294
+2025-09-04 22:10:54,144 - INFO - Boosted OOD loss: -0.0697
+2025-09-04 22:10:56,097 - INFO - First epoch batch energies: ID mean=-0.6222, min=-0.9601, max=-0.3654
+2025-09-04 22:10:56,097 - INFO - First epoch batch energies: OOD mean=-0.4828, min=-0.5620, max=-0.3605
+2025-09-04 22:10:56,104 - INFO - Boosted OOD loss: -0.0667
+2025-09-04 22:10:56,104 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:10:56,105 - INFO - First epoch batch losses: CE=2.5513, OOD=-0.0667
+2025-09-04 22:10:58,071 - INFO - First epoch batch energies: ID mean=-0.3254, min=-0.5882, max=-0.0976
+2025-09-04 22:10:58,071 - INFO - First epoch batch energies: OOD mean=-0.3143, min=-0.7045, max=-0.1394
+2025-09-04 22:10:58,080 - INFO - Boosted OOD loss: -0.0459
+2025-09-04 22:11:00,046 - INFO - First epoch batch energies: ID mean=-0.4783, min=-0.8324, max=-0.2454
+2025-09-04 22:11:00,046 - INFO - First epoch batch energies: OOD mean=-0.4901, min=-0.7064, max=-0.1699
+2025-09-04 22:11:00,055 - INFO - Boosted OOD loss: -0.0629
+2025-09-04 22:11:02,004 - INFO - First epoch batch energies: ID mean=-0.8708, min=-1.1075, max=-0.6359
+2025-09-04 22:11:02,005 - INFO - First epoch batch energies: OOD mean=-0.8165, min=-1.0336, max=-0.5684
+2025-09-04 22:11:02,012 - INFO - Boosted OOD loss: -0.0875
+2025-09-04 22:11:03,961 - INFO - First epoch batch energies: ID mean=-0.7621, min=-0.9194, max=-0.5215
+2025-09-04 22:11:03,961 - INFO - First epoch batch energies: OOD mean=-0.7348, min=-0.8437, max=-0.5630
+2025-09-04 22:11:03,968 - INFO - Boosted OOD loss: -0.0736
+2025-09-04 22:11:11,700 - INFO - First epoch batch energies: ID mean=-1.0247, min=-1.1524, max=-0.8793
+2025-09-04 22:11:11,700 - INFO - First epoch batch energies: OOD mean=-1.0297, min=-1.1504, max=-0.8811
+2025-09-04 22:11:11,706 - INFO - Boosted OOD loss: -0.0778
+2025-09-04 22:11:13,653 - INFO - First epoch batch energies: ID mean=-0.6183, min=-0.8968, max=-0.3662
+2025-09-04 22:11:13,654 - INFO - First epoch batch energies: OOD mean=-0.5813, min=-0.7623, max=-0.3639
+2025-09-04 22:11:13,660 - INFO - Boosted OOD loss: -0.0648
+2025-09-04 22:11:15,619 - INFO - First epoch batch energies: ID mean=-0.4750, min=-0.6646, max=-0.2880
+2025-09-04 22:11:15,619 - INFO - First epoch batch energies: OOD mean=-0.5219, min=-0.8141, max=-0.2473
+2025-09-04 22:11:15,626 - INFO - Boosted OOD loss: -0.0563
+2025-09-04 22:11:15,626 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:11:15,627 - INFO - First epoch batch losses: CE=2.5676, OOD=-0.0563
+2025-09-04 22:11:19,510 - INFO - First epoch batch energies: ID mean=-0.4505, min=-0.7862, max=-0.1639
+2025-09-04 22:11:19,510 - INFO - First epoch batch energies: OOD mean=-0.3900, min=-0.6224, max=-0.1541
+2025-09-04 22:11:19,517 - INFO - Boosted OOD loss: -0.0499
+2025-09-04 22:11:21,466 - INFO - First epoch batch energies: ID mean=-0.7347, min=-0.9077, max=-0.4704
+2025-09-04 22:11:21,466 - INFO - First epoch batch energies: OOD mean=-0.7540, min=-0.9914, max=-0.4503
+2025-09-04 22:11:21,473 - INFO - Boosted OOD loss: -0.0688
+2025-09-04 22:11:23,425 - INFO - First epoch batch energies: ID mean=-0.5914, min=-0.7875, max=-0.3311
+2025-09-04 22:11:23,425 - INFO - First epoch batch energies: OOD mean=-0.5627, min=-0.8621, max=-0.3440
+2025-09-04 22:11:23,433 - INFO - Boosted OOD loss: -0.0670
+2025-09-04 22:11:25,387 - INFO - First epoch batch energies: ID mean=-0.5649, min=-0.8697, max=-0.1893
+2025-09-04 22:11:25,387 - INFO - First epoch batch energies: OOD mean=-0.5186, min=-0.8769, max=-0.1982
+2025-09-04 22:11:25,394 - INFO - Boosted OOD loss: -0.0565
+2025-09-04 22:11:27,348 - INFO - First epoch batch energies: ID mean=-0.5532, min=-0.7095, max=-0.1921
+2025-09-04 22:11:27,348 - INFO - First epoch batch energies: OOD mean=-0.6618, min=-0.9266, max=-0.1816
+2025-09-04 22:11:27,356 - INFO - Boosted OOD loss: -0.0627
+2025-09-04 22:11:29,316 - INFO - First epoch batch energies: ID mean=-0.8375, min=-0.9162, max=-0.7633
+2025-09-04 22:11:29,316 - INFO - First epoch batch energies: OOD mean=-0.9057, min=-1.0324, max=-0.7051
+2025-09-04 22:11:29,323 - INFO - Boosted OOD loss: -0.0642
+2025-09-04 22:11:33,199 - INFO - First epoch batch energies: ID mean=-0.5621, min=-0.7262, max=-0.2390
+2025-09-04 22:11:33,200 - INFO - First epoch batch energies: OOD mean=-0.6616, min=-1.0196, max=-0.2190
+2025-09-04 22:11:33,207 - INFO - Boosted OOD loss: -0.0605
+2025-09-04 22:11:35,158 - INFO - First epoch batch energies: ID mean=-0.6654, min=-0.8564, max=-0.4405
+2025-09-04 22:11:35,158 - INFO - First epoch batch energies: OOD mean=-0.6334, min=-0.8108, max=-0.3578
+2025-09-04 22:11:35,165 - INFO - Boosted OOD loss: -0.0703
+2025-09-04 22:11:35,165 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:11:35,166 - INFO - First epoch batch losses: CE=2.5727, OOD=-0.0703
+2025-09-04 22:11:37,125 - INFO - First epoch batch energies: ID mean=-0.6721, min=-0.8381, max=-0.4284
+2025-09-04 22:11:37,125 - INFO - First epoch batch energies: OOD mean=-0.7370, min=-0.9312, max=-0.3903
+2025-09-04 22:11:37,133 - INFO - Boosted OOD loss: -0.0773
+2025-09-04 22:11:39,081 - INFO - First epoch batch energies: ID mean=-0.6526, min=-0.8195, max=-0.4261
+2025-09-04 22:11:39,081 - INFO - First epoch batch energies: OOD mean=-0.6862, min=-0.9523, max=-0.4246
+2025-09-04 22:11:39,089 - INFO - Boosted OOD loss: -0.0724
+2025-09-04 22:11:41,039 - INFO - First epoch batch energies: ID mean=-0.7888, min=-1.0084, max=-0.5368
+2025-09-04 22:11:41,039 - INFO - First epoch batch energies: OOD mean=-0.7281, min=-0.8281, max=-0.5287
+2025-09-04 22:11:41,046 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:11:42,991 - INFO - First epoch batch energies: ID mean=-0.5430, min=-0.7957, max=-0.2366
+2025-09-04 22:11:42,991 - INFO - First epoch batch energies: OOD mean=-0.5718, min=-0.8689, max=-0.1929
+2025-09-04 22:11:42,999 - INFO - Boosted OOD loss: -0.0632
+2025-09-04 22:11:46,882 - INFO - First epoch batch energies: ID mean=-0.5900, min=-0.9178, max=-0.1929
+2025-09-04 22:11:46,883 - INFO - First epoch batch energies: OOD mean=-0.4350, min=-0.7989, max=-0.1990
+2025-09-04 22:11:46,890 - INFO - Boosted OOD loss: -0.0563
+2025-09-04 22:11:56,544 - INFO - First epoch batch energies: ID mean=-0.7511, min=-0.7879, max=-0.6562
+2025-09-04 22:11:56,544 - INFO - First epoch batch energies: OOD mean=-0.7288, min=-0.9189, max=-0.6371
+2025-09-04 22:11:56,550 - INFO - Boosted OOD loss: -0.0471
+2025-09-04 22:11:58,492 - INFO - First epoch batch energies: ID mean=-0.5338, min=-0.8859, max=-0.1561
+2025-09-04 22:11:58,492 - INFO - First epoch batch energies: OOD mean=-0.4473, min=-0.7835, max=-0.1343
+2025-09-04 22:11:58,501 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 22:12:00,456 - INFO - First epoch batch energies: ID mean=-0.6353, min=-0.9647, max=-0.3492
+2025-09-04 22:12:00,456 - INFO - First epoch batch energies: OOD mean=-0.6108, min=-0.8705, max=-0.3328
+2025-09-04 22:12:00,464 - INFO - Boosted OOD loss: -0.0707
+2025-09-04 22:12:02,415 - INFO - First epoch batch energies: ID mean=-0.6517, min=-1.0256, max=-0.4271
+2025-09-04 22:12:02,416 - INFO - First epoch batch energies: OOD mean=-0.6280, min=-0.7750, max=-0.3838
+2025-09-04 22:12:02,421 - INFO - Boosted OOD loss: -0.0610
+2025-09-04 22:12:06,289 - INFO - First epoch batch energies: ID mean=-0.6195, min=-0.9300, max=-0.4217
+2025-09-04 22:12:06,289 - INFO - First epoch batch energies: OOD mean=-0.6029, min=-0.8313, max=-0.3569
+2025-09-04 22:12:06,296 - INFO - Boosted OOD loss: -0.0675
+2025-09-04 22:12:08,251 - INFO - First epoch batch energies: ID mean=-0.4124, min=-0.6171, max=-0.0673
+2025-09-04 22:12:08,251 - INFO - First epoch batch energies: OOD mean=-0.4407, min=-0.6875, max=-0.0849
+2025-09-04 22:12:08,258 - INFO - Boosted OOD loss: -0.0464
+2025-09-04 22:12:12,136 - INFO - First epoch batch energies: ID mean=-0.6444, min=-0.8799, max=-0.3677
+2025-09-04 22:12:12,136 - INFO - First epoch batch energies: OOD mean=-0.6524, min=-0.8766, max=-0.3453
+2025-09-04 22:12:12,143 - INFO - Boosted OOD loss: -0.0668
+2025-09-04 22:12:14,095 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 22:12:17,957 - INFO - First epoch batch energies: ID mean=-0.7994, min=-0.9827, max=-0.5723
+2025-09-04 22:12:17,958 - INFO - First epoch batch energies: OOD mean=-0.7188, min=-0.8519, max=-0.6104
+2025-09-04 22:12:17,963 - INFO - Boosted OOD loss: -0.0714
+2025-09-04 22:12:19,922 - INFO - First epoch batch energies: ID mean=-0.7889, min=-0.8642, max=-0.6676
+2025-09-04 22:12:19,922 - INFO - First epoch batch energies: OOD mean=-0.7824, min=-0.9786, max=-0.6503
+2025-09-04 22:12:19,928 - INFO - Boosted OOD loss: -0.0758
+2025-09-04 22:12:21,872 - INFO - First epoch batch energies: ID mean=-0.4860, min=-0.7972, max=-0.2327
+2025-09-04 22:12:21,873 - INFO - First epoch batch energies: OOD mean=-0.5525, min=-0.8266, max=-0.2401
+2025-09-04 22:12:21,881 - INFO - Boosted OOD loss: -0.0549
+2025-09-04 22:12:25,739 - INFO - First epoch batch energies: ID mean=-0.3470, min=-0.5177, max=-0.2095
+2025-09-04 22:12:25,739 - INFO - First epoch batch energies: OOD mean=-0.4796, min=-0.9070, max=-0.1156
+2025-09-04 22:12:25,749 - INFO - Boosted OOD loss: -0.0463
+2025-09-04 22:12:27,707 - INFO - First epoch batch energies: ID mean=-0.4498, min=-0.8238, max=-0.0471
+2025-09-04 22:12:27,707 - INFO - First epoch batch energies: OOD mean=-0.3395, min=-0.5699, max=-0.0824
+2025-09-04 22:12:27,716 - INFO - Boosted OOD loss: -0.0543
+2025-09-04 22:12:31,590 - INFO - First epoch batch energies: ID mean=-0.7381, min=-1.0063, max=-0.4109
+2025-09-04 22:12:31,590 - INFO - First epoch batch energies: OOD mean=-0.7458, min=-0.9763, max=-0.3628
+2025-09-04 22:12:31,597 - INFO - Boosted OOD loss: -0.0740
+2025-09-04 22:12:39,345 - INFO - First epoch batch energies: ID mean=-0.4694, min=-0.6758, max=-0.3036
+2025-09-04 22:12:39,345 - INFO - First epoch batch energies: OOD mean=-0.4820, min=-0.7113, max=-0.2722
+2025-09-04 22:12:39,354 - INFO - Boosted OOD loss: -0.0655
+2025-09-04 22:12:41,299 - INFO - First epoch batch energies: ID mean=-0.7038, min=-0.8230, max=-0.4895
+2025-09-04 22:12:41,299 - INFO - First epoch batch energies: OOD mean=-0.7190, min=-0.9232, max=-0.4822
+2025-09-04 22:12:41,305 - INFO - Boosted OOD loss: -0.0683
+2025-09-04 22:12:47,111 - INFO - First epoch batch energies: ID mean=-0.7403, min=-0.9224, max=-0.4050
+2025-09-04 22:12:47,111 - INFO - First epoch batch energies: OOD mean=-0.7453, min=-1.0875, max=-0.3768
+2025-09-04 22:12:47,118 - INFO - Boosted OOD loss: -0.0780
+2025-09-04 22:12:49,063 - INFO - First epoch batch energies: ID mean=-0.7194, min=-0.8934, max=-0.4865
+2025-09-04 22:12:49,063 - INFO - First epoch batch energies: OOD mean=-0.7252, min=-0.8545, max=-0.4434
+2025-09-04 22:12:49,070 - INFO - Boosted OOD loss: -0.0567
+2025-09-04 22:13:00,665 - INFO - First epoch batch energies: ID mean=-0.5143, min=-0.7205, max=-0.2420
+2025-09-04 22:13:00,665 - INFO - First epoch batch energies: OOD mean=-0.5659, min=-0.8072, max=-0.2348
+2025-09-04 22:13:00,674 - INFO - Boosted OOD loss: -0.0604
+2025-09-04 22:13:02,626 - INFO - First epoch batch energies: ID mean=-0.6238, min=-0.8668, max=-0.3728
+2025-09-04 22:13:02,626 - INFO - First epoch batch energies: OOD mean=-0.6301, min=-0.8110, max=-0.2898
+2025-09-04 22:13:02,635 - INFO - Boosted OOD loss: -0.0795
+2025-09-04 22:13:04,583 - INFO - First epoch batch energies: ID mean=-0.6522, min=-0.8767, max=-0.3536
+2025-09-04 22:13:04,584 - INFO - First epoch batch energies: OOD mean=-0.6331, min=-0.8370, max=-0.3534
+2025-09-04 22:13:04,591 - INFO - Boosted OOD loss: -0.0695
+2025-09-04 22:13:06,538 - INFO - First epoch batch energies: ID mean=-0.5291, min=-0.7551, max=-0.3044
+2025-09-04 22:13:06,538 - INFO - First epoch batch energies: OOD mean=-0.4566, min=-0.6158, max=-0.2996
+2025-09-04 22:13:06,544 - INFO - Boosted OOD loss: -0.0560
+2025-09-04 22:13:10,419 - INFO - First epoch batch energies: ID mean=-0.4609, min=-0.5794, max=-0.3142
+2025-09-04 22:13:10,420 - INFO - First epoch batch energies: OOD mean=-0.5626, min=-0.9058, max=-0.1414
+2025-09-04 22:13:10,429 - INFO - Boosted OOD loss: -0.0686
+2025-09-04 22:13:14,308 - INFO - First epoch batch energies: ID mean=-0.5637, min=-0.8344, max=-0.3327
+2025-09-04 22:13:14,308 - INFO - First epoch batch energies: OOD mean=-0.5515, min=-0.7879, max=-0.3128
+2025-09-04 22:13:14,318 - INFO - Boosted OOD loss: -0.0724
+2025-09-04 22:13:18,191 - INFO - First epoch batch energies: ID mean=-0.5353, min=-0.7646, max=-0.1226
+2025-09-04 22:13:18,192 - INFO - First epoch batch energies: OOD mean=-0.5874, min=-0.8880, max=-0.1345
+2025-09-04 22:13:18,198 - INFO - Boosted OOD loss: -0.0576
+2025-09-04 22:13:20,148 - INFO - First epoch batch energies: ID mean=-0.6893, min=-0.9198, max=-0.3402
+2025-09-04 22:13:20,149 - INFO - First epoch batch energies: OOD mean=-0.6818, min=-0.9300, max=-0.3508
+2025-09-04 22:13:20,156 - INFO - Boosted OOD loss: -0.0715
+2025-09-04 22:13:22,107 - INFO - First epoch batch energies: ID mean=-0.7551, min=-0.8875, max=-0.5596
+2025-09-04 22:13:22,107 - INFO - First epoch batch energies: OOD mean=-0.7655, min=-0.9762, max=-0.5309
+2025-09-04 22:13:22,116 - INFO - Boosted OOD loss: -0.0881
+2025-09-04 22:13:25,990 - INFO - First epoch batch energies: ID mean=-0.9813, min=-1.0712, max=-0.8708
+2025-09-04 22:13:25,990 - INFO - First epoch batch energies: OOD mean=-0.9604, min=-1.0267, max=-0.8500
+2025-09-04 22:13:25,996 - INFO - Boosted OOD loss: -0.0843
+2025-09-04 22:13:29,871 - INFO - First epoch batch energies: ID mean=-0.5324, min=-0.8012, max=-0.2670
+2025-09-04 22:13:29,871 - INFO - First epoch batch energies: OOD mean=-0.5120, min=-0.7097, max=-0.2746
+2025-09-04 22:13:29,880 - INFO - Boosted OOD loss: -0.0712
+2025-09-04 22:13:35,670 - INFO - First epoch batch energies: ID mean=-0.6004, min=-0.8942, max=-0.1846
+2025-09-04 22:13:35,670 - INFO - First epoch batch energies: OOD mean=-0.5628, min=-0.7943, max=-0.1754
+2025-09-04 22:13:35,679 - INFO - Boosted OOD loss: -0.0741
+2025-09-04 22:13:45,309 - INFO - First epoch batch energies: ID mean=-0.5833, min=-0.8342, max=-0.3810
+2025-09-04 22:13:45,309 - INFO - First epoch batch energies: OOD mean=-0.5820, min=-0.8044, max=-0.3856
+2025-09-04 22:13:45,316 - INFO - Boosted OOD loss: -0.0596
+2025-09-04 22:13:47,255 - INFO - First epoch batch energies: ID mean=-0.7567, min=-0.9305, max=-0.4554
+2025-09-04 22:13:47,255 - INFO - First epoch batch energies: OOD mean=-0.6889, min=-0.8570, max=-0.4302
+2025-09-04 22:13:47,265 - INFO - Boosted OOD loss: -0.0834
+2025-09-04 22:13:49,219 - INFO - First epoch batch energies: ID mean=-0.6865, min=-0.8996, max=-0.4029
+2025-09-04 22:13:49,219 - INFO - First epoch batch energies: OOD mean=-0.6982, min=-0.9441, max=-0.4149
+2025-09-04 22:13:49,227 - INFO - Boosted OOD loss: -0.0714
+2025-09-04 22:13:51,164 - INFO - First epoch batch energies: ID mean=-0.5349, min=-0.6670, max=-0.4217
+2025-09-04 22:13:51,165 - INFO - First epoch batch energies: OOD mean=-0.5889, min=-0.8219, max=-0.3878
+2025-09-04 22:13:51,171 - INFO - Boosted OOD loss: -0.0466
+2025-09-04 22:13:51,171 - INFO - Step 350 Loss Debug:
+2025-09-04 22:13:51,172 - INFO -  CE: 2.5294
+2025-09-04 22:13:51,172 - INFO -  OOD: -0.0466
+2025-09-04 22:13:51,173 - INFO -  β: 32.00
+2025-09-04 22:13:51,174 - INFO -  ID: 24764, OOD(254): 34
+2025-09-04 22:13:51,174 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:13:51,175 - INFO - First epoch batch losses: CE=2.5294, OOD=-0.0466
+2025-09-04 22:13:53,118 - INFO - First epoch batch energies: ID mean=-0.8958, min=-0.9812, max=-0.7327
+2025-09-04 22:13:53,118 - INFO - First epoch batch energies: OOD mean=-0.9012, min=-0.9839, max=-0.7388
+2025-09-04 22:13:53,124 - INFO - Boosted OOD loss: -0.0614
+2025-09-04 22:13:55,068 - INFO - First epoch batch energies: ID mean=-0.6480, min=-0.9244, max=-0.4558
+2025-09-04 22:13:55,069 - INFO - First epoch batch energies: OOD mean=-0.6154, min=-0.7726, max=-0.4457
+2025-09-04 22:13:55,076 - INFO - Boosted OOD loss: -0.0703
+2025-09-04 22:13:57,023 - INFO - First epoch batch energies: ID mean=-0.8012, min=-1.0760, max=-0.5576
+2025-09-04 22:13:57,023 - INFO - First epoch batch energies: OOD mean=-0.7477, min=-1.0393, max=-0.5162
+2025-09-04 22:13:57,029 - INFO - Boosted OOD loss: -0.0737
+2025-09-04 22:13:58,977 - INFO - First epoch batch energies: ID mean=-0.7250, min=-0.9926, max=-0.4896
+2025-09-04 22:13:58,977 - INFO - First epoch batch energies: OOD mean=-0.6363, min=-0.7607, max=-0.4827
+2025-09-04 22:13:58,984 - INFO - Boosted OOD loss: -0.0604
+2025-09-04 22:14:00,935 - INFO - First epoch batch energies: ID mean=-0.4027, min=-0.6629, max=-0.1847
+2025-09-04 22:14:00,936 - INFO - First epoch batch energies: OOD mean=-0.5249, min=-0.8010, max=-0.1506
+2025-09-04 22:14:00,945 - INFO - Boosted OOD loss: -0.0634
+2025-09-04 22:14:04,821 - INFO - First epoch batch energies: ID mean=-0.7965, min=-0.9104, max=-0.6735
+2025-09-04 22:14:04,821 - INFO - First epoch batch energies: OOD mean=-0.8856, min=-1.1026, max=-0.6269
+2025-09-04 22:14:04,827 - INFO - Boosted OOD loss: -0.0770
+2025-09-04 22:14:06,772 - INFO - First epoch batch energies: ID mean=-0.9420, min=-1.0694, max=-0.7491
+2025-09-04 22:14:06,773 - INFO - First epoch batch energies: OOD mean=-0.8990, min=-0.9746, max=-0.7435
+2025-09-04 22:14:06,779 - INFO - Boosted OOD loss: -0.0692
+2025-09-04 22:14:08,734 - INFO - First epoch batch energies: ID mean=-0.4847, min=-0.7683, max=-0.2671
+2025-09-04 22:14:08,734 - INFO - First epoch batch energies: OOD mean=-0.4590, min=-0.8854, max=-0.2443
+2025-09-04 22:14:08,741 - INFO - Boosted OOD loss: -0.0561
+2025-09-04 22:14:14,542 - INFO - First epoch batch energies: ID mean=-0.7141, min=-0.9432, max=-0.4789
+2025-09-04 22:14:14,542 - INFO - First epoch batch energies: OOD mean=-0.6796, min=-0.8345, max=-0.4788
+2025-09-04 22:14:14,549 - INFO - Boosted OOD loss: -0.0693
+2025-09-04 22:14:16,497 - INFO - First epoch batch energies: ID mean=-0.7983, min=-0.9040, max=-0.7391
+2025-09-04 22:14:16,498 - INFO - First epoch batch energies: OOD mean=-0.8487, min=-1.0215, max=-0.7007
+2025-09-04 22:14:16,503 - INFO - Boosted OOD loss: -0.0755
+2025-09-04 22:14:18,451 - INFO - First epoch batch energies: ID mean=-0.5484, min=-0.6962, max=-0.3286
+2025-09-04 22:14:18,451 - INFO - First epoch batch energies: OOD mean=-0.7047, min=-1.0019, max=-0.3095
+2025-09-04 22:14:18,457 - INFO - Boosted OOD loss: -0.0540
+2025-09-04 22:14:20,411 - INFO - First epoch batch energies: ID mean=-0.6064, min=-0.8591, max=-0.2329
+2025-09-04 22:14:20,411 - INFO - First epoch batch energies: OOD mean=-0.5319, min=-0.7937, max=-0.2174
+2025-09-04 22:14:20,419 - INFO - Boosted OOD loss: -0.0674
+2025-09-04 22:14:22,371 - INFO - First epoch batch energies: ID mean=-0.7715, min=-1.0186, max=-0.6121
+2025-09-04 22:14:22,371 - INFO - First epoch batch energies: OOD mean=-0.7720, min=-0.8690, max=-0.5941
+2025-09-04 22:14:22,378 - INFO - Boosted OOD loss: -0.0655
+2025-09-04 22:14:24,324 - INFO - First epoch batch energies: ID mean=-0.5278, min=-0.7430, max=-0.1819
+2025-09-04 22:14:24,324 - INFO - First epoch batch energies: OOD mean=-0.5089, min=-0.9337, max=-0.1420
+2025-09-04 22:14:24,332 - INFO - Boosted OOD loss: -0.0622
+2025-09-04 22:14:26,284 - INFO - First epoch batch energies: ID mean=-1.0199, min=-1.0939, max=-0.8127
+2025-09-04 22:14:26,284 - INFO - First epoch batch energies: OOD mean=-0.9535, min=-1.0865, max=-0.8106
+2025-09-04 22:14:26,290 - INFO - Boosted OOD loss: -0.0894
+2025-09-04 22:14:28,232 - INFO - First epoch batch energies: ID mean=-0.5928, min=-0.8657, max=-0.2569
+2025-09-04 22:14:28,232 - INFO - First epoch batch energies: OOD mean=-0.3957, min=-0.7375, max=-0.2642
+2025-09-04 22:14:28,239 - INFO - Boosted OOD loss: -0.0614
+2025-09-04 22:14:30,185 - INFO - First epoch batch energies: ID mean=-0.6749, min=-1.0212, max=-0.3086
+2025-09-04 22:14:30,185 - INFO - First epoch batch energies: OOD mean=-0.5642, min=-0.8737, max=-0.2733
+2025-09-04 22:14:30,193 - INFO - Boosted OOD loss: -0.0686
+2025-09-04 22:14:30,193 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:14:30,194 - INFO - First epoch batch losses: CE=2.4461, OOD=-0.0686
+2025-09-04 22:14:36,008 - INFO - First epoch batch energies: ID mean=-0.5043, min=-0.7426, max=-0.2159
+2025-09-04 22:14:36,009 - INFO - First epoch batch energies: OOD mean=-0.5424, min=-0.7904, max=-0.1562
+2025-09-04 22:14:36,018 - INFO - Boosted OOD loss: -0.0705
+2025-09-04 22:14:39,895 - INFO - First epoch batch energies: ID mean=-0.7095, min=-0.8627, max=-0.4569
+2025-09-04 22:14:39,895 - INFO - First epoch batch energies: OOD mean=-0.8007, min=-1.1448, max=-0.4524
+2025-09-04 22:14:39,902 - INFO - Boosted OOD loss: -0.0723
+2025-09-04 22:14:43,779 - INFO - First epoch batch energies: ID mean=-0.7113, min=-0.9363, max=-0.4502
+2025-09-04 22:14:43,779 - INFO - First epoch batch energies: OOD mean=-0.6706, min=-0.8661, max=-0.4591
+2025-09-04 22:14:43,785 - INFO - Boosted OOD loss: -0.0715
+2025-09-04 22:14:49,600 - INFO - First epoch batch energies: ID mean=-0.6230, min=-0.7757, max=-0.5031
+2025-09-04 22:14:49,600 - INFO - First epoch batch energies: OOD mean=-0.6924, min=-0.9001, max=-0.4852
+2025-09-04 22:14:49,607 - INFO - Boosted OOD loss: -0.0648
+2025-09-04 22:14:49,607 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:14:49,608 - INFO - First epoch batch losses: CE=2.5339, OOD=-0.0648
+2025-09-04 22:14:51,555 - INFO - First epoch batch energies: ID mean=-0.4935, min=-0.7664, max=-0.2973
+2025-09-04 22:14:51,556 - INFO - First epoch batch energies: OOD mean=-0.4794, min=-0.6900, max=-0.2885
+2025-09-04 22:14:51,565 - INFO - Boosted OOD loss: -0.0667
+2025-09-04 22:15:03,139 - INFO - First epoch batch energies: ID mean=-0.6047, min=-0.8771, max=-0.2867
+2025-09-04 22:15:03,140 - INFO - First epoch batch energies: OOD mean=-0.5318, min=-0.9261, max=-0.3298
+2025-09-04 22:15:03,146 - INFO - Boosted OOD loss: -0.0655
+2025-09-04 22:15:05,091 - INFO - First epoch batch energies: ID mean=-0.6103, min=-0.8021, max=-0.3949
+2025-09-04 22:15:05,091 - INFO - First epoch batch energies: OOD mean=-0.6175, min=-0.7859, max=-0.4114
+2025-09-04 22:15:05,098 - INFO - Boosted OOD loss: -0.0600
+2025-09-04 22:15:07,041 - INFO - First epoch batch energies: ID mean=-0.6059, min=-0.8271, max=-0.3666
+2025-09-04 22:15:07,041 - INFO - First epoch batch energies: OOD mean=-0.6255, min=-0.8538, max=-0.3031
+2025-09-04 22:15:07,048 - INFO - Boosted OOD loss: -0.0625
+2025-09-04 22:15:08,993 - INFO - First epoch batch energies: ID mean=-0.5553, min=-0.7786, max=-0.0625
+2025-09-04 22:15:08,993 - INFO - First epoch batch energies: OOD mean=-0.4362, min=-0.8415, max=-0.0649
+2025-09-04 22:15:09,002 - INFO - Boosted OOD loss: -0.0673
+2025-09-04 22:15:09,002 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:15:09,003 - INFO - First epoch batch losses: CE=2.3955, OOD=-0.0673
+2025-09-04 22:15:14,809 - INFO - First epoch batch energies: ID mean=-1.0082, min=-1.1317, max=-0.7319
+2025-09-04 22:15:14,809 - INFO - First epoch batch energies: OOD mean=-0.8843, min=-0.9528, max=-0.7872
+2025-09-04 22:15:14,815 - INFO - Boosted OOD loss: -0.0670
+2025-09-04 22:15:16,757 - INFO - First epoch batch energies: ID mean=-0.7231, min=-0.7699, max=-0.4574
+2025-09-04 22:15:16,757 - INFO - First epoch batch energies: OOD mean=-0.7476, min=-1.0330, max=-0.4293
+2025-09-04 22:15:16,763 - INFO - Boosted OOD loss: -0.0688
+2025-09-04 22:15:26,394 - INFO - First epoch batch energies: ID mean=-0.4802, min=-0.7137, max=-0.0664
+2025-09-04 22:15:26,395 - INFO - First epoch batch energies: OOD mean=-0.4548, min=-0.8033, max=-0.0502
+2025-09-04 22:15:26,404 - INFO - Boosted OOD loss: -0.0642
+2025-09-04 22:15:28,351 - INFO - First epoch batch energies: ID mean=-0.6675, min=-0.7064, max=-0.5781
+2025-09-04 22:15:28,351 - INFO - First epoch batch energies: OOD mean=-0.7073, min=-0.9323, max=-0.5839
+2025-09-04 22:15:28,357 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 22:15:28,357 - INFO - Step 400 Loss Debug:
+2025-09-04 22:15:28,358 - INFO -  CE: 2.4515
+2025-09-04 22:15:28,359 - INFO -  OOD: -0.0669
+2025-09-04 22:15:28,359 - INFO -  β: 32.00
+2025-09-04 22:15:28,360 - INFO -  ID: 28426, OOD(254): 18
+2025-09-04 22:15:28,361 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:15:28,361 - INFO - First epoch batch losses: CE=2.4515, OOD=-0.0669
+2025-09-04 22:15:30,305 - INFO - First epoch batch energies: ID mean=-0.5871, min=-0.9491, max=-0.2106
+2025-09-04 22:15:30,305 - INFO - First epoch batch energies: OOD mean=-0.3885, min=-0.5826, max=-0.1980
+2025-09-04 22:15:30,312 - INFO - Boosted OOD loss: -0.0592
+2025-09-04 22:15:32,256 - INFO - First epoch batch energies: ID mean=-0.6386, min=-0.8332, max=-0.1378
+2025-09-04 22:15:32,256 - INFO - First epoch batch energies: OOD mean=-0.5787, min=-0.9137, max=-0.1492
+2025-09-04 22:15:32,263 - INFO - Boosted OOD loss: -0.0710
+2025-09-04 22:15:38,047 - INFO - First epoch batch energies: ID mean=-0.4400, min=-0.6496, max=-0.2435
+2025-09-04 22:15:38,048 - INFO - First epoch batch energies: OOD mean=-0.6182, min=-1.1104, max=-0.1676
+2025-09-04 22:15:38,055 - INFO - Boosted OOD loss: -0.0573
+2025-09-04 22:15:40,008 - INFO - First epoch batch energies: ID mean=-0.6683, min=-0.8908, max=-0.3149
+2025-09-04 22:15:40,009 - INFO - First epoch batch energies: OOD mean=-0.7023, min=-0.8975, max=-0.3002
+2025-09-04 22:15:40,015 - INFO - Boosted OOD loss: -0.0611
+2025-09-04 22:15:43,883 - INFO - First epoch batch energies: ID mean=-0.5549, min=-0.8073, max=-0.2583
+2025-09-04 22:15:43,883 - INFO - First epoch batch energies: OOD mean=-0.5451, min=-0.7598, max=-0.2470
+2025-09-04 22:15:43,891 - INFO - Boosted OOD loss: -0.0671
+2025-09-04 22:15:45,831 - INFO - First epoch batch energies: ID mean=-0.5601, min=-0.8728, max=-0.2803
+2025-09-04 22:15:45,831 - INFO - First epoch batch energies: OOD mean=-0.5064, min=-0.7320, max=-0.2734
+2025-09-04 22:15:45,840 - INFO - Boosted OOD loss: -0.0689
+2025-09-04 22:15:51,640 - INFO - First epoch batch energies: ID mean=-0.6712, min=-0.8414, max=-0.4731
+2025-09-04 22:15:51,641 - INFO - First epoch batch energies: OOD mean=-0.6643, min=-0.8345, max=-0.4538
+2025-09-04 22:15:51,647 - INFO - Boosted OOD loss: -0.0695
+2025-09-04 22:15:59,354 - INFO - First epoch batch energies: ID mean=-0.9103, min=-0.9532, max=-0.8664
+2025-09-04 22:15:59,354 - INFO - First epoch batch energies: OOD mean=-0.9089, min=-0.9338, max=-0.8623
+2025-09-04 22:15:59,360 - INFO - Boosted OOD loss: -0.0807
+2025-09-04 22:16:01,302 - INFO - First epoch batch energies: ID mean=-1.0172, min=-1.0681, max=-0.9298
+2025-09-04 22:16:01,303 - INFO - First epoch batch energies: OOD mean=-1.0505, min=-1.1416, max=-0.8975
+2025-09-04 22:16:01,309 - INFO - Boosted OOD loss: -0.0757
+2025-09-04 22:16:05,175 - INFO - First epoch batch energies: ID mean=-0.9266, min=-1.0797, max=-0.7572
+2025-09-04 22:16:05,175 - INFO - First epoch batch energies: OOD mean=-0.9782, min=-1.1701, max=-0.7018
+2025-09-04 22:16:05,182 - INFO - Boosted OOD loss: -0.0864
+2025-09-04 22:16:07,126 - INFO - First epoch batch energies: ID mean=-0.6861, min=-0.9553, max=-0.4098
+2025-09-04 22:16:07,127 - INFO - First epoch batch energies: OOD mean=-0.5660, min=-0.7754, max=-0.3884
+2025-09-04 22:16:07,134 - INFO - Boosted OOD loss: -0.0656
+2025-09-04 22:16:07,134 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:16:07,135 - INFO - First epoch batch losses: CE=2.4190, OOD=-0.0656
+2025-09-04 22:16:11,000 - INFO - First epoch batch energies: ID mean=-0.6679, min=-0.8049, max=-0.5202
+2025-09-04 22:16:11,000 - INFO - First epoch batch energies: OOD mean=-0.6492, min=-0.7581, max=-0.4892
+2025-09-04 22:16:11,006 - INFO - Boosted OOD loss: -0.0538
+2025-09-04 22:16:14,886 - INFO - First epoch batch energies: ID mean=-0.7590, min=-0.9435, max=-0.5294
+2025-09-04 22:16:14,886 - INFO - First epoch batch energies: OOD mean=-0.6825, min=-0.7906, max=-0.5558
+2025-09-04 22:16:14,892 - INFO - Boosted OOD loss: -0.0627
+2025-09-04 22:16:16,843 - INFO - First epoch batch energies: ID mean=-0.6983, min=-0.9449, max=-0.2952
+2025-09-04 22:16:16,843 - INFO - First epoch batch energies: OOD mean=-0.5804, min=-0.8981, max=-0.2919
+2025-09-04 22:16:16,849 - INFO - Boosted OOD loss: -0.0636
+2025-09-04 22:16:18,795 - INFO - First epoch batch energies: ID mean=-0.4206, min=-0.6869, max=-0.1930
+2025-09-04 22:16:18,796 - INFO - First epoch batch energies: OOD mean=-0.4780, min=-0.8158, max=-0.0747
+2025-09-04 22:16:18,804 - INFO - Boosted OOD loss: -0.0593
+2025-09-04 22:16:20,755 - INFO - First epoch batch energies: ID mean=-0.7618, min=-1.0479, max=-0.4435
+2025-09-04 22:16:20,755 - INFO - First epoch batch energies: OOD mean=-0.6716, min=-0.9530, max=-0.4175
+2025-09-04 22:16:20,762 - INFO - Boosted OOD loss: -0.0698
+2025-09-04 22:16:22,711 - INFO - First epoch batch energies: ID mean=-0.5021, min=-0.7868, max=-0.2341
+2025-09-04 22:16:22,711 - INFO - First epoch batch energies: OOD mean=-0.5222, min=-0.7737, max=-0.2024
+2025-09-04 22:16:22,720 - INFO - Boosted OOD loss: -0.0650
+2025-09-04 22:16:26,600 - INFO - First epoch batch energies: ID mean=-0.8210, min=-1.0073, max=-0.5611
+2025-09-04 22:16:26,600 - INFO - First epoch batch energies: OOD mean=-0.7457, min=-0.9357, max=-0.5280
+2025-09-04 22:16:26,607 - INFO - Boosted OOD loss: -0.0826
+2025-09-04 22:16:26,607 - INFO - First epoch extra batch debug: features=torch.Size([8, 1280, 64, 64]), projected=torch.Size([8, 256, 64, 64])
+2025-09-04 22:16:26,608 - INFO - First epoch batch losses: CE=2.5191, OOD=-0.0826
+2025-09-04 22:16:28,557 - INFO - First epoch batch energies: ID mean=-0.6098, min=-0.8971, max=-0.2779
+2025-09-04 22:16:28,558 - INFO - First epoch batch energies: OOD mean=-0.6308, min=-0.7762, max=-0.2514
+2025-09-04 22:16:28,565 - INFO - Boosted OOD loss: -0.0656
+2025-09-04 22:16:30,515 - INFO - First epoch batch energies: ID mean=-0.8922, min=-1.1216, max=-0.5529
+2025-09-04 22:16:30,515 - INFO - First epoch batch energies: OOD mean=-0.7576, min=-0.8907, max=-0.6120
+2025-09-04 22:16:30,522 - INFO - Boosted OOD loss: -0.0804
+2025-09-04 22:16:34,394 - INFO - First epoch batch energies: ID mean=-0.8581, min=-1.0036, max=-0.6204
+2025-09-04 22:16:34,394 - INFO - First epoch batch energies: OOD mean=-0.8918, min=-1.1585, max=-0.5105
+2025-09-04 22:16:34,403 - INFO - Boosted OOD loss: -0.0954
+2025-09-04 22:16:38,281 - INFO - First epoch batch energies: ID mean=-0.2765, min=-0.5896, max=-0.0668
+2025-09-04 22:16:38,282 - INFO - First epoch batch energies: OOD mean=-0.2922, min=-0.6574, max=-0.1113
+2025-09-04 22:16:38,290 - INFO - Boosted OOD loss: -0.0398
+2025-09-04 22:16:40,238 - INFO - First epoch batch energies: ID mean=-0.7891, min=-1.0266, max=-0.4903
+2025-09-04 22:16:40,238 - INFO - First epoch batch energies: OOD mean=-0.7214, min=-0.9081, max=-0.4832
+2025-09-04 22:16:40,244 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 22:16:42,189 - INFO - First epoch batch energies: ID mean=-0.5760, min=-0.9247, max=-0.1934
+2025-09-04 22:16:42,190 - INFO - First epoch batch energies: OOD mean=-0.6007, min=-0.7926, max=-0.1850
+2025-09-04 22:16:42,199 - INFO - Boosted OOD loss: -0.0776
+2025-09-04 22:16:44,144 - INFO - First epoch batch energies: ID mean=-0.3937, min=-0.7797, max=-0.2699
+2025-09-04 22:16:44,145 - INFO - First epoch batch energies: OOD mean=-0.4229, min=-0.7432, max=-0.1950
+2025-09-04 22:16:44,151 - INFO - Boosted OOD loss: -0.0526
+2025-09-04 22:16:49,979 - INFO - First epoch batch energies: ID mean=-0.5423, min=-0.7696, max=-0.3429
+2025-09-04 22:16:49,979 - INFO - First epoch batch energies: OOD mean=-0.5677, min=-0.7837, max=-0.3249
+2025-09-04 22:16:49,988 - INFO - Boosted OOD loss: -0.0752
+2025-09-04 22:16:51,942 - INFO - First epoch batch energies: ID mean=-0.6269, min=-0.9278, max=-0.2482
+2025-09-04 22:16:51,942 - INFO - First epoch batch energies: OOD mean=-0.5523, min=-0.7823, max=-0.3943
+2025-09-04 22:16:51,949 - INFO - Boosted OOD loss: -0.0623
+2025-09-04 22:16:53,909 - INFO - First epoch batch energies: ID mean=-0.8982, min=-1.1205, max=-0.5182
+2025-09-04 22:16:53,909 - INFO - First epoch batch energies: OOD mean=-0.7252, min=-0.9840, max=-0.5130
+2025-09-04 22:16:53,916 - INFO - Boosted OOD loss: -0.0811
+2025-09-04 22:16:53,974 - INFO - Updated beta to 11.87 (exp decay)
+2025-09-04 22:16:54,054 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 22:16:54,054 - INFO - Weights updated successfully
+2025-09-04 22:16:54,055 - INFO - Advanced epoch 1 - Updated beta: 11.87
+2025-09-04 22:16:54,056 - INFO - Epoch 1 - Avg CE: 2.6597, Avg OOD: -0.0349, β: 32
+2025-09-04 22:16:54,151 - INFO - 
+Starting Epoch 2/100
+2025-09-04 22:16:54,151 - INFO - ============================================================
+2025-09-04 22:16:54,153 - INFO - 
+Updating Hopfield boosting weights at epoch 2...
+2025-09-04 22:16:54,233 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 22:16:54,233 - INFO - Weights updated successfully
+2025-09-04 22:16:58,382 - INFO - Boosted OOD loss: -0.0557
+2025-09-04 22:17:00,287 - INFO - Boosted OOD loss: -0.0697
+2025-09-04 22:17:02,199 - INFO - Boosted OOD loss: -0.0636
+2025-09-04 22:17:04,121 - INFO - Boosted OOD loss: -0.0795
+2025-09-04 22:17:07,943 - INFO - Boosted OOD loss: -0.0680
+2025-09-04 22:17:07,943 - INFO - Step 450 Loss Debug:
+2025-09-04 22:17:07,944 - INFO -  CE: 2.4534
+2025-09-04 22:17:07,945 - INFO -  OOD: -0.0680
+2025-09-04 22:17:07,945 - INFO -  β: 32.00
+2025-09-04 22:17:07,945 - INFO -  ID: 24891, OOD(254): 8
+2025-09-04 22:17:09,888 - INFO - Boosted OOD loss: -0.0657
+2025-09-04 22:17:13,755 - INFO - Boosted OOD loss: -0.0925
+2025-09-04 22:17:17,637 - INFO - Boosted OOD loss: -0.0802
+2025-09-04 22:17:23,452 - INFO - Boosted OOD loss: -0.0628
+2025-09-04 22:17:25,415 - INFO - Boosted OOD loss: -0.0851
+2025-09-04 22:17:31,242 - INFO - Boosted OOD loss: -0.0535
+2025-09-04 22:17:33,206 - INFO - Boosted OOD loss: -0.0730
+2025-09-04 22:17:35,167 - INFO - Boosted OOD loss: -0.0532
+2025-09-04 22:17:37,146 - INFO - Boosted OOD loss: -0.0657
+2025-09-04 22:17:39,109 - INFO - Boosted OOD loss: -0.0533
+2025-09-04 22:17:41,067 - INFO - Boosted OOD loss: -0.0688
+2025-09-04 22:17:44,953 - INFO - Boosted OOD loss: -0.0616
+2025-09-04 22:17:50,775 - INFO - Boosted OOD loss: -0.0794
+2025-09-04 22:17:54,672 - INFO - Boosted OOD loss: -0.0674
+2025-09-04 22:17:56,640 - INFO - Boosted OOD loss: -0.0959
+2025-09-04 22:18:00,536 - INFO - Boosted OOD loss: -0.0705
+2025-09-04 22:18:02,488 - INFO - Boosted OOD loss: -0.0907
+2025-09-04 22:18:04,455 - INFO - Boosted OOD loss: -0.0586
+2025-09-04 22:18:12,216 - INFO - Boosted OOD loss: -0.0703
+2025-09-04 22:18:14,181 - INFO - Boosted OOD loss: -0.0737
+2025-09-04 22:18:16,142 - INFO - Boosted OOD loss: -0.0684
+2025-09-04 22:18:18,105 - INFO - Boosted OOD loss: -0.0890
+2025-09-04 22:18:21,979 - INFO - Boosted OOD loss: -0.0796
+2025-09-04 22:18:23,930 - INFO - Boosted OOD loss: -0.0769
+2025-09-04 22:18:25,895 - INFO - Boosted OOD loss: -0.0771
+2025-09-04 22:18:27,852 - INFO - Boosted OOD loss: -0.0607
+2025-09-04 22:18:33,681 - INFO - Boosted OOD loss: -0.0722
+2025-09-04 22:18:35,640 - INFO - Boosted OOD loss: -0.0612
+2025-09-04 22:18:39,531 - INFO - Boosted OOD loss: -0.0688
+2025-09-04 22:18:45,342 - INFO - Boosted OOD loss: -0.0771
+2025-09-04 22:18:45,342 - INFO - Step 500 Loss Debug:
+2025-09-04 22:18:45,343 - INFO -  CE: 2.4159
+2025-09-04 22:18:45,344 - INFO -  OOD: -0.0771
+2025-09-04 22:18:45,344 - INFO -  β: 32.00
+2025-09-04 22:18:45,344 - INFO -  ID: 29376, OOD(254): 56
+2025-09-04 22:18:49,234 - INFO - Boosted OOD loss: -0.0481
+2025-09-04 22:18:56,976 - INFO - Boosted OOD loss: -0.0811
+2025-09-04 22:18:58,937 - INFO - Boosted OOD loss: -0.0570
+2025-09-04 22:19:02,829 - INFO - Boosted OOD loss: -0.0629
+2025-09-04 22:19:04,789 - INFO - Boosted OOD loss: -0.0638
+2025-09-04 22:19:06,746 - INFO - Boosted OOD loss: -0.0663
+2025-09-04 22:19:08,707 - INFO - Boosted OOD loss: -0.0704
+2025-09-04 22:19:12,586 - INFO - Boosted OOD loss: -0.0645
+2025-09-04 22:19:14,539 - INFO - Boosted OOD loss: -0.0755
+2025-09-04 22:19:16,495 - INFO - Boosted OOD loss: -0.0681
+2025-09-04 22:19:18,442 - INFO - Boosted OOD loss: -0.0590
+2025-09-04 22:19:20,400 - INFO - Boosted OOD loss: -0.0586
+2025-09-04 22:19:22,358 - INFO - Boosted OOD loss: -0.0722
+2025-09-04 22:19:24,307 - INFO - Boosted OOD loss: -0.0688
+2025-09-04 22:19:26,268 - INFO - Boosted OOD loss: -0.0719
+2025-09-04 22:19:28,230 - INFO - Boosted OOD loss: -0.1027
+2025-09-04 22:19:30,191 - INFO - Boosted OOD loss: -0.0597
+2025-09-04 22:19:34,064 - INFO - Boosted OOD loss: -0.0672
+2025-09-04 22:19:36,016 - INFO - Boosted OOD loss: -0.0689
+2025-09-04 22:19:37,972 - INFO - Boosted OOD loss: -0.0575
+2025-09-04 22:19:45,681 - INFO - Boosted OOD loss: -0.0704
+2025-09-04 22:19:49,559 - INFO - Boosted OOD loss: -0.0708
+2025-09-04 22:19:51,509 - INFO - Boosted OOD loss: -0.0624
+2025-09-04 22:19:53,467 - INFO - Boosted OOD loss: -0.0412
+2025-09-04 22:19:55,423 - INFO - Boosted OOD loss: -0.0527
+2025-09-04 22:19:57,366 - INFO - Boosted OOD loss: -0.0775
+2025-09-04 22:19:59,309 - INFO - Boosted OOD loss: -0.0824
+2025-09-04 22:20:01,256 - INFO - Boosted OOD loss: -0.0640
+2025-09-04 22:20:03,205 - INFO - Boosted OOD loss: -0.0435
+2025-09-04 22:20:18,619 - INFO - Boosted OOD loss: -0.0638
+2025-09-04 22:20:26,340 - INFO - Boosted OOD loss: -0.0671
+2025-09-04 22:20:28,294 - INFO - Boosted OOD loss: -0.0845
+2025-09-04 22:20:30,245 - INFO - Boosted OOD loss: -0.0592
+2025-09-04 22:20:32,200 - INFO - Boosted OOD loss: -0.0602
+2025-09-04 22:20:38,012 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 22:20:41,889 - INFO - Boosted OOD loss: -0.0841
+2025-09-04 22:20:43,840 - INFO - Boosted OOD loss: -0.0652
+2025-09-04 22:20:45,791 - INFO - Boosted OOD loss: -0.0458
+2025-09-04 22:20:47,753 - INFO - Boosted OOD loss: -0.0781
+2025-09-04 22:20:53,548 - INFO - Boosted OOD loss: -0.0948
+2025-09-04 22:20:57,423 - INFO - Boosted OOD loss: -0.0700
+2025-09-04 22:20:59,368 - INFO - Boosted OOD loss: -0.0637
+2025-09-04 22:21:01,321 - INFO - Boosted OOD loss: -0.0594
+2025-09-04 22:21:05,192 - INFO - Boosted OOD loss: -0.0584
+2025-09-04 22:21:07,151 - INFO - Boosted OOD loss: -0.0923
+2025-09-04 22:21:09,112 - INFO - Boosted OOD loss: -0.0512
+2025-09-04 22:21:11,048 - INFO - Boosted OOD loss: -0.0619
+2025-09-04 22:21:13,006 - INFO - Boosted OOD loss: -0.0743
+2025-09-04 22:21:14,956 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 22:21:18,822 - INFO - Boosted OOD loss: -0.0655
+2025-09-04 22:21:24,624 - INFO - Boosted OOD loss: -0.0721
+2025-09-04 22:21:26,571 - INFO - Boosted OOD loss: -0.0643
+2025-09-04 22:21:28,523 - INFO - Boosted OOD loss: -0.0543
+2025-09-04 22:21:30,477 - INFO - Boosted OOD loss: -0.0824
+2025-09-04 22:21:32,426 - INFO - Boosted OOD loss: -0.0770
+2025-09-04 22:21:34,378 - INFO - Boosted OOD loss: -0.0814
+2025-09-04 22:21:36,332 - INFO - Boosted OOD loss: -0.0667
+2025-09-04 22:21:40,202 - INFO - Boosted OOD loss: -0.0734
+2025-09-04 22:21:42,156 - INFO - Boosted OOD loss: -0.0864
+2025-09-04 22:21:44,120 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 22:21:49,919 - INFO - Boosted OOD loss: -0.0806
+2025-09-04 22:21:51,871 - INFO - Boosted OOD loss: -0.0803
+2025-09-04 22:21:55,736 - INFO - Boosted OOD loss: -0.0462
+2025-09-04 22:21:59,615 - INFO - Boosted OOD loss: -0.0849
+2025-09-04 22:21:59,615 - INFO - Step 600 Loss Debug:
+2025-09-04 22:21:59,616 - INFO -  CE: 2.3146
+2025-09-04 22:21:59,617 - INFO -  OOD: -0.0849
+2025-09-04 22:21:59,617 - INFO -  β: 32.00
+2025-09-04 22:21:59,617 - INFO -  ID: 25747, OOD(254): 1246
+2025-09-04 22:22:03,494 - INFO - Boosted OOD loss: -0.0509
+2025-09-04 22:22:05,448 - INFO - Boosted OOD loss: -0.0593
+2025-09-04 22:22:09,322 - INFO - Boosted OOD loss: -0.0924
+2025-09-04 22:22:13,190 - INFO - Boosted OOD loss: -0.0663
+2025-09-04 22:22:15,141 - INFO - Boosted OOD loss: -0.1011
+2025-09-04 22:22:17,090 - INFO - Boosted OOD loss: -0.0585
+2025-09-04 22:22:19,032 - INFO - Boosted OOD loss: -0.0446
+2025-09-04 22:22:20,990 - INFO - Boosted OOD loss: -0.0563
+2025-09-04 22:22:22,935 - INFO - Boosted OOD loss: -0.0802
+2025-09-04 22:22:24,889 - INFO - Boosted OOD loss: -0.0603
+2025-09-04 22:22:26,851 - INFO - Boosted OOD loss: -0.0490
+2025-09-04 22:22:28,809 - INFO - Boosted OOD loss: -0.0613
+2025-09-04 22:22:30,764 - INFO - Boosted OOD loss: -0.0839
+2025-09-04 22:22:32,716 - INFO - Boosted OOD loss: -0.0526
+2025-09-04 22:22:34,671 - INFO - Boosted OOD loss: -0.0790
+2025-09-04 22:22:36,628 - INFO - Boosted OOD loss: -0.0798
+2025-09-04 22:22:38,587 - INFO - Boosted OOD loss: -0.0868
+2025-09-04 22:22:42,462 - INFO - Boosted OOD loss: -0.0677
+2025-09-04 22:22:50,179 - INFO - Boosted OOD loss: -0.0549
+2025-09-04 22:22:54,058 - INFO - Boosted OOD loss: -0.0840
+2025-09-04 22:23:01,762 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 22:23:05,636 - INFO - Boosted OOD loss: -0.0433
+2025-09-04 22:23:11,434 - INFO - Boosted OOD loss: -0.0891
+2025-09-04 22:23:15,303 - INFO - Boosted OOD loss: -0.0529
+2025-09-04 22:23:19,173 - INFO - Boosted OOD loss: -0.0583
+2025-09-04 22:23:26,902 - INFO - Boosted OOD loss: -0.0517
+2025-09-04 22:23:38,463 - INFO - Boosted OOD loss: -0.0670
+2025-09-04 22:23:40,425 - INFO - Boosted OOD loss: -0.0879
+2025-09-04 22:23:44,308 - INFO - Boosted OOD loss: -0.0722
+2025-09-04 22:23:46,269 - INFO - Boosted OOD loss: -0.0744
+2025-09-04 22:23:48,229 - INFO - Boosted OOD loss: -0.0794
+2025-09-04 22:23:50,170 - INFO - Boosted OOD loss: -0.0751
+2025-09-04 22:23:52,124 - INFO - Boosted OOD loss: -0.0566
+2025-09-04 22:23:54,067 - INFO - Boosted OOD loss: -0.0837
+2025-09-04 22:23:57,952 - INFO - Boosted OOD loss: -0.0960
+2025-09-04 22:23:59,911 - INFO - Boosted OOD loss: -0.0684
+2025-09-04 22:24:01,859 - INFO - Boosted OOD loss: -0.0648
+2025-09-04 22:24:05,743 - INFO - Boosted OOD loss: -0.0740
+2025-09-04 22:24:07,707 - INFO - Boosted OOD loss: -0.0613
+2025-09-04 22:24:11,593 - INFO - Boosted OOD loss: -0.0688
+2025-09-04 22:24:13,546 - INFO - Boosted OOD loss: -0.0710
+2025-09-04 22:24:17,425 - INFO - Boosted OOD loss: -0.0723
+2025-09-04 22:24:19,381 - INFO - Boosted OOD loss: -0.0570
+2025-09-04 22:24:25,186 - INFO - Boosted OOD loss: -0.0451
+2025-09-04 22:24:29,075 - INFO - Boosted OOD loss: -0.0919
+2025-09-04 22:24:31,027 - INFO - Boosted OOD loss: -0.0793
+2025-09-04 22:24:32,972 - INFO - Boosted OOD loss: -0.0498
+2025-09-04 22:24:36,858 - INFO - Boosted OOD loss: -0.0721
+2025-09-04 22:24:38,810 - INFO - Boosted OOD loss: -0.0525
+2025-09-04 22:24:40,758 - INFO - Boosted OOD loss: -0.0768
+2025-09-04 22:24:42,710 - INFO - Boosted OOD loss: -0.0495
+2025-09-04 22:24:46,585 - INFO - Boosted OOD loss: -0.0725
+2025-09-04 22:24:48,537 - INFO - Boosted OOD loss: -0.0588
+2025-09-04 22:24:50,492 - INFO - Boosted OOD loss: -0.0485
+2025-09-04 22:24:54,363 - INFO - Boosted OOD loss: -0.0837
+2025-09-04 22:24:56,324 - INFO - Boosted OOD loss: -0.0701
+2025-09-04 22:24:58,281 - INFO - Boosted OOD loss: -0.0571
+2025-09-04 22:25:00,225 - INFO - Boosted OOD loss: -0.0584
+2025-09-04 22:25:02,175 - INFO - Boosted OOD loss: -0.0792
+2025-09-04 22:25:13,714 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 22:25:15,649 - INFO - Boosted OOD loss: -0.0771
+2025-09-04 22:25:17,606 - INFO - Boosted OOD loss: -0.0428
+2025-09-04 22:25:19,566 - INFO - Boosted OOD loss: -0.0760
+2025-09-04 22:25:21,511 - INFO - Boosted OOD loss: -0.0931
+2025-09-04 22:25:23,469 - INFO - Boosted OOD loss: -0.0804
+2025-09-04 22:25:27,340 - INFO - Boosted OOD loss: -0.0718
+2025-09-04 22:25:31,216 - INFO - Boosted OOD loss: -0.0595
+2025-09-04 22:25:35,098 - INFO - Boosted OOD loss: -0.0562
+2025-09-04 22:25:37,052 - INFO - Boosted OOD loss: -0.0900
+2025-09-04 22:25:42,842 - INFO - Boosted OOD loss: -0.0878
+2025-09-04 22:25:48,626 - INFO - Boosted OOD loss: -0.0732
+2025-09-04 22:25:56,339 - INFO - Boosted OOD loss: -0.0568
+2025-09-04 22:25:58,291 - INFO - Boosted OOD loss: -0.0691
+2025-09-04 22:26:00,234 - INFO - Boosted OOD loss: -0.0586
+2025-09-04 22:26:02,192 - INFO - Boosted OOD loss: -0.0755
+2025-09-04 22:26:06,065 - INFO - Boosted OOD loss: -0.0750
+2025-09-04 22:26:19,543 - INFO - Boosted OOD loss: -0.0766
+2025-09-04 22:26:21,497 - INFO - Boosted OOD loss: -0.0584
+2025-09-04 22:26:23,452 - INFO - Boosted OOD loss: -0.0626
+2025-09-04 22:26:25,400 - INFO - Boosted OOD loss: -0.0715
+2025-09-04 22:26:27,349 - INFO - Boosted OOD loss: -0.0555
+2025-09-04 22:26:31,222 - INFO - Boosted OOD loss: -0.0684
+2025-09-04 22:26:33,176 - INFO - Boosted OOD loss: -0.0697
+2025-09-04 22:26:35,137 - INFO - Boosted OOD loss: -0.0743
+2025-09-04 22:26:40,928 - INFO - Boosted OOD loss: -0.0646
+2025-09-04 22:26:42,876 - INFO - Boosted OOD loss: -0.0557
+2025-09-04 22:26:44,831 - INFO - Boosted OOD loss: -0.0825
+2025-09-04 22:26:48,712 - INFO - Boosted OOD loss: -0.0739
+2025-09-04 22:26:54,518 - INFO - Boosted OOD loss: -0.0757
+2025-09-04 22:26:56,474 - INFO - Boosted OOD loss: -0.0594
+2025-09-04 22:27:00,347 - INFO - Boosted OOD loss: -0.0642
+2025-09-04 22:27:02,303 - INFO - Boosted OOD loss: -0.0847
+2025-09-04 22:27:06,173 - INFO - Boosted OOD loss: -0.0635
+2025-09-04 22:27:10,054 - INFO - Boosted OOD loss: -0.0646
+2025-09-04 22:27:13,936 - INFO - Boosted OOD loss: -0.0570
+2025-09-04 22:27:15,887 - INFO - Boosted OOD loss: -0.0716
+2025-09-04 22:27:17,836 - INFO - Boosted OOD loss: -0.0596
+2025-09-04 22:27:19,795 - INFO - Boosted OOD loss: -0.0644
+2025-09-04 22:27:21,743 - INFO - Boosted OOD loss: -0.0698
+2025-09-04 22:27:27,537 - INFO - Boosted OOD loss: -0.0685
+2025-09-04 22:27:31,400 - INFO - Boosted OOD loss: -0.1030
+2025-09-04 22:27:33,355 - INFO - Boosted OOD loss: -0.0625
+2025-09-04 22:27:37,224 - INFO - Boosted OOD loss: -0.0831
+2025-09-04 22:27:39,175 - INFO - Boosted OOD loss: -0.0679
+2025-09-04 22:27:43,035 - INFO - Boosted OOD loss: -0.0579
+2025-09-04 22:27:44,982 - INFO - Boosted OOD loss: -0.0805
+2025-09-04 22:27:46,928 - INFO - Boosted OOD loss: -0.0640
+2025-09-04 22:27:48,878 - INFO - Boosted OOD loss: -0.0636
+2025-09-04 22:27:50,821 - INFO - Boosted OOD loss: -0.0734
+2025-09-04 22:27:52,777 - INFO - Boosted OOD loss: -0.0618
+2025-09-04 22:27:54,732 - INFO - Boosted OOD loss: -0.0592
+2025-09-04 22:28:00,536 - INFO - Boosted OOD loss: -0.0921
+2025-09-04 22:28:04,406 - INFO - Boosted OOD loss: -0.0535
+2025-09-04 22:28:06,363 - INFO - Boosted OOD loss: -0.0970
+2025-09-04 22:28:12,168 - INFO - Boosted OOD loss: -0.0607
+2025-09-04 22:28:16,042 - INFO - Boosted OOD loss: -0.0469
+2025-09-04 22:28:17,995 - INFO - Boosted OOD loss: -0.0665
+2025-09-04 22:28:19,944 - INFO - Boosted OOD loss: -0.0568
+2025-09-04 22:28:21,905 - INFO - Boosted OOD loss: -0.0578
+2025-09-04 22:28:23,860 - INFO - Boosted OOD loss: -0.0611
+2025-09-04 22:28:25,825 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 22:28:27,780 - INFO - Boosted OOD loss: -0.0960
+2025-09-04 22:28:27,780 - INFO - Step 800 Loss Debug:
+2025-09-04 22:28:27,781 - INFO -  CE: 2.1355
+2025-09-04 22:28:27,781 - INFO -  OOD: -0.0960
+2025-09-04 22:28:27,782 - INFO -  β: 32.00
+2025-09-04 22:28:27,782 - INFO -  ID: 30597, OOD(254): 34
+2025-09-04 22:28:31,647 - INFO - Boosted OOD loss: -0.0633
+2025-09-04 22:28:39,362 - INFO - Boosted OOD loss: -0.0576
+2025-09-04 22:28:41,323 - INFO - Boosted OOD loss: -0.0801
+2025-09-04 22:28:43,271 - INFO - Boosted OOD loss: -0.0839
+2025-09-04 22:28:45,226 - INFO - Boosted OOD loss: -0.0653
+2025-09-04 22:28:49,098 - INFO - Boosted OOD loss: -0.0713
+2025-09-04 22:28:51,058 - INFO - Boosted OOD loss: -0.0709
+2025-09-04 22:28:53,009 - INFO - Boosted OOD loss: -0.0833
+2025-09-04 22:28:54,963 - INFO - Boosted OOD loss: -0.0942
+2025-09-04 22:28:56,915 - INFO - Boosted OOD loss: -0.0734
+2025-09-04 22:28:58,867 - INFO - Boosted OOD loss: -0.0437
+2025-09-04 22:29:00,810 - INFO - Boosted OOD loss: -0.0803
+2025-09-04 22:29:04,685 - INFO - Boosted OOD loss: -0.0949
+2025-09-04 22:29:06,633 - INFO - Boosted OOD loss: -0.0522
+2025-09-04 22:29:10,483 - INFO - Boosted OOD loss: -0.1032
+2025-09-04 22:29:14,354 - INFO - Boosted OOD loss: -0.0871
+2025-09-04 22:29:16,312 - INFO - Boosted OOD loss: -0.0692
+2025-09-04 22:29:24,030 - INFO - Boosted OOD loss: -0.0487
+2025-09-04 22:29:27,899 - INFO - Boosted OOD loss: -0.0607
+2025-09-04 22:29:29,855 - INFO - Boosted OOD loss: -0.0686
+2025-09-04 22:29:35,649 - INFO - Boosted OOD loss: -0.0485
+2025-09-04 22:29:41,454 - INFO - Boosted OOD loss: -0.0752
+2025-09-04 22:29:43,405 - INFO - Boosted OOD loss: -0.0789
+2025-09-04 22:29:47,277 - INFO - Boosted OOD loss: -0.0876
+2025-09-04 22:29:49,227 - INFO - Boosted OOD loss: -0.0869
+2025-09-04 22:29:55,023 - INFO - Boosted OOD loss: -0.0791
+2025-09-04 22:30:00,824 - INFO - Boosted OOD loss: -0.0638
+2025-09-04 22:30:02,774 - INFO - Boosted OOD loss: -0.0967
+2025-09-04 22:30:04,732 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 22:30:04,732 - INFO - Step 850 Loss Debug:
+2025-09-04 22:30:04,733 - INFO -  CE: 2.1930
+2025-09-04 22:30:04,734 - INFO -  OOD: -0.0756
+2025-09-04 22:30:04,734 - INFO -  β: 32.00
+2025-09-04 22:30:04,734 - INFO -  ID: 28403, OOD(254): 1118
+2025-09-04 22:30:06,692 - INFO - Boosted OOD loss: -0.0636
+2025-09-04 22:30:08,642 - INFO - Boosted OOD loss: -0.0528
+2025-09-04 22:30:10,593 - INFO - Boosted OOD loss: -0.0411
+2025-09-04 22:30:16,392 - INFO - Boosted OOD loss: -0.0929
+2025-09-04 22:30:22,191 - INFO - Boosted OOD loss: -0.0658
+2025-09-04 22:30:26,062 - INFO - Boosted OOD loss: -0.1065
+2025-09-04 22:30:31,865 - INFO - Boosted OOD loss: -0.0508
+2025-09-04 22:30:33,820 - INFO - Boosted OOD loss: -0.0780
+2025-09-04 22:30:37,685 - INFO - Boosted OOD loss: -0.0633
+2025-09-04 22:30:39,634 - INFO - Boosted OOD loss: -0.0544
+2025-09-04 22:30:41,593 - INFO - Boosted OOD loss: -0.0865
+2025-09-04 22:30:43,550 - INFO - Boosted OOD loss: -0.0639
+2025-09-04 22:30:57,051 - INFO - Boosted OOD loss: -0.0595
+2025-09-04 22:30:59,005 - INFO - Boosted OOD loss: -0.0744
+2025-09-04 22:31:00,962 - INFO - Boosted OOD loss: -0.0584
+2025-09-04 22:31:06,755 - INFO - Boosted OOD loss: -0.0826
+2025-09-04 22:31:12,555 - INFO - Boosted OOD loss: -0.0694
+2025-09-04 22:31:16,440 - INFO - Boosted OOD loss: -0.0570
+2025-09-04 22:31:18,405 - INFO - Boosted OOD loss: -0.0775
+2025-09-04 22:31:20,360 - INFO - Boosted OOD loss: -0.0846
+2025-09-04 22:31:20,415 - INFO - Updated beta to 11.74 (exp decay)
+2025-09-04 22:31:20,496 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 22:31:20,496 - INFO - Weights updated successfully
+2025-09-04 22:31:20,497 - INFO - Advanced epoch 2 - Updated beta: 11.74
+2025-09-04 22:31:20,497 - INFO - Epoch 2 - Avg CE: 2.2919, Avg OOD: -0.0420, β: 32
+2025-09-04 22:31:20,590 - INFO - 
+Starting Epoch 3/100
+2025-09-04 22:31:20,590 - INFO - ============================================================
+2025-09-04 22:31:20,592 - INFO - 
+Updating Hopfield boosting weights at epoch 3...
+2025-09-04 22:31:20,671 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 22:31:20,671 - INFO - Weights updated successfully
+2025-09-04 22:31:26,804 - INFO - Boosted OOD loss: -0.0781
+2025-09-04 22:31:28,707 - INFO - Boosted OOD loss: -0.0765
+2025-09-04 22:31:32,523 - INFO - Boosted OOD loss: -0.0710
+2025-09-04 22:31:34,449 - INFO - Boosted OOD loss: -0.0682
+2025-09-04 22:31:40,219 - INFO - Boosted OOD loss: -0.0597
+2025-09-04 22:31:42,167 - INFO - Boosted OOD loss: -0.0754
+2025-09-04 22:31:44,105 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 22:31:46,045 - INFO - Boosted OOD loss: -0.0515
+2025-09-04 22:31:49,932 - INFO - Boosted OOD loss: -0.0579
+2025-09-04 22:31:55,757 - INFO - Boosted OOD loss: -0.0948
+2025-09-04 22:31:59,651 - INFO - Boosted OOD loss: -0.0525
+2025-09-04 22:32:03,537 - INFO - Boosted OOD loss: -0.0639
+2025-09-04 22:32:05,506 - INFO - Boosted OOD loss: -0.0509
+2025-09-04 22:32:11,335 - INFO - Boosted OOD loss: -0.0649
+2025-09-04 22:32:13,303 - INFO - Boosted OOD loss: -0.0687
+2025-09-04 22:32:15,280 - INFO - Boosted OOD loss: -0.0737
+2025-09-04 22:32:17,259 - INFO - Boosted OOD loss: -0.0565
+2025-09-04 22:32:19,228 - INFO - Boosted OOD loss: -0.0660
+2025-09-04 22:32:21,197 - INFO - Boosted OOD loss: -0.0607
+2025-09-04 22:32:28,973 - INFO - Boosted OOD loss: -0.0712
+2025-09-04 22:32:30,941 - INFO - Boosted OOD loss: -0.0946
+2025-09-04 22:32:34,855 - INFO - Boosted OOD loss: -0.0519
+2025-09-04 22:32:44,602 - INFO - Boosted OOD loss: -0.0728
+2025-09-04 22:32:50,441 - INFO - Boosted OOD loss: -0.0711
+2025-09-04 22:32:52,413 - INFO - Boosted OOD loss: -0.0542
+2025-09-04 22:33:00,198 - INFO - Boosted OOD loss: -0.0561
+2025-09-04 22:33:06,036 - INFO - Boosted OOD loss: -0.0955
+2025-09-04 22:33:08,009 - INFO - Boosted OOD loss: -0.0707
+2025-09-04 22:33:11,927 - INFO - Boosted OOD loss: -0.0826
+2025-09-04 22:33:17,779 - INFO - Boosted OOD loss: -0.0450
+2025-09-04 22:33:21,687 - INFO - Boosted OOD loss: -0.0906
+2025-09-04 22:33:21,687 - INFO - Step 950 Loss Debug:
+2025-09-04 22:33:21,689 - INFO -  CE: 2.0953
+2025-09-04 22:33:21,689 - INFO -  OOD: -0.0906
+2025-09-04 22:33:21,689 - INFO -  β: 32.00
+2025-09-04 22:33:21,690 - INFO -  ID: 30214, OOD(254): 391
+2025-09-04 22:33:27,547 - INFO - Boosted OOD loss: -0.0513
+2025-09-04 22:33:29,517 - INFO - Boosted OOD loss: -0.0710
+2025-09-04 22:33:31,498 - INFO - Boosted OOD loss: -0.0554
+2025-09-04 22:33:33,461 - INFO - Boosted OOD loss: -0.0924
+2025-09-04 22:33:35,428 - INFO - Boosted OOD loss: -0.0511
+2025-09-04 22:33:39,346 - INFO - Boosted OOD loss: -0.0524
+2025-09-04 22:33:41,319 - INFO - Boosted OOD loss: -0.0703
+2025-09-04 22:33:51,048 - INFO - Boosted OOD loss: -0.0767
+2025-09-04 22:33:53,028 - INFO - Boosted OOD loss: -0.0642
+2025-09-04 22:34:00,794 - INFO - Boosted OOD loss: -0.0746
+2025-09-04 22:34:04,696 - INFO - Boosted OOD loss: -0.0865
+2025-09-04 22:34:06,658 - INFO - Boosted OOD loss: -0.0677
+2025-09-04 22:34:12,501 - INFO - Boosted OOD loss: -0.1092
+2025-09-04 22:34:14,463 - INFO - Boosted OOD loss: -0.0696
+2025-09-04 22:34:18,364 - INFO - Boosted OOD loss: -0.0768
+2025-09-04 22:34:20,330 - INFO - Boosted OOD loss: -0.0618
+2025-09-04 22:34:22,295 - INFO - Boosted OOD loss: -0.0648
+2025-09-04 22:34:30,043 - INFO - Boosted OOD loss: -0.0786
+2025-09-04 22:34:32,004 - INFO - Boosted OOD loss: -0.0624
+2025-09-04 22:34:37,840 - INFO - Boosted OOD loss: -0.0936
+2025-09-04 22:34:45,569 - INFO - Boosted OOD loss: -0.1127
+2025-09-04 22:34:47,530 - INFO - Boosted OOD loss: -0.0792
+2025-09-04 22:34:59,089 - INFO - Boosted OOD loss: -0.0622
+2025-09-04 22:34:59,089 - INFO - Step 1000 Loss Debug:
+2025-09-04 22:34:59,090 - INFO -  CE: 2.2454
+2025-09-04 22:34:59,090 - INFO -  OOD: -0.0622
+2025-09-04 22:34:59,090 - INFO -  β: 32.00
+2025-09-04 22:34:59,090 - INFO -  ID: 26304, OOD(254): 376
+2025-09-04 22:35:01,040 - INFO - Boosted OOD loss: -0.0600
+2025-09-04 22:35:02,995 - INFO - Boosted OOD loss: -0.0611
+2025-09-04 22:35:06,877 - INFO - Boosted OOD loss: -0.0547
+2025-09-04 22:35:10,741 - INFO - Boosted OOD loss: -0.0797
+2025-09-04 22:35:14,615 - INFO - Boosted OOD loss: -0.0874
+2025-09-04 22:35:16,572 - INFO - Boosted OOD loss: -0.0909
+2025-09-04 22:35:20,444 - INFO - Boosted OOD loss: -0.0683
+2025-09-04 22:35:24,318 - INFO - Boosted OOD loss: -0.0592
+2025-09-04 22:35:26,273 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 22:35:28,224 - INFO - Boosted OOD loss: -0.0561
+2025-09-04 22:35:30,173 - INFO - Boosted OOD loss: -0.0647
+2025-09-04 22:35:32,125 - INFO - Boosted OOD loss: -0.0755
+2025-09-04 22:35:37,927 - INFO - Boosted OOD loss: -0.0771
+2025-09-04 22:35:39,885 - INFO - Boosted OOD loss: -0.0689
+2025-09-04 22:35:41,840 - INFO - Boosted OOD loss: -0.0822
+2025-09-04 22:35:47,632 - INFO - Boosted OOD loss: -0.0740
+2025-09-04 22:35:51,495 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:35:55,360 - INFO - Boosted OOD loss: -0.0978
+2025-09-04 22:36:03,070 - INFO - Boosted OOD loss: -0.0855
+2025-09-04 22:36:05,022 - INFO - Boosted OOD loss: -0.1041
+2025-09-04 22:36:08,873 - INFO - Boosted OOD loss: -0.0863
+2025-09-04 22:36:10,829 - INFO - Boosted OOD loss: -0.0940
+2025-09-04 22:36:14,694 - INFO - Boosted OOD loss: -0.0738
+2025-09-04 22:36:16,645 - INFO - Boosted OOD loss: -0.0489
+2025-09-04 22:36:18,605 - INFO - Boosted OOD loss: -0.0626
+2025-09-04 22:36:22,479 - INFO - Boosted OOD loss: -0.0707
+2025-09-04 22:36:34,016 - INFO - Boosted OOD loss: -0.0625
+2025-09-04 22:36:39,808 - INFO - Boosted OOD loss: -0.0603
+2025-09-04 22:36:45,607 - INFO - Boosted OOD loss: -0.0869
+2025-09-04 22:36:49,477 - INFO - Boosted OOD loss: -0.0799
+2025-09-04 22:36:51,432 - INFO - Boosted OOD loss: -0.0653
+2025-09-04 22:36:53,379 - INFO - Boosted OOD loss: -0.0781
+2025-09-04 22:36:55,328 - INFO - Boosted OOD loss: -0.0949
+2025-09-04 22:36:57,277 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 22:36:59,231 - INFO - Boosted OOD loss: -0.0805
+2025-09-04 22:37:01,189 - INFO - Boosted OOD loss: -0.0778
+2025-09-04 22:37:03,147 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 22:37:08,956 - INFO - Boosted OOD loss: -0.0453
+2025-09-04 22:37:10,909 - INFO - Boosted OOD loss: -0.0840
+2025-09-04 22:37:12,861 - INFO - Boosted OOD loss: -0.0817
+2025-09-04 22:37:14,813 - INFO - Boosted OOD loss: -0.0855
+2025-09-04 22:37:16,769 - INFO - Boosted OOD loss: -0.0651
+2025-09-04 22:37:24,475 - INFO - Boosted OOD loss: -0.1074
+2025-09-04 22:37:26,418 - INFO - Boosted OOD loss: -0.0815
+2025-09-04 22:37:28,365 - INFO - Boosted OOD loss: -0.0632
+2025-09-04 22:37:32,234 - INFO - Boosted OOD loss: -0.0693
+2025-09-04 22:37:34,200 - INFO - Boosted OOD loss: -0.0793
+2025-09-04 22:37:36,158 - INFO - Boosted OOD loss: -0.0451
+2025-09-04 22:37:38,111 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 22:37:41,979 - INFO - Boosted OOD loss: -0.0946
+2025-09-04 22:37:51,604 - INFO - Boosted OOD loss: -0.0602
+2025-09-04 22:37:53,547 - INFO - Boosted OOD loss: -0.0662
+2025-09-04 22:37:57,419 - INFO - Boosted OOD loss: -0.0673
+2025-09-04 22:38:01,295 - INFO - Boosted OOD loss: -0.0716
+2025-09-04 22:38:03,253 - INFO - Boosted OOD loss: -0.0857
+2025-09-04 22:38:05,207 - INFO - Boosted OOD loss: -0.0769
+2025-09-04 22:38:07,163 - INFO - Boosted OOD loss: -0.0873
+2025-09-04 22:38:12,959 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 22:38:14,887 - INFO - Boosted OOD loss: -0.0679
+2025-09-04 22:38:16,838 - INFO - Boosted OOD loss: -0.0649
+2025-09-04 22:38:20,706 - INFO - Boosted OOD loss: -0.0896
+2025-09-04 22:38:24,577 - INFO - Boosted OOD loss: -0.0625
+2025-09-04 22:38:26,525 - INFO - Boosted OOD loss: -0.0743
+2025-09-04 22:38:30,404 - INFO - Boosted OOD loss: -0.0678
+2025-09-04 22:38:32,363 - INFO - Boosted OOD loss: -0.0947
+2025-09-04 22:38:36,234 - INFO - Boosted OOD loss: -0.0672
+2025-09-04 22:38:38,185 - INFO - Boosted OOD loss: -0.0718
+2025-09-04 22:38:43,990 - INFO - Boosted OOD loss: -0.0863
+2025-09-04 22:38:45,952 - INFO - Boosted OOD loss: -0.0685
+2025-09-04 22:38:47,908 - INFO - Boosted OOD loss: -0.0866
+2025-09-04 22:38:55,602 - INFO - Boosted OOD loss: -0.0389
+2025-09-04 22:38:57,559 - INFO - Boosted OOD loss: -0.0729
+2025-09-04 22:38:59,505 - INFO - Boosted OOD loss: -0.1055
+2025-09-04 22:39:03,383 - INFO - Boosted OOD loss: -0.0465
+2025-09-04 22:39:07,256 - INFO - Boosted OOD loss: -0.0933
+2025-09-04 22:39:11,141 - INFO - Boosted OOD loss: -0.0533
+2025-09-04 22:39:16,948 - INFO - Boosted OOD loss: -0.0468
+2025-09-04 22:39:18,911 - INFO - Boosted OOD loss: -0.0688
+2025-09-04 22:39:20,863 - INFO - Boosted OOD loss: -0.0676
+2025-09-04 22:39:26,657 - INFO - Boosted OOD loss: -0.0837
+2025-09-04 22:39:28,606 - INFO - Boosted OOD loss: -0.0713
+2025-09-04 22:39:30,557 - INFO - Boosted OOD loss: -0.0805
+2025-09-04 22:39:32,505 - INFO - Boosted OOD loss: -0.0725
+2025-09-04 22:39:36,374 - INFO - Boosted OOD loss: -0.0619
+2025-09-04 22:39:38,328 - INFO - Boosted OOD loss: -0.0982
+2025-09-04 22:39:44,117 - INFO - Boosted OOD loss: -0.0613
+2025-09-04 22:39:49,922 - INFO - Boosted OOD loss: -0.0984
+2025-09-04 22:39:49,922 - INFO - Step 1150 Loss Debug:
+2025-09-04 22:39:49,923 - INFO -  CE: 1.9457
+2025-09-04 22:39:49,924 - INFO -  OOD: -0.0984
+2025-09-04 22:39:49,924 - INFO -  β: 32.00
+2025-09-04 22:39:49,924 - INFO -  ID: 31225, OOD(254): 86
+2025-09-04 22:39:51,878 - INFO - Boosted OOD loss: -0.0759
+2025-09-04 22:39:53,831 - INFO - Boosted OOD loss: -0.0675
+2025-09-04 22:39:55,790 - INFO - Boosted OOD loss: -0.0623
+2025-09-04 22:39:57,752 - INFO - Boosted OOD loss: -0.0741
+2025-09-04 22:39:59,694 - INFO - Boosted OOD loss: -0.0988
+2025-09-04 22:40:01,640 - INFO - Boosted OOD loss: -0.1039
+2025-09-04 22:40:07,435 - INFO - Boosted OOD loss: -0.0586
+2025-09-04 22:40:11,299 - INFO - Boosted OOD loss: -0.0692
+2025-09-04 22:40:15,168 - INFO - Boosted OOD loss: -0.0729
+2025-09-04 22:40:19,024 - INFO - Boosted OOD loss: -0.0498
+2025-09-04 22:40:20,974 - INFO - Boosted OOD loss: -0.0720
+2025-09-04 22:40:22,929 - INFO - Boosted OOD loss: -0.0739
+2025-09-04 22:40:24,881 - INFO - Boosted OOD loss: -0.0651
+2025-09-04 22:40:26,834 - INFO - Boosted OOD loss: -0.0675
+2025-09-04 22:40:30,696 - INFO - Boosted OOD loss: -0.0741
+2025-09-04 22:40:32,649 - INFO - Boosted OOD loss: -0.0954
+2025-09-04 22:40:36,519 - INFO - Boosted OOD loss: -0.0696
+2025-09-04 22:40:38,475 - INFO - Boosted OOD loss: -0.0678
+2025-09-04 22:40:40,436 - INFO - Boosted OOD loss: -0.0521
+2025-09-04 22:40:48,152 - INFO - Boosted OOD loss: -0.0787
+2025-09-04 22:40:50,105 - INFO - Boosted OOD loss: -0.0813
+2025-09-04 22:40:52,061 - INFO - Boosted OOD loss: -0.0570
+2025-09-04 22:40:54,007 - INFO - Boosted OOD loss: -0.0838
+2025-09-04 22:40:55,967 - INFO - Boosted OOD loss: -0.0609
+2025-09-04 22:41:01,756 - INFO - Boosted OOD loss: -0.0808
+2025-09-04 22:41:05,629 - INFO - Boosted OOD loss: -0.0552
+2025-09-04 22:41:07,595 - INFO - Boosted OOD loss: -0.0429
+2025-09-04 22:41:09,555 - INFO - Boosted OOD loss: -0.0670
+2025-09-04 22:41:11,512 - INFO - Boosted OOD loss: -0.0710
+2025-09-04 22:41:21,143 - INFO - Boosted OOD loss: -0.0627
+2025-09-04 22:41:23,099 - INFO - Boosted OOD loss: -0.0845
+2025-09-04 22:41:26,975 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 22:41:30,826 - INFO - Boosted OOD loss: -0.0767
+2025-09-04 22:41:36,645 - INFO - Boosted OOD loss: -0.0826
+2025-09-04 22:41:38,601 - INFO - Boosted OOD loss: -0.0696
+2025-09-04 22:41:44,411 - INFO - Boosted OOD loss: -0.0686
+2025-09-04 22:41:46,372 - INFO - Boosted OOD loss: -0.0906
+2025-09-04 22:41:48,331 - INFO - Boosted OOD loss: -0.0817
+2025-09-04 22:41:50,276 - INFO - Boosted OOD loss: -0.0855
+2025-09-04 22:41:52,224 - INFO - Boosted OOD loss: -0.0615
+2025-09-04 22:41:56,094 - INFO - Boosted OOD loss: -0.0606
+2025-09-04 22:41:58,052 - INFO - Boosted OOD loss: -0.0615
+2025-09-04 22:42:01,936 - INFO - Boosted OOD loss: -0.0763
+2025-09-04 22:42:03,898 - INFO - Boosted OOD loss: -0.0658
+2025-09-04 22:42:13,526 - INFO - Boosted OOD loss: -0.0737
+2025-09-04 22:42:17,412 - INFO - Boosted OOD loss: -0.0870
+2025-09-04 22:42:23,208 - INFO - Boosted OOD loss: -0.0939
+2025-09-04 22:42:27,081 - INFO - Boosted OOD loss: -0.0620
+2025-09-04 22:42:29,040 - INFO - Boosted OOD loss: -0.0384
+2025-09-04 22:42:32,921 - INFO - Boosted OOD loss: -0.0722
+2025-09-04 22:42:38,729 - INFO - Boosted OOD loss: -0.0725
+2025-09-04 22:42:42,599 - INFO - Boosted OOD loss: -0.0363
+2025-09-04 22:42:44,551 - INFO - Boosted OOD loss: -0.0764
+2025-09-04 22:42:48,437 - INFO - Boosted OOD loss: -0.0558
+2025-09-04 22:42:52,321 - INFO - Boosted OOD loss: -0.0458
+2025-09-04 22:42:54,286 - INFO - Boosted OOD loss: -0.0815
+2025-09-04 22:43:02,007 - INFO - Boosted OOD loss: -0.0718
+2025-09-04 22:43:03,958 - INFO - Boosted OOD loss: -0.0563
+2025-09-04 22:43:03,959 - INFO - Step 1250 Loss Debug:
+2025-09-04 22:43:03,960 - INFO -  CE: 2.0049
+2025-09-04 22:43:03,961 - INFO -  OOD: -0.0563
+2025-09-04 22:43:03,961 - INFO -  β: 32.00
+2025-09-04 22:43:03,961 - INFO -  ID: 25409, OOD(254): 439
+2025-09-04 22:43:05,918 - INFO - Boosted OOD loss: -0.0728
+2025-09-04 22:43:11,735 - INFO - Boosted OOD loss: -0.0766
+2025-09-04 22:43:13,687 - INFO - Boosted OOD loss: -0.0734
+2025-09-04 22:43:17,569 - INFO - Boosted OOD loss: -0.0986
+2025-09-04 22:43:21,449 - INFO - Boosted OOD loss: -0.0829
+2025-09-04 22:43:23,405 - INFO - Boosted OOD loss: -0.0737
+2025-09-04 22:43:25,355 - INFO - Boosted OOD loss: -0.0779
+2025-09-04 22:43:27,326 - INFO - Boosted OOD loss: -0.0553
+2025-09-04 22:43:31,213 - INFO - Boosted OOD loss: -0.0793
+2025-09-04 22:43:33,172 - INFO - Boosted OOD loss: -0.0781
+2025-09-04 22:43:35,125 - INFO - Boosted OOD loss: -0.0747
+2025-09-04 22:43:39,007 - INFO - Boosted OOD loss: -0.0701
+2025-09-04 22:43:40,973 - INFO - Boosted OOD loss: -0.0525
+2025-09-04 22:43:42,927 - INFO - Boosted OOD loss: -0.0761
+2025-09-04 22:43:44,893 - INFO - Boosted OOD loss: -0.0796
+2025-09-04 22:43:46,846 - INFO - Boosted OOD loss: -0.0818
+2025-09-04 22:43:54,591 - INFO - Boosted OOD loss: -0.0887
+2025-09-04 22:43:56,555 - INFO - Boosted OOD loss: -0.1145
+2025-09-04 22:43:58,519 - INFO - Boosted OOD loss: -0.0554
+2025-09-04 22:44:00,472 - INFO - Boosted OOD loss: -0.0806
+2025-09-04 22:44:02,423 - INFO - Boosted OOD loss: -0.0869
+2025-09-04 22:44:04,378 - INFO - Boosted OOD loss: -0.0653
+2025-09-04 22:44:06,329 - INFO - Boosted OOD loss: -0.1064
+2025-09-04 22:44:08,285 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:44:12,166 - INFO - Boosted OOD loss: -0.0720
+2025-09-04 22:44:14,124 - INFO - Boosted OOD loss: -0.0688
+2025-09-04 22:44:16,091 - INFO - Boosted OOD loss: -0.0877
+2025-09-04 22:44:21,889 - INFO - Boosted OOD loss: -0.0676
+2025-09-04 22:44:23,845 - INFO - Boosted OOD loss: -0.0513
+2025-09-04 22:44:25,803 - INFO - Boosted OOD loss: -0.0510
+2025-09-04 22:44:27,761 - INFO - Boosted OOD loss: -0.0579
+2025-09-04 22:44:39,304 - INFO - Boosted OOD loss: -0.0642
+2025-09-04 22:44:41,252 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 22:44:43,179 - INFO - Boosted OOD loss: -0.0775
+2025-09-04 22:44:45,140 - INFO - Boosted OOD loss: -0.0689
+2025-09-04 22:44:47,093 - INFO - Boosted OOD loss: -0.0758
+2025-09-04 22:44:50,974 - INFO - Boosted OOD loss: -0.0414
+2025-09-04 22:44:52,936 - INFO - Boosted OOD loss: -0.0747
+2025-09-04 22:44:56,819 - INFO - Boosted OOD loss: -0.0706
+2025-09-04 22:45:02,630 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:45:04,583 - INFO - Boosted OOD loss: -0.0690
+2025-09-04 22:45:06,534 - INFO - Boosted OOD loss: -0.0632
+2025-09-04 22:45:08,488 - INFO - Boosted OOD loss: -0.0550
+2025-09-04 22:45:10,446 - INFO - Boosted OOD loss: -0.0519
+2025-09-04 22:45:12,403 - INFO - Boosted OOD loss: -0.0583
+2025-09-04 22:45:14,360 - INFO - Boosted OOD loss: -0.0818
+2025-09-04 22:45:18,230 - INFO - Boosted OOD loss: -0.0568
+2025-09-04 22:45:20,184 - INFO - Boosted OOD loss: -0.0660
+2025-09-04 22:45:25,976 - INFO - Boosted OOD loss: -0.0795
+2025-09-04 22:45:29,853 - INFO - Boosted OOD loss: -0.0564
+2025-09-04 22:45:31,808 - INFO - Boosted OOD loss: -0.0702
+2025-09-04 22:45:33,760 - INFO - Boosted OOD loss: -0.0863
+2025-09-04 22:45:35,712 - INFO - Boosted OOD loss: -0.0735
+2025-09-04 22:45:39,592 - INFO - Boosted OOD loss: -0.0544
+2025-09-04 22:45:45,391 - INFO - Boosted OOD loss: -0.0650
+2025-09-04 22:45:47,349 - INFO - Boosted OOD loss: -0.0816
+2025-09-04 22:45:47,407 - INFO - Updated beta to 11.61 (exp decay)
+2025-09-04 22:45:47,487 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 22:45:47,488 - INFO - Weights updated successfully
+2025-09-04 22:45:47,489 - INFO - Advanced epoch 3 - Updated beta: 11.61
+2025-09-04 22:45:47,489 - INFO - Epoch 3 - Avg CE: 2.1196, Avg OOD: -0.0405, β: 32
+2025-09-04 22:45:47,581 - INFO - 
+Starting Epoch 4/100
+2025-09-04 22:45:47,581 - INFO - ============================================================
+2025-09-04 22:45:47,584 - INFO - 
+Updating Hopfield boosting weights at epoch 4...
+2025-09-04 22:45:47,663 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 22:45:47,664 - INFO - Weights updated successfully
+2025-09-04 22:45:59,102 - INFO - Boosted OOD loss: -0.0774
+2025-09-04 22:46:01,039 - INFO - Boosted OOD loss: -0.0799
+2025-09-04 22:46:10,650 - INFO - Boosted OOD loss: -0.0650
+2025-09-04 22:46:12,614 - INFO - Boosted OOD loss: -0.1001
+2025-09-04 22:46:14,575 - INFO - Boosted OOD loss: -0.0595
+2025-09-04 22:46:22,307 - INFO - Boosted OOD loss: -0.0975
+2025-09-04 22:46:24,269 - INFO - Boosted OOD loss: -0.0874
+2025-09-04 22:46:26,233 - INFO - Boosted OOD loss: -0.0697
+2025-09-04 22:46:28,200 - INFO - Boosted OOD loss: -0.0501
+2025-09-04 22:46:30,166 - INFO - Boosted OOD loss: -0.0614
+2025-09-04 22:46:32,129 - INFO - Boosted OOD loss: -0.0928
+2025-09-04 22:46:34,093 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:46:36,059 - INFO - Boosted OOD loss: -0.0628
+2025-09-04 22:46:38,016 - INFO - Boosted OOD loss: -0.0740
+2025-09-04 22:46:39,981 - INFO - Boosted OOD loss: -0.0839
+2025-09-04 22:46:41,941 - INFO - Boosted OOD loss: -0.0795
+2025-09-04 22:46:45,824 - INFO - Boosted OOD loss: -0.0792
+2025-09-04 22:46:47,785 - INFO - Boosted OOD loss: -0.0704
+2025-09-04 22:46:53,594 - INFO - Boosted OOD loss: -0.0709
+2025-09-04 22:46:55,552 - INFO - Boosted OOD loss: -0.0780
+2025-09-04 22:46:57,511 - INFO - Boosted OOD loss: -0.0696
+2025-09-04 22:46:59,480 - INFO - Boosted OOD loss: -0.0539
+2025-09-04 22:47:01,445 - INFO - Boosted OOD loss: -0.0620
+2025-09-04 22:47:05,348 - INFO - Boosted OOD loss: -0.0652
+2025-09-04 22:47:07,309 - INFO - Boosted OOD loss: -0.0592
+2025-09-04 22:47:11,205 - INFO - Boosted OOD loss: -0.0749
+2025-09-04 22:47:17,030 - INFO - Boosted OOD loss: -0.0630
+2025-09-04 22:47:18,987 - INFO - Boosted OOD loss: -0.0760
+2025-09-04 22:47:26,751 - INFO - Boosted OOD loss: -0.0554
+2025-09-04 22:47:28,720 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 22:47:30,676 - INFO - Boosted OOD loss: -0.0575
+2025-09-04 22:47:32,642 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:47:36,542 - INFO - Boosted OOD loss: -0.0607
+2025-09-04 22:47:44,290 - INFO - Boosted OOD loss: -0.0623
+2025-09-04 22:47:48,190 - INFO - Boosted OOD loss: -0.0864
+2025-09-04 22:47:57,880 - INFO - Boosted OOD loss: -0.0646
+2025-09-04 22:47:57,880 - INFO - Step 1400 Loss Debug:
+2025-09-04 22:47:57,881 - INFO -  CE: 1.8095
+2025-09-04 22:47:57,882 - INFO -  OOD: -0.0646
+2025-09-04 22:47:57,882 - INFO -  β: 32.00
+2025-09-04 22:47:57,882 - INFO -  ID: 28446, OOD(254): 225
+2025-09-04 22:48:01,779 - INFO - Boosted OOD loss: -0.0673
+2025-09-04 22:48:03,745 - INFO - Boosted OOD loss: -0.0738
+2025-09-04 22:48:05,700 - INFO - Boosted OOD loss: -0.0668
+2025-09-04 22:48:09,580 - INFO - Boosted OOD loss: -0.1017
+2025-09-04 22:48:11,546 - INFO - Boosted OOD loss: -0.0881
+2025-09-04 22:48:13,503 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:48:17,392 - INFO - Boosted OOD loss: -0.0556
+2025-09-04 22:48:19,353 - INFO - Boosted OOD loss: -0.0902
+2025-09-04 22:48:21,312 - INFO - Boosted OOD loss: -0.0776
+2025-09-04 22:48:25,197 - INFO - Boosted OOD loss: -0.0680
+2025-09-04 22:48:27,147 - INFO - Boosted OOD loss: -0.0908
+2025-09-04 22:48:29,104 - INFO - Boosted OOD loss: -0.0902
+2025-09-04 22:48:31,063 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:48:38,790 - INFO - Boosted OOD loss: -0.0931
+2025-09-04 22:48:44,575 - INFO - Boosted OOD loss: -0.0935
+2025-09-04 22:48:50,383 - INFO - Boosted OOD loss: -0.0716
+2025-09-04 22:48:52,335 - INFO - Boosted OOD loss: -0.0869
+2025-09-04 22:48:54,292 - INFO - Boosted OOD loss: -0.0846
+2025-09-04 22:48:56,251 - INFO - Boosted OOD loss: -0.0652
+2025-09-04 22:49:00,131 - INFO - Boosted OOD loss: -0.0502
+2025-09-04 22:49:04,022 - INFO - Boosted OOD loss: -0.0706
+2025-09-04 22:49:05,970 - INFO - Boosted OOD loss: -0.0869
+2025-09-04 22:49:07,921 - INFO - Boosted OOD loss: -0.0726
+2025-09-04 22:49:09,883 - INFO - Boosted OOD loss: -0.0768
+2025-09-04 22:49:13,771 - INFO - Boosted OOD loss: -0.0620
+2025-09-04 22:49:15,729 - INFO - Boosted OOD loss: -0.0636
+2025-09-04 22:49:17,686 - INFO - Boosted OOD loss: -0.0907
+2025-09-04 22:49:21,563 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 22:49:23,515 - INFO - Boosted OOD loss: -0.0610
+2025-09-04 22:49:33,151 - INFO - Boosted OOD loss: -0.0900
+2025-09-04 22:49:37,019 - INFO - Boosted OOD loss: -0.0874
+2025-09-04 22:49:44,749 - INFO - Boosted OOD loss: -0.0975
+2025-09-04 22:49:46,699 - INFO - Boosted OOD loss: -0.0939
+2025-09-04 22:49:48,654 - INFO - Boosted OOD loss: -0.0595
+2025-09-04 22:49:50,615 - INFO - Boosted OOD loss: -0.0881
+2025-09-04 22:49:54,490 - INFO - Boosted OOD loss: -0.0817
+2025-09-04 22:49:56,446 - INFO - Boosted OOD loss: -0.0839
+2025-09-04 22:50:09,938 - INFO - Boosted OOD loss: -0.0689
+2025-09-04 22:50:11,888 - INFO - Boosted OOD loss: -0.0795
+2025-09-04 22:50:21,531 - INFO - Boosted OOD loss: -0.0912
+2025-09-04 22:50:31,156 - INFO - Boosted OOD loss: -0.0724
+2025-09-04 22:50:33,115 - INFO - Boosted OOD loss: -0.0489
+2025-09-04 22:50:35,073 - INFO - Boosted OOD loss: -0.0595
+2025-09-04 22:50:37,019 - INFO - Boosted OOD loss: -0.0762
+2025-09-04 22:50:38,972 - INFO - Boosted OOD loss: -0.0610
+2025-09-04 22:50:40,919 - INFO - Boosted OOD loss: -0.0605
+2025-09-04 22:50:44,805 - INFO - Boosted OOD loss: -0.0605
+2025-09-04 22:50:46,762 - INFO - Boosted OOD loss: -0.0595
+2025-09-04 22:50:50,630 - INFO - Boosted OOD loss: -0.0870
+2025-09-04 22:50:52,585 - INFO - Boosted OOD loss: -0.0826
+2025-09-04 22:50:58,393 - INFO - Boosted OOD loss: -0.0638
+2025-09-04 22:51:00,348 - INFO - Boosted OOD loss: -0.0768
+2025-09-04 22:51:02,311 - INFO - Boosted OOD loss: -0.0814
+2025-09-04 22:51:04,257 - INFO - Boosted OOD loss: -0.0904
+2025-09-04 22:51:06,214 - INFO - Boosted OOD loss: -0.0740
+2025-09-04 22:51:08,164 - INFO - Boosted OOD loss: -0.0595
+2025-09-04 22:51:10,120 - INFO - Boosted OOD loss: -0.0914
+2025-09-04 22:51:12,071 - INFO - Boosted OOD loss: -0.0767
+2025-09-04 22:51:12,071 - INFO - Step 1500 Loss Debug:
+2025-09-04 22:51:12,073 - INFO -  CE: 2.0108
+2025-09-04 22:51:12,073 - INFO -  OOD: -0.0767
+2025-09-04 22:51:12,074 - INFO -  β: 32.00
+2025-09-04 22:51:12,074 - INFO -  ID: 27003, OOD(254): 336
+2025-09-04 22:51:17,851 - INFO - Boosted OOD loss: -0.0619
+2025-09-04 22:51:23,642 - INFO - Boosted OOD loss: -0.0906
+2025-09-04 22:51:27,510 - INFO - Boosted OOD loss: -0.0804
+2025-09-04 22:51:29,459 - INFO - Boosted OOD loss: -0.0692
+2025-09-04 22:51:37,175 - INFO - Boosted OOD loss: -0.0880
+2025-09-04 22:51:39,123 - INFO - Boosted OOD loss: -0.0616
+2025-09-04 22:51:41,071 - INFO - Boosted OOD loss: -0.0567
+2025-09-04 22:51:43,026 - INFO - Boosted OOD loss: -0.0800
+2025-09-04 22:51:44,980 - INFO - Boosted OOD loss: -0.0808
+2025-09-04 22:51:46,937 - INFO - Boosted OOD loss: -0.0733
+2025-09-04 22:51:48,882 - INFO - Boosted OOD loss: -0.0704
+2025-09-04 22:51:52,757 - INFO - Boosted OOD loss: -0.0916
+2025-09-04 22:51:54,707 - INFO - Boosted OOD loss: -0.0771
+2025-09-04 22:51:58,583 - INFO - Boosted OOD loss: -0.0627
+2025-09-04 22:52:02,462 - INFO - Boosted OOD loss: -0.0642
+2025-09-04 22:52:04,412 - INFO - Boosted OOD loss: -0.0945
+2025-09-04 22:52:06,364 - INFO - Boosted OOD loss: -0.0480
+2025-09-04 22:52:10,242 - INFO - Boosted OOD loss: -0.0716
+2025-09-04 22:52:12,192 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 22:52:16,064 - INFO - Boosted OOD loss: -0.0949
+2025-09-04 22:52:19,935 - INFO - Boosted OOD loss: -0.0713
+2025-09-04 22:52:21,884 - INFO - Boosted OOD loss: -0.0722
+2025-09-04 22:52:25,760 - INFO - Boosted OOD loss: -0.0804
+2025-09-04 22:52:35,395 - INFO - Boosted OOD loss: -0.0547
+2025-09-04 22:52:37,354 - INFO - Boosted OOD loss: -0.0845
+2025-09-04 22:52:39,300 - INFO - Boosted OOD loss: -0.0580
+2025-09-04 22:52:43,180 - INFO - Boosted OOD loss: -0.0914
+2025-09-04 22:52:47,055 - INFO - Boosted OOD loss: -0.0860
+2025-09-04 22:52:49,018 - INFO - Boosted OOD loss: -0.0717
+2025-09-04 22:52:49,018 - INFO - Step 1550 Loss Debug:
+2025-09-04 22:52:49,019 - INFO -  CE: 2.0341
+2025-09-04 22:52:49,020 - INFO -  OOD: -0.0717
+2025-09-04 22:52:49,020 - INFO -  β: 32.00
+2025-09-04 22:52:49,020 - INFO -  ID: 24593, OOD(254): 804
+2025-09-04 22:52:52,887 - INFO - Boosted OOD loss: -0.0723
+2025-09-04 22:52:54,840 - INFO - Boosted OOD loss: -0.0580
+2025-09-04 22:52:56,796 - INFO - Boosted OOD loss: -0.0685
+2025-09-04 22:53:00,665 - INFO - Boosted OOD loss: -0.0679
+2025-09-04 22:53:02,614 - INFO - Boosted OOD loss: -0.0900
+2025-09-04 22:53:04,576 - INFO - Boosted OOD loss: -0.0738
+2025-09-04 22:53:06,531 - INFO - Boosted OOD loss: -0.0594
+2025-09-04 22:53:08,486 - INFO - Boosted OOD loss: -0.0650
+2025-09-04 22:53:12,370 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:53:14,317 - INFO - Boosted OOD loss: -0.0824
+2025-09-04 22:53:18,206 - INFO - Boosted OOD loss: -0.0782
+2025-09-04 22:53:22,087 - INFO - Boosted OOD loss: -0.0760
+2025-09-04 22:53:24,052 - INFO - Boosted OOD loss: -0.0679
+2025-09-04 22:53:29,852 - INFO - Boosted OOD loss: -0.1017
+2025-09-04 22:53:31,814 - INFO - Boosted OOD loss: -0.0808
+2025-09-04 22:53:35,693 - INFO - Boosted OOD loss: -0.0650
+2025-09-04 22:53:41,487 - INFO - Boosted OOD loss: -0.0551
+2025-09-04 22:53:47,276 - INFO - Boosted OOD loss: -0.0796
+2025-09-04 22:53:49,237 - INFO - Boosted OOD loss: -0.0740
+2025-09-04 22:53:56,963 - INFO - Boosted OOD loss: -0.0592
+2025-09-04 22:54:00,831 - INFO - Boosted OOD loss: -0.0801
+2025-09-04 22:54:06,611 - INFO - Boosted OOD loss: -0.0787
+2025-09-04 22:54:08,570 - INFO - Boosted OOD loss: -0.0827
+2025-09-04 22:54:10,531 - INFO - Boosted OOD loss: -0.0461
+2025-09-04 22:54:14,403 - INFO - Boosted OOD loss: -0.0605
+2025-09-04 22:54:16,357 - INFO - Boosted OOD loss: -0.0780
+2025-09-04 22:54:18,316 - INFO - Boosted OOD loss: -0.0826
+2025-09-04 22:54:22,198 - INFO - Boosted OOD loss: -0.0777
+2025-09-04 22:54:24,147 - INFO - Boosted OOD loss: -0.0760
+2025-09-04 22:54:26,098 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 22:54:28,030 - INFO - Boosted OOD loss: -0.0750
+2025-09-04 22:54:31,916 - INFO - Boosted OOD loss: -0.0668
+2025-09-04 22:54:33,872 - INFO - Boosted OOD loss: -0.0803
+2025-09-04 22:54:41,594 - INFO - Boosted OOD loss: -0.0654
+2025-09-04 22:54:43,553 - INFO - Boosted OOD loss: -0.0823
+2025-09-04 22:54:47,423 - INFO - Boosted OOD loss: -0.0736
+2025-09-04 22:54:51,294 - INFO - Boosted OOD loss: -0.0819
+2025-09-04 22:54:55,162 - INFO - Boosted OOD loss: -0.0553
+2025-09-04 22:54:57,114 - INFO - Boosted OOD loss: -0.0885
+2025-09-04 22:55:02,901 - INFO - Boosted OOD loss: -0.0728
+2025-09-04 22:55:08,703 - INFO - Boosted OOD loss: -0.0895
+2025-09-04 22:55:12,571 - INFO - Boosted OOD loss: -0.0634
+2025-09-04 22:55:18,366 - INFO - Boosted OOD loss: -0.0559
+2025-09-04 22:55:26,076 - INFO - Boosted OOD loss: -0.0648
+2025-09-04 22:55:28,028 - INFO - Boosted OOD loss: -0.0971
+2025-09-04 22:55:29,974 - INFO - Boosted OOD loss: -0.0865
+2025-09-04 22:55:31,922 - INFO - Boosted OOD loss: -0.0576
+2025-09-04 22:55:35,799 - INFO - Boosted OOD loss: -0.0450
+2025-09-04 22:55:37,757 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:55:41,643 - INFO - Boosted OOD loss: -0.0863
+2025-09-04 22:55:43,601 - INFO - Boosted OOD loss: -0.0733
+2025-09-04 22:55:45,567 - INFO - Boosted OOD loss: -0.0799
+2025-09-04 22:55:47,506 - INFO - Boosted OOD loss: -0.0673
+2025-09-04 22:55:49,461 - INFO - Boosted OOD loss: -0.0583
+2025-09-04 22:56:01,019 - INFO - Boosted OOD loss: -0.0504
+2025-09-04 22:56:02,966 - INFO - Boosted OOD loss: -0.1056
+2025-09-04 22:56:02,966 - INFO - Step 1650 Loss Debug:
+2025-09-04 22:56:02,966 - INFO -  CE: 2.0611
+2025-09-04 22:56:02,966 - INFO -  OOD: -0.1056
+2025-09-04 22:56:02,966 - INFO -  β: 32.00
+2025-09-04 22:56:02,966 - INFO -  ID: 27360, OOD(254): 45
+2025-09-04 22:56:04,910 - INFO - Boosted OOD loss: -0.0870
+2025-09-04 22:56:06,867 - INFO - Boosted OOD loss: -0.0591
+2025-09-04 22:56:10,735 - INFO - Boosted OOD loss: -0.0976
+2025-09-04 22:56:12,685 - INFO - Boosted OOD loss: -0.0688
+2025-09-04 22:56:14,641 - INFO - Boosted OOD loss: -0.1159
+2025-09-04 22:56:18,513 - INFO - Boosted OOD loss: -0.0716
+2025-09-04 22:56:20,473 - INFO - Boosted OOD loss: -0.0786
+2025-09-04 22:56:22,433 - INFO - Boosted OOD loss: -0.0841
+2025-09-04 22:56:26,307 - INFO - Boosted OOD loss: -0.0783
+2025-09-04 22:56:30,182 - INFO - Boosted OOD loss: -0.0862
+2025-09-04 22:56:32,139 - INFO - Boosted OOD loss: -0.0786
+2025-09-04 22:56:34,104 - INFO - Boosted OOD loss: -0.0608
+2025-09-04 22:56:37,976 - INFO - Boosted OOD loss: -0.0969
+2025-09-04 22:56:39,932 - INFO - Boosted OOD loss: -0.0535
+2025-09-04 22:56:41,894 - INFO - Boosted OOD loss: -0.0927
+2025-09-04 22:56:45,778 - INFO - Boosted OOD loss: -0.0567
+2025-09-04 22:56:49,658 - INFO - Boosted OOD loss: -0.0559
+2025-09-04 22:56:53,535 - INFO - Boosted OOD loss: -0.0730
+2025-09-04 22:56:55,481 - INFO - Boosted OOD loss: -0.1009
+2025-09-04 22:56:57,437 - INFO - Boosted OOD loss: -0.0792
+2025-09-04 22:57:01,321 - INFO - Boosted OOD loss: -0.0918
+2025-09-04 22:57:03,273 - INFO - Boosted OOD loss: -0.0732
+2025-09-04 22:57:07,157 - INFO - Boosted OOD loss: -0.0949
+2025-09-04 22:57:09,112 - INFO - Boosted OOD loss: -0.0625
+2025-09-04 22:57:11,056 - INFO - Boosted OOD loss: -0.0565
+2025-09-04 22:57:13,019 - INFO - Boosted OOD loss: -0.0655
+2025-09-04 22:57:14,975 - INFO - Boosted OOD loss: -0.0674
+2025-09-04 22:57:16,934 - INFO - Boosted OOD loss: -0.0693
+2025-09-04 22:57:18,885 - INFO - Boosted OOD loss: -0.0697
+2025-09-04 22:57:22,757 - INFO - Boosted OOD loss: -0.0566
+2025-09-04 22:57:26,638 - INFO - Boosted OOD loss: -0.0650
+2025-09-04 22:57:28,599 - INFO - Boosted OOD loss: -0.0830
+2025-09-04 22:57:30,551 - INFO - Boosted OOD loss: -0.0586
+2025-09-04 22:57:32,505 - INFO - Boosted OOD loss: -0.0723
+2025-09-04 22:57:34,453 - INFO - Boosted OOD loss: -0.0822
+2025-09-04 22:57:38,328 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 22:57:40,274 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 22:57:42,194 - INFO - Boosted OOD loss: -0.0767
+2025-09-04 22:57:44,148 - INFO - Boosted OOD loss: -0.0878
+2025-09-04 22:57:51,854 - INFO - Boosted OOD loss: -0.0737
+2025-09-04 22:57:57,665 - INFO - Boosted OOD loss: -0.0851
+2025-09-04 22:57:59,618 - INFO - Boosted OOD loss: -0.0858
+2025-09-04 22:58:01,572 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 22:58:05,437 - INFO - Boosted OOD loss: -0.0794
+2025-09-04 22:58:09,315 - INFO - Boosted OOD loss: -0.0622
+2025-09-04 22:58:11,264 - INFO - Boosted OOD loss: -0.0582
+2025-09-04 22:58:15,145 - INFO - Boosted OOD loss: -0.0661
+2025-09-04 22:58:20,929 - INFO - Boosted OOD loss: -0.0563
+2025-09-04 22:58:22,882 - INFO - Boosted OOD loss: -0.0950
+2025-09-04 22:58:26,759 - INFO - Boosted OOD loss: -0.0915
+2025-09-04 22:58:28,708 - INFO - Boosted OOD loss: -0.0754
+2025-09-04 22:58:30,664 - INFO - Boosted OOD loss: -0.0740
+2025-09-04 22:58:34,537 - INFO - Boosted OOD loss: -0.0565
+2025-09-04 22:58:36,494 - INFO - Boosted OOD loss: -0.0695
+2025-09-04 22:58:38,453 - INFO - Boosted OOD loss: -0.0980
+2025-09-04 22:58:42,328 - INFO - Boosted OOD loss: -0.0730
+2025-09-04 22:58:44,270 - INFO - Boosted OOD loss: -0.0838
+2025-09-04 22:58:46,214 - INFO - Boosted OOD loss: -0.0741
+2025-09-04 22:58:48,168 - INFO - Boosted OOD loss: -0.0494
+2025-09-04 22:58:50,121 - INFO - Boosted OOD loss: -0.1100
+2025-09-04 22:58:52,066 - INFO - Boosted OOD loss: -0.0940
+2025-09-04 22:58:54,019 - INFO - Boosted OOD loss: -0.0982
+2025-09-04 22:58:55,961 - INFO - Boosted OOD loss: -0.0645
+2025-09-04 22:58:57,912 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 22:59:01,784 - INFO - Boosted OOD loss: -0.0657
+2025-09-04 22:59:05,661 - INFO - Boosted OOD loss: -0.0652
+2025-09-04 22:59:07,607 - INFO - Boosted OOD loss: -0.0854
+2025-09-04 22:59:11,473 - INFO - Boosted OOD loss: -0.0846
+2025-09-04 22:59:17,270 - INFO - Boosted OOD loss: -0.0551
+2025-09-04 22:59:17,270 - INFO - Step 1750 Loss Debug:
+2025-09-04 22:59:17,271 - INFO -  CE: 2.0123
+2025-09-04 22:59:17,272 - INFO -  OOD: -0.0551
+2025-09-04 22:59:17,272 - INFO -  β: 32.00
+2025-09-04 22:59:17,272 - INFO -  ID: 29212, OOD(254): 286
+2025-09-04 22:59:19,220 - INFO - Boosted OOD loss: -0.0876
+2025-09-04 22:59:23,091 - INFO - Boosted OOD loss: -0.0884
+2025-09-04 22:59:25,043 - INFO - Boosted OOD loss: -0.0846
+2025-09-04 22:59:28,910 - INFO - Boosted OOD loss: -0.0884
+2025-09-04 22:59:32,785 - INFO - Boosted OOD loss: -0.0749
+2025-09-04 22:59:34,746 - INFO - Boosted OOD loss: -0.0900
+2025-09-04 22:59:38,612 - INFO - Boosted OOD loss: -0.0640
+2025-09-04 22:59:40,565 - INFO - Boosted OOD loss: -0.0750
+2025-09-04 22:59:42,523 - INFO - Boosted OOD loss: -0.0775
+2025-09-04 22:59:44,472 - INFO - Boosted OOD loss: -0.0520
+2025-09-04 22:59:50,267 - INFO - Boosted OOD loss: -0.0768
+2025-09-04 22:59:57,986 - INFO - Boosted OOD loss: -0.0840
+2025-09-04 22:59:59,941 - INFO - Boosted OOD loss: -0.0598
+2025-09-04 23:00:01,893 - INFO - Boosted OOD loss: -0.0609
+2025-09-04 23:00:03,844 - INFO - Boosted OOD loss: -0.0669
+2025-09-04 23:00:05,796 - INFO - Boosted OOD loss: -0.0655
+2025-09-04 23:00:07,752 - INFO - Boosted OOD loss: -0.0754
+2025-09-04 23:00:11,626 - INFO - Boosted OOD loss: -0.0721
+2025-09-04 23:00:13,577 - INFO - Boosted OOD loss: -0.0929
+2025-09-04 23:00:13,634 - INFO - Updated beta to 11.48 (exp decay)
+2025-09-04 23:00:13,714 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 23:00:13,715 - INFO - Weights updated successfully
+2025-09-04 23:00:13,715 - INFO - Advanced epoch 4 - Updated beta: 11.48
+2025-09-04 23:00:13,716 - INFO - Epoch 4 - Avg CE: 2.0246, Avg OOD: -0.0442, β: 32
+2025-09-04 23:00:13,809 - INFO - 
+Starting Epoch 5/100
+2025-09-04 23:00:13,809 - INFO - ============================================================
+2025-09-04 23:00:13,811 - INFO - 
+Updating Hopfield boosting weights at epoch 5...
+2025-09-04 23:00:13,891 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 23:00:13,891 - INFO - Weights updated successfully
+2025-09-04 23:00:19,740 - INFO - Boosted OOD loss: -0.0903
+2025-09-04 23:00:21,643 - INFO - Boosted OOD loss: -0.0973
+2025-09-04 23:00:23,553 - INFO - Boosted OOD loss: -0.0608
+2025-09-04 23:00:31,184 - INFO - Boosted OOD loss: -0.0656
+2025-09-04 23:00:38,886 - INFO - Boosted OOD loss: -0.0575
+2025-09-04 23:00:40,833 - INFO - Boosted OOD loss: -0.0801
+2025-09-04 23:00:44,707 - INFO - Boosted OOD loss: -0.1099
+2025-09-04 23:00:46,672 - INFO - Boosted OOD loss: -0.0765
+2025-09-04 23:00:54,416 - INFO - Boosted OOD loss: -0.0982
+2025-09-04 23:00:56,370 - INFO - Boosted OOD loss: -0.0794
+2025-09-04 23:00:56,370 - INFO - Step 1800 Loss Debug:
+2025-09-04 23:00:56,371 - INFO -  CE: 2.0334
+2025-09-04 23:00:56,372 - INFO -  OOD: -0.0794
+2025-09-04 23:00:56,372 - INFO -  β: 32.00
+2025-09-04 23:00:56,372 - INFO -  ID: 28527, OOD(254): 16
+2025-09-04 23:01:00,253 - INFO - Boosted OOD loss: -0.0837
+2025-09-04 23:01:04,141 - INFO - Boosted OOD loss: -0.0778
+2025-09-04 23:01:08,033 - INFO - Boosted OOD loss: -0.0996
+2025-09-04 23:01:09,988 - INFO - Boosted OOD loss: -0.0883
+2025-09-04 23:01:11,955 - INFO - Boosted OOD loss: -0.0762
+2025-09-04 23:01:13,917 - INFO - Boosted OOD loss: -0.1107
+2025-09-04 23:01:17,807 - INFO - Boosted OOD loss: -0.0898
+2025-09-04 23:01:19,777 - INFO - Boosted OOD loss: -0.0685
+2025-09-04 23:01:21,740 - INFO - Boosted OOD loss: -0.0804
+2025-09-04 23:01:25,630 - INFO - Boosted OOD loss: -0.0534
+2025-09-04 23:01:27,607 - INFO - Boosted OOD loss: -0.0461
+2025-09-04 23:01:33,451 - INFO - Boosted OOD loss: -0.0983
+2025-09-04 23:01:35,419 - INFO - Boosted OOD loss: -0.0644
+2025-09-04 23:01:39,326 - INFO - Boosted OOD loss: -0.0512
+2025-09-04 23:01:41,309 - INFO - Boosted OOD loss: -0.0876
+2025-09-04 23:01:43,278 - INFO - Boosted OOD loss: -0.0663
+2025-09-04 23:01:47,190 - INFO - Boosted OOD loss: -0.0964
+2025-09-04 23:01:49,162 - INFO - Boosted OOD loss: -0.0697
+2025-09-04 23:01:53,080 - INFO - Boosted OOD loss: -0.0884
+2025-09-04 23:01:55,053 - INFO - Boosted OOD loss: -0.0745
+2025-09-04 23:01:57,029 - INFO - Boosted OOD loss: -0.0651
+2025-09-04 23:02:00,948 - INFO - Boosted OOD loss: -0.0891
+2025-09-04 23:02:02,912 - INFO - Boosted OOD loss: -0.0691
+2025-09-04 23:02:08,767 - INFO - Boosted OOD loss: -0.0789
+2025-09-04 23:02:10,738 - INFO - Boosted OOD loss: -0.0572
+2025-09-04 23:02:12,721 - INFO - Boosted OOD loss: -0.0889
+2025-09-04 23:02:14,695 - INFO - Boosted OOD loss: -0.0660
+2025-09-04 23:02:24,410 - INFO - Boosted OOD loss: -0.0744
+2025-09-04 23:02:26,375 - INFO - Boosted OOD loss: -0.0385
+2025-09-04 23:02:28,348 - INFO - Boosted OOD loss: -0.0539
+2025-09-04 23:02:32,260 - INFO - Boosted OOD loss: -0.0841
+2025-09-04 23:02:38,111 - INFO - Boosted OOD loss: -0.0632
+2025-09-04 23:02:42,022 - INFO - Boosted OOD loss: -0.0461
+2025-09-04 23:02:47,871 - INFO - Boosted OOD loss: -0.0756
+2025-09-04 23:02:51,792 - INFO - Boosted OOD loss: -0.0534
+2025-09-04 23:02:53,756 - INFO - Boosted OOD loss: -0.0868
+2025-09-04 23:02:55,734 - INFO - Boosted OOD loss: -0.0795
+2025-09-04 23:02:59,640 - INFO - Boosted OOD loss: -0.0649
+2025-09-04 23:03:03,551 - INFO - Boosted OOD loss: -0.0721
+2025-09-04 23:03:05,521 - INFO - Boosted OOD loss: -0.0576
+2025-09-04 23:03:09,427 - INFO - Boosted OOD loss: -0.0793
+2025-09-04 23:03:11,390 - INFO - Boosted OOD loss: -0.0788
+2025-09-04 23:03:17,225 - INFO - Boosted OOD loss: -0.0739
+2025-09-04 23:03:21,132 - INFO - Boosted OOD loss: -0.0650
+2025-09-04 23:03:25,034 - INFO - Boosted OOD loss: -0.0824
+2025-09-04 23:03:27,002 - INFO - Boosted OOD loss: -0.0999
+2025-09-04 23:03:32,817 - INFO - Boosted OOD loss: -0.0790
+2025-09-04 23:03:34,792 - INFO - Boosted OOD loss: -0.0543
+2025-09-04 23:03:36,759 - INFO - Boosted OOD loss: -0.0724
+2025-09-04 23:03:38,726 - INFO - Boosted OOD loss: -0.0475
+2025-09-04 23:03:42,644 - INFO - Boosted OOD loss: -0.0579
+2025-09-04 23:03:44,622 - INFO - Boosted OOD loss: -0.1010
+2025-09-04 23:03:48,528 - INFO - Boosted OOD loss: -0.0694
+2025-09-04 23:03:52,434 - INFO - Boosted OOD loss: -0.0504
+2025-09-04 23:03:54,402 - INFO - Boosted OOD loss: -0.0654
+2025-09-04 23:03:58,293 - INFO - Boosted OOD loss: -0.0497
+2025-09-04 23:04:00,256 - INFO - Boosted OOD loss: -0.0794
+2025-09-04 23:04:02,217 - INFO - Boosted OOD loss: -0.1077
+2025-09-04 23:04:04,185 - INFO - Boosted OOD loss: -0.0884
+2025-09-04 23:04:08,090 - INFO - Boosted OOD loss: -0.0609
+2025-09-04 23:04:11,995 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 23:04:13,936 - INFO - Boosted OOD loss: -0.0845
+2025-09-04 23:04:15,908 - INFO - Boosted OOD loss: -0.0823
+2025-09-04 23:04:19,817 - INFO - Boosted OOD loss: -0.0897
+2025-09-04 23:04:21,783 - INFO - Boosted OOD loss: -0.0608
+2025-09-04 23:04:23,752 - INFO - Boosted OOD loss: -0.0871
+2025-09-04 23:04:27,656 - INFO - Boosted OOD loss: -0.1003
+2025-09-04 23:04:29,622 - INFO - Boosted OOD loss: -0.0820
+2025-09-04 23:04:31,588 - INFO - Boosted OOD loss: -0.0838
+2025-09-04 23:04:33,562 - INFO - Boosted OOD loss: -0.0694
+2025-09-04 23:04:35,527 - INFO - Boosted OOD loss: -0.0972
+2025-09-04 23:04:41,376 - INFO - Boosted OOD loss: -0.0664
+2025-09-04 23:04:43,339 - INFO - Boosted OOD loss: -0.0727
+2025-09-04 23:04:49,166 - INFO - Boosted OOD loss: -0.0649
+2025-09-04 23:05:00,817 - INFO - Boosted OOD loss: -0.0874
+2025-09-04 23:05:06,658 - INFO - Boosted OOD loss: -0.0558
+2025-09-04 23:05:08,627 - INFO - Boosted OOD loss: -0.0957
+2025-09-04 23:05:10,603 - INFO - Boosted OOD loss: -0.0728
+2025-09-04 23:05:14,507 - INFO - Boosted OOD loss: -0.0812
+2025-09-04 23:05:18,418 - INFO - Boosted OOD loss: -0.1094
+2025-09-04 23:05:22,315 - INFO - Boosted OOD loss: -0.0687
+2025-09-04 23:05:24,277 - INFO - Boosted OOD loss: -0.0912
+2025-09-04 23:05:26,247 - INFO - Boosted OOD loss: -0.0578
+2025-09-04 23:05:28,213 - INFO - Boosted OOD loss: -0.0547
+2025-09-04 23:05:30,184 - INFO - Boosted OOD loss: -0.0900
+2025-09-04 23:05:36,030 - INFO - Boosted OOD loss: -0.0788
+2025-09-04 23:05:41,855 - INFO - Boosted OOD loss: -0.1009
+2025-09-04 23:05:43,822 - INFO - Boosted OOD loss: -0.0493
+2025-09-04 23:05:45,787 - INFO - Boosted OOD loss: -0.0755
+2025-09-04 23:05:49,701 - INFO - Boosted OOD loss: -0.0700
+2025-09-04 23:05:49,702 - INFO - Step 1950 Loss Debug:
+2025-09-04 23:05:49,702 - INFO -  CE: 1.7299
+2025-09-04 23:05:49,703 - INFO -  OOD: -0.0700
+2025-09-04 23:05:49,703 - INFO -  β: 32.00
+2025-09-04 23:05:49,703 - INFO -  ID: 26971, OOD(254): 374
+2025-09-04 23:05:53,604 - INFO - Boosted OOD loss: -0.0922
+2025-09-04 23:05:55,572 - INFO - Boosted OOD loss: -0.1053
+2025-09-04 23:05:57,546 - INFO - Boosted OOD loss: -0.1151
+2025-09-04 23:06:03,374 - INFO - Boosted OOD loss: -0.0807
+2025-09-04 23:06:05,345 - INFO - Boosted OOD loss: -0.0557
+2025-09-04 23:06:07,318 - INFO - Boosted OOD loss: -0.0558
+2025-09-04 23:06:09,282 - INFO - Boosted OOD loss: -0.0601
+2025-09-04 23:06:11,242 - INFO - Boosted OOD loss: -0.0781
+2025-09-04 23:06:13,207 - INFO - Boosted OOD loss: -0.0554
+2025-09-04 23:06:15,171 - INFO - Boosted OOD loss: -0.0864
+2025-09-04 23:06:17,133 - INFO - Boosted OOD loss: -0.0694
+2025-09-04 23:06:21,034 - INFO - Boosted OOD loss: -0.0784
+2025-09-04 23:06:22,996 - INFO - Boosted OOD loss: -0.0832
+2025-09-04 23:06:24,959 - INFO - Boosted OOD loss: -0.0573
+2025-09-04 23:06:28,859 - INFO - Boosted OOD loss: -0.0846
+2025-09-04 23:06:30,823 - INFO - Boosted OOD loss: -0.0765
+2025-09-04 23:06:36,665 - INFO - Boosted OOD loss: -0.0912
+2025-09-04 23:06:38,626 - INFO - Boosted OOD loss: -0.0553
+2025-09-04 23:06:42,537 - INFO - Boosted OOD loss: -0.0622
+2025-09-04 23:06:48,374 - INFO - Boosted OOD loss: -0.0696
+2025-09-04 23:06:54,214 - INFO - Boosted OOD loss: -0.0919
+2025-09-04 23:06:56,172 - INFO - Boosted OOD loss: -0.0560
+2025-09-04 23:06:58,140 - INFO - Boosted OOD loss: -0.0552
+2025-09-04 23:07:00,114 - INFO - Boosted OOD loss: -0.0548
+2025-09-04 23:07:02,077 - INFO - Boosted OOD loss: -0.0994
+2025-09-04 23:07:04,044 - INFO - Boosted OOD loss: -0.0802
+2025-09-04 23:07:07,947 - INFO - Boosted OOD loss: -0.0572
+2025-09-04 23:07:11,845 - INFO - Boosted OOD loss: -0.0668
+2025-09-04 23:07:17,680 - INFO - Boosted OOD loss: -0.0933
+2025-09-04 23:07:19,650 - INFO - Boosted OOD loss: -0.0830
+2025-09-04 23:07:21,621 - INFO - Boosted OOD loss: -0.0704
+2025-09-04 23:07:25,540 - INFO - Boosted OOD loss: -0.0790
+2025-09-04 23:07:27,506 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 23:07:37,189 - INFO - Boosted OOD loss: -0.0995
+2025-09-04 23:07:39,152 - INFO - Boosted OOD loss: -0.0671
+2025-09-04 23:07:43,057 - INFO - Boosted OOD loss: -0.0581
+2025-09-04 23:07:45,020 - INFO - Boosted OOD loss: -0.0955
+2025-09-04 23:07:46,980 - INFO - Boosted OOD loss: -0.0754
+2025-09-04 23:07:50,887 - INFO - Boosted OOD loss: -0.0989
+2025-09-04 23:07:52,849 - INFO - Boosted OOD loss: -0.0641
+2025-09-04 23:07:54,808 - INFO - Boosted OOD loss: -0.0719
+2025-09-04 23:07:56,773 - INFO - Boosted OOD loss: -0.0721
+2025-09-04 23:08:00,683 - INFO - Boosted OOD loss: -0.0864
+2025-09-04 23:08:04,578 - INFO - Boosted OOD loss: -0.0796
+2025-09-04 23:08:10,414 - INFO - Boosted OOD loss: -0.0762
+2025-09-04 23:08:14,316 - INFO - Boosted OOD loss: -0.0955
+2025-09-04 23:08:20,178 - INFO - Boosted OOD loss: -0.0703
+2025-09-04 23:08:22,157 - INFO - Boosted OOD loss: -0.0491
+2025-09-04 23:08:26,073 - INFO - Boosted OOD loss: -0.0612
+2025-09-04 23:08:28,046 - INFO - Boosted OOD loss: -0.0618
+2025-09-04 23:08:33,869 - INFO - Boosted OOD loss: -0.0622
+2025-09-04 23:08:35,848 - INFO - Boosted OOD loss: -0.0945
+2025-09-04 23:08:37,813 - INFO - Boosted OOD loss: -0.0768
+2025-09-04 23:08:41,715 - INFO - Boosted OOD loss: -0.0713
+2025-09-04 23:08:43,688 - INFO - Boosted OOD loss: -0.0620
+2025-09-04 23:08:59,207 - INFO - Boosted OOD loss: -0.0850
+2025-09-04 23:09:01,174 - INFO - Boosted OOD loss: -0.0957
+2025-09-04 23:09:03,144 - INFO - Boosted OOD loss: -0.0578
+2025-09-04 23:09:07,045 - INFO - Boosted OOD loss: -0.0721
+2025-09-04 23:09:09,011 - INFO - Boosted OOD loss: -0.0599
+2025-09-04 23:09:12,907 - INFO - Boosted OOD loss: -0.0511
+2025-09-04 23:09:14,872 - INFO - Boosted OOD loss: -0.0811
+2025-09-04 23:09:16,842 - INFO - Boosted OOD loss: -0.1089
+2025-09-04 23:09:18,812 - INFO - Boosted OOD loss: -0.0678
+2025-09-04 23:09:20,766 - INFO - Boosted OOD loss: -0.0873
+2025-09-04 23:09:22,737 - INFO - Boosted OOD loss: -0.0538
+2025-09-04 23:09:24,689 - INFO - Boosted OOD loss: -0.0859
+2025-09-04 23:09:26,650 - INFO - Boosted OOD loss: -0.0786
+2025-09-04 23:09:28,606 - INFO - Boosted OOD loss: -0.0853
+2025-09-04 23:09:30,563 - INFO - Boosted OOD loss: -0.0904
+2025-09-04 23:09:34,464 - INFO - Boosted OOD loss: -0.0780
+2025-09-04 23:09:36,427 - INFO - Boosted OOD loss: -0.0588
+2025-09-04 23:09:38,381 - INFO - Boosted OOD loss: -0.0840
+2025-09-04 23:09:42,268 - INFO - Boosted OOD loss: -0.0801
+2025-09-04 23:09:44,236 - INFO - Boosted OOD loss: -0.0638
+2025-09-04 23:09:46,186 - INFO - Boosted OOD loss: -0.0956
+2025-09-04 23:09:50,068 - INFO - Boosted OOD loss: -0.0584
+2025-09-04 23:09:52,024 - INFO - Boosted OOD loss: -0.1135
+2025-09-04 23:09:53,986 - INFO - Boosted OOD loss: -0.0719
+2025-09-04 23:09:55,952 - INFO - Boosted OOD loss: -0.0770
+2025-09-04 23:09:57,910 - INFO - Boosted OOD loss: -0.0807
+2025-09-04 23:10:03,730 - INFO - Boosted OOD loss: -0.0803
+2025-09-04 23:10:05,703 - INFO - Boosted OOD loss: -0.0448
+2025-09-04 23:10:09,592 - INFO - Boosted OOD loss: -0.0591
+2025-09-04 23:10:13,483 - INFO - Boosted OOD loss: -0.0876
+2025-09-04 23:10:19,298 - INFO - Boosted OOD loss: -0.0771
+2025-09-04 23:10:21,256 - INFO - Boosted OOD loss: -0.0906
+2025-09-04 23:10:23,211 - INFO - Boosted OOD loss: -0.0914
+2025-09-04 23:10:25,185 - INFO - Boosted OOD loss: -0.0684
+2025-09-04 23:10:27,151 - INFO - Boosted OOD loss: -0.0759
+2025-09-04 23:10:31,034 - INFO - Boosted OOD loss: -0.0598
+2025-09-04 23:10:32,996 - INFO - Boosted OOD loss: -0.0478
+2025-09-04 23:10:36,881 - INFO - Boosted OOD loss: -0.0547
+2025-09-04 23:10:40,778 - INFO - Boosted OOD loss: -0.0386
+2025-09-04 23:10:42,726 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 23:10:50,453 - INFO - Boosted OOD loss: -0.0434
+2025-09-04 23:10:54,345 - INFO - Boosted OOD loss: -0.0832
+2025-09-04 23:10:56,311 - INFO - Boosted OOD loss: -0.0784
+2025-09-04 23:10:58,270 - INFO - Boosted OOD loss: -0.0661
+2025-09-04 23:11:00,232 - INFO - Boosted OOD loss: -0.0714
+2025-09-04 23:11:04,115 - INFO - Boosted OOD loss: -0.0766
+2025-09-04 23:11:06,064 - INFO - Boosted OOD loss: -0.0659
+2025-09-04 23:11:09,949 - INFO - Boosted OOD loss: -0.0594
+2025-09-04 23:11:11,899 - INFO - Boosted OOD loss: -0.0685
+2025-09-04 23:11:15,775 - INFO - Boosted OOD loss: -0.0625
+2025-09-04 23:11:17,732 - INFO - Boosted OOD loss: -0.0926
+2025-09-04 23:11:19,688 - INFO - Boosted OOD loss: -0.0767
+2025-09-04 23:11:23,564 - INFO - Boosted OOD loss: -0.0860
+2025-09-04 23:11:25,520 - INFO - Boosted OOD loss: -0.0718
+2025-09-04 23:11:27,476 - INFO - Boosted OOD loss: -0.0828
+2025-09-04 23:11:33,272 - INFO - Boosted OOD loss: -0.0898
+2025-09-04 23:11:35,223 - INFO - Boosted OOD loss: -0.0838
+2025-09-04 23:11:37,163 - INFO - Boosted OOD loss: -0.0776
+2025-09-04 23:11:39,115 - INFO - Boosted OOD loss: -0.0861
+2025-09-04 23:11:42,982 - INFO - Boosted OOD loss: -0.0725
+2025-09-04 23:11:44,940 - INFO - Boosted OOD loss: -0.0736
+2025-09-04 23:11:48,812 - INFO - Boosted OOD loss: -0.0814
+2025-09-04 23:11:50,763 - INFO - Boosted OOD loss: -0.0895
+2025-09-04 23:11:52,716 - INFO - Boosted OOD loss: -0.0586
+2025-09-04 23:11:56,583 - INFO - Boosted OOD loss: -0.0592
+2025-09-04 23:11:58,544 - INFO - Boosted OOD loss: -0.0632
+2025-09-04 23:12:00,500 - INFO - Boosted OOD loss: -0.0738
+2025-09-04 23:12:02,464 - INFO - Boosted OOD loss: -0.0483
+2025-09-04 23:12:12,108 - INFO - Boosted OOD loss: -0.0814
+2025-09-04 23:12:17,910 - INFO - Boosted OOD loss: -0.1057
+2025-09-04 23:12:19,859 - INFO - Boosted OOD loss: -0.0922
+2025-09-04 23:12:19,859 - INFO - Step 2150 Loss Debug:
+2025-09-04 23:12:19,860 - INFO -  CE: 2.1414
+2025-09-04 23:12:19,861 - INFO -  OOD: -0.0922
+2025-09-04 23:12:19,861 - INFO -  β: 32.00
+2025-09-04 23:12:19,861 - INFO -  ID: 26963, OOD(254): 149
+2025-09-04 23:12:21,807 - INFO - Boosted OOD loss: -0.0662
+2025-09-04 23:12:23,758 - INFO - Boosted OOD loss: -0.0747
+2025-09-04 23:12:25,701 - INFO - Boosted OOD loss: -0.0769
+2025-09-04 23:12:27,662 - INFO - Boosted OOD loss: -0.0748
+2025-09-04 23:12:35,399 - INFO - Boosted OOD loss: -0.0948
+2025-09-04 23:12:37,354 - INFO - Boosted OOD loss: -0.0729
+2025-09-04 23:12:41,244 - INFO - Boosted OOD loss: -0.0610
+2025-09-04 23:12:43,205 - INFO - Boosted OOD loss: -0.0691
+2025-09-04 23:12:45,158 - INFO - Boosted OOD loss: -0.0889
+2025-09-04 23:12:50,970 - INFO - Boosted OOD loss: -0.0660
+2025-09-04 23:12:52,928 - INFO - Boosted OOD loss: -0.0848
+2025-09-04 23:12:58,758 - INFO - Boosted OOD loss: -0.0526
+2025-09-04 23:13:00,720 - INFO - Boosted OOD loss: -0.0954
+2025-09-04 23:13:02,680 - INFO - Boosted OOD loss: -0.0912
+2025-09-04 23:13:08,494 - INFO - Boosted OOD loss: -0.0781
+2025-09-04 23:13:14,323 - INFO - Boosted OOD loss: -0.0903
+2025-09-04 23:13:16,280 - INFO - Boosted OOD loss: -0.1062
+2025-09-04 23:13:22,102 - INFO - Boosted OOD loss: -0.1029
+2025-09-04 23:13:26,002 - INFO - Boosted OOD loss: -0.0784
+2025-09-04 23:13:27,964 - INFO - Boosted OOD loss: -0.0868
+2025-09-04 23:13:29,921 - INFO - Boosted OOD loss: -0.0636
+2025-09-04 23:13:31,874 - INFO - Boosted OOD loss: -0.0861
+2025-09-04 23:13:35,761 - INFO - Boosted OOD loss: -0.0798
+2025-09-04 23:13:39,630 - INFO - Boosted OOD loss: -0.0724
+2025-09-04 23:13:47,371 - INFO - Boosted OOD loss: -0.0567
+2025-09-04 23:13:51,250 - INFO - Boosted OOD loss: -0.0890
+2025-09-04 23:13:55,137 - INFO - Boosted OOD loss: -0.0694
+2025-09-04 23:13:57,083 - WARNING - No anomaly pixels (254) found in batch
+2025-09-04 23:13:59,015 - INFO - Boosted OOD loss: -0.0812
+2025-09-04 23:14:04,808 - INFO - Boosted OOD loss: -0.0540
+2025-09-04 23:14:06,774 - INFO - Boosted OOD loss: -0.0727
+2025-09-04 23:14:18,336 - INFO - Boosted OOD loss: -0.0963
+2025-09-04 23:14:20,293 - INFO - Boosted OOD loss: -0.0624
+2025-09-04 23:14:22,242 - INFO - Boosted OOD loss: -0.0666
+2025-09-04 23:14:26,121 - INFO - Boosted OOD loss: -0.0749
+2025-09-04 23:14:28,081 - INFO - Boosted OOD loss: -0.0987
+2025-09-04 23:14:31,973 - INFO - Boosted OOD loss: -0.0575
+2025-09-04 23:14:35,858 - INFO - Boosted OOD loss: -0.0686
+2025-09-04 23:14:39,747 - INFO - Boosted OOD loss: -0.0631
+2025-09-04 23:14:43,635 - INFO - Boosted OOD loss: -0.0490
+2025-09-04 23:14:43,695 - INFO - Updated beta to 11.36 (exp decay)
+2025-09-04 23:14:43,774 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 23:14:43,774 - INFO - Weights updated successfully
+2025-09-04 23:14:43,775 - INFO - Advanced epoch 5 - Updated beta: 11.36
+2025-09-04 23:14:43,775 - INFO - Epoch 5 - Avg CE: 1.9832, Avg OOD: -0.0444, β: 32
+2025-09-04 23:14:43,775 - INFO - 
+Running evaluation with β=32...

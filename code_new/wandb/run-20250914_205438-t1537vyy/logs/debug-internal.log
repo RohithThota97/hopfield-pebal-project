@@ -1,0 +1,18 @@
+{"time":"2025-09-14T20:54:39.276792718+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250914_205438-t1537vyy/logs/debug-core.log"}
+{"time":"2025-09-14T20:54:39.539702284+02:00","level":"INFO","msg":"stream: created new stream","id":"t1537vyy"}
+{"time":"2025-09-14T20:54:39.539772898+02:00","level":"INFO","msg":"stream: started","id":"t1537vyy"}
+{"time":"2025-09-14T20:54:39.539842669+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"t1537vyy"}
+{"time":"2025-09-14T20:54:39.539891971+02:00","level":"INFO","msg":"handler: started","stream_id":"t1537vyy"}
+{"time":"2025-09-14T20:54:39.53991598+02:00","level":"INFO","msg":"sender: started","stream_id":"t1537vyy"}
+{"time":"2025-09-14T20:54:39.817135277+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-15T05:05:34.1966414+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/id-segmentation-debug/t1537vyy/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-09-15T19:26:37.924294953+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/id-segmentation-debug/t1537vyy/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-09-16T05:20:32.67056193+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-16T05:20:32.670884078+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-16T05:20:33.371770062+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-16T05:20:33.643088417+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 18080-18099, summary, console lines 816-864","runtime_seconds":0.27042025}],"total_operations":1}}
+{"time":"2025-09-16T05:20:33.671134033+02:00","level":"INFO","msg":"stream: closing","id":"t1537vyy"}
+{"time":"2025-09-16T05:20:33.671146183+02:00","level":"INFO","msg":"handler: closed","stream_id":"t1537vyy"}
+{"time":"2025-09-16T05:20:33.67115572+02:00","level":"INFO","msg":"sender: closed","stream_id":"t1537vyy"}
+{"time":"2025-09-16T05:20:33.671151794+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"t1537vyy"}
+{"time":"2025-09-16T05:20:33.672775225+02:00","level":"INFO","msg":"stream: closed","id":"t1537vyy"}

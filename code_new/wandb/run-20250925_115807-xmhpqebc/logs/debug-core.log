@@ -1,0 +1,13 @@
+{"time":"2025-09-25T11:58:07.339275704+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpkiyip_7a/port-1973328.txt","pid":1973328,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-25T11:58:07.369254067+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":1973328}
+{"time":"2025-09-25T11:58:07.369230954+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":41637,"Zone":""}}
+{"time":"2025-09-25T11:58:07.530266693+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:44194"}
+{"time":"2025-09-25T11:58:07.591086404+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"xmhpqebc","id":"127.0.0.1:44194"}
+{"time":"2025-09-25T11:58:07.847847498+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"xmhpqebc","id":"127.0.0.1:44194"}
+{"time":"2025-09-25T22:41:51.861135516+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:44194"}
+{"time":"2025-09-25T22:41:51.861733117+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:44194"}
+{"time":"2025-09-25T22:41:51.861779022+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-09-25T22:41:51.8619076+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:44194"}
+{"time":"2025-09-25T22:41:53.848574424+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:44194"}
+{"time":"2025-09-25T22:41:53.848621863+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:44194"}
+{"time":"2025-09-25T22:41:53.848651555+02:00","level":"INFO","msg":"server is closed"}

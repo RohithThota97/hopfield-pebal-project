@@ -1,0 +1,14 @@
+{"time":"2025-07-02T11:55:51.426091517+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpoqjnmdfy/port-160023.txt","pid":160023,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-07-02T11:55:51.455839535+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":160023}
+{"time":"2025-07-02T11:55:51.455813875+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":35501,"Zone":""}}
+{"time":"2025-07-02T11:55:51.617854639+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:50318"}
+{"time":"2025-07-02T11:55:51.674557185+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"3chcfcaa","id":"127.0.0.1:50318"}
+{"time":"2025-07-02T11:55:51.979818844+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"3chcfcaa","id":"127.0.0.1:50318"}
+{"time":"2025-07-02T11:55:52.454719843+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:50318"}
+{"time":"2025-07-02T11:55:52.45476002+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:50318"}
+{"time":"2025-07-02T11:55:52.454798477+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-07-02T11:55:52.454824331+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:50318"}
+{"time":"2025-07-02T11:55:52.618010578+02:00","level":"ERROR","msg":"processOutgoingData: flush error","error":"write tcp 127.0.0.1:35501->127.0.0.1:50318: use of closed network connection","id":"127.0.0.1:50318"}
+{"time":"2025-07-02T11:55:53.456045908+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:50318"}
+{"time":"2025-07-02T11:55:53.456072541+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:50318"}
+{"time":"2025-07-02T11:55:53.456088778+02:00","level":"INFO","msg":"server is closed"}

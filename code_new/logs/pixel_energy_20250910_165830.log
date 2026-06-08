@@ -1,0 +1,36 @@
+2025-09-10 16:58:35,788 - INFO - Initializing models...
+2025-09-10 16:58:36,858 - INFO - Loaded 268/268 model parameters flexibly
+2025-09-10 16:58:36,858 - WARNING - Skipped keys: ['criterion.nll_loss.weight']
+2025-09-10 16:58:36,924 - INFO - Missing keys: []
+2025-09-10 16:58:36,925 - INFO - Unexpected keys: []
+2025-09-10 16:58:36,926 - INFO - Loaded 100.0% of parameters successfully
+2025-09-10 16:58:37,159 - INFO - Initializing training components...
+2025-09-10 16:58:37,162 - INFO - SegmentationTrainer initialization complete!
+2025-09-10 16:58:37,162 - INFO - 
+Starting Epoch 1/100
+2025-09-10 16:58:37,162 - INFO - ============================================================
+2025-09-10 17:02:54,217 - INFO - Epoch 1 - Avg CE: 1.7362
+2025-09-10 17:04:42,474 - INFO - Checkpoint saved for epoch 1
+2025-09-10 17:04:54,991 - INFO - 
+Starting Epoch 2/100
+2025-09-10 17:04:54,992 - INFO - ============================================================
+2025-09-10 17:09:14,337 - INFO - Epoch 2 - Avg CE: 2.0277
+2025-09-10 17:10:45,908 - INFO - 
+Starting Epoch 3/100
+2025-09-10 17:10:45,909 - INFO - ============================================================
+2025-09-10 17:15:06,064 - INFO - Epoch 3 - Avg CE: 2.3866
+2025-09-10 17:16:36,932 - INFO - 
+Starting Epoch 4/100
+2025-09-10 17:16:36,933 - INFO - ============================================================
+2025-09-10 17:20:57,748 - INFO - Epoch 4 - Avg CE: 2.6733
+2025-09-10 17:22:28,961 - INFO - 
+Starting Epoch 5/100
+2025-09-10 17:22:28,962 - INFO - ============================================================
+2025-09-10 17:26:49,602 - INFO - Epoch 5 - Avg CE: 2.7879
+2025-09-10 17:26:49,602 - INFO - 
+Running evaluation...
+2025-09-10 17:26:49,603 - INFO - 
+Visualizing results...
+2025-09-10 17:26:49,609 - WARNING - Converting labels from torch.uint8 to torch.long
+2025-09-10 17:26:50,356 - WARNING - Converting labels from torch.uint8 to torch.long
+2025-09-10 17:26:51,010 - WARNING - Converting labels from torch.uint8 to torch.long

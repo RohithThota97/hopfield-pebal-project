@@ -1,0 +1,60 @@
+Initializing FeatureExtractor with base model from: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+/home/ha51dybi/PEBAL/code/feature_extractor.py:31: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(model_path, map_location='cpu')
+Successfully loaded pre-trained weights into the feature extractor.
+✅ Trainer initialized for dynamic memory training.
+🚀 Starting training process...
+
+==================== Initial Memory Warm-up ====================
+
+========================= Full Memory Update =========================
+Updating Memory Banks:  12%|██████▉                                                  | 100/817 [00:26<03:07,  3.83it/s]
+✅ Memory banks updated. ID: torch.Size([128, 3000]), OOD: torch.Size([128, 1500])
+
+🎯 Starting Epoch 1/50
+Training Epoch 1: 100%|█████████████████████| 817/817 [03:47<00:00,  3.59it/s, L_CE=2.2163, L_EBM=0.0000, L_REG=0.0024]
+
+🎯 Starting Epoch 2/50
+Training Epoch 2: 100%|█████████████████████| 817/817 [03:55<00:00,  3.46it/s, L_CE=1.9924, L_EBM=0.0000, L_REG=0.0024]
+
+🎯 Starting Epoch 3/50
+Training Epoch 3: 100%|█████████████████████| 817/817 [03:52<00:00,  3.51it/s, L_CE=2.0153, L_EBM=0.0000, L_REG=0.0023]
+
+🎯 Starting Epoch 4/50
+Training Epoch 4: 100%|█████████████████████| 817/817 [03:53<00:00,  3.50it/s, L_CE=1.6972, L_EBM=0.4681, L_REG=0.0021]
+
+🎯 Starting Epoch 5/50
+Training Epoch 5: 100%|█████████████████████| 817/817 [03:53<00:00,  3.50it/s, L_CE=1.6957, L_EBM=0.4648, L_REG=0.0022]
+Evaluating Epoch 5 on fishyscapes:   0%|                                                         | 0/8 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 316, in <module>
+    main()
+  File "run_training.py", line 313, in main
+    trainer.train()
+  File "run_training.py", line 215, in train
+    self.evaluator.evaluate(
+  File "/home/ha51dybi/PEBAL/code/ood_evaluator.py", line 34, in evaluate
+    for batch in tqdm(val_loader, desc=progress_bar_desc):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+    return self._process_data(data)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+    data.reraise()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/_utils.py", line 706, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "run_training.py", line 240, in __getitem__
+    target = Image.open(self.targets[i]).convert('L')
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/PIL/Image.py", line 3131, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ha51dybi/PEBAL/fishyscapes_lostandfound/Static/labels/image_0_labels.png'

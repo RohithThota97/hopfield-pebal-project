@@ -1,0 +1,69 @@
+INFO:__main__:Initializing models...
+INFO:__main__:Loaded 268/268 model parameters flexibly
+WARNING:__main__:Skipped keys: ['criterion.nll_loss.weight']
+INFO:__main__:Missing keys: []
+INFO:__main__:Unexpected keys: []
+INFO:__main__:Loaded 100.0% of parameters successfully
+INFO:__main__:Keeping backbone FROZEN for ID segmentation
+INFO:__main__:Trainable parameters: 333,331
+INFO:__main__:Total parameters: 137,437,267
+INFO:__main__:
+============================================================
+INFO:__main__:RUNNING DIAGNOSTIC TESTS
+INFO:__main__:============================================================
+INFO:__main__:
+1. Testing pretrained pretrained feature extraction...
+INFO:__main__:Processing images of shape torch.Size([1, 3, 512, 1024]), min: 0.0000, max: 1.0000
+INFO:__main__:   Feature shape: torch.Size([1, 1280, 64, 128])
+INFO:__main__:   Feature mean: 0.0512, std: 0.1048
+INFO:__main__:   ✓ Feature extraction working correctly
+INFO:__main__:
+2. Testing segmentation head initialization...
+INFO:__main__:   Logits shape: torch.Size([1, 19, 32, 64])
+INFO:__main__:   Mean probability per class: tensor([0.0522, 0.0526, 0.0525, 0.0531, 0.0527, 0.0520, 0.0531, 0.0529, 0.0523,
+        0.0527, 0.0523, 0.0530, 0.0528, 0.0521, 0.0525, 0.0529, 0.0529, 0.0527,
+        0.0527], device='cuda:0')
+INFO:__main__:   Expected uniform: ~0.0526
+INFO:__main__:   ✓ Segmentation head initialization looks good
+INFO:__main__:
+3. Testing data loader labels...
+INFO:__main__:   Unique labels in first batch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18, 255]
+INFO:__main__:   ✓ Found 17 ID classes in batch
+INFO:__main__:
+============================================================
+INFO:__main__:DIAGNOSTIC TESTS COMPLETE
+INFO:__main__:============================================================
+
+INFO:__main__:Initializing training components...
+INFO:__main__:Training components initialized
+INFO:__main__:
+============================================================
+INFO:__main__:Epoch 1/150
+INFO:__main__:============================================================
+Training Epoch 1:   0%|                                                                                  | 0/408 [00:00<?, ?it/s]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.3.bias: mean=-0.000000
+INFO:__main__:Gradient statistics for first batch:
+INFO:__main__:  grad_mean_head.0.weight: -0.000000
+INFO:__main__:  grad_std_head.0.weight: 0.000019
+INFO:__main__:  grad_mean_head.0.bias: -0.000000
+INFO:__main__:  grad_std_head.0.bias: 0.000000
+INFO:__main__:  grad_mean_head.1.weight: 0.000018
+INFO:__main__:  grad_std_head.1.weight: 0.000113
+INFO:__main__:  grad_mean_head.1.bias: 0.000022
+INFO:__main__:  grad_std_head.1.bias: 0.000143
+INFO:__main__:  grad_mean_head.3.weight: 0.000000
+INFO:__main__:  grad_std_head.3.weight: 0.031317
+INFO:__main__:  grad_mean_head.3.bias: -0.000000
+INFO:__main__:  grad_std_head.3.bias: 0.077106
+Training Epoch 1:   0%|                                                                                  | 0/408 [00:05<?, ?it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 1189, in <module>
+    main()
+  File "run_training.py", line 1186, in main
+    trainer.train()
+  File "run_training.py", line 876, in train
+    total_grad_norm = torch.sqrt(sum(p.grad.norm(2).item()**2 for p in self.segmentation_head.parameters() if p.grad is not None))
+TypeError: sqrt(): argument 'input' (position 1) must be Tensor, not float

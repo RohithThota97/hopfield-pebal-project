@@ -1,0 +1,310 @@
+2025-07-30 23:41:59,682 - HopfieldTraining - INFO - Starting training...
+2025-07-30 23:41:59,682 - HopfieldTraining - INFO - Building initial memories...
+2025-07-30 23:41:59,682 - hopfield_memory_builder - INFO - HopfieldMemoryBuilder initialized.
+2025-07-30 23:41:59,683 - hopfield_memory_builder - INFO - Starting to collect pixels for memory building...
+Collecting pixels for memory: 100%|██████████████████████████████████████████████████████████████████████| 1634/1634 [06:02<00:00,  4.51it/s]
+2025-07-30 23:48:02,006 - hopfield_memory_builder - INFO - Finished collecting pixels.
+2025-07-30 23:48:02,006 - hopfield_memory_builder - INFO - Building final memory tensors...
+2025-07-30 23:48:02,065 - hopfield_memory_builder - INFO - Final ID Memory: torch.Size([50000, 128]), AUX Memory: torch.Size([50000, 128])
+Epoch 1: 100%|████████████████████████████████████████| 1634/1634 [12:56<00:00,  2.10it/s, Loss=0.187, CE=0.187, OOD=0.000, Acc=0.949]
+2025-07-31 00:00:58,389 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_1.pth
+Epoch 2: 100%|████████████████████████████████████████| 1634/1634 [12:55<00:00,  2.11it/s, Loss=0.233, CE=0.233, OOD=0.000, Acc=0.939]
+2025-07-31 00:13:54,189 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_2.pth
+Epoch 3: 100%|████████████████████████████████████████| 1634/1634 [12:55<00:00,  2.11it/s, Loss=0.304, CE=0.304, OOD=0.000, Acc=0.899]
+2025-07-31 00:26:50,147 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_3.pth
+Epoch 4: 100%|████████████████████████████████████████| 1634/1634 [12:55<00:00,  2.11it/s, Loss=0.131, CE=0.131, OOD=0.000, Acc=0.974]
+2025-07-31 00:39:46,180 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_4.pth
+2025-07-31 00:39:46,180 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 5 ---
+2025-07-31 00:39:46,181 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 1.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [08:31<00:00,  3.19it/s]
+2025-07-31 00:48:18,067 - pixel_softmax_sampler - INFO - AUX memory updated with 26038 weighted samples.
+2025-07-31 00:48:18,078 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 5: 100%|████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.115, CE=0.115, OOD=0.000, Acc=0.966]
+2025-07-31 00:59:40,044 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_5.pth
+Epoch 6: 100%|████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.412, CE=0.412, OOD=0.000, Acc=0.875]
+2025-07-31 01:11:02,617 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_6.pth
+Epoch 7: 100%|████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.417, CE=0.417, OOD=0.000, Acc=0.875]
+2025-07-31 01:22:25,158 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_7.pth
+Epoch 8: 100%|████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.331, CE=0.331, OOD=0.000, Acc=0.894]
+2025-07-31 01:33:48,170 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_8.pth
+Epoch 9: 100%|████████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.266, CE=0.266, OOD=0.000, Acc=0.915]
+2025-07-31 01:45:11,256 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_9.pth
+2025-07-31 01:45:11,256 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 10 ---
+2025-07-31 01:45:11,257 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 2.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 01:53:07,891 - pixel_softmax_sampler - INFO - AUX memory updated with 25411 weighted samples.
+2025-07-31 01:53:07,902 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 10: 100%|███████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.234, CE=0.234, OOD=0.000, Acc=0.924]
+2025-07-31 02:04:27,933 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_10.pth
+Epoch 11: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.184, CE=0.184, OOD=0.000, Acc=0.943]
+2025-07-31 02:15:48,561 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_11.pth
+Epoch 12: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.217, CE=0.217, OOD=0.000, Acc=0.936]
+2025-07-31 02:27:09,115 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_12.pth
+Epoch 13: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.240, CE=0.240, OOD=0.000, Acc=0.922]
+2025-07-31 02:38:29,736 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_13.pth
+Epoch 14: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.308, CE=0.308, OOD=0.000, Acc=0.901]
+2025-07-31 02:49:50,617 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_14.pth
+2025-07-31 02:49:50,618 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 15 ---
+2025-07-31 02:49:50,618 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 3.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:54<00:00,  3.44it/s]
+2025-07-31 02:57:45,152 - pixel_softmax_sampler - INFO - AUX memory updated with 26026 weighted samples.
+2025-07-31 02:57:45,162 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 15: 100%|███████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.755, CE=0.755, OOD=0.000, Acc=0.781]
+2025-07-31 03:09:07,601 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_15.pth
+Epoch 16: 100%|███████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.196, CE=0.196, OOD=0.000, Acc=0.930]
+2025-07-31 03:20:30,705 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_16.pth
+Epoch 17: 100%|███████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.181, CE=0.181, OOD=0.000, Acc=0.951]
+2025-07-31 03:31:53,902 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_17.pth
+Epoch 18: 100%|███████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.206, CE=0.206, OOD=0.000, Acc=0.935]
+2025-07-31 03:43:16,572 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_18.pth
+Epoch 19: 100%|███████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.228, CE=0.228, OOD=0.000, Acc=0.934]
+2025-07-31 03:54:39,480 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_19.pth
+2025-07-31 03:54:39,480 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 20 ---
+2025-07-31 03:54:39,481 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 4.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 04:02:36,246 - pixel_softmax_sampler - INFO - AUX memory updated with 26028 weighted samples.
+2025-07-31 04:02:36,257 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 20: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.119, CE=0.119, OOD=0.000, Acc=0.955]
+2025-07-31 04:13:58,238 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_20.pth
+Epoch 21: 100%|███████████████████████████████████████| 1634/1634 [11:22<00:00,  2.40it/s, Loss=0.272, CE=0.272, OOD=0.000, Acc=0.930]
+2025-07-31 04:25:20,527 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_21.pth
+Epoch 22: 100%|███████████████████████████████████████| 1634/1634 [11:22<00:00,  2.40it/s, Loss=0.201, CE=0.201, OOD=0.000, Acc=0.940]
+2025-07-31 04:36:42,782 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_22.pth
+Epoch 23: 100%|███████████████████████████████████████| 1634/1634 [11:22<00:00,  2.40it/s, Loss=0.157, CE=0.157, OOD=0.000, Acc=0.943]
+2025-07-31 04:48:04,948 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_23.pth
+Epoch 24: 100%|███████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.055, CE=0.055, OOD=0.000, Acc=0.985]
+2025-07-31 04:59:27,322 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_24.pth
+2025-07-31 04:59:27,323 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 25 ---
+2025-07-31 04:59:27,323 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 5.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 05:07:24,307 - pixel_softmax_sampler - INFO - AUX memory updated with 26023 weighted samples.
+2025-07-31 05:07:24,318 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 25: 100%|███████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.227, CE=0.227, OOD=0.000, Acc=0.931]
+2025-07-31 05:18:46,855 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_25.pth
+Epoch 26: 100%|███████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.203, CE=0.203, OOD=0.000, Acc=0.940]
+2025-07-31 05:30:10,185 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_26.pth
+Epoch 27: 100%|███████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.291, CE=0.291, OOD=0.000, Acc=0.926]
+2025-07-31 05:41:33,171 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_27.pth
+Epoch 28: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.179, CE=0.179, OOD=0.000, Acc=0.963]
+2025-07-31 05:52:55,001 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_28.pth
+Epoch 29: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.122, CE=0.122, OOD=0.000, Acc=0.964]
+2025-07-31 06:04:16,612 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_29.pth
+2025-07-31 06:04:16,613 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 30 ---
+2025-07-31 06:04:16,613 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 6.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 06:12:13,302 - pixel_softmax_sampler - INFO - AUX memory updated with 25838 weighted samples.
+2025-07-31 06:12:13,313 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 30: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.258, CE=0.258, OOD=0.000, Acc=0.910]
+2025-07-31 06:23:35,063 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_30.pth
+Epoch 31: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.172, CE=0.172, OOD=0.000, Acc=0.942]
+2025-07-31 06:34:57,091 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_31.pth
+Epoch 32: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.319, CE=0.319, OOD=0.000, Acc=0.901]
+2025-07-31 06:46:18,835 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_32.pth
+Epoch 33: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.235, CE=0.235, OOD=0.000, Acc=0.929]
+2025-07-31 06:57:40,592 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_33.pth
+Epoch 34: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.166, CE=0.166, OOD=0.000, Acc=0.950]
+2025-07-31 07:09:02,273 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_34.pth
+2025-07-31 07:09:02,273 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 35 ---
+2025-07-31 07:09:02,273 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 7.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 07:16:58,634 - pixel_softmax_sampler - INFO - AUX memory updated with 26539 weighted samples.
+2025-07-31 07:16:58,644 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 35: 100%|███████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.422, CE=0.422, OOD=0.000, Acc=0.864]
+2025-07-31 07:28:21,842 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_35.pth
+Epoch 36: 100%|███████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.210, CE=0.210, OOD=0.000, Acc=0.939]
+2025-07-31 07:39:45,587 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_36.pth
+Epoch 37: 100%|███████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.193, CE=0.193, OOD=0.000, Acc=0.941]
+2025-07-31 07:51:09,608 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_37.pth
+Epoch 38: 100%|███████████████████████████████████████| 1634/1634 [11:24<00:00,  2.39it/s, Loss=0.388, CE=0.388, OOD=0.000, Acc=0.880]
+2025-07-31 08:02:33,743 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_38.pth
+Epoch 39: 100%|███████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.183, CE=0.183, OOD=0.000, Acc=0.946]
+2025-07-31 08:13:57,755 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_39.pth
+2025-07-31 08:13:57,755 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 40 ---
+2025-07-31 08:13:57,755 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 8.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:57<00:00,  3.42it/s]
+2025-07-31 08:21:55,237 - pixel_softmax_sampler - INFO - AUX memory updated with 26129 weighted samples.
+2025-07-31 08:21:55,248 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 40: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.782, CE=0.782, OOD=0.000, Acc=0.734]
+2025-07-31 08:33:16,959 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_40.pth
+Epoch 41: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.193, CE=0.193, OOD=0.000, Acc=0.929]
+2025-07-31 08:44:38,656 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_41.pth
+Epoch 42: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.275, CE=0.275, OOD=0.000, Acc=0.914]
+2025-07-31 08:56:00,101 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_42.pth
+Epoch 43: 100%|███████████████████████████████████████| 1634/1634 [11:25<00:00,  2.38it/s, Loss=0.121, CE=0.121, OOD=0.000, Acc=0.961]
+2025-07-31 09:07:26,115 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_43.pth
+Epoch 44: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.156, CE=0.156, OOD=0.000, Acc=0.948]
+2025-07-31 09:18:47,303 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_44.pth
+2025-07-31 09:18:47,304 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 45 ---
+2025-07-31 09:18:47,304 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 9.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:55<00:00,  3.43it/s]
+2025-07-31 09:26:43,252 - pixel_softmax_sampler - INFO - AUX memory updated with 26204 weighted samples.
+2025-07-31 09:26:43,263 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 45: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.254, CE=0.254, OOD=0.000, Acc=0.916]
+2025-07-31 09:38:04,735 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_45.pth
+Epoch 46: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.205, CE=0.205, OOD=0.000, Acc=0.944]
+2025-07-31 09:49:26,274 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_46.pth
+Epoch 47: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.185, CE=0.185, OOD=0.000, Acc=0.941]
+2025-07-31 10:00:47,363 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_47.pth
+Epoch 48: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.185, CE=0.185, OOD=0.000, Acc=0.938]
+2025-07-31 10:12:08,822 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_48.pth
+Epoch 49: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.110, CE=0.110, OOD=0.000, Acc=0.968]
+2025-07-31 10:23:30,832 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_49.pth
+2025-07-31 10:23:30,832 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 50 ---
+2025-07-31 10:23:30,832 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 10.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 10:31:27,451 - pixel_softmax_sampler - INFO - AUX memory updated with 25785 weighted samples.
+2025-07-31 10:31:27,462 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 50: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.163, CE=0.163, OOD=0.000, Acc=0.947]
+2025-07-31 10:42:48,283 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_50.pth
+Epoch 51: 100%|███████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.129, CE=0.129, OOD=0.000, Acc=0.955]
+2025-07-31 10:54:09,389 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_51.pth
+Epoch 52: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.222, CE=0.222, OOD=0.000, Acc=0.922]
+2025-07-31 11:05:30,408 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_52.pth
+Epoch 53: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.321, CE=0.321, OOD=0.000, Acc=0.901]
+2025-07-31 11:16:51,001 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_53.pth
+Epoch 54: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.070, CE=0.070, OOD=0.000, Acc=0.971]
+2025-07-31 11:28:11,978 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_54.pth
+2025-07-31 11:28:11,978 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 55 ---
+2025-07-31 11:28:11,979 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 11.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 11:36:08,714 - pixel_softmax_sampler - INFO - AUX memory updated with 25766 weighted samples.
+2025-07-31 11:36:08,725 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 55: 100%|███████████████████████████████████████| 1634/1634 [11:19<00:00,  2.41it/s, Loss=0.280, CE=0.280, OOD=0.000, Acc=0.910]
+2025-07-31 11:47:28,128 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_55.pth
+Epoch 56: 100%|███████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.158, CE=0.158, OOD=0.000, Acc=0.949]
+2025-07-31 11:58:48,099 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_56.pth
+Epoch 57: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.452, CE=0.452, OOD=0.000, Acc=0.854]
+2025-07-31 12:10:08,250 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_57.pth
+Epoch 58: 100%|███████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.243, CE=0.243, OOD=0.000, Acc=0.922]
+2025-07-31 12:21:28,141 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_58.pth
+Epoch 59: 100%|███████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.284, CE=0.284, OOD=0.000, Acc=0.906]
+2025-07-31 12:32:48,248 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_59.pth
+2025-07-31 12:32:48,248 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 60 ---
+2025-07-31 12:32:48,248 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 12.
+Collecting features for weighted sampling: 100%|██████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 12:40:45,236 - pixel_softmax_sampler - INFO - AUX memory updated with 25616 weighted samples.
+2025-07-31 12:40:45,247 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 60: 100%|███████████████████████████████████████| 1634/1634 [11:19<00:00,  2.41it/s, Loss=0.550, CE=0.550, OOD=0.000, Acc=0.797]
+2025-07-31 12:52:04,697 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_60.pth
+Epoch 61: 100%|██████████████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.381, CE=0.381, OOD=0.000, Acc=0.912]
+2025-07-31 13:03:24,684 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_61.pth
+Epoch 62: 100%|██████████████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.322, CE=0.322, OOD=0.000, Acc=0.885]
+2025-07-31 13:14:44,466 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_62.pth
+Epoch 63: 100%|██████████████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.152, CE=0.152, OOD=0.000, Acc=0.952]
+2025-07-31 13:26:04,264 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_63.pth
+Epoch 64: 100%|██████████████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.201, CE=0.201, OOD=0.000, Acc=0.930]
+2025-07-31 13:37:23,916 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_64.pth
+2025-07-31 13:37:23,916 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 65 ---
+2025-07-31 13:37:23,916 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 13.
+Collecting features for weighted sampling: 100%|█████████████████████████████████████████████████████████| 1634/1634 [07:55<00:00,  3.43it/s]
+2025-07-31 13:45:19,843 - pixel_softmax_sampler - INFO - AUX memory updated with 25868 weighted samples.
+2025-07-31 13:45:19,854 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 65: 100%|██████████████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.274, CE=0.274, OOD=0.000, Acc=0.892]
+2025-07-31 13:56:40,792 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_65.pth
+Epoch 66: 100%|██████████████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.263, CE=0.263, OOD=0.000, Acc=0.920]
+2025-07-31 14:08:01,713 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_66.pth
+Epoch 67: 100%|██████████████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.291, CE=0.291, OOD=0.000, Acc=0.918]
+2025-07-31 14:19:22,691 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_67.pth
+Epoch 68: 100%|██████████████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.119, CE=0.119, OOD=0.000, Acc=0.957]
+2025-07-31 14:30:43,425 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_68.pth
+Epoch 69: 100%|██████████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.097, CE=0.097, OOD=0.000, Acc=0.966]
+2025-07-31 14:42:04,510 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_69.pth
+2025-07-31 14:42:04,510 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 70 ---
+2025-07-31 14:42:04,510 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 14.
+Collecting features for weighted sampling: 100%|█████████████████████████████████████████████████████████| 1634/1634 [07:55<00:00,  3.43it/s]
+2025-07-31 14:50:00,251 - pixel_softmax_sampler - INFO - AUX memory updated with 26060 weighted samples.
+2025-07-31 14:50:00,261 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 70: 100%|██████████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.440, CE=0.440, OOD=0.000, Acc=0.912]
+2025-07-31 15:01:21,622 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_70.pth
+Epoch 71: 100%|██████████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.483, CE=0.483, OOD=0.000, Acc=0.842]
+2025-07-31 15:12:43,282 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_71.pth
+Epoch 72: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.40it/s, Loss=0.210, CE=0.210, OOD=0.000, Acc=0.934]
+2025-07-31 15:24:05,411 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_72.pth
+Epoch 73: 100%|██████████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.330, CE=0.330, OOD=0.000, Acc=0.896]
+2025-07-31 15:35:27,333 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_73.pth
+Epoch 74: 100%|██████████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.229, CE=0.229, OOD=0.000, Acc=0.912]
+2025-07-31 15:46:49,024 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_74.pth
+2025-07-31 15:46:49,025 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 75 ---
+2025-07-31 15:46:49,025 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 15.
+Collecting features for weighted sampling: 100%|█████████████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 15:54:45,089 - pixel_softmax_sampler - INFO - AUX memory updated with 26775 weighted samples.
+2025-07-31 15:54:45,099 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 75: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.187, CE=0.187, OOD=0.000, Acc=0.945]
+2025-07-31 16:06:07,852 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_75.pth
+Epoch 76: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.146, CE=0.146, OOD=0.000, Acc=0.952]
+2025-07-31 16:17:30,744 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_76.pth
+Epoch 77: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.278, CE=0.278, OOD=0.000, Acc=0.901]
+2025-07-31 16:28:53,677 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_77.pth
+Epoch 78: 100%|██████████████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.155, CE=0.155, OOD=0.000, Acc=0.954]
+2025-07-31 16:40:17,108 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_78.pth
+Epoch 79: 100%|██████████████████████████████████████████████| 1634/1634 [11:23<00:00,  2.39it/s, Loss=0.225, CE=0.225, OOD=0.000, Acc=0.927]
+2025-07-31 16:51:40,488 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_79.pth
+2025-07-31 16:51:40,488 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 80 ---
+2025-07-31 16:51:40,488 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 16.
+Collecting features for weighted sampling: 100%|█████████████████████████████████████████████████████████| 1634/1634 [07:58<00:00,  3.42it/s]
+2025-07-31 16:59:38,648 - pixel_softmax_sampler - INFO - AUX memory updated with 25807 weighted samples.
+2025-07-31 16:59:38,659 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 80: 100%|██████████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.278, CE=0.278, OOD=0.000, Acc=0.912]
+2025-07-31 17:11:00,619 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_80.pth
+Epoch 81: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.200, CE=0.200, OOD=0.000, Acc=0.919]
+2025-07-31 17:22:22,962 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_81.pth
+Epoch 82: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.240, CE=0.240, OOD=0.000, Acc=0.924]
+2025-07-31 17:33:45,290 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_82.pth
+Epoch 83: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.258, CE=0.258, OOD=0.000, Acc=0.911]
+2025-07-31 17:45:07,776 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_83.pth
+Epoch 84: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.277, CE=0.277, OOD=0.000, Acc=0.916]
+2025-07-31 17:56:30,328 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_84.pth
+2025-07-31 17:56:30,328 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 85 ---
+2025-07-31 17:56:30,328 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 17.
+Collecting features for weighted sampling: 100%|█████████████████████████████████████████████████████████| 1634/1634 [07:57<00:00,  3.42it/s]
+2025-07-31 18:04:27,463 - pixel_softmax_sampler - INFO - AUX memory updated with 25826 weighted samples.
+2025-07-31 18:04:27,474 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 85: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.40it/s, Loss=0.094, CE=0.094, OOD=0.000, Acc=0.971]
+2025-07-31 18:15:49,670 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_85.pth
+Epoch 86: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.40it/s, Loss=0.181, CE=0.181, OOD=0.000, Acc=0.950]
+2025-07-31 18:27:11,722 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_86.pth
+Epoch 87: 100%|██████████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.185, CE=0.185, OOD=0.000, Acc=0.937]
+2025-07-31 18:38:33,278 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_87.pth
+Epoch 88: 100%|██████████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.238, CE=0.238, OOD=0.000, Acc=0.922]
+2025-07-31 18:49:54,403 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_88.pth
+Epoch 89: 100%|██████████████████████████████████████████████| 1634/1634 [11:21<00:00,  2.40it/s, Loss=0.384, CE=0.384, OOD=0.000, Acc=0.889]
+2025-07-31 19:01:15,767 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_89.pth
+2025-07-31 19:01:15,767 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 90 ---
+2025-07-31 19:01:15,767 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 18.
+Collecting features for weighted sampling: 100%|█████████████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 19:09:11,878 - pixel_softmax_sampler - INFO - AUX memory updated with 25642 weighted samples.
+2025-07-31 19:09:11,889 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 90: 100%|██████████████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.187, CE=0.187, OOD=0.000, Acc=0.941]
+2025-07-31 19:20:31,358 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_90.pth
+Epoch 91: 100%|██████████████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.249, CE=0.249, OOD=0.000, Acc=0.918]
+2025-07-31 19:31:51,102 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_91.pth
+Epoch 92: 100%|██████████████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.206, CE=0.206, OOD=0.000, Acc=0.943]
+2025-07-31 19:43:11,292 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_92.pth
+Epoch 93: 100%|██████████████████████████████████████████████| 1634/1634 [11:20<00:00,  2.40it/s, Loss=0.263, CE=0.263, OOD=0.000, Acc=0.915]
+2025-07-31 19:54:31,347 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_93.pth
+Epoch 94: 100%|██████████████████████████████████████████████| 1634/1634 [11:19<00:00,  2.40it/s, Loss=0.169, CE=0.169, OOD=0.000, Acc=0.939]
+2025-07-31 20:05:51,117 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_94.pth
+2025-07-31 20:05:51,118 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 95 ---
+2025-07-31 20:05:51,118 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 19.
+Collecting features for weighted sampling: 100%|█████████████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 20:13:48,038 - pixel_softmax_sampler - INFO - AUX memory updated with 25959 weighted samples.
+2025-07-31 20:13:48,049 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 95: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.280, CE=0.280, OOD=0.000, Acc=0.905]
+2025-07-31 20:25:10,364 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_95.pth
+Epoch 96: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.126, CE=0.126, OOD=0.000, Acc=0.963]
+2025-07-31 20:36:33,377 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_96.pth
+Epoch 97: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.417, CE=0.417, OOD=0.000, Acc=0.890]
+2025-07-31 20:47:56,369 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_97.pth
+Epoch 98: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.239, CE=0.239, OOD=0.000, Acc=0.921]
+2025-07-31 20:59:19,095 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_98.pth
+Epoch 99: 100%|██████████████████████████████████████████████| 1634/1634 [11:22<00:00,  2.39it/s, Loss=0.423, CE=0.423, OOD=0.000, Acc=0.851]
+2025-07-31 21:10:41,627 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_99.pth
+2025-07-31 21:10:41,627 - HopfieldTraining - INFO - --- Starting Memory Update at Epoch 100 ---
+2025-07-31 21:10:41,627 - pixel_softmax_sampler - INFO - Starting AUX memory and weight update iteration 20.
+Collecting features for weighted sampling: 100%|█████████████████████████████████████████████████████████| 1634/1634 [07:56<00:00,  3.43it/s]
+2025-07-31 21:18:38,217 - pixel_softmax_sampler - INFO - AUX memory updated with 25664 weighted samples.
+2025-07-31 21:18:38,227 - HopfieldTraining - INFO - --- Memory Update Finished ---
+Epoch 100: 100%|█████████████████████████████████████████████| 1634/1634 [11:18<00:00,  2.41it/s, Loss=0.417, CE=0.417, OOD=0.000, Acc=0.863]
+2025-07-31 21:29:57,063 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_100.pth
+2025-07-31 21:29:57,063 - HopfieldTraining - INFO - Training completed!
+2025-07-31 21:29:57,108 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_final.pth

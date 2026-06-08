@@ -1,0 +1,16 @@
+2025-07-30 15:59:21,094 - SimplifiedHopfieldTrainer - INFO - Loading pretrained model for Engine: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+2025-07-30 15:59:21,280 - SimplifiedHopfieldTrainer - INFO - Pretrained model loaded successfully for Engine initialization.
+2025-07-30 15:59:21,282 - SimplifiedHopfieldTrainer - INFO - Engine instance created successfully for dataloader.
+2025-07-30 15:59:21,374 - SimplifiedHopfieldTrainer - INFO - DataLoader created with 1634 batches.
+2025-07-30 15:59:21,374 - SimplifiedHopfieldTrainer - INFO - Starting training...
+2025-07-30 15:59:21,374 - SimplifiedHopfieldTrainer - INFO - Building initial memories...
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 978, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 975, in main
+    trainer.train(train_loader, num_epochs=training_config['num_epochs'])
+  File "train_pixel_hopfield_boosting.py", line 739, in train
+    self.build_initial_memories(dataloader)
+  File "train_pixel_hopfield_boosting.py", line 138, in build_initial_memories
+    memory_builder = HopfieldMemoryBuilder(
+NameError: name 'HopfieldMemoryBuilder' is not defined

@@ -1,0 +1,8 @@
+{"time":"2025-08-15T16:10:16.456439634+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250815_161016-cjcgsh37/logs/debug-core.log"}
+{"time":"2025-08-15T16:10:16.708760949+02:00","level":"INFO","msg":"stream: created new stream","id":"cjcgsh37"}
+{"time":"2025-08-15T16:10:16.708852267+02:00","level":"INFO","msg":"stream: started","id":"cjcgsh37"}
+{"time":"2025-08-15T16:10:16.708895237+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"cjcgsh37"}
+{"time":"2025-08-15T16:10:16.708914977+02:00","level":"INFO","msg":"handler: started","stream_id":"cjcgsh37"}
+{"time":"2025-08-15T16:10:16.70897942+02:00","level":"INFO","msg":"sender: started","stream_id":"cjcgsh37"}
+{"time":"2025-08-15T16:10:16.971668049+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-15T16:35:31.972690374+02:00","level":"ERROR","msg":"monitor: error sampling metrics: open /proc/2680749/statm: no such file or directory\nopen /proc/2680749/stat: no such file or directory\nopen /proc/2680749/status: no such file or directory"}

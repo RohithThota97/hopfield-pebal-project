@@ -1,0 +1,103 @@
+2025-05-12 08:01:42,844 - hopfield_trainer - INFO - Experiment tracking with wandb initialized
+2025-05-12 08:01:42,844 - hopfield_trainer - INFO - Starting Hopfield Boosting training with args: Namespace(accumulation_steps=4, batch_size=1, beta=4.0, bits_per_quantizer=8, checkpoint_freq=10, energy_margin_in=-2.0, energy_margin_out=2.0, learning_rate=0.001, max_batches=100, max_patterns=50000, n_subquantizers=8, num_embeddings=256, num_epochs=5, output_dir='./checkpoints', patch_size=256, proj_hidden_dim=512, proj_output_dim=128, resume=None, smoothness_weight=1e-06, sparsity_weight=0.0001, stride=2, use_amp=False, use_checkpoint=False, use_class_balanced=True, use_patch_based=False, use_pq=False, use_reservoir=True, use_vq=False)
+2025-05-12 08:01:42,864 - hopfield_trainer - INFO - Initializing feature extractor...
+2025-05-12 08:01:42,865 - feature_extractor - INFO - Using target layer: dec0 with stride=2
+2025-05-12 08:01:42,866 - feature_extractor - INFO - Loading model...
+2025-05-12 08:01:56,424 - feature_extractor - INFO - Model loaded and parameters frozen
+2025-05-12 08:01:56,425 - feature_extractor - INFO - Registering hooks for feature extraction...
+2025-05-12 08:01:56,425 - feature_extractor - INFO - Hooks registered successfully
+2025-05-12 08:01:56,426 - hopfield_trainer - INFO - Setting up dataloader...
+2025-05-12 08:01:56,426 - feature_extractor - INFO - Creating dataloader...
+/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/utils/data/dataloader.py:474: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 6, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+2025-05-12 08:01:56,557 - feature_extractor - INFO - Dataloader created with 409 batches
+2025-05-12 08:01:56,557 - hopfield_trainer - INFO - Dataloader created with 409 batches
+2025-05-12 08:01:56,558 - hopfield_trainer - INFO - Extracting features to determine dimensions...
+2025-05-12 08:02:11,485 - hopfield_trainer - INFO - Feature extraction complete. Shape: torch.Size([1, 304, 450, 450])
+2025-05-12 08:02:11,486 - hopfield_trainer - INFO - Input dimension: 304, Output dimension: 128
+2025-05-12 08:02:11,486 - hopfield_trainer - INFO - Initializing projection head...
+2025-05-12 08:02:11,488 - projection_head - INFO - Initialized ProjectionHead with input_dim=304, hidden_dim=512, output_dim=128
+2025-05-12 08:02:11,493 - hopfield_trainer - INFO - Setting up optimizer with lr=0.001...
+2025-05-12 08:02:11,493 - hopfield_trainer - INFO - Initializing Core Memory energy function with beta=4.0...
+2025-05-12 08:02:11,494 - border_energy - INFO - Initialized Core Memory Mechanism with beta=4.0
+2025-05-12 08:02:11,495 - hopfield_trainer - INFO - Updating memory banks...
+2025-05-12 08:02:11,496 - memory - INFO - Starting memory bank update...
+2025-05-12 08:02:20,805 - memory - INFO - Determined feature embedding dimension: 128
+2025-05-12 08:02:20,811 - memory - INFO - Initialized reservoir samplers for inliers and outliers
+Updating memory banks:   0%|                                                                                                                                                                  | 0/409 [00:00<?, ?it/s]2025-05-12 08:02:34,324 - memory - ERROR - Error in feature extraction: CUDA out of memory. Tried to allocate 792.00 MiB (GPU 0; 7.60 GiB total capacity; 3.02 GiB already allocated; 432.38 MiB free; 4.48 GiB reserved in total by PyTorch)
+2025-05-12 08:02:34,336 - memory - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/memory.py", line 227, in update_memory_banks
+    projected = projection_head(features)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/projection_head.py", line 48, in forward
+    return self.projection(x)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/container.py", line 119, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 135, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/functional.py", line 2149, in batch_norm
+    return torch.batch_norm(
+RuntimeError: CUDA out of memory. Tried to allocate 792.00 MiB (GPU 0; 7.60 GiB total capacity; 3.02 GiB already allocated; 432.38 MiB free; 4.48 GiB reserved in total by PyTorch)
+
+Updating memory banks:   0%|▎                                                                                                                                                       | 1/409 [00:13<1:31:56, 13.52s/it]2025-05-12 08:02:34,379 - memory - ERROR - Error in feature extraction: CUDA out of memory. Tried to allocate 470.00 MiB (GPU 0; 7.60 GiB total capacity; 3.60 GiB already allocated; 432.38 MiB free; 4.48 GiB reserved in total by PyTorch)
+2025-05-12 08:02:34,383 - memory - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/memory.py", line 223, in update_memory_banks
+    features = extractor.extract_features(images)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 288, in extract_features
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/parallel/data_parallel.py", line 165, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/container.py", line 119, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 893, in _call_impl
+    hook_result = hook(self, input, result)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 97, in hook_dec0
+    dec0 = torch.cat([dec0_fine, dec0_up_resized], dim=1)
+RuntimeError: CUDA out of memory. Tried to allocate 470.00 MiB (GPU 0; 7.60 GiB total capacity; 3.60 GiB already allocated; 432.38 MiB free; 4.48 GiB reserved in total by PyTorch)
+
+2025-05-12 08:02:35,994 - memory - ERROR - Error in feature extraction: CUDA out of memory. Tried to allocate 792.00 MiB (GPU 0; 7.60 GiB total capacity; 3.02 GiB already allocated; 432.38 MiB free; 4.48 GiB reserved in total by PyTorch)
+2025-05-12 08:02:35,996 - memory - ERROR - Traceback: Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/memory.py", line 227, in update_memory_banks
+    projected = projection_head(features)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/projection_head.py", line 48, in forward
+    return self.projection(x)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/container.py", line 119, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 135, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/nn/functional.py", line 2149, in batch_norm
+    return torch.batch_norm(
+RuntimeError: CUDA out of memory. Tried to allocate 792.00 MiB (GPU 0; 7.60 GiB total capacity; 3.02 GiB already allocated; 432.38 MiB free; 4.48 GiB reserved in total by PyTorch)
+
+Updating memory banks:   1%|█▏                                                                                                                                                        | 3/409 [00:16<38:06,  5.63s/it]
+Traceback (most recent call last):
+  File "hopfield_trainer.py", line 494, in <module>
+    model, best_loss, model_path = train_hopfield(args)
+  File "hopfield_trainer.py", line 188, in train_hopfield
+    inlier_patterns, outlier_patterns = update_memory_banks(
+  File "/home/ha51dybi/PEBAL/code/memory.py", line 205, in update_memory_banks
+    images = batch['data'][:samples_per_batch].to(device)
+KeyboardInterrupt

@@ -1,0 +1,9 @@
+{"time":"2025-08-15T16:00:28.010850114+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250815_160027-uvucmmeg/logs/debug-core.log"}
+{"time":"2025-08-15T16:00:28.283369792+02:00","level":"INFO","msg":"stream: created new stream","id":"uvucmmeg"}
+{"time":"2025-08-15T16:00:28.283425876+02:00","level":"INFO","msg":"stream: started","id":"uvucmmeg"}
+{"time":"2025-08-15T16:00:28.283442452+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"uvucmmeg"}
+{"time":"2025-08-15T16:00:28.283495041+02:00","level":"INFO","msg":"handler: started","stream_id":"uvucmmeg"}
+{"time":"2025-08-15T16:00:28.283510247+02:00","level":"INFO","msg":"sender: started","stream_id":"uvucmmeg"}
+{"time":"2025-08-15T16:00:28.592030154+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-16T00:16:37.970986628+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-semantic-segmentation/uvucmmeg/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-08-17T11:42:06.931273582+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-semantic-segmentation/uvucmmeg/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}

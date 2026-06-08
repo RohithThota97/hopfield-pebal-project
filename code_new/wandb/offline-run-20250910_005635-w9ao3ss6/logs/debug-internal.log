@@ -1,0 +1,15 @@
+{"time":"2025-09-10T00:56:35.797064705+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/offline-run-20250910_005635-w9ao3ss6/logs/debug-core.log"}
+{"time":"2025-09-10T00:56:35.900184789+02:00","level":"WARN","msg":"GraphQL client is nil, skipping feature loading"}
+{"time":"2025-09-10T00:56:35.902451255+02:00","level":"INFO","msg":"stream: created new stream","id":"w9ao3ss6"}
+{"time":"2025-09-10T00:56:35.902494008+02:00","level":"INFO","msg":"stream: started","id":"w9ao3ss6"}
+{"time":"2025-09-10T00:56:35.902519388+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"w9ao3ss6"}
+{"time":"2025-09-10T00:56:35.902575733+02:00","level":"INFO","msg":"sender: started","stream_id":"w9ao3ss6"}
+{"time":"2025-09-10T00:56:35.902623534+02:00","level":"INFO","msg":"handler: started","stream_id":"w9ao3ss6"}
+{"time":"2025-09-10T00:56:35.910729088+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-10T01:10:04.630453044+02:00","level":"INFO","msg":"stream: closing","id":"w9ao3ss6"}
+{"time":"2025-09-10T01:10:04.630531679+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-10T01:10:04.630954516+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-10T01:10:04.631082374+02:00","level":"INFO","msg":"handler: closed","stream_id":"w9ao3ss6"}
+{"time":"2025-09-10T01:10:04.631097474+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"w9ao3ss6"}
+{"time":"2025-09-10T01:10:04.631125102+02:00","level":"INFO","msg":"sender: closed","stream_id":"w9ao3ss6"}
+{"time":"2025-09-10T01:10:04.633054533+02:00","level":"INFO","msg":"stream: closed","id":"w9ao3ss6"}

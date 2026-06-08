@@ -1,0 +1,15 @@
+{"time":"2025-09-16T00:18:50.137677355+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250916_001849-tc25wg56/logs/debug-core.log"}
+{"time":"2025-09-16T00:18:50.391250144+02:00","level":"INFO","msg":"stream: created new stream","id":"tc25wg56"}
+{"time":"2025-09-16T00:18:50.391344643+02:00","level":"INFO","msg":"stream: started","id":"tc25wg56"}
+{"time":"2025-09-16T00:18:50.391377295+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"tc25wg56"}
+{"time":"2025-09-16T00:18:50.391409178+02:00","level":"INFO","msg":"handler: started","stream_id":"tc25wg56"}
+{"time":"2025-09-16T00:18:50.391471539+02:00","level":"INFO","msg":"sender: started","stream_id":"tc25wg56"}
+{"time":"2025-09-16T00:18:50.633494294+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-16T00:53:20.944464165+02:00","level":"INFO","msg":"stream: closing","id":"tc25wg56"}
+{"time":"2025-09-16T00:53:20.944488673+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-16T00:53:20.944850786+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-16T00:53:21.844533832+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-16T00:53:22.023936138+02:00","level":"INFO","msg":"handler: closed","stream_id":"tc25wg56"}
+{"time":"2025-09-16T00:53:22.024005372+02:00","level":"INFO","msg":"sender: closed","stream_id":"tc25wg56"}
+{"time":"2025-09-16T00:53:22.024003713+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"tc25wg56"}
+{"time":"2025-09-16T00:53:22.025721419+02:00","level":"INFO","msg":"stream: closed","id":"tc25wg56"}

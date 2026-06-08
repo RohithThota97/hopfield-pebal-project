@@ -1,0 +1,44 @@
+2025-06-28 14:08:27,029 - __main__ - INFO - Initializing trainer on device: cuda
+/home/ha51dybi/PEBAL/code/feature_extractor.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(model_path, map_location='cpu')
+2025-06-28 14:08:41,114 - __main__ - INFO - Feature extractor initialized.
+2025-06-28 14:08:41,125 - __main__ - INFO - Projection head initialized.
+2025-06-28 14:08:41,127 - segmentation_head - INFO - SegmentationClassifierHead initialized: in_channels=1280, num_classes=19
+2025-06-28 14:08:41,128 - __main__ - INFO - Classifier head initialized.
+2025-06-28 14:08:41,129 - __main__ - INFO - Trainer initialization completed
+2025-06-28 14:08:41,129 - __main__ - INFO - Starting training: 50 epochs, batch_size=2
+2025-06-28 14:08:41,130 - __main__ - INFO - Strategy: Memories from 100% dataset, Training/Val queries from 80/20 split
+2025-06-28 14:08:41,131 - __main__ - INFO - ============================================================
+2025-06-28 14:08:41,131 - __main__ - INFO - STEP 1: Loading full dataset for memory building...
+2025-06-28 14:08:41,132 - __main__ - INFO - ============================================================
+2025-06-28 14:08:41,687 - __main__ - INFO - ============================================================
+2025-06-28 14:08:41,687 - __main__ - INFO - STEP 2: Building memories from ENTIRE dataset (100%)...
+2025-06-28 14:08:41,688 - __main__ - INFO - ============================================================
+2025-06-28 14:08:41,688 - __main__ - INFO - Building initial memories from ENTIRE dataset...
+2025-06-28 14:08:41,689 - __main__ - INFO - Created full dataset loader with 1634 batches for memory building
+2025-06-28 14:08:41,691 - __main__ - INFO - HopfieldMemoryBuilder initialized.
+2025-06-28 14:08:41,691 - __main__ - INFO - Processing ALL images in dataset for memory building...
+Processing ALL images to build ID and AUX memories...
+Building memories: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:21<00:00,  1.90it/s]
+Processed 3268 images
+ID features by class: [2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 1275, 2045, 2600, 824, 2600, 2517, 1542, 1787]
+AUX features collected: 152401
+Building final memories...
+Created ID memory: torch.Size([43790, 128])
+Created AUX memory: torch.Size([50000, 128])
+2025-06-28 14:23:03,103 - __main__ - INFO - Memory statistics from FULL dataset: {'images_processed': 3268, 'total_id_features': 43790, 'total_aux_features': 152401, 'id_class_distribution': {2: 2600, 11: 2600, 1: 2600, 0: 2600, 9: 2600, 8: 2600, 3: 2600, 10: 2600, 13: 2600, 7: 2600, 4: 2600, 12: 1275, 15: 2045, 5: 2600, 17: 824, 18: 2600, 14: 2517, 6: 1542, 16: 1787}, 'classes_with_features': 19}
+2025-06-28 14:23:03,104 - __main__ - INFO - ============================================================
+2025-06-28 14:23:03,104 - __main__ - INFO - STEP 3: Creating 80/20 split for training/validation queries...
+2025-06-28 14:23:03,104 - __main__ - INFO - ============================================================
+2025-06-28 14:23:03,105 - __main__ - INFO - Created train/val split: train=2614, val=654
+2025-06-28 14:23:03,106 - __main__ - INFO - Training queries: 2614 samples
+2025-06-28 14:23:03,107 - __main__ - INFO - Validation queries: 654 samples
+2025-06-28 14:23:03,107 - __main__ - INFO - Memory source: 3268 samples (100% of dataset)
+2025-06-28 14:23:03,108 - __main__ - INFO - ============================================================
+2025-06-28 14:23:03,109 - __main__ - INFO - STEP 4: Starting training loop...
+2025-06-28 14:23:03,110 - __main__ - INFO - ============================================================
+2025-06-28 14:23:03,111 - __main__ - INFO -
+============================================================
+2025-06-28 14:23:03,111 - __main__ - INFO - EPOCH 1/50
+2025-06-28 14:23:03,112 - __main__ - INFO - ============================================================
+Epoch 1 (Train):  45%|████████████████████████████████████▍                                            | 587/1307 [06:23<07:42,  1.56it/s, Loss=0.3489, CE=0.1753, OOD=0.3472, LR=0.010000]

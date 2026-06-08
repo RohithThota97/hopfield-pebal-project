@@ -1,0 +1,13 @@
+{"time":"2025-08-17T19:45:11.107155813+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmppgi3uc7f/port-3034748.txt","pid":3034748,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-08-17T19:45:11.136981801+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3034748}
+{"time":"2025-08-17T19:45:11.13697182+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":35243,"Zone":""}}
+{"time":"2025-08-17T19:45:11.289303729+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:36532"}
+{"time":"2025-08-17T19:45:11.424239528+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"jyedimtj","id":"127.0.0.1:36532"}
+{"time":"2025-08-17T19:45:11.685196656+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"jyedimtj","id":"127.0.0.1:36532"}
+{"time":"2025-08-17T19:56:06.216422258+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:36532"}
+{"time":"2025-08-17T19:56:06.217086015+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:36532"}
+{"time":"2025-08-17T19:56:06.217135313+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-08-17T19:56:06.217288848+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:36532"}
+{"time":"2025-08-17T19:56:07.33800186+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:36532"}
+{"time":"2025-08-17T19:56:07.338039318+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:36532"}
+{"time":"2025-08-17T19:56:07.338061743+02:00","level":"INFO","msg":"server is closed"}

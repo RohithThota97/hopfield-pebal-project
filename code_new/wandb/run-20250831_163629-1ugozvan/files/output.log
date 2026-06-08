@@ -1,0 +1,17 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+
+============================================================
+CROSS-VALIDATING β FOR SEGMENTATION
+============================================================
+
+Testing β = 1
+Collecting Features with Stratification: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [01:57<00:00,  1.07it/s]
+WARNING: Negative energies detected—check normalization!
+HopfieldBoostingManager initialized with aligned beta=1
+Error evaluating separation: __init__() got an unexpected keyword argument 'beta_a'
+  Energy separation: 0.0000
+
+Testing β = 2
+Collecting Features with Stratification:  74%|███████████████████████████████████████████████████████████████████████████████████████████████▋                                  | 92/125 [01:30<00:33,  1.00s/it]

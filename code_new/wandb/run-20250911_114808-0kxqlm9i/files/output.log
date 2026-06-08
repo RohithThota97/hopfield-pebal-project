@@ -1,0 +1,164 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Keeping backbone FROZEN for ID segmentation
+INFO:__main__:Trainable parameters: 332,819
+INFO:__main__:Total parameters: 137,436,755
+INFO:__main__:
+============================================================
+INFO:__main__:RUNNING DIAGNOSTIC TESTS
+INFO:__main__:============================================================
+INFO:__main__:
+1. Testing pretrained feature extraction...
+INFO:__main__:   Feature shape: torch.Size([1, 1280, 64, 64])
+INFO:__main__:   Feature mean: 0.0527, std: 0.1049
+INFO:__main__:   ✓ Feature extraction working correctly
+INFO:__main__:
+2. Testing segmentation head initialization...
+INFO:__main__:   Logits shape: torch.Size([1, 19, 32, 64])
+INFO:__main__:   Mean probability per class: tensor([0.0641, 0.0122, 0.0503, 0.1674, 0.0531, 0.0216, 0.0227, 0.0954, 0.0453,
+        0.1553, 0.0630, 0.0703, 0.0679, 0.0100, 0.0104, 0.0242, 0.0004, 0.0108,
+        0.0554], device='cuda:0')
+INFO:__main__:   Expected uniform: ~0.0526
+INFO:__main__:   ✓ Segmentation head initialization looks good
+INFO:__main__:
+3. Testing data loader labels...
+INFO:__main__:   Unique labels in first batch: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 17, 18, 255]
+INFO:__main__:   ✓ Found 15 ID classes in batch
+INFO:__main__:
+============================================================
+INFO:__main__:DIAGNOSTIC TESTS COMPLETE
+INFO:__main__:============================================================
+
+INFO:__main__:Initializing training components...
+INFO:__main__:Training components initialized
+
+================================================================================
+STARTING ID-FOCUSED TRAINING WITH FROZEN BACKBONE
+Mode: MIXED (Cityscapes + COCO)
+================================================================================
+INFO:__main__:
+============================================================
+INFO:__main__:Epoch 1/50
+INFO:__main__:============================================================
+Training Epoch 1:   0%|                                                                                 | 0/2226 [00:00<?, ?it/s]INFO:__main__:Gradient statistics for first batch:
+INFO:__main__:  grad_mean_head.0.weight: 34.511440
+INFO:__main__:  grad_std_head.0.weight: 800.492249
+INFO:__main__:  grad_mean_head.0.bias: 441.243469
+INFO:__main__:  grad_std_head.0.bias: 6534.699219
+INFO:__main__:  grad_mean_head.2.weight: -0.012610
+INFO:__main__:  grad_std_head.2.weight: 1918.516357
+INFO:__main__:  grad_mean_head.2.bias: -0.562500
+INFO:__main__:  grad_std_head.2.bias: 7074.646484
+Training Epoch 1:   0%|                                             | 0/2226 [00:01<?, ?it/s, CE=3.0888, ID_px=14946, OOD_px=116]WARNING:__main__:Very small gradient in head.0.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:   2%|▊                                  | 50/2226 [00:13<08:50,  4.10it/s, CE=3.3986, ID_px=13186, OOD_px=2168]WARNING:__main__:Very small gradient in head.0.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:   4%|█▌                                | 100/2226 [00:27<17:48,  1.99it/s, CE=2.8730, ID_px=13000, OOD_px=1035]WARNING:__main__:Very small gradient in head.0.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:   7%|██▎                               | 150/2226 [00:39<09:17,  3.72it/s, CE=2.6778, ID_px=13255, OOD_px=3096]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:   9%|███▏                               | 200/2226 [00:52<08:40,  3.89it/s, CE=2.9267, ID_px=15322, OOD_px=324]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  11%|███▊                              | 250/2226 [01:04<07:54,  4.17it/s, CE=2.9063, ID_px=14393, OOD_px=1826]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  13%|████▌                             | 300/2226 [01:16<07:50,  4.09it/s, CE=2.8976, ID_px=13962, OOD_px=1278]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  16%|█████▎                            | 350/2226 [01:28<07:36,  4.11it/s, CE=2.9057, ID_px=10990, OOD_px=1052]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  18%|██████▋                              | 400/2226 [01:40<07:29,  4.06it/s, CE=2.9153, ID_px=14241, OOD_px=0]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  20%|███████                            | 450/2226 [01:53<07:13,  4.10it/s, CE=2.8896, ID_px=9659, OOD_px=2667]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  22%|████████▎                            | 500/2226 [02:05<07:15,  3.97it/s, CE=2.9065, ID_px=16147, OOD_px=0]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  25%|████████▍                         | 550/2226 [02:17<06:52,  4.07it/s, CE=2.9209, ID_px=11962, OOD_px=1444]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  27%|█████████▏                        | 600/2226 [02:30<06:48,  3.98it/s, CE=2.9293, ID_px=14135, OOD_px=1269]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  29%|██████████▌                         | 650/2226 [02:42<06:32,  4.01it/s, CE=2.9203, ID_px=15851, OOD_px=26]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  31%|███████████                        | 700/2226 [02:55<06:26,  3.95it/s, CE=2.9263, ID_px=15187, OOD_px=174]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  34%|████████████▍                        | 750/2226 [03:07<06:05,  4.04it/s, CE=2.9283, ID_px=12418, OOD_px=0]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  36%|█████████████▎                       | 800/2226 [03:20<05:59,  3.96it/s, CE=2.9309, ID_px=13421, OOD_px=0]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  38%|█████████████▎                     | 850/2226 [03:32<05:43,  4.01it/s, CE=2.9228, ID_px=11840, OOD_px=134]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  40%|██████████████▏                    | 900/2226 [03:45<05:39,  3.91it/s, CE=2.9323, ID_px=13906, OOD_px=806]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  43%|████████████████▏                     | 950/2226 [03:57<05:18,  4.00it/s, CE=2.9368, ID_px=9403, OOD_px=0]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  45%|███████████████▋                   | 1000/2226 [04:10<05:09,  3.96it/s, CE=2.9366, ID_px=14767, OOD_px=73]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  47%|████████████████▌                  | 1050/2226 [04:22<04:54,  3.99it/s, CE=2.9381, ID_px=14803, OOD_px=68]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  49%|████████████████▊                 | 1100/2226 [04:35<04:43,  3.97it/s, CE=2.9368, ID_px=13531, OOD_px=136]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  52%|█████████████████▌                | 1150/2226 [04:47<04:28,  4.01it/s, CE=2.9365, ID_px=15117, OOD_px=399]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=0.000000
+Training Epoch 1:  54%|██████████████████▎               | 1200/2226 [05:00<04:20,  3.94it/s, CE=2.9332, ID_px=15211, OOD_px=830]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  56%|████████████████████▏               | 1250/2226 [05:13<04:03,  4.00it/s, CE=2.9345, ID_px=16322, OOD_px=0]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  58%|███████████████████▎             | 1300/2226 [05:25<03:52,  3.98it/s, CE=2.9379, ID_px=13156, OOD_px=1059]WARNING:__main__:Very small gradient in head.0.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.2.bias: mean=-0.000000
+Training Epoch 1:  60%|████████████████████▎             | 1328/2226 [05:32<03:45,  3.99it/s, CE=2.9389, ID_px=12193, OOD_px=234]

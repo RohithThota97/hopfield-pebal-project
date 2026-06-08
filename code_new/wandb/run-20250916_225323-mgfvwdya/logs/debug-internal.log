@@ -1,0 +1,8 @@
+{"time":"2025-09-16T22:53:23.666098698+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250916_225323-mgfvwdya/logs/debug-core.log"}
+{"time":"2025-09-16T22:53:23.916745609+02:00","level":"INFO","msg":"stream: created new stream","id":"mgfvwdya"}
+{"time":"2025-09-16T22:53:23.916806846+02:00","level":"INFO","msg":"stream: started","id":"mgfvwdya"}
+{"time":"2025-09-16T22:53:23.916870437+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"mgfvwdya"}
+{"time":"2025-09-16T22:53:23.916888037+02:00","level":"INFO","msg":"handler: started","stream_id":"mgfvwdya"}
+{"time":"2025-09-16T22:53:23.916906224+02:00","level":"INFO","msg":"sender: started","stream_id":"mgfvwdya"}
+{"time":"2025-09-16T22:53:24.1648894+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-16T23:02:54.699207606+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/id-segmentation-debug/mgfvwdya/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}

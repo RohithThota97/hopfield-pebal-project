@@ -1,0 +1,7 @@
+{"time":"2025-09-04T22:24:31.393631878+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp6zld6vk2/port-1947175.txt","pid":1947175,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-04T22:24:31.399249911+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":1947175}
+{"time":"2025-09-04T22:24:31.399251885+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":39491,"Zone":""}}
+{"time":"2025-09-04T22:24:31.515813211+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:48776"}
+{"time":"2025-09-04T22:24:31.642403583+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"plaztai8","id":"127.0.0.1:48776"}
+{"time":"2025-09-04T22:24:31.900239663+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"plaztai8","id":"127.0.0.1:48776"}
+{"time":"2025-09-04T22:25:25.844370972+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

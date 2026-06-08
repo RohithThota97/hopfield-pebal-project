@@ -1,0 +1,18 @@
+2025-07-30 22:25:13,507 - HopfieldTraining - INFO - Starting training...
+2025-07-30 22:25:13,508 - HopfieldTraining - INFO - Building initial memories...
+2025-07-30 22:25:13,508 - hopfield_memory_builder - INFO - HopfieldMemoryBuilder initialized.
+2025-07-30 22:25:13,509 - hopfield_memory_builder - INFO - Starting to collect pixels for memory building...
+Collecting pixels for memory: 100%|██████████████████████████████████████████████████████████████████████| 1634/1634 [06:02<00:00,  4.51it/s]
+2025-07-30 22:31:15,757 - hopfield_memory_builder - INFO - Finished collecting pixels.
+2025-07-30 22:31:15,757 - hopfield_memory_builder - INFO - Building final memory tensors...
+2025-07-30 22:31:15,809 - hopfield_memory_builder - INFO - Final ID Memory: torch.Size([49079, 128]), AUX Memory: torch.Size([50000, 128])
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 238, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 235, in main
+    trainer.train(train_loader, num_epochs=training_config['num_epochs'], accumulation_steps=training_config['accumulation_steps'])
+  File "train_pixel_hopfield_boosting.py", line 178, in train
+    self.build_initial_memories(dataloader)
+  File "train_pixel_hopfield_boosting.py", line 97, in build_initial_memories
+    self.weight_updater = HopfieldMemoryBuilder(
+TypeError: __init__() got an unexpected keyword argument 'id_memory'

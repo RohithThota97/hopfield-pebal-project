@@ -1,0 +1,16 @@
+{
+  "memory_scales": {
+    "10000": {
+      "error": "__init__() missing 1 required positional argument: 'projection_head'"
+    },
+    "20000": {
+      "error": "__init__() missing 1 required positional argument: 'projection_head'"
+    },
+    "30000": {
+      "error": "__init__() missing 1 required positional argument: 'projection_head'"
+    },
+    "50000": {
+      "error": "__init__() missing 1 required positional argument: 'projection_head'"
+    }
+  }
+}

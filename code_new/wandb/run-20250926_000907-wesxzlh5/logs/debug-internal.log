@@ -1,0 +1,15 @@
+{"time":"2025-09-26T00:09:07.999782462+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250926_000907-wesxzlh5/logs/debug-core.log"}
+{"time":"2025-09-26T00:09:08.263527058+02:00","level":"INFO","msg":"stream: created new stream","id":"wesxzlh5"}
+{"time":"2025-09-26T00:09:08.263564871+02:00","level":"INFO","msg":"stream: started","id":"wesxzlh5"}
+{"time":"2025-09-26T00:09:08.263613331+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"wesxzlh5"}
+{"time":"2025-09-26T00:09:08.263650907+02:00","level":"INFO","msg":"sender: started","stream_id":"wesxzlh5"}
+{"time":"2025-09-26T00:09:08.263658542+02:00","level":"INFO","msg":"handler: started","stream_id":"wesxzlh5"}
+{"time":"2025-09-26T00:09:08.563092277+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-26T03:43:06.563438647+02:00","level":"INFO","msg":"stream: closing","id":"wesxzlh5"}
+{"time":"2025-09-26T03:43:06.563567567+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-26T03:43:06.56399405+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-26T03:43:07.996827505+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-26T03:43:08.198639636+02:00","level":"INFO","msg":"handler: closed","stream_id":"wesxzlh5"}
+{"time":"2025-09-26T03:43:08.198721117+02:00","level":"INFO","msg":"sender: closed","stream_id":"wesxzlh5"}
+{"time":"2025-09-26T03:43:08.198716953+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wesxzlh5"}
+{"time":"2025-09-26T03:43:08.200892451+02:00","level":"INFO","msg":"stream: closed","id":"wesxzlh5"}

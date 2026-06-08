@@ -1,0 +1,18 @@
+{"time":"2025-09-25T11:58:07.59395789+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250925_115807-xmhpqebc/logs/debug-core.log"}
+{"time":"2025-09-25T11:58:07.847707251+02:00","level":"INFO","msg":"stream: created new stream","id":"xmhpqebc"}
+{"time":"2025-09-25T11:58:07.847826555+02:00","level":"INFO","msg":"stream: started","id":"xmhpqebc"}
+{"time":"2025-09-25T11:58:07.847840344+02:00","level":"INFO","msg":"handler: started","stream_id":"xmhpqebc"}
+{"time":"2025-09-25T11:58:07.847857959+02:00","level":"INFO","msg":"sender: started","stream_id":"xmhpqebc"}
+{"time":"2025-09-25T11:58:07.84794+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"xmhpqebc"}
+{"time":"2025-09-25T11:58:08.150368792+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-25T19:27:53.693662129+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/xmhpqebc/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-09-25T20:47:07.639882402+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.22:36568->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-25T20:48:37.640714684+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.22:46712->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-25T22:41:51.861763804+02:00","level":"INFO","msg":"stream: closing","id":"xmhpqebc"}
+{"time":"2025-09-25T22:41:51.861840113+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-25T22:41:51.862190457+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-25T22:41:53.642768059+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-25T22:41:53.845759454+02:00","level":"INFO","msg":"handler: closed","stream_id":"xmhpqebc"}
+{"time":"2025-09-25T22:41:53.845826588+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"xmhpqebc"}
+{"time":"2025-09-25T22:41:53.845849037+02:00","level":"INFO","msg":"sender: closed","stream_id":"xmhpqebc"}
+{"time":"2025-09-25T22:41:53.847998672+02:00","level":"INFO","msg":"stream: closed","id":"xmhpqebc"}

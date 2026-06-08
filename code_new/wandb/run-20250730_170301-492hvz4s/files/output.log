@@ -1,0 +1,15 @@
+2025-07-30 17:03:01,999 - HopfieldTraining - INFO - Loading checkpoint for Engine from: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+2025-07-30 17:03:02,194 - HopfieldTraining - INFO - Engine instance created successfully.
+2025-07-30 17:03:02,282 - HopfieldTraining - INFO - DataLoader created successfully.
+2025-07-30 17:03:02,282 - HopfieldTraining - INFO - Starting training...
+2025-07-30 17:03:02,282 - HopfieldTraining - INFO - Building initial memories...
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 263, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 256, in main
+    trainer.train(
+  File "train_pixel_hopfield_boosting.py", line 166, in train
+    self.build_initial_memories(dataloader)
+  File "train_pixel_hopfield_boosting.py", line 83, in build_initial_memories
+    memory_builder = HopfieldBoostingWeightUpdater(
+TypeError: __init__() got an unexpected keyword argument 'feature_extractor'

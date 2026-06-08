@@ -1,0 +1,18 @@
+2025-07-30 15:57:14,797 - SimplifiedHopfieldTrainer - INFO - Loading pretrained model for Engine: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+train_pixel_hopfield_boosting.py:919: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  continue_state_object = torch.load(training_config['model_path'], map_location='cpu')
+2025-07-30 15:57:15,019 - SimplifiedHopfieldTrainer - INFO - Pretrained model loaded successfully for Engine initialization.
+2025-07-30 15:57:15,021 - SimplifiedHopfieldTrainer - INFO - Engine instance created successfully for dataloader.
+2025-07-30 15:57:15,111 - SimplifiedHopfieldTrainer - INFO - DataLoader created with 1634 batches.
+2025-07-30 15:57:15,111 - SimplifiedHopfieldTrainer - INFO - Starting training...
+2025-07-30 15:57:15,111 - SimplifiedHopfieldTrainer - INFO - Building initial memories...
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 978, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 975, in main
+    trainer.train(train_loader, num_epochs=training_config['num_epochs'])
+  File "train_pixel_hopfield_boosting.py", line 739, in train
+    self.build_initial_memories(dataloader)
+  File "train_pixel_hopfield_boosting.py", line 138, in build_initial_memories
+    memory_builder = HopfieldMemoryBuilder(
+NameError: name 'HopfieldMemoryBuilder' is not defined

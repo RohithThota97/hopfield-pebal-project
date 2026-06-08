@@ -1,0 +1,98 @@
+🧠 Initializing models...
+✅ Feature extractor initialized
+✅ Projection head initialized
+✅ Segmentation head initialized
+⚙️ Initializing training components...
+✅ Optimizer initialized
+✅ Scheduler initialized
+✅ Loss criterion initialized
+🔍 Initializing pixel-level sampler...
+💾 Building pixel-wise memory...
+Building pixel-wise memory banks using RealMemoryBuilder...
+✅ Memory builder initialized
+🔄 Processing images for memory building...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 817/817 [06:37<00:00,  2.05it/s]
+✅ Images processed for memory building
+📊 Raw memory shapes - ID: torch.Size([2000, 128]), OOD: torch.Size([1000, 128])
+🔄 Preparing ID memory...
+🔄 Preparing memory tensor with shape: torch.Size([2000, 128])
+🔄 Normalizing memory tensor...
+✅ Normalization complete
+🔄 Transposing tensor...
+✅ Tensor prepared with final shape: torch.Size([128, 2000])
+✅ ID memory prepared
+🔄 Preparing OOD memory...
+🔄 Preparing memory tensor with shape: torch.Size([1000, 128])
+🔄 Normalizing memory tensor...
+✅ Normalization complete
+🔄 Transposing tensor...
+✅ Tensor prepared with final shape: torch.Size([128, 1000])
+✅ OOD memory prepared
+✅ Pixel memory banks built - ID: torch.Size([128, 2000]), OOD: torch.Size([128, 1000])
+✅ PixelWiseHopfieldTrainer initialization complete!
+🚀 Starting training...
+🚀 Starting training loop...
+
+🎯 Starting Epoch 1/50
+Training Epoch 1: 100%|███████████████████████████████████████████| 817/817 [04:45<00:00,  2.86it/s, L_CE=1.5789, L_OOD=0.0000, LR=0.000999]
+📊 Epoch 1 Averages - CE: 3.1129, OOD: -0.1034
+
+🎯 Starting Epoch 2/50
+Training Epoch 2: 100%|███████████████████████████████████████████| 817/817 [04:43<00:00,  2.89it/s, L_CE=0.6953, L_OOD=0.0000, LR=0.000996]
+📊 Epoch 2 Averages - CE: 1.1603, OOD: -0.1231
+
+🎯 Starting Epoch 3/50
+Training Epoch 3: 100%|███████████████████████| 817/817 [04:42<00:00,  2.89it/s, L_CE=0.2977, L_OOD=0.0000, LR=0.000991]
+📊 Epoch 3 Averages - CE: 0.8631, OOD: -0.0964
+
+🎯 Starting Epoch 4/50
+Training Epoch 4: 100%|███████████████████████| 817/817 [04:40<00:00,  2.91it/s, L_CE=0.3545, L_OOD=0.0000, LR=0.000984]
+📊 Epoch 4 Averages - CE: 0.6880, OOD: -0.1284
+
+🎯 Starting Epoch 5/50
+Training Epoch 5: 100%|███████████████████████| 817/817 [04:45<00:00,  2.86it/s, L_CE=1.0554, L_OOD=0.0000, LR=0.000976]
+📊 Epoch 5 Averages - CE: 0.5991, OOD: -0.1444
+📊 Evaluating at Epoch 5
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 2000])
+AUX memory shape: torch.Size([128, 1000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=864, ood_pixels=136
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24762, Out: 5238
+In-scores range: [-3.230, -2.526]
+Out-scores range: [-3.227, -2.565]
+✅ AUROC: 0.5780
+✅ FPR95: 0.9370
+✅ AUPRS: 0.8587
+✅ Evaluation Results - AUROC: 0.5780, FPR95: 0.9370
+
+🎯 Starting Epoch 6/50
+🔄 Updating pixel-wise boosting weights at epoch 5
+✅ Pixel sampling weights updated
+Training Epoch 6: 100%|███████████████████████| 817/817 [04:44<00:00,  2.87it/s, L_CE=0.2199, L_OOD=0.0000, LR=0.000965]
+📊 Epoch 6 Averages - CE: 0.5683, OOD: -0.1283
+
+🎯 Starting Epoch 7/50
+Training Epoch 7: 100%|███████████████████████| 817/817 [04:37<00:00,  2.94it/s, L_CE=0.5624, L_OOD=0.0000, LR=0.000952]
+📊 Epoch 7 Averages - CE: 0.5144, OOD: -0.1462
+
+🎯 Starting Epoch 8/50
+Training Epoch 8: 100%|███████████████████████| 817/817 [04:46<00:00,  2.86it/s, L_CE=0.2663, L_OOD=0.0000, LR=0.000938]
+📊 Epoch 8 Averages - CE: 0.4840, OOD: -0.1051
+
+🎯 Starting Epoch 9/50
+Training Epoch 9: 100%|███████████████████████| 817/817 [04:41<00:00,  2.90it/s, L_CE=0.1013, L_OOD=0.0000, LR=0.000922]
+📊 Epoch 9 Averages - CE: 0.4556, OOD: -0.1194
+
+🎯 Starting Epoch 10/50
+Training Epoch 10:  52%|███████████▍          | 424/817 [02:25<02:14,  2.91it/s, L_CE=0.2670, L_OOD=0.0000, LR=0.000913]

@@ -1,0 +1,60 @@
+_wandb:
+    value:
+        cli_version: 0.20.1
+        m: []
+        python_version: 3.8.20
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+            "3":
+                - 13
+                - 16
+                - 55
+            "4": 3.8.20
+            "5": 0.20.1
+            "12": 0.20.1
+            "13": linux-x86_64
+aux_memory_size:
+    value: 50000
+batch_size:
+    value: 2
+boosting_update_epoch_freq:
+    value: 1
+checkpoint_dir:
+    value: ./checkpoints_pixel_wise_pebal_aligned
+cross_validate_beta:
+    value: false
+id_memory_size:
+    value: 50000
+lambda_ood:
+    value: 1
+learning_rate:
+    value: 0.1
+model_path:
+    value: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+num_classes:
+    value: 19
+num_workers:
+    value: 4
+pixel_beta_inference:
+    value: 32
+projection_dim:
+    value: 128
+resize_resolution:
+    value:
+        - 768
+        - 768
+spatial_beta_scaling:
+    value: false
+total_epochs:
+    value: 100
+weight_decay:
+    value: 0.0005

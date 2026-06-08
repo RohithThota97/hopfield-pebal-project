@@ -1,0 +1,16 @@
+{"time":"2025-09-28T02:01:36.026582226+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250928_020135-ug1o6vk5/logs/debug-core.log"}
+{"time":"2025-09-28T02:01:36.277570892+02:00","level":"INFO","msg":"stream: created new stream","id":"ug1o6vk5"}
+{"time":"2025-09-28T02:01:36.277673727+02:00","level":"INFO","msg":"stream: started","id":"ug1o6vk5"}
+{"time":"2025-09-28T02:01:36.27770316+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"ug1o6vk5"}
+{"time":"2025-09-28T02:01:36.277765618+02:00","level":"INFO","msg":"sender: started","stream_id":"ug1o6vk5"}
+{"time":"2025-09-28T02:01:36.277813053+02:00","level":"INFO","msg":"handler: started","stream_id":"ug1o6vk5"}
+{"time":"2025-09-28T02:01:36.491925851+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-28T03:45:01.624773404+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/ug1o6vk5/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-09-28T05:26:31.768264806+02:00","level":"INFO","msg":"stream: closing","id":"ug1o6vk5"}
+{"time":"2025-09-28T05:26:31.768364725+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-28T05:26:31.76873414+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-28T05:26:33.084936622+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-28T05:26:33.281080914+02:00","level":"INFO","msg":"handler: closed","stream_id":"ug1o6vk5"}
+{"time":"2025-09-28T05:26:33.281143864+02:00","level":"INFO","msg":"sender: closed","stream_id":"ug1o6vk5"}
+{"time":"2025-09-28T05:26:33.28113444+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ug1o6vk5"}
+{"time":"2025-09-28T05:26:33.282688689+02:00","level":"INFO","msg":"stream: closed","id":"ug1o6vk5"}

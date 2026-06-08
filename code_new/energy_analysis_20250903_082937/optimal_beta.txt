@@ -1,0 +1,3 @@
+Optimal beta: 1.0
+Separation: 1.5461
+AUC: 0.0000

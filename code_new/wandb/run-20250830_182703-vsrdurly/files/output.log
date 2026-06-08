@@ -1,0 +1,20 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+
+================================================================================
+INITIALIZING HOPFIELD BOOSTING WITH PAPER-ALIGNED PARAMETERS
+================================================================================
+Building memory with updated, paper-aligned approach...
+Traceback (most recent call last):
+  File "run_training.py", line 590, in <module>
+    main()
+  File "run_training.py", line 579, in main
+    trainer = PixelWiseHopfieldTrainer(train_config, train_loader, val_loader, evaluator)
+  File "run_training.py", line 63, in __init__
+    self._initialize_advanced_boosting_components()
+  File "run_training.py", line 95, in _initialize_advanced_boosting_components
+    self.boosting_manager = HopfieldBoostingManager.build_from_loader(
+  File "/home/ha51dybi/PEBAL/code/hopfield_weight_updater.py", line 41, in build_from_loader
+    memory_builder = RealMemoryBuilder(
+TypeError: __init__() got an unexpected keyword argument 'beta_sampling'

@@ -1,0 +1,15 @@
+{"time":"2025-07-26T14:49:10.193233477+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250726_144909-dpvcvto7/logs/debug-core.log"}
+{"time":"2025-07-26T14:49:10.449492849+02:00","level":"INFO","msg":"stream: created new stream","id":"dpvcvto7"}
+{"time":"2025-07-26T14:49:10.449572331+02:00","level":"INFO","msg":"stream: started","id":"dpvcvto7"}
+{"time":"2025-07-26T14:49:10.4496672+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"dpvcvto7"}
+{"time":"2025-07-26T14:49:10.449708499+02:00","level":"INFO","msg":"handler: started","stream_id":"dpvcvto7"}
+{"time":"2025-07-26T14:49:10.449737696+02:00","level":"INFO","msg":"sender: started","stream_id":"dpvcvto7"}
+{"time":"2025-07-26T14:49:10.692696475+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-26T14:49:13.021110895+02:00","level":"INFO","msg":"stream: closing","id":"dpvcvto7"}
+{"time":"2025-07-26T14:49:13.021176742+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-26T14:49:13.021289697+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-26T14:49:13.648875534+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-26T14:49:13.842180567+02:00","level":"INFO","msg":"handler: closed","stream_id":"dpvcvto7"}
+{"time":"2025-07-26T14:49:13.842252065+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"dpvcvto7"}
+{"time":"2025-07-26T14:49:13.84226878+02:00","level":"INFO","msg":"sender: closed","stream_id":"dpvcvto7"}
+{"time":"2025-07-26T14:49:13.844283061+02:00","level":"INFO","msg":"stream: closed","id":"dpvcvto7"}

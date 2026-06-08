@@ -1,0 +1,12 @@
+--- Step 1: Collecting Initial Datasets ---
+Collecting ID dataset X:   0%|                                                                                 | 0/3268 [00:00<?, ?it/s]/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py:557: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 6, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Collecting ID dataset X: 100%|██████████████████████████████████████████████████████████████████████| 3268/3268 [04:21<00:00, 12.48it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 342, in <module>
+    main()
+  File "run_training.py", line 338, in main
+    trainer.train()
+  File "run_training.py", line 261, in train
+    self.aux_sampler.collect_ood_samples(self.train_loader)
+AttributeError: 'PixelLevelOODSampler' object has no attribute 'collect_ood_samples'

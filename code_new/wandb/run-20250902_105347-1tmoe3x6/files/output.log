@@ -1,0 +1,30 @@
+Loaded 268/268 model parameters flexibly
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+2025-09-02 10:53:49,880 - INFO -
+============================================================
+2025-09-02 10:53:49,880 - INFO - CROSS-VALIDATING β FOR SEGMENTATION
+2025-09-02 10:53:49,881 - INFO - ============================================================
+2025-09-02 10:53:49,882 - INFO -
+Testing β = 4
+2025-09-02 10:53:49,882 - INFO - Building memories from loader...
+2025-09-02 10:53:50,116 - INFO - Starting hybrid memory building...
+Collecting Features (Hybrid): 100%|████████████████████████████████████████████████████████| 125/125 [00:34<00:00,  3.60it/s]
+2025-09-02 10:54:24,818 - INFO - Label statistics - Found 254 in 125 batches, 255 in 0 batches
+2025-09-02 10:54:24,818 - INFO - Skipped 0 pixels with label 255 (ignore class)
+2025-09-02 10:54:25,047 - WARNING - Empty interior pool for class 17
+2025-09-02 10:54:25,048 - WARNING - Empty boundary pool for class 17
+2025-09-02 10:54:25,051 - WARNING - Empty interior pool for class 18
+2025-09-02 10:54:25,051 - WARNING - Empty boundary pool for class 18
+2025-09-02 10:54:25,074 - WARNING - Empty interior pool for class 14
+2025-09-02 10:54:25,075 - WARNING - Empty boundary pool for class 14
+2025-09-02 10:54:25,090 - WARNING - Empty interior pool for class 15
+2025-09-02 10:54:25,091 - WARNING - Empty boundary pool for class 15
+2025-09-02 10:54:25,098 - WARNING - Empty interior pool for class 16
+2025-09-02 10:54:25,099 - WARNING - Empty boundary pool for class 16
+2025-09-02 10:54:44,627 - ERROR - Error in build_from_loader: indices should be either on cpu or on the same device as the indexed tensor (cpu)
+2025-09-02 10:54:44,630 - INFO -
+Testing β = 8
+2025-09-02 10:54:44,630 - INFO - Building memories from loader...
+2025-09-02 10:54:44,645 - INFO - Starting hybrid memory building...
+Collecting Features (Hybrid):  27%|███████████████▌                                         | 34/125 [00:10<00:25,  3.57it/s]

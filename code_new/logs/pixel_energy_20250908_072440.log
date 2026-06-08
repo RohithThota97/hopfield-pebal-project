@@ -1,0 +1,23 @@
+2025-09-08 07:35:16,903 - INFO - Initializing models...
+2025-09-08 07:35:18,286 - INFO - Initializing training components...
+2025-09-08 07:35:18,286 - INFO - Initializing advanced boosting components...
+2025-09-08 07:35:18,287 - INFO - 
+Building memory with β = 32...
+2025-09-08 07:35:18,288 - INFO - Loading existing memory from ./checkpoints_pixel_wise_pebal_aligned/initial_memory_beta_32.pt
+2025-09-08 07:35:18,306 - ERROR - Failed to initialize boosting: __init__() got an unexpected keyword argument 'id_features_full_full'
+2025-09-08 07:35:18,487 - INFO - Monitoring - ID Mean: 0.139, OOD Mean: 0.141, Separation: 0.003
+2025-09-08 07:35:18,487 - ERROR - Error during initial separation check: Low initial ID/OOD separation - rebuild memories
+2025-09-08 07:35:18,487 - INFO - HopfieldBoostingManager initialized with aligned beta=32, lambda_ood=1.0
+2025-09-08 07:35:18,488 - INFO - PixelWiseHopfieldTrainer initialization complete with β=32!
+2025-09-08 07:35:18,490 - INFO - 
+Starting Epoch 1/100
+2025-09-08 07:35:18,490 - INFO - ============================================================
+2025-09-08 07:35:18,492 - INFO - 
+Updating Hopfield boosting weights at epoch 1...
+2025-09-08 07:35:27,997 - INFO - Weights updated successfully
+2025-09-08 07:35:29,550 - WARNING - Invalid total_loss: nan. Skipping batch.
+2025-09-08 07:35:30,025 - ERROR - Loss computation error: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

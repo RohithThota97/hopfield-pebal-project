@@ -1,0 +1,23 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+
+================================================================================
+INITIALIZING HOPFIELD BOOSTING WITH PAPER-ALIGNED PARAMETERS
+================================================================================
+Building memory with updated, paper-aligned approach...
+Collecting Features: 100%|██████████████████████████████████████████████████████████| 408/408 [03:18<00:00,  2.06it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 590, in <module>
+    main()
+  File "run_training.py", line 579, in main
+    trainer = PixelWiseHopfieldTrainer(train_config, train_loader, val_loader, evaluator)
+  File "run_training.py", line 63, in __init__
+    self._initialize_advanced_boosting_components()
+  File "run_training.py", line 95, in _initialize_advanced_boosting_components
+    self.boosting_manager = HopfieldBoostingManager.build_from_loader(
+  File "/home/ha51dybi/PEBAL/code/hopfield_weight_updater.py", line 62, in build_from_loader
+    energy_calc = PixelWiseBorderEnergy(id_memory[:10], ood_memory[:10], beta=4.0)
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 44, in __init__
+    self.register_buffer('combined_memory', torch.cat([self.id_memory, self.ood_memory], dim=0))
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu! (when checking argument for argument tensors in method wrapper_CUDA_cat)

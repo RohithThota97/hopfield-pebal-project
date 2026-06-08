@@ -1,0 +1,8 @@
+{"time":"2025-09-11T20:05:08.373617444+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp1nkkz1ex/port-515722.txt","pid":515722,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-11T20:05:08.40260124+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":515722}
+{"time":"2025-09-11T20:05:08.40256775+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":39761,"Zone":""}}
+{"time":"2025-09-11T20:05:08.560817733+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:55852"}
+{"time":"2025-09-11T20:05:08.593440652+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"d3fhrfz3","id":"127.0.0.1:55852"}
+{"time":"2025-09-11T20:05:08.844821068+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"d3fhrfz3","id":"127.0.0.1:55852"}
+{"time":"2025-09-11T20:05:48.497890449+02:00","level":"ERROR","msg":"connection: fatal error reading connection","error":"read tcp 127.0.0.1:39761->127.0.0.1:55852: read: connection reset by peer","id":"127.0.0.1:55852"}
+{"time":"2025-09-11T20:05:48.623303533+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

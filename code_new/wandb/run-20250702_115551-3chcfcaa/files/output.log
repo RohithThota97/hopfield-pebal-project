@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 797, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 791, in main
+    results = trainer.train(num_epochs=NUM_EPOCHS, batch_size=BATCH_SIZE)
+  File "train_pixel_hopfield_boosting.py", line 657, in train
+    train_loader = self.get_training_dataloader(batch_size)
+AttributeError: 'PixelHopfieldBoostingTrainer' object has no attribute 'get_training_dataloader'

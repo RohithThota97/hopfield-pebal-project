@@ -1,0 +1,15 @@
+{"time":"2025-09-28T20:50:11.834082224+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250928_205011-oxuulmga/logs/debug-core.log"}
+{"time":"2025-09-28T20:50:12.086972784+02:00","level":"INFO","msg":"stream: created new stream","id":"oxuulmga"}
+{"time":"2025-09-28T20:50:12.087056278+02:00","level":"INFO","msg":"stream: started","id":"oxuulmga"}
+{"time":"2025-09-28T20:50:12.087090029+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"oxuulmga"}
+{"time":"2025-09-28T20:50:12.087148103+02:00","level":"INFO","msg":"handler: started","stream_id":"oxuulmga"}
+{"time":"2025-09-28T20:50:12.087222203+02:00","level":"INFO","msg":"sender: started","stream_id":"oxuulmga"}
+{"time":"2025-09-28T20:50:12.343309599+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-28T20:50:12.531737466+02:00","level":"INFO","msg":"stream: closing","id":"oxuulmga"}
+{"time":"2025-09-28T20:50:12.531763438+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-28T20:50:12.531809272+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-28T20:50:13.288249116+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-28T20:50:13.489817009+02:00","level":"INFO","msg":"handler: closed","stream_id":"oxuulmga"}
+{"time":"2025-09-28T20:50:13.489875574+02:00","level":"INFO","msg":"sender: closed","stream_id":"oxuulmga"}
+{"time":"2025-09-28T20:50:13.489868994+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"oxuulmga"}
+{"time":"2025-09-28T20:50:13.491681595+02:00","level":"INFO","msg":"stream: closed","id":"oxuulmga"}

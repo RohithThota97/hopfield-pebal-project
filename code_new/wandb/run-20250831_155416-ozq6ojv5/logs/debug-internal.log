@@ -1,0 +1,20 @@
+{"time":"2025-08-31T15:54:16.388926698+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250831_155416-ozq6ojv5/logs/debug-core.log"}
+{"time":"2025-08-31T15:54:16.644591871+02:00","level":"INFO","msg":"stream: created new stream","id":"ozq6ojv5"}
+{"time":"2025-08-31T15:54:16.644668009+02:00","level":"INFO","msg":"stream: started","id":"ozq6ojv5"}
+{"time":"2025-08-31T15:54:16.644703975+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"ozq6ojv5"}
+{"time":"2025-08-31T15:54:16.644775725+02:00","level":"INFO","msg":"handler: started","stream_id":"ozq6ojv5"}
+{"time":"2025-08-31T15:54:16.644802712+02:00","level":"INFO","msg":"sender: started","stream_id":"ozq6ojv5"}
+{"time":"2025-08-31T15:54:16.921629136+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-31T19:35:13.233857843+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-pebal-aligned/ozq6ojv5/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-09-01T03:34:27.143300274+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-pebal-aligned/ozq6ojv5/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-09-01T04:01:08.679270496+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-pebal-aligned/ozq6ojv5/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-09-01T11:38:40.071257369+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-pebal-aligned/ozq6ojv5/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-09-01T14:07:26.475267122+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-01T14:07:26.477518552+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-01T14:07:27.362791091+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-01T14:07:27.46644014+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console lines 5515-5552","runtime_seconds":0.103366515}],"total_operations":1}}
+{"time":"2025-09-01T14:07:27.594788797+02:00","level":"INFO","msg":"stream: closing","id":"ozq6ojv5"}
+{"time":"2025-09-01T14:07:27.594803015+02:00","level":"INFO","msg":"handler: closed","stream_id":"ozq6ojv5"}
+{"time":"2025-09-01T14:07:27.594815229+02:00","level":"INFO","msg":"sender: closed","stream_id":"ozq6ojv5"}
+{"time":"2025-09-01T14:07:27.594810331+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"ozq6ojv5"}
+{"time":"2025-09-01T14:07:27.596473896+02:00","level":"INFO","msg":"stream: closed","id":"ozq6ojv5"}

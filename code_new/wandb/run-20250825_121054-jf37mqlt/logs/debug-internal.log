@@ -1,0 +1,15 @@
+{"time":"2025-08-25T12:10:54.437270075+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250825_121054-jf37mqlt/logs/debug-core.log"}
+{"time":"2025-08-25T12:10:54.690662736+02:00","level":"INFO","msg":"stream: created new stream","id":"jf37mqlt"}
+{"time":"2025-08-25T12:10:54.690727654+02:00","level":"INFO","msg":"stream: started","id":"jf37mqlt"}
+{"time":"2025-08-25T12:10:54.69075546+02:00","level":"INFO","msg":"handler: started","stream_id":"jf37mqlt"}
+{"time":"2025-08-25T12:10:54.69076935+02:00","level":"INFO","msg":"sender: started","stream_id":"jf37mqlt"}
+{"time":"2025-08-25T12:10:54.690852168+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"jf37mqlt"}
+{"time":"2025-08-25T12:10:54.934567913+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-25T12:53:26.277787094+02:00","level":"INFO","msg":"stream: closing","id":"jf37mqlt"}
+{"time":"2025-08-25T12:53:26.277955328+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-25T12:53:26.278404467+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-25T12:53:26.707852485+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-25T12:53:27.086824446+02:00","level":"INFO","msg":"handler: closed","stream_id":"jf37mqlt"}
+{"time":"2025-08-25T12:53:27.086901541+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jf37mqlt"}
+{"time":"2025-08-25T12:53:27.086955761+02:00","level":"INFO","msg":"sender: closed","stream_id":"jf37mqlt"}
+{"time":"2025-08-25T12:53:27.089055501+02:00","level":"INFO","msg":"stream: closed","id":"jf37mqlt"}

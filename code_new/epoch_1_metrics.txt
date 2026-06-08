@@ -1,0 +1,34 @@
+\begin{table}[htbp]
+\centering
+\caption{Memory requirements}
+\label{tab:memory_requirements}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Component} & \textbf{Parameters} & \textbf{Memory (MB)} \\
+\midrule
+Feature Extractor & 140261776 & 535.1 \\
+Projection Head & 820864 & 3.1 \\
+Segmentation Head & 5909524 & 22.5 \\
+Id Memory & 12800000 & 48.8 \\
+Aux Memory & 12800000 & 48.8 \\
+Activation Maps & - & 20.0 \\
+Total Training & 172592164 & 678.4 \\
+Total Inference & 172592164 & 580.7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Inference time breakdown}
+\label{tab:inference_time}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Component} & \textbf{Time (ms)} & \textbf{Percentage (\%)} \\
+\midrule
+Preprocessing & 0.2 & 0.0 \\
+Feature Extraction & 2401.2 & 85.8 \\
+Projection & 38.8 & 1.4 \\
+Energy Computation & 0.0 & 0.0 \\
+Post Processing & 4.6 & 0.2 \\
+Total & 2798.9 & 100.0 \\

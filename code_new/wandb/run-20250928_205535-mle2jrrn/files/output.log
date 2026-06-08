@@ -1,0 +1,14 @@
+INFO:__main__:AblationStudyManager initialized on cuda
+INFO:__main__:Results will be saved to: ./ablation_results
+INFO:__main__:Starting comprehensive ablation studies...
+ERROR:__main__:Ablation study failed: our proj. only works upon the pretrained weight
+Traceback (most recent call last):
+  File "tester.py", line 2406, in main
+    results = manager.run_all_ablation_studies()
+  File "tester.py", line 297, in run_all_ablation_studies
+    train_loader, val_loader = self._load_datasets()
+  File "tester.py", line 734, in _load_datasets
+    engine_instance = Engine(
+  File "/home/ha51dybi/PEBAL/code/engine/engine.py", line 34, in __init__
+    assert continue_state_object is not None, "our proj. only works upon the pretrained weight"
+AssertionError: our proj. only works upon the pretrained weight

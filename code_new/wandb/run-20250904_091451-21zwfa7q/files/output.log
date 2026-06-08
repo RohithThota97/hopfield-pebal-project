@@ -1,0 +1,267 @@
+Warning: Could not load checkpoint: Weights only load failed. This file can still be loaded, to do so you have two options
+	(1) Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy.core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([scalar])` to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+Registered hook on aspp layer
+2025-09-04 09:14:54,952 - INFO -
+Building memory with β = 32...
+2025-09-04 09:14:54,953 - INFO - Building memories from loader...
+ASPP feature shape: torch.Size([1, 1280, 64, 64])
+Projected feature shape: torch.Size([1, 256, 64, 64])
+2025-09-04 09:14:55,766 - INFO - Starting redesigned hybrid memory building over full dataset...
+Collecting Features (Redesigned Hybrid): 100%|██████████████████████████████████████| 445/445 [03:48<00:00,  1.95it/s]
+2025-09-04 09:18:43,860 - INFO - Label statistics - Found 254 in 265 batches, 255 in 445 batches
+2025-09-04 09:18:43,861 - INFO - Skipped 2493777 pixels with label 255 (ignore class)
+/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+2025-09-04 09:22:00,265 - INFO - Final memory ratio (AUX:ID): 0.82
+2025-09-04 09:22:00,272 - INFO - Memory separation - Ratio: 0.697, Cross-similarity: 0.019, Overlap: 0.000
+2025-09-04 09:22:00,272 - INFO - ID spread: 0.519, OOD spread: 0.862, Distance: 0.963
+2025-09-04 09:22:06,207 - INFO - Results saved automatically.
+2025-09-04 09:22:06,211 - INFO - Memory building completed in 430.4 seconds
+2025-09-04 09:22:06,259 - INFO - Memory sizes - ID: 219088, OOD: 180424
+2025-09-04 09:22:06,261 - INFO - Memory norms - ID: 1.0000, OOD: 1.0000
+2025-09-04 09:22:06,318 - INFO - Energy check - Mean: -0.8965
+2025-09-04 09:22:06,323 - WARNING - Negative energies detected—check normalization!
+2025-09-04 09:22:25,862 - INFO - Monitoring - ID Mean: -0.655, OOD Mean: -0.313, Separation: 0.343
+2025-09-04 09:22:25,862 - WARNING - Low initial ID/OOD separation - check memory quality.
+2025-09-04 09:22:25,862 - INFO - HopfieldBoostingManager initialized with aligned beta=32, lambda_ood=0.5
+2025-09-04 09:22:25,863 - INFO - Memory built with β=32:
+2025-09-04 09:22:25,863 - INFO -  ID: 219088, AUX: 180424, Ratio: 0.82
+2025-09-04 09:22:30,112 - INFO - PixelWiseHopfieldTrainer initialization complete with β=32!
+
+================================================================================
+STARTING TRAINING WITH β CROSS-VAL AND SPATIAL SCALING
+================================================================================
+2025-09-04 09:22:30,113 - INFO -
+Starting Epoch 1/100
+2025-09-04 09:22:30,114 - INFO - ============================================================
+2025-09-04 09:22:30,115 - INFO -
+Updating Hopfield boosting weights at epoch 1...
+2025-09-04 09:22:51,453 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:22:51,479 - INFO - Weights updated successfully
+Training Epoch 1:   0%|                                                                       | 0/445 [00:00<?, ?it/s]2025-09-04 09:22:54,647 - INFO - Step 0: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  16  18 255], OOD(254) count=0, Ignore(255) count=1303817, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-04 09:22:55,168 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 1:   0%|                            | 1/445 [00:03<28:19,  3.83s/it, L_CE=3.4241, L_OOD=0.0000, β=32.0]2025-09-04 09:22:55,694 - INFO - Step 1: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  18 255], OOD(254) count=0, Ignore(255) count=819212, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   0%|▏                           | 2/445 [00:04<15:20,  2.08s/it, L_CE=3.5740, L_OOD=0.0000, β=32.0]2025-09-04 09:22:56,651 - INFO - Step 2: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  18 255], OOD(254) count=0, Ignore(255) count=1342371, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   1%|▏                           | 3/445 [00:05<11:27,  1.56s/it, L_CE=3.3514, L_OOD=0.0000, β=32.0]2025-09-04 09:22:57,579 - INFO - Step 3: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  14  15  17  18 254
+ 255], OOD(254) count=51707, Ignore(255) count=900762, is_ood=tensor([False, False, False,  True,  True, False, False, False])
+Training Epoch 1:   1%|▏                          | 4/445 [00:06<10:07,  1.38s/it, L_CE=3.1813, L_OOD=-0.1324, β=32.0]2025-09-04 09:22:58,560 - INFO - Step 4: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14  18 255], OOD(254) count=0, Ignore(255) count=910664, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   1%|▎                           | 5/445 [00:07<08:36,  1.17s/it, L_CE=3.1220, L_OOD=0.0000, β=32.0]2025-09-04 09:22:59,362 - INFO - Step 5: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  14  15  17  18 255], OOD(254) count=0, Ignore(255) count=754897, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   1%|▍                           | 6/445 [00:08<07:38,  1.05s/it, L_CE=2.9642, L_OOD=0.0000, β=32.0]2025-09-04 09:23:00,098 - INFO - Step 6: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  18 254 255], OOD(254) count=5780, Ignore(255) count=1049207, is_ood=tensor([ True, False, False, False, False, False, False, False])
+Training Epoch 1:   2%|▍                          | 7/445 [00:09<06:57,  1.05it/s, L_CE=2.6694, L_OOD=-0.0995, β=32.0]2025-09-04 09:23:00,862 - INFO - Step 7: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  18 255], OOD(254) count=0, Ignore(255) count=828616, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   2%|▌                           | 8/445 [00:09<06:26,  1.13it/s, L_CE=2.5108, L_OOD=0.0000, β=32.0]2025-09-04 09:23:01,709 - INFO - Step 8: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  17  18
+ 254 255], OOD(254) count=301360, Ignore(255) count=1146032, is_ood=tensor([False,  True, False, False, False, False, False, False])
+Training Epoch 1:   2%|▌                          | 9/445 [00:10<06:22,  1.14it/s, L_CE=2.3355, L_OOD=-0.1037, β=32.0]2025-09-04 09:23:02,478 - INFO - Step 9: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14  17  18 255], OOD(254) count=0, Ignore(255) count=464579, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:  11%|██▉                       | 50/445 [00:30<03:07,  2.11it/s, L_CE=1.5426, L_OOD=-0.1357, β=32.0]2025-09-04 09:23:22,056 - INFO - Step 50 Loss Debug:
+2025-09-04 09:23:22,057 - INFO -  CE: 1.9478
+2025-09-04 09:23:22,058 - INFO -  OOD: -0.1117
+2025-09-04 09:23:22,059 - INFO -  β: 32.00
+2025-09-04 09:23:22,059 - INFO -  ID: 26527, OOD(254): 1271
+Training Epoch 1:  22%|█████▊                    | 100/445 [00:53<02:44,  2.09it/s, L_CE=1.6116, L_OOD=0.0000, β=32.0]2025-09-04 09:23:45,809 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 1:  34%|████████▍                | 150/445 [01:18<02:22,  2.07it/s, L_CE=1.4429, L_OOD=-0.1376, β=32.0]2025-09-04 09:24:10,440 - INFO - Step 150 Loss Debug:
+2025-09-04 09:24:10,441 - INFO -  CE: 1.6951
+2025-09-04 09:24:10,442 - INFO -  OOD: -0.1190
+2025-09-04 09:24:10,443 - INFO -  β: 32.00
+2025-09-04 09:24:10,443 - INFO -  ID: 26898, OOD(254): 1464
+Training Epoch 1:  45%|███████████▏             | 200/445 [01:42<02:00,  2.04it/s, L_CE=1.7083, L_OOD=-0.1553, β=32.0]2025-09-04 09:24:34,917 - INFO - Step 200 Loss Debug:
+2025-09-04 09:24:34,918 - INFO -  CE: 1.7348
+2025-09-04 09:24:34,919 - INFO -  OOD: -0.1101
+2025-09-04 09:24:34,919 - INFO -  β: 32.00
+2025-09-04 09:24:34,920 - INFO -  ID: 28292, OOD(254): 1254
+Training Epoch 1:  56%|██████████████▌           | 250/445 [02:07<01:36,  2.02it/s, L_CE=1.2047, L_OOD=0.0000, β=32.0]2025-09-04 09:24:59,833 - INFO - Step 250 Loss Debug:
+2025-09-04 09:24:59,834 - INFO -  CE: 1.6119
+2025-09-04 09:24:59,835 - INFO -  OOD: -0.1458
+2025-09-04 09:24:59,835 - INFO -  β: 32.00
+2025-09-04 09:24:59,836 - INFO -  ID: 26451, OOD(254): 1330
+Training Epoch 1:  67%|█████████████████▌        | 300/445 [02:32<01:11,  2.03it/s, L_CE=1.5653, L_OOD=0.0000, β=32.0]2025-09-04 09:25:24,555 - INFO - Step 300 Loss Debug:
+2025-09-04 09:25:24,556 - INFO -  CE: 1.3995
+2025-09-04 09:25:24,556 - INFO -  OOD: -0.2336
+2025-09-04 09:25:24,556 - INFO -  β: 32.00
+2025-09-04 09:25:24,556 - INFO -  ID: 29045, OOD(254): 1
+Training Epoch 1:  90%|███████████████████████▎  | 400/445 [03:22<00:22,  2.01it/s, L_CE=1.2426, L_OOD=0.0000, β=32.0]2025-09-04 09:26:14,579 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 1: 100%|█████████████████████████| 445/445 [03:45<00:00,  1.97it/s, L_CE=1.5497, L_OOD=-0.2001, β=32.0]
+2025-09-04 09:26:37,358 - INFO - Updated beta to 11.87 (exp decay)
+2025-09-04 09:27:00,568 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:27:00,569 - INFO - Weights updated successfully
+2025-09-04 09:27:00,569 - INFO - Advanced epoch 1 - Updated beta: 11.87
+2025-09-04 09:27:00,569 - INFO - Epoch 1 - Avg CE: 1.6187, Avg OOD: -0.0890, β: 32
+2025-09-04 09:27:00,679 - INFO -
+Starting Epoch 2/100
+2025-09-04 09:27:00,680 - INFO - ============================================================
+2025-09-04 09:27:00,682 - INFO -
+Updating Hopfield boosting weights at epoch 2...
+2025-09-04 09:27:27,381 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:27:27,382 - INFO - Weights updated successfully
+Training Epoch 2:  12%|███▏                      | 55/445 [00:29<03:10,  2.05it/s, L_CE=2.0539, L_OOD=-0.2262, β=32.0]2025-09-04 09:27:57,234 - INFO - Step 500 Loss Debug:
+2025-09-04 09:27:57,234 - INFO -  CE: 1.1535
+2025-09-04 09:27:57,234 - INFO -  OOD: -0.2228
+2025-09-04 09:27:57,237 - INFO -  β: 32.00
+2025-09-04 09:27:57,238 - INFO -  ID: 27119, OOD(254): 3
+Training Epoch 2:  35%|█████████                 | 155/445 [01:18<02:25,  2.00it/s, L_CE=1.4708, L_OOD=0.0000, β=32.0]2025-09-04 09:28:46,712 - INFO - Step 600 Loss Debug:
+2025-09-04 09:28:46,712 - INFO -  CE: 1.6776
+2025-09-04 09:28:46,713 - INFO -  OOD: -0.2111
+2025-09-04 09:28:46,713 - INFO -  β: 32.00
+2025-09-04 09:28:46,713 - INFO -  ID: 29994, OOD(254): 281
+Training Epoch 2:  46%|███████████▌             | 205/445 [01:44<02:01,  1.98it/s, L_CE=1.0792, L_OOD=-0.1821, β=32.0]2025-09-04 09:29:11,916 - INFO - Step 650 Loss Debug:
+2025-09-04 09:29:11,917 - INFO -  CE: 1.3628
+2025-09-04 09:29:11,917 - INFO -  OOD: -0.2536
+2025-09-04 09:29:11,921 - INFO -  β: 32.00
+2025-09-04 09:29:11,921 - INFO -  ID: 27790, OOD(254): 3
+Training Epoch 2:  57%|██████████████▉           | 255/445 [02:09<01:35,  1.98it/s, L_CE=1.3448, L_OOD=0.0000, β=32.0]2025-09-04 09:29:37,273 - INFO - Step 700 Loss Debug:
+2025-09-04 09:29:37,273 - INFO -  CE: 1.8450
+2025-09-04 09:29:37,274 - INFO -  OOD: -0.1926
+2025-09-04 09:29:37,275 - INFO -  β: 32.00
+2025-09-04 09:29:37,275 - INFO -  ID: 26274, OOD(254): 36
+Training Epoch 2:  80%|███████████████████▉     | 355/445 [02:59<00:44,  2.01it/s, L_CE=1.5092, L_OOD=-0.2026, β=32.0]2025-09-04 09:30:27,727 - INFO - Step 800 Loss Debug:
+2025-09-04 09:30:27,727 - INFO -  CE: 1.7875
+2025-09-04 09:30:27,728 - INFO -  OOD: -0.1743
+2025-09-04 09:30:27,728 - INFO -  β: 32.00
+2025-09-04 09:30:27,728 - INFO -  ID: 27275, OOD(254): 784
+Training Epoch 2: 100%|██████████████████████████| 445/445 [03:44<00:00,  1.98it/s, L_CE=1.3887, L_OOD=0.0000, β=32.0]
+2025-09-04 09:31:12,037 - INFO - Updated beta to 11.74 (exp decay)
+2025-09-04 09:31:35,953 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:31:35,953 - INFO - Weights updated successfully
+2025-09-04 09:31:35,954 - INFO - Advanced epoch 2 - Updated beta: 11.74
+2025-09-04 09:31:35,954 - INFO - Epoch 2 - Avg CE: 1.4417, Avg OOD: -0.1128, β: 32
+2025-09-04 09:31:36,064 - INFO -
+Starting Epoch 3/100
+2025-09-04 09:31:36,064 - INFO - ============================================================
+2025-09-04 09:31:36,066 - INFO -
+Updating Hopfield boosting weights at epoch 3...
+2025-09-04 09:32:01,499 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:32:01,500 - INFO - Weights updated successfully
+Training Epoch 3:   2%|▌                         | 10/445 [00:07<03:44,  1.94it/s, L_CE=1.0706, L_OOD=-0.1872, β=32.0]2025-09-04 09:32:09,297 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 3:  13%|███▌                      | 60/445 [00:31<03:08,  2.05it/s, L_CE=1.3001, L_OOD=-0.2160, β=32.0]2025-09-04 09:32:33,932 - INFO - Step 950 Loss Debug:
+2025-09-04 09:32:33,933 - INFO -  CE: 1.1345
+2025-09-04 09:32:33,933 - INFO -  OOD: -0.2305
+2025-09-04 09:32:33,933 - INFO -  β: 32.00
+2025-09-04 09:32:33,933 - INFO -  ID: 26355, OOD(254): 160
+Training Epoch 3:  25%|██████▏                  | 110/445 [00:56<02:46,  2.01it/s, L_CE=1.4017, L_OOD=-0.1467, β=32.0]2025-09-04 09:32:58,367 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 3:  36%|████████▉                | 160/445 [01:21<02:24,  1.97it/s, L_CE=1.8548, L_OOD=-0.1736, β=32.0]2025-09-04 09:33:23,511 - INFO - Step 1050 Loss Debug:
+2025-09-04 09:33:23,512 - INFO -  CE: 1.6274
+2025-09-04 09:33:23,513 - INFO -  OOD: -0.2338
+2025-09-04 09:33:23,513 - INFO -  β: 32.00
+2025-09-04 09:33:23,514 - INFO -  ID: 29135, OOD(254): 30
+Training Epoch 3:  47%|███████████▊             | 210/445 [01:46<01:59,  1.97it/s, L_CE=1.3825, L_OOD=-0.1331, β=32.0]2025-09-04 09:33:48,812 - INFO - Step 1100 Loss Debug:
+2025-09-04 09:33:48,813 - INFO -  CE: 1.1814
+2025-09-04 09:33:48,814 - INFO -  OOD: -0.2546
+2025-09-04 09:33:48,814 - INFO -  β: 32.00
+2025-09-04 09:33:48,814 - INFO -  ID: 25495, OOD(254): 43
+Training Epoch 3:  58%|███████████████▏          | 260/445 [02:12<01:32,  1.99it/s, L_CE=1.3758, L_OOD=0.0000, β=32.0]2025-09-04 09:34:14,084 - INFO - Step 1150 Loss Debug:
+2025-09-04 09:34:14,086 - INFO -  CE: 1.7054
+2025-09-04 09:34:14,087 - INFO -  OOD: -0.1366
+2025-09-04 09:34:14,087 - INFO -  β: 32.00
+2025-09-04 09:34:14,087 - INFO -  ID: 26499, OOD(254): 365
+Training Epoch 3:  70%|█████████████████▍       | 310/445 [02:37<01:08,  1.96it/s, L_CE=1.1324, L_OOD=-0.2583, β=32.0]2025-09-04 09:34:39,435 - INFO - Step 1200 Loss Debug:
+2025-09-04 09:34:39,436 - INFO -  CE: 1.1476
+2025-09-04 09:34:39,437 - INFO -  OOD: -0.1829
+2025-09-04 09:34:39,438 - INFO -  β: 32.00
+2025-09-04 09:34:39,438 - INFO -  ID: 25693, OOD(254): 359
+Training Epoch 3:  92%|███████████████████████  | 410/445 [03:27<00:17,  2.02it/s, L_CE=1.3518, L_OOD=-0.2577, β=32.0]2025-09-04 09:35:29,407 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 3: 100%|█████████████████████████| 445/445 [03:44<00:00,  1.98it/s, L_CE=1.6911, L_OOD=-0.2672, β=32.0]
+2025-09-04 09:35:46,355 - INFO - Updated beta to 11.61 (exp decay)
+2025-09-04 09:36:09,549 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:36:09,550 - INFO - Weights updated successfully
+2025-09-04 09:36:09,551 - INFO - Advanced epoch 3 - Updated beta: 11.61
+2025-09-04 09:36:09,551 - INFO - Epoch 3 - Avg CE: 1.4031, Avg OOD: -0.1235, β: 32
+2025-09-04 09:36:09,661 - INFO -
+Starting Epoch 4/100
+2025-09-04 09:36:09,662 - INFO - ============================================================
+2025-09-04 09:36:09,664 - INFO -
+Updating Hopfield boosting weights at epoch 4...
+2025-09-04 09:36:32,075 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:36:32,076 - INFO - Weights updated successfully
+Training Epoch 4:   3%|▉                          | 15/445 [00:10<03:38,  1.97it/s, L_CE=0.8290, L_OOD=0.0000, β=32.0]2025-09-04 09:36:42,627 - INFO - Step 1350 Loss Debug:
+2025-09-04 09:36:42,628 - INFO -  CE: 1.0552
+2025-09-04 09:36:42,629 - INFO -  OOD: -0.1639
+2025-09-04 09:36:42,629 - INFO -  β: 32.00
+2025-09-04 09:36:42,630 - INFO -  ID: 27699, OOD(254): 1013
+Training Epoch 4:  15%|███▉                       | 65/445 [00:34<03:05,  2.05it/s, L_CE=1.3556, L_OOD=0.0000, β=32.0]2025-09-04 09:37:06,792 - INFO - Step 1400 Loss Debug:
+2025-09-04 09:37:06,793 - INFO -  CE: 1.3127
+2025-09-04 09:37:06,793 - INFO -  OOD: -0.2228
+2025-09-04 09:37:06,794 - INFO -  β: 32.00
+2025-09-04 09:37:06,794 - INFO -  ID: 29740, OOD(254): 60
+Training Epoch 4:  37%|█████████▎               | 165/445 [01:23<02:22,  1.97it/s, L_CE=1.6159, L_OOD=-0.2131, β=32.0]2025-09-04 09:37:56,558 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 4:  60%|██████████████▉          | 265/445 [02:14<01:32,  1.95it/s, L_CE=1.1410, L_OOD=-0.1924, β=32.0]2025-09-04 09:38:47,353 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 4:  71%|██████████████████▍       | 315/445 [02:40<01:04,  2.01it/s, L_CE=1.0068, L_OOD=0.0000, β=32.0]2025-09-04 09:39:12,708 - INFO - Step 1650 Loss Debug:
+2025-09-04 09:39:12,709 - INFO -  CE: 1.2180
+2025-09-04 09:39:12,709 - INFO -  OOD: -0.2811
+2025-09-04 09:39:12,710 - INFO -  β: 32.00
+2025-09-04 09:39:12,710 - INFO -  ID: 28461, OOD(254): 465
+Training Epoch 4:  82%|████████████████████▌    | 365/445 [03:05<00:39,  2.01it/s, L_CE=1.2546, L_OOD=-0.3126, β=32.0]2025-09-04 09:39:37,792 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 4:  93%|███████████████████████▎ | 415/445 [03:30<00:14,  2.02it/s, L_CE=1.1772, L_OOD=-0.1817, β=32.0]2025-09-04 09:40:02,600 - INFO - Step 1750 Loss Debug:
+2025-09-04 09:40:02,600 - INFO -  CE: 1.2783
+2025-09-04 09:40:02,602 - INFO -  OOD: -0.2562
+2025-09-04 09:40:02,603 - INFO -  β: 32.00
+2025-09-04 09:40:02,603 - INFO -  ID: 27663, OOD(254): 277
+Training Epoch 4: 100%|██████████████████████████| 445/445 [03:45<00:00,  1.98it/s, L_CE=1.5984, L_OOD=0.0000, β=32.0]
+2025-09-04 09:40:17,146 - INFO - Updated beta to 11.48 (exp decay)
+2025-09-04 09:40:42,061 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:40:42,062 - INFO - Weights updated successfully
+2025-09-04 09:40:42,062 - INFO - Advanced epoch 4 - Updated beta: 11.48
+2025-09-04 09:40:42,062 - INFO - Epoch 4 - Avg CE: 1.3867, Avg OOD: -0.1264, β: 32
+2025-09-04 09:40:42,173 - INFO -
+Starting Epoch 5/100
+2025-09-04 09:40:42,174 - INFO - ============================================================
+2025-09-04 09:40:42,176 - INFO -
+Updating Hopfield boosting weights at epoch 5...
+2025-09-04 09:41:04,151 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:41:04,152 - INFO - Weights updated successfully
+Training Epoch 5:   4%|█▏                        | 20/445 [00:11<03:26,  2.06it/s, L_CE=1.1952, L_OOD=-0.1778, β=32.0]2025-09-04 09:41:16,379 - INFO - Step 1800 Loss Debug:
+2025-09-04 09:41:16,379 - INFO -  CE: 1.5027
+2025-09-04 09:41:16,380 - INFO -  OOD: -0.2309
+2025-09-04 09:41:16,387 - INFO -  β: 32.00
+2025-09-04 09:41:16,387 - INFO -  ID: 29610, OOD(254): 20
+Training Epoch 5:  16%|████                      | 70/445 [00:36<03:04,  2.04it/s, L_CE=1.4440, L_OOD=-0.1713, β=32.0]2025-09-04 09:41:41,358 - INFO - Step 1850 Loss Debug:
+2025-09-04 09:41:41,358 - INFO -  CE: 1.2160
+2025-09-04 09:41:41,360 - INFO -  OOD: -0.2271
+2025-09-04 09:41:41,360 - INFO -  β: 32.00
+2025-09-04 09:41:41,360 - INFO -  ID: 26665, OOD(254): 561
+Training Epoch 5:  27%|██████▋                  | 120/445 [01:02<02:43,  1.98it/s, L_CE=1.2881, L_OOD=-0.1863, β=32.0]2025-09-04 09:42:06,653 - INFO - Step 1900 Loss Debug:
+2025-09-04 09:42:06,654 - INFO -  CE: 1.4959
+2025-09-04 09:42:06,654 - INFO -  OOD: -0.1782
+2025-09-04 09:42:06,654 - INFO -  β: 32.00
+2025-09-04 09:42:06,655 - INFO -  ID: 23967, OOD(254): 312
+Training Epoch 5:  38%|█████████▌               | 170/445 [01:27<02:19,  1.98it/s, L_CE=1.1977, L_OOD=-0.2881, β=32.0]2025-09-04 09:42:31,881 - INFO - Step 1950 Loss Debug:
+2025-09-04 09:42:31,882 - INFO -  CE: 1.1993
+2025-09-04 09:42:31,883 - INFO -  OOD: -0.2539
+2025-09-04 09:42:31,884 - INFO -  β: 32.00
+2025-09-04 09:42:31,884 - INFO -  ID: 22112, OOD(254): 19
+Training Epoch 5:  49%|████████████▊             | 220/445 [01:52<01:53,  1.97it/s, L_CE=1.2797, L_OOD=0.0000, β=32.0]2025-09-04 09:42:57,295 - INFO - Step 2000 Loss Debug:
+2025-09-04 09:42:57,296 - INFO -  CE: 1.3317
+2025-09-04 09:42:57,297 - INFO -  OOD: -0.2989
+2025-09-04 09:42:57,297 - INFO -  β: 32.00
+2025-09-04 09:42:57,297 - INFO -  ID: 29181, OOD(254): 305
+Training Epoch 5:  72%|██████████████████▋       | 320/445 [02:43<01:02,  1.98it/s, L_CE=1.4832, L_OOD=0.0000, β=32.0]2025-09-04 09:43:47,972 - INFO - Step 2100 Loss Debug:
+2025-09-04 09:43:47,973 - INFO -  CE: 1.5537
+2025-09-04 09:43:47,973 - INFO -  OOD: -0.1355
+2025-09-04 09:43:47,974 - INFO -  β: 32.00
+2025-09-04 09:43:47,974 - INFO -  ID: 28358, OOD(254): 837
+Training Epoch 5:  94%|████████████████████████▌ | 420/445 [03:33<00:12,  2.04it/s, L_CE=1.0093, L_OOD=0.0000, β=32.0]2025-09-04 09:44:37,738 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 5: 100%|█████████████████████████| 445/445 [03:45<00:00,  1.97it/s, L_CE=1.1415, L_OOD=-0.1540, β=32.0]
+2025-09-04 09:44:49,722 - INFO - Updated beta to 11.36 (exp decay)
+2025-09-04 09:45:15,873 - WARNING - Negative mean energy—verify E_b formula/signs
+2025-09-04 09:45:15,874 - INFO - Weights updated successfully
+2025-09-04 09:45:15,874 - INFO - Advanced epoch 5 - Updated beta: 11.36
+2025-09-04 09:45:15,874 - INFO - Epoch 5 - Avg CE: 1.3900, Avg OOD: -0.1241, β: 32
+2025-09-04 09:45:15,875 - INFO -
+Running evaluation with β=32...
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([219088, 256])
+AUX memory shape: torch.Size([180424, 256])
+Traceback (most recent call last):
+  File "run_training.py", line 584, in <module>
+    main()
+  File "run_training.py", line 582, in main
+    trainer.train()
+  File "run_training.py", line 496, in train
+    eval_results = self.evaluator.evaluate(
+  File "/home/ha51dybi/PEBAL/code/ood_evaluator.py", line 159, in evaluate
+    energy_calc = PixelWiseHopfieldEnergyCalculator.create_border_energy(
+TypeError: create_border_energy() got an unexpected keyword argument 'beta_border'

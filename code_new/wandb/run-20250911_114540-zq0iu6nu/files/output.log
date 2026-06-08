@@ -1,0 +1,62 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Keeping backbone FROZEN for ID segmentation
+INFO:__main__:Trainable parameters: 333,076
+INFO:__main__:Total parameters: 137,437,012
+INFO:__main__:
+============================================================
+INFO:__main__:RUNNING DIAGNOSTIC TESTS
+INFO:__main__:============================================================
+INFO:__main__:
+1. Testing pretrained feature extraction...
+INFO:__main__:   Feature shape: torch.Size([1, 1280, 64, 64])
+INFO:__main__:   Feature mean: 0.0527, std: 0.1049
+INFO:__main__:   ✓ Feature extraction working correctly
+INFO:__main__:
+2. Testing segmentation head initialization...
+INFO:__main__:   Logits shape: torch.Size([1, 20, 32, 64])
+INFO:__main__:   Mean probability per class: tensor([0.1055, 0.1062, 0.0072, 0.0312, 0.0161, 0.0896, 0.0117, 0.0218, 0.0035,
+        0.0259, 0.0177, 0.0078, 0.0147, 0.0066, 0.0325, 0.1582, 0.1137, 0.1018,
+        0.0616, 0.0665], device='cuda:0')
+INFO:__main__:   Expected uniform: ~0.0526
+INFO:__main__:   ✓ Segmentation head initialization looks good
+INFO:__main__:
+3. Testing data loader labels...
+INFO:__main__:   Unique labels in first batch: [0, 1, 2, 5, 6, 7, 8, 9, 10, 11, 13, 16, 254, 255]
+INFO:__main__:   ✓ Found 12 ID classes in batch
+INFO:__main__:
+============================================================
+INFO:__main__:DIAGNOSTIC TESTS COMPLETE
+INFO:__main__:============================================================
+
+INFO:__main__:Initializing training components...
+INFO:__main__:Training components initialized
+
+================================================================================
+STARTING ID-FOCUSED TRAINING WITH FROZEN BACKBONE
+Mode: MIXED (Cityscapes + COCO)
+================================================================================
+INFO:__main__:
+============================================================
+INFO:__main__:Epoch 1/50
+INFO:__main__:============================================================
+Training Epoch 1:   0%|                                                                                 | 0/2226 [00:00<?, ?it/s]ERROR:__main__:Loss computation error: weight tensor should be defined either for all or no classes
+Training Epoch 1:   0%|                                                                                 | 0/2226 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 799, in <module>
+    main()
+  File "run_training.py", line 796, in main
+    trainer.train()
+  File "run_training.py", line 499, in train
+    self.scaler.scale(loss_ce).backward()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/autograd/graph.py", line 769, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn

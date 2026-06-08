@@ -1,0 +1,22 @@
+2025-08-31 15:13:44,118 INFO    MainThread:161278 [wandb_setup.py:_flush():81] Current SDK version is 0.20.1
+2025-08-31 15:13:44,119 INFO    MainThread:161278 [wandb_setup.py:_flush():81] Configure stats pid to 161278
+2025-08-31 15:13:44,119 INFO    MainThread:161278 [wandb_setup.py:_flush():81] Loading settings from /home/ha51dybi/.config/wandb/settings
+2025-08-31 15:13:44,119 INFO    MainThread:161278 [wandb_setup.py:_flush():81] Loading settings from /home/ha51dybi/PEBAL/code/wandb/settings
+2025-08-31 15:13:44,119 INFO    MainThread:161278 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-08-31 15:13:44,119 INFO    MainThread:161278 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /home/ha51dybi/PEBAL/code/wandb/run-20250831_151344-858b7pr8/logs/debug.log
+2025-08-31 15:13:44,119 INFO    MainThread:161278 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /home/ha51dybi/PEBAL/code/wandb/run-20250831_151344-858b7pr8/logs/debug-internal.log
+2025-08-31 15:13:44,119 INFO    MainThread:161278 [wandb_init.py:init():831] calling init triggers
+2025-08-31 15:13:44,119 INFO    MainThread:161278 [wandb_init.py:init():836] wandb.init called with sweep_config: {}
+config: {'model_path': '/home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth', 'checkpoint_dir': '/home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_pebal_aligned', 'num_classes': 19, 'projection_dim': 128, 'resize_resolution': (512, 512), 'learning_rate': 0.1, 'weight_decay': 0.0005, 'lambda_ood': 0.5, 'total_epochs': 100, 'batch_size': 2, 'pixel_beta_inference': 4.0, 'pixel_beta_sampling': 4.0, 'use_beta_scheduling': False, 'beta_start': 4.0, 'beta_end': 4.0, 'beta_fixed_loss': 4.0, 'boosting_update_epoch_freq': 1, 'id_memory_size': 10000, 'aux_memory_size': 10000, 'num_workers': 4, '_wandb': {}}
+2025-08-31 15:13:44,119 INFO    MainThread:161278 [wandb_init.py:init():872] starting backend
+2025-08-31 15:13:44,349 INFO    MainThread:161278 [wandb_init.py:init():875] sending inform_init request
+2025-08-31 15:13:44,406 INFO    MainThread:161278 [wandb_init.py:init():883] backend started and connected
+2025-08-31 15:13:44,408 INFO    MainThread:161278 [wandb_init.py:init():956] updated telemetry
+2025-08-31 15:13:44,433 INFO    MainThread:161278 [wandb_init.py:init():980] communicating run to backend with 90.0 second timeout
+2025-08-31 15:13:44,972 INFO    MainThread:161278 [wandb_init.py:init():1032] starting run threads in backend
+2025-08-31 15:13:45,087 INFO    MainThread:161278 [wandb_run.py:_console_start():2453] atexit reg
+2025-08-31 15:13:45,087 INFO    MainThread:161278 [wandb_run.py:_redirect():2301] redirect: wrap_raw
+2025-08-31 15:13:45,087 INFO    MainThread:161278 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-08-31 15:13:45,087 INFO    MainThread:161278 [wandb_run.py:_redirect():2393] Redirects installed.
+2025-08-31 15:13:45,091 INFO    MainThread:161278 [wandb_init.py:init():1078] run started, returning control to user process
+2025-08-31 15:27:00,099 INFO    MsgRouterThr:161278 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 2 handles.

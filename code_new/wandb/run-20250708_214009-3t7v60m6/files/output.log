@@ -1,0 +1,153 @@
+2025-07-08 21:40:10,337 - PixelHopfieldBoostingTrainer - INFO - Training dataset size: 3268
+2025-07-08 21:40:10,338 - Pixel_Utils - INFO - Analyzing Fishyscapes dataset for OOD content...
+2025-07-08 21:40:10,376 - Pixel_Utils - INFO - Sample image_0.png:
+2025-07-08 21:40:10,376 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 21:40:10,376 - Pixel_Utils - INFO -   ID pixels (0): 1,801,918
+2025-07-08 21:40:10,376 - Pixel_Utils - INFO -   OOD pixels (1): 59,867
+2025-07-08 21:40:10,376 - Pixel_Utils - INFO -   Ignore pixels (2/255): 235,367
+2025-07-08 21:40:10,406 - Pixel_Utils - INFO - Sample image_1.png:
+2025-07-08 21:40:10,406 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 21:40:10,406 - Pixel_Utils - INFO -   ID pixels (0): 1,799,432
+2025-07-08 21:40:10,406 - Pixel_Utils - INFO -   OOD pixels (1): 47,165
+2025-07-08 21:40:10,406 - Pixel_Utils - INFO -   Ignore pixels (2/255): 250,555
+2025-07-08 21:40:10,435 - Pixel_Utils - INFO - Sample image_10.png:
+2025-07-08 21:40:10,435 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 21:40:10,435 - Pixel_Utils - INFO -   ID pixels (0): 1,825,295
+2025-07-08 21:40:10,435 - Pixel_Utils - INFO -   OOD pixels (1): 18,661
+2025-07-08 21:40:10,435 - Pixel_Utils - INFO -   Ignore pixels (2/255): 253,196
+2025-07-08 21:40:10,465 - Pixel_Utils - INFO - Sample image_11.png:
+2025-07-08 21:40:10,465 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 21:40:10,465 - Pixel_Utils - INFO -   ID pixels (0): 1,861,327
+2025-07-08 21:40:10,465 - Pixel_Utils - INFO -   OOD pixels (1): 4,777
+2025-07-08 21:40:10,465 - Pixel_Utils - INFO -   Ignore pixels (2/255): 231,048
+2025-07-08 21:40:10,494 - Pixel_Utils - INFO - Sample image_12.png:
+2025-07-08 21:40:10,494 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 21:40:10,494 - Pixel_Utils - INFO -   ID pixels (0): 1,825,428
+2025-07-08 21:40:10,494 - Pixel_Utils - INFO -   OOD pixels (1): 39,394
+2025-07-08 21:40:10,495 - Pixel_Utils - INFO -   Ignore pixels (2/255): 232,330
+2025-07-08 21:40:10,502 - Pixel_Utils - INFO - Found 30 valid images from 30 total
+2025-07-08 21:40:10,502 - Pixel_Utils - INFO - Total OOD pixels in sample: 169,864
+2025-07-08 21:40:10,502 - PixelHopfieldBoostingTrainer - INFO - Validation dataset size: 30
+2025-07-08 21:40:10,502 - PixelHopfieldBoostingTrainer - INFO - Building initial Hopfield memories...
+Building memories: 100%|████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:05<00:00,  1.93it/s]
+2025-07-08 21:54:16,627 - PixelHopfieldBoostingTrainer - INFO - Built initial memories - ID: torch.Size([75000, 128]), AUX: torch.Size([75000, 128])
+2025-07-08 21:54:16,638 - PixelHopfieldBoostingTrainer - INFO - Initialization completed!
+Epoch 1: 100%|█| 1634/1634 [16:02<00:00,  1.70it/s, Loss=1.2366, CE=1.2366, OOD=0.0000, PixelAcc=0.6542, LR=0.002000, ID=561, AUX=0, GradNorm=0.
+2025-07-08 22:10:19,535 - PixelHopfieldBoostingTrainer - INFO - Epoch 1 - Loss: 1.6335, CE: 1.6187, OOD: 0.0295, Pixel Acc: 0.6021, LR: 0.002000, Skipped batches: 1
+Epoch 2: 100%|█| 1634/1634 [16:06<00:00,  1.69it/s, Loss=0.9314, CE=0.9314, OOD=0.0000, PixelAcc=0.7735, LR=0.004000, ID=649, AUX=0, GradNorm=0.
+Error in LSE computation: CUDA out of memory. Tried to allocate 916.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 820.38 MiB is free. Including non-PyTorch memory, this process has 6.79 GiB memory in use. Of the allocated memory 6.23 GiB is allocated by PyTorch, and 442.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-07-08 22:26:26,431 - PixelHopfieldBoostingTrainer - INFO - Epoch 2 - Loss: 0.7594, CE: 0.7472, OOD: 0.0245, Pixel Acc: 0.8025, LR: 0.004000, Skipped batches: 0
+Epoch 3: 100%|█| 1634/1634 [16:03<00:00,  1.70it/s, Loss=0.8716, CE=0.8716, OOD=0.0000, PixelAcc=0.7768, LR=0.006000, ID=672, AUX=0, GradNorm=0.
+2025-07-08 22:42:29,617 - PixelHopfieldBoostingTrainer - INFO - Epoch 3 - Loss: 0.6237, CE: 0.6105, OOD: 0.0263, Pixel Acc: 0.8323, LR: 0.006000, Skipped batches: 0
+Epoch 4: 100%|█| 1634/1634 [16:03<00:00,  1.70it/s, Loss=0.4615, CE=0.4615, OOD=0.0000, PixelAcc=0.8594, LR=0.008000, ID=747, AUX=0, GradNorm=0.
+2025-07-08 22:58:32,679 - PixelHopfieldBoostingTrainer - INFO - Epoch 4 - Loss: 0.5549, CE: 0.5422, OOD: 0.0255, Pixel Acc: 0.8460, LR: 0.008000, Skipped batches: 0
+Epoch 5: 100%|█| 1634/1634 [16:05<00:00,  1.69it/s, Loss=0.3740, CE=0.2870, OOD=0.1739, PixelAcc=0.9295, LR=0.010000, ID=681, AUX=400, GradNorm=
+Error in LSE computation: CUDA out of memory. Tried to allocate 916.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 820.38 MiB is free. Including non-PyTorch memory, this process has 6.79 GiB memory in use. Of the allocated memory 6.23 GiB is allocated by PyTorch, and 442.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-07-08 23:14:38,013 - PixelHopfieldBoostingTrainer - INFO - Epoch 5 - Loss: 0.5140, CE: 0.5025, OOD: 0.0231, Pixel Acc: 0.8534, LR: 0.010000, Skipped batches: 0
+2025-07-08 23:14:38,014 - PixelHopfieldBoostingTrainer - INFO - Updating auxiliary weights at epoch 5...
+2025-07-08 23:14:38,048 - PixelHopfieldBoostingTrainer - WARNING - Auxiliary weight update failed at epoch 5: update_aux_memory_and_weights() got an unexpected keyword argument 'max_batches'
+Epoch 6: 100%|█| 1634/1634 [16:02<00:00,  1.70it/s, Loss=0.2485, CE=0.1612, OOD=0.1747, PixelAcc=0.9487, LR=0.010000, ID=800, AUX=400, GradNorm=
+2025-07-08 23:30:40,431 - PixelHopfieldBoostingTrainer - INFO - Epoch 6 - Loss: 0.4835, CE: 0.4709, OOD: 0.0250, Pixel Acc: 0.8613, LR: 0.010000, Skipped batches: 0
+Epoch 7: 100%|█| 1634/1634 [16:02<00:00,  1.70it/s, Loss=0.2408, CE=0.2408, OOD=0.0000, PixelAcc=0.9373, LR=0.010000, ID=765, AUX=0, GradNorm=0.
+2025-07-08 23:46:42,956 - PixelHopfieldBoostingTrainer - INFO - Epoch 7 - Loss: 0.4596, CE: 0.4467, OOD: 0.0257, Pixel Acc: 0.8662, LR: 0.010000, Skipped batches: 1
+Epoch 8: 100%|█| 1634/1634 [16:00<00:00,  1.70it/s, Loss=0.4829, CE=0.4829, OOD=0.0000, PixelAcc=0.8597, LR=0.010000, ID=620, AUX=0, GradNorm=0.
+2025-07-09 00:02:43,840 - PixelHopfieldBoostingTrainer - INFO - Epoch 8 - Loss: 0.4494, CE: 0.4369, OOD: 0.0250, Pixel Acc: 0.8682, LR: 0.010000, Skipped batches: 0
+Epoch 9: 100%|█| 1634/1634 [16:02<00:00,  1.70it/s, Loss=0.3342, CE=0.2474, OOD=0.1737, PixelAcc=0.9175, LR=0.010000, ID=630, AUX=400, GradNorm=
+Error in LSE computation: CUDA out of memory. Tried to allocate 916.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 820.38 MiB is free. Including non-PyTorch memory, this process has 6.79 GiB memory in use. Of the allocated memory 6.23 GiB is allocated by PyTorch, and 442.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+2025-07-09 00:18:46,084 - PixelHopfieldBoostingTrainer - INFO - Epoch 9 - Loss: 0.4466, CE: 0.4353, OOD: 0.0226, Pixel Acc: 0.8671, LR: 0.010000, Skipped batches: 1
+Epoch 10:   0%|        | 0/1634 [00:01<?, ?it/s, Loss=0.6517, CE=0.6517, OOD=0.0000, PixelAcc=0.8614, LR=0.010000, ID=541, AUX=0, GradNorm=0.52]2025-07-09 00:18:47,121 - PixelHopfieldBoostingTrainer - INFO - Creating training visualization for epoch 10, batch 0
+2025-07-09 00:18:47,121 - PixelHopfieldBoostingTrainer - WARNING - Error creating training visualization: name 'compute_energy_maps' is not defined
+Epoch 10:   0%| | 1/1634 [00:01<28:30,  1.05s/it, Loss=0.4843, CE=0.3974, OOD=0.1738, PixelAcc=0.8646, LR=0.010000, ID=724, AUX=283, GradNorm=0.2025-07-09 00:18:48,020 - PixelHopfieldBoostingTrainer - INFO - Creating training visualization for epoch 10, batch 1
+2025-07-09 00:18:48,020 - PixelHopfieldBoostingTrainer - WARNING - Error creating training visualization: name 'compute_energy_maps' is not defined
+Epoch 10:   0%| | 2/1634 [00:02<25:55,  1.05it/s, Loss=0.3557, CE=0.3557, OOD=0.0000, PixelAcc=0.9064, LR=0.010000, ID=716, AUX=0, GradNorm=0.252025-07-09 00:18:48,565 - PixelHopfieldBoostingTrainer - INFO - Creating training visualization for epoch 10, batch 2
+2025-07-09 00:18:48,565 - PixelHopfieldBoostingTrainer - WARNING - Error creating training visualization: name 'compute_energy_maps' is not defined
+Epoch 10: 100%|█| 1634/1634 [16:03<00:00,  1.70it/s, Loss=0.1786, CE=0.0918, OOD=0.1737, PixelAcc=0.9825, LR=0.010000, ID=743, AUX=311, GradNorm
+2025-07-09 00:34:49,309 - PixelHopfieldBoostingTrainer - INFO - Epoch 10 - Loss: 0.4403, CE: 0.4276, OOD: 0.0256, Pixel Acc: 0.8703, LR: 0.010000, Skipped batches: 1
+2025-07-09 00:34:49,309 - PixelHopfieldBoostingTrainer - INFO - Updating auxiliary weights at epoch 10...
+2025-07-09 00:34:49,342 - PixelHopfieldBoostingTrainer - WARNING - Auxiliary weight update failed at epoch 10: update_aux_memory_and_weights() got an unexpected keyword argument 'max_batches'
+2025-07-09 00:34:49,342 - PixelHopfieldBoostingTrainer - INFO - Running validation at epoch 10...
+2025-07-09 00:34:49,484 - Pixel_Utils - INFO - Label remapping for image_0.png:
+2025-07-09 00:34:49,485 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-09 00:34:49,485 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-09 00:34:49,488 - Pixel_Utils - INFO -   OOD pixels after remapping: 59,867
+2025-07-09 00:34:49,763 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 0
+2025-07-09 00:34:49,764 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:49,909 - Pixel_Utils - INFO - Label remapping for image_1.png:
+2025-07-09 00:34:49,910 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-09 00:34:49,910 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-09 00:34:49,913 - Pixel_Utils - INFO -   OOD pixels after remapping: 47,165
+2025-07-09 00:34:50,182 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 1
+2025-07-09 00:34:50,182 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:50,316 - Pixel_Utils - INFO - Label remapping for image_10.png:
+2025-07-09 00:34:50,317 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-09 00:34:50,317 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-09 00:34:50,321 - Pixel_Utils - INFO -   OOD pixels after remapping: 18,661
+2025-07-09 00:34:50,601 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 2
+2025-07-09 00:34:50,601 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:50,959 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 3
+2025-07-09 00:34:50,959 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:51,313 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 4
+2025-07-09 00:34:51,313 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:51,671 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 5
+2025-07-09 00:34:51,671 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:52,027 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 6
+2025-07-09 00:34:52,027 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:52,386 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 7
+2025-07-09 00:34:52,386 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:52,737 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 8
+2025-07-09 00:34:52,737 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:53,094 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 9
+2025-07-09 00:34:53,094 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:53,445 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 10
+2025-07-09 00:34:53,446 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:53,802 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 11
+2025-07-09 00:34:53,803 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:54,153 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 12
+2025-07-09 00:34:54,154 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:54,506 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 13
+2025-07-09 00:34:54,507 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:54,864 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 14
+2025-07-09 00:34:54,864 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:55,221 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 15
+2025-07-09 00:34:55,221 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:55,582 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 16
+2025-07-09 00:34:55,582 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:55,938 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 17
+2025-07-09 00:34:55,938 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:56,300 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 18
+2025-07-09 00:34:56,301 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:56,661 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 19
+2025-07-09 00:34:56,661 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:57,012 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 20
+2025-07-09 00:34:57,012 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:57,367 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 21
+2025-07-09 00:34:57,367 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:57,723 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 22
+2025-07-09 00:34:57,723 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:58,082 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 23
+2025-07-09 00:34:58,082 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:58,434 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 24
+2025-07-09 00:34:58,434 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:58,789 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 25
+2025-07-09 00:34:58,790 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:59,141 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 26
+2025-07-09 00:34:59,142 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:59,501 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 27
+2025-07-09 00:34:59,501 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:34:59,853 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 28
+2025-07-09 00:34:59,853 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:35:00,205 - PixelHopfieldBoostingTrainer - INFO - Creating validation visualization for epoch 10, batch 29
+2025-07-09 00:35:00,205 - PixelHopfieldBoostingTrainer - WARNING - Error creating validation visualization: name 'compute_energy_maps' is not defined
+2025-07-09 00:35:00,205 - PixelHopfieldBoostingTrainer - INFO - Validation dataset OOD ratio: 0.0172 (1780/103258)
+2025-07-09 00:35:00,205 - PixelHopfieldBoostingTrainer - WARNING - OOD evaluation failed due to memory: comprehensive_evaluation() got an unexpected keyword argument 'max_pixels_per_image'
+2025-07-09 00:35:00,215 - PixelHopfieldBoostingTrainer - INFO - Early stopping triggered! Accuracy 0.0000 < 0.01
+2025-07-09 00:35:01,137 - PixelHopfieldBoostingTrainer - INFO - Model saved to models/hopfield_best_epoch_10.pth
+2025-07-09 00:35:03,721 - PixelHopfieldBoostingTrainer - INFO - Model saved to models/hopfield_latest.pth
+2025-07-09 00:35:05,577 - PixelHopfieldBoostingTrainer - INFO - Early stopping triggered at epoch 10. Ending training.
+2025-07-09 00:35:05,803 - PixelHopfieldBoostingTrainer - INFO - Training Summary:
+2025-07-09 00:35:05,803 - PixelHopfieldBoostingTrainer - INFO -   Final Classification Accuracy: 0.0000
+2025-07-09 00:35:05,804 - PixelHopfieldBoostingTrainer - INFO -   Best Classification Accuracy: 0.0000
+2025-07-09 00:35:05,804 - PixelHopfieldBoostingTrainer - INFO -   Final OOD AUROC: 0.5000
+2025-07-09 00:35:05,804 - PixelHopfieldBoostingTrainer - INFO -   Best OOD AUROC: 0.5000
+2025-07-09 00:35:05,804 - PixelHopfieldBoostingTrainer - INFO -   Final OOD FPR95: 1.0000
+2025-07-09 00:35:05,804 - PixelHopfieldBoostingTrainer - INFO -   Best OOD FPR95: 1.0000

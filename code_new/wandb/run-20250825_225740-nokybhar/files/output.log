@@ -1,0 +1,230 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+Building semantic memory and initializing boosting manager...
+Building Hopfield memory using advanced semantic approach...
+Advanced memory building process...
+Processing Images: 100%|█████████████████████████████████████████████████████████████████████████████| 408/408 [14:43<00:00,  2.17s/it]
+Processing summary: 408 successful, 0 errors
+Built semantic ID memory: torch.Size([4992, 128])
+Built semantic OOD memory: torch.Size([4000, 128])
+PixelWiseHopfieldTrainer initialization complete!
+Starting training process...
+Starting Epoch 1/50
+Training Epoch 1: 100%|██████████████████████████████████████████████████| 408/408 [13:41<00:00,  2.01s/it, L_CE=1.0867, L_OOD=-0.2053]
+Epoch 1 - Avg CE: 2.9738, Avg OOD: -0.0919
+Starting Epoch 2/50
+Training Epoch 2: 100%|███████████████████████████████████████████████████| 408/408 [13:48<00:00,  2.03s/it, L_CE=0.5593, L_OOD=0.0000]
+Epoch 2 - Avg CE: 1.1234, Avg OOD: -0.0930
+Starting Epoch 3/50
+Training Epoch 3: 100%|███████████████████████████████████████████████████| 408/408 [13:48<00:00,  2.03s/it, L_CE=0.6805, L_OOD=0.0000]
+Epoch 3 - Avg CE: 0.8421, Avg OOD: -0.0875
+Starting Epoch 4/50
+Training Epoch 4: 100%|██████████████████████████████████████████████████| 408/408 [13:49<00:00,  2.03s/it, L_CE=0.7395, L_OOD=-0.1988]
+Epoch 4 - Avg CE: 0.7072, Avg OOD: -0.0972
+Starting Epoch 5/50
+Updating Hopfield boosting weights at epoch 5
+Updating sampling weights...
+Sampling weights updated. Max weight: 4.6036e-04
+Training Epoch 5: 100%|███████████████████████████████████████████████████| 408/408 [13:49<00:00,  2.03s/it, L_CE=0.5912, L_OOD=0.0000]
+Epoch 5 - Avg CE: 0.6278, Avg OOD: -0.0897
+
+============================================================
+ENHANCED EVALUATION AT EPOCH 5
+============================================================
+ID memory shape: torch.Size([4992, 128])
+AUX memory shape: torch.Size([4000, 128])
+Beta inference: 64.0
+Processed 30 images, 30 had OOD pixels
+Final scores - In: 49555, Out: 853
+AUROC: 0.2771
+FPR95: 0.9977
+AUPRS: 0.9691
+Evaluation Summary for Epoch 5:
+  AUROC: 0.2771
+  FPR95: 0.9977
+  AUPRS: 0.9691
+
+Starting Epoch 6/50
+Training Epoch 6: 100%|███████████████████████████████████████████████████| 408/408 [13:49<00:00,  2.03s/it, L_CE=0.6036, L_OOD=0.0000]
+Epoch 6 - Avg CE: 0.5732, Avg OOD: -0.0851
+Starting Epoch 7/50
+Training Epoch 7: 100%|███████████████████████████████████████████████████| 408/408 [13:49<00:00,  2.03s/it, L_CE=0.7707, L_OOD=0.0000]
+Epoch 7 - Avg CE: 0.5182, Avg OOD: -0.0826
+Starting Epoch 8/50
+Training Epoch 8: 100%|███████████████████████████████████████████████████| 408/408 [13:48<00:00,  2.03s/it, L_CE=0.5563, L_OOD=0.0000]
+Epoch 8 - Avg CE: 0.5040, Avg OOD: -0.0829
+Starting Epoch 9/50
+Training Epoch 9: 100%|██████████████████████████████████████████████████| 408/408 [13:48<00:00,  2.03s/it, L_CE=0.5140, L_OOD=-0.2736]
+Epoch 9 - Avg CE: 0.4834, Avg OOD: -0.0809
+Starting Epoch 10/50
+Updating Hopfield boosting weights at epoch 10
+Updating sampling weights...
+Sampling weights updated. Max weight: 4.6547e-04
+Training Epoch 10: 100%|██████████████████████████████████████████████████| 408/408 [13:48<00:00,  2.03s/it, L_CE=0.4409, L_OOD=0.0000]
+Epoch 10 - Avg CE: 0.4496, Avg OOD: -0.0772
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_final/pixel_checkpoint_epoch_10.pth
+
+============================================================
+ENHANCED EVALUATION AT EPOCH 10
+============================================================
+ID memory shape: torch.Size([4992, 128])
+AUX memory shape: torch.Size([4000, 128])
+Beta inference: 64.0
+Processed 30 images, 30 had OOD pixels
+Final scores - In: 49674, Out: 871
+AUROC: 0.2590
+FPR95: 0.9954
+AUPRS: 0.9662
+Evaluation Summary for Epoch 10:
+  AUROC: 0.2590
+  FPR95: 0.9954
+  AUPRS: 0.9662
+
+Starting Epoch 11/50
+Training Epoch 11: 100%|██████████████████████████████████████████████████| 408/408 [13:48<00:00,  2.03s/it, L_CE=0.4203, L_OOD=0.0000]
+Epoch 11 - Avg CE: 0.4271, Avg OOD: -0.0776
+Starting Epoch 12/50
+Training Epoch 12: 100%|█████████████████████████████████████████████████| 408/408 [13:47<00:00,  2.03s/it, L_CE=0.2355, L_OOD=-0.2127]
+Epoch 12 - Avg CE: 0.4299, Avg OOD: -0.0771
+Starting Epoch 13/50
+Training Epoch 13: 100%|█████████████████████████████████████████████████| 408/408 [13:47<00:00,  2.03s/it, L_CE=0.3657, L_OOD=-0.2416]
+Epoch 13 - Avg CE: 0.4083, Avg OOD: -0.0798
+Starting Epoch 14/50
+Training Epoch 14: 100%|█████████████████████████████████████████████████| 408/408 [13:47<00:00,  2.03s/it, L_CE=0.3895, L_OOD=-0.1741]
+Epoch 14 - Avg CE: 0.3944, Avg OOD: -0.0770
+Starting Epoch 15/50
+Updating Hopfield boosting weights at epoch 15
+Updating sampling weights...
+Sampling weights updated. Max weight: 4.6328e-04
+Training Epoch 15: 100%|█████████████████████████████████████████████████| 408/408 [13:47<00:00,  2.03s/it, L_CE=0.3028, L_OOD=-0.2061]
+Epoch 15 - Avg CE: 0.3884, Avg OOD: -0.0736
+
+============================================================
+ENHANCED EVALUATION AT EPOCH 15
+============================================================
+ID memory shape: torch.Size([4992, 128])
+AUX memory shape: torch.Size([4000, 128])
+Beta inference: 64.0
+Processed 30 images, 30 had OOD pixels
+Final scores - In: 49492, Out: 837
+AUROC: 0.2567
+FPR95: 0.9940
+AUPRS: 0.9662
+Evaluation Summary for Epoch 15:
+  AUROC: 0.2567
+  FPR95: 0.9940
+  AUPRS: 0.9662
+
+Starting Epoch 16/50
+Training Epoch 16: 100%|█████████████████████████████████████████████████| 408/408 [13:47<00:00,  2.03s/it, L_CE=0.2879, L_OOD=-0.1679]
+Epoch 16 - Avg CE: 0.3749, Avg OOD: -0.0814
+Starting Epoch 17/50
+Training Epoch 17: 100%|█████████████████████████████████████████████████| 408/408 [13:46<00:00,  2.03s/it, L_CE=0.4385, L_OOD=-0.2069]
+Epoch 17 - Avg CE: 0.3682, Avg OOD: -0.0756
+Starting Epoch 18/50
+Training Epoch 18: 100%|██████████████████████████████████████████████████| 408/408 [13:46<00:00,  2.03s/it, L_CE=0.3880, L_OOD=0.0000]
+Epoch 18 - Avg CE: 0.3672, Avg OOD: -0.0818
+Starting Epoch 19/50
+Training Epoch 19: 100%|█████████████████████████████████████████████████| 408/408 [13:45<00:00,  2.02s/it, L_CE=0.3257, L_OOD=-0.1959]
+Epoch 19 - Avg CE: 0.3553, Avg OOD: -0.0736
+Starting Epoch 20/50
+Updating Hopfield boosting weights at epoch 20
+Updating sampling weights...
+Sampling weights updated. Max weight: 4.5520e-04
+Training Epoch 20: 100%|█████████████████████████████████████████████████| 408/408 [13:45<00:00,  2.02s/it, L_CE=0.3062, L_OOD=-0.1706]
+Epoch 20 - Avg CE: 0.3530, Avg OOD: -0.0781
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_final/pixel_checkpoint_epoch_20.pth
+
+============================================================
+ENHANCED EVALUATION AT EPOCH 20
+============================================================
+ID memory shape: torch.Size([4992, 128])
+AUX memory shape: torch.Size([4000, 128])
+Beta inference: 64.0
+Processed 30 images, 30 had OOD pixels
+Final scores - In: 49600, Out: 845
+AUROC: 0.2406
+FPR95: 0.9953
+AUPRS: 0.9635
+Evaluation Summary for Epoch 20:
+  AUROC: 0.2406
+  FPR95: 0.9953
+  AUPRS: 0.9635
+
+Starting Epoch 21/50
+Training Epoch 21: 100%|██████████████████████████████████████████████████| 408/408 [13:46<00:00,  2.03s/it, L_CE=0.4208, L_OOD=0.0000]
+Epoch 21 - Avg CE: 0.3519, Avg OOD: -0.0825
+Starting Epoch 22/50
+Training Epoch 22: 100%|█████████████████████████████████████████████████| 408/408 [13:47<00:00,  2.03s/it, L_CE=0.3246, L_OOD=-0.2565]
+Epoch 22 - Avg CE: 0.3399, Avg OOD: -0.0807
+Starting Epoch 23/50
+Training Epoch 23: 100%|██████████████████████████████████████████████████| 408/408 [13:47<00:00,  2.03s/it, L_CE=0.3172, L_OOD=0.0000]
+Epoch 23 - Avg CE: 0.3395, Avg OOD: -0.0874
+Starting Epoch 24/50
+Training Epoch 24: 100%|█████████████████████████████████████████████████| 408/408 [13:46<00:00,  2.03s/it, L_CE=0.2571, L_OOD=-0.1643]
+Epoch 24 - Avg CE: 0.3355, Avg OOD: -0.0882
+Starting Epoch 25/50
+Updating Hopfield boosting weights at epoch 25
+Updating sampling weights...
+Sampling weights updated. Max weight: 4.6533e-04
+Training Epoch 25: 100%|██████████████████████████████████████████████████| 408/408 [13:47<00:00,  2.03s/it, L_CE=0.3793, L_OOD=0.0000]
+Epoch 25 - Avg CE: 0.3386, Avg OOD: -0.0910
+
+============================================================
+ENHANCED EVALUATION AT EPOCH 25
+============================================================
+ID memory shape: torch.Size([4992, 128])
+AUX memory shape: torch.Size([4000, 128])
+Beta inference: 64.0
+Processed 30 images, 30 had OOD pixels
+Final scores - In: 49553, Out: 874
+AUROC: 0.2136
+FPR95: 0.9989
+AUPRS: 0.9599
+Evaluation Summary for Epoch 25:
+  AUROC: 0.2136
+  FPR95: 0.9989
+  AUPRS: 0.9599
+
+Starting Epoch 26/50
+Training Epoch 26: 100%|██████████████████████████████████████████████████| 408/408 [13:49<00:00,  2.03s/it, L_CE=0.2557, L_OOD=0.0000]
+Epoch 26 - Avg CE: 0.3268, Avg OOD: -0.0885
+Starting Epoch 27/50
+Training Epoch 27: 100%|█████████████████████████████████████████████████| 408/408 [13:51<00:00,  2.04s/it, L_CE=0.2796, L_OOD=-0.2304]
+Epoch 27 - Avg CE: 0.3271, Avg OOD: -0.0866
+Starting Epoch 28/50
+Training Epoch 28: 100%|█████████████████████████████████████████████████| 408/408 [13:52<00:00,  2.04s/it, L_CE=0.3400, L_OOD=-0.1869]
+Epoch 28 - Avg CE: 0.3250, Avg OOD: -0.0856
+Starting Epoch 29/50
+Training Epoch 29: 100%|██████████████████████████████████████████████████| 408/408 [13:54<00:00,  2.05s/it, L_CE=0.3042, L_OOD=0.0000]
+Epoch 29 - Avg CE: 0.3244, Avg OOD: -0.0978
+Starting Epoch 30/50
+Updating Hopfield boosting weights at epoch 30
+Updating sampling weights...
+Sampling weights updated. Max weight: 4.5922e-04
+Training Epoch 30: 100%|█████████████████████████████████████████████████| 408/408 [13:53<00:00,  2.04s/it, L_CE=0.2822, L_OOD=-0.2738]
+Epoch 30 - Avg CE: 0.3233, Avg OOD: -0.0926
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_final/pixel_checkpoint_epoch_30.pth
+
+============================================================
+ENHANCED EVALUATION AT EPOCH 30
+============================================================
+ID memory shape: torch.Size([4992, 128])
+AUX memory shape: torch.Size([4000, 128])
+Beta inference: 64.0
+Processed 30 images, 30 had OOD pixels
+Final scores - In: 49515, Out: 898
+AUROC: 0.2143
+FPR95: 0.9978
+AUPRS: 0.9590
+Evaluation Summary for Epoch 30:
+  AUROC: 0.2143
+  FPR95: 0.9978
+  AUPRS: 0.9590
+
+Starting Epoch 31/50
+Training Epoch 31: 100%|█████████████████████████████████████████████████| 408/408 [13:54<00:00,  2.04s/it, L_CE=0.3921, L_OOD=-0.3726]
+Epoch 31 - Avg CE: 0.3135, Avg OOD: -0.0939
+Starting Epoch 32/50
+Training Epoch 32:   2%|█▎                                                 | 10/408 [00:22<13:38,  2.06s/it, L_CE=0.2233, L_OOD=0.0000]

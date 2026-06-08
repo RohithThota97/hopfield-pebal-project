@@ -1,0 +1,13 @@
+{"time":"2025-09-04T08:58:06.88811298+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpk_jbao7x/port-796806.txt","pid":796806,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-04T08:58:06.917307221+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":796806}
+{"time":"2025-09-04T08:58:06.917304034+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":44917,"Zone":""}}
+{"time":"2025-09-04T08:58:07.07766586+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:43270"}
+{"time":"2025-09-04T08:58:07.143810063+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"ukpoll1z","id":"127.0.0.1:43270"}
+{"time":"2025-09-04T08:58:07.400380917+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"ukpoll1z","id":"127.0.0.1:43270"}
+{"time":"2025-09-04T09:29:50.562669052+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:43270"}
+{"time":"2025-09-04T09:29:50.564567806+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:43270"}
+{"time":"2025-09-04T09:29:50.56460221+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-09-04T09:29:50.564632849+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:43270"}
+{"time":"2025-09-04T09:29:51.85482234+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:43270"}
+{"time":"2025-09-04T09:29:51.854834464+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:43270"}
+{"time":"2025-09-04T09:29:51.854839762+02:00","level":"INFO","msg":"server is closed"}

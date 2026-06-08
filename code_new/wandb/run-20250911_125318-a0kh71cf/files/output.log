@@ -1,0 +1,314 @@
+INFO:__main__:Initializing models...
+INFO:__main__:Loaded 268/268 model parameters flexibly
+WARNING:__main__:Skipped keys: ['criterion.nll_loss.weight']
+INFO:__main__:Missing keys: []
+INFO:__main__:Unexpected keys: []
+INFO:__main__:Loaded 100.0% of parameters successfully
+INFO:__main__:Keeping backbone FROZEN for ID segmentation
+INFO:__main__:Trainable parameters: 333,331
+INFO:__main__:Total parameters: 137,437,267
+INFO:__main__:
+============================================================
+INFO:__main__:RUNNING DIAGNOSTIC TESTS
+INFO:__main__:============================================================
+INFO:__main__:
+1. Testing pretrained pretrained feature extraction...
+INFO:__main__:Processing images of shape torch.Size([1, 3, 512, 1024]), min: 0.0000, max: 1.0000
+INFO:__main__:   Feature shape: torch.Size([1, 1280, 64, 128])
+INFO:__main__:   Feature mean: 0.0512, std: 0.1050
+INFO:__main__:   ✓ Feature extraction working correctly
+INFO:__main__:
+2. Testing segmentation head initialization...
+INFO:__main__:   Logits shape: torch.Size([1, 19, 32, 64])
+INFO:__main__:   Mean probability per class: tensor([0.0530, 0.0527, 0.0528, 0.0525, 0.0530, 0.0527, 0.0527, 0.0528, 0.0526,
+        0.0523, 0.0526, 0.0525, 0.0522, 0.0527, 0.0522, 0.0527, 0.0527, 0.0529,
+        0.0525], device='cuda:0')
+INFO:__main__:   Expected uniform: ~0.0526
+INFO:__main__:   ✓ Segmentation head initialization looks good
+INFO:__main__:
+3. Testing data loader labels...
+INFO:__main__:   Unique labels in first batch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 17, 18, 255]
+INFO:__main__:   ✓ Found 17 ID classes in batch
+INFO:__main__:
+============================================================
+INFO:__main__:DIAGNOSTIC TESTS COMPLETE
+INFO:__main__:============================================================
+
+INFO:__main__:Initializing training components...
+INFO:__main__:Training components initialized
+INFO:__main__:
+============================================================
+INFO:__main__:Epoch 1/150
+INFO:__main__:============================================================
+Training Epoch 1:   0%|                                                                                  | 0/408 [00:00<?, ?it/s]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+INFO:__main__:Gradient statistics for first batch:
+INFO:__main__:  grad_mean_head.0.weight: 0.006021
+INFO:__main__:  grad_std_head.0.weight: 1.396870
+INFO:__main__:  grad_mean_head.0.bias: 0.000017
+INFO:__main__:  grad_std_head.0.bias: 0.000233
+INFO:__main__:  grad_mean_head.1.weight: -0.888265
+INFO:__main__:  grad_std_head.1.weight: 8.263895
+INFO:__main__:  grad_mean_head.1.bias: -1.134825
+INFO:__main__:  grad_std_head.1.bias: 9.995394
+INFO:__main__:  grad_mean_head.3.weight: -0.067477
+INFO:__main__:  grad_std_head.3.weight: 2294.191162
+INFO:__main__:  grad_mean_head.3.bias: -0.105263
+INFO:__main__:  grad_std_head.3.bias: 5263.711914
+Training Epoch 1:   0%|                                                | 0/408 [00:06<?, ?it/s, CE=2.9409, ID_px=57823, OOD_px=0]WARNING:__main__:Very small gradient in head.0.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=0.000000
+WARNING:__main__:Very small gradient in head.1.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.1.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.bias: mean=-0.000000
+Training Epoch 1:   0%|                                        | 1/408 [00:06<44:02,  6.49s/it, CE=2.9409, ID_px=57823, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   0%|▏                                     | 2/408 [00:09<31:36,  4.67s/it, CE=2.9424, ID_px=49586, OOD_px=505]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   1%|▎                                       | 3/408 [00:13<27:39,  4.10s/it, CE=2.9413, ID_px=51468, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   1%|▎                                     | 4/408 [00:16<25:49,  3.84s/it, CE=2.9407, ID_px=46928, OOD_px=130]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   1%|▍                                     | 5/408 [00:20<24:50,  3.70s/it, CE=2.9425, ID_px=52472, OOD_px=233]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   1%|▌                                      | 6/408 [00:23<24:16,  3.62s/it, CE=2.9423, ID_px=56991, OOD_px=21]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   2%|▋                                       | 7/408 [00:27<23:54,  3.58s/it, CE=2.9432, ID_px=53913, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   2%|▊                                       | 8/408 [00:30<23:40,  3.55s/it, CE=2.9412, ID_px=50544, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   2%|▊                                     | 9/408 [00:34<23:32,  3.54s/it, CE=2.9426, ID_px=49251, OOD_px=184]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   2%|▉                                      | 10/408 [00:37<23:27,  3.54s/it, CE=2.9423, ID_px=62964, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   3%|▉                                    | 11/408 [00:41<23:22,  3.53s/it, CE=2.9402, ID_px=57712, OOD_px=189]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   3%|█▏                                     | 12/408 [00:44<23:19,  3.54s/it, CE=2.9399, ID_px=55539, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   3%|█▏                                     | 13/408 [00:48<23:17,  3.54s/it, CE=2.9417, ID_px=60373, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   3%|█▎                                     | 14/408 [00:51<23:16,  3.54s/it, CE=2.9411, ID_px=50622, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   4%|█▍                                     | 15/408 [00:55<23:15,  3.55s/it, CE=2.9419, ID_px=61071, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   4%|█▌                                     | 16/408 [00:59<23:15,  3.56s/it, CE=2.9393, ID_px=55306, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   4%|█▌                                   | 17/408 [01:02<23:14,  3.57s/it, CE=2.9407, ID_px=49416, OOD_px=720]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   4%|█▋                                     | 18/408 [01:06<23:13,  3.57s/it, CE=2.9390, ID_px=48794, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   5%|█▋                                   | 19/408 [01:09<23:13,  3.58s/it, CE=2.9399, ID_px=46941, OOD_px=299]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   5%|█▉                                     | 20/408 [01:13<23:14,  3.60s/it, CE=2.9410, ID_px=54766, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   5%|██                                     | 21/408 [01:17<23:16,  3.61s/it, CE=2.9395, ID_px=62482, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   5%|█▉                                  | 22/408 [01:20<23:19,  3.63s/it, CE=2.9393, ID_px=53705, OOD_px=1764]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   6%|██▏                                    | 23/408 [01:24<23:22,  3.64s/it, CE=2.9379, ID_px=61539, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   6%|██▎                                    | 24/408 [01:28<23:24,  3.66s/it, CE=2.9387, ID_px=53557, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   6%|██▍                                    | 25/408 [01:31<23:27,  3.67s/it, CE=2.9384, ID_px=56801, OOD_px=4]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   6%|██▍                                    | 26/408 [01:35<23:27,  3.69s/it, CE=2.9394, ID_px=61194, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   7%|██▌                                    | 27/408 [01:39<23:29,  3.70s/it, CE=2.9398, ID_px=54052, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   7%|██▍                                 | 28/408 [01:43<23:31,  3.72s/it, CE=2.9379, ID_px=46927, OOD_px=2118]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   7%|██▌                                 | 29/408 [01:46<23:33,  3.73s/it, CE=2.9385, ID_px=55889, OOD_px=1470]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   7%|██▊                                    | 30/408 [01:50<23:33,  3.74s/it, CE=2.9405, ID_px=58308, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   8%|██▉                                    | 31/408 [01:54<23:33,  3.75s/it, CE=2.9365, ID_px=55790, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   8%|███                                    | 32/408 [01:58<23:32,  3.76s/it, CE=2.9357, ID_px=48764, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   8%|███▏                                   | 33/408 [02:01<23:30,  3.76s/it, CE=2.9390, ID_px=59704, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   8%|███▎                                   | 34/408 [02:05<23:29,  3.77s/it, CE=2.9396, ID_px=55307, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   9%|███▏                                 | 35/408 [02:09<23:29,  3.78s/it, CE=2.9372, ID_px=43576, OOD_px=546]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   9%|███▎                                 | 36/408 [02:13<23:30,  3.79s/it, CE=2.9366, ID_px=53493, OOD_px=176]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   9%|███▌                                   | 37/408 [02:17<23:27,  3.79s/it, CE=2.9359, ID_px=51676, OOD_px=4]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:   9%|███▍                                 | 38/408 [02:20<23:25,  3.80s/it, CE=2.9354, ID_px=47906, OOD_px=376]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  10%|███▋                                   | 39/408 [02:24<23:23,  3.80s/it, CE=2.9346, ID_px=58916, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  10%|███▌                                | 40/408 [02:28<23:20,  3.81s/it, CE=2.9371, ID_px=55993, OOD_px=1544]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  10%|███▌                                | 41/408 [02:32<23:18,  3.81s/it, CE=2.9337, ID_px=55679, OOD_px=1387]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  10%|████                                    | 42/408 [02:36<23:15,  3.81s/it, CE=2.9343, ID_px=5e+4, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  11%|████                                   | 43/408 [02:39<23:14,  3.82s/it, CE=2.9361, ID_px=52179, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  11%|████▏                                  | 44/408 [02:43<23:12,  3.83s/it, CE=2.9362, ID_px=54733, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  11%|████▎                                  | 45/408 [02:47<23:09,  3.83s/it, CE=2.9328, ID_px=49107, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  11%|████▍                                  | 46/408 [02:51<23:06,  3.83s/it, CE=2.9333, ID_px=60361, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  12%|████▍                                  | 47/408 [02:55<23:05,  3.84s/it, CE=2.9324, ID_px=59191, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  12%|████▌                                  | 48/408 [02:59<23:02,  3.84s/it, CE=2.9317, ID_px=48123, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  12%|████▎                               | 49/408 [03:03<22:58,  3.84s/it, CE=2.9339, ID_px=60330, OOD_px=2598]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  12%|████▋                                 | 50/408 [03:06<22:56,  3.84s/it, CE=2.9308, ID_px=41619, OOD_px=76]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  12%|████▊                                  | 50/408 [03:10<22:56,  3.84s/it, CE=2.9313, ID_px=47217, OOD_px=0]WARNING:__main__:Very small gradient in head.0.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=0.000000
+WARNING:__main__:Very small gradient in head.1.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.1.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.bias: mean=0.000000
+Training Epoch 1:  12%|████▉                                  | 51/408 [03:10<22:52,  3.84s/it, CE=2.9313, ID_px=47217, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  13%|████▉                                  | 52/408 [03:14<22:50,  3.85s/it, CE=2.9286, ID_px=50894, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  13%|█████                                  | 53/408 [03:18<22:48,  3.85s/it, CE=2.9314, ID_px=57644, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  13%|█████▏                                 | 54/408 [03:22<22:44,  3.86s/it, CE=2.9305, ID_px=47760, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  13%|█████                                 | 55/408 [03:26<22:40,  3.85s/it, CE=2.9316, ID_px=57069, OOD_px=68]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  14%|█████▎                                 | 56/408 [03:29<22:35,  3.85s/it, CE=2.9303, ID_px=59482, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  14%|█████▏                               | 57/408 [03:33<22:30,  3.85s/it, CE=2.9280, ID_px=54052, OOD_px=981]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  14%|█████▎                               | 58/408 [03:37<22:28,  3.85s/it, CE=2.9293, ID_px=55274, OOD_px=299]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  14%|█████▋                                 | 59/408 [03:41<22:25,  3.86s/it, CE=2.9264, ID_px=59207, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  15%|█████▎                              | 60/408 [03:45<22:22,  3.86s/it, CE=2.9278, ID_px=53742, OOD_px=1502]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  15%|█████▊                                 | 61/408 [03:49<22:19,  3.86s/it, CE=2.9256, ID_px=54271, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  15%|█████▌                               | 62/408 [03:53<22:15,  3.86s/it, CE=2.9286, ID_px=44941, OOD_px=111]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  15%|██████                                 | 63/408 [03:57<22:12,  3.86s/it, CE=2.9245, ID_px=51633, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  16%|██████                                 | 64/408 [04:00<22:07,  3.86s/it, CE=2.9245, ID_px=55186, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  16%|██████▏                                | 65/408 [04:04<22:03,  3.86s/it, CE=2.9199, ID_px=61454, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  16%|█████▉                               | 66/408 [04:08<21:58,  3.86s/it, CE=2.9225, ID_px=57181, OOD_px=942]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  16%|██████                               | 67/408 [04:12<21:54,  3.86s/it, CE=2.9259, ID_px=48812, OOD_px=904]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  17%|██████▌                                | 68/408 [04:16<21:49,  3.85s/it, CE=2.9230, ID_px=43769, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  17%|██████▎                              | 69/408 [04:20<21:46,  3.85s/it, CE=2.9232, ID_px=48229, OOD_px=549]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  17%|██████▋                                | 70/408 [04:23<21:42,  3.85s/it, CE=2.9223, ID_px=56981, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  17%|██████▊                                | 71/408 [04:27<21:39,  3.86s/it, CE=2.9203, ID_px=57968, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  18%|██████▉                                | 72/408 [04:31<21:35,  3.86s/it, CE=2.9242, ID_px=55862, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  18%|██████▉                                | 73/408 [04:35<21:29,  3.85s/it, CE=2.9208, ID_px=58859, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  18%|███████                                | 74/408 [04:39<21:23,  3.84s/it, CE=2.9206, ID_px=52564, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  18%|███████▏                               | 75/408 [04:43<21:21,  3.85s/it, CE=2.9229, ID_px=52845, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  19%|███████▎                               | 76/408 [04:47<21:14,  3.84s/it, CE=2.9213, ID_px=54853, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  19%|███████▎                               | 77/408 [04:50<21:09,  3.83s/it, CE=2.9189, ID_px=55451, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  19%|███████▍                               | 78/408 [04:54<21:04,  3.83s/it, CE=2.9209, ID_px=56125, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  19%|███████▏                             | 79/408 [04:58<20:59,  3.83s/it, CE=2.9169, ID_px=57115, OOD_px=139]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  20%|███████▋                               | 80/408 [05:02<20:54,  3.82s/it, CE=2.9217, ID_px=50862, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  20%|███████▋                               | 81/408 [05:06<20:49,  3.82s/it, CE=2.9234, ID_px=54294, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  20%|███████▊                               | 82/408 [05:09<20:44,  3.82s/it, CE=2.9103, ID_px=59083, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  20%|███████▉                               | 83/408 [05:13<20:39,  3.81s/it, CE=2.9175, ID_px=56144, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  21%|███████▌                             | 84/408 [05:17<20:34,  3.81s/it, CE=2.9187, ID_px=55899, OOD_px=157]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  21%|████████▏                              | 85/408 [05:21<20:27,  3.80s/it, CE=2.9185, ID_px=52926, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  21%|████████▏                              | 86/408 [05:25<20:22,  3.80s/it, CE=2.9155, ID_px=61463, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  21%|███████▋                            | 87/408 [05:28<20:17,  3.79s/it, CE=2.9113, ID_px=47967, OOD_px=3096]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  22%|████████▍                              | 88/408 [05:32<20:14,  3.79s/it, CE=2.9146, ID_px=55121, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  22%|███████▊                            | 89/408 [05:36<20:08,  3.79s/it, CE=2.9165, ID_px=43128, OOD_px=1725]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  22%|████████▌                              | 90/408 [05:40<20:03,  3.79s/it, CE=2.9104, ID_px=50319, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  22%|████████▎                            | 91/408 [05:44<19:58,  3.78s/it, CE=2.9137, ID_px=55928, OOD_px=507]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  23%|████████▎                            | 92/408 [05:47<19:54,  3.78s/it, CE=2.9151, ID_px=52572, OOD_px=251]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  23%|████████▍                            | 93/408 [05:51<19:49,  3.78s/it, CE=2.9212, ID_px=60423, OOD_px=973]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  23%|████████▉                              | 94/408 [05:55<19:45,  3.78s/it, CE=2.9129, ID_px=58972, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  23%|████████▌                            | 95/408 [05:59<19:40,  3.77s/it, CE=2.9119, ID_px=53444, OOD_px=404]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  24%|█████████▏                             | 96/408 [06:02<19:35,  3.77s/it, CE=2.9133, ID_px=50735, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  24%|█████████▎                             | 97/408 [06:06<19:31,  3.77s/it, CE=2.9117, ID_px=62687, OOD_px=1]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  24%|█████████▎                             | 98/408 [06:10<19:28,  3.77s/it, CE=2.9088, ID_px=55765, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  24%|█████████▏                            | 99/408 [06:14<19:23,  3.77s/it, CE=2.9071, ID_px=52253, OOD_px=99]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  25%|█████████▎                            | 100/408 [06:18<20:10,  3.93s/it, CE=2.9124, ID_px=57869, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  25%|████████▌                          | 100/408 [06:22<20:10,  3.93s/it, CE=2.9126, ID_px=46784, OOD_px=1038]WARNING:__main__:Very small gradient in head.0.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=0.000000
+WARNING:__main__:Very small gradient in head.1.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.1.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.bias: mean=0.000000
+Training Epoch 1:  25%|████████▋                          | 101/408 [06:22<19:45,  3.86s/it, CE=2.9126, ID_px=46784, OOD_px=1038]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  25%|█████████▎                           | 102/408 [06:25<19:29,  3.82s/it, CE=2.9203, ID_px=52809, OOD_px=26]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  25%|█████████▎                           | 103/408 [06:29<19:18,  3.80s/it, CE=2.9099, ID_px=56769, OOD_px=70]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  25%|█████████▍                           | 104/408 [06:33<19:09,  3.78s/it, CE=2.9027, ID_px=60330, OOD_px=71]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  26%|█████████▊                            | 105/408 [06:37<19:01,  3.77s/it, CE=2.9080, ID_px=55844, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  26%|█████████▎                          | 106/408 [06:40<18:55,  3.76s/it, CE=2.9101, ID_px=42939, OOD_px=807]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  26%|██████████▏                            | 107/408 [06:44<18:50,  3.76s/it, CE=2.9075, ID_px=5e+4, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  26%|██████████                            | 108/408 [06:48<18:46,  3.75s/it, CE=2.9135, ID_px=57548, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  27%|██████████▏                           | 109/408 [06:52<18:41,  3.75s/it, CE=2.9110, ID_px=49898, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  27%|█████████▋                          | 110/408 [06:55<18:37,  3.75s/it, CE=2.9069, ID_px=54315, OOD_px=302]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  27%|██████████▎                           | 111/408 [06:59<18:31,  3.74s/it, CE=2.9085, ID_px=56223, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  27%|██████████▍                           | 112/408 [07:03<18:29,  3.75s/it, CE=2.9084, ID_px=54057, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  28%|█████████▉                          | 113/408 [07:07<18:25,  3.75s/it, CE=2.9135, ID_px=50140, OOD_px=345]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  28%|██████████▌                           | 114/408 [07:10<18:21,  3.75s/it, CE=2.9075, ID_px=56344, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  28%|██████████▋                           | 115/408 [07:14<18:16,  3.74s/it, CE=2.9045, ID_px=60917, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  28%|██████████▊                           | 116/408 [07:18<18:13,  3.74s/it, CE=2.8994, ID_px=51944, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  29%|██████████▉                           | 117/408 [07:22<18:09,  3.74s/it, CE=2.9015, ID_px=55954, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  29%|██████████▉                           | 118/408 [07:25<18:05,  3.74s/it, CE=2.9086, ID_px=52682, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  29%|███████████                           | 119/408 [07:29<18:02,  3.75s/it, CE=2.9062, ID_px=57085, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  29%|██████████▎                        | 120/408 [07:33<17:59,  3.75s/it, CE=2.8936, ID_px=52044, OOD_px=1183]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  30%|███████████▎                          | 121/408 [07:37<17:55,  3.75s/it, CE=2.8968, ID_px=57368, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  30%|███████████▎                          | 122/408 [07:40<17:50,  3.74s/it, CE=2.8977, ID_px=60682, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  30%|███████████▍                          | 123/408 [07:44<17:46,  3.74s/it, CE=2.9034, ID_px=55192, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  30%|██████████▉                         | 124/408 [07:48<17:41,  3.74s/it, CE=2.9002, ID_px=51792, OOD_px=662]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  31%|███████████▋                          | 125/408 [07:51<17:37,  3.74s/it, CE=2.8977, ID_px=51428, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  31%|███████████                         | 126/408 [07:55<17:33,  3.74s/it, CE=2.9018, ID_px=55039, OOD_px=602]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  31%|██████████▉                        | 127/408 [07:59<17:29,  3.73s/it, CE=2.9005, ID_px=53476, OOD_px=2082]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  31%|███████████▉                          | 128/408 [08:03<17:25,  3.73s/it, CE=2.9028, ID_px=61668, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  32%|███████████                        | 129/408 [08:06<17:22,  3.74s/it, CE=2.9140, ID_px=58456, OOD_px=1313]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  32%|███████████▏                       | 130/408 [08:10<17:18,  3.73s/it, CE=2.8963, ID_px=56922, OOD_px=1232]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  32%|████████████▏                         | 131/408 [08:14<17:14,  3.73s/it, CE=2.8975, ID_px=51727, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  32%|████████████▎                         | 132/408 [08:18<17:10,  3.73s/it, CE=2.8966, ID_px=60069, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  33%|████████████▍                         | 133/408 [08:21<17:06,  3.73s/it, CE=2.8990, ID_px=60594, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  33%|████████████▍                         | 134/408 [08:25<17:02,  3.73s/it, CE=2.8980, ID_px=51763, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  33%|████████████▌                         | 135/408 [08:29<16:58,  3.73s/it, CE=2.8999, ID_px=56076, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  33%|████████████▋                         | 136/408 [08:33<16:54,  3.73s/it, CE=2.9078, ID_px=53363, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  34%|████████████                        | 137/408 [08:36<16:50,  3.73s/it, CE=2.9000, ID_px=49562, OOD_px=948]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  34%|████████████▊                         | 138/408 [08:40<16:46,  3.73s/it, CE=2.8987, ID_px=50973, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  34%|████████████▉                         | 139/408 [08:44<16:43,  3.73s/it, CE=2.8974, ID_px=48504, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  34%|█████████████                         | 140/408 [08:47<16:39,  3.73s/it, CE=2.8941, ID_px=53742, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  35%|█████████████▏                        | 141/408 [08:51<16:35,  3.73s/it, CE=2.9042, ID_px=50998, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  35%|█████████████▏                        | 142/408 [08:55<16:31,  3.73s/it, CE=2.8904, ID_px=50773, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  35%|█████████████▎                        | 143/408 [08:59<16:27,  3.73s/it, CE=2.8953, ID_px=50763, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  35%|████████████▎                      | 144/408 [09:02<16:24,  3.73s/it, CE=2.9033, ID_px=53524, OOD_px=6468]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  36%|████████████▊                       | 145/408 [09:06<16:21,  3.73s/it, CE=2.9006, ID_px=52401, OOD_px=434]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  36%|█████████████▌                        | 146/408 [09:10<16:17,  3.73s/it, CE=2.9037, ID_px=53224, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  36%|████████████▉                       | 147/408 [09:14<16:13,  3.73s/it, CE=2.8902, ID_px=46710, OOD_px=430]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  36%|█████████████▊                        | 148/408 [09:17<16:09,  3.73s/it, CE=2.8920, ID_px=56962, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  37%|█████████████▉                        | 149/408 [09:21<16:05,  3.73s/it, CE=2.8886, ID_px=58897, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  37%|█████████████▏                      | 150/408 [09:25<16:02,  3.73s/it, CE=2.8964, ID_px=49644, OOD_px=133]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  37%|█████████████▏                      | 150/408 [09:28<16:02,  3.73s/it, CE=2.9078, ID_px=58963, OOD_px=932]WARNING:__main__:Very small gradient in head.0.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=0.000000
+WARNING:__main__:Very small gradient in head.1.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.1.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.bias: mean=0.000000
+Training Epoch 1:  37%|█████████████▎                      | 151/408 [09:28<15:58,  3.73s/it, CE=2.9078, ID_px=58963, OOD_px=932]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  37%|██████████████▏                       | 152/408 [09:32<15:54,  3.73s/it, CE=2.8929, ID_px=62666, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  38%|█████████████▌                      | 153/408 [09:36<15:50,  3.73s/it, CE=2.8945, ID_px=50111, OOD_px=568]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  38%|██████████████▎                       | 154/408 [09:40<15:46,  3.73s/it, CE=2.8993, ID_px=56231, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  38%|██████████████▍                       | 155/408 [09:43<15:43,  3.73s/it, CE=2.8982, ID_px=54944, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  38%|██████████████▌                       | 156/408 [09:47<15:39,  3.73s/it, CE=2.8928, ID_px=55880, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  38%|██████████████▌                       | 157/408 [09:51<15:36,  3.73s/it, CE=2.8893, ID_px=54047, OOD_px=5]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  39%|██████████████▎                      | 158/408 [09:55<15:31,  3.73s/it, CE=2.8927, ID_px=47613, OOD_px=79]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  39%|█████████████▋                     | 159/408 [09:58<15:27,  3.73s/it, CE=2.8958, ID_px=57837, OOD_px=1471]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  39%|██████████████▉                       | 160/408 [10:02<15:24,  3.73s/it, CE=2.8903, ID_px=58021, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  39%|██████████████▉                       | 161/408 [10:06<15:20,  3.73s/it, CE=2.8821, ID_px=60857, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  40%|███████████████                       | 162/408 [10:09<15:17,  3.73s/it, CE=2.8999, ID_px=59126, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  40%|███████████████▏                      | 163/408 [10:13<15:12,  3.73s/it, CE=2.8907, ID_px=56615, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  40%|███████████████▎                      | 164/408 [10:17<15:08,  3.72s/it, CE=2.8823, ID_px=59258, OOD_px=6]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  40%|██████████████▌                     | 165/408 [10:21<15:05,  3.73s/it, CE=2.8944, ID_px=52007, OOD_px=271]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  41%|███████████████▍                      | 166/408 [10:24<15:01,  3.73s/it, CE=2.8955, ID_px=47746, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  41%|███████████████▌                      | 167/408 [10:28<14:57,  3.72s/it, CE=2.8854, ID_px=53156, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  41%|███████████████▋                      | 168/408 [10:32<14:54,  3.73s/it, CE=2.9016, ID_px=59291, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  41%|██████████████▍                    | 169/408 [10:36<14:50,  3.73s/it, CE=2.8894, ID_px=53895, OOD_px=3616]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  42%|███████████████▍                     | 170/408 [10:39<14:46,  3.73s/it, CE=2.8897, ID_px=6e+4, OOD_px=621]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  42%|███████████████▉                      | 171/408 [10:43<14:42,  3.73s/it, CE=2.8924, ID_px=56401, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  42%|███████████████▏                    | 172/408 [10:47<14:38,  3.72s/it, CE=2.9052, ID_px=57829, OOD_px=257]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  42%|███████████████▎                    | 173/408 [10:50<14:34,  3.72s/it, CE=2.9071, ID_px=49665, OOD_px=720]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  43%|████████████████▏                     | 174/408 [10:54<14:29,  3.72s/it, CE=2.9071, ID_px=51013, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  43%|███████████████                    | 175/408 [10:58<14:26,  3.72s/it, CE=2.9007, ID_px=52445, OOD_px=3214]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  43%|███████████████▌                    | 176/408 [11:02<14:23,  3.72s/it, CE=2.8978, ID_px=55124, OOD_px=638]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  43%|███████████████▌                    | 177/408 [11:05<14:20,  3.73s/it, CE=2.8931, ID_px=51938, OOD_px=267]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  44%|████████████████▌                     | 178/408 [11:09<14:17,  3.73s/it, CE=2.8962, ID_px=57761, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  44%|████████████████▋                     | 179/408 [11:13<14:14,  3.73s/it, CE=2.8953, ID_px=60642, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  44%|████████████████▊                     | 180/408 [11:17<14:10,  3.73s/it, CE=2.8974, ID_px=54657, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  44%|█████████████████▎                     | 181/408 [11:20<14:06,  3.73s/it, CE=2.8885, ID_px=6e+4, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  45%|████████████████▉                     | 182/408 [11:24<14:03,  3.73s/it, CE=2.9004, ID_px=58444, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  45%|█████████████████                     | 183/408 [11:28<14:00,  3.73s/it, CE=2.9055, ID_px=51932, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  45%|████████████████▋                    | 184/408 [11:31<13:56,  3.73s/it, CE=2.8898, ID_px=51671, OOD_px=54]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  45%|█████████████████▏                    | 185/408 [11:35<13:52,  3.73s/it, CE=2.8966, ID_px=58582, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  46%|████████████████▍                   | 186/408 [11:39<13:48,  3.73s/it, CE=2.8832, ID_px=54761, OOD_px=380]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  46%|████████████████                   | 187/408 [11:43<13:44,  3.73s/it, CE=2.8935, ID_px=48176, OOD_px=1127]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  46%|█████████████████▌                    | 188/408 [11:46<13:39,  3.73s/it, CE=2.8944, ID_px=55163, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  46%|████████████████▏                  | 189/408 [11:50<13:35,  3.72s/it, CE=2.8924, ID_px=57983, OOD_px=1283]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  47%|█████████████████▋                    | 190/408 [11:54<13:31,  3.72s/it, CE=2.8972, ID_px=55993, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  47%|████████████████▊                   | 191/408 [11:58<13:27,  3.72s/it, CE=2.8906, ID_px=56322, OOD_px=146]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  47%|█████████████████▉                    | 192/408 [12:01<13:24,  3.72s/it, CE=2.8892, ID_px=47917, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  47%|█████████████████▉                    | 193/408 [12:05<13:21,  3.73s/it, CE=2.8956, ID_px=44449, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  48%|██████████████████                    | 194/408 [12:09<13:17,  3.73s/it, CE=2.8976, ID_px=54255, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  48%|██████████████████▏                   | 195/408 [12:12<13:13,  3.73s/it, CE=2.8852, ID_px=55982, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  48%|██████████████████▎                   | 196/408 [12:16<13:09,  3.73s/it, CE=2.8983, ID_px=57486, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  48%|████████████████▉                  | 197/408 [12:20<13:05,  3.72s/it, CE=2.8909, ID_px=51195, OOD_px=1691]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  49%|█████████████████▍                  | 198/408 [12:24<13:02,  3.73s/it, CE=2.8896, ID_px=57452, OOD_px=344]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  49%|██████████████████▌                   | 199/408 [12:27<12:59,  3.73s/it, CE=2.8882, ID_px=54324, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  49%|██████████████████▋                   | 200/408 [12:31<12:56,  3.73s/it, CE=2.8977, ID_px=50532, OOD_px=1]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  49%|█████████████████▏                 | 200/408 [12:35<12:56,  3.73s/it, CE=2.8991, ID_px=56224, OOD_px=1147]WARNING:__main__:Very small gradient in head.0.weight: mean=0.000000
+WARNING:__main__:Very small gradient in head.0.bias: mean=0.000000
+WARNING:__main__:Very small gradient in head.1.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.1.bias: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.weight: mean=-0.000000
+WARNING:__main__:Very small gradient in head.3.bias: mean=0.000000
+Training Epoch 1:  49%|█████████████████▏                 | 201/408 [12:35<12:52,  3.73s/it, CE=2.8991, ID_px=56224, OOD_px=1147]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  50%|██████████████████▊                   | 202/408 [12:39<12:48,  3.73s/it, CE=2.8989, ID_px=59659, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  50%|██████████████████▉                   | 203/408 [12:42<12:44,  3.73s/it, CE=2.8995, ID_px=52607, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  50%|███████████████████                   | 204/408 [12:46<12:40,  3.73s/it, CE=2.8862, ID_px=48241, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  50%|███████████████████                   | 205/408 [12:50<12:37,  3.73s/it, CE=2.8847, ID_px=54333, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  50%|███████████████████▏                  | 206/408 [12:53<12:32,  3.73s/it, CE=2.8886, ID_px=51875, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  51%|█████████████████▊                 | 207/408 [12:57<12:29,  3.73s/it, CE=2.8865, ID_px=52821, OOD_px=1020]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  51%|█████████████████▊                 | 208/408 [13:01<12:25,  3.73s/it, CE=2.8922, ID_px=55053, OOD_px=3527]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  51%|███████████████████▍                  | 209/408 [13:05<12:21,  3.72s/it, CE=2.8935, ID_px=55918, OOD_px=4]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  51%|██████████████████                 | 210/408 [13:08<12:17,  3.73s/it, CE=2.8986, ID_px=55735, OOD_px=1383]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  52%|██████████████████                 | 211/408 [13:12<12:15,  3.73s/it, CE=2.8952, ID_px=45827, OOD_px=1843]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  52%|███████████████████▋                  | 212/408 [13:16<12:12,  3.73s/it, CE=2.8879, ID_px=53548, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  52%|██████████████████▊                 | 213/408 [13:20<12:07,  3.73s/it, CE=2.8921, ID_px=56548, OOD_px=381]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  52%|███████████████████▉                  | 214/408 [13:23<12:03,  3.73s/it, CE=2.8989, ID_px=56247, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  53%|████████████████████                  | 215/408 [13:27<12:00,  3.73s/it, CE=2.8883, ID_px=53568, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  53%|██████████████████▌                | 216/408 [13:31<11:56,  3.73s/it, CE=2.8909, ID_px=44843, OOD_px=1684]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  53%|████████████████████▏                 | 217/408 [13:35<11:52,  3.73s/it, CE=2.9016, ID_px=51689, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  53%|████████████████████▎                 | 218/408 [13:38<11:49,  3.73s/it, CE=2.8984, ID_px=60723, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  54%|████████████████████▍                 | 219/408 [13:42<11:45,  3.73s/it, CE=2.8905, ID_px=55559, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  54%|██████████████████▊                | 220/408 [13:46<11:41,  3.73s/it, CE=2.8870, ID_px=51527, OOD_px=1166]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  54%|███████████████████▌                | 221/408 [13:49<11:38,  3.73s/it, CE=2.8904, ID_px=54013, OOD_px=543]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  54%|████████████████████▋                 | 222/408 [13:53<11:34,  3.73s/it, CE=2.8924, ID_px=59056, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  55%|████████████████████▊                 | 223/408 [13:57<11:29,  3.73s/it, CE=2.8931, ID_px=56251, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  55%|████████████████████▎                | 224/408 [14:01<11:26,  3.73s/it, CE=2.8810, ID_px=42950, OOD_px=41]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  55%|████████████████████▉                 | 225/408 [14:04<11:22,  3.73s/it, CE=2.8893, ID_px=52728, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  55%|█████████████████████                 | 226/408 [14:08<11:18,  3.73s/it, CE=2.8935, ID_px=58585, OOD_px=0]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  56%|███████████████████▍               | 227/408 [14:12<11:14,  3.73s/it, CE=2.8884, ID_px=42375, OOD_px=1283]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000
+Training Epoch 1:  56%|████████████████████                | 228/408 [14:16<11:10,  3.72s/it, CE=2.8922, ID_px=48600, OOD_px=441]INFO:__main__:Processing images of shape torch.Size([8, 3, 512, 1024]), min: 0.0000, max: 1.0000

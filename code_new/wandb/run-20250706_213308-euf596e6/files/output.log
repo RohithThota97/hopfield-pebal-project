@@ -1,0 +1,77 @@
+2025-07-06 21:33:09,329 - __main__ - INFO - Training dataset size: 3268
+2025-07-06 21:33:09,330 - Pixel_Utils - INFO - Analyzing Fishyscapes dataset for OOD content...
+2025-07-06 21:33:09,377 - Pixel_Utils - INFO - Sample image_0.png:
+2025-07-06 21:33:09,377 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:33:09,377 - Pixel_Utils - INFO -   ID pixels (0): 1,801,918
+2025-07-06 21:33:09,377 - Pixel_Utils - INFO -   OOD pixels (1): 59,867
+2025-07-06 21:33:09,377 - Pixel_Utils - INFO -   Ignore pixels (2/255): 235,367
+2025-07-06 21:33:09,406 - Pixel_Utils - INFO - Sample image_1.png:
+2025-07-06 21:33:09,406 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:33:09,406 - Pixel_Utils - INFO -   ID pixels (0): 1,799,432
+2025-07-06 21:33:09,406 - Pixel_Utils - INFO -   OOD pixels (1): 47,165
+2025-07-06 21:33:09,406 - Pixel_Utils - INFO -   Ignore pixels (2/255): 250,555
+2025-07-06 21:33:09,434 - Pixel_Utils - INFO - Sample image_10.png:
+2025-07-06 21:33:09,434 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:33:09,434 - Pixel_Utils - INFO -   ID pixels (0): 1,825,295
+2025-07-06 21:33:09,434 - Pixel_Utils - INFO -   OOD pixels (1): 18,661
+2025-07-06 21:33:09,435 - Pixel_Utils - INFO -   Ignore pixels (2/255): 253,196
+2025-07-06 21:33:09,463 - Pixel_Utils - INFO - Sample image_11.png:
+2025-07-06 21:33:09,463 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:33:09,463 - Pixel_Utils - INFO -   ID pixels (0): 1,861,327
+2025-07-06 21:33:09,463 - Pixel_Utils - INFO -   OOD pixels (1): 4,777
+2025-07-06 21:33:09,463 - Pixel_Utils - INFO -   Ignore pixels (2/255): 231,048
+2025-07-06 21:33:09,491 - Pixel_Utils - INFO - Sample image_12.png:
+2025-07-06 21:33:09,491 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:33:09,491 - Pixel_Utils - INFO -   ID pixels (0): 1,825,428
+2025-07-06 21:33:09,491 - Pixel_Utils - INFO -   OOD pixels (1): 39,394
+2025-07-06 21:33:09,491 - Pixel_Utils - INFO -   Ignore pixels (2/255): 232,330
+2025-07-06 21:33:09,492 - Pixel_Utils - INFO - Found 30 valid images from 30 total
+2025-07-06 21:33:09,492 - Pixel_Utils - INFO - Total OOD pixels in sample: 169,864
+2025-07-06 21:33:09,492 - __main__ - INFO - Validation dataset size: 30
+2025-07-06 21:33:09,492 - __main__ - INFO - Building initial Hopfield memories...
+Building memories: 100%|████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:37<00:00,  1.86it/s]
+2025-07-06 21:47:46,939 - __main__ - INFO - Built initial memories - ID: torch.Size([62036, 128]), AUX: torch.Size([75000, 128])
+2025-07-06 21:47:46,949 - __main__ - INFO - Initialization completed!
+Epoch 1: 100%|███████████████| 1634/1634 [16:17<00:00,  1.67it/s, Loss=0.6089, CE=0.6089, OOD=0.0000, LR=0.002000, ID=733, AUX=0, GradNorm=0.72]
+2025-07-06 22:04:04,933 - __main__ - INFO - Epoch 1 - Loss: 0.9623, CE: 0.9239, OOD: 0.0192, LR: 0.002000, Skipped batches: 0
+Epoch 2: 100%|███████████████| 1634/1634 [16:24<00:00,  1.66it/s, Loss=0.7205, CE=0.7205, OOD=0.0000, LR=0.004000, ID=657, AUX=0, GradNorm=0.79]
+2025-07-06 22:20:29,257 - __main__ - INFO - Epoch 2 - Loss: 0.5728, CE: 0.5370, OOD: 0.0179, LR: 0.004000, Skipped batches: 0
+Epoch 3: 100%|███████████████| 1634/1634 [16:21<00:00,  1.66it/s, Loss=0.6924, CE=0.6924, OOD=0.0000, LR=0.006000, ID=455, AUX=0, GradNorm=0.42]
+2025-07-06 22:36:50,716 - __main__ - INFO - Epoch 3 - Loss: 0.5136, CE: 0.4789, OOD: 0.0173, LR: 0.006000, Skipped batches: 0
+Epoch 4: 100%|███████████████| 1634/1634 [16:21<00:00,  1.66it/s, Loss=0.5576, CE=0.5576, OOD=0.0000, LR=0.008000, ID=656, AUX=0, GradNorm=0.58]
+2025-07-06 22:53:12,128 - __main__ - INFO - Epoch 4 - Loss: 0.4811, CE: 0.4471, OOD: 0.0170, LR: 0.008000, Skipped batches: 0
+Epoch 5: 100%|███████████████| 1634/1634 [16:26<00:00,  1.66it/s, Loss=0.5112, CE=0.5112, OOD=0.0000, LR=0.010000, ID=608, AUX=0, GradNorm=0.48]
+2025-07-06 23:09:38,994 - __main__ - INFO - Epoch 5 - Loss: 0.4701, CE: 0.4343, OOD: 0.0179, LR: 0.010000, Skipped batches: 0
+2025-07-06 23:09:38,995 - __main__ - INFO - Updating auxiliary weights at epoch 5...
+2025-07-06 23:09:39,008 - __main__ - WARNING - Auxiliary weight update failed at epoch 5: update_aux_memory_and_weights() got an unexpected keyword argument 'update_id_memory'
+Epoch 6: 100%|███████████████| 1634/1634 [16:20<00:00,  1.67it/s, Loss=0.4713, CE=0.4713, OOD=0.0000, LR=0.010000, ID=641, AUX=0, GradNorm=0.34]
+2025-07-06 23:25:59,604 - __main__ - INFO - Epoch 6 - Loss: 0.4604, CE: 0.4265, OOD: 0.0170, LR: 0.010000, Skipped batches: 0
+Epoch 7: 100%|███████████████| 1634/1634 [16:17<00:00,  1.67it/s, Loss=0.2795, CE=0.2795, OOD=0.0000, LR=0.010000, ID=545, AUX=0, GradNorm=0.29]
+2025-07-06 23:42:17,540 - __main__ - INFO - Epoch 7 - Loss: 0.4472, CE: 0.4141, OOD: 0.0165, LR: 0.010000, Skipped batches: 0
+Epoch 8: 100%|███████████████| 1634/1634 [16:16<00:00,  1.67it/s, Loss=0.1827, CE=0.1827, OOD=0.0000, LR=0.010000, ID=533, AUX=0, GradNorm=0.15]
+2025-07-06 23:58:34,210 - __main__ - INFO - Epoch 8 - Loss: 0.4437, CE: 0.4112, OOD: 0.0163, LR: 0.010000, Skipped batches: 1
+Epoch 9: 100%|███████████████| 1634/1634 [16:22<00:00,  1.66it/s, Loss=0.4159, CE=0.4159, OOD=0.0000, LR=0.010000, ID=634, AUX=0, GradNorm=0.26]
+2025-07-07 00:14:56,854 - __main__ - INFO - Epoch 9 - Loss: 0.4452, CE: 0.4107, OOD: 0.0172, LR: 0.010000, Skipped batches: 0
+Epoch 10: 100%|██████████████| 1634/1634 [16:22<00:00,  1.66it/s, Loss=0.4862, CE=0.4862, OOD=0.0000, LR=0.010000, ID=715, AUX=0, GradNorm=0.39]
+2025-07-07 00:31:19,394 - __main__ - INFO - Epoch 10 - Loss: 0.4472, CE: 0.4129, OOD: 0.0172, LR: 0.010000, Skipped batches: 0
+2025-07-07 00:31:19,394 - __main__ - INFO - Updating auxiliary weights at epoch 10...
+2025-07-07 00:31:19,407 - __main__ - WARNING - Auxiliary weight update failed at epoch 10: update_aux_memory_and_weights() got an unexpected keyword argument 'update_id_memory'
+2025-07-07 00:31:19,408 - __main__ - INFO - Running validation at epoch 10...
+2025-07-07 00:31:28,051 - __main__ - INFO - Validation dataset OOD ratio: 0.0172 (1780/103258)
+2025-07-07 00:31:28,051 - __main__ - WARNING - OOD evaluation failed due to memory: comprehensive_evaluation() got an unexpected keyword argument 'batch_size_limit'
+2025-07-07 00:31:28,060 - __main__ - INFO - Early stopping triggered! Accuracy 0.0000 < 0.4
+2025-07-07 00:31:28,931 - __main__ - INFO - Model saved to models/hopfield_best_epoch_10.pth
+2025-07-07 00:31:31,338 - __main__ - INFO - Model saved to models/hopfield_latest.pth
+2025-07-07 00:31:33,666 - __main__ - INFO - Training stopped early at epoch 10
+2025-07-07 00:31:34,777 - __main__ - INFO - Training Summary:
+2025-07-07 00:31:34,778 - __main__ - INFO -   Final Classification Accuracy: 0.0000
+2025-07-07 00:31:34,778 - __main__ - INFO -   Best Classification Accuracy: 0.0000
+2025-07-07 00:31:34,778 - __main__ - INFO -   Final OOD AUROC: 0.5000
+2025-07-07 00:31:34,779 - __main__ - INFO -   Best OOD AUROC: 0.5000
+2025-07-07 00:31:34,779 - __main__ - INFO -   Final OOD FPR95: 1.0000
+2025-07-07 00:31:34,779 - __main__ - INFO -   Best OOD FPR95: 1.0000
+2025-07-07 00:31:34,783 - __main__ - INFO - Training Summary:
+2025-07-07 00:31:34,783 - __main__ - INFO -   Best Classification Accuracy: 0.0000
+2025-07-07 00:31:34,784 - __main__ - INFO -   Best OOD AUROC: 0.5000
+2025-07-07 00:31:34,784 - __main__ - INFO -   Best OOD FPR95: 1.0000
+2025-07-07 00:31:34,784 - __main__ - INFO - Training completed!

@@ -1,0 +1,22 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:✓ Feature extractor FROZEN
+INFO:__main__:Segmentation head parameters: 399,123
+INFO:__main__:Projection head parameters: 985,216
+INFO:__main__:Total trainable parameters: 1,384,339
+INFO:__main__:Building initial memories...
+Building memory:   0%|                                                                                    | 0/50 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 1025, in <module>
+    main()
+  File "run_training.py", line 1008, in main
+    trainer = ImprovedOODSegmentationTrainer(
+  File "run_training.py", line 167, in __init__
+    self._build_initial_memories()
+  File "run_training.py", line 278, in _build_initial_memories
+    id_features.append(pixel_features[id_mask].cpu())
+IndexError: The shape of the mask [3240000] at index 0 does not match the shape of the indexed tensor [32768, 128] at index 0

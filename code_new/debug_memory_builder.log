@@ -1,0 +1,137 @@
+2025-09-03 14:56:59,511 - MemoryBuilderDebug - INFO - Successfully imported core modules
+2025-09-03 14:56:59,512 - MemoryBuilderDebug - INFO - Starting memory builder debugging
+2025-09-03 14:56:59,655 - MemoryBuilderDebug - INFO - CUDA is available: Quadro RTX 4000
+2025-09-03 14:56:59,656 - MemoryBuilderDebug - INFO - CUDA memory: 8.16 GB
+2025-09-03 14:56:59,656 - MemoryBuilderDebug - INFO - PyTorch version: 2.4.1
+2025-09-03 14:56:59,657 - MemoryBuilderDebug - INFO - Starting individual component tests
+2025-09-03 14:56:59,657 - MemoryBuilderDebug - INFO - Using device: cuda
+2025-09-03 14:56:59,658 - MemoryBuilderDebug - INFO - Testing feature extractor...
+2025-09-03 14:56:59,805 - MemoryBuilderDebug - INFO - Creating dummy data of shape (2, 3, 512, 512)
+2025-09-03 14:56:59,848 - MemoryBuilderDebug - INFO - Created dummy data with unique labels: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 254 255]
+2025-09-03 14:56:59,939 - MemoryBuilderDebug - INFO - Feature extractor output shape: torch.Size([2, 512, 512, 512])
+2025-09-03 14:56:59,940 - MemoryBuilderDebug - INFO - Testing projection head...
+2025-09-03 14:57:00,044 - MemoryBuilderDebug - INFO - Projection output shape: torch.Size([2, 256, 512, 512])
+2025-09-03 14:57:00,044 - MemoryBuilderDebug - INFO - Testing simple SMOTE-like function...
+2025-09-03 14:57:00,181 - MemoryBuilderDebug - INFO - SMOTE augmented features shape: torch.Size([150, 256])
+2025-09-03 14:57:00,181 - MemoryBuilderDebug - INFO - Testing FPS sampling...
+2025-09-03 14:57:00,225 - MemoryBuilderDebug - INFO - FPS sampled features shape: torch.Size([50, 256])
+2025-09-03 14:57:00,225 - MemoryBuilderDebug - INFO - All individual component tests passed!
+2025-09-03 14:57:00,231 - MemoryBuilderDebug - INFO - Starting full pipeline test
+2025-09-03 14:57:00,283 - MemoryBuilderDebug - INFO - Checking feature dimension inference...
+2025-09-03 14:57:00,283 - MemoryBuilderDebug - INFO - Inferred feature dimension: 256
+2025-09-03 14:57:00,285 - MemoryBuilderDebug - INFO - Testing feature collection (streaming)...
+2025-09-03 14:57:00,286 - MemoryBuilderDebug - INFO - Creating dummy data of shape (2, 3, 64, 64)
+2025-09-03 14:57:00,286 - MemoryBuilderDebug - ERROR - Full pipeline test failed: high <= 0
+2025-09-03 14:57:00,292 - MemoryBuilderDebug - ERROR - Traceback (most recent call last):
+  File "tester2.py", line 231, in test_full_pipeline
+    id_candidates, ood_candidates = builder._collect_candidate_features_streaming(dataloader)
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 141, in _collect_candidate_features_streaming
+    for batch_idx, batch in enumerate(progress_bar):  # Full loop over dataset
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "tester2.py", line 85, in __next__
+    return create_dummy_data(self.batch_size, self.height, self.width, device=self.device)
+  File "tester2.py", line 48, in create_dummy_data
+    x_start = np.random.randint(0, width - mask_size)
+  File "mtrand.pyx", line 765, in numpy.random.mtrand.RandomState.randint
+  File "_bounded_integers.pyx", line 1247, in numpy.random._bounded_integers._rand_int64
+ValueError: high <= 0
+
+2025-09-03 14:57:00,292 - MemoryBuilderDebug - ERROR - Full pipeline test failed.
+2025-09-03 14:57:00,294 - MemoryBuilderDebug - INFO - Total execution time: 0.78 seconds
+2025-09-03 15:00:28,327 - MemoryBuilderDebug - INFO - Successfully imported core modules
+2025-09-03 15:00:28,328 - MemoryBuilderDebug - INFO - Starting memory builder debugging
+2025-09-03 15:00:28,469 - MemoryBuilderDebug - INFO - CUDA is available: Quadro RTX 4000
+2025-09-03 15:00:28,469 - MemoryBuilderDebug - INFO - CUDA memory: 8.16 GB
+2025-09-03 15:00:28,469 - MemoryBuilderDebug - INFO - PyTorch version: 2.4.1
+2025-09-03 15:00:28,471 - MemoryBuilderDebug - INFO - Starting individual component tests
+2025-09-03 15:00:28,473 - MemoryBuilderDebug - INFO - Using device: cuda
+2025-09-03 15:00:28,475 - MemoryBuilderDebug - INFO - Testing feature extractor...
+2025-09-03 15:00:28,621 - MemoryBuilderDebug - INFO - Creating dummy data of shape (2, 3, 128, 128)
+2025-09-03 15:00:28,627 - MemoryBuilderDebug - INFO - Using mask sizes between 6 and 32 for 128x128 images
+2025-09-03 15:00:28,666 - MemoryBuilderDebug - INFO - Created dummy data with unique labels: [  0   1   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18
+ 254 255]
+2025-09-03 15:00:28,756 - MemoryBuilderDebug - INFO - Features from extract_features_batch shape: torch.Size([2, 256, 128, 128]), dtype: torch.float32, device: cuda:0
+2025-09-03 15:00:28,756 - MemoryBuilderDebug - INFO - Feature extractor output shape: torch.Size([2, 256, 128, 128])
+2025-09-03 15:00:28,757 - MemoryBuilderDebug - INFO - Testing projection head...
+2025-09-03 15:00:28,788 - MemoryBuilderDebug - INFO - Projection output shape: torch.Size([2, 128, 128, 128])
+2025-09-03 15:00:28,789 - MemoryBuilderDebug - INFO - Current GPU memory: 0.10 GB, Peak: 0.10 GB
+2025-09-03 15:00:28,789 - MemoryBuilderDebug - INFO - Testing simple SMOTE-like function...
+2025-09-03 15:00:28,846 - MemoryBuilderDebug - INFO - SMOTE augmented features shape: torch.Size([150, 128])
+2025-09-03 15:00:28,846 - MemoryBuilderDebug - INFO - Testing FPS sampling...
+2025-09-03 15:00:28,864 - MemoryBuilderDebug - INFO - FPS sampled features shape: torch.Size([50, 128])
+2025-09-03 15:00:28,864 - MemoryBuilderDebug - INFO - All individual component tests passed!
+2025-09-03 15:00:28,865 - MemoryBuilderDebug - INFO - Current GPU memory: 0.10 GB, Peak: 0.10 GB
+2025-09-03 15:00:28,865 - MemoryBuilderDebug - INFO - Testing augmentation methods...
+2025-09-03 15:00:28,869 - MemoryBuilderDebug - INFO - Features from extract_features_batch shape: torch.Size([1, 256, 128, 128]), dtype: torch.float16, device: cuda:0
+2025-09-03 15:00:28,916 - MemoryBuilderDebug - INFO - Testing _simple_smote...
+2025-09-03 15:00:28,923 - MemoryBuilderDebug - INFO - _simple_smote output shape: torch.Size([100, 128])
+2025-09-03 15:00:28,923 - MemoryBuilderDebug - INFO - Testing _create_class_synthetic_features...
+2025-09-03 15:00:28,924 - MemoryBuilderDebug - INFO - _create_class_synthetic_features output shape: torch.Size([100, 256])
+2025-09-03 15:00:28,924 - MemoryBuilderDebug - INFO - Testing advanced_augment_class...
+2025-09-03 15:00:28,943 - MemoryBuilderDebug - INFO - advanced_augment_class output shape: torch.Size([100, 128])
+2025-09-03 15:00:28,943 - MemoryBuilderDebug - INFO - Testing _build_maximum_diversity_memory with minimal data...
+2025-09-03 15:00:34,162 - MemoryBuilderDebug - INFO - Tiny ID memory shape: torch.Size([100, 128])
+2025-09-03 15:00:34,163 - MemoryBuilderDebug - INFO - Augmentation methods test completed
+2025-09-03 15:00:34,164 - MemoryBuilderDebug - INFO - Current GPU memory: 0.01 GB, Peak: 0.51 GB
+2025-09-03 15:00:34,165 - MemoryBuilderDebug - INFO - Starting full pipeline test
+2025-09-03 15:00:34,167 - MemoryBuilderDebug - INFO - Features from extract_features_batch shape: torch.Size([1, 128, 128, 128]), dtype: torch.float16, device: cuda:0
+2025-09-03 15:00:34,168 - MemoryBuilderDebug - INFO - Checking feature dimension inference...
+2025-09-03 15:00:34,169 - MemoryBuilderDebug - INFO - Features from extract_features_batch shape: torch.Size([1, 128, 128, 128]), dtype: torch.float16, device: cuda:0
+2025-09-03 15:00:34,169 - MemoryBuilderDebug - INFO - Inferred feature dimension: 64
+2025-09-03 15:00:34,170 - MemoryBuilderDebug - INFO - Current GPU memory: 0.01 GB, Peak: 0.51 GB
+2025-09-03 15:00:34,170 - MemoryBuilderDebug - INFO - Testing feature collection (streaming)...
+2025-09-03 15:00:34,172 - MemoryBuilderDebug - INFO - Creating dummy data of shape (2, 3, 128, 128)
+2025-09-03 15:00:34,172 - MemoryBuilderDebug - INFO - Using mask sizes between 6 and 32 for 128x128 images
+2025-09-03 15:00:34,174 - MemoryBuilderDebug - INFO - Created dummy data with unique labels: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 254 255]
+2025-09-03 15:00:34,175 - MemoryBuilderDebug - INFO - Features from extract_features_batch shape: torch.Size([2, 128, 128, 128]), dtype: torch.float16, device: cuda:0
+2025-09-03 15:00:34,196 - MemoryBuilderDebug - INFO - Creating dummy data of shape (2, 3, 128, 128)
+2025-09-03 15:00:34,196 - MemoryBuilderDebug - INFO - Using mask sizes between 6 and 32 for 128x128 images
+2025-09-03 15:00:34,199 - MemoryBuilderDebug - INFO - Created dummy data with unique labels: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 254 255]
+2025-09-03 15:00:34,199 - MemoryBuilderDebug - INFO - Features from extract_features_batch shape: torch.Size([2, 128, 128, 128]), dtype: torch.float16, device: cuda:0
+2025-09-03 15:00:34,205 - MemoryBuilderDebug - INFO - Creating dummy data of shape (2, 3, 128, 128)
+2025-09-03 15:00:34,205 - MemoryBuilderDebug - INFO - Using mask sizes between 6 and 32 for 128x128 images
+2025-09-03 15:00:34,207 - MemoryBuilderDebug - INFO - Created dummy data with unique labels: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 254 255]
+2025-09-03 15:00:34,208 - MemoryBuilderDebug - INFO - Features from extract_features_batch shape: torch.Size([2, 128, 128, 128]), dtype: torch.float16, device: cuda:0
+2025-09-03 15:00:34,216 - hopfield_memory_builder - INFO - Label statistics - Found 254 in 3 batches, 255 in 3 batches
+2025-09-03 15:00:34,216 - hopfield_memory_builder - INFO - Skipped 951 pixels with label 255 (ignore class)
+2025-09-03 15:00:46,074 - MemoryBuilderDebug - INFO - Number of ID classes collected: 5
+2025-09-03 15:00:46,074 - MemoryBuilderDebug - INFO -   Class 0: torch.Size([3000, 64])
+2025-09-03 15:00:46,074 - MemoryBuilderDebug - INFO -   Class 1: torch.Size([3000, 64])
+2025-09-03 15:00:46,074 - MemoryBuilderDebug - INFO -   Class 2: torch.Size([3000, 64])
+2025-09-03 15:00:46,074 - MemoryBuilderDebug - INFO -   Class 3: torch.Size([3000, 64])
+2025-09-03 15:00:46,074 - MemoryBuilderDebug - INFO -   Class 4: torch.Size([3000, 64])
+2025-09-03 15:00:46,074 - MemoryBuilderDebug - INFO - OOD candidates shape: torch.Size([1036, 64])
+2025-09-03 15:00:46,074 - MemoryBuilderDebug - INFO - Current GPU memory: 0.01 GB, Peak: 0.53 GB
+2025-09-03 15:00:46,074 - MemoryBuilderDebug - INFO - Testing memory building individually...
+2025-09-03 15:00:46,790 - MemoryBuilderDebug - INFO - ID memory shape: torch.Size([100, 64])
+2025-09-03 15:00:46,791 - MemoryBuilderDebug - INFO - Current GPU memory: 0.01 GB, Peak: 0.53 GB
+2025-09-03 15:00:46,817 - MemoryBuilderDebug - INFO - OOD memory shape: torch.Size([100, 64])
+2025-09-03 15:00:46,818 - MemoryBuilderDebug - INFO - Current GPU memory: 0.01 GB, Peak: 0.53 GB
+2025-09-03 15:00:46,819 - MemoryBuilderDebug - INFO - Testing simplified process...
+2025-09-03 15:00:46,819 - hopfield_memory_builder - INFO - Starting redesigned hybrid memory building over full dataset...
+2025-09-03 15:00:46,821 - MemoryBuilderDebug - INFO - Creating dummy data of shape (1, 3, 64, 64)
+2025-09-03 15:00:46,822 - MemoryBuilderDebug - INFO - Using mask sizes between 5 and 16 for 64x64 images
+2025-09-03 15:00:46,824 - MemoryBuilderDebug - INFO - Created dummy data with unique labels: [  0   1   2   3   4   5   6   8   9  10  11  12  13  14  15  16  17  18
+ 254 255]
+2025-09-03 15:00:46,826 - MemoryBuilderDebug - INFO - Features from extract_features_batch shape: torch.Size([1, 128, 64, 64]), dtype: torch.float16, device: cuda:0
+2025-09-03 15:00:46,830 - hopfield_memory_builder - INFO - Label statistics - Found 254 in 1 batches, 255 in 1 batches
+2025-09-03 15:00:46,830 - hopfield_memory_builder - INFO - Skipped 36 pixels with label 255 (ignore class)
+2025-09-03 15:00:59,267 - hopfield_memory_builder - INFO - Final memory ratio (AUX:ID): 1.00
+2025-09-03 15:00:59,269 - hopfield_memory_builder - INFO - Memory separation - Ratio: 0.366, Cross-similarity: -0.015, Overlap: 0.000
+2025-09-03 15:00:59,269 - hopfield_memory_builder - INFO - ID spread: 0.916, OOD spread: 0.869, Distance: 0.652
+2025-09-03 15:00:59,297 - hopfield_memory_builder - INFO - Results saved automatically.
+2025-09-03 15:00:59,297 - MemoryBuilderDebug - INFO - Final ID memory shape: torch.Size([100, 64])
+2025-09-03 15:00:59,299 - MemoryBuilderDebug - INFO - Final OOD memory shape: torch.Size([100, 64])
+2025-09-03 15:00:59,300 - MemoryBuilderDebug - INFO - Analysis results keys: dict_keys(['id_class_counts', 'ood_count', 'vehicle_ratio', 'memory_balance_ratio', 'applied_augmentation_factor', 'target_balance_ratio', 'processing_stats'])
+2025-09-03 15:00:59,303 - MemoryBuilderDebug - INFO - Current GPU memory: 0.01 GB, Peak: 0.53 GB
+2025-09-03 15:00:59,304 - MemoryBuilderDebug - INFO - Full pipeline test completed!
+2025-09-03 15:00:59,306 - MemoryBuilderDebug - INFO - Debugging tests completed!
+2025-09-03 15:00:59,308 - MemoryBuilderDebug - INFO - Components test: PASSED
+2025-09-03 15:00:59,309 - MemoryBuilderDebug - INFO - Augmentation test: PASSED
+2025-09-03 15:00:59,311 - MemoryBuilderDebug - INFO - Full pipeline test: PASSED
+2025-09-03 15:00:59,313 - MemoryBuilderDebug - INFO - Total execution time: 30.99 seconds

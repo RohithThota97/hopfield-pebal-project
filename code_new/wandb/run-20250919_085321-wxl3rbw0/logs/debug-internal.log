@@ -1,0 +1,8 @@
+{"time":"2025-09-19T08:53:21.425788391+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250919_085321-wxl3rbw0/logs/debug-core.log"}
+{"time":"2025-09-19T08:53:21.704344693+02:00","level":"INFO","msg":"stream: created new stream","id":"wxl3rbw0"}
+{"time":"2025-09-19T08:53:21.704434453+02:00","level":"INFO","msg":"stream: started","id":"wxl3rbw0"}
+{"time":"2025-09-19T08:53:21.704461152+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"wxl3rbw0"}
+{"time":"2025-09-19T08:53:21.70455012+02:00","level":"INFO","msg":"sender: started","stream_id":"wxl3rbw0"}
+{"time":"2025-09-19T08:53:21.704605015+02:00","level":"INFO","msg":"handler: started","stream_id":"wxl3rbw0"}
+{"time":"2025-09-19T08:53:21.945670154+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-19T11:13:18.319260267+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/wxl3rbw0/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}

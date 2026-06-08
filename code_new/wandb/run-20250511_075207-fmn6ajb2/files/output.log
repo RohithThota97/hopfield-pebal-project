@@ -1,0 +1,26 @@
+2025-05-11 07:52:08,705 - hopfield_trainer - INFO - Experiment tracking with wandb initialized
+2025-05-11 07:52:08,705 - hopfield_trainer - INFO - Starting Hopfield Boosting training with args: Namespace(accumulation_steps=4, batch_size=1, beta=4.0, bits_per_quantizer=8, checkpoint_freq=10, energy_margin_in=-2.0, energy_margin_out=2.0, learning_rate=0.001, max_batches=10, max_patterns=10000, n_subquantizers=8, num_embeddings=256, num_epochs=5, output_dir='./outputs', patch_size=256, proj_hidden_dim=512, proj_output_dim=128, resume=None, smoothness_weight=1e-06, sparsity_weight=0.0001, stride=2, use_amp=True, use_checkpoint=False, use_class_balanced=True, use_patch_based=True, use_pq=False, use_reservoir=True, use_vq=False)
+2025-05-11 07:52:08,723 - hopfield_trainer - INFO - Initializing feature extractor...
+2025-05-11 07:52:08,723 - feature_extractor - INFO - Using target layer: dec0 with stride=2
+2025-05-11 07:52:08,725 - feature_extractor - INFO - Loading model...
+2025-05-11 07:52:13,899 - feature_extractor - INFO - Model loaded and parameters frozen
+2025-05-11 07:52:13,900 - feature_extractor - INFO - Registering hooks for feature extraction...
+2025-05-11 07:52:13,901 - feature_extractor - INFO - Hooks registered successfully
+2025-05-11 07:52:13,901 - hopfield_trainer - INFO - Setting up dataloader...
+2025-05-11 07:52:13,901 - feature_extractor - INFO - Creating dataloader...
+/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/utils/data/dataloader.py:474: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 6, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+2025-05-11 07:52:14,001 - feature_extractor - INFO - Dataloader created with 409 batches
+2025-05-11 07:52:14,002 - hopfield_trainer - INFO - Dataloader created with 409 batches
+2025-05-11 07:52:14,003 - hopfield_trainer - INFO - Extracting features to determine dimensions...
+2025-05-11 07:52:24,608 - hopfield_trainer - ERROR - Training failed with error: The expanded size of the tensor (128) must match the existing size (66) at non-singleton dimension 3.  Target sizes: [1, 304, 128, 128].  Tensor sizes: [304, 128, 66]
+2025-05-11 07:52:24,609 - hopfield_trainer - ERROR - Traceback: Traceback (most recent call last):
+  File "hopfield_trainer.py", line 477, in <module>
+    model, best_loss, model_path = train_hopfield(args)
+  File "hopfield_trainer.py", line 156, in train_hopfield
+    sample_features = extractor.extract_features(sample_images)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 249, in extract_features
+    return self.extract_features_patch_based(images)
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 230, in extract_features_patch_based
+    all_features[:, :, fh_start:fh_end, fw_start:fw_end] = patch_features
+RuntimeError: The expanded size of the tensor (128) must match the existing size (66) at non-singleton dimension 3.  Target sizes: [1, 304, 128, 128].  Tensor sizes: [304, 128, 66]

@@ -1,0 +1,13 @@
+{"time":"2025-07-02T12:12:25.206636474+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmppg6l4lul/port-170082.txt","pid":170082,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-07-02T12:12:25.212049736+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":170082}
+{"time":"2025-07-02T12:12:25.212047796+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":37137,"Zone":""}}
+{"time":"2025-07-02T12:12:25.398010886+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:55114"}
+{"time":"2025-07-02T12:12:25.456218144+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"edjnvpr2","id":"127.0.0.1:55114"}
+{"time":"2025-07-02T12:12:25.715158275+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"edjnvpr2","id":"127.0.0.1:55114"}
+{"time":"2025-07-02T12:13:57.455485963+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:55114"}
+{"time":"2025-07-02T12:13:57.456103651+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:55114"}
+{"time":"2025-07-02T12:13:57.456163333+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-07-02T12:13:57.456271546+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:55114"}
+{"time":"2025-07-02T12:13:58.160844578+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:55114"}
+{"time":"2025-07-02T12:13:58.160869677+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:55114"}
+{"time":"2025-07-02T12:13:58.160881838+02:00","level":"INFO","msg":"server is closed"}

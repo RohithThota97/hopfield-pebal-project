@@ -1,0 +1,147 @@
+{
+  "timestamp": "2025-09-28T23:29:19.021852",
+  "config": {
+    "model_path": "/home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth",
+    "checkpoint_dir": "./checkpoints_improved",
+    "num_classes": 19,
+    "learning_rate": 1e-05,
+    "weight_decay": 5e-05,
+    "batch_size": 2,
+    "num_workers": 0,
+    "output_dir": "./ablation_results"
+  },
+  "summary": {
+    "best_feature_method": "attention",
+    "best_feature_separation": 0.019123492762446404,
+    "best_memory_strategy": "clustering_diversity",
+    "best_memory_coverage": 0.977177008327772,
+    "best_weight_method": "medium_beta",
+    "best_weight_ood_score": 0.9532,
+    "best_energy_method": "inference_score",
+    "best_energy_auc": 0.946542
+  },
+  "detailed_results": {
+    "feature_extraction": {
+      "baseline": {
+        "separation": 0.018184499815106392,
+        "diversity": 0.05368978530168533,
+        "feature_dim": 128,
+        "id_samples": 5000,
+        "ood_samples": 4284
+      },
+      "multi_scale": {
+        "separation": 0.014165856875479221,
+        "diversity": 0.05353010818362236,
+        "feature_dim": 128,
+        "id_samples": 5000,
+        "ood_samples": 5000
+      },
+      "attention": {
+        "separation": 0.019123492762446404,
+        "diversity": 0.05190933868288994,
+        "feature_dim": 128,
+        "id_samples": 5000,
+        "ood_samples": 5000
+      },
+      "full": {
+        "separation": 0.014696766622364521,
+        "diversity": 0.05336344242095947,
+        "feature_dim": 128,
+        "id_samples": 5000,
+        "ood_samples": 5000
+      }
+    },
+    "memory_building": {
+      "random": {
+        "coverage": 0.9736309479442833,
+        "diversity": 0.052062563598155975,
+        "memory_size": 1000,
+        "compression_ratio": 0.2
+      },
+      "clustering": {
+        "coverage": 0.9770743320442878,
+        "diversity": 0.046400170773267746,
+        "memory_size": 1000,
+        "compression_ratio": 0.2
+      },
+      "diversity": {
+        "coverage": 0.9737829726445479,
+        "diversity": 0.052114300429821014,
+        "memory_size": 1000,
+        "compression_ratio": 0.2
+      },
+      "clustering_diversity": {
+        "coverage": 0.977177008327772,
+        "diversity": 0.046537891030311584,
+        "memory_size": 1000,
+        "compression_ratio": 0.2
+      }
+    },
+    "weight_updating": {
+      "no_boosting": {
+        "adaptation": 0.0,
+        "ood_detection": 0.9523999999999999,
+        "beta": 1.0,
+        "boosting_enabled": false
+      },
+      "low_beta": {
+        "adaptation": 0.006060054060071707,
+        "ood_detection": 0.9527,
+        "beta": 32.0,
+        "boosting_enabled": true
+      },
+      "medium_beta": {
+        "adaptation": 0.005836976692080498,
+        "ood_detection": 0.9532,
+        "beta": 128.0,
+        "boosting_enabled": true
+      },
+      "high_beta": {
+        "adaptation": 0.006477722432464361,
+        "ood_detection": 0.5,
+        "beta": 512.0,
+        "boosting_enabled": true
+      }
+    },
+    "energy_methods": {
+      "hopfield_only": {
+        "auc": 0.17303400000000002,
+        "boundary_sharpness": 1.2723366648395549,
+        "mean_id_energy": -0.01083079632371664,
+        "mean_ood_energy": -0.01083203125745058,
+        "std_id_energy": 4.657828469589731e-07,
+        "std_ood_energy": 1.4554231029251241e-06
+      },
+      "border_energy": {
+        "auc": 0.17303400000000002,
+        "boundary_sharpness": 1.2723366648395549,
+        "mean_id_energy": -0.01083079632371664,
+        "mean_ood_energy": -0.01083203125745058,
+        "std_id_energy": 4.657828469589731e-07,
+        "std_ood_energy": 1.4554231029251241e-06
+      },
+      "positive_shift": {
+        "auc": 0.826966,
+        "boundary_sharpness": 1.2723366648395549,
+        "mean_id_energy": 0.01083079632371664,
+        "mean_ood_energy": 0.01083203125745058,
+        "std_id_energy": 4.657828469589731e-07,
+        "std_ood_energy": 1.4554231029251241e-06
+      },
+      "inference_score": {
+        "auc": 0.946542,
+        "boundary_sharpness": 2.322868618896172,
+        "mean_id_energy": -7.651615305803716e-05,
+        "mean_ood_energy": 0.00015987074584700167,
+        "std_id_energy": 0.00010033161379396915,
+        "std_ood_energy": 0.00010317853593733162
+      }
+    }
+  },
+  "recommendations": {
+    "feature_extraction": "Use multi-scale features with attention for best separation",
+    "memory_building": "Combine clustering with diversity weighting for optimal coverage",
+    "weight_updating": "Use moderate beta values (128-256) for effective boosting",
+    "energy_methods": "Border energy with positive shift provides best boundary sharpness"
+  }
+}

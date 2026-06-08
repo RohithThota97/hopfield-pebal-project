@@ -1,0 +1,24 @@
+
+--- Step 1: Caching Image Lists on CPU ---
+Collecting ID image list (CPU cache): 100%|███████████████████████████████████████████████████| 3268/3268 [04:25<00:00, 12.30it/s]
+Collecting AUX data O^D: 100%|█████| 3268/3268 [04:05<00:00, 13.29it/s, AUX_samples=172, Total_AUX_pixels=9965827, Processed=3268]
+Cached 3267 ID images and 172 OOD images.
+
+--- Step 2: Starting Hopfield Boosting for 50 Epochs ---
+Epoch 1/50:   0%|                                                                                        | 0/3268 [00:03<?, ?it/s]
+✅ ID memory validation passed: 128D features, 77140 patterns
+✅ AUX memory validation passed: 128D features, 50000 patterns
+✅ Memory format validated:
+   ID memory (X): [128, 77140] = 128D features, 77140 patterns
+   AUX memory (O): [128, 50000] = 128D features, 50000 patterns
+Traceback (most recent call last):
+  File "run_training.py", line 275, in <module>
+    'proj_hidden_dim': 256,
+  File "run_training.py", line 272, in main
+    'model_path': "/home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth",
+  File "run_training.py", line 218, in train
+  File "run_training.py", line 171, in _compute_composite_loss
+    self.current_X_memory, self.current_O_memory = self._build_memories_from_samples(xs_batch, os_batch)
+  File "run_training.py", line 59, in compute_ood_loss_fixed
+    self.train_loader = train_loader
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 2.38 MiB is free. Including non-PyTorch memory, this process has 7.59 GiB memory in use. Of the allocated memory 7.45 GiB is allocated by PyTorch, and 32.13 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

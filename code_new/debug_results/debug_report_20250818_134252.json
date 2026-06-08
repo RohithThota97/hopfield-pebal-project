@@ -1,0 +1,646 @@
+{
+    "dataset_stats": {
+        "total_images": 3268,
+        "cityscapes_images": 3069,
+        "coco_images": 199,
+        "images_with_ood": 3199,
+        "ood_percentage": 97.88861689106487,
+        "total_pixels": 1713373184,
+        "ood_pixels": 115862035,
+        "ood_pixel_percentage": 6.762218300248593,
+        "class_pixel_counts": {
+            "0": 660783743,
+            "1": 93963813,
+            "2": 294847595,
+            "3": 11792076,
+            "4": 14833635,
+            "5": 21712591,
+            "6": 3171352,
+            "7": 8398681,
+            "8": 228756539,
+            "10": 38535565,
+            "11": 28797664,
+            "13": 142066093,
+            "15": 5330352,
+            "255": 104677376,
+            "9": 19282796,
+            "12": 3378975,
+            "18": 8894028,
+            "254": 11184659,
+            "17": 2333923,
+            "14": 5218700,
+            "16": 5413028
+        },
+        "batch_errors": []
+    },
+    "feature_extraction_stats": {
+        "successful_extractions": 20,
+        "failed_extractions": 0,
+        "extraction_errors": [],
+        "feature_statistics": {
+            "mean": 0.08111832290887833,
+            "std": 0.16532348096370697,
+            "min": 0.0,
+            "max": 4.3343987464904785,
+            "shape": [
+                4,
+                1280,
+                65,
+                65
+            ]
+        },
+        "projection_statistics": {
+            "mean": -0.015652531757950783,
+            "std": 0.08699139207601547,
+            "min": -0.35719209909439087,
+            "max": 0.2861377000808716,
+            "shape": [
+                4,
+                128,
+                65,
+                65
+            ],
+            "norm_check": 1.0
+        }
+    },
+    "memory_building_stats": {
+        "images_with_contributions": 200,
+        "final_id_counts_by_class": {
+            "0": 1885,
+            "1": 1640,
+            "2": 1555,
+            "3": 362,
+            "4": 484,
+            "5": 1514,
+            "6": 480,
+            "7": 1061,
+            "8": 1509,
+            "9": 662,
+            "10": 813,
+            "11": 1001,
+            "12": 305,
+            "13": 1577,
+            "14": 124,
+            "15": 116,
+            "16": 79,
+            "17": 134,
+            "18": 637
+        },
+        "final_aux_count": 5359,
+        "total_id_collected": 15938,
+        "collection_success_rate": 31.883014263137888,
+        "aux_success_rate": 10.718
+    },
+    "per_image_analysis": [
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 43679,
+            "class_pixel_counts": {
+                "0": 177931,
+                "1": 105533,
+                "2": 51991,
+                "3": 6458,
+                "4": 1037,
+                "5": 35128,
+                "6": 2248,
+                "7": 783,
+                "8": 94502,
+                "10": 411,
+                "11": 546,
+                "13": 1861,
+                "15": 2180,
+                "255": 43679
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 5141,
+            "class_pixel_counts": {
+                "0": 174713,
+                "1": 90822,
+                "2": 2568,
+                "5": 14556,
+                "6": 451,
+                "7": 949,
+                "8": 1296,
+                "9": 13096,
+                "12": 1569,
+                "13": 208142,
+                "18": 10985,
+                "255": 5141
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 23111,
+            "class_pixel_counts": {
+                "0": 143608,
+                "1": 2594,
+                "2": 56071,
+                "4": 1397,
+                "5": 5019,
+                "7": 6612,
+                "8": 174027,
+                "9": 8747,
+                "10": 1639,
+                "11": 606,
+                "13": 96571,
+                "18": 4286,
+                "255": 23111
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 43415,
+            "class_pixel_counts": {
+                "0": 401234,
+                "1": 50422,
+                "2": 1803,
+                "5": 7523,
+                "8": 1231,
+                "9": 18660,
+                "255": 43415
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": true,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 131052,
+            "class_pixel_counts": {
+                "0": 331107,
+                "1": 10910,
+                "5": 2129,
+                "7": 376,
+                "8": 3363,
+                "9": 40168,
+                "11": 198,
+                "13": 4985,
+                "254": 130054,
+                "255": 998
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 17190,
+            "class_pixel_counts": {
+                "0": 131742,
+                "1": 103428,
+                "2": 18681,
+                "3": 59571,
+                "4": 29960,
+                "5": 1751,
+                "7": 5940,
+                "8": 139842,
+                "10": 394,
+                "13": 15789,
+                "255": 17190
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 44621,
+            "class_pixel_counts": {
+                "0": 207819,
+                "1": 44463,
+                "2": 140755,
+                "5": 12187,
+                "6": 23,
+                "7": 2911,
+                "8": 50960,
+                "11": 315,
+                "12": 3004,
+                "13": 5799,
+                "17": 419,
+                "18": 11012,
+                "255": 44621
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 8907,
+            "class_pixel_counts": {
+                "0": 362331,
+                "1": 15157,
+                "2": 122229,
+                "5": 6813,
+                "8": 3643,
+                "9": 5208,
+                "255": 8907
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 81610,
+            "class_pixel_counts": {
+                "0": 328866,
+                "1": 2717,
+                "5": 4709,
+                "8": 51,
+                "9": 91074,
+                "12": 2242,
+                "13": 913,
+                "15": 2298,
+                "18": 9808,
+                "255": 81610
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 43075,
+            "class_pixel_counts": {
+                "0": 159355,
+                "1": 5465,
+                "2": 87489,
+                "5": 10755,
+                "7": 16530,
+                "8": 107628,
+                "10": 450,
+                "11": 3263,
+                "12": 1363,
+                "13": 82576,
+                "18": 6339,
+                "255": 43075
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 6662,
+            "class_pixel_counts": {
+                "0": 188149,
+                "1": 14152,
+                "2": 146926,
+                "5": 12072,
+                "6": 3520,
+                "7": 423,
+                "12": 3565,
+                "13": 144598,
+                "18": 4221,
+                "255": 6662
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 132860,
+            "class_pixel_counts": {
+                "0": 297189,
+                "1": 65503,
+                "2": 19522,
+                "5": 1599,
+                "9": 148,
+                "11": 1500,
+                "12": 395,
+                "13": 2948,
+                "15": 177,
+                "18": 2447,
+                "255": 132860
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 16917,
+            "class_pixel_counts": {
+                "0": 464997,
+                "1": 18128,
+                "2": 12748,
+                "13": 11498,
+                "255": 16917
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 3657,
+            "class_pixel_counts": {
+                "0": 187957,
+                "1": 4843,
+                "2": 87363,
+                "5": 2812,
+                "6": 379,
+                "7": 2925,
+                "8": 12703,
+                "9": 184,
+                "13": 220041,
+                "18": 1424,
+                "255": 3657
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 15804,
+            "class_pixel_counts": {
+                "0": 299818,
+                "1": 9762,
+                "2": 103852,
+                "8": 11598,
+                "13": 81257,
+                "18": 2197,
+                "255": 15804
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 15551,
+            "class_pixel_counts": {
+                "0": 376184,
+                "1": 42444,
+                "2": 26300,
+                "5": 13062,
+                "8": 259,
+                "9": 169,
+                "13": 50319,
+                "255": 15551
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 23673,
+            "class_pixel_counts": {
+                "0": 245055,
+                "1": 45644,
+                "2": 139042,
+                "3": 164,
+                "5": 7108,
+                "6": 2303,
+                "7": 11375,
+                "8": 11079,
+                "9": 52,
+                "10": 12768,
+                "11": 7923,
+                "12": 164,
+                "13": 11529,
+                "14": 5343,
+                "18": 1066,
+                "255": 23673
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 82643,
+            "class_pixel_counts": {
+                "0": 422344,
+                "1": 5585,
+                "11": 11925,
+                "13": 1791,
+                "255": 82643
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 6331,
+            "class_pixel_counts": {
+                "0": 86,
+                "2": 68515,
+                "5": 18398,
+                "6": 4953,
+                "7": 1651,
+                "8": 385153,
+                "10": 19781,
+                "11": 1208,
+                "13": 18179,
+                "18": 33,
+                "255": 6331
+            }
+        },
+        {
+            "image_shape": [
+                3,
+                512,
+                1024
+            ],
+            "label_shape": [
+                512,
+                1024
+            ],
+            "is_coco_image": false,
+            "has_ood_pixels": true,
+            "total_pixels": 524288,
+            "ood_pixels": 37595,
+            "class_pixel_counts": {
+                "0": 187337,
+                "1": 50636,
+                "2": 144802,
+                "3": 9660,
+                "4": 1359,
+                "5": 11440,
+                "6": 682,
+                "7": 2418,
+                "8": 47142,
+                "10": 3839,
+                "11": 6317,
+                "12": 5013,
+                "13": 3094,
+                "17": 12874,
+                "18": 80,
+                "255": 37595
+            }
+        }
+    ],
+    "errors_and_warnings": []
+}

@@ -1,0 +1,9 @@
+2025-09-03 18:40:39,660 - INFO - 
+Building memory with β = 16...
+2025-09-03 18:40:39,661 - INFO - Building memories from loader...
+2025-09-03 18:40:39,812 - INFO - Starting redesigned hybrid memory building over full dataset...
+2025-09-03 18:40:42,751 - ERROR - Error processing batch 0: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 1280, 64, 64] to have 1536 channels, but got 1280 channels instead. Skipping.
+2025-09-03 18:40:43,190 - ERROR - Error processing batch 1: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 1280, 64, 64] to have 1536 channels, but got 1280 channels instead. Skipping.
+2025-09-03 18:40:43,519 - ERROR - Error processing batch 2: CUDA out of memory. Tried to allocate 160.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 90.38 MiB is free. Process 2195051 has 5.05 GiB memory in use. Including non-PyTorch memory, this process has 2.46 GiB memory in use. Of the allocated memory 1.82 GiB is allocated by PyTorch, and 530.26 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables). Skipping.
+2025-09-03 18:40:43,934 - ERROR - Error processing batch 3: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 1280, 64, 64] to have 1536 channels, but got 1280 channels instead. Skipping.
+2025-09-03 18:40:45,042 - ERROR - Error processing batch 4: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 1280, 64, 64] to have 1536 channels, but got 1280 channels instead. Skipping.

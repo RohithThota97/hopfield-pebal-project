@@ -1,0 +1,107 @@
+2025-06-20 09:51:24,693 - __main__ - INFO - Initializing trainer on device: cuda
+/home/ha51dybi/PEBAL/code/feature_extractor.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(model_path, map_location='cpu')
+2025-06-20 09:51:41,339 - segmentation_head - INFO - SegmentationClassifierHead initialized: in_channels=1280, num_classes=19
+2025-06-20 09:51:41,341 - __main__ - INFO - Trainer initialization completed
+2025-06-20 09:51:41,341 - __main__ - INFO - Starting training for 50 epochs with batch_size=2
+2025-06-20 09:51:41,341 - __main__ - INFO - Building initial memories...
+2025-06-20 09:51:41,342 - __main__ - INFO - Creating dataloader with batch_size=2
+2025-06-20 09:51:41,932 - __main__ - INFO - Dataloader created with 1634 batches
+2025-06-20 09:51:41,932 - __main__ - INFO - Building initial memories...
+Processing ALL images to build ID and AUX memories...
+Building memories: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:19<00:00,  1.90it/s]
+Processed 3268 images
+ID features by class: [2600, 2600, 1378, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2465, 1687, 2600, 2600, 2600, 2222, 940, 1909]
+AUX features collected: 158488
+Building final memories...
+Created ID memory: torch.Size([44401, 128])
+Created AUX memory: torch.Size([50000, 128])
+2025-06-20 10:06:02,094 - __main__ - INFO - Memory statistics: {'images_processed': 3268, 'total_id_features': 44401, 'total_aux_features': 158488, 'id_class_distribution': {8: 2600, 13: 2600, 6: 1378, 1: 2600, 18: 2600, 3: 2600, 5: 2600, 2: 2600, 0: 2600, 11: 2600, 7: 2600, 15: 2465, 12: 1687, 9: 2600, 4: 2600, 10: 2600, 14: 2222, 17: 940, 16: 1909}, 'classes_with_features': 19}
+2025-06-20 10:06:02,095 - __main__ - INFO - Starting training loop...
+2025-06-20 10:06:02,095 - __main__ - INFO - Creating dataloader with batch_size=2
+2025-06-20 10:06:02,182 - __main__ - INFO - Dataloader created with 1634 batches
+2025-06-20 10:06:02,182 - __main__ - INFO -
+============================================================
+2025-06-20 10:06:02,184 - __main__ - INFO - EPOCH 1/50
+2025-06-20 10:06:02,184 - __main__ - INFO - ============================================================
+Epoch 1: 100%|████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [15:10<00:00,  1.79it/s, Loss=0.2371, CE=0.2371, OOD=0.0000, LR=0.010000]
+2025-06-20 10:21:12,986 - __main__ - INFO - Epoch 1 completed:
+2025-06-20 10:21:12,987 - __main__ - INFO -   Processed batches: 1634
+2025-06-20 10:21:12,987 - __main__ - INFO -   Skipped batches: 0
+2025-06-20 10:21:12,988 - __main__ - INFO -   Average Loss: 0.3670
+2025-06-20 10:21:12,989 - __main__ - INFO -   Average CE Loss: 0.3364
+2025-06-20 10:21:12,990 - __main__ - INFO -   Average OOD Loss: 0.0612
+2025-06-20 10:21:12,991 - __main__ - INFO -   Learning Rate: 0.009990
+2025-06-20 10:21:12,992 - __main__ - INFO -
+============================================================
+2025-06-20 10:21:12,992 - __main__ - INFO - EPOCH 2/50
+2025-06-20 10:21:12,993 - __main__ - INFO - ============================================================
+Epoch 2: 100%|████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [15:07<00:00,  1.80it/s, Loss=0.2379, CE=0.2379, OOD=0.0000, LR=0.009990]
+2025-06-20 10:36:20,140 - __main__ - INFO - Updating auxiliary memory weights...
+Collecting AUX features: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:23<00:00,  1.89it/s]
+Computing border energies: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 177/177 [00:25<00:00,  7.05it/s]
+2025-06-20 10:51:09,347 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-20 10:51:09,348 - __main__ - INFO - Epoch 2 completed:
+2025-06-20 10:51:09,348 - __main__ - INFO -   Processed batches: 1634
+2025-06-20 10:51:09,349 - __main__ - INFO -   Skipped batches: 0
+2025-06-20 10:51:09,349 - __main__ - INFO -   Average Loss: 0.2329
+2025-06-20 10:51:09,349 - __main__ - INFO -   Average CE Loss: 0.2037
+2025-06-20 10:51:09,349 - __main__ - INFO -   Average OOD Loss: 0.0584
+2025-06-20 10:51:09,349 - __main__ - INFO -   Learning Rate: 0.009961
+2025-06-20 10:51:09,349 - __main__ - INFO -
+============================================================
+2025-06-20 10:51:09,350 - __main__ - INFO - EPOCH 3/50
+2025-06-20 10:51:09,351 - __main__ - INFO - ============================================================
+Epoch 3: 100%|████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [15:04<00:00,  1.81it/s, Loss=0.2280, CE=0.2280, OOD=0.0000, LR=0.009961]
+2025-06-20 11:06:13,368 - __main__ - INFO - Updating auxiliary memory weights...
+Collecting AUX features: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:19<00:00,  1.90it/s]
+Computing border energies: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 158/158 [00:22<00:00,  7.03it/s]
+2025-06-20 11:20:55,541 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-20 11:20:55,542 - __main__ - INFO - Epoch 3 completed:
+2025-06-20 11:20:55,543 - __main__ - INFO -   Processed batches: 1634
+2025-06-20 11:20:55,543 - __main__ - INFO -   Skipped batches: 0
+2025-06-20 11:20:55,543 - __main__ - INFO -   Average Loss: 0.2207
+2025-06-20 11:20:55,543 - __main__ - INFO -   Average CE Loss: 0.1910
+2025-06-20 11:20:55,544 - __main__ - INFO -   Average OOD Loss: 0.0593
+2025-06-20 11:20:55,545 - __main__ - INFO -   Learning Rate: 0.009911
+2025-06-20 11:20:55,546 - __main__ - INFO -
+============================================================
+2025-06-20 11:20:55,546 - __main__ - INFO - EPOCH 4/50
+2025-06-20 11:20:55,547 - __main__ - INFO - ============================================================
+Epoch 4: 100%|████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [15:04<00:00,  1.81it/s, Loss=0.1439, CE=0.1439, OOD=0.0000, LR=0.009911]
+2025-06-20 11:36:00,122 - __main__ - INFO - Updating auxiliary memory weights...
+Collecting AUX features: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:19<00:00,  1.90it/s]
+Computing border energies: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 159/159 [00:22<00:00,  7.04it/s]
+2025-06-20 11:50:42,103 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-20 11:50:42,103 - __main__ - INFO - Epoch 4 completed:
+2025-06-20 11:50:42,104 - __main__ - INFO -   Processed batches: 1634
+2025-06-20 11:50:42,104 - __main__ - INFO -   Skipped batches: 0
+2025-06-20 11:50:42,104 - __main__ - INFO -   Average Loss: 0.2144
+2025-06-20 11:50:42,105 - __main__ - INFO -   Average CE Loss: 0.1841
+2025-06-20 11:50:42,105 - __main__ - INFO -   Average OOD Loss: 0.0606
+2025-06-20 11:50:42,105 - __main__ - INFO -   Learning Rate: 0.009843
+2025-06-20 11:50:42,106 - __main__ - INFO -
+============================================================
+2025-06-20 11:50:42,106 - __main__ - INFO - EPOCH 5/50
+2025-06-20 11:50:42,107 - __main__ - INFO - ============================================================
+Epoch 5: 100%|████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [15:04<00:00,  1.81it/s, Loss=0.1320, CE=0.1320, OOD=0.0000, LR=0.009843]
+2025-06-20 12:05:46,634 - __main__ - INFO - Updating auxiliary memory weights...
+Collecting AUX features: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:22<00:00,  1.89it/s]
+Computing border energies: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 156/156 [00:22<00:00,  7.04it/s]
+2025-06-20 12:20:31,518 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-20 12:20:31,519 - __main__ - INFO - Epoch 5 completed:
+2025-06-20 12:20:31,519 - __main__ - INFO -   Processed batches: 1634
+2025-06-20 12:20:31,520 - __main__ - INFO -   Skipped batches: 0
+2025-06-20 12:20:31,520 - __main__ - INFO -   Average Loss: 0.2075
+2025-06-20 12:20:31,520 - __main__ - INFO -   Average CE Loss: 0.1772
+2025-06-20 12:20:31,520 - __main__ - INFO -   Average OOD Loss: 0.0606
+2025-06-20 12:20:31,521 - __main__ - INFO -   Learning Rate: 0.009755
+2025-06-20 12:20:32,107 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_5.pth
+2025-06-20 12:20:32,107 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_5.pth
+2025-06-20 12:20:32,715 - __main__ - INFO - Model saved to models/hopfield_boosting_best.pth
+2025-06-20 12:20:32,716 - __main__ - INFO - New best model saved: models/hopfield_boosting_best.pth (loss: 0.2075)
+2025-06-20 12:20:32,724 - __main__ - INFO -
+============================================================
+2025-06-20 12:20:32,724 - __main__ - INFO - EPOCH 6/50
+2025-06-20 12:20:32,724 - __main__ - INFO - ============================================================
+Epoch 6:  78%|████████████████████████████████████████████████████████████████████▌                   | 1272/1634 [11:44<03:29,  1.73it/s, Loss=0.2816, CE=0.2816, OOD=0.0000, LR=0.009755]

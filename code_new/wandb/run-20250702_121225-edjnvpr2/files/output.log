@@ -1,0 +1,23 @@
+2025-07-02 12:12:26,290 - __main__ - INFO - Training dataset size: 3268
+2025-07-02 12:12:26,591 - __main__ - INFO - Filtered 0 images with sufficient OOD pixels from 30 total images
+2025-07-02 12:12:26,591 - __main__ - WARNING - No validation images with sufficient OOD pixels found!
+2025-07-02 12:12:26,832 - __main__ - INFO - Filtered 30 images with sufficient OOD pixels from 30 total images
+2025-07-02 12:12:26,832 - __main__ - INFO - Validation dataset size: 30
+2025-07-02 12:12:26,832 - __main__ - INFO - Building initial Hopfield memories...
+Building memories:  11%|████                                 | 182/1634 [01:30<11:59,  2.02it/s]
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 984, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 978, in main
+    results = trainer.train(num_epochs=NUM_EPOCHS, batch_size=BATCH_SIZE)
+  File "train_pixel_hopfield_boosting.py", line 847, in train
+    self.build_initial_memories(train_loader)
+  File "train_pixel_hopfield_boosting.py", line 253, in build_initial_memories
+    self.memory_builder.process_all_images_for_memories(full_dataloader)
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 51, in process_all_images_for_memories
+    self._process_batch_for_memories(batch)
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 70, in _process_batch_for_memories
+    self._extract_pixels_from_image(
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 90, in _extract_pixels_from_image
+    if id_pixel_mask.sum() > 0:
+KeyboardInterrupt

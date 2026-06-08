@@ -1,0 +1,9 @@
+{"time":"2025-06-18T12:37:53.342136213+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250618_123753-tt719omv/logs/debug-core.log"}
+{"time":"2025-06-18T12:37:53.593360335+02:00","level":"INFO","msg":"stream: created new stream","id":"tt719omv"}
+{"time":"2025-06-18T12:37:53.593449272+02:00","level":"INFO","msg":"stream: started","id":"tt719omv"}
+{"time":"2025-06-18T12:37:53.593477641+02:00","level":"INFO","msg":"handler: started","stream_id":"tt719omv"}
+{"time":"2025-06-18T12:37:53.593537204+02:00","level":"INFO","msg":"sender: started","stream_id":"tt719omv"}
+{"time":"2025-06-18T12:37:53.59357367+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"tt719omv"}
+{"time":"2025-06-18T12:37:53.819564341+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-18T13:45:38.925078208+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-06-18T17:47:56.510739044+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-segmentation/tt719omv/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}

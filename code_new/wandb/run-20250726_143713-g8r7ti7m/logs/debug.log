@@ -1,0 +1,22 @@
+2025-07-26 14:37:13,713 INFO    MainThread:3446501 [wandb_setup.py:_flush():81] Current SDK version is 0.20.1
+2025-07-26 14:37:13,713 INFO    MainThread:3446501 [wandb_setup.py:_flush():81] Configure stats pid to 3446501
+2025-07-26 14:37:13,713 INFO    MainThread:3446501 [wandb_setup.py:_flush():81] Loading settings from /home/ha51dybi/.config/wandb/settings
+2025-07-26 14:37:13,714 INFO    MainThread:3446501 [wandb_setup.py:_flush():81] Loading settings from /home/ha51dybi/PEBAL/code/wandb/settings
+2025-07-26 14:37:13,714 INFO    MainThread:3446501 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-07-26 14:37:13,715 INFO    MainThread:3446501 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /home/ha51dybi/PEBAL/code/wandb/run-20250726_143713-g8r7ti7m/logs/debug.log
+2025-07-26 14:37:13,716 INFO    MainThread:3446501 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /home/ha51dybi/PEBAL/code/wandb/run-20250726_143713-g8r7ti7m/logs/debug-internal.log
+2025-07-26 14:37:13,717 INFO    MainThread:3446501 [wandb_init.py:init():831] calling init triggers
+2025-07-26 14:37:13,718 INFO    MainThread:3446501 [wandb_init.py:init():836] wandb.init called with sweep_config: {}
+config: {'seed': 666, 'repo_name': 'pebal', 'root_dir': '/home/ha51dybi/PEBAL/code', 'city_root_path': '/home/ha51dybi/PEBAL/cityscapes', 'coco_root_path': '/home/ha51dybi/PEBAL/coco', 'fishy_root_path': 'fis/home/ha51dybi/PEBAL/fishyscapes_lostandfound', 'pebal_weight_path': '/home/ha51dybi/PEBAL/code/ckpts/pebal/best_ad_ckpt.pth', 'pretrained_weight_path': '/home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth', 'fix_bias': True, 'bn_eps': 1e-05, 'bn_momentum': 0.1, 'num_classes': 20, 'image_mean': array([0.485, 0.456, 0.406]), 'image_std': array([0.229, 0.224, 0.225]), 'image_height': 900, 'image_width': 900, 'num_train_imgs': 2975, 'num_eval_imgs': 500, 'lr': 1e-05, 'batch_size': 8, 'lr_power': 0.9, 'momentum': 0.9, 'weight_decay': 0.0001, 'nepochs': 40, 'niters_per_epoch': 371, 'num_workers': 4, 'train_scale_array': [0.5, 0.75, 1, 1.5, 1.75, 2.0], 'void_number': 5, 'warm_up_epoch': 0, 'eval_epoch': 1, 'eval_stride_rate': 0.6666666666666666, 'eval_scale_array': [1], 'eval_flip': False, 'eval_base_size': 800, 'eval_crop_size': 800, 'record_info_iter': 20, 'display_iter': 50, 'wandb_key': '45977db017695275c4093e5018892b03a4a14c7d', 'proj_name': 'OoD_Segmentation', 'experiment_name': 'your_pebal_exp', 'upload_image_step': [0, 185], 'wandb_online': True, 'saved_dir': '/home/ha51dybi/PEBAL/code/ckpts/your_pebal_exp', '_wandb': {}}
+2025-07-26 14:37:13,718 INFO    MainThread:3446501 [wandb_init.py:init():872] starting backend
+2025-07-26 14:37:14,358 INFO    MainThread:3446501 [wandb_init.py:init():875] sending inform_init request
+2025-07-26 14:37:14,480 INFO    MainThread:3446501 [wandb_init.py:init():883] backend started and connected
+2025-07-26 14:37:14,484 INFO    MainThread:3446501 [wandb_init.py:init():956] updated telemetry
+2025-07-26 14:37:14,511 INFO    MainThread:3446501 [wandb_init.py:init():980] communicating run to backend with 90.0 second timeout
+2025-07-26 14:37:15,127 INFO    MainThread:3446501 [wandb_init.py:init():1032] starting run threads in backend
+2025-07-26 14:37:15,322 INFO    MainThread:3446501 [wandb_run.py:_console_start():2453] atexit reg
+2025-07-26 14:37:15,322 INFO    MainThread:3446501 [wandb_run.py:_redirect():2301] redirect: wrap_raw
+2025-07-26 14:37:15,323 INFO    MainThread:3446501 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-07-26 14:37:15,324 INFO    MainThread:3446501 [wandb_run.py:_redirect():2393] Redirects installed.
+2025-07-26 14:37:15,330 INFO    MainThread:3446501 [wandb_init.py:init():1078] run started, returning control to user process
+2025-07-26 14:37:15,536 INFO    MsgRouterThr:3446501 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

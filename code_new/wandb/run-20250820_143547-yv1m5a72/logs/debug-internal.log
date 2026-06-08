@@ -1,0 +1,7 @@
+{"time":"2025-08-20T14:35:47.870576301+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250820_143547-yv1m5a72/logs/debug-core.log"}
+{"time":"2025-08-20T14:35:48.12866367+02:00","level":"INFO","msg":"stream: created new stream","id":"yv1m5a72"}
+{"time":"2025-08-20T14:35:48.128795945+02:00","level":"INFO","msg":"stream: started","id":"yv1m5a72"}
+{"time":"2025-08-20T14:35:48.128808878+02:00","level":"INFO","msg":"handler: started","stream_id":"yv1m5a72"}
+{"time":"2025-08-20T14:35:48.128826264+02:00","level":"INFO","msg":"sender: started","stream_id":"yv1m5a72"}
+{"time":"2025-08-20T14:35:48.128849836+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"yv1m5a72"}
+{"time":"2025-08-20T14:35:48.561426006+02:00","level":"INFO","msg":"Starting system monitor"}

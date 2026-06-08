@@ -1,0 +1,228 @@
+Starting real memory building process...
+Target sizes: ID=2000, OOD=1000
+Processing Images: 100%|███████████████████████████████████████████████████████████████████████████████| 817/817 [59:27<00:00,  4.37s/it]
+Raw collection complete. Building final tensors...
+Processing summary:
+  Successful batches: 817
+  Processing errors: 0
+  Total images processed: 3268
+Building final memory tensors...
+Building memory with 19 valid classes
+Class road: 29600 candidates → 76 selected
+Class sidewalk: 24084 candidates → 76 selected
+Class building: 27566 candidates → 50 selected
+Class person: 14597 candidates → 153 selected
+Class car: 24292 candidates → 115 selected
+Class pole: 20467 candidates → 115 selected
+Class traffic_light: 7954 candidates → 115 selected
+Class traffic_sign: 16458 candidates → 115 selected
+Class vegetation: 25783 candidates → 50 selected
+Class terrain: 9294 candidates → 50 selected
+Class sky: 16899 candidates → 50 selected
+Class train: 127718 candidates → 230 selected
+Class rider: 4429 candidates → 153 selected
+Class bicycle: 8196 candidates → 50 selected
+Class wall: 5374 candidates → 50 selected
+Class fence: 7179 candidates → 50 selected
+Class truck: 107268 candidates → 192 selected
+Class bus: 127544 candidates → 192 selected
+Class motorcycle: 42342 candidates → 192 selected
+Final ID Memory Shape: torch.Size([2074, 128])
+Final OOD Memory Shape: torch.Size([1000, 128])
+✅ Pixel memory banks built. ID: torch.Size([128, 2074]), OOD: torch.Size([128, 1000])
+✅ PixelWiseHopfieldTrainer initialization complete!
+🚀 Starting training process...
+
+🎯 Starting Epoch 1/50
+Training Epoch 1: 100%|██████████████████████████████████████████████████████| 817/817 [03:32<00:00,  3.85it/s, L_CE=2.0475, L_OOD=0.0000]
+
+🎯 Starting Epoch 2/50
+Training Epoch 2: 100%|██████████████████████████████████████████████████████| 817/817 [03:47<00:00,  3.59it/s, L_CE=2.1165, L_OOD=0.0000]
+
+🎯 Starting Epoch 3/50
+Training Epoch 3: 100%|██████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.8690, L_OOD=0.0000]
+
+🎯 Starting Epoch 4/50
+Training Epoch 4: 100%|██████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.65it/s, L_CE=1.8644, L_OOD=0.0000]
+
+🎯 Starting Epoch 5/50
+Training Epoch 5: 100%|██████████████████████████████████████████████████████| 817/817 [03:43<00:00,  3.65it/s, L_CE=2.0731, L_OOD=0.0000]
+Evaluating Epoch 5: 100%|███████████████████████████████████████████████████████████████████████████████| 125/125 [00:36<00:00,  3.46it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.
+
+🎯 Starting Epoch 6/50
+Updating Sampler Pool: 100%|████████████████████████████████████████████████████████████████████████████| 817/817 [02:43<00:00,  5.01it/s]
+Training Epoch 6: 100%|██████████████████████████████████████████████████████| 817/817 [03:48<00:00,  3.57it/s, L_CE=2.0682, L_OOD=0.0000]
+
+🎯 Starting Epoch 7/50
+Training Epoch 7: 100%|█████████████████████████████████████████████████████| 817/817 [03:46<00:00,  3.61it/s, L_CE=2.0856, L_OOD=-0.1450]
+
+🎯 Starting Epoch 8/50
+Training Epoch 8: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.9860, L_OOD=-0.1357]
+
+🎯 Starting Epoch 9/50
+Training Epoch 9: 100%|██████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=2.0061, L_OOD=0.0000]
+
+🎯 Starting Epoch 10/50
+Training Epoch 10: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=2.0078, L_OOD=0.0000]
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_final/pixel_checkpoint_epoch_10.pth
+Evaluating Epoch 10: 100%|██████████████████████████████████████████████████████████████████████████████| 125/125 [00:35<00:00,  3.47it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.
+
+🎯 Starting Epoch 11/50
+Updating Sampler Pool: 100%|████████████████████████████████████████████████████████████████████████████| 817/817 [02:42<00:00,  5.03it/s]
+Training Epoch 11: 100%|████████████████████████████████████████████████████| 817/817 [03:49<00:00,  3.56it/s, L_CE=1.8251, L_OOD=-0.1145]
+
+🎯 Starting Epoch 12/50
+Training Epoch 12: 100%|█████████████████████████████████████████████████████| 817/817 [03:46<00:00,  3.61it/s, L_CE=1.6883, L_OOD=0.0000]
+
+🎯 Starting Epoch 13/50
+Training Epoch 13: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=2.2203, L_OOD=0.0000]
+
+🎯 Starting Epoch 14/50
+Training Epoch 14: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.4939, L_OOD=0.0000]
+
+🎯 Starting Epoch 15/50
+Training Epoch 15: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.7227, L_OOD=0.0000]
+Evaluating Epoch 15: 100%|██████████████████████████████████████████████████████████████████████████████| 125/125 [00:35<00:00,  3.48it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.
+
+🎯 Starting Epoch 16/50
+Updating Sampler Pool: 100%|████████████████████████████████████████████████████████████████████████████| 817/817 [02:41<00:00,  5.05it/s]
+Training Epoch 16: 100%|████████████████████████████████████████████████████| 817/817 [03:49<00:00,  3.56it/s, L_CE=1.4911, L_OOD=-0.0846]
+
+🎯 Starting Epoch 17/50
+Training Epoch 17: 100%|█████████████████████████████████████████████████████| 817/817 [03:46<00:00,  3.61it/s, L_CE=1.6354, L_OOD=0.0000]
+
+🎯 Starting Epoch 18/50
+Training Epoch 18: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.63it/s, L_CE=1.8823, L_OOD=0.0000]
+
+🎯 Starting Epoch 19/50
+Training Epoch 19: 100%|████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.6265, L_OOD=-0.0702]
+
+🎯 Starting Epoch 20/50
+Training Epoch 20: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=2.6243, L_OOD=0.0000]
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_final/pixel_checkpoint_epoch_20.pth
+Evaluating Epoch 20: 100%|██████████████████████████████████████████████████████████████████████████████| 125/125 [00:35<00:00,  3.48it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.
+
+🎯 Starting Epoch 21/50
+Updating Sampler Pool: 100%|████████████████████████████████████████████████████████████████████████████| 817/817 [02:45<00:00,  4.93it/s]
+Training Epoch 21: 100%|█████████████████████████████████████████████████████| 817/817 [03:49<00:00,  3.56it/s, L_CE=2.1765, L_OOD=0.0000]
+
+🎯 Starting Epoch 22/50
+Training Epoch 22: 100%|█████████████████████████████████████████████████████| 817/817 [03:46<00:00,  3.61it/s, L_CE=1.8177, L_OOD=0.0000]
+
+🎯 Starting Epoch 23/50
+Training Epoch 23: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.8188, L_OOD=0.0000]
+
+🎯 Starting Epoch 24/50
+Training Epoch 24: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.7378, L_OOD=0.0000]
+
+🎯 Starting Epoch 25/50
+Training Epoch 25: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.6184, L_OOD=0.0000]
+Evaluating Epoch 25: 100%|██████████████████████████████████████████████████████████████████████████████| 125/125 [00:35<00:00,  3.49it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.
+
+🎯 Starting Epoch 26/50
+Updating Sampler Pool: 100%|████████████████████████████████████████████████████████████████████████████| 817/817 [02:44<00:00,  4.97it/s]
+Training Epoch 26: 100%|█████████████████████████████████████████████████████| 817/817 [03:49<00:00,  3.56it/s, L_CE=1.7672, L_OOD=0.0000]
+
+🎯 Starting Epoch 27/50
+Training Epoch 27: 100%|████████████████████████████████████████████████████| 817/817 [03:46<00:00,  3.61it/s, L_CE=1.6143, L_OOD=-0.0535]
+
+🎯 Starting Epoch 28/50
+Training Epoch 28: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.6455, L_OOD=0.0000]
+
+🎯 Starting Epoch 29/50
+Training Epoch 29: 100%|████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.5685, L_OOD=-0.0587]
+
+🎯 Starting Epoch 30/50
+Training Epoch 30: 100%|████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.7519, L_OOD=-0.0516]
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_final/pixel_checkpoint_epoch_30.pth
+Evaluating Epoch 30: 100%|██████████████████████████████████████████████████████████████████████████████| 125/125 [00:35<00:00,  3.49it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.
+
+🎯 Starting Epoch 31/50
+Updating Sampler Pool: 100%|████████████████████████████████████████████████████████████████████████████| 817/817 [02:43<00:00,  4.99it/s]
+Training Epoch 31: 100%|█████████████████████████████████████████████████████| 817/817 [03:49<00:00,  3.56it/s, L_CE=1.9690, L_OOD=0.0000]
+
+🎯 Starting Epoch 32/50
+Training Epoch 32: 100%|█████████████████████████████████████████████████████| 817/817 [03:46<00:00,  3.61it/s, L_CE=1.7902, L_OOD=0.0000]
+
+🎯 Starting Epoch 33/50
+Training Epoch 33: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.6462, L_OOD=0.0000]
+
+🎯 Starting Epoch 34/50
+Training Epoch 34: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.4856, L_OOD=0.0000]
+
+🎯 Starting Epoch 35/50
+Training Epoch 35: 100%|█████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.6162, L_OOD=0.0000]
+Evaluating Epoch 35: 100%|██████████████████████████████████████████████████████████████████████████████| 125/125 [00:35<00:00,  3.49it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.
+
+🎯 Starting Epoch 36/50
+Updating Sampler Pool: 100%|████████████████████████████████████████████████████████████████████████████| 817/817 [02:41<00:00,  5.07it/s]
+Training Epoch 36: 100%|█████████████████████████████████████████████████████| 817/817 [03:49<00:00,  3.57it/s, L_CE=2.7081, L_OOD=0.0000]
+
+🎯 Starting Epoch 37/50
+Training Epoch 37: 100%|███████████████████████████████████████████████████████████| 817/817 [03:45<00:00,  3.62it/s, L_CE=2.0267, L_OOD=0.0000]
+
+🎯 Starting Epoch 38/50
+Training Epoch 38: 100%|██████████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.65it/s, L_CE=1.6501, L_OOD=-0.0522]
+
+🎯 Starting Epoch 39/50
+Training Epoch 39: 100%|███████████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=2.3322, L_OOD=0.0000]
+
+🎯 Starting Epoch 40/50
+Training Epoch 40: 100%|███████████████████████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.9019, L_OOD=0.0000]
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_final/pixel_checkpoint_epoch_40.pth
+Evaluating Epoch 40: 100%|████████████████████████████████████████████████████████████████████████████████████| 125/125 [00:35<00:00,  3.48it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.
+
+🎯 Starting Epoch 41/50
+Updating Sampler Pool: 100%|██████████████████████████████████████████████████████████████████████████████████| 817/817 [02:41<00:00,  5.06it/s]
+Training Epoch 41: 100%|███████████████████████████████████████████████████████████| 817/817 [03:48<00:00,  3.57it/s, L_CE=1.8761, L_OOD=0.0000]
+
+🎯 Starting Epoch 42/50
+Training Epoch 42: 100%|██████████████████████████████████████████████████████████| 817/817 [03:46<00:00,  3.61it/s, L_CE=1.6538, L_OOD=-0.0573]
+
+🎯 Starting Epoch 43/50
+Training Epoch 43: 100%|█████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.5555, L_OOD=0.0000]
+
+🎯 Starting Epoch 44/50
+Training Epoch 44: 100%|█████████████████████████████████████████| 817/817 [03:44<00:00,  3.65it/s, L_CE=1.7880, L_OOD=0.0000]
+
+🎯 Starting Epoch 45/50
+Training Epoch 45: 100%|█████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.7885, L_OOD=0.0000]
+Evaluating Epoch 45: 100%|██████████████████████████████████████████████████████████████████| 125/125 [00:35<00:00,  3.47it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.
+
+🎯 Starting Epoch 46/50
+Updating Sampler Pool: 100%|████████████████████████████████████████████████████████████████| 817/817 [02:41<00:00,  5.06it/s]
+Training Epoch 46: 100%|█████████████████████████████████████████| 817/817 [03:49<00:00,  3.56it/s, L_CE=1.9506, L_OOD=0.0000]
+
+🎯 Starting Epoch 47/50
+Training Epoch 47: 100%|█████████████████████████████████████████| 817/817 [03:46<00:00,  3.61it/s, L_CE=1.9623, L_OOD=0.0000]
+
+🎯 Starting Epoch 48/50
+Training Epoch 48: 100%|█████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=2.2093, L_OOD=0.0000]
+
+🎯 Starting Epoch 49/50
+Training Epoch 49: 100%|█████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=1.9220, L_OOD=0.0000]
+
+🎯 Starting Epoch 50/50
+Training Epoch 50: 100%|█████████████████████████████████████████| 817/817 [03:44<00:00,  3.64it/s, L_CE=2.0054, L_OOD=0.0000]
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_final/pixel_checkpoint_epoch_50.pth
+Evaluating Epoch 50: 100%|██████████████████████████████████████████████████████████████████| 125/125 [00:35<00:00,  3.48it/s]
+⚠️ ValueError: Only one class ([0]) present in the validation set labels.
+     ROC AUC score is not defined in this case. Skipping metric calculation.

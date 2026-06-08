@@ -1,0 +1,39 @@
+2025-07-31 13:26:31,573 - HopfieldTraining - INFO - Starting training...
+2025-07-31 13:26:31,573 - HopfieldTraining - INFO - Building initial memories...
+2025-07-31 13:26:31,573 - hopfield_memory_builder - INFO - HopfieldMemoryBuilder initialized.
+2025-07-31 13:26:31,574 - hopfield_memory_builder - INFO - Starting to collect pixels for memory building...
+Collecting pixels for memory: 100%|██████████████████████████████████████████████████████████████████████| 1634/1634 [15:36<00:00,  1.74it/s]
+2025-07-31 13:42:08,049 - hopfield_memory_builder - INFO - Finished collecting pixels.
+2025-07-31 13:42:08,049 - hopfield_memory_builder - INFO - Building final memory tensors...
+2025-07-31 13:42:08,112 - hopfield_memory_builder - INFO - Final ID Memory: torch.Size([50000, 128]), AUX Memory: torch.Size([50000, 128])
+
+--------------------------------------------------
+Memory Quality Diagnostics:
+  ID Memory Shape : torch.Size([50000, 128]), AUX Memory Shape: torch.Size([50000, 128])
+  ID Self-Similarity : 0.4650, AUX Self-Similarity: 0.5954
+  ID-AUX Cross-Similarity   : 0.4654
+  Separation Metric (Self-Cross): 0.0648
+--------------------------------------------------
+Epoch 1: 100%|███████████████████████████████████████████████| 1634/1634 [16:54<00:00,  1.61it/s, Loss=0.193, CE=0.193, OOD=0.000, Acc=0.938]
+2025-07-31 13:59:02,837 - HopfieldTraining - INFO - Running end-of-epoch diagnostics...
+
+
+==================================================
+Epoch 1 Energy Diagnostics:
+  ID Energy : 0.0000 ± 0.0000
+  OOD Energy: 0.0000 ± 0.0000
+  Separation: 0.0000
+==================================================
+2025-07-31 13:59:02,911 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_1.pth
+Epoch 2: 100%|███████████████████████████████████████████████| 1634/1634 [16:55<00:00,  1.61it/s, Loss=0.083, CE=0.083, OOD=0.000, Acc=0.973]
+2025-07-31 14:15:58,480 - HopfieldTraining - INFO - Running end-of-epoch diagnostics...
+
+
+==================================================
+Epoch 2 Energy Diagnostics:
+  ID Energy : 0.0000 ± 0.0000
+  OOD Energy: 0.0000 ± 0.0000
+  Separation: 0.0000
+==================================================
+2025-07-31 14:15:58,577 - HopfieldTraining - INFO - Checkpoint saved to checkpoints/hopfield_epoch_2.pth
+Epoch 3:   6%|██▊                                              | 94/1634 [00:59<15:58,  1.61it/s, Loss=0.176, CE=0.176, OOD=0.000, Acc=0.941]

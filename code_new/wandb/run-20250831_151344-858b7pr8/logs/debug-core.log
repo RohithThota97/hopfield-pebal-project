@@ -1,0 +1,14 @@
+{"time":"2025-08-31T15:13:44.159787481+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpj1_lw5a5/port-161278.txt","pid":161278,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-08-31T15:13:44.189846679+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":161278}
+{"time":"2025-08-31T15:13:44.189851092+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":41579,"Zone":""}}
+{"time":"2025-08-31T15:13:44.34853329+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:59468"}
+{"time":"2025-08-31T15:13:44.408002885+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"858b7pr8","id":"127.0.0.1:59468"}
+{"time":"2025-08-31T15:13:44.68770331+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"858b7pr8","id":"127.0.0.1:59468"}
+{"time":"2025-08-31T15:27:00.099809085+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:59468"}
+{"time":"2025-08-31T15:27:00.100073607+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:59468"}
+{"time":"2025-08-31T15:27:00.100078344+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-08-31T15:27:00.100116981+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:59468"}
+{"time":"2025-08-31T15:27:00.282207634+02:00","level":"ERROR","msg":"processOutgoingData: flush error","error":"write tcp 127.0.0.1:41579->127.0.0.1:59468: use of closed network connection","id":"127.0.0.1:59468"}
+{"time":"2025-08-31T15:27:01.348313887+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:59468"}
+{"time":"2025-08-31T15:27:01.348339666+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:59468"}
+{"time":"2025-08-31T15:27:01.348357+02:00","level":"INFO","msg":"server is closed"}

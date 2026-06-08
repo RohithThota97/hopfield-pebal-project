@@ -1,0 +1,44 @@
+INFO:__main__:Initializing models...
+INFO:__main__:Loaded 268/268 model parameters flexibly
+WARNING:__main__:Skipped keys: ['criterion.nll_loss.weight']
+INFO:__main__:Missing keys: []
+INFO:__main__:Unexpected keys: []
+INFO:__main__:Loaded 100.0% of parameters successfully
+INFO:__main__:Keeping backbone FROZEN for ID segmentation
+INFO:__main__:Trainable parameters: 333,331
+INFO:__main__:Total parameters: 137,437,267
+INFO:__main__:
+============================================================
+INFO:__main__:RUNNING DIAGNOSTIC TESTS
+INFO:__main__:============================================================
+INFO:__main__:
+1. Testing pretrained pretrained feature extraction...
+INFO:__main__:Processing images of shape torch.Size([1, 3, 512, 1024]), min: 0.0000, max: 1.0000
+INFO:__main__:   Feature shape: torch.Size([1, 1280, 64, 128])
+INFO:__main__:   Feature mean: 0.0513, std: 0.1050
+INFO:__main__:   ✓ Feature extraction working correctly
+INFO:__main__:
+2. Testing segmentation head initialization...
+INFO:__main__:   Logits shape: torch.Size([1, 19, 32, 64])
+INFO:__main__:   Mean probability per class: tensor([0.0521, 0.0526, 0.0529, 0.0523, 0.0526, 0.0531, 0.0522, 0.0529, 0.0527,
+        0.0534, 0.0526, 0.0530, 0.0525, 0.0525, 0.0523, 0.0526, 0.0524, 0.0527,
+        0.0526], device='cuda:0')
+INFO:__main__:   Expected uniform: ~0.0526
+INFO:__main__:   ✓ Segmentation head initialization looks good
+INFO:__main__:
+3. Testing data loader labels...
+INFO:__main__:   Unique labels in first batch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 18, 255]
+INFO:__main__:   ✓ Found 16 ID classes in batch
+INFO:__main__:
+============================================================
+INFO:__main__:DIAGNOSTIC TESTS COMPLETE
+INFO:__main__:============================================================
+
+INFO:__main__:Initializing training components...
+INFO:__main__:Training components initialized
+Traceback (most recent call last):
+  File "run_training.py", line 1190, in <module>
+    main()
+  File "run_training.py", line 1182, in main
+    print("\n" + "=" * "=" * 80)
+TypeError: can't multiply sequence by non-int of type 'str'

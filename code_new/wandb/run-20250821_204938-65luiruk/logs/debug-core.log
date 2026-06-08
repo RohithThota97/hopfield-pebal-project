@@ -1,0 +1,14 @@
+{"time":"2025-08-21T20:49:38.502441941+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpdek_tk8i/port-3491830.txt","pid":3491830,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-08-21T20:49:38.508223907+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":41249,"Zone":""}}
+{"time":"2025-08-21T20:49:38.508257607+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3491830}
+{"time":"2025-08-21T20:49:38.689738259+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:58344"}
+{"time":"2025-08-21T20:49:38.715045246+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"65luiruk","id":"127.0.0.1:58344"}
+{"time":"2025-08-21T20:49:38.973164848+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"65luiruk","id":"127.0.0.1:58344"}
+{"time":"2025-08-21T20:49:39.424179089+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:58344"}
+{"time":"2025-08-21T20:49:39.424219156+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-08-21T20:49:39.424210925+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:58344"}
+{"time":"2025-08-21T20:49:39.424285286+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:58344"}
+{"time":"2025-08-21T20:49:39.615670021+02:00","level":"ERROR","msg":"processOutgoingData: flush error","error":"write tcp 127.0.0.1:41249->127.0.0.1:58344: use of closed network connection","id":"127.0.0.1:58344"}
+{"time":"2025-08-21T20:49:40.365718529+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:58344"}
+{"time":"2025-08-21T20:49:40.365746779+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:58344"}
+{"time":"2025-08-21T20:49:40.365761017+02:00","level":"INFO","msg":"server is closed"}

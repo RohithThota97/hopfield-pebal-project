@@ -1,0 +1,26 @@
+INFO:Pixel_Utils:Found 30 valid Fishyscapes images
+Collecting pixels:   2%|█▋                                                                                    | 31/1634 [00:11<09:46,  2.73it/s]
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 815, in <module>
+    trainer.train(num_epochs=100, batch_size=2)
+  File "train_pixel_hopfield_boosting.py", line 762, in train
+    self.build_initial_memories(train_loader)
+  File "train_pixel_hopfield_boosting.py", line 220, in build_initial_memories
+    self.memory_builder.process_all_images_for_memories(full_dataloader)
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 41, in process_all_images_for_memories
+    for batch_idx, batch_data in enumerate(tqdm(dataloader, desc="Collecting pixels")):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1327, in _next_data
+    idx, data = self._get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1283, in _get_data
+    success, data = self._try_get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1131, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/queue.py", line 179, in get
+    self.not_empty.wait(remaining)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

@@ -1,0 +1,472 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+
+============================================================
+CROSS-VALIDATING β FOR SEGMENTATION
+============================================================
+
+Testing β = 4
+Collecting Features with Stratification: 100%|██████████████████████████████████████| 125/125 [01:55<00:00,  1.08it/s]
+WARNING: Negative energies detected—check normalization!
+HopfieldBoostingManager initialized with aligned beta=4
+  Energy separation: 3.3773
+
+Testing β = 8
+Collecting Features with Stratification: 100%|██████████████████████████████████████| 125/125 [02:05<00:00,  1.01s/it]
+WARNING: Negative energies detected—check normalization!
+HopfieldBoostingManager initialized with aligned beta=8
+  Energy separation: 3.8197
+
+Testing β = 16
+Collecting Features with Stratification: 100%|██████████████████████████████████████| 125/125 [02:10<00:00,  1.04s/it]
+WARNING: Negative energies detected—check normalization!
+HopfieldBoostingManager initialized with aligned beta=16
+  Energy separation: 4.6086
+
+Testing β = 32
+Collecting Features with Stratification: 100%|██████████████████████████████████████| 125/125 [02:07<00:00,  1.02s/it]
+WARNING: Negative energies detected—check normalization!
+HopfieldBoostingManager initialized with aligned beta=32
+  Energy separation: 5.8862
+
+β Cross-validation Results:
+  β=4: separation=3.3773
+  β=8: separation=3.8197
+  β=16: separation=4.6086
+  β=32: separation=5.8862
+Selected optimal β = 32 (separation: 5.8862)
+
+Building memory with optimized β = 32...
+Collecting Features with Stratification: 100%|██████████████████████████████████████| 408/408 [13:13<00:00,  1.94s/it]
+WARNING: Negative energies detected—check normalization!
+HopfieldBoostingManager initialized with aligned beta=32
+Memory built with β=32:
+  ID memory: 49989 samples
+  AUX memory: 50000 samples
+  AUX/ID ratio: 1.00
+Hopfield Boosting initialization complete with β optimization!
+PixelWiseHopfieldTrainer initialization complete with optimal β=32!
+
+================================================================================
+STARTING TRAINING WITH β CROSS-VALIDATION AND SPATIAL SCALING
+================================================================================
+
+Starting Epoch 1/100
+============================================================
+
+Updating Hopfield boosting weights at epoch 1...
+WARNING: Negative mean energy—verify E_b formula/signs
+Weights updated.
+Training Epoch 1:   5%|█▏                        | 19/408 [00:42<13:43,  2.12s/it, L_CE=0.7533, L_OOD=-0.6256, β=32.0]
+Step 0: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 0 Loss Debug:
+  CE: 6.2812
+  OOD: -0.5031
+  Effective β: 39.03
+  ID pixels: 26835, OOD pixels: 5933
+Step 1: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 2: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 3: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  16  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 4: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 5: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 6: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 7: labels=[  0   1   2   4   5   6   7   8   9  10  11  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 8: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 9: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 254 255], is_ood=tensor([False, False,  True, False, False, False, False, False])
+  Found 254! Count: 57627
+Step 10: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 11: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 12: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 13: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 14: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 254 255], is_ood=tensor([ True, False, False, False,  True, False, False, False])
+  Found 254! Count: 257805
+Step 15: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 254 255], is_ood=tensor([False, False,  True, False, False, False, False, False])
+  Found 254! Count: 113452
+Step 16: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([False, False, False,  True, False, False, False, False])
+  Found 254! Count: 4991
+Step 17: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  17  18
+ 254 255], is_ood=tensor([False,  True, False, False,  True, False, False, False])
+  Found 254! Count: 7149
+Step 18: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 19: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  16  18 254 255], is_ood=tensor([False, False, False, False,  True, False, False, False])
+  Found 254! Count: 14809
+Step 20: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  18 254
+ 255], is_ood=tensor([ True,  True, False, False, False, False, False, False])
+  Found 254! Count: 164919
+Step 21: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 22: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  15  17  18 254 255], is_ood=tensor([False,  True, False, False,  True, False, False, False])
+  Found 254! Count: 58471
+Step 23: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 254 255], is_ood=tensor([False,  True, False, False, False, False, False, False])
+  Found 254! Count: 70480
+Step 24: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 254 255], is_ood=tensor([ True,  True, False,  True, False,  True, False, False])
+  Found 254! Count: 749113
+Step 25: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([False,  True, False, False, False, False, False, False])
+  Found 254! Count: 87178
+Step 26: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 27: labels=[  0   1   2   3   5   6   7   8   9  10  11  13  18 254 255], is_ood=tensor([False, False,  True, False, False, False, False, False])
+  Found 254! Count: 39380
+Step 28: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 29: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  15  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 30: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 254 255], is_ood=tensor([ True, False, False, False, False, False, False, False])
+  Found 254! Count: 2611
+Step 31: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 32: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 33: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18
+ 254 255], is_ood=tensor([False, False, False, False,  True, False, False, False])
+  Found 254! Count: 5663
+Step 34: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([False, False, False, False,  True, False, False, False])
+  Found 254! Count: 95108
+Step 35: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14  15 254 255], is_ood=tensor([False, False, False, False, False, False,  True, False])
+  Found 254! Count: 9236
+Step 36: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  14  15  17  18 254
+ 255], is_ood=tensor([False, False,  True, False, False, False, False, False])
+  Found 254! Count: 76702
+Step 37: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 38: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 39: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17 254
+ 255], is_ood=tensor([False,  True,  True, False, False, False, False, False])
+  Found 254! Count: 18073
+Step 40: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([False, False, False,  True, False, False, False, False])
+  Found 254! Count: 23949
+Step 41: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 42: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 254
+ 255], is_ood=tensor([False, False,  True, False, False, False, False, False])
+  Found 254! Count: 149232
+Step 43: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  16  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 44: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 45: labels=[  0   1   2   4   5   6   7   8  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 46: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 47: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 48: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 49: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 50: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  18 254 255], is_ood=tensor([False,  True, False, False, False, False, False, False])
+  Found 254! Count: 18612
+Step 50 Loss Debug:
+  CE: 0.4676
+  OOD: -0.8720
+  Effective β: 39.03
+  ID pixels: 29753, OOD pixels: 3015
+Step 51: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([False, False,  True, False,  True, False, False, False])
+  Found 254! Count: 75356
+Step 52: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  18 254
+ 255], is_ood=tensor([ True, False, False, False, False, False, False, False])
+  Found 254! Count: 5591
+Step 53: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 54: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18
+ 254 255], is_ood=tensor([False, False,  True, False, False, False, False, False])
+  Found 254! Count: 9119
+Step 55: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 56: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 57: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14  16  17 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 58: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14  17 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 59: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 60: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 61: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 62: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 63: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  18 254
+ 255], is_ood=tensor([False, False, False, False, False, False,  True, False])
+  Found 254! Count: 1501
+Step 64: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  15  16  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 65: labels=[  0   1   2   4   5   6   7   8  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 66: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 67: labels=[  0   1   2   3   5   6   7   8   9  10  11  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 68: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  18
+ 254 255], is_ood=tensor([False, False,  True, False,  True, False, False, False])
+  Found 254! Count: 175775
+Step 69: labels=[  0   1   2   5   6   7   8   9  10  11  12  13  15  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 70: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  14  15  16  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 71: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 72: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 73: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 74: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 75: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 76: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 77: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  18 254 255], is_ood=tensor([False, False, False, False, False, False, False,  True])
+  Found 254! Count: 166677
+Step 78: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  14  15  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 79: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 80: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 81: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  16  17  18 254
+ 255], is_ood=tensor([ True, False, False, False,  True, False, False, False])
+  Found 254! Count: 78712
+Step 82: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  14  16  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 83: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 84: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 85: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 86: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 87: labels=[  0   1   2   3   4   5   7   8   9  10  11  12  13  15  17  18 254 255], is_ood=tensor([False, False,  True, False, False, False, False, False])
+  Found 254! Count: 474508
+Step 88: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 89: labels=[  0   1   2   5   6   7   8   9  10  11  12  13  15  18 254 255], is_ood=tensor([False, False, False, False, False, False,  True, False])
+  Found 254! Count: 107852
+Step 90: labels=[  0   1   2   3   4   5   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 91: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  14  18 254 255], is_ood=tensor([False, False, False,  True, False, False, False, False])
+  Found 254! Count: 47363
+Step 92: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 93: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 94: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  16  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 95: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 96: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  18 254 255], is_ood=tensor([ True, False, False, False, False, False, False, False])
+  Found 254! Count: 168452
+Step 97: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Step 98: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  17  18
+ 254 255], is_ood=tensor([ True, False, False, False, False, False, False, False])
+  Found 254! Count: 25442
+Step 99: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 254
+ 255], is_ood=tensor([False,  True, False, False, False, False, False,  True])
+  Found 254! Count: 6351
+Step 100 Loss Debug:
+  CE: 0.2900
+  OOD: -0.6414
+  Effective β: 39.02
+  ID pixels: 27369, OOD pixels: 5399
+Step 150 Loss Debug:
+  CE: 0.3321
+  OOD: -0.4089
+  Effective β: 39.02
+  ID pixels: 24846, OOD pixels: 7922
+Step 200 Loss Debug:
+  CE: 0.2664
+  OOD: -0.5781
+  Effective β: 39.03
+  ID pixels: 28792, OOD pixels: 3976
+Step 250 Loss Debug:
+  CE: 0.2360
+  OOD: -1.1136
+  Effective β: 39.03
+  ID pixels: 22912, OOD pixels: 9856
+Step 300 Loss Debug:
+  CE: 0.2761
+  OOD: -0.4227
+  Effective β: 39.03
+  ID pixels: 24517, OOD pixels: 8251
+Step 350 Loss Debug:
+  CE: 0.2440
+  OOD: -0.7794
+  Effective β: 39.03
+  ID pixels: 26986, OOD pixels: 5782
+Step 400 Loss Debug:
+  CE: 0.3163
+  OOD: -1.7818
+  Effective β: 39.03
+  ID pixels: 25744, OOD pixels: 7024
+Epoch 1 - Avg CE: 0.4166, Avg OOD: -0.8833, β: 32
+
+Starting Epoch 2/100
+============================================================
+
+Updating Hopfield boosting weights at epoch 2...
+WARNING: Negative mean energy—verify E_b formula/signs
+Weights updated.
+Training Epoch 2:  84%|████████████████████▉    | 342/408 [11:07<02:08,  1.94s/it, L_CE=0.1287, L_OOD=-0.3637, β=32.0]
+Step 450 Loss Debug:
+  CE: 0.1737
+  OOD: -1.0685
+  Effective β: 39.03
+  ID pixels: 25967, OOD pixels: 6801
+Step 500 Loss Debug:
+  CE: 0.1917
+  OOD: -1.6431
+  Effective β: 39.03
+  ID pixels: 27669, OOD pixels: 5099
+Step 550 Loss Debug:
+  CE: 0.2212
+  OOD: -0.2182
+  Effective β: 39.03
+  ID pixels: 26709, OOD pixels: 6059
+Step 600 Loss Debug:
+  CE: 0.1507
+  OOD: -0.4961
+  Effective β: 39.03
+  ID pixels: 30543, OOD pixels: 2225
+Step 650 Loss Debug:
+  CE: 0.1692
+  OOD: -0.1805
+  Effective β: 39.03
+  ID pixels: 26870, OOD pixels: 5898
+Step 700 Loss Debug:
+  CE: 0.1283
+  OOD: -0.3216
+  Effective β: 39.03
+  ID pixels: 28857, OOD pixels: 3911
+Step 750 Loss Debug:
+  CE: 0.1492
+  OOD: -1.4648
+  Effective β: 39.03
+  ID pixels: 27622, OOD pixels: 5146
+Step 800 Loss Debug:
+  CE: 0.1810
+  OOD: -0.4117
+  Effective β: 39.03
+  ID pixels: 28375, OOD pixels: 4393
+Epoch 2 - Avg CE: 0.1949, Avg OOD: -1.0602, β: 32
+
+Starting Epoch 3/100
+============================================================
+
+Updating Hopfield boosting weights at epoch 3...
+WARNING: Negative mean energy—verify E_b formula/signs
+Weights updated.
+Training Epoch 3:  82%|████████████████████▍    | 334/408 [10:51<02:24,  1.95s/it, L_CE=0.1616, L_OOD=-0.5485, β=32.0]
+Step 850 Loss Debug:
+  CE: 0.1498
+  OOD: -0.9430
+  Effective β: 39.03
+  ID pixels: 27883, OOD pixels: 4885
+Step 900 Loss Debug:
+  CE: 0.1658
+  OOD: -1.7117
+  Effective β: 39.03
+  ID pixels: 27015, OOD pixels: 5753
+Step 950 Loss Debug:
+  CE: 0.1301
+  OOD: -0.6459
+  Effective β: 39.03
+  ID pixels: 29456, OOD pixels: 3312
+Step 1000 Loss Debug:
+  CE: 0.1406
+  OOD: -1.1001
+  Effective β: 39.03
+  ID pixels: 29633, OOD pixels: 3135
+Step 1050 Loss Debug:
+  CE: 0.2303
+  OOD: -0.3869
+  Effective β: 39.03
+  ID pixels: 23671, OOD pixels: 9097
+Step 1100 Loss Debug:
+  CE: 0.2272
+  OOD: -1.7896
+  Effective β: 39.03
+  ID pixels: 23538, OOD pixels: 9230
+Step 1150 Loss Debug:
+  CE: 0.1547
+  OOD: -1.8707
+  Effective β: 39.03
+  ID pixels: 28271, OOD pixels: 4497
+Step 1200 Loss Debug:
+  CE: 0.2063
+  OOD: -0.3194
+  Effective β: 39.03
+  ID pixels: 28231, OOD pixels: 4537
+Epoch 3 - Avg CE: 0.1786, Avg OOD: -1.0400, β: 32
+
+Starting Epoch 4/100
+============================================================
+
+Updating Hopfield boosting weights at epoch 4...
+WARNING: Negative mean energy—verify E_b formula/signs
+Weights updated.
+Training Epoch 4:  80%|███████████████████▉     | 326/408 [10:36<02:39,  1.95s/it, L_CE=0.1558, L_OOD=-0.6324, β=32.0]
+Step 1250 Loss Debug:
+  CE: 0.1398
+  OOD: -1.9631
+  Effective β: 39.03
+  ID pixels: 29051, OOD pixels: 3717
+Step 1300 Loss Debug:
+  CE: 0.2232
+  OOD: -0.7409
+  Effective β: 39.03
+  ID pixels: 27972, OOD pixels: 4796
+Step 1350 Loss Debug:
+  CE: 0.1959
+  OOD: -1.0318
+  Effective β: 39.02
+  ID pixels: 25696, OOD pixels: 7072
+Step 1400 Loss Debug:
+  CE: 0.1644
+  OOD: -1.9588
+  Effective β: 39.03
+  ID pixels: 28806, OOD pixels: 3962
+Step 1450 Loss Debug:
+  CE: 0.1670
+  OOD: -1.9425
+  Effective β: 39.03
+  ID pixels: 22578, OOD pixels: 10190
+Step 1500 Loss Debug:
+  CE: 0.1901
+  OOD: -0.1708
+  Effective β: 39.02
+  ID pixels: 21537, OOD pixels: 11231
+Step 1550 Loss Debug:
+  CE: 0.1247
+  OOD: -0.1414
+  Effective β: 39.03
+  ID pixels: 26658, OOD pixels: 6110
+Step 1600 Loss Debug:
+  CE: 0.1445
+  OOD: -0.3621
+  Effective β: 39.03
+  ID pixels: 27219, OOD pixels: 5549
+Epoch 4 - Avg CE: 0.1703, Avg OOD: -1.0650, β: 32
+
+Starting Epoch 5/100
+============================================================
+
+Updating Hopfield boosting weights at epoch 5...
+WARNING: Negative mean energy—verify E_b formula/signs
+Weights updated.
+Training Epoch 5:  78%|███████████████████▍     | 318/408 [10:20<02:55,  1.95s/it, L_CE=0.2755, L_OOD=-1.9605, β=32.0]
+Step 1650 Loss Debug:
+  CE: 0.1722
+  OOD: -1.4668
+  Effective β: 39.03
+  ID pixels: 29151, OOD pixels: 3617
+Step 1700 Loss Debug:
+  CE: 0.1591
+  OOD: -1.7763
+  Effective β: 39.03
+  ID pixels: 28517, OOD pixels: 4251
+Step 1750 Loss Debug:
+  CE: 0.1656
+  OOD: -0.0890
+  Effective β: 39.03
+  ID pixels: 26017, OOD pixels: 6751
+Step 1800 Loss Debug:
+  CE: 0.1855
+  OOD: -0.9191
+  Effective β: 39.03
+  ID pixels: 28515, OOD pixels: 4253
+Step 1850 Loss Debug:
+  CE: 0.1551
+  OOD: -1.5776
+  Effective β: 39.03
+  ID pixels: 27495, OOD pixels: 5273
+Step 1900 Loss Debug:
+  CE: 0.1284
+  OOD: -1.9842
+  Effective β: 39.03
+  ID pixels: 27289, OOD pixels: 5479
+Step 1950 Loss Debug:
+  CE: 0.1861
+  OOD: -0.8725
+  Effective β: 39.03
+  ID pixels: 24981, OOD pixels: 7787
+Step 2000 Loss Debug:
+  CE: 0.1638
+  OOD: -0.2984
+  Effective β: 39.03
+  ID pixels: 25896, OOD pixels: 6872
+Epoch 5 - Avg CE: 0.1640, Avg OOD: -1.1330, β: 32
+
+Running evaluation with β=32...
+Traceback (most recent call last):
+  File "run_training.py", line 564, in <module>
+    main()
+  File "run_training.py", line 561, in main
+    trainer.train()
+  File "run_training.py", line 480, in train
+    eval_results = self.evaluator.evaluate(
+TypeError: evaluate() got an unexpected keyword argument 'beta'

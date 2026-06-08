@@ -1,0 +1,7 @@
+{
+    "fishyscapes_lf_auroc": 0.449924331606644,
+    "fishyscapes_lf_fpr95": 0.9425237757799129,
+    "fishyscapes_lf_auprs": 0.07508352975896691,
+    "weighted_fpr95": 0.9425237757799129,
+    "weighted_auroc": 0.4499243316066441
+}

@@ -1,0 +1,27 @@
+2025-07-31 14:47:07,202 - HopfieldTraining - INFO - Starting training...
+2025-07-31 14:47:07,202 - HopfieldTraining - INFO - Building initial memories...
+2025-07-31 14:47:07,202 - hopfield_memory_builder - INFO - HopfieldMemoryBuilder initialized.
+2025-07-31 14:47:07,203 - hopfield_memory_builder - INFO - Starting to collect pixels for memory building...
+Collecting pixels for memory: 100%|██████████████████████████████████████████████████████████████████████| 1634/1634 [15:29<00:00,  1.76it/s]
+2025-07-31 15:02:36,247 - hopfield_memory_builder - INFO - Finished collecting pixels.
+2025-07-31 15:02:36,247 - hopfield_memory_builder - INFO - Building final memory tensors...
+2025-07-31 15:02:36,300 - hopfield_memory_builder - INFO - Final ID Memory: torch.Size([48471, 128]), AUX Memory: torch.Size([50000, 128])
+
+--------------------------------------------------
+Memory Quality Diagnostics:
+  ID Memory Shape : torch.Size([48471, 128]), AUX Memory Shape: torch.Size([50000, 128])
+  ID Self-Similarity : 0.4423, AUX Self-Similarity: 0.6273
+  ID-AUX Cross-Similarity   : 0.4430
+  Separation Metric (Self-Cross): 0.0919
+--------------------------------------------------
+Epoch 1:  11%|█████▎                                          | 181/1634 [01:48<14:30,  1.67it/s, Loss=5.193, CE=0.713, OOD=2.240, Acc=0.873]
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 262, in <module>
+  File "train_pixel_hopfield_boosting.py", line 259, in main
+  File "train_pixel_hopfield_boosting.py", line 180, in train
+    self.id_memory, self.aux_memory = self.weight_updater.update_aux_memory_and_weights(
+  File "train_pixel_hopfield_boosting.py", line 156, in train_epoch
+    loss = losses['total_loss'] / accumulation_steps
+  File "train_pixel_hopfield_boosting.py", line 121, in compute_losses
+    has_ood = ood_energies.numel() > 0
+KeyboardInterrupt

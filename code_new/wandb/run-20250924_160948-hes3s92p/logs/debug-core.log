@@ -1,0 +1,13 @@
+{"time":"2025-09-24T16:09:48.3105355+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp68ecsxz9/port-2972536.txt","pid":2972536,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-24T16:09:48.311610513+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":2972536}
+{"time":"2025-09-24T16:09:48.311612313+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":39089,"Zone":""}}
+{"time":"2025-09-24T16:09:48.487195099+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:55874"}
+{"time":"2025-09-24T16:09:48.607124994+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"hes3s92p","id":"127.0.0.1:55874"}
+{"time":"2025-09-24T16:09:48.869449884+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"hes3s92p","id":"127.0.0.1:55874"}
+{"time":"2025-09-24T17:49:21.579746069+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:55874"}
+{"time":"2025-09-24T17:49:21.580350587+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:55874"}
+{"time":"2025-09-24T17:49:21.58041894+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-09-24T17:49:21.580545863+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:55874"}
+{"time":"2025-09-24T17:49:22.858588072+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:55874"}
+{"time":"2025-09-24T17:49:22.858601804+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:55874"}
+{"time":"2025-09-24T17:49:22.858610371+02:00","level":"INFO","msg":"server is closed"}

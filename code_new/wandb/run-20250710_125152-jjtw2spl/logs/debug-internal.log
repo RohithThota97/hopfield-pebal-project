@@ -1,0 +1,21 @@
+{"time":"2025-07-10T12:51:52.948107787+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250710_125152-jjtw2spl/logs/debug-core.log"}
+{"time":"2025-07-10T12:51:53.202062452+02:00","level":"INFO","msg":"stream: created new stream","id":"jjtw2spl"}
+{"time":"2025-07-10T12:51:53.202139235+02:00","level":"INFO","msg":"stream: started","id":"jjtw2spl"}
+{"time":"2025-07-10T12:51:53.202174277+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"jjtw2spl"}
+{"time":"2025-07-10T12:51:53.20219586+02:00","level":"INFO","msg":"handler: started","stream_id":"jjtw2spl"}
+{"time":"2025-07-10T12:51:53.20222222+02:00","level":"INFO","msg":"sender: started","stream_id":"jjtw2spl"}
+{"time":"2025-07-10T12:51:53.424564485+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-10T16:01:04.940863742+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/jjtw2spl/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-07-10T19:00:40.789986152+02:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/jjtw2spl/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-07-10T19:00:51.482617446+02:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/jjtw2spl/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-07-10T19:00:56.062295379+02:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/jjtw2spl/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-07-11T08:03:59.020814204+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/jjtw2spl/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-07-11T19:59:36.30828839+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-11T19:59:36.308781132+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-11T19:59:37.307540826+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact hopfield-model-epoch-100","runtime_seconds":1.039985833,"subtasks":[{"desc":"hopfield_latest.pth","runtime_seconds":0.173121159,"progress":"1.1MB/54.2MB"}]}],"total_operations":1}}
+{"time":"2025-07-11T19:59:41.063756614+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-11T19:59:41.2853433+02:00","level":"INFO","msg":"stream: closing","id":"jjtw2spl"}
+{"time":"2025-07-11T19:59:41.285356298+02:00","level":"INFO","msg":"handler: closed","stream_id":"jjtw2spl"}
+{"time":"2025-07-11T19:59:41.285362134+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jjtw2spl"}
+{"time":"2025-07-11T19:59:41.285395561+02:00","level":"INFO","msg":"sender: closed","stream_id":"jjtw2spl"}
+{"time":"2025-07-11T19:59:41.286513172+02:00","level":"INFO","msg":"stream: closed","id":"jjtw2spl"}

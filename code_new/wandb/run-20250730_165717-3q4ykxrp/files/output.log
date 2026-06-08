@@ -1,0 +1,13 @@
+2025-07-30 16:57:18,483 - HopfieldTraining - INFO - Loading checkpoint for Engine from: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+2025-07-30 16:57:18,679 - HopfieldTraining - INFO - Engine instance created successfully.
+2025-07-30 16:57:18,680 - HopfieldTraining - CRITICAL - Failed to create dataloader: [Errno 2] No such file or directory: '/home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train/images/city_gt_fine/train'. Please verify data paths.
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 252, in main
+    train_loader, _, _ = get_mix_loader(
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 138, in get_mix_loader
+    train_dataset = CityscapesCocoMix(split='train', preprocess=train_preprocess, cs_root=cs_root,
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 643, in __init__
+    self.cs = Cityscapes(root=cs_root, split=self.cs_split)
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 529, in __init__
+    for file_name in os.listdir(img_dir):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ha51dybi/PEBAL/cityscapes/images/city_gt_fine/train/images/city_gt_fine/train'

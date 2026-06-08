@@ -1,0 +1,31 @@
+Building Pixel Memory: 100%|██████████████████████████████████████████████████████████| 817/817 [08:17<00:00,  1.64it/s]
+Building final memory tensors...
+Final memory shapes - ID: torch.Size([2074, 128]), OOD: torch.Size([1000, 128])
+✅ Pixel memory banks built. ID: torch.Size([128, 2074]), OOD: torch.Size([128, 1000])
+✅ PixelWiseHopfieldTrainer initialization complete!
+🚀 Starting training process...
+
+🎯 Starting Epoch 1/50
+Training Epoch 1: 100%|████████████████████████████████████| 817/817 [03:37<00:00,  3.75it/s, L_CE=1.9393, L_OOD=0.0000]
+
+🎯 Starting Epoch 2/50
+Training Epoch 2: 100%|████████████████████████████████████| 817/817 [03:51<00:00,  3.53it/s, L_CE=1.8603, L_OOD=0.0000]
+
+🎯 Starting Epoch 3/50
+Training Epoch 3: 100%|████████████████████████████████████| 817/817 [03:47<00:00,  3.59it/s, L_CE=1.6825, L_OOD=0.0000]
+
+🎯 Starting Epoch 4/50
+Training Epoch 4: 100%|████████████████████████████████████| 817/817 [03:47<00:00,  3.59it/s, L_CE=1.9490, L_OOD=0.0000]
+
+🎯 Starting Epoch 5/50
+Training Epoch 5: 100%|███████████████████████████████████| 817/817 [03:48<00:00,  3.58it/s, L_CE=2.3345, L_OOD=-0.1589]
+Traceback (most recent call last):
+  File "run_training.py", line 275, in <module>
+    main()
+  File "run_training.py", line 272, in main
+    trainer.train()
+  File "run_training.py", line 192, in train
+    self.evaluator.evaluate(
+  File "/home/ha51dybi/PEBAL/code/ood_evaluator.py", line 28, in evaluate
+    energy_calc = PixelWiseHopfieldEnergyCalculator(id_memory, ood_memory, beta=beta_inference)
+TypeError: PixelWiseHopfieldEnergyCalculator() takes no arguments

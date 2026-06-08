@@ -1,0 +1,15 @@
+{"time":"2025-09-18T15:55:39.084292488+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250918_155538-iqls8s7n/logs/debug-core.log"}
+{"time":"2025-09-18T15:55:39.339328921+02:00","level":"INFO","msg":"stream: created new stream","id":"iqls8s7n"}
+{"time":"2025-09-18T15:55:39.339404744+02:00","level":"INFO","msg":"stream: started","id":"iqls8s7n"}
+{"time":"2025-09-18T15:55:39.339437489+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"iqls8s7n"}
+{"time":"2025-09-18T15:55:39.33946361+02:00","level":"INFO","msg":"handler: started","stream_id":"iqls8s7n"}
+{"time":"2025-09-18T15:55:39.339494828+02:00","level":"INFO","msg":"sender: started","stream_id":"iqls8s7n"}
+{"time":"2025-09-18T15:55:39.640583573+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-18T17:00:02.828585892+02:00","level":"INFO","msg":"stream: closing","id":"iqls8s7n"}
+{"time":"2025-09-18T17:00:02.828674662+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-18T17:00:02.829044825+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-18T17:00:04.369882575+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-18T17:00:04.611815516+02:00","level":"INFO","msg":"handler: closed","stream_id":"iqls8s7n"}
+{"time":"2025-09-18T17:00:04.61189521+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"iqls8s7n"}
+{"time":"2025-09-18T17:00:04.611916661+02:00","level":"INFO","msg":"sender: closed","stream_id":"iqls8s7n"}
+{"time":"2025-09-18T17:00:04.61349371+02:00","level":"INFO","msg":"stream: closed","id":"iqls8s7n"}

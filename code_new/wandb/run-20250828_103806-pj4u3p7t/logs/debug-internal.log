@@ -1,0 +1,23 @@
+{"time":"2025-08-28T10:38:07.274736431+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250828_103806-pj4u3p7t/logs/debug-core.log"}
+{"time":"2025-08-28T10:38:07.528769898+02:00","level":"INFO","msg":"stream: created new stream","id":"pj4u3p7t"}
+{"time":"2025-08-28T10:38:07.528804694+02:00","level":"INFO","msg":"stream: started","id":"pj4u3p7t"}
+{"time":"2025-08-28T10:38:07.528818951+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"pj4u3p7t"}
+{"time":"2025-08-28T10:38:07.528857131+02:00","level":"INFO","msg":"handler: started","stream_id":"pj4u3p7t"}
+{"time":"2025-08-28T10:38:07.528865269+02:00","level":"INFO","msg":"sender: started","stream_id":"pj4u3p7t"}
+{"time":"2025-08-28T10:38:07.760695945+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-28T21:58:38.186286751+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-08-29T00:54:22.798005431+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-full-featured/pj4u3p7t/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-08-29T10:43:38.550234255+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-08-30T08:47:16.81394905+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-full-featured/pj4u3p7t/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-08-30T09:39:01.581927883+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-full-featured/pj4u3p7t/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-08-30T12:39:57.658986777+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.24:38778->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-08-30T12:44:57.661480578+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.24:37716->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-08-30T13:07:00.770496278+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-30T13:07:00.770875476+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-30T13:07:01.782338099+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.818536329,"progress":"98.7KB/98.7KB"}],"total_operations":1}}
+{"time":"2025-08-30T13:07:01.848081708+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-30T13:07:02.053539716+02:00","level":"INFO","msg":"stream: closing","id":"pj4u3p7t"}
+{"time":"2025-08-30T13:07:02.053583246+02:00","level":"INFO","msg":"handler: closed","stream_id":"pj4u3p7t"}
+{"time":"2025-08-30T13:07:02.053599677+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"pj4u3p7t"}
+{"time":"2025-08-30T13:07:02.053620809+02:00","level":"INFO","msg":"sender: closed","stream_id":"pj4u3p7t"}
+{"time":"2025-08-30T13:07:02.056068372+02:00","level":"INFO","msg":"stream: closed","id":"pj4u3p7t"}

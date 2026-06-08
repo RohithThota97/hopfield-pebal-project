@@ -1,0 +1,15 @@
+{"time":"2025-08-20T08:16:37.405699791+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250820_081637-3wiz12ql/logs/debug-core.log"}
+{"time":"2025-08-20T08:16:37.660056824+02:00","level":"INFO","msg":"stream: created new stream","id":"3wiz12ql"}
+{"time":"2025-08-20T08:16:37.660139074+02:00","level":"INFO","msg":"stream: started","id":"3wiz12ql"}
+{"time":"2025-08-20T08:16:37.660172115+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"3wiz12ql"}
+{"time":"2025-08-20T08:16:37.660200266+02:00","level":"INFO","msg":"handler: started","stream_id":"3wiz12ql"}
+{"time":"2025-08-20T08:16:37.660211467+02:00","level":"INFO","msg":"sender: started","stream_id":"3wiz12ql"}
+{"time":"2025-08-20T08:16:37.940673481+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-20T08:16:40.326035781+02:00","level":"INFO","msg":"stream: closing","id":"3wiz12ql"}
+{"time":"2025-08-20T08:16:40.326097187+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-20T08:16:40.326203882+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-20T08:16:40.980757521+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-20T08:16:41.176675151+02:00","level":"INFO","msg":"handler: closed","stream_id":"3wiz12ql"}
+{"time":"2025-08-20T08:16:41.176741362+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"3wiz12ql"}
+{"time":"2025-08-20T08:16:41.176754202+02:00","level":"INFO","msg":"sender: closed","stream_id":"3wiz12ql"}
+{"time":"2025-08-20T08:16:41.178289092+02:00","level":"INFO","msg":"stream: closed","id":"3wiz12ql"}

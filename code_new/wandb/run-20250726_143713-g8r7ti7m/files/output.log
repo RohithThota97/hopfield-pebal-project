@@ -1,0 +1,10 @@
+2025-07-26 14:37:15,432 - PixelHopfieldBoostingTrainer - INFO - Using device: cuda
+2025-07-26 14:37:15,432 - PixelHopfieldBoostingTrainer - INFO - Setting up model components...
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 560, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 525, in main
+    trainer.setup_model_components()
+  File "train_pixel_hopfield_boosting.py", line 118, in setup_model_components
+    backbone=self.config['model']['backbone'],
+KeyError: 'model'

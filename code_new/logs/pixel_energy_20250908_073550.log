@@ -1,0 +1,24 @@
+2025-09-08 07:46:28,180 - INFO - Initializing models...
+2025-09-08 07:46:29,558 - INFO - Initializing training components...
+2025-09-08 07:46:29,559 - INFO - Initializing advanced boosting components...
+2025-09-08 07:46:29,561 - INFO - Loading existing memory from ./checkpoints_pixel_wise_pebal_aligned/initial_memory_beta_32.pt
+2025-09-08 07:46:29,737 - INFO - Monitoring - ID Mean: 0.045, OOD Mean: 0.044, Separation: -0.001
+2025-09-08 07:46:29,737 - ERROR - Error during initial separation check: Low initial ID/OOD separation - rebuild memories
+2025-09-08 07:46:29,737 - INFO - HopfieldBoostingManager initialized with aligned beta=32, lambda_ood=1.0
+2025-09-08 07:46:29,738 - INFO - PixelWiseHopfieldTrainer initialization complete with β=32!
+2025-09-08 07:46:29,739 - INFO - 
+Starting Epoch 1/100
+2025-09-08 07:46:29,740 - INFO - ============================================================
+2025-09-08 07:46:29,742 - INFO - 
+Updating Hopfield boosting weights at epoch 1...
+2025-09-08 07:46:31,658 - INFO - Weights updated successfully
+2025-09-08 07:46:35,898 - INFO - Updated beta to 31.56 (exp decay)
+2025-09-08 07:46:35,976 - INFO - Monitoring - ID Mean: 0.046, OOD Mean: 0.045, Separation: -0.001
+2025-09-08 07:46:37,876 - INFO - Weights updated successfully
+2025-09-08 07:46:37,876 - INFO - Advanced epoch 1 - Updated beta: 31.56
+2025-09-08 07:46:37,876 - INFO - Epoch 1 - Avg CE: 2.9026, Avg OOD: 0.0000, β: 32
+2025-09-08 07:46:37,983 - INFO - 
+================================================================================
+2025-09-08 07:46:37,984 - INFO - TRAINING COMPLETE WITH β=32
+2025-09-08 07:46:37,984 - INFO - ================================================================================
+2025-09-08 07:46:44,570 - INFO - Checkpoint saved for epoch 100 with β=32

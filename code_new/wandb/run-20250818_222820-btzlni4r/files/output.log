@@ -1,0 +1,33 @@
+
+--- Step 1: Caching Image Lists on CPU ---
+Collecting ID image list (CPU cache): 100%|███████████████████████████████████████████████████| 3268/3268 [04:16<00:00, 12.73it/s]
+Collecting AUX data O^D: 100%|█████| 3268/3268 [04:18<00:00, 12.63it/s, AUX_samples=194, Total_AUX_pixels=1.12e+7, Processed=3268]
+Cached 3267 ID images and 194 OOD images.
+
+--- Step 2: Starting Hopfield Boosting for 50 Epochs ---
+Epoch 1/50:   0%|                                                                                        | 0/3268 [00:02<?, ?it/s]
+✅ ID memory validation passed: 128D features, 71136 patterns
+✅ AUX memory validation passed: 128D features, 50000 patterns
+✅ Memory format validated:
+   ID memory (X): [128, 71136] = 128D features, 71136 patterns
+   AUX memory (O): [128, 50000] = 128D features, 50000 patterns
+Traceback (most recent call last):
+  File "run_training.py", line 298, in <module>
+    main()
+  File "run_training.py", line 295, in main
+    trainer.train()
+  File "run_training.py", line 212, in train
+    loss_ce, loss_ood, total_loss = self._compute_composite_loss(id_batch, ood_batch)
+  File "run_training.py", line 146, in _compute_composite_loss
+    loss_ood = compute_ood_loss_fixed(
+  File "run_training.py", line 46, in compute_ood_loss_fixed
+    energies = energy_calc(chunk)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 188, in forward
+    a_lse_all[i:i+self.batch_size] = lse(self.beta_a, a_sim, dim=-1)
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 42, in lse
+    return (1 / beta) * torch.logsumexp(beta * tensor, dim=dim, keepdim=keepdim)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 36.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 22.38 MiB is free. Including non-PyTorch memory, this process has 7.57 GiB memory in use. Of the allocated memory 7.04 GiB is allocated by PyTorch, and 428.52 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

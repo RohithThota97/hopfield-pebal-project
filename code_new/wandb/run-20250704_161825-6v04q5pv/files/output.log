@@ -1,0 +1,88 @@
+2025-07-04 16:18:26,698 - __main__ - INFO - Training dataset size: 3268
+2025-07-04 16:18:26,700 - Pixel_Utils - INFO - Analyzing Fishyscapes dataset for OOD content...
+2025-07-04 16:18:26,742 - Pixel_Utils - INFO - Sample image_0.png:
+2025-07-04 16:18:26,743 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 16:18:26,743 - Pixel_Utils - INFO -   ID pixels (0): 1,801,918
+2025-07-04 16:18:26,743 - Pixel_Utils - INFO -   OOD pixels (1): 59,867
+2025-07-04 16:18:26,743 - Pixel_Utils - INFO -   Ignore pixels (2/255): 235,367
+2025-07-04 16:18:26,772 - Pixel_Utils - INFO - Sample image_1.png:
+2025-07-04 16:18:26,772 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 16:18:26,773 - Pixel_Utils - INFO -   ID pixels (0): 1,799,432
+2025-07-04 16:18:26,773 - Pixel_Utils - INFO -   OOD pixels (1): 47,165
+2025-07-04 16:18:26,773 - Pixel_Utils - INFO -   Ignore pixels (2/255): 250,555
+2025-07-04 16:18:26,802 - Pixel_Utils - INFO - Sample image_10.png:
+2025-07-04 16:18:26,802 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 16:18:26,802 - Pixel_Utils - INFO -   ID pixels (0): 1,825,295
+2025-07-04 16:18:26,802 - Pixel_Utils - INFO -   OOD pixels (1): 18,661
+2025-07-04 16:18:26,802 - Pixel_Utils - INFO -   Ignore pixels (2/255): 253,196
+2025-07-04 16:18:26,831 - Pixel_Utils - INFO - Sample image_11.png:
+2025-07-04 16:18:26,832 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 16:18:26,832 - Pixel_Utils - INFO -   ID pixels (0): 1,861,327
+2025-07-04 16:18:26,832 - Pixel_Utils - INFO -   OOD pixels (1): 4,777
+2025-07-04 16:18:26,832 - Pixel_Utils - INFO -   Ignore pixels (2/255): 231,048
+2025-07-04 16:18:26,861 - Pixel_Utils - INFO - Sample image_12.png:
+2025-07-04 16:18:26,861 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-04 16:18:26,862 - Pixel_Utils - INFO -   ID pixels (0): 1,825,428
+2025-07-04 16:18:26,862 - Pixel_Utils - INFO -   OOD pixels (1): 39,394
+2025-07-04 16:18:26,862 - Pixel_Utils - INFO -   Ignore pixels (2/255): 232,330
+2025-07-04 16:18:26,868 - Pixel_Utils - INFO - Found 30 valid images from 30 total
+2025-07-04 16:18:26,868 - Pixel_Utils - INFO - Total OOD pixels in sample: 169,864
+2025-07-04 16:18:26,868 - __main__ - INFO - Validation dataset size: 30
+2025-07-04 16:18:26,868 - __main__ - INFO - Building initial Hopfield memories...
+Building memories: 100%|████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [09:15<00:00,  2.94it/s]
+2025-07-04 16:27:42,286 - __main__ - INFO - Built initial memories - ID: torch.Size([1000, 128]), AUX: torch.Size([1000, 128])
+2025-07-04 16:27:42,327 - __main__ - INFO - Initialization completed!
+Epoch 1:   0%|                                                                                                         | 0/1634 [00:00<?, ?it/s]2025-07-04 16:27:42,732 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   0%|                                                                                                 | 1/1634 [00:00<11:00,  2.47it/s]2025-07-04 16:27:42,926 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   0%|                                                                                                 | 2/1634 [00:00<07:37,  3.57it/s]2025-07-04 16:27:43,268 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   0%|▏                                                                                                | 3/1634 [00:00<08:23,  3.24it/s]2025-07-04 16:27:43,742 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   0%|▏                                                                                                | 4/1634 [00:01<10:09,  2.67it/s]2025-07-04 16:27:44,045 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   0%|▎                                                                                                | 5/1634 [00:01<09:27,  2.87it/s]2025-07-04 16:27:44,538 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   0%|▎                                                                                                | 6/1634 [00:02<10:46,  2.52it/s]2025-07-04 16:27:45,000 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   0%|▍                                                                                                | 7/1634 [00:02<11:20,  2.39it/s]2025-07-04 16:27:45,291 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   0%|▍                                                                                                | 8/1634 [00:02<10:14,  2.65it/s]2025-07-04 16:27:45,682 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|▌                                                                                                | 9/1634 [00:03<10:20,  2.62it/s]2025-07-04 16:27:45,958 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|▌                                                                                               | 10/1634 [00:03<09:27,  2.86it/s]2025-07-04 16:27:46,308 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|▋                                                                                               | 11/1634 [00:03<09:27,  2.86it/s]2025-07-04 16:27:46,767 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|▋                                                                                               | 12/1634 [00:04<10:21,  2.61it/s]2025-07-04 16:27:47,111 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|▊                                                                                               | 13/1634 [00:04<10:01,  2.69it/s]2025-07-04 16:27:47,471 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|▊                                                                                               | 14/1634 [00:05<09:55,  2.72it/s]2025-07-04 16:27:47,700 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|▉                                                                                               | 15/1634 [00:05<08:47,  3.07it/s]2025-07-04 16:27:47,954 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|▉                                                                                               | 16/1634 [00:05<08:12,  3.29it/s]2025-07-04 16:27:48,292 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|▉                                                                                               | 17/1634 [00:05<08:28,  3.18it/s]2025-07-04 16:27:48,470 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|█                                                                                               | 18/1634 [00:06<07:21,  3.66it/s]2025-07-04 16:27:48,731 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|█                                                                                               | 19/1634 [00:06<07:15,  3.71it/s]2025-07-04 16:27:49,058 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|█▏                                                                                              | 20/1634 [00:06<07:42,  3.49it/s]2025-07-04 16:27:49,321 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|█▏                                                                                              | 21/1634 [00:06<07:31,  3.57it/s]2025-07-04 16:27:49,647 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|█▎                                                                                              | 22/1634 [00:07<07:53,  3.41it/s]2025-07-04 16:27:50,085 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|█▎                                                                                              | 23/1634 [00:07<09:02,  2.97it/s]2025-07-04 16:27:50,426 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   1%|█▍                                                                                              | 24/1634 [00:08<09:04,  2.96it/s]2025-07-04 16:27:50,884 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   2%|█▍                                                                                              | 25/1634 [00:08<10:02,  2.67it/s]2025-07-04 16:27:51,174 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   2%|█▌                                                                                              | 26/1634 [00:08<09:21,  2.87it/s]2025-07-04 16:27:51,519 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   2%|█▌                                                                                              | 27/1634 [00:09<09:18,  2.87it/s]2025-07-04 16:27:51,944 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   2%|█▋                                                                                              | 28/1634 [00:09<09:55,  2.70it/s]2025-07-04 16:27:52,333 - __main__ - WARNING - Error preparing batch data: 'featureextractor' object has no attribute 'extract_features_batch'
+Epoch 1:   2%|█▋                                                                                              | 29/1634 [00:10<09:27,  2.83it/s]
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 716, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 710, in main
+    results = trainer.train(num_epochs=NUM_EPOCHS, batch_size=BATCH_SIZE)
+  File "train_pixel_hopfield_boosting.py", line 638, in train
+    avg_loss, avg_ce_loss, avg_ood_loss = self.train_epoch(train_loader, epoch)
+  File "train_pixel_hopfield_boosting.py", line 352, in train_epoch
+    for batch_idx, batch in enumerate(progress_bar):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1327, in _next_data
+    idx, data = self._get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1283, in _get_data
+    success, data = self._try_get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1131, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/queue.py", line 179, in get
+    self.not_empty.wait(remaining)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

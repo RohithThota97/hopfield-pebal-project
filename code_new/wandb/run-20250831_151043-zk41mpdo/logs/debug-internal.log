@@ -1,0 +1,15 @@
+{"time":"2025-08-31T15:10:44.093470489+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250831_151043-zk41mpdo/logs/debug-core.log"}
+{"time":"2025-08-31T15:10:44.343366635+02:00","level":"INFO","msg":"stream: created new stream","id":"zk41mpdo"}
+{"time":"2025-08-31T15:10:44.343394864+02:00","level":"INFO","msg":"stream: started","id":"zk41mpdo"}
+{"time":"2025-08-31T15:10:44.343404791+02:00","level":"INFO","msg":"sender: started","stream_id":"zk41mpdo"}
+{"time":"2025-08-31T15:10:44.343528188+02:00","level":"INFO","msg":"handler: started","stream_id":"zk41mpdo"}
+{"time":"2025-08-31T15:10:44.343574351+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"zk41mpdo"}
+{"time":"2025-08-31T15:10:44.59162051+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-31T15:10:46.954802986+02:00","level":"INFO","msg":"stream: closing","id":"zk41mpdo"}
+{"time":"2025-08-31T15:10:46.95485824+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-31T15:10:46.954939275+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-31T15:10:47.50281551+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-31T15:10:47.6767107+02:00","level":"INFO","msg":"handler: closed","stream_id":"zk41mpdo"}
+{"time":"2025-08-31T15:10:47.676758115+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"zk41mpdo"}
+{"time":"2025-08-31T15:10:47.676802108+02:00","level":"INFO","msg":"sender: closed","stream_id":"zk41mpdo"}
+{"time":"2025-08-31T15:10:47.678594472+02:00","level":"INFO","msg":"stream: closed","id":"zk41mpdo"}

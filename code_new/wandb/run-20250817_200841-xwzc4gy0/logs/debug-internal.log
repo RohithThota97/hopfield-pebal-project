@@ -1,0 +1,18 @@
+{"time":"2025-08-17T20:08:41.469096449+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250817_200841-xwzc4gy0/logs/debug-core.log"}
+{"time":"2025-08-17T20:08:41.730227183+02:00","level":"INFO","msg":"stream: created new stream","id":"xwzc4gy0"}
+{"time":"2025-08-17T20:08:41.73032739+02:00","level":"INFO","msg":"stream: started","id":"xwzc4gy0"}
+{"time":"2025-08-17T20:08:41.730405341+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"xwzc4gy0"}
+{"time":"2025-08-17T20:08:41.730431421+02:00","level":"INFO","msg":"sender: started","stream_id":"xwzc4gy0"}
+{"time":"2025-08-17T20:08:41.730456702+02:00","level":"INFO","msg":"handler: started","stream_id":"xwzc4gy0"}
+{"time":"2025-08-17T20:08:42.05333371+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-18T02:07:57.93593227+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-08-18T02:08:07.729677177+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-updated/xwzc4gy0/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-08-18T04:15:07.204203879+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-18T04:15:07.221086852+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-18T04:15:08.201012885+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.775093972,"progress":"1.1MB/4.3MB"}],"total_operations":1}}
+{"time":"2025-08-18T04:15:09.134680276+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-18T04:15:09.365920301+02:00","level":"INFO","msg":"stream: closing","id":"xwzc4gy0"}
+{"time":"2025-08-18T04:15:09.365935856+02:00","level":"INFO","msg":"handler: closed","stream_id":"xwzc4gy0"}
+{"time":"2025-08-18T04:15:09.365943005+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"xwzc4gy0"}
+{"time":"2025-08-18T04:15:09.365952985+02:00","level":"INFO","msg":"sender: closed","stream_id":"xwzc4gy0"}
+{"time":"2025-08-18T04:15:09.367288247+02:00","level":"INFO","msg":"stream: closed","id":"xwzc4gy0"}

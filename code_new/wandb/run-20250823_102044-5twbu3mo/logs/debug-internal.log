@@ -1,0 +1,19 @@
+{"time":"2025-08-23T10:20:44.501900515+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250823_102044-5twbu3mo/logs/debug-core.log"}
+{"time":"2025-08-23T10:20:44.756020123+02:00","level":"INFO","msg":"stream: created new stream","id":"5twbu3mo"}
+{"time":"2025-08-23T10:20:44.756114238+02:00","level":"INFO","msg":"stream: started","id":"5twbu3mo"}
+{"time":"2025-08-23T10:20:44.756214451+02:00","level":"INFO","msg":"handler: started","stream_id":"5twbu3mo"}
+{"time":"2025-08-23T10:20:44.756184976+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"5twbu3mo"}
+{"time":"2025-08-23T10:20:44.75629386+02:00","level":"INFO","msg":"sender: started","stream_id":"5twbu3mo"}
+{"time":"2025-08-23T10:20:45.065875588+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-23T16:32:23.885904692+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-final/5twbu3mo/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-08-23T18:05:26.733910073+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-final/5twbu3mo/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-08-23T22:47:39.597962447+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-final/5twbu3mo/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-08-23T22:49:39.369747959+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-23T22:49:39.370562216+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-23T22:49:39.98710965+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-23T22:49:40.212489605+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-08-23T22:49:40.221956039+02:00","level":"INFO","msg":"stream: closing","id":"5twbu3mo"}
+{"time":"2025-08-23T22:49:40.221968714+02:00","level":"INFO","msg":"handler: closed","stream_id":"5twbu3mo"}
+{"time":"2025-08-23T22:49:40.221975444+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"5twbu3mo"}
+{"time":"2025-08-23T22:49:40.221978972+02:00","level":"INFO","msg":"sender: closed","stream_id":"5twbu3mo"}
+{"time":"2025-08-23T22:49:40.22366677+02:00","level":"INFO","msg":"stream: closed","id":"5twbu3mo"}

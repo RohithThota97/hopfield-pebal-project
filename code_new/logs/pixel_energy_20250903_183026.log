@@ -1,0 +1,11 @@
+2025-09-03 18:30:29,538 - INFO - 
+Building memory with β = 16...
+2025-09-03 18:30:29,539 - INFO - Building memories from loader...
+2025-09-03 18:30:29,950 - INFO - Starting redesigned hybrid memory building over full dataset...
+2025-09-03 18:30:33,071 - ERROR - Error processing batch 0: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 256, 64, 64] to have 1536 channels, but got 256 channels instead. Skipping.
+2025-09-03 18:30:33,192 - ERROR - Error processing batch 1: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 256, 64, 64] to have 1536 channels, but got 256 channels instead. Skipping.
+2025-09-03 18:30:33,609 - ERROR - Error processing batch 2: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 256, 64, 64] to have 1536 channels, but got 256 channels instead. Skipping.
+2025-09-03 18:30:34,022 - ERROR - Error processing batch 3: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 256, 64, 64] to have 1536 channels, but got 256 channels instead. Skipping.
+2025-09-03 18:30:34,443 - ERROR - Error processing batch 4: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 256, 64, 64] to have 1536 channels, but got 256 channels instead. Skipping.
+2025-09-03 18:30:35,058 - ERROR - Error processing batch 5: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 256, 64, 64] to have 1536 channels, but got 256 channels instead. Skipping.
+2025-09-03 18:30:35,475 - ERROR - Error processing batch 6: Given groups=1, weight of size [256, 1536, 1, 1], expected input[8, 256, 64, 64] to have 1536 channels, but got 256 channels instead. Skipping.

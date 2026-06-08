@@ -1,0 +1,7 @@
+{"time":"2025-09-24T17:51:14.268248703+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpuj2gh_q5/port-3067588.txt","pid":3067588,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-24T17:51:14.269739414+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3067588}
+{"time":"2025-09-24T17:51:14.269746107+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":45217,"Zone":""}}
+{"time":"2025-09-24T17:51:14.452779068+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:45506"}
+{"time":"2025-09-24T17:51:14.484279211+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"wl81by6y","id":"127.0.0.1:45506"}
+{"time":"2025-09-24T17:51:14.739869096+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"wl81by6y","id":"127.0.0.1:45506"}
+{"time":"2025-09-25T15:06:21.486376658+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

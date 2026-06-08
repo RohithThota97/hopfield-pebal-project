@@ -1,0 +1,20 @@
+{"time":"2025-09-24T17:51:23.25087002+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250924_175122-lb1pcsq7/logs/debug-core.log"}
+{"time":"2025-09-24T17:51:23.506329498+02:00","level":"INFO","msg":"stream: created new stream","id":"lb1pcsq7"}
+{"time":"2025-09-24T17:51:23.506393012+02:00","level":"INFO","msg":"stream: started","id":"lb1pcsq7"}
+{"time":"2025-09-24T17:51:23.506453862+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"lb1pcsq7"}
+{"time":"2025-09-24T17:51:23.506473946+02:00","level":"INFO","msg":"handler: started","stream_id":"lb1pcsq7"}
+{"time":"2025-09-24T17:51:23.506504236+02:00","level":"INFO","msg":"sender: started","stream_id":"lb1pcsq7"}
+{"time":"2025-09-24T17:51:23.872447257+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-24T18:48:39.031876208+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-09-24T18:48:54.428166695+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/lb1pcsq7/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-09-24T21:25:09.096100502+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-09-24T22:20:41.790060059+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/lb1pcsq7/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-09-24T23:12:09.59855829+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/graphql","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-09-25T06:16:59.936192412+02:00","level":"INFO","msg":"stream: closing","id":"lb1pcsq7"}
+{"time":"2025-09-25T06:16:59.936292088+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-25T06:16:59.936652785+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-25T06:17:02.006691404+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-25T06:17:02.189192534+02:00","level":"INFO","msg":"handler: closed","stream_id":"lb1pcsq7"}
+{"time":"2025-09-25T06:17:02.18926014+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"lb1pcsq7"}
+{"time":"2025-09-25T06:17:02.189320568+02:00","level":"INFO","msg":"sender: closed","stream_id":"lb1pcsq7"}
+{"time":"2025-09-25T06:17:02.191551756+02:00","level":"INFO","msg":"stream: closed","id":"lb1pcsq7"}

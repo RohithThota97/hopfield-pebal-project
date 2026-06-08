@@ -1,0 +1,18 @@
+{"time":"2025-09-19T17:34:24.273378936+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250919_173423-q3v5egxa/logs/debug-core.log"}
+{"time":"2025-09-19T17:34:24.527258596+02:00","level":"INFO","msg":"stream: created new stream","id":"q3v5egxa"}
+{"time":"2025-09-19T17:34:24.527344029+02:00","level":"INFO","msg":"stream: started","id":"q3v5egxa"}
+{"time":"2025-09-19T17:34:24.527364151+02:00","level":"INFO","msg":"handler: started","stream_id":"q3v5egxa"}
+{"time":"2025-09-19T17:34:24.527389788+02:00","level":"INFO","msg":"sender: started","stream_id":"q3v5egxa"}
+{"time":"2025-09-19T17:34:24.527438093+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"q3v5egxa"}
+{"time":"2025-09-19T17:34:24.806291557+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-19T19:47:40.001889594+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-09-19T19:54:40.005075826+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-09-20T09:39:51.757944157+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/q3v5egxa/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-09-20T18:16:45.776052438+02:00","level":"INFO","msg":"stream: closing","id":"q3v5egxa"}
+{"time":"2025-09-20T18:16:45.776078623+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-09-20T18:16:45.776397863+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-09-20T18:16:47.480339102+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-20T18:16:47.657008481+02:00","level":"INFO","msg":"handler: closed","stream_id":"q3v5egxa"}
+{"time":"2025-09-20T18:16:47.657073013+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"q3v5egxa"}
+{"time":"2025-09-20T18:16:47.657096618+02:00","level":"INFO","msg":"sender: closed","stream_id":"q3v5egxa"}
+{"time":"2025-09-20T18:16:47.689973386+02:00","level":"INFO","msg":"stream: closed","id":"q3v5egxa"}

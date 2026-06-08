@@ -1,0 +1,24 @@
+2025-06-28 12:17:33,243 - __main__ - INFO - Initializing trainer on device: cuda
+/home/ha51dybi/PEBAL/code/feature_extractor.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(model_path, map_location='cpu')
+2025-06-28 12:17:36,923 - segmentation_head - INFO - SegmentationClassifierHead initialized: in_channels=1280, num_classes=19
+2025-06-28 12:17:36,924 - __main__ - INFO - Trainer initialization completed
+2025-06-28 12:17:36,924 - __main__ - INFO - Starting training for 50 epochs with batch_size=2
+2025-06-28 12:17:36,925 - __main__ - INFO - Building initial memories...
+2025-06-28 12:17:36,926 - __main__ - INFO - Creating training dataloader with batch_size=2
+2025-06-28 12:17:37,058 - __main__ - INFO - Training Dataloader created with 1634 batches
+2025-06-28 12:17:37,058 - __main__ - INFO - Building initial memories...
+Processing ALL images to build ID and AUX memories...
+Building memories: 100%|███████████████████████████████████████████████████████████████████████| 1634/1634 [14:18<00:00,  1.90it/s]
+Processed 3268 images
+ID features by class: [2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 1513, 1491, 1019, 2044, 2106, 2227]
+AUX features collected: 176100
+Building final memories...
+Created ID memory: torch.Size([44200, 128])
+Created AUX memory: torch.Size([50000, 128])
+2025-06-28 12:31:55,763 - __main__ - INFO - Memory statistics: {'images_processed': 3268, 'total_id_features': 44200, 'total_aux_features': 176100, 'id_class_distribution': {2: 2600, 0: 2600, 8: 2600, 1: 2600, 3: 2600, 10: 2600, 5: 2600, 11: 2600, 4: 2600, 7: 2600, 13: 2600, 9: 2600, 18: 2600, 6: 1513, 12: 1491, 17: 1019, 16: 2044, 14: 2106, 15: 2227}, 'classes_with_features': 19}
+2025-06-28 12:31:55,764 - __main__ - INFO - Starting training loop...
+2025-06-28 12:31:55,764 - __main__ - INFO - Creating training dataloader with batch_size=2
+2025-06-28 12:31:55,852 - __main__ - INFO - Training Dataloader created with 1634 batches
+2025-06-28 12:31:55,852 - __main__ - INFO - Creating validation dataloader with batch_size=2
+2025-06-28 12:31:55,932 - __main__ - ERROR - Training failed with error: 'NoneType' object has no attribute 'dataset'

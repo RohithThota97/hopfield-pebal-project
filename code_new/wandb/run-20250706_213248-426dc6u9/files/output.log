@@ -1,0 +1,48 @@
+2025-07-06 21:32:49,505 - __main__ - INFO - Training dataset size: 3268
+2025-07-06 21:32:49,506 - Pixel_Utils - INFO - Analyzing Fishyscapes dataset for OOD content...
+2025-07-06 21:32:49,546 - Pixel_Utils - INFO - Sample image_0.png:
+2025-07-06 21:32:49,547 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:32:49,547 - Pixel_Utils - INFO -   ID pixels (0): 1,801,918
+2025-07-06 21:32:49,547 - Pixel_Utils - INFO -   OOD pixels (1): 59,867
+2025-07-06 21:32:49,547 - Pixel_Utils - INFO -   Ignore pixels (2/255): 235,367
+2025-07-06 21:32:49,586 - Pixel_Utils - INFO - Sample image_1.png:
+2025-07-06 21:32:49,587 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:32:49,587 - Pixel_Utils - INFO -   ID pixels (0): 1,799,432
+2025-07-06 21:32:49,587 - Pixel_Utils - INFO -   OOD pixels (1): 47,165
+2025-07-06 21:32:49,587 - Pixel_Utils - INFO -   Ignore pixels (2/255): 250,555
+2025-07-06 21:32:49,618 - Pixel_Utils - INFO - Sample image_10.png:
+2025-07-06 21:32:49,618 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:32:49,619 - Pixel_Utils - INFO -   ID pixels (0): 1,825,295
+2025-07-06 21:32:49,619 - Pixel_Utils - INFO -   OOD pixels (1): 18,661
+2025-07-06 21:32:49,619 - Pixel_Utils - INFO -   Ignore pixels (2/255): 253,196
+2025-07-06 21:32:49,651 - Pixel_Utils - INFO - Sample image_11.png:
+2025-07-06 21:32:49,651 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:32:49,651 - Pixel_Utils - INFO -   ID pixels (0): 1,861,327
+2025-07-06 21:32:49,651 - Pixel_Utils - INFO -   OOD pixels (1): 4,777
+2025-07-06 21:32:49,651 - Pixel_Utils - INFO -   Ignore pixels (2/255): 231,048
+2025-07-06 21:32:49,681 - Pixel_Utils - INFO - Sample image_12.png:
+2025-07-06 21:32:49,681 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-06 21:32:49,682 - Pixel_Utils - INFO -   ID pixels (0): 1,825,428
+2025-07-06 21:32:49,682 - Pixel_Utils - INFO -   OOD pixels (1): 39,394
+2025-07-06 21:32:49,682 - Pixel_Utils - INFO -   Ignore pixels (2/255): 232,330
+2025-07-06 21:32:49,688 - Pixel_Utils - INFO - Found 30 valid images from 30 total
+2025-07-06 21:32:49,689 - Pixel_Utils - INFO - Total OOD pixels in sample: 169,864
+2025-07-06 21:32:49,689 - __main__ - INFO - Validation dataset size: 30
+2025-07-06 21:32:49,689 - __main__ - INFO - Building initial Hopfield memories...
+Building memories:   0%|▍                                                                                      | 8/1634 [00:04<16:51,  1.61it/s]
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 839, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 833, in main
+    results = trainer.train(num_epochs=NUM_EPOCHS, batch_size=BATCH_SIZE)
+  File "train_pixel_hopfield_boosting.py", line 754, in train
+    self.build_initial_memories(train_loader)
+  File "train_pixel_hopfield_boosting.py", line 248, in build_initial_memories
+    self.memory_builder.process_all_images_for_memories(full_dataloader)
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 51, in process_all_images_for_memories
+    self._process_batch_for_memories(batch)
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 70, in _process_batch_for_memories
+    self._extract_pixels_from_image(
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 90, in _extract_pixels_from_image
+    if id_pixel_mask.sum() > 0:
+KeyboardInterrupt

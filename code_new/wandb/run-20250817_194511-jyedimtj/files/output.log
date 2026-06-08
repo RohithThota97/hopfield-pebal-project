@@ -1,0 +1,40 @@
+🎯 Starting CORRECTED Algorithm 1: Hopfield Boosting...
+================================================================================
+🎯 CORRECTED ALGORITHM 1: HOPFIELD BOOSTING
+================================================================================
+📋 Parameters: T=10000, N=100, β=128.0
+================================================================================
+📊 Collecting full ID dataset X...
+Collecting ID dataset X: 100%|██████████████████████████████████████████████████████████████████████| 1634/1634 [06:01<00:00,  4.52it/s]
+✅ Collected 3263 ID samples for dataset X
+📊 Collecting AUX dataset O and initializing weights w1 to 1/|O|...
+Collecting AUX data O^D: 100%|███████████| 1634/1634 [04:41<00:00,  5.81it/s, AUX_samples=158, Total_AUX_pixels=1.08e+7, Processed=3268]
+✅ Initialized 158 AUX samples with uniform weights (1/|O| = 0.006329)
+✅ Algorithm 1 setup complete:
+   |X| (ID dataset): 3263 samples
+   |O| (AUX dataset): 158 samples
+   Initial weights: w1 = 1/|O| = 0.006329
+
+🚀 Starting Algorithm 1 main loop for T=10000 iterations...
+Corrected Algorithm 1:   0%|                                                                                  | 0/10000 [00:03<?, ?it/s]
+❌ Error: mat1 and mat2 shapes cannot be multiplied (512x128 and 2000x128)
+Traceback (most recent call last):
+  File "run_training.py", line 645, in main
+    trainer.train(train_loader)
+  File "run_training.py", line 553, in train
+    raise e
+  File "run_training.py", line 511, in train
+    loss_ce, loss_ood, total_loss = self._execute_single_iteration(
+  File "run_training.py", line 387, in _execute_single_iteration
+    loss_ce, loss_ood, total_loss = self._compute_composite_loss(xs_batch, os_batch)
+  File "run_training.py", line 281, in _compute_composite_loss
+    loss_ood = self._compute_ood_loss_algorithm1(xs_projected, os_projected)
+  File "run_training.py", line 320, in _compute_ood_loss_algorithm1
+    energies = energy_calc(chunk.unsqueeze(-1).unsqueeze(-1)).squeeze()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 144, in forward
+    a_sim = torch.matmul(x_batch, self.a_memory.T)  # X^T ξ
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (512x128 and 2000x128)

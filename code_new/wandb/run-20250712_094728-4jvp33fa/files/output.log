@@ -1,0 +1,56 @@
+2025-07-12 09:47:29,811 - Pixel_Utils - INFO - Analyzing Fishyscapes dataset for OOD content...
+2025-07-12 09:47:29,848 - Pixel_Utils - INFO - Sample image_0.png:
+2025-07-12 09:47:29,848 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-12 09:47:29,848 - Pixel_Utils - INFO -   ID pixels (0): 1,801,918
+2025-07-12 09:47:29,848 - Pixel_Utils - INFO -   OOD pixels (1): 59,867
+2025-07-12 09:47:29,848 - Pixel_Utils - INFO -   Ignore pixels (2/255): 235,367
+2025-07-12 09:47:29,877 - Pixel_Utils - INFO - Sample image_1.png:
+2025-07-12 09:47:29,878 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-12 09:47:29,878 - Pixel_Utils - INFO -   ID pixels (0): 1,799,432
+2025-07-12 09:47:29,878 - Pixel_Utils - INFO -   OOD pixels (1): 47,165
+2025-07-12 09:47:29,878 - Pixel_Utils - INFO -   Ignore pixels (2/255): 250,555
+2025-07-12 09:47:29,907 - Pixel_Utils - INFO - Sample image_10.png:
+2025-07-12 09:47:29,907 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-12 09:47:29,907 - Pixel_Utils - INFO -   ID pixels (0): 1,825,295
+2025-07-12 09:47:29,907 - Pixel_Utils - INFO -   OOD pixels (1): 18,661
+2025-07-12 09:47:29,908 - Pixel_Utils - INFO -   Ignore pixels (2/255): 253,196
+2025-07-12 09:47:29,937 - Pixel_Utils - INFO - Sample image_11.png:
+2025-07-12 09:47:29,937 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-12 09:47:29,937 - Pixel_Utils - INFO -   ID pixels (0): 1,861,327
+2025-07-12 09:47:29,937 - Pixel_Utils - INFO -   OOD pixels (1): 4,777
+2025-07-12 09:47:29,937 - Pixel_Utils - INFO -   Ignore pixels (2/255): 231,048
+2025-07-12 09:47:29,967 - Pixel_Utils - INFO - Sample image_12.png:
+2025-07-12 09:47:29,967 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-12 09:47:29,967 - Pixel_Utils - INFO -   ID pixels (0): 1,825,428
+2025-07-12 09:47:29,967 - Pixel_Utils - INFO -   OOD pixels (1): 39,394
+2025-07-12 09:47:29,967 - Pixel_Utils - INFO -   Ignore pixels (2/255): 232,330
+2025-07-12 09:47:29,967 - Pixel_Utils - INFO - Found 30 valid images from 30 total
+2025-07-12 09:47:29,967 - Pixel_Utils - INFO - Total OOD pixels in sample: 169,864
+Building memories: 100%|████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:34<00:00,  1.87it/s]
+Epoch 1: 100%|█| 1634/1634 [14:48<00:00,  1.84it/s, Loss=0.6982, CE=0.6982, OOD=0.0000, PixelAcc=0.7587, LR=0.010000, Lambda=0.00, ID=659, AUX=0
+2025-07-12 10:16:57,197 - visualization_utils - INFO - Visualization saved to visualizations/training/epoch_1_batch_0.png
+2025-07-12 10:16:59,315 - visualization_utils - INFO - Visualization saved to visualizations/training/epoch_1_batch_1.png
+Epoch 2: 100%|█| 1634/1634 [14:49<00:00,  1.84it/s, Loss=0.6220, CE=0.6220, OOD=0.0000, PixelAcc=0.8093, LR=0.009990, Lambda=0.00, ID=561, AUX=0
+2025-07-12 10:31:52,722 - visualization_utils - INFO - Visualization saved to visualizations/training/epoch_2_batch_0.png
+2025-07-12 10:31:54,971 - visualization_utils - INFO - Visualization saved to visualizations/training/epoch_2_batch_1.png
+Epoch 3:  34%|▎| 554/1634 [05:02<09:49,  1.83it/s, Loss=0.5783, CE=0.5783, OOD=0.0000, PixelAcc=0.8336, LR=0.009961, Lambda=0.00, ID=637, AUX=0,
+Traceback (most recent call last):
+  File "train_pixel.py", line 794, in <module>
+    trainer.train(num_epochs=100, batch_size=2)
+  File "train_pixel.py", line 746, in train
+    avg_loss, avg_ce_loss, avg_ood_loss, avg_pixel_accuracy = self.train_epoch(train_loader, epoch)
+  File "train_pixel.py", line 394, in train_epoch
+    id_pixels, id_labels, aux_pixels = sample_pixels_for_batch(
+  File "/home/ha51dybi/PEBAL/code/Pixel_Utils.py", line 152, in sample_pixels_for_batch
+    if id_mask.sum() >= min_pixels_per_image:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/multiprocessing/queues.py", line 245, in _feed
+    send_bytes(obj)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe

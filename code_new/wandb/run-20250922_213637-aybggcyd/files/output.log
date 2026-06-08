@@ -1,0 +1,19 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Backbone fully frozen as per request.
+INFO:__main__:Building initial memories...
+INFO:feature_extractor:Feature stats: mean=0.0003, std=0.0150
+INFO:hopfield_memory_builder:Starting improved memory building with diversity sampling...
+Collecting features:   0%|                                                                                                                                | 0/890 [00:00<?, ?it/s]INFO:feature_extractor:Feature stats: mean=0.0002, std=0.0166
+ERROR:hopfield_memory_builder:Error in batch 0: not enough values to unpack (expected 4, got 2)
+Collecting features:   0%|▏                                                                                                                       | 1/890 [00:03<44:55,  3.03s/it]INFO:feature_extractor:Feature stats: mean=0.0001, std=0.0170
+ERROR:hopfield_memory_builder:Error in batch 1: not enough values to unpack (expected 4, got 2)
+Collecting features:   0%|▎                                                                                                                       | 2/890 [00:06<44:43,  3.02s/it]INFO:feature_extractor:Feature stats: mean=0.0002, std=0.0170
+ERROR:hopfield_memory_builder:Error in batch 2: not enough values to unpack (expected 4, got 2)
+Collecting features:   0%|▍                                                                                                                       | 3/890 [00:09<46:27,  3.14s/it]INFO:feature_extractor:Feature stats: mean=0.0002, std=0.0171
+ERROR:hopfield_memory_builder:Error in batch 3: not enough values to unpack (expected 4, got 2)
+Collecting features:   0%|▌                                                                                                                       | 4/890 [00:12<45:03,  3.05s/it]

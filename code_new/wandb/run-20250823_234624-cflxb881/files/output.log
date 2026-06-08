@@ -1,0 +1,21 @@
+✅ Trainer initialized for dynamic memory training.
+🚀 Starting training process...
+
+==================== Initial Memory Warm-up ====================
+
+========================= Full Memory Update =========================
+Updating Memory Banks:   0%|                                                                   | 0/817 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 316, in <module>
+    main()
+  File "run_training.py", line 313, in main
+    trainer.train()
+  File "run_training.py", line 181, in train
+    self._update_memory_banks()
+  File "run_training.py", line 77, in _update_memory_banks
+    id_mem, ood_mem = self.memory_updater.update_memory_banks(
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 44, in update_memory_banks
+    extracted = feature_extractor.extract_features_batch(
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 91, in extract_features_batch
+    images_raw = batch['data'].to(self.device)
+KeyError: 'data'

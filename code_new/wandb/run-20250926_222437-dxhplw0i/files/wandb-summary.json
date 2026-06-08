@@ -1,0 +1,1 @@
+{"fishyscapes_lf/auroc":0.47268872624655695,"_timestamp":1.7589455822610376e+09,"fishyscapes_lf/fpr95":0.9456023879368021,"_wandb":{"runtime":27304},"ood_auprs":0,"_runtime":27304.43429215,"fishyscapes_lf/auprs":0.0787330037218967,"epoch":2,"_step":7,"ood_fpr95":1,"ood_auroc":0,"semantic_miou":0.7504808623595427}

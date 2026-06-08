@@ -1,0 +1,8 @@
+{"time":"2025-09-04T23:59:23.594239314+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250904_235923-3jipkinc/logs/debug-core.log"}
+{"time":"2025-09-04T23:59:23.843164306+02:00","level":"INFO","msg":"stream: created new stream","id":"3jipkinc"}
+{"time":"2025-09-04T23:59:23.843188907+02:00","level":"INFO","msg":"stream: started","id":"3jipkinc"}
+{"time":"2025-09-04T23:59:23.843195871+02:00","level":"INFO","msg":"handler: started","stream_id":"3jipkinc"}
+{"time":"2025-09-04T23:59:23.843222005+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"3jipkinc"}
+{"time":"2025-09-04T23:59:23.843227321+02:00","level":"INFO","msg":"sender: started","stream_id":"3jipkinc"}
+{"time":"2025-09-04T23:59:24.089041469+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-05T03:11:51.117927188+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-pebal-aligned/3jipkinc/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}

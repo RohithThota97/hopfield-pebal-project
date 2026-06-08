@@ -1,0 +1,37 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Backbone fully frozen.
+INFO:__main__:Building initial memories...
+INFO:feature_extractor:Feature stats: mean=0.0003, std=0.0149
+INFO:hopfield_memory_builder:Starting improved memory building with diversity sampling...
+Collecting features:   0%|                                                                                                                                      | 0/890 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 1262, in <module>
+    main()
+  File "run_training.py", line 1249, in main
+    trainer = ImprovedOODSegmentationTrainer(
+  File "run_training.py", line 86, in __init__
+    self._build_initial_memories()
+  File "run_training.py", line 167, in _build_initial_memories
+    id_memory, aux_memory, warnings = memory_builder.process_images(self.train_loader)
+  File "/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py", line 83, in process_images
+    for batch_idx, batch in enumerate(tqdm(dataloader, desc="Collecting features")):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 719, in __getitem__
+    img, gt = self.mix_object(cut_object_image=img, cut_object_mask=gt)
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 658, in mix_object
+    cut_object_image = cv2.resize(cut_object_image, (new_w, new_h), interpolation=cv2.INTER_LINEAR)
+cv2.error: OpenCV(4.11.0) /io/opencv/modules/imgproc/src/resize.cpp:4208: error: (-215:Assertion failed) !ssize.empty() in function 'resize'

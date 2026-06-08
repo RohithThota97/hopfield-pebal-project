@@ -1,0 +1,41 @@
+Starting real memory building process...
+Target sizes: ID=2000, OOD=1000
+Processing Images: 100%|████████████████████████████████████████████████████████████| 817/817 [54:46<00:00,  4.02s/it]
+Raw collection complete. Building final tensors...
+Processing summary:
+  Successful batches: 817
+  Processing errors: 0
+  Total images processed: 3268
+Building final memory tensors...
+Building memory with 19 valid classes
+Class road: 29061 candidates → 76 selected
+Class sidewalk: 23972 candidates → 76 selected
+Class building: 27366 candidates → 50 selected
+Class fence: 7339 candidates → 50 selected
+Class pole: 20528 candidates → 115 selected
+Class traffic_light: 7902 candidates → 115 selected
+Class traffic_sign: 16243 candidates → 115 selected
+Class vegetation: 25435 candidates → 50 selected
+Class sky: 16593 candidates → 50 selected
+Class person: 14480 candidates → 153 selected
+Class rider: 4631 candidates → 153 selected
+Class car: 24354 candidates → 115 selected
+Class bicycle: 8220 candidates → 50 selected
+Class terrain: 9265 candidates → 50 selected
+Class train: 64182 candidates → 230 selected
+Class motorcycle: 29850 candidates → 192 selected
+Class wall: 5351 candidates → 50 selected
+Class truck: 70965 candidates → 192 selected
+Class bus: 74372 candidates → 192 selected
+Final ID Memory Shape: torch.Size([2074, 128])
+Final OOD Memory Shape: torch.Size([1000, 128])
+Traceback (most recent call last):
+  File "run_training.py", line 246, in <module>
+    main()
+  File "run_training.py", line 240, in main
+    trainer = PixelWiseHopfieldTrainer(train_config, train_loader, val_loader, evaluator)
+  File "run_training.py", line 47, in __init__
+    self._build_pixel_memory()
+  File "run_training.py", line 77, in _build_pixel_memory
+    id_memory, ood_memory = memory_builder.process_images(dataloader=self.train_loader)
+ValueError: too many values to unpack (expected 2)

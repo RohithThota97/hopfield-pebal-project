@@ -1,0 +1,15 @@
+{"time":"2025-08-20T20:09:20.742153923+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpcyrrqey4/port-1270047.txt","pid":1270047,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-08-20T20:09:20.747752778+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":33963,"Zone":""}}
+{"time":"2025-08-20T20:09:20.747785629+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":1270047}
+{"time":"2025-08-20T20:09:20.931440378+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T20:09:20.988277908+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"7bf2oi0o","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T20:09:21.243588402+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"7bf2oi0o","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T22:17:20.305278705+02:00","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"7bf2oi0o","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T22:17:20.306553128+02:00","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"7bf2oi0o","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T22:17:21.303716614+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T22:17:21.303763156+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T22:17:21.303776281+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-08-20T22:17:21.303781774+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T22:17:21.30397734+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T22:17:21.303995631+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:49782"}
+{"time":"2025-08-20T22:17:21.304008619+02:00","level":"INFO","msg":"server is closed"}

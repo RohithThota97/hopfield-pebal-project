@@ -1,0 +1,8 @@
+{"time":"2025-07-30T20:57:17.814957984+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250730_205717-onggnxf2/logs/debug-core.log"}
+{"time":"2025-07-30T20:57:18.074640917+02:00","level":"INFO","msg":"stream: created new stream","id":"onggnxf2"}
+{"time":"2025-07-30T20:57:18.074739381+02:00","level":"INFO","msg":"stream: started","id":"onggnxf2"}
+{"time":"2025-07-30T20:57:18.074777304+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"onggnxf2"}
+{"time":"2025-07-30T20:57:18.07484348+02:00","level":"INFO","msg":"sender: started","stream_id":"onggnxf2"}
+{"time":"2025-07-30T20:57:18.074872626+02:00","level":"INFO","msg":"handler: started","stream_id":"onggnxf2"}
+{"time":"2025-07-30T20:57:18.380212251+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-31T04:25:42.990910057+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-segmentation/onggnxf2/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}

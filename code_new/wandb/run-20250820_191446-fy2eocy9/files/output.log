@@ -1,0 +1,898 @@
+🔄 Boosting Update at Epoch 1
+
+🔄 Boosting Step 1: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:59<00:00, 13.62it/s]
+✅ Built global pool of 25202 OOD pixels.
+Training Epoch 1: 100%|█████████████████████| 3268/3268 [14:59<00:00,  3.63it/s, L_CE=1.8632, L_OOD=0.0874, L_DIV=0.0371, LR=0.000500]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 1 Averages - CE: 2.0421, OOD: 0.0872, DIV: 0.0428
+🔄 Boosting Update at Epoch 2
+
+🔄 Boosting Step 2: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:54<00:00, 13.96it/s]
+✅ Built global pool of 24672 OOD pixels.
+Training Epoch 2: 100%|█████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.4872, L_OOD=0.0871, L_DIV=0.0259, LR=0.000498]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 2 Averages - CE: 0.8568, OOD: 0.0870, DIV: 0.0412
+🔄 Boosting Update at Epoch 3
+
+🔄 Boosting Step 3: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [04:44<00:00, 11.47it/s]
+✅ Built global pool of 18716 OOD pixels.
+Training Epoch 3: 100%|█████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.4072, L_OOD=0.0871, L_DIV=0.0255, LR=0.000496]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 3 Averages - CE: 0.6200, OOD: 0.0869, DIV: 0.0386
+🔍 Evaluating at Epoch 3
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=866, ood_pixels=134
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24767, Out: 5233
+In-scores range: [-2.509, -2.487]
+Out-scores range: [-2.508, -2.488]
+✅ AUROC: 0.5617
+✅ FPR95: 0.9146
+✅ AUPRS: 0.8483
+Evaluation Results - AUROC: 0.5617, FPR95: 0.9146
+🔄 Boosting Update at Epoch 4
+
+🔄 Boosting Step 4: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [04:38<00:00, 11.73it/s]
+✅ Built global pool of 25408 OOD pixels.
+Training Epoch 4: 100%|█████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.1177, L_OOD=0.0871, L_DIV=0.0606, LR=0.000492]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 4 Averages - CE: 0.5226, OOD: 0.0870, DIV: 0.0367
+🔄 Boosting Update at Epoch 5
+
+🔄 Boosting Step 5: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [04:50<00:00, 11.25it/s]
+✅ Built global pool of 17671 OOD pixels.
+Training Epoch 5: 100%|█████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=3.7534, L_OOD=0.0870, L_DIV=0.0414, LR=0.000488]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 5 Averages - CE: 0.4883, OOD: 0.0868, DIV: 0.0351
+🔄 Boosting Update at Epoch 6
+
+🔄 Boosting Step 6: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [04:48<00:00, 11.34it/s]
+✅ Built global pool of 21472 OOD pixels.
+Training Epoch 6: 100%|█████████████████████| 3268/3268 [14:36<00:00,  3.73it/s, L_CE=0.3290, L_OOD=0.0870, L_DIV=0.0355, LR=0.000482]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 6 Averages - CE: 0.4462, OOD: 0.0868, DIV: 0.0336
+🔍 Evaluating at Epoch 6
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=863, ood_pixels=137
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24766, Out: 5234
+In-scores range: [-2.510, -2.485]
+Out-scores range: [-2.508, -2.486]
+✅ AUROC: 0.5770
+✅ FPR95: 0.9199
+✅ AUPRS: 0.8570
+Evaluation Results - AUROC: 0.5770, FPR95: 0.9199
+🔄 Boosting Update at Epoch 7
+
+🔄 Boosting Step 7: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [04:47<00:00, 11.35it/s]
+✅ Built global pool of 20025 OOD pixels.
+Training Epoch 7: 100%|█████████████████████| 3268/3268 [14:36<00:00,  3.73it/s, L_CE=0.5411, L_OOD=0.0869, L_DIV=0.0203, LR=0.000476]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 7 Averages - CE: 0.4165, OOD: 0.0869, DIV: 0.0326
+Training Epoch 8: 100%|█████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.1258, L_OOD=0.0870, L_DIV=0.0225, LR=0.000469]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 8 Averages - CE: 0.3811, OOD: 0.0868, DIV: 0.0314
+Training Epoch 9: 100%|█████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.2643, L_OOD=0.0870, L_DIV=0.0213, LR=0.000461]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 9 Averages - CE: 0.3671, OOD: 0.0868, DIV: 0.0304
+🔍 Evaluating at Epoch 9
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=865, ood_pixels=135
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=855, ood_pixels=145
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=858, ood_pixels=142
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24769, Out: 5231
+In-scores range: [-2.509, -2.484]
+Out-scores range: [-2.508, -2.485]
+✅ AUROC: 0.5881
+✅ FPR95: 0.9172
+✅ AUPRS: 0.8596
+Evaluation Results - AUROC: 0.5881, FPR95: 0.9172
+🔄 Boosting Update at Epoch 10
+
+🔄 Boosting Step 8: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [04:51<00:00, 11.22it/s]
+✅ Built global pool of 21688 OOD pixels.
+Training Epoch 10: 100%|████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.2572, L_OOD=0.0870, L_DIV=0.0361, LR=0.000452]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 10 Averages - CE: 0.3565, OOD: 0.0869, DIV: 0.0297
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_simple/checkpoint_epoch_10.pth
+Training Epoch 11: 100%|████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.0025, L_OOD=0.0870, L_DIV=0.0711, LR=0.000443]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 11 Averages - CE: 0.3609, OOD: 0.0869, DIV: 0.0289
+Training Epoch 12: 100%|████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.3946, L_OOD=0.0870, L_DIV=0.0462, LR=0.000432]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 12 Averages - CE: 0.3369, OOD: 0.0868, DIV: 0.0285
+🔍 Evaluating at Epoch 12
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=863, ood_pixels=137
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=858, ood_pixels=142
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24783, Out: 5217
+In-scores range: [-2.508, -2.488]
+Out-scores range: [-2.508, -2.489]
+✅ AUROC: 0.5917
+✅ FPR95: 0.9189
+✅ AUPRS: 0.8638
+Evaluation Results - AUROC: 0.5917, FPR95: 0.9189
+🔄 Boosting Update at Epoch 13
+
+🔄 Boosting Step 9: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [04:41<00:00, 11.61it/s]
+✅ Built global pool of 19932 OOD pixels.
+Training Epoch 13: 100%|████████████████████| 3268/3268 [14:36<00:00,  3.73it/s, L_CE=0.2568, L_OOD=0.0870, L_DIV=0.0160, LR=0.000421]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 13 Averages - CE: 0.3276, OOD: 0.0869, DIV: 0.0276
+Training Epoch 14: 100%|████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.4018, L_OOD=0.0870, L_DIV=0.0209, LR=0.000410]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 14 Averages - CE: 0.3170, OOD: 0.0869, DIV: 0.0271
+Training Epoch 15: 100%|████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.0681, L_OOD=0.0871, L_DIV=0.0225, LR=0.000397]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 15 Averages - CE: 0.3348, OOD: 0.0869, DIV: 0.0266
+🔍 Evaluating at Epoch 15
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=865, ood_pixels=135
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=855, ood_pixels=145
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=857, ood_pixels=143
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24761, Out: 5239
+In-scores range: [-2.508, -2.486]
+Out-scores range: [-2.508, -2.485]
+✅ AUROC: 0.5943
+✅ FPR95: 0.9214
+✅ AUPRS: 0.8631
+Evaluation Results - AUROC: 0.5943, FPR95: 0.9214
+🔄 Boosting Update at Epoch 16
+
+🔄 Boosting Step 10: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [04:40<00:00, 11.66it/s]
+✅ Built global pool of 18251 OOD pixels.
+Training Epoch 16: 100%|████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.3565, L_OOD=0.0870, L_DIV=0.0160, LR=0.000384]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 16 Averages - CE: 0.3132, OOD: 0.0869, DIV: 0.0262
+Training Epoch 17: 100%|████████████████████| 3268/3268 [17:11<00:00,  3.17it/s, L_CE=0.4505, L_OOD=0.0869, L_DIV=0.0222, LR=0.000371]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 17 Averages - CE: 0.3234, OOD: 0.0868, DIV: 0.0260
+Training Epoch 18: 100%|████████████████████| 3268/3268 [16:19<00:00,  3.34it/s, L_CE=0.3331, L_OOD=0.0870, L_DIV=0.0276, LR=0.000357]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 18 Averages - CE: 0.2995, OOD: 0.0868, DIV: 0.0257
+🔍 Evaluating at Epoch 18
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=866, ood_pixels=134
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=857, ood_pixels=143
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=853, ood_pixels=147
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24774, Out: 5226
+In-scores range: [-2.509, -2.486]
+Out-scores range: [-2.508, -2.484]
+✅ AUROC: 0.5793
+✅ FPR95: 0.9196
+✅ AUPRS: 0.8540
+Evaluation Results - AUROC: 0.5793, FPR95: 0.9196
+🔄 Boosting Update at Epoch 19
+
+🔄 Boosting Step 11: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:55<00:00, 13.85it/s]
+✅ Built global pool of 24711 OOD pixels.
+Training Epoch 19: 100%|████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.6136, L_OOD=0.0869, L_DIV=0.0259, LR=0.000342]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 19 Averages - CE: 0.2971, OOD: 0.0868, DIV: 0.0252
+Training Epoch 20: 100%|████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.3542, L_OOD=0.0869, L_DIV=0.0283, LR=0.000328]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 20 Averages - CE: 0.2917, OOD: 0.0868, DIV: 0.0248
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_simple/checkpoint_epoch_20.pth
+Training Epoch 21: 100%|████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.2698, L_OOD=0.0870, L_DIV=0.0181, LR=0.000313]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 21 Averages - CE: 0.2895, OOD: 0.0868, DIV: 0.0247
+🔍 Evaluating at Epoch 21
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=863, ood_pixels=137
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=858, ood_pixels=142
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24771, Out: 5229
+In-scores range: [-2.509, -2.488]
+Out-scores range: [-2.508, -2.487]
+✅ AUROC: 0.5988
+✅ FPR95: 0.9019
+✅ AUPRS: 0.8607
+Evaluation Results - AUROC: 0.5988, FPR95: 0.9019
+🔄 Boosting Update at Epoch 22
+
+🔄 Boosting Step 12: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:52<00:00, 14.03it/s]
+✅ Built global pool of 21577 OOD pixels.
+Training Epoch 22: 100%|████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.2421, L_OOD=0.0870, L_DIV=0.0175, LR=0.000297]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 22 Averages - CE: 0.2829, OOD: 0.0869, DIV: 0.0245
+Training Epoch 23: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.0785, L_OOD=0.0870, L_DIV=0.0267, LR=0.000282]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 23 Averages - CE: 0.2873, OOD: 0.0867, DIV: 0.0242
+Training Epoch 24: 100%|████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.3607, L_OOD=0.0870, L_DIV=0.0321, LR=0.000266]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 24 Averages - CE: 0.2821, OOD: 0.0868, DIV: 0.0240
+🔍 Evaluating at Epoch 24
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=863, ood_pixels=137
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=855, ood_pixels=145
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=857, ood_pixels=143
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24774, Out: 5226
+In-scores range: [-2.508, -2.487]
+Out-scores range: [-2.508, -2.486]
+✅ AUROC: 0.5908
+✅ FPR95: 0.9145
+✅ AUPRS: 0.8612
+Evaluation Results - AUROC: 0.5908, FPR95: 0.9145
+🔄 Boosting Update at Epoch 25
+
+🔄 Boosting Step 13: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:55<00:00, 13.90it/s]
+✅ Built global pool of 18410 OOD pixels.
+Training Epoch 25: 100%|████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.9851, L_OOD=0.0870, L_DIV=0.0475, LR=0.000250]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 25 Averages - CE: 0.2829, OOD: 0.0869, DIV: 0.0238
+Training Epoch 26: 100%|████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.5390, L_OOD=0.0871, L_DIV=0.0305, LR=0.000235]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 26 Averages - CE: 0.2838, OOD: 0.0869, DIV: 0.0235
+Training Epoch 27: 100%|████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.1307, L_OOD=0.0870, L_DIV=0.0217, LR=0.000219]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 27 Averages - CE: 0.2759, OOD: 0.0869, DIV: 0.0233
+🔍 Evaluating at Epoch 27
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=862, ood_pixels=138
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=855, ood_pixels=145
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24756, Out: 5244
+In-scores range: [-2.509, -2.487]
+Out-scores range: [-2.508, -2.484]
+✅ AUROC: 0.5777
+✅ FPR95: 0.9277
+✅ AUPRS: 0.8551
+Evaluation Results - AUROC: 0.5777, FPR95: 0.9277
+🔄 Boosting Update at Epoch 28
+
+🔄 Boosting Step 14: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:56<00:00, 13.83it/s]
+✅ Built global pool of 21717 OOD pixels.
+Training Epoch 28: 100%|████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.2913, L_OOD=0.0869, L_DIV=0.0301, LR=0.000204]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 28 Averages - CE: 0.2783, OOD: 0.0867, DIV: 0.0235
+Training Epoch 29: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.1919, L_OOD=0.0869, L_DIV=0.0176, LR=0.000188]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 29 Averages - CE: 0.2761, OOD: 0.0867, DIV: 0.0232
+Training Epoch 30: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.4714, L_OOD=0.0869, L_DIV=0.0190, LR=0.000173]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 30 Averages - CE: 0.2733, OOD: 0.0868, DIV: 0.0231
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_simple/checkpoint_epoch_30.pth
+🔍 Evaluating at Epoch 30
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=864, ood_pixels=136
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=858, ood_pixels=142
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=852, ood_pixels=148
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24768, Out: 5232
+In-scores range: [-2.508, -2.486]
+Out-scores range: [-2.508, -2.485]
+✅ AUROC: 0.6022
+✅ FPR95: 0.9098
+✅ AUPRS: 0.8635
+Evaluation Results - AUROC: 0.6022, FPR95: 0.9098
+🔄 Boosting Update at Epoch 31
+
+🔄 Boosting Step 15: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:58<00:00, 13.71it/s]
+✅ Built global pool of 20713 OOD pixels.
+Training Epoch 31: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.4655, L_OOD=0.0869, L_DIV=0.0191, LR=0.000159]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 31 Averages - CE: 0.2688, OOD: 0.0867, DIV: 0.0229
+Training Epoch 32: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=1.4982, L_OOD=0.0870, L_DIV=0.0269, LR=0.000144]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 32 Averages - CE: 0.2731, OOD: 0.0867, DIV: 0.0227
+Training Epoch 33: 100%|████████████████████| 3268/3268 [14:32<00:00,  3.74it/s, L_CE=0.6344, L_OOD=0.0870, L_DIV=0.0289, LR=0.000130]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 33 Averages - CE: 0.2762, OOD: 0.0868, DIV: 0.0227
+🔍 Evaluating at Epoch 33
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=862, ood_pixels=138
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=859, ood_pixels=141
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24763, Out: 5237
+In-scores range: [-2.508, -2.485]
+Out-scores range: [-2.507, -2.484]
+✅ AUROC: 0.5779
+✅ FPR95: 0.9219
+✅ AUPRS: 0.8527
+Evaluation Results - AUROC: 0.5779, FPR95: 0.9219
+🔄 Boosting Update at Epoch 34
+
+🔄 Boosting Step 16: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [04:01<00:00, 13.51it/s]
+✅ Built global pool of 25017 OOD pixels.
+Training Epoch 34: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.2528, L_OOD=0.0870, L_DIV=0.0292, LR=0.000117]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 34 Averages - CE: 0.2653, OOD: 0.0868, DIV: 0.0225
+Training Epoch 35: 100%|████████████████████| 3268/3268 [14:34<00:00,  3.74it/s, L_CE=0.0661, L_OOD=0.0871, L_DIV=0.0252, LR=0.000104]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 35 Averages - CE: 0.2670, OOD: 0.0869, DIV: 0.0226
+Training Epoch 36: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.0510, L_OOD=0.0870, L_DIV=0.0224, LR=0.000091]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 36 Averages - CE: 0.2621, OOD: 0.0869, DIV: 0.0223
+🔍 Evaluating at Epoch 36
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=864, ood_pixels=136
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=857, ood_pixels=143
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24769, Out: 5231
+In-scores range: [-2.508, -2.488]
+Out-scores range: [-2.509, -2.487]
+✅ AUROC: 0.5651
+✅ FPR95: 0.9220
+✅ AUPRS: 0.8494
+Evaluation Results - AUROC: 0.5651, FPR95: 0.9220
+🔄 Boosting Update at Epoch 37
+
+🔄 Boosting Step 17: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:58<00:00, 13.70it/s]
+✅ Built global pool of 19529 OOD pixels.
+Training Epoch 37: 100%|████████████████████| 3268/3268 [14:35<00:00,  3.73it/s, L_CE=0.1820, L_OOD=0.0870, L_DIV=0.0133, LR=0.000080]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 37 Averages - CE: 0.2723, OOD: 0.0869, DIV: 0.0224
+Training Epoch 38: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.0413, L_OOD=0.0870, L_DIV=0.0374, LR=0.000069]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 38 Averages - CE: 0.2629, OOD: 0.0868, DIV: 0.0224
+Training Epoch 39: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.3677, L_OOD=0.0869, L_DIV=0.0376, LR=0.000058]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 39 Averages - CE: 0.2653, OOD: 0.0868, DIV: 0.0223
+🔍 Evaluating at Epoch 39
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=864, ood_pixels=136
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=855, ood_pixels=145
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=859, ood_pixels=141
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24766, Out: 5234
+In-scores range: [-2.508, -2.486]
+Out-scores range: [-2.508, -2.486]
+✅ AUROC: 0.5713
+✅ FPR95: 0.9348
+✅ AUPRS: 0.8548
+Evaluation Results - AUROC: 0.5713, FPR95: 0.9348
+🔄 Boosting Update at Epoch 40
+
+🔄 Boosting Step 18: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:55<00:00, 13.88it/s]
+✅ Built global pool of 21856 OOD pixels.
+Training Epoch 40: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.3512, L_OOD=0.0869, L_DIV=0.0189, LR=0.000049]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 40 Averages - CE: 0.2639, OOD: 0.0868, DIV: 0.0221
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_simple/checkpoint_epoch_40.pth
+Training Epoch 41: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.1799, L_OOD=0.0870, L_DIV=0.0116, LR=0.000040]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 41 Averages - CE: 0.2640, OOD: 0.0867, DIV: 0.0220
+Training Epoch 42: 100%|████████████████████| 3268/3268 [14:32<00:00,  3.74it/s, L_CE=0.4350, L_OOD=0.0869, L_DIV=0.0168, LR=0.000032]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 42 Averages - CE: 0.2656, OOD: 0.0868, DIV: 0.0224
+🔍 Evaluating at Epoch 42
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=863, ood_pixels=137
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24758, Out: 5242
+In-scores range: [-2.508, -2.489]
+Out-scores range: [-2.508, -2.488]
+✅ AUROC: 0.5893
+✅ FPR95: 0.9193
+✅ AUPRS: 0.8634
+Evaluation Results - AUROC: 0.5893, FPR95: 0.9193
+🔄 Boosting Update at Epoch 43
+
+🔄 Boosting Step 19: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:56<00:00, 13.81it/s]
+✅ Built global pool of 18287 OOD pixels.
+Training Epoch 43: 100%|████████████████████| 3268/3268 [14:33<00:00,  3.74it/s, L_CE=0.2939, L_OOD=0.0869, L_DIV=0.0221, LR=0.000025]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 43 Averages - CE: 0.2619, OOD: 0.0868, DIV: 0.0223
+Training Epoch 44: 100%|████████████████████| 3268/3268 [14:31<00:00,  3.75it/s, L_CE=0.2746, L_OOD=0.0870, L_DIV=0.0163, LR=0.000019]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 44 Averages - CE: 0.2705, OOD: 0.0868, DIV: 0.0221
+Training Epoch 45: 100%|████████████████████| 3268/3268 [14:30<00:00,  3.75it/s, L_CE=0.3023, L_OOD=0.0870, L_DIV=0.0251, LR=0.000013]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 45 Averages - CE: 0.2530, OOD: 0.0867, DIV: 0.0221
+🔍 Evaluating at Epoch 45
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=862, ood_pixels=138
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=855, ood_pixels=145
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24767, Out: 5233
+In-scores range: [-2.508, -2.489]
+Out-scores range: [-2.508, -2.488]
+✅ AUROC: 0.5755
+✅ FPR95: 0.9345
+✅ AUPRS: 0.8573
+Evaluation Results - AUROC: 0.5755, FPR95: 0.9345
+🔄 Boosting Update at Epoch 46
+
+🔄 Boosting Step 20: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:56<00:00, 13.84it/s]
+✅ Built global pool of 21160 OOD pixels.
+Training Epoch 46: 100%|████████████████████| 3268/3268 [14:31<00:00,  3.75it/s, L_CE=0.0066, L_OOD=0.0869, L_DIV=0.0257, LR=0.000009]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 46 Averages - CE: 0.2737, OOD: 0.0868, DIV: 0.0222
+Training Epoch 47: 100%|████████████████████| 3268/3268 [14:30<00:00,  3.75it/s, L_CE=0.0045, L_OOD=0.0869, L_DIV=0.0173, LR=0.000005]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 47 Averages - CE: 0.2650, OOD: 0.0868, DIV: 0.0223
+Training Epoch 48: 100%|████████████████████| 3268/3268 [14:31<00:00,  3.75it/s, L_CE=0.2992, L_OOD=0.0870, L_DIV=0.0190, LR=0.000003]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 48 Averages - CE: 0.2762, OOD: 0.0868, DIV: 0.0220
+🔍 Evaluating at Epoch 48
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=863, ood_pixels=137
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24758, Out: 5242
+In-scores range: [-2.509, -2.486]
+Out-scores range: [-2.508, -2.487]
+✅ AUROC: 0.6085
+✅ FPR95: 0.9061
+✅ AUPRS: 0.8680
+Evaluation Results - AUROC: 0.6085, FPR95: 0.9061
+🔄 Boosting Update at Epoch 49
+
+🔄 Boosting Step 21: Updating OOD pixel weight distribution...
+Computing pixel energies for boosting: 100%|██████████████████████████████████████████████████████| 3268/3268 [03:55<00:00, 13.89it/s]
+✅ Built global pool of 17381 OOD pixels.
+Training Epoch 49: 100%|████████████████████| 3268/3268 [14:30<00:00,  3.75it/s, L_CE=0.1836, L_OOD=0.0869, L_DIV=0.0124, LR=0.000001]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 49 Averages - CE: 0.2663, OOD: 0.0868, DIV: 0.0221
+Training Epoch 50: 100%|████████████████████| 3268/3268 [14:31<00:00,  3.75it/s, L_CE=0.5314, L_OOD=0.0870, L_DIV=0.0212, LR=0.000001]
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+WARNING: NaN or Inf detected in CE loss, setting to 0
+Epoch 50 Averages - CE: 0.2703, OOD: 0.0868, DIV: 0.0223
+Checkpoint saved to /home/ha51dybi/PEBAL/code/checkpoints_simple/checkpoint_epoch_50.pth
+🔍 Evaluating at Epoch 50
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([128, 44408])
+AUX memory shape: torch.Size([128, 50000])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 235367/2097152 (11.22%)
+Image 0: in_pixels=862, ood_pixels=138
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 1: in_pixels=854, ood_pixels=146
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Image 2: in_pixels=856, ood_pixels=144
+  Scores shape: torch.Size([1000]), Labels shape: torch.Size([1000])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 24764, Out: 5236
+In-scores range: [-2.509, -2.489]
+Out-scores range: [-2.508, -2.490]
+✅ AUROC: 0.5703
+✅ FPR95: 0.9087
+✅ AUPRS: 0.8541
+Evaluation Results - AUROC: 0.5703, FPR95: 0.9087

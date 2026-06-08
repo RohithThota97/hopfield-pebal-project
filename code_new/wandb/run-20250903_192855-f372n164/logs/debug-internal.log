@@ -1,0 +1,9 @@
+{"time":"2025-09-03T19:28:56.244416154+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250903_192855-f372n164/logs/debug-core.log"}
+{"time":"2025-09-03T19:28:56.499614885+02:00","level":"INFO","msg":"stream: created new stream","id":"f372n164"}
+{"time":"2025-09-03T19:28:56.499722112+02:00","level":"INFO","msg":"stream: started","id":"f372n164"}
+{"time":"2025-09-03T19:28:56.499795833+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"f372n164"}
+{"time":"2025-09-03T19:28:56.499817835+02:00","level":"INFO","msg":"handler: started","stream_id":"f372n164"}
+{"time":"2025-09-03T19:28:56.499850565+02:00","level":"INFO","msg":"sender: started","stream_id":"f372n164"}
+{"time":"2025-09-03T19:28:56.699845942+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-03T19:33:42.50160211+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.23:54130->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-03T20:51:43.971675991+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}

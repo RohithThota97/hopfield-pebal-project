@@ -1,0 +1,768 @@
+2025-06-28 19:46:14,795 - __main__ - INFO - Initializing trainer on device: cuda
+/home/ha51dybi/PEBAL/code/feature_extractor.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(model_path, map_location='cpu')
+2025-06-28 19:46:28,613 - __main__ - INFO - Feature extractor initialized.
+2025-06-28 19:46:28,625 - __main__ - INFO - Projection head initialized.
+2025-06-28 19:46:28,627 - segmentation_head - INFO - SegmentationClassifierHead initialized: in_channels=1280, num_classes=19
+2025-06-28 19:46:28,627 - __main__ - INFO - Classifier head initialized.
+2025-06-28 19:46:28,628 - __main__ - INFO - Trainer initialization completed
+2025-06-28 19:46:28,628 - __main__ - INFO - Starting training: 50 epochs, batch_size=2
+2025-06-28 19:46:28,628 - __main__ - INFO - Strategy: Memories from 100% dataset, Training/Val queries from 80/20 split
+2025-06-28 19:46:28,628 - __main__ - INFO - ============================================================
+2025-06-28 19:46:28,628 - __main__ - INFO - STEP 1: Loading full dataset for memory building...
+2025-06-28 19:46:28,628 - __main__ - INFO - ============================================================
+2025-06-28 19:46:29,528 - __main__ - INFO - ============================================================
+2025-06-28 19:46:29,528 - __main__ - INFO - STEP 2: Building memories from ENTIRE dataset (100%)...
+2025-06-28 19:46:29,528 - __main__ - INFO - ============================================================
+2025-06-28 19:46:29,528 - __main__ - INFO - Building initial memories from ENTIRE dataset...
+2025-06-28 19:46:29,529 - __main__ - INFO - Created full dataset loader with 1634 batches for memory building
+2025-06-28 19:46:29,530 - __main__ - INFO - HopfieldMemoryBuilder initialized.
+2025-06-28 19:46:29,531 - __main__ - INFO - Processing ALL images in dataset for memory building...
+Processing ALL images to build ID and AUX memories...
+Building memories: 100%|██████████████████████████████████████████████████████████████████████| 1634/1634 [14:28<00:00,  1.88it/s]
+Processed 3268 images
+ID features by class: [2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 2600, 986, 1484, 1417, 2600, 2470, 2600, 2075, 2600, 2600]
+AUX features collected: 177852
+Building final memories...
+Created ID memory: torch.Size([44832, 128])
+Created AUX memory: torch.Size([50000, 128])
+2025-06-28 20:00:58,158 - __main__ - INFO - Memory statistics from FULL dataset: {'images_processed': 3268, 'total_id_features': 44832, 'total_aux_features': 177852, 'id_class_distribution': {8: 2600, 0: 2600, 2: 2600, 9: 2600, 1: 2600, 11: 2600, 10: 2600, 13: 2600, 7: 2600, 5: 2600, 17: 986, 12: 1484, 6: 1417, 3: 2600, 14: 2470, 15: 2600, 16: 2075, 18: 2600, 4: 2600}, 'classes_with_features': 19}
+2025-06-28 20:00:58,159 - __main__ - INFO - ============================================================
+2025-06-28 20:00:58,159 - __main__ - INFO - STEP 3: Creating 80/20 split for training/validation queries...
+2025-06-28 20:00:58,159 - __main__ - INFO - ============================================================
+2025-06-28 20:00:58,160 - __main__ - INFO - Created train/val split: train=2614, val=654
+2025-06-28 20:00:58,160 - __main__ - INFO - Training queries: 2614 samples
+2025-06-28 20:00:58,160 - __main__ - INFO - Validation queries: 654 samples
+2025-06-28 20:00:58,160 - __main__ - INFO - Memory source: 3268 samples (100% of dataset)
+2025-06-28 20:00:58,160 - __main__ - INFO - ============================================================
+2025-06-28 20:00:58,160 - __main__ - INFO - STEP 4: Starting training loop...
+2025-06-28 20:00:58,160 - __main__ - INFO - ============================================================
+2025-06-28 20:00:58,160 - __main__ - INFO -
+============================================================
+2025-06-28 20:00:58,160 - __main__ - INFO - EPOCH 1/50
+2025-06-28 20:00:58,161 - __main__ - INFO - ============================================================
+Epoch 1 (Train): 100%|███████████████████████| 1307/1307 [14:18<00:00,  1.52it/s, Loss=0.3823, CE=0.2087, OOD=0.3472, LR=0.010000]
+2025-06-28 20:15:16,814 - __main__ - INFO - Epoch 1 (Train): Loss=0.5346, CE=0.3602, OOD=0.3488
+2025-06-28 20:15:16,814 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-28 20:15:16,815 - __main__ - INFO -
+============================================================
+2025-06-28 20:15:16,815 - __main__ - INFO - EPOCH 2/50
+2025-06-28 20:15:16,815 - __main__ - INFO - ============================================================
+Epoch 2 (Train): 100%|███████████████████████| 1307/1307 [14:18<00:00,  1.52it/s, Loss=0.3280, CE=0.1546, OOD=0.3469, LR=0.009990]
+2025-06-28 20:29:35,169 - __main__ - INFO - Epoch 2 (Train): Loss=0.3890, CE=0.2155, OOD=0.3470
+2025-06-28 20:29:35,170 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-28 20:29:35,170 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:42<00:00,  1.86it/s]
+Computing border energies: 100%|██████████████████████████████████████████████████████████| 126/126 [00:17<00:00,  7.01it/s]
+2025-06-28 20:41:35,571 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-28 20:41:35,572 - __main__ - INFO -
+============================================================
+2025-06-28 20:41:35,573 - __main__ - INFO - EPOCH 3/50
+2025-06-28 20:41:35,573 - __main__ - INFO - ============================================================
+Epoch 3 (Train): 100%|█████████████████| 1307/1307 [14:17<00:00,  1.52it/s, Loss=0.3828, CE=0.2093, OOD=0.3469, LR=0.009961]
+2025-06-28 20:55:53,002 - __main__ - INFO - Epoch 3 (Train): Loss=0.3694, CE=0.1953, OOD=0.3483
+2025-06-28 20:55:53,003 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-28 20:55:53,003 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|██████████████████████████████████████████████████████████| 1307/1307 [11:40<00:00,  1.86it/s]
+Computing border energies: 100%|██████████████████████████████████████████████████████████| 140/140 [00:19<00:00,  7.03it/s]
+2025-06-28 21:07:53,877 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-28 21:07:53,878 - __main__ - INFO -
+============================================================
+2025-06-28 21:07:53,878 - __main__ - INFO - EPOCH 4/50
+2025-06-28 21:07:53,878 - __main__ - INFO - ============================================================
+Epoch 4 (Train): 100%|█████████████████| 1307/1307 [14:17<00:00,  1.52it/s, Loss=0.2811, CE=0.1076, OOD=0.3471, LR=0.009911]
+2025-06-28 21:22:11,401 - __main__ - INFO - Epoch 4 (Train): Loss=0.3664, CE=0.1924, OOD=0.3480
+2025-06-28 21:22:11,401 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-28 21:22:11,402 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|██████████████████████████████████████████████████████████| 1307/1307 [11:40<00:00,  1.87it/s]
+Computing border energies: 100%|██████████████████████████████████████████████████████████| 131/131 [00:18<00:00,  7.05it/s]
+2025-06-28 21:34:10,488 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-28 21:34:10,489 - __main__ - INFO -
+============================================================
+2025-06-28 21:34:10,489 - __main__ - INFO - EPOCH 5/50
+2025-06-28 21:34:10,489 - __main__ - INFO - ============================================================
+Epoch 5 (Train): 100%|█████████████████| 1307/1307 [14:12<00:00,  1.53it/s, Loss=0.4123, CE=0.2389, OOD=0.3467, LR=0.009843]
+2025-06-28 21:48:23,202 - __main__ - INFO - Epoch 5 (Train): Loss=0.3619, CE=0.1874, OOD=0.3491
+2025-06-28 21:48:23,203 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-28 21:48:23,203 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:37<00:00,  1.87it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 133/133 [00:18<00:00,  7.01it/s]
+2025-06-28 22:00:20,257 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-28 22:00:20,258 - __main__ - INFO -
+========================================
+2025-06-28 22:00:20,258 - __main__ - INFO - VALIDATION - EPOCH 5
+2025-06-28 22:00:20,258 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-28 22:00:20,258 - __main__ - INFO - ========================================
+Epoch 5 (Validation): 100%|█████████████████████| 327/327 [09:51<00:00,  1.81s/it, Val_Loss=0.4967, Val_CE=0.2538, Val_OOD=0.4858]
+2025-06-28 22:10:12,527 - __main__ - INFO - Epoch 5 (Validation): Loss=0.4166, CE=0.1804, OOD=0.4723
+2025-06-28 22:10:12,528 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-28 22:10:12,528 - __main__ - INFO -   OOD Metrics:
+2025-06-28 22:10:12,528 - __main__ - INFO -     FPR95: 0.6083
+2025-06-28 22:10:12,528 - __main__ - INFO -     AUROC: 0.8159
+2025-06-28 22:10:12,528 - __main__ - INFO -     AUPRS: 0.9910
+2025-06-28 22:10:12,528 - __main__ - INFO -     Score Separation: 0.6335
+2025-06-28 22:10:12,528 - __main__ - INFO -     ID/OOD Pixels: 2098572/72780
+2025-06-28 22:10:13,286 - __main__ - INFO - Model saved to models/hopfield_boosting_best.pth
+2025-06-28 22:10:13,286 - __main__ - INFO - New best model saved: models/hopfield_boosting_best.pth (AUROC: 0.8159)
+2025-06-28 22:10:14,060 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_5.pth
+2025-06-28 22:10:14,061 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_5.pth
+2025-06-28 22:10:14,061 - __main__ - INFO -
+============================================================
+2025-06-28 22:10:14,061 - __main__ - INFO - EPOCH 6/50
+2025-06-28 22:10:14,061 - __main__ - INFO - ============================================================
+Epoch 6 (Train): 100%|███████████████████████| 1307/1307 [14:13<00:00,  1.53it/s, Loss=0.2649, CE=0.0913, OOD=0.3471, LR=0.009755]
+2025-06-28 22:24:27,169 - __main__ - INFO - Epoch 6 (Train): Loss=0.3539, CE=0.1792, OOD=0.3493
+2025-06-28 22:24:27,170 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-28 22:24:27,170 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:35<00:00,  1.88it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 143/143 [00:20<00:00,  7.01it/s]
+2025-06-28 22:36:23,283 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-28 22:36:23,283 - __main__ - INFO -
+============================================================
+2025-06-28 22:36:23,283 - __main__ - INFO - EPOCH 7/50
+2025-06-28 22:36:23,284 - __main__ - INFO - ============================================================
+Epoch 7 (Train): 100%|███████████████████████| 1307/1307 [14:09<00:00,  1.54it/s, Loss=0.3855, CE=0.2121, OOD=0.3468, LR=0.009649]
+2025-06-28 22:50:32,813 - __main__ - INFO - Epoch 7 (Train): Loss=0.3541, CE=0.1802, OOD=0.3479
+2025-06-28 22:50:32,813 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-28 22:50:32,814 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:37<00:00,  1.87it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 138/138 [00:19<00:00,  7.03it/s]
+2025-06-28 23:02:29,960 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-28 23:02:29,961 - __main__ - INFO -
+============================================================
+2025-06-28 23:02:29,961 - __main__ - INFO - EPOCH 8/50
+2025-06-28 23:02:29,961 - __main__ - INFO - ============================================================
+Epoch 8 (Train): 100%|███████████████████████| 1307/1307 [14:10<00:00,  1.54it/s, Loss=0.2341, CE=0.0607, OOD=0.3467, LR=0.009524]
+2025-06-28 23:16:40,203 - __main__ - INFO - Epoch 8 (Train): Loss=0.3542, CE=0.1805, OOD=0.3474
+2025-06-28 23:16:40,204 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-28 23:16:40,204 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:33<00:00,  1.88it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 142/142 [00:20<00:00,  7.03it/s]
+2025-06-28 23:28:34,168 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-28 23:28:34,169 - __main__ - INFO -
+============================================================
+2025-06-28 23:28:34,169 - __main__ - INFO - EPOCH 9/50
+2025-06-28 23:28:34,169 - __main__ - INFO - ============================================================
+Epoch 9 (Train): 100%|███████████████████████| 1307/1307 [14:06<00:00,  1.54it/s, Loss=0.2869, CE=0.1135, OOD=0.3468, LR=0.009382]
+2025-06-28 23:42:40,863 - __main__ - INFO - Epoch 9 (Train): Loss=0.3469, CE=0.1732, OOD=0.3475
+2025-06-28 23:42:40,864 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-28 23:42:40,864 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:32<00:00,  1.89it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 133/133 [00:18<00:00,  7.05it/s]
+2025-06-28 23:54:32,185 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-28 23:54:32,186 - __main__ - INFO -
+============================================================
+2025-06-28 23:54:32,186 - __main__ - INFO - EPOCH 10/50
+2025-06-28 23:54:32,186 - __main__ - INFO - ============================================================
+Epoch 10 (Train): 100%|██████████████████████| 1307/1307 [14:10<00:00,  1.54it/s, Loss=0.4023, CE=0.2289, OOD=0.3467, LR=0.009222]
+2025-06-29 00:08:42,798 - __main__ - INFO - Epoch 10 (Train): Loss=0.3528, CE=0.1791, OOD=0.3474
+2025-06-29 00:08:42,798 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 00:08:42,799 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:32<00:00,  1.89it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 135/135 [00:19<00:00,  7.05it/s]
+2025-06-29 00:20:34,408 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 00:20:34,409 - __main__ - INFO -
+========================================
+2025-06-29 00:20:34,409 - __main__ - INFO - VALIDATION - EPOCH 10
+2025-06-29 00:20:34,409 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-29 00:20:34,409 - __main__ - INFO - ========================================
+Epoch 10 (Validation): 100%|████████████████████| 327/327 [09:49<00:00,  1.80s/it, Val_Loss=0.3232, Val_CE=0.1357, Val_OOD=0.3751]
+2025-06-29 00:30:25,380 - __main__ - INFO - Epoch 10 (Validation): Loss=0.3579, CE=0.1700, OOD=0.3757
+2025-06-29 00:30:25,381 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-29 00:30:25,381 - __main__ - INFO -   OOD Metrics:
+2025-06-29 00:30:25,381 - __main__ - INFO -     FPR95: 0.6477
+2025-06-29 00:30:25,381 - __main__ - INFO -     AUROC: 0.7884
+2025-06-29 00:30:25,381 - __main__ - INFO -     AUPRS: 0.9898
+2025-06-29 00:30:25,381 - __main__ - INFO -     Score Separation: 0.5562
+2025-06-29 00:30:25,381 - __main__ - INFO -     ID/OOD Pixels: 2116255/65774
+2025-06-29 00:30:25,913 - __main__ - INFO - Model saved to models/hopfield_boosting_best.pth
+2025-06-29 00:30:25,914 - __main__ - INFO - New best model saved: models/hopfield_boosting_best.pth (Val Loss: 0.3579)
+2025-06-29 00:30:26,434 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_10.pth
+2025-06-29 00:30:26,434 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_10.pth
+2025-06-29 00:30:26,434 - __main__ - INFO -
+============================================================
+2025-06-29 00:30:26,434 - __main__ - INFO - EPOCH 11/50
+2025-06-29 00:30:26,435 - __main__ - INFO - ============================================================
+Epoch 11 (Train): 100%|██████████████████████| 1307/1307 [14:11<00:00,  1.53it/s, Loss=0.3132, CE=0.1398, OOD=0.3467, LR=0.009045]
+2025-06-29 00:44:37,959 - __main__ - INFO - Epoch 11 (Train): Loss=0.3487, CE=0.1750, OOD=0.3474
+2025-06-29 00:44:37,960 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 00:44:37,960 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:32<00:00,  1.89it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 137/137 [00:19<00:00,  7.02it/s]
+2025-06-29 00:56:30,113 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 00:56:30,114 - __main__ - INFO -
+============================================================
+2025-06-29 00:56:30,114 - __main__ - INFO - EPOCH 12/50
+2025-06-29 00:56:30,114 - __main__ - INFO - ============================================================
+Epoch 12 (Train): 100%|██████████████████████| 1307/1307 [14:08<00:00,  1.54it/s, Loss=0.4045, CE=0.2311, OOD=0.3467, LR=0.008853]
+2025-06-29 01:10:38,621 - __main__ - INFO - Epoch 12 (Train): Loss=0.3518, CE=0.1782, OOD=0.3473
+2025-06-29 01:10:38,622 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 01:10:38,622 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:29<00:00,  1.89it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 133/133 [00:18<00:00,  7.04it/s]
+2025-06-29 01:22:27,587 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 01:22:27,587 - __main__ - INFO -
+============================================================
+2025-06-29 01:22:27,588 - __main__ - INFO - EPOCH 13/50
+2025-06-29 01:22:27,588 - __main__ - INFO - ============================================================
+Epoch 13 (Train): 100%|██████████████████████| 1307/1307 [14:06<00:00,  1.54it/s, Loss=0.2767, CE=0.1033, OOD=0.3469, LR=0.008645]
+2025-06-29 01:36:34,421 - __main__ - INFO - Epoch 13 (Train): Loss=0.3479, CE=0.1742, OOD=0.3474
+2025-06-29 01:36:34,422 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 01:36:34,422 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:28<00:00,  1.90it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 130/130 [00:18<00:00,  7.04it/s]
+2025-06-29 01:48:21,520 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 01:48:21,521 - __main__ - INFO -
+============================================================
+2025-06-29 01:48:21,521 - __main__ - INFO - EPOCH 14/50
+2025-06-29 01:48:21,521 - __main__ - INFO - ============================================================
+Epoch 14 (Train): 100%|██████████████████████| 1307/1307 [14:06<00:00,  1.54it/s, Loss=0.2995, CE=0.1261, OOD=0.3467, LR=0.008423]
+2025-06-29 02:02:28,000 - __main__ - INFO - Epoch 14 (Train): Loss=0.3470, CE=0.1732, OOD=0.3475
+2025-06-29 02:02:28,001 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 02:02:28,001 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:29<00:00,  1.90it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 143/143 [00:20<00:00,  7.02it/s]
+2025-06-29 02:14:17,757 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 02:14:17,758 - __main__ - INFO -
+============================================================
+2025-06-29 02:14:17,758 - __main__ - INFO - EPOCH 15/50
+2025-06-29 02:14:17,758 - __main__ - INFO - ============================================================
+Epoch 15 (Train): 100%|██████████████████████| 1307/1307 [14:01<00:00,  1.55it/s, Loss=0.2823, CE=0.1087, OOD=0.3471, LR=0.008187]
+2025-06-29 02:28:19,714 - __main__ - INFO - Epoch 15 (Train): Loss=0.3453, CE=0.1714, OOD=0.3477
+2025-06-29 02:28:19,715 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 02:28:19,715 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:24<00:00,  1.91it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 149/149 [00:21<00:00,  7.04it/s]
+2025-06-29 02:40:05,736 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 02:40:05,737 - __main__ - INFO -
+========================================
+2025-06-29 02:40:05,737 - __main__ - INFO - VALIDATION - EPOCH 15
+2025-06-29 02:40:05,738 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-29 02:40:05,738 - __main__ - INFO - ========================================
+Epoch 15 (Validation): 100%|████████████████████| 327/327 [09:48<00:00,  1.80s/it, Val_Loss=0.4369, Val_CE=0.2470, Val_OOD=0.3799]
+2025-06-29 02:49:55,666 - __main__ - INFO - Epoch 15 (Validation): Loss=0.3544, CE=0.1680, OOD=0.3728
+2025-06-29 02:49:55,667 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-29 02:49:55,667 - __main__ - INFO -   OOD Metrics:
+2025-06-29 02:49:55,667 - __main__ - INFO -     FPR95: 0.7313
+2025-06-29 02:49:55,668 - __main__ - INFO -     AUROC: 0.8420
+2025-06-29 02:49:55,668 - __main__ - INFO -     AUPRS: 0.9937
+2025-06-29 02:49:55,668 - __main__ - INFO -     Score Separation: 0.7363
+2025-06-29 02:49:55,668 - __main__ - INFO -     ID/OOD Pixels: 2090228/68727
+2025-06-29 02:49:56,430 - __main__ - INFO - Model saved to models/hopfield_boosting_best.pth
+2025-06-29 02:49:56,430 - __main__ - INFO - New best model saved: models/hopfield_boosting_best.pth (AUROC: 0.8420)
+2025-06-29 02:49:57,188 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_15.pth
+2025-06-29 02:49:57,188 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_15.pth
+2025-06-29 02:49:57,188 - __main__ - INFO -
+============================================================
+2025-06-29 02:49:57,189 - __main__ - INFO - EPOCH 16/50
+2025-06-29 02:49:57,189 - __main__ - INFO - ============================================================
+Epoch 16 (Train): 100%|██████████████████████| 1307/1307 [14:06<00:00,  1.54it/s, Loss=0.3993, CE=0.2260, OOD=0.3467, LR=0.007939]
+2025-06-29 03:04:03,369 - __main__ - INFO - Epoch 16 (Train): Loss=0.3469, CE=0.1732, OOD=0.3474
+2025-06-29 03:04:03,370 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 03:04:03,370 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:27<00:00,  1.90it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 137/137 [00:19<00:00,  7.03it/s]
+2025-06-29 03:15:50,501 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 03:15:50,502 - __main__ - INFO -
+============================================================
+2025-06-29 03:15:50,502 - __main__ - INFO - EPOCH 17/50
+2025-06-29 03:15:50,502 - __main__ - INFO - ============================================================
+Epoch 17 (Train): 100%|██████████████████████| 1307/1307 [14:01<00:00,  1.55it/s, Loss=0.3497, CE=0.1763, OOD=0.3468, LR=0.007679]
+2025-06-29 03:29:52,214 - __main__ - INFO - Epoch 17 (Train): Loss=0.3431, CE=0.1693, OOD=0.3474
+2025-06-29 03:29:52,215 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 03:29:52,215 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:26<00:00,  1.91it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 131/131 [00:18<00:00,  7.04it/s]
+2025-06-29 03:41:36,927 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 03:41:36,928 - __main__ - INFO -
+============================================================
+2025-06-29 03:41:36,928 - __main__ - INFO - EPOCH 18/50
+2025-06-29 03:41:36,928 - __main__ - INFO - ============================================================
+Epoch 18 (Train): 100%|██████████████████████| 1307/1307 [14:03<00:00,  1.55it/s, Loss=0.2544, CE=0.0810, OOD=0.3466, LR=0.007409]
+2025-06-29 03:55:39,939 - __main__ - INFO - Epoch 18 (Train): Loss=0.3482, CE=0.1744, OOD=0.3475
+2025-06-29 03:55:39,940 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 03:55:39,940 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:27<00:00,  1.90it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 139/139 [00:19<00:00,  7.02it/s]
+2025-06-29 04:07:26,928 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 04:07:26,929 - __main__ - INFO -
+============================================================
+2025-06-29 04:07:26,929 - __main__ - INFO - EPOCH 19/50
+2025-06-29 04:07:26,929 - __main__ - INFO - ============================================================
+Epoch 19 (Train): 100%|██████████████████████| 1307/1307 [14:02<00:00,  1.55it/s, Loss=0.2978, CE=0.1243, OOD=0.3468, LR=0.007129]
+2025-06-29 04:21:29,071 - __main__ - INFO - Epoch 19 (Train): Loss=0.3440, CE=0.1702, OOD=0.3476
+2025-06-29 04:21:29,072 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 04:21:29,072 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:25<00:00,  1.91it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 125/125 [00:17<00:00,  7.02it/s]
+2025-06-29 04:33:12,225 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 04:33:12,226 - __main__ - INFO -
+============================================================
+2025-06-29 04:33:12,226 - __main__ - INFO - EPOCH 20/50
+2025-06-29 04:33:12,226 - __main__ - INFO - ============================================================
+Epoch 20 (Train): 100%|██████████████████████| 1307/1307 [14:02<00:00,  1.55it/s, Loss=0.2574, CE=0.0841, OOD=0.3467, LR=0.006841]
+2025-06-29 04:47:14,637 - __main__ - INFO - Epoch 20 (Train): Loss=0.3446, CE=0.1710, OOD=0.3473
+2025-06-29 04:47:14,638 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 04:47:14,638 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:24<00:00,  1.91it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 132/132 [00:18<00:00,  7.01it/s]
+2025-06-29 04:58:58,159 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 04:58:58,160 - __main__ - INFO -
+========================================
+2025-06-29 04:58:58,160 - __main__ - INFO - VALIDATION - EPOCH 20
+2025-06-29 04:58:58,160 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-29 04:58:58,160 - __main__ - INFO - ========================================
+Epoch 20 (Validation): 100%|████████████████████| 327/327 [09:45<00:00,  1.79s/it, Val_Loss=0.3163, Val_CE=0.1172, Val_OOD=0.3983]
+2025-06-29 05:08:45,002 - __main__ - INFO - Epoch 20 (Validation): Loss=0.3598, CE=0.1677, OOD=0.3842
+2025-06-29 05:08:45,003 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-29 05:08:45,004 - __main__ - INFO -   OOD Metrics:
+2025-06-29 05:08:45,004 - __main__ - INFO -     FPR95: 0.3250
+2025-06-29 05:08:45,004 - __main__ - INFO -     AUROC: 0.9464
+2025-06-29 05:08:45,005 - __main__ - INFO -     AUPRS: 0.9982
+2025-06-29 05:08:45,005 - __main__ - INFO -     Score Separation: 1.1777
+2025-06-29 05:08:45,005 - __main__ - INFO -     ID/OOD Pixels: 2106026/65638
+2025-06-29 05:08:45,766 - __main__ - INFO - Model saved to models/hopfield_boosting_best.pth
+2025-06-29 05:08:45,767 - __main__ - INFO - New best model saved: models/hopfield_boosting_best.pth (AUROC: 0.9464)
+2025-06-29 05:08:46,525 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_20.pth
+2025-06-29 05:08:46,525 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_20.pth
+2025-06-29 05:08:46,525 - __main__ - INFO -
+============================================================
+2025-06-29 05:08:46,526 - __main__ - INFO - EPOCH 21/50
+2025-06-29 05:08:46,526 - __main__ - INFO - ============================================================
+Epoch 21 (Train): 100%|██████████████████████| 1307/1307 [13:57<00:00,  1.56it/s, Loss=0.3672, CE=0.1938, OOD=0.3467, LR=0.006545]
+2025-06-29 05:22:43,630 - __main__ - INFO - Epoch 21 (Train): Loss=0.3448, CE=0.1712, OOD=0.3472
+2025-06-29 05:22:43,631 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 05:22:43,631 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:19<00:00,  1.92it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 143/143 [00:20<00:00,  7.02it/s]
+2025-06-29 05:34:24,027 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 05:34:24,028 - __main__ - INFO -
+============================================================
+2025-06-29 05:34:24,028 - __main__ - INFO - EPOCH 22/50
+2025-06-29 05:34:24,028 - __main__ - INFO - ============================================================
+Epoch 22 (Train): 100%|██████████████████████| 1307/1307 [14:01<00:00,  1.55it/s, Loss=0.4515, CE=0.2782, OOD=0.3467, LR=0.006244]
+2025-06-29 05:48:25,179 - __main__ - INFO - Epoch 22 (Train): Loss=0.3454, CE=0.1718, OOD=0.3473
+2025-06-29 05:48:25,179 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 05:48:25,180 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:25<00:00,  1.91it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 143/143 [00:20<00:00,  7.05it/s]
+2025-06-29 06:00:10,857 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 06:00:10,858 - __main__ - INFO -
+============================================================
+2025-06-29 06:00:10,858 - __main__ - INFO - EPOCH 23/50
+2025-06-29 06:00:10,858 - __main__ - INFO - ============================================================
+Epoch 23 (Train): 100%|██████████████████████| 1307/1307 [14:00<00:00,  1.56it/s, Loss=0.2813, CE=0.1079, OOD=0.3467, LR=0.005937]
+2025-06-29 06:14:11,352 - __main__ - INFO - Epoch 23 (Train): Loss=0.3453, CE=0.1716, OOD=0.3474
+2025-06-29 06:14:11,353 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 06:14:11,353 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:23<00:00,  1.91it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 133/133 [00:18<00:00,  7.02it/s]
+2025-06-29 06:25:54,300 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 06:25:54,301 - __main__ - INFO -
+============================================================
+2025-06-29 06:25:54,301 - __main__ - INFO - EPOCH 24/50
+2025-06-29 06:25:54,301 - __main__ - INFO - ============================================================
+Epoch 24 (Train): 100%|██████████████████████| 1307/1307 [14:02<00:00,  1.55it/s, Loss=0.3374, CE=0.1641, OOD=0.3467, LR=0.005627]
+2025-06-29 06:39:56,475 - __main__ - INFO - Epoch 24 (Train): Loss=0.3422, CE=0.1684, OOD=0.3476
+2025-06-29 06:39:56,476 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 06:39:56,477 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:24<00:00,  1.91it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 128/128 [00:18<00:00,  7.05it/s]
+2025-06-29 06:51:39,302 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 06:51:39,303 - __main__ - INFO -
+============================================================
+2025-06-29 06:51:39,303 - __main__ - INFO - EPOCH 25/50
+2025-06-29 06:51:39,303 - __main__ - INFO - ============================================================
+Epoch 25 (Train): 100%|██████████████████████| 1307/1307 [14:01<00:00,  1.55it/s, Loss=0.2583, CE=0.0849, OOD=0.3468, LR=0.005314]
+2025-06-29 07:05:41,241 - __main__ - INFO - Epoch 25 (Train): Loss=0.3432, CE=0.1693, OOD=0.3478
+2025-06-29 07:05:41,242 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 07:05:41,242 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:27<00:00,  1.90it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 137/137 [00:19<00:00,  7.04it/s]
+2025-06-29 07:17:28,552 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 07:17:28,553 - __main__ - INFO -
+========================================
+2025-06-29 07:17:28,553 - __main__ - INFO - VALIDATION - EPOCH 25
+2025-06-29 07:17:28,553 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-29 07:17:28,553 - __main__ - INFO - ========================================
+Epoch 25 (Validation): 100%|████████████████████| 327/327 [09:48<00:00,  1.80s/it, Val_Loss=0.3525, Val_CE=0.1551, Val_OOD=0.3947]
+2025-06-29 07:27:18,016 - __main__ - INFO - Epoch 25 (Validation): Loss=0.3566, CE=0.1675, OOD=0.3781
+2025-06-29 07:27:18,017 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-29 07:27:18,017 - __main__ - INFO -   OOD Metrics:
+2025-06-29 07:27:18,017 - __main__ - INFO -     FPR95: 0.4032
+2025-06-29 07:27:18,017 - __main__ - INFO -     AUROC: 0.9299
+2025-06-29 07:27:18,017 - __main__ - INFO -     AUPRS: 0.9971
+2025-06-29 07:27:18,017 - __main__ - INFO -     Score Separation: 1.0491
+2025-06-29 07:27:18,017 - __main__ - INFO -     ID/OOD Pixels: 2115987/79559
+2025-06-29 07:27:18,791 - __main__ - INFO - Model saved to models/hopfield_boosting_best.pth
+2025-06-29 07:27:18,791 - __main__ - INFO - New best model saved: models/hopfield_boosting_best.pth (Val Loss: 0.3566)
+2025-06-29 07:27:19,583 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_25.pth
+2025-06-29 07:27:19,584 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_25.pth
+2025-06-29 07:27:19,584 - __main__ - INFO -
+============================================================
+2025-06-29 07:27:19,584 - __main__ - INFO - EPOCH 26/50
+2025-06-29 07:27:19,584 - __main__ - INFO - ============================================================
+Epoch 26 (Train): 100%|██████████████████████| 1307/1307 [14:07<00:00,  1.54it/s, Loss=0.4425, CE=0.2691, OOD=0.3467, LR=0.005001]
+2025-06-29 07:41:27,127 - __main__ - INFO - Epoch 26 (Train): Loss=0.3445, CE=0.1709, OOD=0.3472
+2025-06-29 07:41:27,127 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 07:41:27,128 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:33<00:00,  1.88it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 157/157 [00:22<00:00,  7.04it/s]
+2025-06-29 07:53:23,116 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 07:53:23,117 - __main__ - INFO -
+============================================================
+2025-06-29 07:53:23,117 - __main__ - INFO - EPOCH 27/50
+2025-06-29 07:53:23,117 - __main__ - INFO - ============================================================
+Epoch 27 (Train): 100%|██████████████████████| 1307/1307 [14:10<00:00,  1.54it/s, Loss=0.2917, CE=0.1184, OOD=0.3467, LR=0.004687]
+2025-06-29 08:07:33,574 - __main__ - INFO - Epoch 27 (Train): Loss=0.3448, CE=0.1712, OOD=0.3473
+2025-06-29 08:07:33,575 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 08:07:33,575 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:36<00:00,  1.88it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 126/126 [00:17<00:00,  7.03it/s]
+2025-06-29 08:19:27,820 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 08:19:27,821 - __main__ - INFO -
+============================================================
+2025-06-29 08:19:27,821 - __main__ - INFO - EPOCH 28/50
+2025-06-29 08:19:27,821 - __main__ - INFO - ============================================================
+Epoch 28 (Train): 100%|██████████████████████| 1307/1307 [14:16<00:00,  1.53it/s, Loss=0.3717, CE=0.1983, OOD=0.3468, LR=0.004374]
+2025-06-29 08:33:44,064 - __main__ - INFO - Epoch 28 (Train): Loss=0.3449, CE=0.1713, OOD=0.3472
+2025-06-29 08:33:44,065 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 08:33:44,065 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:40<00:00,  1.87it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 145/145 [00:20<00:00,  7.02it/s]
+2025-06-29 08:45:45,094 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 08:45:45,095 - __main__ - INFO -
+============================================================
+2025-06-29 08:45:45,095 - __main__ - INFO - EPOCH 29/50
+2025-06-29 08:45:45,095 - __main__ - INFO - ============================================================
+Epoch 29 (Train): 100%|██████████████████████| 1307/1307 [14:19<00:00,  1.52it/s, Loss=0.4155, CE=0.2421, OOD=0.3468, LR=0.004064]
+2025-06-29 09:00:04,162 - __main__ - INFO - Epoch 29 (Train): Loss=0.3461, CE=0.1725, OOD=0.3472
+2025-06-29 09:00:04,162 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 09:00:04,163 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:41<00:00,  1.86it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 129/129 [00:18<00:00,  7.06it/s]
+2025-06-29 09:12:03,624 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 09:12:03,624 - __main__ - INFO -
+============================================================
+2025-06-29 09:12:03,625 - __main__ - INFO - EPOCH 30/50
+2025-06-29 09:12:03,625 - __main__ - INFO - ============================================================
+Epoch 30 (Train): 100%|██████████████████████| 1307/1307 [14:18<00:00,  1.52it/s, Loss=0.3764, CE=0.2029, OOD=0.3469, LR=0.003757]
+2025-06-29 09:26:21,838 - __main__ - INFO - Epoch 30 (Train): Loss=0.3445, CE=0.1708, OOD=0.3472
+2025-06-29 09:26:21,839 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 09:26:21,839 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:40<00:00,  1.86it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 134/134 [00:19<00:00,  7.01it/s]
+2025-06-29 09:38:21,906 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 09:38:21,907 - __main__ - INFO -
+========================================
+2025-06-29 09:38:21,907 - __main__ - INFO - VALIDATION - EPOCH 30
+2025-06-29 09:38:21,907 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-29 09:38:21,907 - __main__ - INFO - ========================================
+Epoch 30 (Validation): 100%|████████████████████| 327/327 [09:52<00:00,  1.81s/it, Val_Loss=0.3676, Val_CE=0.1767, Val_OOD=0.3819]
+2025-06-29 09:48:15,540 - __main__ - INFO - Epoch 30 (Validation): Loss=0.3559, CE=0.1703, OOD=0.3712
+2025-06-29 09:48:15,541 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-29 09:48:15,541 - __main__ - INFO -   OOD Metrics:
+2025-06-29 09:48:15,541 - __main__ - INFO -     FPR95: 0.2299
+2025-06-29 09:48:15,541 - __main__ - INFO -     AUROC: 0.9542
+2025-06-29 09:48:15,541 - __main__ - INFO -     AUPRS: 0.9982
+2025-06-29 09:48:15,542 - __main__ - INFO -     Score Separation: 1.3029
+2025-06-29 09:48:15,542 - __main__ - INFO -     ID/OOD Pixels: 2084123/74060
+2025-06-29 09:48:16,312 - __main__ - INFO - Model saved to models/hopfield_boosting_best.pth
+2025-06-29 09:48:16,313 - __main__ - INFO - New best model saved: models/hopfield_boosting_best.pth (AUROC: 0.9542)
+2025-06-29 09:48:17,102 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_30.pth
+2025-06-29 09:48:17,102 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_30.pth
+2025-06-29 09:48:17,102 - __main__ - INFO -
+============================================================
+2025-06-29 09:48:17,103 - __main__ - INFO - EPOCH 31/50
+2025-06-29 09:48:17,103 - __main__ - INFO - ============================================================
+Epoch 31 (Train): 100%|██████████████████████| 1307/1307 [14:19<00:00,  1.52it/s, Loss=0.2738, CE=0.1004, OOD=0.3467, LR=0.003456]
+2025-06-29 10:02:37,059 - __main__ - INFO - Epoch 31 (Train): Loss=0.3452, CE=0.1716, OOD=0.3472
+2025-06-29 10:02:37,060 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 10:02:37,060 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:43<00:00,  1.86it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 140/140 [00:19<00:00,  7.03it/s]
+2025-06-29 10:14:40,166 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 10:14:40,167 - __main__ - INFO -
+============================================================
+2025-06-29 10:14:40,167 - __main__ - INFO - EPOCH 32/50
+2025-06-29 10:14:40,167 - __main__ - INFO - ============================================================
+Epoch 32 (Train): 100%|██████████████████████| 1307/1307 [14:22<00:00,  1.52it/s, Loss=0.3736, CE=0.2003, OOD=0.3467, LR=0.003160]
+2025-06-29 10:29:02,362 - __main__ - INFO - Epoch 32 (Train): Loss=0.3468, CE=0.1732, OOD=0.3473
+2025-06-29 10:29:02,363 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 10:29:02,364 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:45<00:00,  1.85it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 132/132 [00:18<00:00,  7.02it/s]
+2025-06-29 10:41:06,365 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 10:41:06,366 - __main__ - INFO -
+============================================================
+2025-06-29 10:41:06,366 - __main__ - INFO - EPOCH 33/50
+2025-06-29 10:41:06,366 - __main__ - INFO - ============================================================
+Epoch 33 (Train): 100%|██████████████████████| 1307/1307 [14:23<00:00,  1.51it/s, Loss=0.2093, CE=0.0360, OOD=0.3467, LR=0.002872]
+2025-06-29 10:55:29,608 - __main__ - INFO - Epoch 33 (Train): Loss=0.3439, CE=0.1703, OOD=0.3473
+2025-06-29 10:55:29,609 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 10:55:29,610 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:45<00:00,  1.85it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 127/127 [00:18<00:00,  7.04it/s]
+2025-06-29 11:07:33,336 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 11:07:33,337 - __main__ - INFO -
+============================================================
+2025-06-29 11:07:33,337 - __main__ - INFO - EPOCH 34/50
+2025-06-29 11:07:33,337 - __main__ - INFO - ============================================================
+Epoch 34 (Train): 100%|██████████████████████| 1307/1307 [14:21<00:00,  1.52it/s, Loss=0.1964, CE=0.0230, OOD=0.3469, LR=0.002592]
+2025-06-29 11:21:54,550 - __main__ - INFO - Epoch 34 (Train): Loss=0.3438, CE=0.1699, OOD=0.3477
+2025-06-29 11:21:54,551 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 11:21:54,551 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:44<00:00,  1.86it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 134/134 [00:19<00:00,  7.05it/s]
+2025-06-29 11:33:57,941 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 11:33:57,942 - __main__ - INFO -
+============================================================
+2025-06-29 11:33:57,942 - __main__ - INFO - EPOCH 35/50
+2025-06-29 11:33:57,942 - __main__ - INFO - ============================================================
+Epoch 35 (Train): 100%|██████████████████████| 1307/1307 [14:20<00:00,  1.52it/s, Loss=0.3302, CE=0.1569, OOD=0.3466, LR=0.002322]
+2025-06-29 11:48:18,734 - __main__ - INFO - Epoch 35 (Train): Loss=0.3416, CE=0.1679, OOD=0.3473
+2025-06-29 11:48:18,734 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 11:48:18,735 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:42<00:00,  1.86it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 147/147 [00:20<00:00,  7.03it/s]
+2025-06-29 12:00:22,419 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 12:00:22,420 - __main__ - INFO -
+========================================
+2025-06-29 12:00:22,420 - __main__ - INFO - VALIDATION - EPOCH 35
+2025-06-29 12:00:22,420 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-29 12:00:22,420 - __main__ - INFO - ========================================
+Epoch 35 (Validation): 100%|████████████████████| 327/327 [09:52<00:00,  1.81s/it, Val_Loss=0.4077, Val_CE=0.1914, Val_OOD=0.4327]
+2025-06-29 12:10:16,219 - __main__ - INFO - Epoch 35 (Validation): Loss=0.3766, CE=0.1695, OOD=0.4143
+2025-06-29 12:10:16,219 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-29 12:10:16,220 - __main__ - INFO -   OOD Metrics:
+2025-06-29 12:10:16,220 - __main__ - INFO -     FPR95: 0.7448
+2025-06-29 12:10:16,220 - __main__ - INFO -     AUROC: 0.7532
+2025-06-29 12:10:16,220 - __main__ - INFO -     AUPRS: 0.9888
+2025-06-29 12:10:16,220 - __main__ - INFO -     Score Separation: 0.4851
+2025-06-29 12:10:16,220 - __main__ - INFO -     ID/OOD Pixels: 2114928/66878
+2025-06-29 12:10:16,987 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_35.pth
+2025-06-29 12:10:16,987 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_35.pth
+2025-06-29 12:10:16,988 - __main__ - INFO -
+============================================================
+2025-06-29 12:10:16,988 - __main__ - INFO - EPOCH 36/50
+2025-06-29 12:10:16,988 - __main__ - INFO - ============================================================
+Epoch 36 (Train): 100%|██████████████████████| 1307/1307 [14:20<00:00,  1.52it/s, Loss=0.3413, CE=0.1679, OOD=0.3468, LR=0.002062]
+2025-06-29 12:24:36,991 - __main__ - INFO - Epoch 36 (Train): Loss=0.3487, CE=0.1748, OOD=0.3478
+2025-06-29 12:24:36,992 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 12:24:36,992 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:43<00:00,  1.86it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 136/136 [00:19<00:00,  7.01it/s]
+2025-06-29 12:36:40,290 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 12:36:40,291 - __main__ - INFO -
+============================================================
+2025-06-29 12:36:40,291 - __main__ - INFO - EPOCH 37/50
+2025-06-29 12:36:40,291 - __main__ - INFO - ============================================================
+Epoch 37 (Train): 100%|██████████████████████| 1307/1307 [14:15<00:00,  1.53it/s, Loss=0.3782, CE=0.2048, OOD=0.3467, LR=0.001814]
+2025-06-29 12:50:55,996 - __main__ - INFO - Epoch 37 (Train): Loss=0.3434, CE=0.1696, OOD=0.3476
+2025-06-29 12:50:55,997 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 12:50:55,997 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:41<00:00,  1.86it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 141/141 [00:20<00:00,  7.02it/s]
+2025-06-29 13:02:57,356 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 13:02:57,357 - __main__ - INFO -
+============================================================
+2025-06-29 13:02:57,357 - __main__ - INFO - EPOCH 38/50
+2025-06-29 13:02:57,357 - __main__ - INFO - ============================================================
+Epoch 38 (Train): 100%|██████████████████████| 1307/1307 [14:21<00:00,  1.52it/s, Loss=0.3042, CE=0.1308, OOD=0.3467, LR=0.001578]
+2025-06-29 13:17:19,193 - __main__ - INFO - Epoch 38 (Train): Loss=0.3463, CE=0.1724, OOD=0.3479
+2025-06-29 13:17:19,194 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 13:17:19,194 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:45<00:00,  1.85it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 128/128 [00:18<00:00,  7.01it/s]
+2025-06-29 13:29:22,614 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 13:29:22,614 - __main__ - INFO -
+============================================================
+2025-06-29 13:29:22,614 - __main__ - INFO - EPOCH 39/50
+2025-06-29 13:29:22,614 - __main__ - INFO - ============================================================
+Epoch 39 (Train): 100%|██████████████████████| 1307/1307 [14:23<00:00,  1.51it/s, Loss=0.4089, CE=0.2356, OOD=0.3467, LR=0.001356]
+2025-06-29 13:43:46,213 - __main__ - INFO - Epoch 39 (Train): Loss=0.3427, CE=0.1688, OOD=0.3477
+2025-06-29 13:43:46,214 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 13:43:46,214 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:45<00:00,  1.85it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 142/142 [00:20<00:00,  7.04it/s]
+2025-06-29 13:55:51,672 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 13:55:51,673 - __main__ - INFO -
+============================================================
+2025-06-29 13:55:51,673 - __main__ - INFO - EPOCH 40/50
+2025-06-29 13:55:51,673 - __main__ - INFO - ============================================================
+Epoch 40 (Train): 100%|██████████████████████| 1307/1307 [14:20<00:00,  1.52it/s, Loss=0.3457, CE=0.1722, OOD=0.3469, LR=0.001148]
+2025-06-29 14:10:11,983 - __main__ - INFO - Epoch 40 (Train): Loss=0.3451, CE=0.1712, OOD=0.3479
+2025-06-29 14:10:11,984 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 14:10:11,984 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:42<00:00,  1.86it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 138/138 [00:19<00:00,  7.01it/s]
+2025-06-29 14:22:13,990 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 14:22:13,991 - __main__ - INFO -
+========================================
+2025-06-29 14:22:13,991 - __main__ - INFO - VALIDATION - EPOCH 40
+2025-06-29 14:22:13,991 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-29 14:22:13,992 - __main__ - INFO - ========================================
+Epoch 40 (Validation): 100%|████████████████████| 327/327 [09:54<00:00,  1.82s/it, Val_Loss=0.2311, Val_CE=0.0490, Val_OOD=0.3641]
+2025-06-29 14:32:10,005 - __main__ - INFO - Epoch 40 (Validation): Loss=0.3425, CE=0.1626, OOD=0.3598
+2025-06-29 14:32:10,006 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-29 14:32:10,006 - __main__ - INFO -   OOD Metrics:
+2025-06-29 14:32:10,006 - __main__ - INFO -     FPR95: 0.4013
+2025-06-29 14:32:10,006 - __main__ - INFO -     AUROC: 0.9217
+2025-06-29 14:32:10,007 - __main__ - INFO -     AUPRS: 0.9969
+2025-06-29 14:32:10,007 - __main__ - INFO -     Score Separation: 1.0327
+2025-06-29 14:32:10,007 - __main__ - INFO -     ID/OOD Pixels: 2103005/73789
+2025-06-29 14:32:10,769 - __main__ - INFO - Model saved to models/hopfield_boosting_best.pth
+2025-06-29 14:32:10,769 - __main__ - INFO - New best model saved: models/hopfield_boosting_best.pth (Val Loss: 0.3425)
+2025-06-29 14:32:11,552 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_40.pth
+2025-06-29 14:32:11,553 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_40.pth
+2025-06-29 14:32:11,553 - __main__ - INFO -
+============================================================
+2025-06-29 14:32:11,553 - __main__ - INFO - EPOCH 41/50
+2025-06-29 14:32:11,553 - __main__ - INFO - ============================================================
+Epoch 41 (Train): 100%|██████████████████████| 1307/1307 [14:27<00:00,  1.51it/s, Loss=0.3066, CE=0.1332, OOD=0.3467, LR=0.000956]
+2025-06-29 14:46:38,769 - __main__ - INFO - Epoch 41 (Train): Loss=0.3427, CE=0.1686, OOD=0.3481
+2025-06-29 14:46:38,770 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 14:46:38,770 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:49<00:00,  1.84it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 130/130 [00:18<00:00,  7.02it/s]
+2025-06-29 14:58:46,529 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 14:58:46,530 - __main__ - INFO -
+============================================================
+2025-06-29 14:58:46,530 - __main__ - INFO - EPOCH 42/50
+2025-06-29 14:58:46,531 - __main__ - INFO - ============================================================
+Epoch 42 (Train): 100%|██████████████████████| 1307/1307 [14:24<00:00,  1.51it/s, Loss=0.3366, CE=0.1631, OOD=0.3471, LR=0.000779]
+2025-06-29 15:13:10,621 - __main__ - INFO - Epoch 42 (Train): Loss=0.3457, CE=0.1715, OOD=0.3483
+2025-06-29 15:13:10,622 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 15:13:10,622 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:47<00:00,  1.85it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 136/136 [00:19<00:00,  7.02it/s]
+2025-06-29 15:25:17,160 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 15:25:17,160 - __main__ - INFO -
+============================================================
+2025-06-29 15:25:17,160 - __main__ - INFO - EPOCH 43/50
+2025-06-29 15:25:17,161 - __main__ - INFO - ============================================================
+Epoch 43 (Train): 100%|██████████████████████| 1307/1307 [14:28<00:00,  1.50it/s, Loss=0.3629, CE=0.1895, OOD=0.3469, LR=0.000619]
+2025-06-29 15:39:45,777 - __main__ - INFO - Epoch 43 (Train): Loss=0.3471, CE=0.1728, OOD=0.3486
+2025-06-29 15:39:45,778 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 15:39:45,778 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:50<00:00,  1.84it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 132/132 [00:18<00:00,  7.02it/s]
+2025-06-29 15:51:54,926 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 15:51:54,927 - __main__ - INFO -
+============================================================
+2025-06-29 15:51:54,927 - __main__ - INFO - EPOCH 44/50
+2025-06-29 15:51:54,927 - __main__ - INFO - ============================================================
+Epoch 44 (Train): 100%|██████████████████████| 1307/1307 [14:26<00:00,  1.51it/s, Loss=0.3407, CE=0.1672, OOD=0.3471, LR=0.000477]
+2025-06-29 16:06:21,496 - __main__ - INFO - Epoch 44 (Train): Loss=0.3418, CE=0.1676, OOD=0.3483
+2025-06-29 16:06:21,497 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 16:06:21,497 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:48<00:00,  1.84it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 139/139 [00:19<00:00,  7.01it/s]
+2025-06-29 16:18:30,306 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 16:18:30,307 - __main__ - INFO -
+============================================================
+2025-06-29 16:18:30,307 - __main__ - INFO - EPOCH 45/50
+2025-06-29 16:18:30,307 - __main__ - INFO - ============================================================
+Epoch 45 (Train): 100%|██████████████████████| 1307/1307 [14:25<00:00,  1.51it/s, Loss=0.3338, CE=0.1601, OOD=0.3473, LR=0.000352]
+2025-06-29 16:32:56,027 - __main__ - INFO - Epoch 45 (Train): Loss=0.3450, CE=0.1701, OOD=0.3498
+2025-06-29 16:32:56,028 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 16:32:56,028 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:47<00:00,  1.85it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 136/136 [00:19<00:00,  7.05it/s]
+2025-06-29 16:45:03,272 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 16:45:03,273 - __main__ - INFO -
+========================================
+2025-06-29 16:45:03,273 - __main__ - INFO - VALIDATION - EPOCH 45
+2025-06-29 16:45:03,273 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-29 16:45:03,273 - __main__ - INFO - ========================================
+Epoch 45 (Validation): 100%|████████████████████| 327/327 [09:53<00:00,  1.82s/it, Val_Loss=0.4780, Val_CE=0.2742, Val_OOD=0.4076]
+2025-06-29 16:54:58,181 - __main__ - INFO - Epoch 45 (Validation): Loss=0.3639, CE=0.1694, OOD=0.3891
+2025-06-29 16:54:58,181 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-29 16:54:58,181 - __main__ - INFO -   OOD Metrics:
+2025-06-29 16:54:58,181 - __main__ - INFO -     FPR95: 0.6771
+2025-06-29 16:54:58,182 - __main__ - INFO -     AUROC: 0.7892
+2025-06-29 16:54:58,182 - __main__ - INFO -     AUPRS: 0.9907
+2025-06-29 16:54:58,182 - __main__ - INFO -     Score Separation: 0.5768
+2025-06-29 16:54:58,182 - __main__ - INFO -     ID/OOD Pixels: 2099218/66438
+2025-06-29 16:54:58,938 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_45.pth
+2025-06-29 16:54:58,938 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_45.pth
+2025-06-29 16:54:58,939 - __main__ - INFO -
+============================================================
+2025-06-29 16:54:58,939 - __main__ - INFO - EPOCH 46/50
+2025-06-29 16:54:58,939 - __main__ - INFO - ============================================================
+Epoch 46 (Train): 100%|██████████████████████| 1307/1307 [14:27<00:00,  1.51it/s, Loss=0.4099, CE=0.2363, OOD=0.3472, LR=0.000246]
+2025-06-29 17:09:26,189 - __main__ - INFO - Epoch 46 (Train): Loss=0.3449, CE=0.1698, OOD=0.3502
+2025-06-29 17:09:26,190 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 17:09:26,190 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:48<00:00,  1.85it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 138/138 [00:19<00:00,  7.05it/s]
+2025-06-29 17:21:33,918 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 17:21:33,919 - __main__ - INFO -
+============================================================
+2025-06-29 17:21:33,919 - __main__ - INFO - EPOCH 47/50
+2025-06-29 17:21:33,919 - __main__ - INFO - ============================================================
+Epoch 47 (Train): 100%|██████████████████████| 1307/1307 [14:27<00:00,  1.51it/s, Loss=0.3721, CE=0.1974, OOD=0.3495, LR=0.000158]
+2025-06-29 17:36:01,286 - __main__ - INFO - Epoch 47 (Train): Loss=0.3433, CE=0.1674, OOD=0.3518
+2025-06-29 17:36:01,287 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 17:36:01,287 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:48<00:00,  1.84it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 128/128 [00:18<00:00,  7.05it/s]
+2025-06-29 17:48:08,279 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 17:48:08,280 - __main__ - INFO -
+============================================================
+2025-06-29 17:48:08,280 - __main__ - INFO - EPOCH 48/50
+2025-06-29 17:48:08,280 - __main__ - INFO - ============================================================
+Epoch 48 (Train): 100%|██████████████████████| 1307/1307 [14:29<00:00,  1.50it/s, Loss=0.3756, CE=0.2018, OOD=0.3476, LR=0.000090]
+2025-06-29 18:02:37,373 - __main__ - INFO - Epoch 48 (Train): Loss=0.3441, CE=0.1690, OOD=0.3501
+2025-06-29 18:02:37,374 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 18:02:37,374 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:51<00:00,  1.84it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 125/125 [00:17<00:00,  7.01it/s]
+2025-06-29 18:14:46,612 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 18:14:46,613 - __main__ - INFO -
+============================================================
+2025-06-29 18:14:46,613 - __main__ - INFO - EPOCH 49/50
+2025-06-29 18:14:46,613 - __main__ - INFO - ============================================================
+Epoch 49 (Train): 100%|██████████████████████| 1307/1307 [14:30<00:00,  1.50it/s, Loss=0.3239, CE=0.1470, OOD=0.3537, LR=0.000040]
+2025-06-29 18:29:16,731 - __main__ - INFO - Epoch 49 (Train): Loss=0.3477, CE=0.1713, OOD=0.3529
+2025-06-29 18:29:16,732 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 18:29:16,732 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:53<00:00,  1.83it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 120/120 [00:17<00:00,  7.01it/s]
+2025-06-29 18:41:27,266 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 18:41:27,267 - __main__ - INFO -
+============================================================
+2025-06-29 18:41:27,267 - __main__ - INFO - EPOCH 50/50
+2025-06-29 18:41:27,267 - __main__ - INFO - ============================================================
+Epoch 50 (Train): 100%|██████████████████████| 1307/1307 [14:29<00:00,  1.50it/s, Loss=0.4157, CE=0.2405, OOD=0.3506, LR=0.000011]
+2025-06-29 18:55:56,977 - __main__ - INFO - Epoch 50 (Train): Loss=0.3442, CE=0.1687, OOD=0.3510
+2025-06-29 18:55:56,978 - __main__ - INFO -   Processed: 1307, Skipped: 0
+2025-06-29 18:55:56,978 - __main__ - INFO - Updating auxiliary memory weights using training queries...
+Collecting AUX features: 100%|████████████████████████████████████████████████████████████████| 1307/1307 [11:51<00:00,  1.84it/s]
+Computing border energies: 100%|████████████████████████████████████████████████████████████████| 134/134 [00:19<00:00,  7.04it/s]
+2025-06-29 19:08:07,886 - __main__ - INFO - Auxiliary memory weights updated successfully
+2025-06-29 19:08:07,886 - __main__ - INFO -
+========================================
+2025-06-29 19:08:07,887 - __main__ - INFO - VALIDATION - EPOCH 50
+2025-06-29 19:08:07,887 - __main__ - INFO - Using SAME memories, different 20% query samples
+2025-06-29 19:08:07,887 - __main__ - INFO - ========================================
+Epoch 50 (Validation): 100%|████████████████████| 327/327 [09:55<00:00,  1.82s/it, Val_Loss=0.3727, Val_CE=0.1968, Val_OOD=0.3518]
+2025-06-29 19:18:04,084 - __main__ - INFO - Epoch 50 (Validation): Loss=0.3406, CE=0.1651, OOD=0.3510
+2025-06-29 19:18:04,085 - __main__ - INFO -   Processed: 327, Skipped: 0
+2025-06-29 19:18:04,085 - __main__ - INFO -   OOD Metrics:
+2025-06-29 19:18:04,085 - __main__ - INFO -     FPR95: 0.6325
+2025-06-29 19:18:04,085 - __main__ - INFO -     AUROC: 0.7979
+2025-06-29 19:18:04,085 - __main__ - INFO -     AUPRS: 0.9906
+2025-06-29 19:18:04,085 - __main__ - INFO -     Score Separation: 0.6144
+2025-06-29 19:18:04,086 - __main__ - INFO -     ID/OOD Pixels: 2078373/70890
+2025-06-29 19:18:04,844 - __main__ - INFO - Model saved to models/hopfield_boosting_best.pth
+2025-06-29 19:18:04,844 - __main__ - INFO - New best model saved: models/hopfield_boosting_best.pth (Val Loss: 0.3406)
+2025-06-29 19:18:05,621 - __main__ - INFO - Model saved to models/hopfield_boosting_checkpoint_epoch_50.pth
+2025-06-29 19:18:05,621 - __main__ - INFO - Checkpoint saved: models/hopfield_boosting_checkpoint_epoch_50.pth
+2025-06-29 19:18:05,622 - __main__ - INFO - Training completed!
+2025-06-29 19:18:05,622 - __main__ - INFO - Final memory statistics:
+2025-06-29 19:18:05,622 - __main__ - INFO -   ID Memory: 44832 patterns
+2025-06-29 19:18:05,622 - __main__ - INFO -   AUX Memory: 50000 patterns
+2025-06-29 19:18:05,622 - __main__ - INFO -   Source: 100% of dataset (3268 samples)
+2025-06-29 19:18:06,396 - __main__ - INFO - Model saved to models/hopfield_boosting_final_trained.pth
+2025-06-29 19:18:06,397 - __main__ - INFO - Final model saved: models/hopfield_boosting_final_trained.pth

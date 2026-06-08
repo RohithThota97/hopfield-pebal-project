@@ -1,0 +1,20 @@
+{"time":"2025-07-30T23:41:58.687993315+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250730_234158-w3eoictq/logs/debug-core.log"}
+{"time":"2025-07-30T23:41:58.939949068+02:00","level":"INFO","msg":"stream: created new stream","id":"w3eoictq"}
+{"time":"2025-07-30T23:41:58.940024079+02:00","level":"INFO","msg":"stream: started","id":"w3eoictq"}
+{"time":"2025-07-30T23:41:58.94005276+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"w3eoictq"}
+{"time":"2025-07-30T23:41:58.940108443+02:00","level":"INFO","msg":"sender: started","stream_id":"w3eoictq"}
+{"time":"2025-07-30T23:41:58.940291983+02:00","level":"INFO","msg":"handler: started","stream_id":"w3eoictq"}
+{"time":"2025-07-30T23:41:59.284243957+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-31T03:41:14.814672599+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-segmentation/w3eoictq/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-07-31T09:21:11.762751863+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-segmentation/w3eoictq/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-07-31T13:20:28.242751343+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-segmentation/w3eoictq/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-07-31T13:38:05.387841164+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-07-31T18:48:50.002709421+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-segmentation/w3eoictq/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-07-31T21:29:57.235191846+02:00","level":"INFO","msg":"stream: closing","id":"w3eoictq"}
+{"time":"2025-07-31T21:29:57.235256343+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-31T21:29:57.235703996+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-31T21:29:57.794598406+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-31T21:29:57.980474214+02:00","level":"INFO","msg":"handler: closed","stream_id":"w3eoictq"}
+{"time":"2025-07-31T21:29:57.980544863+02:00","level":"INFO","msg":"sender: closed","stream_id":"w3eoictq"}
+{"time":"2025-07-31T21:29:57.980544518+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"w3eoictq"}
+{"time":"2025-07-31T21:29:57.983099692+02:00","level":"INFO","msg":"stream: closed","id":"w3eoictq"}

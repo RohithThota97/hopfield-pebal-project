@@ -1,0 +1,16 @@
+Building semantic memory and initializing boosting manager...
+Building Hopfield memory using advanced semantic approach...
+Traceback (most recent call last):
+  File "run_training.py", line 267, in <module>
+    main()
+  File "run_training.py", line 261, in main
+    trainer = PixelWiseHopfieldTrainer(train_config, train_loader, val_loader, evaluator)
+  File "run_training.py", line 44, in __init__
+    self._initialize_boosting_components()
+  File "run_training.py", line 72, in _initialize_boosting_components
+    self.boosting_manager = HopfieldBoostingManager.build_from_loader(
+  File "/home/ha51dybi/PEBAL/code/hopfield_weight_updater.py", line 65, in build_from_loader
+    id_memory, ood_memory = memory_builder.process_images(dataloader)
+  File "/home/ha51dybi/PEBAL/code/hopfield_weight_updater.py", line 141, in process_images
+    self.feature_extractor.eval()
+AttributeError: 'FeatureExtractor' object has no attribute 'eval'

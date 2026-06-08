@@ -1,0 +1,17 @@
+{"time":"2025-07-04T17:35:14.377606826+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250704_173514-0j5hfcki/logs/debug-core.log"}
+{"time":"2025-07-04T17:35:14.629755099+02:00","level":"INFO","msg":"stream: created new stream","id":"0j5hfcki"}
+{"time":"2025-07-04T17:35:14.629832882+02:00","level":"INFO","msg":"stream: started","id":"0j5hfcki"}
+{"time":"2025-07-04T17:35:14.629863954+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"0j5hfcki"}
+{"time":"2025-07-04T17:35:14.629885069+02:00","level":"INFO","msg":"handler: started","stream_id":"0j5hfcki"}
+{"time":"2025-07-04T17:35:14.629913503+02:00","level":"INFO","msg":"sender: started","stream_id":"0j5hfcki"}
+{"time":"2025-07-04T17:35:14.999025356+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-04T21:01:38.47134752+02:00","level":"INFO","msg":"stream: closing","id":"0j5hfcki"}
+{"time":"2025-07-04T21:01:38.471434722+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-07-04T21:01:38.471860981+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-07-04T21:01:41.289489394+02:00","level":"ERROR","msg":"error adding file to cache","err":"file hash mismatch: expected v6RUCSfrGOKhf/msRgkb3g==, actual Zz5Mcz6mwMxOZqUTQggtmA=="}
+{"time":"2025-07-04T21:01:43.517258905+02:00","level":"ERROR","msg":"file transfer: upload: failed to upload: 400 Bad Request","task":"DefaultUploadTask{FileKind: 2, Path: /home/ha51dybi/.local/share/wandb/artifacts/staging/tmpgpun816q, Name: hopfield_latest.pth, Url: https://storage.googleapis.com/wandb-artifacts-prod/wandb_artifacts/675498626/1857229767/bfa4540927eb18e2a17ff9ac46091bde?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com%2F20250704%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20250704T190140Z&X-Goog-Expires=86399&X-Goog-Signature=399a269dd31f881ac8457e5b6983bc83de1bf88ef56714b2f57de85a26e469c5ceaa1345d2c239d83d173fd538c3cdc0d279f497ff8a0863a5e0776a2b83d9912d80d6cb33015a70bd483dc3fa9bc80e4c32b34d03115e39f3f9e2bef09a84ecaa83bc2d1999760e77c833214023dca255740213d97c56db294dc17e223531d51ff49bed2a2ff0b92aba5618d4f447758c2be2cb6e67413cb5ee82474dd63e2fcac4ea73a3ea1b4afb966227e45b66d547a4780942d82484baad7a51d2fbb21d788012ed43da189659cb5c1f10848294751fcda3a4860e62b05f26df3e8bcafce87efef5080998dde8de297b4a070e73fca3d5c4bb4904ce898cb32ef8e146c5&X-Goog-SignedHeaders=content-md5%3Bhost&X-User=rohiththota79, Size: 75807932}"}
+{"time":"2025-07-04T21:01:43.578314276+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-07-04T21:01:43.781164043+02:00","level":"INFO","msg":"handler: closed","stream_id":"0j5hfcki"}
+{"time":"2025-07-04T21:01:43.781258112+02:00","level":"INFO","msg":"sender: closed","stream_id":"0j5hfcki"}
+{"time":"2025-07-04T21:01:43.781247147+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"0j5hfcki"}
+{"time":"2025-07-04T21:01:43.783068497+02:00","level":"INFO","msg":"stream: closed","id":"0j5hfcki"}

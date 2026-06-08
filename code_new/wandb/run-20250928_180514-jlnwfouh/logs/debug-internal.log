@@ -1,0 +1,27 @@
+{"time":"2025-09-28T18:05:14.943635883+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250928_180514-jlnwfouh/logs/debug-core.log"}
+{"time":"2025-09-28T18:05:15.197926258+02:00","level":"INFO","msg":"stream: created new stream","id":"jlnwfouh"}
+{"time":"2025-09-28T18:05:15.198066445+02:00","level":"INFO","msg":"stream: started","id":"jlnwfouh"}
+{"time":"2025-09-28T18:05:15.19809604+02:00","level":"INFO","msg":"handler: started","stream_id":"jlnwfouh"}
+{"time":"2025-09-28T18:05:15.198107939+02:00","level":"INFO","msg":"sender: started","stream_id":"jlnwfouh"}
+{"time":"2025-09-28T18:05:15.198192376+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"jlnwfouh"}
+{"time":"2025-09-28T18:05:15.450197073+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-29T03:50:54.97270372+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.29:48644->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-29T03:53:09.959793445+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.29:40942->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-29T23:53:43.974557041+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-09-30T20:47:16.539200867+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/jlnwfouh/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-10-02T05:41:32.836840772+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.29:53128->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-10-02T07:24:36.127565816+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.29:58016->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-10-02T09:38:18.424701701+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/jlnwfouh/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-10-02T10:41:21.252196816+02:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/jlnwfouh/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-10-03T10:05:05.080707371+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/jlnwfouh/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-10-03T15:40:20.536710284+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/jlnwfouh/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-10-04T12:30:06.008737857+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/jlnwfouh/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-10-05T14:24:48.44386928+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-10-05T14:24:48.444306964+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-10-05T14:24:49.456677642+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.560582633,"progress":"1.4MB/121.6MB"},{"desc":"uploading config.yaml","runtime_seconds":0.214253294,"progress":"788B/788B"}],"total_operations":2}}
+{"time":"2025-10-05T14:24:53.068448902+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-05T14:24:53.272572555+02:00","level":"INFO","msg":"stream: closing","id":"jlnwfouh"}
+{"time":"2025-10-05T14:24:53.272623814+02:00","level":"INFO","msg":"handler: closed","stream_id":"jlnwfouh"}
+{"time":"2025-10-05T14:24:53.272642694+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jlnwfouh"}
+{"time":"2025-10-05T14:24:53.272696055+02:00","level":"INFO","msg":"sender: closed","stream_id":"jlnwfouh"}
+{"time":"2025-10-05T14:24:53.274162172+02:00","level":"INFO","msg":"stream: closed","id":"jlnwfouh"}

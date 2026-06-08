@@ -1,0 +1,18 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Backbone fully frozen as per request.
+INFO:__main__:Building initial memories...
+Traceback (most recent call last):
+  File "run_training.py", line 1099, in <module>
+    main()
+  File "run_training.py", line 1083, in main
+    trainer = ImprovedOODSegmentationTrainer(
+  File "run_training.py", line 79, in __init__
+    self._build_initial_memories()
+  File "run_training.py", line 136, in _build_initial_memories
+    memory_builder = MemoryBuilder(
+TypeError: __init__() got an unexpected keyword argument 'subsample_size'

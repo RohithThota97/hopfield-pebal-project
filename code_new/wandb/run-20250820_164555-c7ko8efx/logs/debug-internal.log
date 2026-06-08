@@ -1,0 +1,8 @@
+{"time":"2025-08-20T16:45:55.987820872+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250820_164555-c7ko8efx/logs/debug-core.log"}
+{"time":"2025-08-20T16:45:56.233349153+02:00","level":"INFO","msg":"stream: created new stream","id":"c7ko8efx"}
+{"time":"2025-08-20T16:45:56.233427145+02:00","level":"INFO","msg":"stream: started","id":"c7ko8efx"}
+{"time":"2025-08-20T16:45:56.23345352+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"c7ko8efx"}
+{"time":"2025-08-20T16:45:56.233470141+02:00","level":"INFO","msg":"sender: started","stream_id":"c7ko8efx"}
+{"time":"2025-08-20T16:45:56.233488113+02:00","level":"INFO","msg":"handler: started","stream_id":"c7ko8efx"}
+{"time":"2025-08-20T16:45:56.514355799+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-20T19:37:08.68687299+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-fixed/c7ko8efx/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}

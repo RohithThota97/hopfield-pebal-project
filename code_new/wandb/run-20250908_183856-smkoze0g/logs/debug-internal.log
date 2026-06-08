@@ -1,0 +1,11 @@
+{"time":"2025-09-08T18:38:57.207367445+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250908_183856-smkoze0g/logs/debug-core.log"}
+{"time":"2025-09-08T18:38:57.462403297+02:00","level":"INFO","msg":"stream: created new stream","id":"smkoze0g"}
+{"time":"2025-09-08T18:38:57.462699864+02:00","level":"INFO","msg":"stream: started","id":"smkoze0g"}
+{"time":"2025-09-08T18:38:57.462731881+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"smkoze0g"}
+{"time":"2025-09-08T18:38:57.462753541+02:00","level":"INFO","msg":"sender: started","stream_id":"smkoze0g"}
+{"time":"2025-09-08T18:38:57.46279489+02:00","level":"INFO","msg":"handler: started","stream_id":"smkoze0g"}
+{"time":"2025-09-08T18:38:57.92239888+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-08T19:03:24.487290424+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-ood-detection/smkoze0g/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-09-09T05:49:53.607272434+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-boosting-ood-detection/smkoze0g/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-09-09T08:37:30.775670283+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.23:40312->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-09-09T08:38:30.776172072+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 10.203.141.23:55280->35.186.228.49:443: read: connection reset by peer"}

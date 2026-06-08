@@ -1,0 +1,43 @@
+{
+  "os": "Linux-5.14.0-570.el9.x86_64-x86_64-with-glibc2.17",
+  "python": "CPython 3.8.20",
+  "startedAt": "2025-08-20T14:45:55.984111Z",
+  "program": "run_training.py",
+  "codePath": "code/run_training.py",
+  "git": {
+    "remote": "https://github.com/tianyu0207/PEBAL.git",
+    "commit": "0293bee7b91d4bcaf892c0d987a62e6918df6e23"
+  },
+  "email": "rohiththota79@gmail.com",
+  "root": "/home/ha51dybi/PEBAL/code",
+  "host": "lms41-24",
+  "executable": "/home/ha51dybi/anaconda3/envs/pebal_new/bin/python",
+  "codePathLocal": "run_training.py",
+  "cpu_count": 6,
+  "cpu_count_logical": 6,
+  "gpu": "Quadro RTX 4000",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "230260592640",
+      "used": "100867354624"
+    }
+  },
+  "memory": {
+    "total": "49967738880"
+  },
+  "cpu": {
+    "count": 6,
+    "countLogical": 6
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Quadro RTX 4000",
+      "memoryTotal": "8589934592",
+      "cudaCores": 2304,
+      "architecture": "Turing",
+      "uuid": "GPU-e5198132-91e3-6b62-091c-2d1303ce2ebc"
+    }
+  ],
+  "cudaVersion": "12.8"
+}

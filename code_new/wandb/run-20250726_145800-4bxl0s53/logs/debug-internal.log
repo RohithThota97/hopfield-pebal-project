@@ -1,0 +1,10 @@
+{"time":"2025-07-26T14:58:00.886175536+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250726_145800-4bxl0s53/logs/debug-core.log"}
+{"time":"2025-07-26T14:58:01.168482168+02:00","level":"INFO","msg":"stream: created new stream","id":"4bxl0s53"}
+{"time":"2025-07-26T14:58:01.168563668+02:00","level":"INFO","msg":"stream: started","id":"4bxl0s53"}
+{"time":"2025-07-26T14:58:01.168593834+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"4bxl0s53"}
+{"time":"2025-07-26T14:58:01.168675165+02:00","level":"INFO","msg":"sender: started","stream_id":"4bxl0s53"}
+{"time":"2025-07-26T14:58:01.168724783+02:00","level":"INFO","msg":"handler: started","stream_id":"4bxl0s53"}
+{"time":"2025-07-26T14:58:01.417185188+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-07-27T13:13:14.066755818+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/4bxl0s53/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-07-28T00:16:10.323254157+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/4bxl0s53/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}
+{"time":"2025-07-30T15:43:57.011734317+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/pixel-hopfield-boosting/4bxl0s53/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}

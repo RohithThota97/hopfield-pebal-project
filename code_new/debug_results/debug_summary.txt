@@ -1,0 +1,25 @@
+================================================================================
+ OOD Dataset Debugger - Summary Report
+================================================================================
+
+Dataset Structure
+--------------------------------------------------
+  - Images Processed: 3268
+  - OOD Pixel Percentage: 6.51%
+
+Feature Extraction
+--------------------------------------------------
+  - Success/Fail: 20/0
+  - Projection Norm Check: 11.227 (Ideal is ~1.0)
+
+Memory Building
+--------------------------------------------------
+  - ID Memory: 13,757/50,000 (27.5%)
+  - AUX Memory: 4,499/50,000 (9.0%)
+  - Under-represented classes: road, sidewalk, building, wall, fence, pole, traffic_light, traffic_sign, vegetation, terrain, sky, person, rider, car, truck, bus, train, motorcycle, bicycle
+
+Recommendations
+--------------------------------------------------
+  1. Review generated plots ('class_distribution.png', 'memory_analysis.png').
+  2. Inspect the full JSON report for detailed error logs and per-image stats.
+  3. If memory collection is low, run the debugger on more batches.

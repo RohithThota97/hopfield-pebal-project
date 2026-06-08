@@ -1,0 +1,28 @@
+2025-07-01 14:59:09,182 - __main__ - INFO - Dataset split - Total: 3268, Train: 2614, Val: 654
+2025-07-01 14:59:09,182 - __main__ - INFO - Building initial Hopfield memories...
+Building memories: 100%|█████████████████████████████████████████████████████████████████| 1634/1634 [14:34<00:00,  1.87it/s]
+2025-07-01 15:13:43,455 - __main__ - INFO - Built initial memories - ID: torch.Size([49250, 128]), AUX: torch.Size([50000, 128])
+2025-07-01 15:13:43,463 - __main__ - INFO - Initialization completed!
+Epoch 1:  44%|█████████████████▌                      | 572/1307 [05:29<07:03,  1.74it/s, Loss=0.2454, CE=0.0707, OOD=0.3494]
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 986, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 980, in main
+    results = trainer.train(num_epochs=NUM_EPOCHS, batch_size=BATCH_SIZE)
+  File "train_pixel_hopfield_boosting.py", line 837, in train
+    avg_loss, avg_ce_loss, avg_ood_loss = self.train_epoch(train_loader, epoch)
+  File "train_pixel_hopfield_boosting.py", line 692, in train_epoch
+    id_pixels, id_labels, aux_pixels = self.sample_pixels_for_batch(
+  File "train_pixel_hopfield_boosting.py", line 481, in sample_pixels_for_batch
+    if id_mask.sum() >= min_pixels_per_image:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/multiprocessing/queues.py", line 245, in _feed
+    send_bytes(obj)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/multiprocessing/connection.py", line 411, in _send_bytes
+    self._send(header + buf)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/multiprocessing/connection.py", line 368, in _send
+    n = write(self._handle, buf)
+BrokenPipeError: [Errno 32] Broken pipe

@@ -1,0 +1,1 @@
+{"ood_loss":-6.888198375701904,"ood_auroc":0,"ood_auprs":0,"_runtime":591573.381131211,"seg_loss":0.10711824893951416,"lr_proj":1e-07,"_timestamp":1.7596670883215003e+09,"epoch":50,"_step":111349,"global_step":111299,"_wandb":{"runtime":591573},"lr_seg":1e-07,"semantic_miou":0.7609239130055078,"ood_fpr95":0.9493655858151325}

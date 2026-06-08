@@ -1,0 +1,10 @@
+{"time":"2025-09-27T13:50:36.72300062+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250927_135036-nrvvipah/logs/debug-core.log"}
+{"time":"2025-09-27T13:50:36.96878147+02:00","level":"INFO","msg":"stream: created new stream","id":"nrvvipah"}
+{"time":"2025-09-27T13:50:36.968809442+02:00","level":"INFO","msg":"stream: started","id":"nrvvipah"}
+{"time":"2025-09-27T13:50:36.968818779+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"nrvvipah"}
+{"time":"2025-09-27T13:50:36.968859692+02:00","level":"INFO","msg":"handler: started","stream_id":"nrvvipah"}
+{"time":"2025-09-27T13:50:36.968872699+02:00","level":"INFO","msg":"sender: started","stream_id":"nrvvipah"}
+{"time":"2025-09-27T13:50:37.167483355+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-27T16:21:37.735593666+02:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/nrvvipah/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-09-27T16:21:42.057089472+02:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/nrvvipah/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
+{"time":"2025-09-27T16:21:46.824391849+02:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/nrvvipah/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}

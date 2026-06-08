@@ -1,0 +1,13 @@
+{"time":"2025-09-24T15:43:24.141089397+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmptffyizz7/port-1169318.txt","pid":1169318,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-24T15:43:24.14274695+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":42955,"Zone":""}}
+{"time":"2025-09-24T15:43:24.142778369+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":1169318}
+{"time":"2025-09-24T15:43:24.326443584+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:45882"}
+{"time":"2025-09-24T15:43:24.359762532+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"xp1vtvdl","id":"127.0.0.1:45882"}
+{"time":"2025-09-24T15:43:24.629954907+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"xp1vtvdl","id":"127.0.0.1:45882"}
+{"time":"2025-09-24T17:22:49.225907773+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:45882"}
+{"time":"2025-09-24T17:22:49.22635649+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:45882"}
+{"time":"2025-09-24T17:22:49.226405461+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:45882"}
+{"time":"2025-09-24T17:22:49.226411091+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-09-24T17:22:50.468597763+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:45882"}
+{"time":"2025-09-24T17:22:50.468606608+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:45882"}
+{"time":"2025-09-24T17:22:50.468611008+02:00","level":"INFO","msg":"server is closed"}

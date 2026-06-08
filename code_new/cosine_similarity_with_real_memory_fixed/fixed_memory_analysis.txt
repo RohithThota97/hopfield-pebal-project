@@ -1,0 +1,44 @@
+=== Fixed Real Memory Builder Analysis ===
+
+All Class Representatives:
+    0: road            - norm: 10.4658
+    1: sidewalk        - norm: 10.5833
+    2: building        - norm: 10.6127
+    3: wall            - norm: 10.3974
+    4: fence           - norm: 10.4589
+    5: pole            - norm: 10.8338
+    6: traffic_light   - norm: 11.0398
+    7: traffic_sign    - norm: 11.2836
+    8: vegetation      - norm: 10.3564
+    9: terrain         - norm: 10.4881
+   10: sky             - norm: 10.2834
+   11: person          - norm: 11.1506
+   12: rider           - norm: 11.2703
+   13: car             - norm: 10.9833
+   14: truck           - norm: 12.4090
+   15: bus             - norm: 11.9669
+   16: train           - norm: 12.1156
+   17: motorcycle      - norm: 11.6581
+   18: bicycle         - norm: 10.3850
+  254: OOD             - norm: 9.0231
+
+OOD vs All ID Classes Similarities:
+  OOD - road           : 0.7771
+  OOD - sidewalk       : 0.7608
+  OOD - building       : 0.7804
+  OOD - wall           : 0.7818
+  OOD - fence          : 0.7886
+  OOD - pole           : 0.7403
+  OOD - traffic_light  : 0.7540
+  OOD - traffic_sign   : 0.7577
+  OOD - vegetation     : 0.7813
+  OOD - terrain        : 0.7883
+  OOD - sky            : 0.7887
+  OOD - person         : 0.6920
+  OOD - rider          : 0.7544
+  OOD - car            : 0.7730
+  OOD - truck          : 0.7281
+  OOD - bus            : 0.6796
+  OOD - train          : 0.7116
+  OOD - motorcycle     : 0.6818
+  OOD - bicycle        : 0.7693

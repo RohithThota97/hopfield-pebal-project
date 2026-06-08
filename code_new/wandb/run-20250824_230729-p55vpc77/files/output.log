@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "run_training.py", line 258, in <module>
+    main()
+  File "run_training.py", line 252, in main
+    trainer = PixelWiseHopfieldTrainer(train_config, train_loader, val_loader, evaluator)
+  File "run_training.py", line 47, in __init__
+    self._initialize_boosting_components()
+  File "run_training.py", line 73, in _initialize_boosting_components
+    memory_builder = RealMemoryBuilder(
+TypeError: __init__() got an unexpected keyword argument 'id_pool_size'

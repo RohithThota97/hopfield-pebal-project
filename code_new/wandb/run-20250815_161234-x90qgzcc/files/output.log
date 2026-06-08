@@ -1,0 +1,101 @@
+🎯 Starting training...
+🏗️ Building Hopfield memories...
+   🎯 Target: 50000 ID + 50000 AUX pixels
+   📊 Per class: 2631 (min: 2500, max: 2700)
+   🔍 ID sampling: 5-15 pixels/image (CONSERVATIVE)
+   🔍 OOD sampling: 20-40 pixels/OOD area (CONSERVATIVE)
+   📈 Coverage target: 99.0% of training data
+Building memories:   0%| | 2/1617 [00:02<35:02,  1.30s/it, ID=121/50000, AUX=35/50000, MinClass=0, Coverage=0.1%, Success=1, Faile
+
+🔍 DEBUG Batch 0:
+  Batch type: <class 'dict'>
+  Batch keys: dict_keys(['data', 'fn', 'n', 'is_ood', 'label'])
+  Data shape: torch.Size([2, 3, 512, 1024])
+  Label shape: torch.Size([2, 512, 1024])
+  Unique labels: tensor([  0,   1,   2,   3,   5,   7,   8,   9,  10,  11,  12,  13,  18, 255])
+  Extracted keys: dict_keys(['images', 'labels', 'features', 'ood_mask', 'is_ood'])
+  Features shape: torch.Size([2, 1280, 65, 65])
+  Labels shape: torch.Size([2, 65, 65])
+  Projected shape: torch.Size([2, 128, 65, 65])
+  ✅ Batch 0: Extracted 156 pixels
+
+🔍 DEBUG Batch 1:
+  Batch type: <class 'dict'>
+  Batch keys: dict_keys(['data', 'fn', 'n', 'is_ood', 'label'])
+  Data shape: torch.Size([2, 3, 512, 1024])
+  Label shape: torch.Size([2, 512, 1024])
+  Unique labels: tensor([  2,   5,   6,   7,   8,  10,  11,  12,  13, 255])
+  Extracted keys: dict_keys(['images', 'labels', 'features', 'ood_mask', 'is_ood'])
+  Features shape: torch.Size([2, 1280, 65, 65])
+  Labels shape: torch.Size([2, 65, 65])
+  Projected shape: torch.Size([2, 128, 65, 65])
+  ✅ Batch 1: Extracted 155 pixels
+
+🔍 DEBUG Batch 2:
+  Batch type: <class 'dict'>
+  Batch keys: dict_keys(['data', 'fn', 'n', 'is_ood', 'label'])
+  Data shape: torch.Size([2, 3, 512, 1024])
+  Label shape: torch.Size([2, 512, 1024])
+  Unique labels: tensor([ 0,  2,  5,  7,  8, 11, 13])
+  Extracted keys: dict_keys(['images', 'labels', 'features', 'ood_mask', 'is_ood'])
+  Features shape: torch.Size([2, 1280, 65, 65])
+  Labels shape: torch.Size([2, 65, 65])
+  Projected shape: torch.Size([2, 128, 65, 65])
+  ✅ Batch 2: Extracted 62 pixels
+
+📊 Processing Summary:
+  Successful batches: 1617
+  Failed batches: 0
+  Total processed: 1617
+
+   🔨 Building final tensors from 1617 batches...
+   📈 Training coverage: 99.0%
+   📊 Collected per class: {0: 2700, 1: 2700, 2: 2700, 3: 2700, 4: 2700, 5: 2700, 6: 2700, 7: 2700, 8: 2700, 9: 2700, 10: 2700, 11: 2700, 12: 2700, 13: 2700, 14: 1813, 15: 1305, 16: 842, 17: 1733, 18: 2700}
+   📊 AUX features collected: 50000
+   ⚠️  Low pixel count for classes: [16]
+   ✅ Final tensors: ID torch.Size([49989, 128]), AUX torch.Size([50000, 128])
+   ✅ Per class allocation: 2631 pixels each
+   ✅ Diverse coverage: 99.0% of training data
+
+==================================================
+✅ CHECK 1: DATASET COVERAGE (Source Image Tracking)
+==================================================
+Total feature vectors collected: 99989
+  - ID vectors (labels 0-18): 49989
+  - AUX vectors (label 254): 50000
+  - Ignored vectors (label 255): Not collected
+
+Memory built from unique source images:
+  - Cityscapes images processed: 2924
+  - COCO images processed: 310
+  - Total unique images: 3234
+  - Dataset coverage: 99.0%
+
+ID Memory Distribution (per class):
+  - Class 0: 2700 vectors
+  - Class 1: 2700 vectors
+  - Class 2: 2700 vectors
+  - Class 3: 2700 vectors
+  - Class 4: 2700 vectors
+  - Class 5: 2700 vectors
+  - Class 6: 2700 vectors
+  - Class 7: 2700 vectors
+  - Class 8: 2700 vectors
+  - Class 9: 2700 vectors
+  - Class 10: 2700 vectors
+  - Class 11: 2700 vectors
+  - Class 12: 2700 vectors
+  - Class 13: 2700 vectors
+  - Class 14: 1813 vectors
+  - Class 15: 1305 vectors
+  - Class 16: 842 vectors
+  - Class 17: 1733 vectors
+  - Class 18: 2700 vectors
+==================================================
+📊 Collecting OOD samples for weight updates...
+Scanning for OOD samples: 100%|████| 1634/1634 [04:24<00:00,  6.18it/s, OOD_samples=144, Total_OOD_pixels=1.02e+7, Processed=3268]
+🚀 Starting training...
+
+🔄 Updating sampling weights for epoch 1
+Computing energies: 100%|██████████████████████████████████████████████| 36/36 [00:41<00:00,  1.15s/it, Batch=36/36, Energies=144]
+Epoch 1/100:   4%|███▏                                                                          | 68/1634 [01:26<33:39,  1.29s/it]

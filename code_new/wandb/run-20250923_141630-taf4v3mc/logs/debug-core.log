@@ -1,0 +1,13 @@
+{"time":"2025-09-23T14:16:30.366040972+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpsvzvm4mh/port-525026.txt","pid":525026,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-23T14:16:30.371617099+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":36557,"Zone":""}}
+{"time":"2025-09-23T14:16:30.371653138+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":525026}
+{"time":"2025-09-23T14:16:30.558119216+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:43204"}
+{"time":"2025-09-23T14:16:30.589389249+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"taf4v3mc","id":"127.0.0.1:43204"}
+{"time":"2025-09-23T14:16:30.84216045+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"taf4v3mc","id":"127.0.0.1:43204"}
+{"time":"2025-09-23T15:05:45.240087673+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:43204"}
+{"time":"2025-09-23T15:05:45.240703878+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:43204"}
+{"time":"2025-09-23T15:05:45.240755057+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-09-23T15:05:45.240856644+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:43204"}
+{"time":"2025-09-23T15:05:46.344493629+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:43204"}
+{"time":"2025-09-23T15:05:46.344643279+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:43204"}
+{"time":"2025-09-23T15:05:46.344672272+02:00","level":"INFO","msg":"server is closed"}

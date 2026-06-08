@@ -1,0 +1,7 @@
+{"time":"2025-08-19T21:28:27.324659121+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250819_212827-iiz37esi/logs/debug-core.log"}
+{"time":"2025-08-19T21:28:27.577566518+02:00","level":"INFO","msg":"stream: created new stream","id":"iiz37esi"}
+{"time":"2025-08-19T21:28:27.577648662+02:00","level":"INFO","msg":"stream: started","id":"iiz37esi"}
+{"time":"2025-08-19T21:28:27.577678622+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"iiz37esi"}
+{"time":"2025-08-19T21:28:27.577718281+02:00","level":"INFO","msg":"sender: started","stream_id":"iiz37esi"}
+{"time":"2025-08-19T21:28:27.577694434+02:00","level":"INFO","msg":"handler: started","stream_id":"iiz37esi"}
+{"time":"2025-08-19T21:28:27.898884345+02:00","level":"INFO","msg":"Starting system monitor"}

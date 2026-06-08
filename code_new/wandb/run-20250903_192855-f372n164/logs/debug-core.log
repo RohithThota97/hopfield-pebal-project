@@ -1,0 +1,7 @@
+{"time":"2025-09-03T19:28:56.015808675+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpa2ctygc_/port-140740.txt","pid":140740,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-03T19:28:56.017272819+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":43731,"Zone":""}}
+{"time":"2025-09-03T19:28:56.017319564+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":140740}
+{"time":"2025-09-03T19:28:56.205538106+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:49816"}
+{"time":"2025-09-03T19:28:56.241310408+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"f372n164","id":"127.0.0.1:49816"}
+{"time":"2025-09-03T19:28:56.499742179+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"f372n164","id":"127.0.0.1:49816"}
+{"time":"2025-09-03T22:00:54.811669099+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

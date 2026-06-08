@@ -1,0 +1,60 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:feature_extractor:Unfrozen 30738944 parameters for fine-tuning
+INFO:__main__:Unfreezing entire backbone for fine-tuning
+INFO:__main__:Trainable parameters: 150,363,044
+INFO:__main__:Total parameters: 150,363,044
+INFO:__main__:
+============================================================
+INFO:__main__:RUNNING DIAGNOSTIC TESTS
+INFO:__main__:============================================================
+INFO:__main__:
+1. Testing pretrained feature extraction...
+INFO:__main__:   Feature shape: torch.Size([1, 1280, 64, 128])
+INFO:__main__:   Feature mean: -0.0000, std: 0.0166
+INFO:__main__:   ✓ Feature extraction working correctly
+INFO:__main__:
+2. Testing segmentation head initialization...
+INFO:__main__:   Logits shape: torch.Size([2, 19, 64, 128])
+INFO:__main__:   Mean probability per class: tensor([0.2426, 0.0158, 0.0855, 0.0050, 0.0547, 0.0119, 0.0045, 0.0618, 0.1566,
+        0.0130, 0.0156, 0.0922, 0.0017, 0.0641, 0.0378, 0.0620, 0.0093, 0.0315,
+        0.0344], device='cuda:0')
+INFO:__main__:   Expected uniform: ~0.0526
+INFO:__main__:   ✓ Segmentation head initialization looks good
+INFO:__main__:
+3. Testing data loader labels...
+INFO:__main__:   Unique labels in first batch: [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 13, 16, 255]
+INFO:__main__:   ✓ Found 13 ID classes in batch
+INFO:__main__:
+============================================================
+INFO:__main__:DIAGNOSTIC TESTS COMPLETE
+INFO:__main__:============================================================
+
+INFO:__main__:Initializing training components...
+/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:60: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+INFO:__main__:Training components initialized
+INFO:__main__:
+============================================================
+INFO:__main__:Epoch 1/150
+INFO:__main__:============================================================
+Training Epoch 1:   0%|                                                                                   | 0/3265 [00:00<?, ?it/s]ERROR:__main__:Loss computation error: Expected more than 1 value per channel when training, got input size torch.Size([1, 256, 1, 1])
+Training Epoch 1:   0%|                                                                                   | 0/3265 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 990, in <module>
+    main()
+  File "run_training.py", line 987, in main
+    trainer.train()
+  File "run_training.py", line 644, in train
+    loss.backward()
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/autograd/graph.py", line 769, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn

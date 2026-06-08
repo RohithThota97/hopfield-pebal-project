@@ -1,0 +1,916 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+2025-09-01 21:32:35,199 - INFO -
+Building memory with β = 16...
+2025-09-01 21:32:35,199 - INFO - Building memories from loader...
+2025-09-01 21:32:35,579 - INFO - Starting memory building with improved separation and diversity...
+Collecting Features (Improved): 100%|█████████████████████████████████████████████████| 408/408 [13:19<00:00,  1.96s/it]
+2025-09-01 21:45:54,907 - INFO - Label statistics - Found 254 in 153 batches, 255 in 408 batches
+2025-09-01 21:45:54,907 - INFO - Skipped 2246275 pixels with label 255 (ignore class)
+2025-09-01 21:46:23,652 - INFO - Class 0 sampling effectiveness ratio: 0.999
+2025-09-01 21:46:56,302 - INFO - Class 1 sampling effectiveness ratio: 1.005
+2025-09-01 21:47:23,017 - INFO - Class 2 sampling effectiveness ratio: 1.009
+2025-09-01 21:47:47,208 - INFO - Class 5 sampling effectiveness ratio: 1.009
+2025-09-01 21:48:19,257 - INFO - Class 7 sampling effectiveness ratio: 1.031
+2025-09-01 21:48:44,189 - INFO - Class 8 sampling effectiveness ratio: 1.009
+2025-09-01 21:49:09,928 - INFO - Class 10 sampling effectiveness ratio: 1.009
+2025-09-01 21:49:42,549 - INFO - Class 11 sampling effectiveness ratio: 1.017
+2025-09-01 21:50:09,629 - INFO - Class 13 sampling effectiveness ratio: 1.022
+2025-09-01 21:50:36,478 - INFO - Class 3 sampling effectiveness ratio: 1.003
+2025-09-01 21:51:08,866 - INFO - Class 4 sampling effectiveness ratio: 1.006
+2025-09-01 21:51:24,141 - INFO - Class 12 sampling effectiveness ratio: 1.007
+2025-09-01 21:51:51,186 - INFO - Class 18 sampling effectiveness ratio: 1.013
+2025-09-01 21:52:17,615 - INFO - Class 9 sampling effectiveness ratio: 1.006
+2025-09-01 21:52:28,509 - INFO - Class 6 sampling effectiveness ratio: 1.028
+2025-09-01 21:52:56,378 - INFO - Class 14 sampling effectiveness ratio: 1.007
+2025-09-01 21:53:05,273 - INFO - Class 17 sampling effectiveness ratio: 1.007
+2025-09-01 21:53:20,525 - INFO - Class 16 sampling effectiveness ratio: 1.001
+2025-09-01 21:53:36,149 - INFO - Class 15 sampling effectiveness ratio: 1.001
+2025-09-01 21:53:36,674 - INFO - Final memory ratio (AUX:ID): 0.40
+2025-09-01 21:53:36,685 - INFO - Memory separation - Ratio: 0.151, Cross-similarity: 0.334
+2025-09-01 21:53:36,685 - INFO - ID spread: 0.739, OOD spread: 0.835, Distance: 0.238
+2025-09-01 21:53:36,695 - INFO - Memory building completed in 1261.1 seconds
+2025-09-01 21:53:36,696 - INFO - Memory sizes - ID: 249767, OOD: 100000
+2025-09-01 21:53:36,697 - INFO - Memory norms - ID: 1.0000, OOD: 1.0000
+2025-09-01 21:53:36,711 - INFO - Energy check - Mean: 0.4040
+2025-09-01 21:53:36,766 - INFO - Monitoring - ID Mean: 0.736, OOD Mean: 0.837, Separation: 0.100
+2025-09-01 21:53:36,766 - WARNING - Low initial ID/OOD separation - check memory quality.
+2025-09-01 21:53:36,766 - INFO - HopfieldBoostingManager initialized with aligned beta=16, lambda_ood=0.5
+2025-09-01 21:53:36,766 - INFO - Memory built with β=16:
+2025-09-01 21:53:36,767 - INFO -  ID: 249767, AUX: 100000, Ratio: 0.40
+2025-09-01 21:53:40,561 - INFO - PixelWiseHopfieldTrainer initialization complete with β=16!
+
+================================================================================
+STARTING TRAINING WITH β CROSS-VAL AND SPATIAL SCALING
+================================================================================
+2025-09-01 21:53:40,562 - INFO -
+Starting Epoch 1/100
+2025-09-01 21:53:40,562 - INFO - ============================================================
+2025-09-01 21:53:40,562 - INFO -
+Updating Hopfield boosting weights at epoch 1...
+2025-09-01 21:53:42,247 - INFO - Weights updated successfully
+Training Epoch 1:   0%|                                                                         | 0/408 [00:00<?, ?it/s]2025-09-01 21:53:45,271 - INFO - Step 0: labels=[  0   1   2   3   4   5   7   8   9  10  11  12  13  15  17  18 255], OOD(254) count=0, Ignore(255) count=1159108, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-01 21:53:47,050 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 1:   0%|                              | 1/408 [00:04<32:44,  4.83s/it, L_CE=4.4695, L_OOD=0.0000, β=16.0]2025-09-01 21:53:47,244 - INFO - Step 1: labels=[  0   1   2   4   5   6   7   8   9  10  11  13  14  17  18 254 255], OOD(254) count=4413, Ignore(255) count=1073367, is_ood=tensor([False, False, False, False, False, False,  True, False])
+2025-09-01 21:53:48,969 - WARNING - Poor separation (0.024) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:   0%|▏                            | 2/408 [00:06<21:15,  3.14s/it, L_CE=4.5487, L_OOD=-0.0421, β=16.0]2025-09-01 21:53:49,227 - INFO - Step 2: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 254 255], OOD(254) count=246196, Ignore(255) count=688974, is_ood=tensor([False,  True, False, False, False, False, False, False])
+2025-09-01 21:53:50,948 - WARNING - Poor separation (-0.004) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:   1%|▏                             | 3/408 [00:08<17:34,  2.60s/it, L_CE=3.8166, L_OOD=0.0147, β=16.0]2025-09-01 21:53:51,219 - INFO - Step 3: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 255], OOD(254) count=0, Ignore(255) count=1669929, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   1%|▎                             | 4/408 [00:10<15:47,  2.34s/it, L_CE=3.8062, L_OOD=0.0000, β=16.0]2025-09-01 21:53:53,125 - INFO - Step 4: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14  15  18 254 255], OOD(254) count=357021, Ignore(255) count=1237786, is_ood=tensor([False, False, False,  True, False, False,  True, False])
+2025-09-01 21:53:54,859 - WARNING - Poor separation (-0.003) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:   1%|▎                             | 5/408 [00:12<14:50,  2.21s/it, L_CE=3.3417, L_OOD=0.0150, β=16.0]2025-09-01 21:53:55,114 - INFO - Step 5: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  18
+ 254 255], OOD(254) count=13710, Ignore(255) count=1465268, is_ood=tensor([False, False, False, False, False, False, False,  True])
+Training Epoch 1:   1%|▍                            | 6/408 [00:14<14:13,  2.12s/it, L_CE=2.6207, L_OOD=-0.3165, β=16.0]2025-09-01 21:53:57,019 - INFO - Step 6: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 255], OOD(254) count=0, Ignore(255) count=1034234, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   2%|▌                             | 7/408 [00:16<13:40,  2.05s/it, L_CE=2.2039, L_OOD=0.0000, β=16.0]2025-09-01 21:53:58,935 - INFO - Step 7: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  18 255], OOD(254) count=0, Ignore(255) count=1673941, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   2%|▌                             | 8/408 [00:18<13:22,  2.01s/it, L_CE=1.7394, L_OOD=0.0000, β=16.0]2025-09-01 21:54:00,826 - INFO - Step 8: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], OOD(254) count=0, Ignore(255) count=730201, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   2%|▋                             | 9/408 [00:20<13:07,  1.97s/it, L_CE=1.3052, L_OOD=0.0000, β=16.0]2025-09-01 21:54:02,727 - INFO - Step 9: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  17  18
+ 255], OOD(254) count=0, Ignore(255) count=771619, is_ood=tensor([False, False, False, False, False, False, False, False])
+Training Epoch 1:   2%|▋                            | 10/408 [00:22<12:56,  1.95s/it, L_CE=1.6072, L_OOD=0.0000, β=16.0]2025-09-01 21:54:06,250 - WARNING - Poor separation (0.079) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:   3%|▊                            | 12/408 [00:25<12:17,  1.86s/it, L_CE=0.8987, L_OOD=0.0000, β=16.0]2025-09-01 21:54:09,818 - WARNING - Poor separation (-0.077) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:   5%|█▍                           | 20/408 [00:40<11:41,  1.81s/it, L_CE=1.1051, L_OOD=0.0000, β=16.0]2025-09-01 21:54:24,288 - WARNING - Poor separation (0.077) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:   6%|█▋                           | 24/408 [00:47<11:38,  1.82s/it, L_CE=0.4936, L_OOD=0.0000, β=16.0]2025-09-01 21:54:31,605 - WARNING - Poor separation (-0.023) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:   6%|█▋                          | 25/408 [00:49<11:44,  1.84s/it, L_CE=0.3820, L_OOD=-0.0122, β=16.0]2025-09-01 21:54:33,493 - WARNING - Poor separation (0.072) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  13%|███▊                         | 53/408 [01:42<11:14,  1.90s/it, L_CE=0.2192, L_OOD=0.0000, β=16.0]2025-09-01 21:55:26,205 - WARNING - Poor separation (0.014) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  18%|████▉                       | 72/408 [02:18<10:54,  1.95s/it, L_CE=0.4010, L_OOD=-0.4961, β=16.0]2025-09-01 21:56:02,979 - WARNING - Poor separation (0.032) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  19%|█████▍                       | 76/408 [02:26<10:47,  1.95s/it, L_CE=0.2934, L_OOD=0.0000, β=16.0]2025-09-01 21:56:10,809 - WARNING - Poor separation (0.069) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  22%|██████▎                      | 89/408 [02:52<10:27,  1.97s/it, L_CE=0.2486, L_OOD=0.0000, β=16.0]2025-09-01 21:56:36,371 - WARNING - Poor separation (0.061) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  25%|██████▌                    | 100/408 [03:14<10:16,  2.00s/it, L_CE=0.3160, L_OOD=-1.3045, β=16.0]2025-09-01 21:56:58,319 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 1:  25%|██████▊                    | 103/408 [03:20<10:09,  2.00s/it, L_CE=0.3765, L_OOD=-2.3853, β=16.0]2025-09-01 21:57:04,307 - WARNING - Poor separation (0.098) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  29%|███████▋                   | 117/408 [03:48<09:50,  2.03s/it, L_CE=0.3761, L_OOD=-0.4291, β=16.0]2025-09-01 21:57:32,530 - INFO - CORRECTED Energy stats: β=16.0, min=0.3030, max=1.0000, mean=0.6624, pos_ratio=1.000
+2025-09-01 21:57:32,531 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 1:  39%|██████████▊                 | 158/408 [05:11<08:25,  2.02s/it, L_CE=0.1965, L_OOD=0.0000, β=16.0]2025-09-01 21:58:55,350 - WARNING - Poor separation (0.099) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  45%|████████████               | 183/408 [06:00<07:24,  1.98s/it, L_CE=0.2325, L_OOD=-1.2332, β=16.0]2025-09-01 21:59:44,959 - WARNING - Poor separation (-0.046) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  48%|█████████████▍              | 196/408 [06:26<06:56,  1.96s/it, L_CE=0.1853, L_OOD=0.0000, β=16.0]2025-09-01 22:00:10,598 - WARNING - Poor separation (0.042) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  49%|█████████████              | 198/408 [06:30<06:56,  1.99s/it, L_CE=0.2788, L_OOD=-0.5318, β=16.0]2025-09-01 22:00:14,603 - WARNING - Poor separation (0.023) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  49%|█████████████▋              | 200/408 [06:34<06:51,  1.98s/it, L_CE=0.3340, L_OOD=0.0000, β=16.0]2025-09-01 22:00:18,548 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 1:  50%|██████████████              | 205/408 [06:44<06:39,  1.97s/it, L_CE=0.1676, L_OOD=0.0000, β=16.0]2025-09-01 22:00:28,365 - WARNING - Poor separation (0.091) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  56%|███████████████▊            | 230/408 [07:33<05:48,  1.96s/it, L_CE=0.1674, L_OOD=0.0000, β=16.0]2025-09-01 22:01:17,292 - INFO - CORRECTED Energy stats: β=16.0, min=0.0203, max=0.9775, mean=0.2128, pos_ratio=1.000
+2025-09-01 22:01:17,293 - INFO - Applied imbalance weighting: ratio=3.29, weight=4.93
+2025-09-01 22:01:17,293 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 1:  61%|████████████████▍          | 249/408 [08:10<05:13,  1.97s/it, L_CE=0.2263, L_OOD=-0.3130, β=16.0]2025-09-01 22:01:54,485 - WARNING - Poor separation (0.021) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  61%|████████████████▌          | 250/408 [08:12<05:12,  1.98s/it, L_CE=0.2346, L_OOD=-0.3460, β=16.0]2025-09-01 22:01:56,491 - INFO - Step 250 Loss Debug:
+2025-09-01 22:01:56,492 - INFO -  CE: 0.2036
+2025-09-01 22:01:56,492 - INFO -  OOD: -2.4185
+2025-09-01 22:01:56,492 - INFO -  β: 16.00
+2025-09-01 22:01:56,493 - INFO -  ID: 23863, OOD(254): 96
+Training Epoch 1:  67%|██████████████████▊         | 275/408 [09:01<04:20,  1.96s/it, L_CE=0.1608, L_OOD=0.0000, β=16.0]2025-09-01 22:02:45,342 - WARNING - Poor separation (-0.112) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1:  74%|████████████████████▌       | 300/408 [09:49<03:30,  1.95s/it, L_CE=0.1904, L_OOD=0.0000, β=16.0]2025-09-01 22:03:34,045 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 1:  90%|████████████████████████▍  | 369/408 [12:04<01:16,  1.95s/it, L_CE=0.1905, L_OOD=-1.4843, β=16.0]2025-09-01 22:05:48,497 - INFO - CORRECTED Energy stats: β=16.0, min=0.4415, max=1.0000, mean=0.7740, pos_ratio=1.000
+2025-09-01 22:05:48,498 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 1:  98%|██████████████████████████▍| 400/408 [13:04<00:15,  1.96s/it, L_CE=0.1901, L_OOD=-1.5991, β=16.0]2025-09-01 22:06:48,933 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 1:  98%|███████████████████████████▌| 401/408 [13:06<00:13,  1.95s/it, L_CE=0.2279, L_OOD=0.0000, β=16.0]2025-09-01 22:06:50,872 - WARNING - Poor separation (0.081) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 1: 100%|████████████████████████████| 408/408 [13:20<00:00,  1.96s/it, L_CE=0.2144, L_OOD=0.0000, β=16.0]
+2025-09-01 22:07:02,760 - INFO - Epoch 1 - Avg CE: 0.3624, Avg OOD: -0.4248, β: 16
+2025-09-01 22:07:02,864 - INFO -
+Starting Epoch 2/100
+2025-09-01 22:07:02,865 - INFO - ============================================================
+2025-09-01 22:07:02,865 - INFO -
+Updating Hopfield boosting weights at epoch 2...
+2025-09-01 22:07:04,613 - INFO - Weights updated successfully
+Training Epoch 2:  12%|███▏                        | 47/408 [01:34<11:49,  1.97s/it, L_CE=0.1848, L_OOD=-1.1648, β=16.0]2025-09-01 22:08:40,916 - WARNING - Poor separation (-0.033) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  21%|█████▉                      | 86/408 [02:50<10:33,  1.97s/it, L_CE=0.2304, L_OOD=-2.0558, β=16.0]2025-09-01 22:09:57,340 - INFO - CORRECTED Energy stats: β=16.0, min=0.0279, max=1.0000, mean=0.4657, pos_ratio=1.000
+2025-09-01 22:09:57,340 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 2:  23%|██████▎                     | 92/408 [03:02<10:20,  1.96s/it, L_CE=0.2314, L_OOD=-0.4162, β=16.0]2025-09-01 22:10:09,094 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 2:  29%|████████▏                   | 119/408 [03:55<09:25,  1.96s/it, L_CE=0.1895, L_OOD=0.0000, β=16.0]2025-09-01 22:11:01,944 - WARNING - Poor separation (-0.023) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  29%|███████▉                   | 120/408 [03:57<09:27,  1.97s/it, L_CE=0.1532, L_OOD=-0.1820, β=16.0]2025-09-01 22:11:03,944 - WARNING - Poor separation (0.098) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  32%|████████▉                   | 131/408 [04:18<09:00,  1.95s/it, L_CE=0.1554, L_OOD=0.0000, β=16.0]2025-09-01 22:11:25,463 - WARNING - Poor separation (0.047) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  45%|████████████▏              | 185/408 [06:04<07:16,  1.96s/it, L_CE=0.1734, L_OOD=-1.1777, β=16.0]2025-09-01 22:13:11,040 - WARNING - Poor separation (0.031) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  47%|████████████▋              | 192/408 [06:18<07:05,  1.97s/it, L_CE=0.1632, L_OOD=-0.4738, β=16.0]2025-09-01 22:13:24,806 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 2:  54%|██████████████▌            | 220/408 [07:12<06:09,  1.96s/it, L_CE=0.1464, L_OOD=-0.8993, β=16.0]2025-09-01 22:14:19,439 - WARNING - Poor separation (-0.045) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  54%|██████████████▌            | 221/408 [07:14<06:10,  1.98s/it, L_CE=0.1858, L_OOD=-0.3625, β=16.0]2025-09-01 22:14:21,455 - INFO - CORRECTED Energy stats: β=16.0, min=0.0062, max=0.9999, mean=0.1468, pos_ratio=1.000
+2025-09-01 22:14:21,456 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 2:  58%|████████████████▎           | 237/408 [07:46<05:32,  1.95s/it, L_CE=0.1967, L_OOD=0.0000, β=16.0]2025-09-01 22:14:52,616 - WARNING - Poor separation (-0.054) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  66%|█████████████████▊         | 270/408 [08:50<04:30,  1.96s/it, L_CE=0.1720, L_OOD=-0.6845, β=16.0]2025-09-01 22:15:57,258 - WARNING - Poor separation (0.051) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  67%|██████████████████         | 272/408 [08:54<04:30,  1.99s/it, L_CE=0.2045, L_OOD=-0.5298, β=16.0]2025-09-01 22:16:01,273 - WARNING - Poor separation (0.069) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  71%|███████████████████▊        | 288/408 [09:26<03:55,  1.96s/it, L_CE=0.1597, L_OOD=0.0000, β=16.0]2025-09-01 22:16:32,624 - WARNING - Poor separation (-0.003) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  72%|███████████████████▎       | 292/408 [09:33<03:46,  1.96s/it, L_CE=0.1990, L_OOD=-0.8707, β=16.0]2025-09-01 22:16:40,471 - INFO - Step 700 Loss Debug:
+2025-09-01 22:16:40,471 - INFO -  CE: 0.1726
+2025-09-01 22:16:40,471 - INFO -  OOD: -0.6776
+2025-09-01 22:16:40,471 - INFO -  β: 16.00
+2025-09-01 22:16:40,471 - INFO -  ID: 26054, OOD(254): 436
+Training Epoch 2:  72%|███████████████████▍       | 293/408 [09:35<03:45,  1.96s/it, L_CE=0.1726, L_OOD=-0.6776, β=16.0]2025-09-01 22:16:42,430 - WARNING - Poor separation (0.062) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  74%|███████████████████▉       | 302/408 [09:53<03:28,  1.96s/it, L_CE=0.2222, L_OOD=-1.6950, β=16.0]2025-09-01 22:17:00,060 - WARNING - Poor separation (0.075) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  80%|█████████████████████▋     | 327/408 [10:42<02:38,  1.96s/it, L_CE=0.1579, L_OOD=-0.5884, β=16.0]2025-09-01 22:17:49,025 - INFO - CORRECTED Energy stats: β=16.0, min=0.3897, max=1.0000, mean=0.8435, pos_ratio=1.000
+2025-09-01 22:17:49,025 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 2:  84%|██████████████████████▋    | 342/408 [11:12<02:09,  1.97s/it, L_CE=0.1735, L_OOD=-0.6752, β=16.0]2025-09-01 22:18:18,596 - INFO - Step 750 Loss Debug:
+2025-09-01 22:18:18,597 - INFO -  CE: 0.2115
+2025-09-01 22:18:18,597 - INFO -  OOD: -2.3165
+2025-09-01 22:18:18,597 - INFO -  β: 16.00
+2025-09-01 22:18:18,597 - INFO -  ID: 28439, OOD(254): 84
+Training Epoch 2:  91%|█████████████████████████▌  | 372/408 [12:10<01:10,  1.95s/it, L_CE=0.1462, L_OOD=0.0000, β=16.0]2025-09-01 22:19:17,212 - WARNING - Poor separation (0.037) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  91%|████████████████████████▋  | 373/408 [12:12<01:08,  1.96s/it, L_CE=0.1705, L_OOD=-0.4267, β=16.0]2025-09-01 22:19:19,212 - WARNING - Poor separation (0.070) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 2:  96%|██████████████████████████▉ | 392/408 [12:49<00:31,  1.96s/it, L_CE=0.2223, L_OOD=0.0000, β=16.0]2025-09-01 22:19:56,435 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 2: 100%|████████████████████████████| 408/408 [13:21<00:00,  1.96s/it, L_CE=0.1644, L_OOD=0.0000, β=16.0]
+2025-09-01 22:20:25,868 - INFO - Epoch 2 - Avg CE: 0.1880, Avg OOD: -0.4891, β: 16
+2025-09-01 22:20:25,976 - INFO -
+Starting Epoch 3/100
+2025-09-01 22:20:25,976 - INFO - ============================================================
+2025-09-01 22:20:25,976 - INFO -
+Updating Hopfield boosting weights at epoch 3...
+2025-09-01 22:20:27,725 - INFO - Weights updated successfully
+Training Epoch 3:  10%|██▊                         | 41/408 [01:22<12:04,  1.97s/it, L_CE=0.1565, L_OOD=-2.4126, β=16.0]2025-09-01 22:21:51,970 - INFO - CORRECTED Energy stats: β=16.0, min=0.1229, max=1.0000, mean=0.4202, pos_ratio=1.000
+2025-09-01 22:21:51,971 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 3:  21%|█████▊                      | 84/408 [02:46<10:39,  1.97s/it, L_CE=0.2659, L_OOD=-0.6890, β=16.0]2025-09-01 22:23:16,478 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 3:  39%|██████████▌                | 159/408 [05:13<08:07,  1.96s/it, L_CE=0.1857, L_OOD=-2.3116, β=16.0]2025-09-01 22:25:43,046 - INFO - CORRECTED Energy stats: β=16.0, min=0.0428, max=0.9999, mean=0.2775, pos_ratio=1.000
+2025-09-01 22:25:43,046 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 3:  45%|████████████▋               | 184/408 [06:02<07:16,  1.95s/it, L_CE=0.1458, L_OOD=0.0000, β=16.0]2025-09-01 22:26:31,980 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 3:  57%|████████████████            | 234/408 [07:40<05:38,  1.95s/it, L_CE=0.1586, L_OOD=0.0000, β=16.0]2025-09-01 22:28:09,853 - INFO - Step 1050 Loss Debug:
+2025-09-01 22:28:09,853 - INFO -  CE: 0.1711
+2025-09-01 22:28:09,853 - INFO -  OOD: -0.3002
+2025-09-01 22:28:09,853 - INFO -  β: 16.00
+2025-09-01 22:28:09,853 - INFO -  ID: 24193, OOD(254): 1053
+Training Epoch 3:  58%|███████████████▋           | 237/408 [07:46<05:36,  1.97s/it, L_CE=0.2663, L_OOD=-0.4363, β=16.0]2025-09-01 22:28:15,756 - WARNING - Poor separation (0.094) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 3:  70%|██████████████████▊        | 284/408 [09:17<04:04,  1.97s/it, L_CE=0.1976, L_OOD=-1.5931, β=16.0]2025-09-01 22:29:47,648 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 3:  73%|████████████████████▎       | 296/408 [09:41<03:37,  1.94s/it, L_CE=0.1813, L_OOD=0.0000, β=16.0]2025-09-01 22:30:11,010 - INFO - CORRECTED Energy stats: β=16.0, min=0.6565, max=1.0000, mean=0.9044, pos_ratio=1.000
+2025-09-01 22:30:11,010 - WARNING - Poor separation (0.010) at fixed β=8 - consider manual adjustment if persists
+2025-09-01 22:30:11,010 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0902
+Training Epoch 3:  85%|███████████████████████▊    | 347/408 [11:20<01:58,  1.94s/it, L_CE=0.0998, L_OOD=0.0000, β=16.0]2025-09-01 22:31:50,561 - WARNING - Poor separation (0.073) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 3:  94%|██████████████████████████▎ | 384/408 [12:33<00:46,  1.96s/it, L_CE=0.1532, L_OOD=0.0000, β=16.0]2025-09-01 22:33:02,914 - INFO - Step 1200 Loss Debug:
+2025-09-01 22:33:02,915 - INFO -  CE: 0.1695
+2025-09-01 22:33:02,915 - INFO -  OOD: -2.5697
+2025-09-01 22:33:02,915 - INFO -  β: 16.00
+2025-09-01 22:33:02,916 - INFO -  ID: 23914, OOD(254): 97
+Training Epoch 3:  98%|██████████████████████████▎| 398/408 [13:00<00:19,  1.96s/it, L_CE=0.1514, L_OOD=-2.5038, β=16.0]2025-09-01 22:33:30,260 - WARNING - Poor separation (0.092) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 3: 100%|████████████████████████████| 408/408 [13:20<00:00,  1.96s/it, L_CE=0.1620, L_OOD=0.0000, β=16.0]
+2025-09-01 22:33:48,088 - INFO - Epoch 3 - Avg CE: 0.1719, Avg OOD: -0.4878, β: 16
+2025-09-01 22:33:48,197 - INFO -
+Starting Epoch 4/100
+2025-09-01 22:33:48,197 - INFO - ============================================================
+2025-09-01 22:33:48,197 - INFO -
+Updating Hopfield boosting weights at epoch 4...
+2025-09-01 22:33:49,944 - INFO - Weights updated successfully
+Training Epoch 4:   3%|▉                           | 13/408 [00:26<12:52,  1.96s/it, L_CE=0.2050, L_OOD=-1.1891, β=16.0]2025-09-01 22:34:18,808 - INFO - CORRECTED Energy stats: β=16.0, min=0.1289, max=1.0000, mean=0.7007, pos_ratio=1.000
+2025-09-01 22:34:18,808 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 4:  19%|█████▏                      | 76/408 [02:30<10:49,  1.96s/it, L_CE=0.1877, L_OOD=-2.6108, β=16.0]2025-09-01 22:36:22,359 - WARNING - Poor separation (-0.073) at fixed β=8 - consider manual adjustment if persists
+2025-09-01 22:36:22,385 - INFO - Step 1300 Loss Debug:
+2025-09-01 22:36:22,385 - INFO -  CE: 0.1998
+2025-09-01 22:36:22,385 - INFO -  OOD: -0.1237
+2025-09-01 22:36:22,385 - INFO -  β: 16.00
+2025-09-01 22:36:22,385 - INFO -  ID: 25742, OOD(254): 1000
+Training Epoch 4:  25%|███████                     | 102/408 [03:21<09:56,  1.95s/it, L_CE=0.1860, L_OOD=0.0000, β=16.0]2025-09-01 22:37:13,362 - WARNING - Poor separation (0.005) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 4:  28%|███████▌                   | 115/408 [03:46<09:33,  1.96s/it, L_CE=0.2114, L_OOD=-0.6273, β=16.0]2025-09-01 22:37:38,789 - INFO - CORRECTED Energy stats: β=16.0, min=0.0002, max=1.0000, mean=0.0713, pos_ratio=1.000
+2025-09-01 22:37:38,790 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 4:  32%|████████▌                  | 130/408 [04:16<09:03,  1.95s/it, L_CE=0.1158, L_OOD=-1.3303, β=16.0]2025-09-01 22:38:08,098 - WARNING - Poor separation (0.054) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 4:  38%|██████████▎                | 156/408 [05:06<08:13,  1.96s/it, L_CE=0.1510, L_OOD=-0.6391, β=16.0]2025-09-01 22:38:58,863 - WARNING - Poor separation (-0.003) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 4:  43%|███████████▋               | 176/408 [05:46<07:34,  1.96s/it, L_CE=0.1825, L_OOD=-1.7194, β=16.0]2025-09-01 22:39:38,135 - INFO - Step 1400 Loss Debug:
+2025-09-01 22:39:38,135 - INFO -  CE: 0.2053
+2025-09-01 22:39:38,135 - INFO -  OOD: -0.6106
+2025-09-01 22:39:38,135 - INFO -  β: 16.00
+2025-09-01 22:39:38,135 - INFO -  ID: 24901, OOD(254): 480
+Training Epoch 4:  46%|████████████▉               | 189/408 [06:11<07:05,  1.94s/it, L_CE=0.1897, L_OOD=0.0000, β=16.0]2025-09-01 22:40:03,488 - WARNING - Poor separation (0.028) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 4:  59%|████████████████▍           | 240/408 [07:51<05:27,  1.95s/it, L_CE=0.1292, L_OOD=0.0000, β=16.0]2025-09-01 22:41:42,999 - WARNING - Poor separation (-0.096) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 4:  65%|██████████████████          | 264/408 [08:37<04:40,  1.95s/it, L_CE=0.1586, L_OOD=0.0000, β=16.0]2025-09-01 22:42:29,749 - INFO - CORRECTED Energy stats: β=16.0, min=0.0438, max=0.9993, mean=0.2808, pos_ratio=1.000
+2025-09-01 22:42:29,750 - INFO - Applied imbalance weighting: ratio=8.13, weight=10.00
+2025-09-01 22:42:29,750 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 4:  68%|██████████████████▎        | 276/408 [09:01<04:18,  1.96s/it, L_CE=0.1348, L_OOD=-0.3678, β=16.0]2025-09-01 22:42:53,287 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 4:  87%|████████████████████████▏   | 353/408 [11:31<01:47,  1.95s/it, L_CE=0.1644, L_OOD=0.0000, β=16.0]2025-09-01 22:45:23,741 - WARNING - Poor separation (0.045) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 4:  92%|████████████████████████▉  | 376/408 [12:16<01:02,  1.96s/it, L_CE=0.1525, L_OOD=-0.6145, β=16.0]2025-09-01 22:46:08,644 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 4:  96%|██████████████████████████▊ | 391/408 [12:46<00:33,  1.96s/it, L_CE=0.1288, L_OOD=0.0000, β=16.0]2025-09-01 22:46:38,008 - INFO - CORRECTED Energy stats: β=16.0, min=0.2975, max=1.0000, mean=0.7361, pos_ratio=1.000
+2025-09-01 22:46:38,008 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 4: 100%|████████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1713, L_OOD=0.0000, β=16.0]
+2025-09-01 22:47:09,309 - INFO - Epoch 4 - Avg CE: 0.1644, Avg OOD: -0.4808, β: 16
+2025-09-01 22:47:09,418 - INFO -
+Starting Epoch 5/100
+2025-09-01 22:47:09,418 - INFO - ============================================================
+2025-09-01 22:47:09,418 - INFO -
+Updating Hopfield boosting weights at epoch 5...
+2025-09-01 22:47:11,167 - INFO - Weights updated successfully
+Training Epoch 5:  13%|███▊                         | 54/408 [01:47<11:29,  1.95s/it, L_CE=0.1702, L_OOD=0.0000, β=16.0]2025-09-01 22:49:00,859 - WARNING - Poor separation (0.099) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 5:  17%|████▊                        | 68/408 [02:15<11:07,  1.96s/it, L_CE=0.1209, L_OOD=0.0000, β=16.0]2025-09-01 22:49:28,396 - INFO - Step 1700 Loss Debug:
+2025-09-01 22:49:28,396 - INFO -  CE: 0.1215
+2025-09-01 22:49:28,397 - INFO -  OOD: -2.5538
+2025-09-01 22:49:28,397 - INFO -  β: 16.00
+2025-09-01 22:49:28,397 - INFO -  ID: 24913, OOD(254): 127
+Training Epoch 5:  31%|████████▋                   | 127/408 [04:10<09:04,  1.94s/it, L_CE=0.2006, L_OOD=0.0000, β=16.0]2025-09-01 22:51:23,546 - INFO - CORRECTED Energy stats: β=16.0, min=0.0034, max=1.0000, mean=0.2811, pos_ratio=1.000
+2025-09-01 22:51:23,547 - INFO - Applied imbalance weighting: ratio=4.72, weight=7.08
+2025-09-01 22:51:23,547 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 5:  36%|█████████▋                 | 147/408 [04:49<08:32,  1.96s/it, L_CE=0.1129, L_OOD=-0.5803, β=16.0]2025-09-01 22:52:02,676 - WARNING - Poor separation (0.080) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 5:  40%|███████████▎                | 165/408 [05:24<07:55,  1.96s/it, L_CE=0.1600, L_OOD=0.0000, β=16.0]2025-09-01 22:52:37,862 - WARNING - Poor separation (0.068) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 5:  41%|███████████▌                | 168/408 [05:30<07:50,  1.96s/it, L_CE=0.1584, L_OOD=0.0000, β=16.0]2025-09-01 22:52:43,778 - INFO - Step 1800 Loss Debug:
+2025-09-01 22:52:43,779 - INFO -  CE: 0.1507
+2025-09-01 22:52:43,779 - INFO -  OOD: -2.6003
+2025-09-01 22:52:43,779 - INFO -  β: 16.00
+2025-09-01 22:52:43,779 - INFO -  ID: 25676, OOD(254): 91
+Training Epoch 5:  41%|███████████▏               | 169/408 [05:32<07:48,  1.96s/it, L_CE=0.1507, L_OOD=-2.6003, β=16.0]2025-09-01 22:52:45,735 - WARNING - Poor separation (0.082) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 5:  59%|████████████████▌           | 241/408 [07:53<05:25,  1.95s/it, L_CE=0.1578, L_OOD=0.0000, β=16.0]2025-09-01 22:55:06,412 - INFO - CORRECTED Energy stats: β=16.0, min=0.2283, max=1.0000, mean=0.5277, pos_ratio=1.000
+2025-09-01 22:55:06,412 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 5:  66%|█████████████████▋         | 268/408 [08:46<04:35,  1.97s/it, L_CE=0.1160, L_OOD=-0.5815, β=16.0]2025-09-01 22:55:59,358 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 5:  76%|█████████████████████▍      | 312/408 [10:12<03:07,  1.95s/it, L_CE=0.0981, L_OOD=0.0000, β=16.0]2025-09-01 22:57:25,245 - WARNING - Poor separation (0.020) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 5:  78%|█████████████████████▊      | 318/408 [10:23<02:55,  1.95s/it, L_CE=0.2776, L_OOD=0.0000, β=16.0]2025-09-01 22:57:37,007 - INFO - Step 1950 Loss Debug:
+2025-09-01 22:57:37,007 - INFO -  CE: 0.1516
+2025-09-01 22:57:37,008 - INFO -  OOD: -0.8538
+2025-09-01 22:57:37,008 - INFO -  β: 16.00
+2025-09-01 22:57:37,008 - INFO -  ID: 27035, OOD(254): 331
+Training Epoch 5:  87%|████████████████████████▎   | 355/408 [11:36<01:43,  1.95s/it, L_CE=0.1494, L_OOD=0.0000, β=16.0]2025-09-01 22:58:49,297 - WARNING - Poor separation (0.048) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 5:  88%|███████████████████████▋   | 357/408 [11:40<01:40,  1.96s/it, L_CE=0.1689, L_OOD=-1.9204, β=16.0]2025-09-01 22:58:53,257 - INFO - CORRECTED Energy stats: β=16.0, min=0.1112, max=1.0000, mean=0.4887, pos_ratio=1.000
+2025-09-01 22:58:53,257 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 5:  90%|█████████████████████████▎  | 368/408 [12:01<01:18,  1.95s/it, L_CE=0.1376, L_OOD=0.0000, β=16.0]2025-09-01 22:59:14,762 - INFO - Step 2000 Loss Debug:
+2025-09-01 22:59:14,763 - INFO -  CE: 0.1484
+2025-09-01 22:59:14,763 - INFO -  OOD: -0.4829
+2025-09-01 22:59:14,763 - INFO -  β: 16.00
+2025-09-01 22:59:14,763 - INFO -  ID: 27071, OOD(254): 403
+Training Epoch 5: 100%|███████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1793, L_OOD=-0.5506, β=16.0]
+2025-09-01 23:00:31,048 - INFO - Epoch 5 - Avg CE: 0.1605, Avg OOD: -0.5061, β: 16
+2025-09-01 23:00:31,049 - INFO -
+Running evaluation with β=16...
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([249767, 256])
+AUX memory shape: torch.Size([100000, 256])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 59867/2097152 (2.85%)
+Image 0: in=3480, ood=121
+  Scores shape: torch.Size([4096]), Labels shape: torch.Size([4096])
+Image 1: in=3478, ood=90
+  Scores shape: torch.Size([4096]), Labels shape: torch.Size([4096])
+Image 2: in=3524, ood=36
+  Scores shape: torch.Size([4096]), Labels shape: torch.Size([4096])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 101478, Out: 1780
+In-scores range: [0.207, 0.294]
+Out-scores range: [0.219, 0.292]
+✅ AUROC: 0.1612
+✅ FPR95: 0.9944
+✅ AUPRS: 0.9573
+2025-09-01 23:00:49,314 - INFO -
+Evaluation Summary for Epoch 5:
+2025-09-01 23:00:49,314 - INFO -  AUROC: 0.1612
+2025-09-01 23:00:49,315 - INFO -  FPR95: 0.9944
+2025-09-01 23:00:49,315 - INFO -  AUPRS: 0.9573
+2025-09-01 23:00:49,413 - INFO -
+Starting Epoch 6/100
+2025-09-01 23:00:49,414 - INFO - ============================================================
+2025-09-01 23:00:49,414 - INFO -
+Updating Hopfield boosting weights at epoch 6...
+2025-09-01 23:00:51,183 - INFO - Weights updated successfully
+Training Epoch 6:  15%|████                        | 60/408 [01:59<11:25,  1.97s/it, L_CE=0.1400, L_OOD=-1.4328, β=16.0]2025-09-01 23:02:52,498 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 6:  18%|█████▏                      | 75/408 [02:28<10:56,  1.97s/it, L_CE=0.1298, L_OOD=-0.5900, β=16.0]2025-09-01 23:03:21,972 - INFO - CORRECTED Energy stats: β=16.0, min=0.3173, max=1.0000, mean=0.7356, pos_ratio=1.000
+2025-09-01 23:03:21,972 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 6:  27%|███████▌                    | 110/408 [03:37<09:42,  1.95s/it, L_CE=0.3133, L_OOD=0.0000, β=16.0]2025-09-01 23:04:30,393 - INFO - Step 2150 Loss Debug:
+2025-09-01 23:04:30,393 - INFO -  CE: 0.1436
+2025-09-01 23:04:30,394 - INFO -  OOD: -0.4049
+2025-09-01 23:04:30,394 - INFO -  β: 16.00
+2025-09-01 23:04:30,394 - INFO -  ID: 26029, OOD(254): 943
+Training Epoch 6:  28%|███████▊                    | 113/408 [03:43<09:39,  1.97s/it, L_CE=0.1711, L_OOD=0.0000, β=16.0]2025-09-01 23:04:36,299 - WARNING - Poor separation (0.070) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 6:  39%|██████████▉                 | 160/408 [05:15<08:02,  1.95s/it, L_CE=0.1854, L_OOD=0.0000, β=16.0]2025-09-01 23:06:08,282 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 6:  47%|████████████▊              | 193/408 [06:19<07:02,  1.97s/it, L_CE=0.1395, L_OOD=-0.5725, β=16.0]2025-09-01 23:07:12,959 - INFO - CORRECTED Energy stats: β=16.0, min=0.2986, max=1.0000, mean=0.6395, pos_ratio=1.000
+2025-09-01 23:07:12,959 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 6:  49%|█████████████▏             | 200/408 [06:33<06:47,  1.96s/it, L_CE=0.1350, L_OOD=-0.5939, β=16.0]2025-09-01 23:07:26,665 - WARNING - Poor separation (0.064) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 6:  64%|█████████████████▏         | 260/408 [08:30<04:50,  1.96s/it, L_CE=0.1211, L_OOD=-1.5454, β=16.0]2025-09-01 23:09:23,939 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 6:  71%|███████████████████▊        | 289/408 [09:27<03:51,  1.95s/it, L_CE=0.1290, L_OOD=0.0000, β=16.0]2025-09-01 23:10:20,509 - WARNING - Poor separation (-0.019) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 6:  74%|███████████████████▊       | 300/408 [09:48<03:32,  1.97s/it, L_CE=0.1135, L_OOD=-1.1248, β=16.0]2025-09-01 23:10:42,069 - WARNING - Poor separation (0.028) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 6:  76%|█████████████████████▎      | 310/408 [10:08<03:10,  1.95s/it, L_CE=0.1489, L_OOD=0.0000, β=16.0]2025-09-01 23:11:01,657 - INFO - CORRECTED Energy stats: β=16.0, min=0.1734, max=1.0000, mean=0.4722, pos_ratio=1.000
+2025-09-01 23:11:01,658 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+2025-09-01 23:11:01,676 - INFO - Step 2350 Loss Debug:
+2025-09-01 23:11:01,677 - INFO -  CE: 0.1490
+2025-09-01 23:11:01,677 - INFO -  OOD: -0.6654
+2025-09-01 23:11:01,677 - INFO -  β: 16.00
+2025-09-01 23:11:01,677 - INFO -  ID: 28804, OOD(254): 584
+Training Epoch 6:  76%|████████████████████▋      | 312/408 [10:12<03:07,  1.96s/it, L_CE=0.1187, L_OOD=-2.1752, β=16.0]2025-09-01 23:11:05,598 - WARNING - Poor separation (-0.076) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 6:  79%|██████████████████████▏     | 324/408 [10:35<02:43,  1.95s/it, L_CE=0.1618, L_OOD=0.0000, β=16.0]2025-09-01 23:11:29,071 - WARNING - Poor separation (0.043) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 6:  88%|███████████████████████▊   | 360/408 [11:46<01:34,  1.97s/it, L_CE=0.1293, L_OOD=-0.5032, β=16.0]2025-09-01 23:12:39,508 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 6: 100%|████████████████████████████| 408/408 [13:20<00:00,  1.96s/it, L_CE=0.1535, L_OOD=0.0000, β=16.0]
+2025-09-01 23:14:11,401 - INFO - Epoch 6 - Avg CE: 0.1604, Avg OOD: -0.5428, β: 16
+2025-09-01 23:14:11,506 - INFO -
+Starting Epoch 7/100
+2025-09-01 23:14:11,506 - INFO - ============================================================
+2025-09-01 23:14:11,506 - INFO -
+Updating Hopfield boosting weights at epoch 7...
+2025-09-01 23:14:13,252 - INFO - Weights updated successfully
+Training Epoch 7:   0%|▏                             | 2/408 [00:05<18:21,  2.71s/it, L_CE=0.1770, L_OOD=0.0000, β=16.0]2025-09-01 23:14:20,952 - INFO - Step 2450 Loss Debug:
+2025-09-01 23:14:20,953 - INFO -  CE: 0.1528
+2025-09-01 23:14:20,953 - INFO -  OOD: -1.2640
+2025-09-01 23:14:20,953 - INFO -  β: 16.00
+2025-09-01 23:14:20,953 - INFO -  ID: 25038, OOD(254): 286
+Training Epoch 7:   4%|█                            | 15/408 [00:31<12:48,  1.96s/it, L_CE=0.1699, L_OOD=0.0000, β=16.0]2025-09-01 23:14:46,201 - WARNING - Poor separation (0.050) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:   8%|██▍                          | 34/408 [01:08<12:12,  1.96s/it, L_CE=0.1541, L_OOD=0.0000, β=16.0]2025-09-01 23:15:23,545 - INFO - CORRECTED Energy stats: β=16.0, min=0.0049, max=1.0000, mean=0.1721, pos_ratio=1.000
+2025-09-01 23:15:23,546 - INFO - Applied imbalance weighting: ratio=6.90, weight=10.00
+2025-09-01 23:15:23,546 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 7:  12%|███▌                         | 50/408 [01:39<11:37,  1.95s/it, L_CE=0.1157, L_OOD=0.0000, β=16.0]2025-09-01 23:15:54,793 - WARNING - Poor separation (0.087) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:  13%|███▋                         | 52/408 [01:43<11:38,  1.96s/it, L_CE=0.1413, L_OOD=0.0000, β=16.0]2025-09-01 23:15:58,762 - INFO - Step 2500 Loss Debug:
+2025-09-01 23:15:58,762 - INFO -  CE: 0.1627
+2025-09-01 23:15:58,763 - INFO -  OOD: -2.7135
+2025-09-01 23:15:58,763 - INFO -  β: 16.00
+2025-09-01 23:15:58,763 - INFO -  ID: 26955, OOD(254): 107
+Training Epoch 7:  16%|████▍                       | 64/408 [02:07<11:18,  1.97s/it, L_CE=0.1625, L_OOD=-0.4504, β=16.0]2025-09-01 23:16:22,313 - WARNING - Poor separation (0.058) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:  19%|█████▎                      | 77/408 [02:32<10:48,  1.96s/it, L_CE=0.1879, L_OOD=-2.5458, β=16.0]2025-09-01 23:16:47,741 - WARNING - Poor separation (0.021) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:  37%|██████████▍                 | 152/408 [04:59<08:19,  1.95s/it, L_CE=0.1743, L_OOD=0.0000, β=16.0]2025-09-01 23:19:14,295 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 7:  39%|██████████▊                 | 158/408 [05:10<08:11,  1.97s/it, L_CE=0.1178, L_OOD=0.0000, β=16.0]2025-09-01 23:19:26,093 - INFO - CORRECTED Energy stats: β=16.0, min=0.7978, max=1.0000, mean=0.9692, pos_ratio=1.000
+2025-09-01 23:19:26,093 - WARNING - Poor separation (0.006) at fixed β=8 - consider manual adjustment if persists
+2025-09-01 23:19:26,093 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0942
+Training Epoch 7:  39%|██████████▌                | 159/408 [05:12<08:12,  1.98s/it, L_CE=0.1919, L_OOD=-0.5151, β=16.0]2025-09-01 23:19:28,092 - WARNING - Poor separation (0.082) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:  40%|███████████                 | 162/408 [05:18<08:03,  1.97s/it, L_CE=0.1301, L_OOD=0.0000, β=16.0]2025-09-01 23:19:33,987 - WARNING - Poor separation (0.083) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:  50%|█████████████▊              | 202/408 [06:37<06:40,  1.94s/it, L_CE=0.1979, L_OOD=0.0000, β=16.0]2025-09-01 23:20:52,232 - INFO - Step 2650 Loss Debug:
+2025-09-01 23:20:52,232 - INFO -  CE: 0.1440
+2025-09-01 23:20:52,232 - INFO -  OOD: -0.5618
+2025-09-01 23:20:52,232 - INFO -  β: 16.00
+2025-09-01 23:20:52,232 - INFO -  ID: 27840, OOD(254): 774
+Training Epoch 7:  50%|█████████████▍             | 203/408 [06:39<06:41,  1.96s/it, L_CE=0.1440, L_OOD=-0.5618, β=16.0]2025-09-01 23:20:54,199 - WARNING - Poor separation (0.084) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:  55%|███████████████▎            | 224/408 [07:20<06:00,  1.96s/it, L_CE=0.1412, L_OOD=0.0000, β=16.0]2025-09-01 23:21:35,255 - WARNING - Poor separation (0.046) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:  62%|█████████████████▎          | 252/408 [08:14<05:04,  1.95s/it, L_CE=0.1158, L_OOD=0.0000, β=16.0]2025-09-01 23:22:29,909 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 7:  69%|███████████████████▎        | 282/408 [09:13<04:05,  1.95s/it, L_CE=0.1417, L_OOD=0.0000, β=16.0]2025-09-01 23:23:28,591 - INFO - CORRECTED Energy stats: β=16.0, min=0.2874, max=1.0000, mean=0.5360, pos_ratio=1.000
+2025-09-01 23:23:28,592 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 7:  74%|███████████████████▉       | 302/408 [09:52<03:28,  1.97s/it, L_CE=0.2141, L_OOD=-0.4623, β=16.0]2025-09-01 23:24:07,699 - INFO - Step 2750 Loss Debug:
+2025-09-01 23:24:07,700 - INFO -  CE: 0.1466
+2025-09-01 23:24:07,700 - INFO -  OOD: -0.8992
+2025-09-01 23:24:07,700 - INFO -  β: 16.00
+2025-09-01 23:24:07,700 - INFO -  ID: 27291, OOD(254): 107
+Training Epoch 7:  86%|████████████████████████▏   | 352/408 [11:30<01:49,  1.95s/it, L_CE=0.1196, L_OOD=0.0000, β=16.0]2025-09-01 23:25:45,322 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 7:  89%|████████████████████████▉   | 363/408 [11:51<01:27,  1.95s/it, L_CE=0.1519, L_OOD=0.0000, β=16.0]2025-09-01 23:26:06,888 - WARNING - Poor separation (0.095) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:  93%|█████████████████████████▏ | 381/408 [12:26<00:52,  1.96s/it, L_CE=0.1382, L_OOD=-1.5636, β=16.0]2025-09-01 23:26:42,145 - WARNING - Poor separation (0.039) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 7:  99%|███████████████████████████▌| 402/408 [13:07<00:11,  1.95s/it, L_CE=0.1662, L_OOD=0.0000, β=16.0]2025-09-01 23:27:23,105 - INFO - Step 2850 Loss Debug:
+2025-09-01 23:27:23,106 - INFO -  CE: 0.1755
+2025-09-01 23:27:23,106 - INFO -  OOD: -2.2933
+2025-09-01 23:27:23,106 - INFO -  β: 16.00
+2025-09-01 23:27:23,107 - INFO -  ID: 26979, OOD(254): 57
+Training Epoch 7:  99%|██████████████████████████▋| 404/408 [13:11<00:07,  1.96s/it, L_CE=0.1553, L_OOD=-1.4061, β=16.0]2025-09-01 23:27:27,034 - INFO - CORRECTED Energy stats: β=16.0, min=0.0323, max=1.0000, mean=0.2749, pos_ratio=1.000
+2025-09-01 23:27:27,034 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 7: 100%|████████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1736, L_OOD=0.0000, β=16.0]
+2025-09-01 23:27:33,048 - INFO - Epoch 7 - Avg CE: 0.1583, Avg OOD: -0.5260, β: 16
+2025-09-01 23:27:33,154 - INFO -
+Starting Epoch 8/100
+2025-09-01 23:27:33,154 - INFO - ============================================================
+2025-09-01 23:27:33,154 - INFO -
+Updating Hopfield boosting weights at epoch 8...
+2025-09-01 23:27:34,901 - INFO - Weights updated successfully
+Training Epoch 8:   2%|▋                            | 10/408 [00:21<13:00,  1.96s/it, L_CE=0.1602, L_OOD=0.0000, β=16.0]2025-09-01 23:27:58,377 - WARNING - Poor separation (0.017) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8:  11%|███▏                         | 44/408 [01:28<11:52,  1.96s/it, L_CE=0.1458, L_OOD=0.0000, β=16.0]2025-09-01 23:29:04,954 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 8:  14%|████                        | 59/408 [01:57<11:25,  1.96s/it, L_CE=0.2559, L_OOD=-0.6422, β=16.0]2025-09-01 23:29:34,309 - WARNING - Poor separation (-0.008) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8:  25%|██████▌                    | 100/408 [03:17<10:04,  1.96s/it, L_CE=0.1482, L_OOD=-1.7456, β=16.0]2025-09-01 23:30:54,653 - WARNING - Poor separation (0.020) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8:  27%|███████▎                   | 111/408 [03:39<09:39,  1.95s/it, L_CE=0.1493, L_OOD=-1.6372, β=16.0]2025-09-01 23:31:16,151 - WARNING - Poor separation (0.040) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8:  30%|████████▌                   | 124/408 [04:04<09:15,  1.96s/it, L_CE=0.1473, L_OOD=0.0000, β=16.0]2025-09-01 23:31:41,589 - INFO - CORRECTED Energy stats: β=16.0, min=0.0068, max=1.0000, mean=0.0955, pos_ratio=1.000
+2025-09-01 23:31:41,589 - INFO - Applied imbalance weighting: ratio=15.38, weight=10.00
+2025-09-01 23:31:41,589 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 8:  35%|█████████▉                  | 144/408 [04:43<08:34,  1.95s/it, L_CE=0.1494, L_OOD=0.0000, β=16.0]2025-09-01 23:32:20,721 - INFO - Step 3000 Loss Debug:
+2025-09-01 23:32:20,721 - INFO -  CE: 0.1902
+2025-09-01 23:32:20,722 - INFO -  OOD: -1.4324
+2025-09-01 23:32:20,722 - INFO -  β: 16.00
+2025-09-01 23:32:20,722 - INFO -  ID: 22978, OOD(254): 14
+Training Epoch 8:  46%|████████████▍              | 188/408 [06:09<07:10,  1.96s/it, L_CE=0.2422, L_OOD=-2.7142, β=16.0]2025-09-01 23:33:46,722 - WARNING - Poor separation (0.015) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8:  47%|█████████████               | 191/408 [06:15<07:05,  1.96s/it, L_CE=0.1519, L_OOD=0.0000, β=16.0]2025-09-01 23:33:52,627 - WARNING - Poor separation (-0.038) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8:  54%|███████████████             | 220/408 [07:12<06:05,  1.95s/it, L_CE=0.1428, L_OOD=0.0000, β=16.0]2025-09-01 23:34:49,222 - WARNING - Poor separation (0.065) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8:  60%|████████████████▏          | 244/408 [07:59<05:21,  1.96s/it, L_CE=0.1273, L_OOD=-0.6491, β=16.0]2025-09-01 23:35:36,135 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 8:  64%|█████████████████▊          | 260/408 [08:30<04:48,  1.95s/it, L_CE=0.1466, L_OOD=0.0000, β=16.0]2025-09-01 23:36:07,285 - INFO - CORRECTED Energy stats: β=16.0, min=0.2382, max=1.0000, mean=0.6395, pos_ratio=1.000
+2025-09-01 23:36:07,285 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 8:  66%|██████████████████▍         | 268/408 [08:46<04:32,  1.94s/it, L_CE=0.1791, L_OOD=0.0000, β=16.0]2025-09-01 23:36:22,867 - WARNING - Poor separation (-0.082) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8:  72%|████████████████████▏       | 294/408 [09:36<03:42,  1.95s/it, L_CE=0.1822, L_OOD=0.0000, β=16.0]2025-09-01 23:37:13,636 - INFO - Step 3150 Loss Debug:
+2025-09-01 23:37:13,636 - INFO -  CE: 0.1546
+2025-09-01 23:37:13,636 - INFO -  OOD: -0.6100
+2025-09-01 23:37:13,636 - INFO -  β: 16.00
+2025-09-01 23:37:13,637 - INFO -  ID: 30716, OOD(254): 716
+Training Epoch 8:  83%|███████████████████████▏    | 338/408 [11:02<02:16,  1.95s/it, L_CE=0.1381, L_OOD=0.0000, β=16.0]2025-09-01 23:38:39,622 - WARNING - Poor separation (0.099) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8:  84%|███████████████████████▌    | 344/408 [11:14<02:05,  1.96s/it, L_CE=0.1799, L_OOD=0.0000, β=16.0]2025-09-01 23:38:51,481 - INFO - Step 3200 Loss Debug:
+2025-09-01 23:38:51,481 - INFO -  CE: 0.1544
+2025-09-01 23:38:51,481 - INFO -  OOD: -0.5767
+2025-09-01 23:38:51,482 - INFO -  β: 16.00
+2025-09-01 23:38:51,482 - INFO -  ID: 26139, OOD(254): 2927
+Training Epoch 8:  99%|██████████████████████████▌| 402/408 [13:07<00:11,  1.97s/it, L_CE=0.1294, L_OOD=-0.3120, β=16.0]2025-09-01 23:40:44,840 - INFO - CORRECTED Energy stats: β=16.0, min=0.6492, max=1.0000, mean=0.8890, pos_ratio=1.000
+2025-09-01 23:40:44,840 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 8: 100%|██████████████████████████▉| 407/408 [13:17<00:01,  1.97s/it, L_CE=0.1379, L_OOD=-2.0235, β=16.0]2025-09-01 23:40:54,676 - WARNING - Poor separation (0.008) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 8: 100%|███████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1914, L_OOD=-0.4219, β=16.0]
+2025-09-01 23:40:54,814 - INFO - Epoch 8 - Avg CE: 0.1586, Avg OOD: -0.4917, β: 16
+2025-09-01 23:40:54,919 - INFO -
+Starting Epoch 9/100
+2025-09-01 23:40:54,920 - INFO - ============================================================
+2025-09-01 23:40:54,920 - INFO -
+Updating Hopfield boosting weights at epoch 9...
+2025-09-01 23:40:56,667 - INFO - Weights updated successfully
+Training Epoch 9:   8%|██▏                          | 31/408 [01:02<12:20,  1.96s/it, L_CE=0.1645, L_OOD=0.0000, β=16.0]2025-09-01 23:42:01,098 - WARNING - Poor separation (-0.013) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:   9%|██▍                         | 36/408 [01:12<12:15,  1.98s/it, L_CE=0.1425, L_OOD=-1.6506, β=16.0]2025-09-01 23:42:11,029 - INFO - Step 3300 Loss Debug:
+2025-09-01 23:42:11,031 - INFO -  CE: 0.1785
+2025-09-01 23:42:11,031 - INFO -  OOD: -0.4642
+2025-09-01 23:42:11,031 - INFO -  β: 16.00
+2025-09-01 23:42:11,031 - INFO -  ID: 27407, OOD(254): 362
+Training Epoch 9:  10%|██▉                          | 42/408 [01:24<11:58,  1.96s/it, L_CE=0.2154, L_OOD=0.0000, β=16.0]2025-09-01 23:42:22,822 - WARNING - Poor separation (0.049) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:  22%|██████▍                      | 91/408 [03:00<10:16,  1.94s/it, L_CE=0.1922, L_OOD=0.0000, β=16.0]2025-09-01 23:43:58,738 - WARNING - Poor separation (0.058) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:  27%|███████▋                    | 112/408 [03:41<09:35,  1.95s/it, L_CE=0.1169, L_OOD=0.0000, β=16.0]2025-09-01 23:44:39,720 - INFO - CORRECTED Energy stats: β=16.0, min=0.0560, max=1.0000, mean=0.3388, pos_ratio=1.000
+2025-09-01 23:44:39,720 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 9:  33%|█████████                  | 136/408 [04:28<08:56,  1.97s/it, L_CE=0.1832, L_OOD=-0.4332, β=16.0]2025-09-01 23:45:26,782 - INFO - Step 3400 Loss Debug:
+2025-09-01 23:45:26,783 - INFO -  CE: 0.1505
+2025-09-01 23:45:26,783 - INFO -  OOD: -0.6606
+2025-09-01 23:45:26,783 - INFO -  β: 16.00
+2025-09-01 23:45:26,784 - INFO -  ID: 28826, OOD(254): 398
+Training Epoch 9:  34%|█████████▌                  | 139/408 [04:34<08:49,  1.97s/it, L_CE=0.1063, L_OOD=0.0000, β=16.0]2025-09-01 23:45:32,671 - WARNING - Poor separation (0.038) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:  46%|████████████▊               | 186/408 [06:05<07:13,  1.95s/it, L_CE=0.1515, L_OOD=0.0000, β=16.0]2025-09-01 23:47:04,521 - INFO - Step 3450 Loss Debug:
+2025-09-01 23:47:04,521 - INFO -  CE: 0.1904
+2025-09-01 23:47:04,522 - INFO -  OOD: -1.4538
+2025-09-01 23:47:04,522 - INFO -  β: 16.00
+2025-09-01 23:47:04,522 - INFO -  ID: 23888, OOD(254): 34
+Training Epoch 9:  56%|███████████████▋            | 229/408 [07:29<05:49,  1.95s/it, L_CE=0.1485, L_OOD=0.0000, β=16.0]2025-09-01 23:48:28,445 - WARNING - Poor separation (-0.050) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:  58%|███████████████▌           | 236/408 [07:43<05:37,  1.96s/it, L_CE=0.1476, L_OOD=-0.5953, β=16.0]2025-09-01 23:48:42,213 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 9:  58%|████████████████▎           | 237/408 [07:45<05:34,  1.96s/it, L_CE=0.1820, L_OOD=0.0000, β=16.0]2025-09-01 23:48:44,154 - INFO - CORRECTED Energy stats: β=16.0, min=0.0009, max=0.9897, mean=0.0317, pos_ratio=1.000
+2025-09-01 23:48:44,155 - INFO - Applied imbalance weighting: ratio=16.67, weight=10.00
+2025-09-01 23:48:44,155 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 9:  64%|█████████████████▎         | 262/408 [08:34<04:45,  1.95s/it, L_CE=0.1484, L_OOD=-2.5609, β=16.0]2025-09-01 23:49:32,949 - WARNING - Poor separation (0.070) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:  65%|█████████████████▍         | 264/408 [08:38<04:43,  1.97s/it, L_CE=0.1452, L_OOD=-2.6450, β=16.0]2025-09-01 23:49:36,909 - WARNING - Poor separation (0.073) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:  77%|█████████████████████▍      | 313/408 [10:13<03:04,  1.94s/it, L_CE=0.1466, L_OOD=0.0000, β=16.0]2025-09-01 23:51:12,548 - WARNING - Poor separation (0.042) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:  82%|██████████████████████▏    | 336/408 [10:59<02:20,  1.95s/it, L_CE=0.1753, L_OOD=-0.6090, β=16.0]2025-09-01 23:51:57,616 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 9:  90%|█████████████████████████▏  | 367/408 [11:59<01:19,  1.95s/it, L_CE=0.1669, L_OOD=0.0000, β=16.0]2025-09-01 23:52:57,981 - INFO - CORRECTED Energy stats: β=16.0, min=0.1719, max=0.9999, mean=0.4756, pos_ratio=1.000
+2025-09-01 23:52:57,981 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 9:  93%|██████████████████████████  | 380/408 [12:24<00:54,  1.95s/it, L_CE=0.1712, L_OOD=0.0000, β=16.0]2025-09-01 23:53:23,367 - WARNING - Poor separation (-0.016) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:  94%|█████████████████████████▍ | 385/408 [12:34<00:45,  1.96s/it, L_CE=0.2094, L_OOD=-0.8550, β=16.0]2025-09-01 23:53:33,204 - WARNING - Poor separation (0.077) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9:  95%|██████████████████████████▋ | 388/408 [12:40<00:39,  1.96s/it, L_CE=0.1649, L_OOD=0.0000, β=16.0]2025-09-01 23:53:39,086 - WARNING - Poor separation (0.009) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 9: 100%|████████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1761, L_OOD=0.0000, β=16.0]
+2025-09-01 23:54:16,288 - INFO - Epoch 9 - Avg CE: 0.1599, Avg OOD: -0.5094, β: 16
+2025-09-01 23:54:16,393 - INFO -
+Starting Epoch 10/100
+2025-09-01 23:54:16,394 - INFO - ============================================================
+2025-09-01 23:54:16,394 - INFO -
+Updating Hopfield boosting weights at epoch 10...
+2025-09-01 23:54:18,144 - INFO - Weights updated successfully
+Training Epoch 10:   4%|█▏                         | 17/408 [00:35<12:46,  1.96s/it, L_CE=0.1324, L_OOD=-0.6831, β=16.0]2025-09-01 23:54:55,342 - WARNING - Poor separation (0.055) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 10:   5%|█▍                         | 21/408 [00:43<12:43,  1.97s/it, L_CE=0.1538, L_OOD=-0.5580, β=16.0]2025-09-01 23:55:03,252 - WARNING - Poor separation (0.088) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 10:   7%|█▊                         | 28/408 [00:56<12:28,  1.97s/it, L_CE=0.1557, L_OOD=-2.3914, β=16.0]2025-09-01 23:55:17,041 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 10:  19%|█████▏                     | 78/408 [02:35<10:48,  1.97s/it, L_CE=0.1391, L_OOD=-2.2343, β=16.0]2025-09-01 23:56:55,235 - INFO - Step 3750 Loss Debug:
+2025-09-01 23:56:55,236 - INFO -  CE: 0.1345
+2025-09-01 23:56:55,236 - INFO -  OOD: -0.3399
+2025-09-01 23:56:55,236 - INFO -  β: 16.00
+2025-09-01 23:56:55,236 - INFO -  ID: 28343, OOD(254): 2
+Training Epoch 10:  21%|█████▊                      | 84/408 [02:46<10:30,  1.95s/it, L_CE=0.1423, L_OOD=0.0000, β=16.0]2025-09-01 23:57:06,908 - INFO - CORRECTED Energy stats: β=16.0, min=0.0291, max=1.0000, mean=0.4921, pos_ratio=1.000
+2025-09-01 23:57:06,909 - INFO - Applied imbalance weighting: ratio=4.33, weight=6.49
+2025-09-01 23:57:06,909 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 10:  21%|█████▉                      | 86/408 [02:50<10:28,  1.95s/it, L_CE=0.1161, L_OOD=0.0000, β=16.0]2025-09-01 23:57:10,826 - WARNING - Poor separation (-0.124) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 10:  24%|██████▍                    | 98/408 [03:14<10:07,  1.96s/it, L_CE=0.1544, L_OOD=-0.7076, β=16.0]2025-09-01 23:57:34,340 - WARNING - Poor separation (0.004) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 10:  31%|████████                  | 127/408 [04:11<09:09,  1.95s/it, L_CE=0.1907, L_OOD=-1.4393, β=16.0]2025-09-01 23:58:31,139 - WARNING - Poor separation (0.063) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 10:  31%|████████▏                 | 128/408 [04:13<09:11,  1.97s/it, L_CE=0.1498, L_OOD=-0.2187, β=16.0]2025-09-01 23:58:33,143 - INFO - Step 3800 Loss Debug:
+2025-09-01 23:58:33,143 - INFO -  CE: 0.1418
+2025-09-01 23:58:33,144 - INFO -  OOD: -2.3271
+2025-09-01 23:58:33,144 - INFO -  β: 16.00
+2025-09-01 23:58:33,144 - INFO -  ID: 25412, OOD(254): 56
+Training Epoch 10:  44%|███████████▊               | 178/408 [05:50<07:28,  1.95s/it, L_CE=0.1940, L_OOD=0.0000, β=16.0]2025-09-02 00:00:10,773 - INFO - Step 3850 Loss Debug:
+2025-09-02 00:00:10,774 - INFO -  CE: 0.2347
+2025-09-02 00:00:10,775 - INFO -  OOD: -2.1165
+2025-09-02 00:00:10,775 - INFO -  β: 16.00
+2025-09-02 00:00:10,775 - INFO -  ID: 23255, OOD(254): 16
+Training Epoch 10:  55%|██████████████▉            | 225/408 [07:22<05:55,  1.94s/it, L_CE=0.1632, L_OOD=0.0000, β=16.0]2025-09-02 00:01:42,536 - INFO - CORRECTED Energy stats: β=16.0, min=0.0426, max=1.0000, mean=0.4982, pos_ratio=1.000
+2025-09-02 00:01:42,536 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 10:  56%|███████████████            | 228/408 [07:28<05:50,  1.95s/it, L_CE=0.1534, L_OOD=0.0000, β=16.0]2025-09-02 00:01:48,392 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 10:  68%|█████████████████▋        | 278/408 [09:06<04:15,  1.97s/it, L_CE=0.1802, L_OOD=-0.6057, β=16.0]2025-09-02 00:03:26,128 - INFO - Step 3950 Loss Debug:
+2025-09-02 00:03:26,129 - INFO -  CE: 0.1321
+2025-09-02 00:03:26,129 - INFO -  OOD: -1.7686
+2025-09-02 00:03:26,129 - INFO -  β: 16.00
+2025-09-02 00:03:26,130 - INFO -  ID: 28082, OOD(254): 214
+Training Epoch 10:  80%|█████████████████████▋     | 328/408 [10:43<02:35,  1.95s/it, L_CE=0.1508, L_OOD=0.0000, β=16.0]2025-09-02 00:05:03,678 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 10:  82%|█████████████████████▎    | 334/408 [10:55<02:24,  1.95s/it, L_CE=0.1581, L_OOD=-1.3326, β=16.0]2025-09-02 00:05:15,347 - WARNING - Poor separation (0.018) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 10:  88%|██████████████████████▊   | 358/408 [11:42<01:38,  1.97s/it, L_CE=0.1310, L_OOD=-0.6691, β=16.0]2025-09-02 00:06:02,343 - WARNING - Poor separation (0.098) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 10:  90%|███████████████████████▍  | 367/408 [11:59<01:20,  1.96s/it, L_CE=0.1390, L_OOD=-0.3970, β=16.0]2025-09-02 00:06:19,986 - INFO - CORRECTED Energy stats: β=16.0, min=0.0641, max=1.0000, mean=0.3668, pos_ratio=1.000
+2025-09-02 00:06:19,987 - INFO - Applied imbalance weighting: ratio=4.15, weight=6.22
+2025-09-02 00:06:19,987 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 10:  93%|█████████████████████████  | 378/408 [12:21<00:58,  1.95s/it, L_CE=0.1442, L_OOD=0.0000, β=16.0]2025-09-02 00:06:41,490 - INFO - Step 4050 Loss Debug:
+2025-09-02 00:06:41,490 - INFO -  CE: 0.1516
+2025-09-02 00:06:41,490 - INFO -  OOD: -1.0503
+2025-09-02 00:06:41,491 - INFO -  β: 16.00
+2025-09-02 00:06:41,491 - INFO -  ID: 28096, OOD(254): 22
+Training Epoch 10: 100%|███████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1741, L_OOD=0.0000, β=16.0]
+2025-09-02 00:07:38,115 - INFO - Epoch 10 - Avg CE: 0.1546, Avg OOD: -0.4718, β: 16
+2025-09-02 00:07:48,848 - INFO - Checkpoint saved for epoch 10 with β=16
+2025-09-02 00:07:48,850 - INFO -
+Running evaluation with β=16...
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([249767, 256])
+AUX memory shape: torch.Size([100000, 256])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 59867/2097152 (2.85%)
+Image 0: in=3480, ood=121
+  Scores shape: torch.Size([4096]), Labels shape: torch.Size([4096])
+Image 1: in=3478, ood=90
+  Scores shape: torch.Size([4096]), Labels shape: torch.Size([4096])
+Image 2: in=3524, ood=36
+  Scores shape: torch.Size([4096]), Labels shape: torch.Size([4096])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 101478, Out: 1780
+In-scores range: [0.110, 0.306]
+Out-scores range: [0.138, 0.301]
+✅ AUROC: 0.1625
+✅ FPR95: 0.9949
+✅ AUPRS: 0.9577
+2025-09-02 00:08:06,993 - INFO -
+Evaluation Summary for Epoch 10:
+2025-09-02 00:08:06,993 - INFO -  AUROC: 0.1625
+2025-09-02 00:08:06,994 - INFO -  FPR95: 0.9949
+2025-09-02 00:08:06,994 - INFO -  AUPRS: 0.9577
+2025-09-02 00:08:07,093 - INFO -
+Starting Epoch 11/100
+2025-09-02 00:08:07,093 - INFO - ============================================================
+2025-09-02 00:08:07,093 - INFO -
+Updating Hopfield boosting weights at epoch 11...
+2025-09-02 00:08:08,829 - INFO - Weights updated successfully
+Training Epoch 11:   1%|▏                            | 3/408 [00:07<15:49,  2.34s/it, L_CE=0.1623, L_OOD=0.0000, β=16.0]2025-09-02 00:08:18,407 - WARNING - Poor separation (0.075) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 11:   5%|█▎                          | 20/408 [00:40<12:47,  1.98s/it, L_CE=0.1117, L_OOD=0.0000, β=16.0]2025-09-02 00:08:51,752 - INFO - Step 4100 Loss Debug:
+2025-09-02 00:08:51,752 - INFO -  CE: 0.2013
+2025-09-02 00:08:51,752 - INFO -  OOD: -0.4691
+2025-09-02 00:08:51,752 - INFO -  β: 16.00
+2025-09-02 00:08:51,752 - INFO -  ID: 26642, OOD(254): 426
+Training Epoch 11:   6%|█▋                         | 26/408 [00:53<12:56,  2.03s/it, L_CE=0.1149, L_OOD=-0.5478, β=16.0]2025-09-02 00:09:03,982 - WARNING - Poor separation (-0.026) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 11:  20%|█████▍                      | 80/408 [02:41<10:49,  1.98s/it, L_CE=0.1561, L_OOD=0.0000, β=16.0]2025-09-02 00:10:52,649 - INFO - CORRECTED Energy stats: β=16.0, min=0.0207, max=1.0000, mean=0.4334, pos_ratio=1.000
+2025-09-02 00:10:52,649 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 11:  26%|██████▉                    | 105/408 [03:30<09:52,  1.96s/it, L_CE=0.1393, L_OOD=0.0000, β=16.0]2025-09-02 00:11:41,716 - WARNING - Poor separation (0.097) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 11:  28%|███████▋                   | 116/408 [03:52<09:29,  1.95s/it, L_CE=0.2585, L_OOD=0.0000, β=16.0]2025-09-02 00:12:03,247 - WARNING - Poor separation (0.028) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 11:  29%|███████▋                  | 120/408 [04:00<09:27,  1.97s/it, L_CE=0.1659, L_OOD=-2.6086, β=16.0]2025-09-02 00:12:11,163 - WARNING - Poor separation (0.070) at fixed β=8 - consider manual adjustment if persists
+2025-09-02 00:12:11,189 - INFO - Step 4200 Loss Debug:
+2025-09-02 00:12:11,189 - INFO -  CE: 0.1611
+2025-09-02 00:12:11,189 - INFO -  OOD: -0.4397
+2025-09-02 00:12:11,189 - INFO -  β: 16.00
+2025-09-02 00:12:11,189 - INFO -  ID: 24095, OOD(254): 2874
+Training Epoch 11:  42%|███████████▎               | 170/408 [05:38<07:42,  1.94s/it, L_CE=0.1922, L_OOD=0.0000, β=16.0]2025-09-02 00:13:48,801 - INFO - Step 4250 Loss Debug:
+2025-09-02 00:13:48,802 - INFO -  CE: 0.1951
+2025-09-02 00:13:48,802 - INFO -  OOD: -0.6886
+2025-09-02 00:13:48,802 - INFO -  β: 16.00
+2025-09-02 00:13:48,802 - INFO -  ID: 23171, OOD(254): 481
+Training Epoch 11:  45%|████████████▏              | 185/408 [06:07<07:13,  1.95s/it, L_CE=0.1911, L_OOD=0.0000, β=16.0]2025-09-02 00:14:18,036 - WARNING - Poor separation (0.041) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 11:  46%|███████████▊              | 186/408 [06:09<07:14,  1.96s/it, L_CE=0.2016, L_OOD=-0.4482, β=16.0]2025-09-02 00:14:20,035 - WARNING - Poor separation (0.032) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 11:  54%|██████████████▍            | 219/408 [07:13<06:08,  1.95s/it, L_CE=0.1494, L_OOD=0.0000, β=16.0]2025-09-02 00:15:24,628 - INFO - CORRECTED Energy stats: β=16.0, min=0.0040, max=1.0000, mean=0.4516, pos_ratio=1.000
+2025-09-02 00:15:24,628 - INFO - Applied imbalance weighting: ratio=4.90, weight=7.35
+2025-09-02 00:15:24,629 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 11:  54%|██████████████            | 220/408 [07:15<06:07,  1.95s/it, L_CE=0.1535, L_OOD=-1.9145, β=16.0]2025-09-02 00:15:26,591 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 11:  61%|████████████████▍          | 248/408 [08:10<05:12,  1.95s/it, L_CE=0.1729, L_OOD=0.0000, β=16.0]2025-09-02 00:16:21,261 - WARNING - Poor separation (0.060) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 11:  77%|████████████████████▉      | 316/408 [10:23<02:59,  1.95s/it, L_CE=0.1367, L_OOD=0.0000, β=16.0]2025-09-02 00:18:34,258 - WARNING - Poor separation (0.034) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 11:  78%|█████████████████████▏     | 320/408 [10:31<02:51,  1.95s/it, L_CE=0.1587, L_OOD=0.0000, β=16.0]2025-09-02 00:18:42,104 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 11:  84%|█████████████████████▊    | 343/408 [11:16<02:07,  1.97s/it, L_CE=0.0884, L_OOD=-1.2074, β=16.0]2025-09-02 00:19:27,097 - INFO - CORRECTED Energy stats: β=16.0, min=0.3384, max=1.0000, mean=0.9181, pos_ratio=1.000
+2025-09-02 00:19:27,097 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 11:  92%|████████████████████████▉  | 377/408 [12:22<01:00,  1.94s/it, L_CE=0.1474, L_OOD=0.0000, β=16.0]2025-09-02 00:20:33,492 - WARNING - Poor separation (0.068) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 11: 100%|██████████████████████████| 408/408 [13:23<00:00,  1.97s/it, L_CE=0.1860, L_OOD=-0.5668, β=16.0]
+2025-09-02 00:21:32,255 - INFO - Epoch 11 - Avg CE: 0.1547, Avg OOD: -0.5121, β: 16
+2025-09-02 00:21:32,360 - INFO -
+Starting Epoch 12/100
+2025-09-02 00:21:32,360 - INFO - ============================================================
+2025-09-02 00:21:32,360 - INFO -
+Updating Hopfield boosting weights at epoch 12...
+2025-09-02 00:21:34,107 - INFO - Weights updated successfully
+Training Epoch 12:   1%|▏                            | 3/408 [00:07<15:59,  2.37s/it, L_CE=0.1350, L_OOD=0.0000, β=16.0]2025-09-02 00:21:43,797 - WARNING - Poor separation (-0.003) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 12:   3%|▊                           | 12/408 [00:25<12:55,  1.96s/it, L_CE=0.1552, L_OOD=0.0000, β=16.0]2025-09-02 00:22:01,358 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 12:  15%|████▎                       | 62/408 [02:03<11:15,  1.95s/it, L_CE=0.1322, L_OOD=0.0000, β=16.0]2025-09-02 00:23:39,325 - INFO - Step 4550 Loss Debug:
+2025-09-02 00:23:39,326 - INFO -  CE: 0.1937
+2025-09-02 00:23:39,326 - INFO -  OOD: -0.5861
+2025-09-02 00:23:39,326 - INFO -  β: 16.00
+2025-09-02 00:23:39,326 - INFO -  ID: 23065, OOD(254): 2242
+Training Epoch 12:  17%|████▋                       | 69/408 [02:16<11:01,  1.95s/it, L_CE=0.1657, L_OOD=0.0000, β=16.0]2025-09-02 00:23:53,021 - INFO - CORRECTED Energy stats: β=16.0, min=0.0853, max=1.0000, mean=0.6816, pos_ratio=1.000
+2025-09-02 00:23:53,022 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 12:  27%|███████▍                   | 112/408 [03:40<09:38,  1.95s/it, L_CE=0.1949, L_OOD=0.0000, β=16.0]2025-09-02 00:25:16,896 - INFO - Step 4600 Loss Debug:
+2025-09-02 00:25:16,896 - INFO -  CE: 0.1210
+2025-09-02 00:25:16,897 - INFO -  OOD: -2.6100
+2025-09-02 00:25:16,897 - INFO -  β: 16.00
+2025-09-02 00:25:16,897 - INFO -  ID: 26424, OOD(254): 98
+Training Epoch 12:  35%|█████████▌                 | 144/408 [04:43<08:33,  1.95s/it, L_CE=0.1468, L_OOD=0.0000, β=16.0]2025-09-02 00:26:19,527 - WARNING - Poor separation (0.078) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 12:  46%|████████████▎              | 186/408 [06:05<07:12,  1.95s/it, L_CE=0.1968, L_OOD=0.0000, β=16.0]2025-09-02 00:27:41,453 - WARNING - Poor separation (0.013) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 12:  50%|█████████████▋             | 206/408 [06:44<06:34,  1.96s/it, L_CE=0.1367, L_OOD=0.0000, β=16.0]2025-09-02 00:28:20,524 - INFO - CORRECTED Energy stats: β=16.0, min=0.1476, max=1.0000, mean=0.4954, pos_ratio=1.000
+2025-09-02 00:28:20,524 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 12:  52%|█████████████▌            | 212/408 [06:56<06:24,  1.96s/it, L_CE=0.1166, L_OOD=-2.3638, β=16.0]2025-09-02 00:28:32,306 - INFO - Step 4700 Loss Debug:
+2025-09-02 00:28:32,306 - INFO -  CE: 0.1232
+2025-09-02 00:28:32,306 - INFO -  OOD: -0.6486
+2025-09-02 00:28:32,307 - INFO -  β: 16.00
+2025-09-02 00:28:32,307 - INFO -  ID: 29344, OOD(254): 635
+Training Epoch 12:  54%|██████████████▌            | 221/408 [07:13<06:04,  1.95s/it, L_CE=0.1541, L_OOD=0.0000, β=16.0]2025-09-02 00:28:49,876 - WARNING - Poor separation (0.006) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 12:  55%|██████████████▎           | 225/408 [07:21<05:59,  1.96s/it, L_CE=0.1378, L_OOD=-1.4020, β=16.0]2025-09-02 00:28:57,775 - WARNING - Poor separation (0.076) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 12:  62%|███████████████▉          | 251/408 [08:12<05:06,  1.95s/it, L_CE=0.1758, L_OOD=-2.6642, β=16.0]2025-09-02 00:29:48,649 - WARNING - Poor separation (-0.026) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 12:  73%|███████████████████▊       | 299/408 [09:46<03:33,  1.96s/it, L_CE=0.1483, L_OOD=0.0000, β=16.0]2025-09-02 00:31:22,663 - WARNING - Poor separation (0.053) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 12:  74%|███████████████████▉       | 302/408 [09:52<03:28,  1.96s/it, L_CE=0.1229, L_OOD=0.0000, β=16.0]2025-09-02 00:31:28,589 - INFO - CORRECTED Energy stats: β=16.0, min=0.0513, max=1.0000, mean=0.2744, pos_ratio=1.000
+2025-09-02 00:31:28,590 - INFO - Applied imbalance weighting: ratio=5.29, weight=7.94
+2025-09-02 00:31:28,590 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 12:  76%|███████████████████▉      | 312/408 [10:12<03:07,  1.96s/it, L_CE=0.1961, L_OOD=-0.6022, β=16.0]2025-09-02 00:31:48,083 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 12:  89%|███████████████████████▉   | 362/408 [11:49<01:29,  1.95s/it, L_CE=0.1268, L_OOD=0.0000, β=16.0]2025-09-02 00:33:25,639 - INFO - Step 4850 Loss Debug:
+2025-09-02 00:33:25,640 - INFO -  CE: 0.1613
+2025-09-02 00:33:25,640 - INFO -  OOD: -2.5575
+2025-09-02 00:33:25,640 - INFO -  β: 16.00
+2025-09-02 00:33:25,640 - INFO -  ID: 24837, OOD(254): 61
+Training Epoch 12: 100%|███████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1665, L_OOD=0.0000, β=16.0]
+2025-09-02 00:34:53,396 - INFO - Epoch 12 - Avg CE: 0.1577, Avg OOD: -0.5229, β: 16
+2025-09-02 00:34:53,502 - INFO -
+Starting Epoch 13/100
+2025-09-02 00:34:53,502 - INFO - ============================================================
+2025-09-02 00:34:53,502 - INFO -
+Updating Hopfield boosting weights at epoch 13...
+2025-09-02 00:34:55,250 - INFO - Weights updated successfully
+Training Epoch 13:   1%|▎                           | 4/408 [00:09<14:34,  2.17s/it, L_CE=0.1806, L_OOD=-1.7583, β=16.0]2025-09-02 00:35:06,585 - INFO - Step 4900 Loss Debug:
+2025-09-02 00:35:06,586 - INFO -  CE: 0.1944
+2025-09-02 00:35:06,586 - INFO -  OOD: -2.5660
+2025-09-02 00:35:06,586 - INFO -  β: 16.00
+2025-09-02 00:35:06,586 - INFO -  ID: 26678, OOD(254): 118
+Training Epoch 13:   5%|█▎                         | 20/408 [00:40<12:35,  1.95s/it, L_CE=0.1588, L_OOD=-2.4606, β=16.0]2025-09-02 00:35:37,741 - WARNING - Poor separation (-0.035) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13:  10%|██▌                        | 39/408 [01:17<12:02,  1.96s/it, L_CE=0.1365, L_OOD=-1.0870, β=16.0]2025-09-02 00:36:15,019 - INFO - CORRECTED Energy stats: β=16.0, min=0.0118, max=1.0000, mean=0.1175, pos_ratio=1.000
+2025-09-02 00:36:15,019 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 13:  16%|████▌                       | 66/408 [02:10<11:06,  1.95s/it, L_CE=0.1423, L_OOD=0.0000, β=16.0]2025-09-02 00:37:07,889 - WARNING - Poor separation (-0.030) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13:  25%|██████▋                   | 104/408 [03:25<09:54,  1.96s/it, L_CE=0.1199, L_OOD=-0.6954, β=16.0]2025-09-02 00:38:22,300 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 13:  30%|███████▊                  | 123/408 [04:02<09:18,  1.96s/it, L_CE=0.2251, L_OOD=-0.6310, β=16.0]2025-09-02 00:38:59,409 - WARNING - Poor separation (0.048) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13:  38%|██████████▏                | 154/408 [05:02<08:14,  1.95s/it, L_CE=0.1336, L_OOD=0.0000, β=16.0]2025-09-02 00:39:59,877 - INFO - Step 5050 Loss Debug:
+2025-09-02 00:39:59,877 - INFO -  CE: 0.1432
+2025-09-02 00:39:59,878 - INFO -  OOD: -2.1669
+2025-09-02 00:39:59,878 - INFO -  β: 16.00
+2025-09-02 00:39:59,878 - INFO -  ID: 25031, OOD(254): 18
+Training Epoch 13:  40%|██████████▎               | 162/408 [05:18<08:01,  1.96s/it, L_CE=0.1564, L_OOD=-2.3548, β=16.0]2025-09-02 00:40:15,514 - INFO - CORRECTED Energy stats: β=16.0, min=0.1470, max=1.0000, mean=0.5226, pos_ratio=1.000
+2025-09-02 00:40:15,515 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 13:  44%|███████████▉               | 180/408 [05:53<07:24,  1.95s/it, L_CE=0.2120, L_OOD=0.0000, β=16.0]2025-09-02 00:40:50,678 - WARNING - Poor separation (0.061) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13:  45%|████████████               | 182/408 [05:57<07:22,  1.96s/it, L_CE=0.1143, L_OOD=0.0000, β=16.0]2025-09-02 00:40:54,614 - WARNING - Poor separation (0.099) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13:  50%|█████████████▌             | 204/408 [06:40<06:37,  1.95s/it, L_CE=0.1547, L_OOD=0.0000, β=16.0]2025-09-02 00:41:37,572 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 13:  58%|███████████████▊           | 238/408 [07:46<05:31,  1.95s/it, L_CE=0.1347, L_OOD=0.0000, β=16.0]2025-09-02 00:42:43,944 - WARNING - Poor separation (0.044) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13:  72%|███████████████████▌       | 295/408 [09:38<03:39,  1.95s/it, L_CE=0.1758, L_OOD=0.0000, β=16.0]2025-09-02 00:44:35,334 - INFO - CORRECTED Energy stats: β=16.0, min=0.0983, max=0.9992, mean=0.3156, pos_ratio=1.000
+2025-09-02 00:44:35,335 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 13:  74%|███████████████████▉       | 301/408 [09:49<03:28,  1.95s/it, L_CE=0.0956, L_OOD=0.0000, β=16.0]2025-09-02 00:44:47,060 - WARNING - Poor separation (0.055) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13:  75%|████████████████████       | 304/408 [09:55<03:23,  1.95s/it, L_CE=0.1736, L_OOD=0.0000, β=16.0]2025-09-02 00:44:52,937 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 13:  82%|██████████████████████▏    | 335/408 [10:56<02:22,  1.95s/it, L_CE=0.1113, L_OOD=0.0000, β=16.0]2025-09-02 00:45:53,519 - WARNING - Poor separation (0.090) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13:  87%|███████████████████████▍   | 354/408 [11:33<01:44,  1.94s/it, L_CE=0.1399, L_OOD=0.0000, β=16.0]2025-09-02 00:46:30,757 - INFO - Step 5250 Loss Debug:
+2025-09-02 00:46:30,757 - INFO -  CE: 0.1997
+2025-09-02 00:46:30,757 - INFO -  OOD: -0.4413
+2025-09-02 00:46:30,757 - INFO -  β: 16.00
+2025-09-02 00:46:30,757 - INFO -  ID: 27365, OOD(254): 712
+Training Epoch 13:  97%|██████████████████████████▎| 397/408 [12:57<00:21,  1.94s/it, L_CE=0.1195, L_OOD=0.0000, β=16.0]2025-09-02 00:47:54,916 - WARNING - Poor separation (0.056) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13:  99%|█████████████████████████▋| 404/408 [13:11<00:07,  1.95s/it, L_CE=0.1167, L_OOD=-2.6407, β=16.0]2025-09-02 00:48:08,589 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 13:  99%|██████████████████████████▊| 405/408 [13:13<00:05,  1.95s/it, L_CE=0.1950, L_OOD=0.0000, β=16.0]2025-09-02 00:48:10,528 - WARNING - Poor separation (-0.038) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 13: 100%|██████████████████████████▉| 407/408 [13:17<00:01,  1.96s/it, L_CE=0.1558, L_OOD=0.0000, β=16.0]2025-09-02 00:48:14,465 - INFO - CORRECTED Energy stats: β=16.0, min=0.0042, max=1.0000, mean=0.2213, pos_ratio=1.000
+2025-09-02 00:48:14,466 - INFO - Applied imbalance weighting: ratio=5.08, weight=7.61
+2025-09-02 00:48:14,466 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 13: 100%|██████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1461, L_OOD=-1.8002, β=16.0]
+2025-09-02 00:48:14,589 - INFO - Epoch 13 - Avg CE: 0.1540, Avg OOD: -0.5399, β: 16
+2025-09-02 00:48:14,694 - INFO -
+Starting Epoch 14/100
+2025-09-02 00:48:14,695 - INFO - ============================================================
+2025-09-02 00:48:14,695 - INFO -
+Updating Hopfield boosting weights at epoch 14...
+2025-09-02 00:48:16,442 - INFO - Weights updated successfully
+Training Epoch 14:  11%|███▏                        | 46/408 [01:32<11:47,  1.96s/it, L_CE=0.1176, L_OOD=0.0000, β=16.0]2025-09-02 00:49:50,720 - INFO - Step 5350 Loss Debug:
+2025-09-02 00:49:50,720 - INFO -  CE: 0.1641
+2025-09-02 00:49:50,720 - INFO -  OOD: -1.2169
+2025-09-02 00:49:50,721 - INFO -  β: 16.00
+2025-09-02 00:49:50,721 - INFO -  ID: 25247, OOD(254): 252
+Training Epoch 14:  23%|██████▏                    | 94/408 [03:06<10:21,  1.98s/it, L_CE=0.1763, L_OOD=-0.6166, β=16.0]2025-09-02 00:51:24,975 - INFO - CORRECTED Energy stats: β=16.0, min=0.1970, max=1.0000, mean=0.4999, pos_ratio=1.000
+2025-09-02 00:51:24,975 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 14:  24%|██████▌                     | 96/408 [03:10<10:13,  1.97s/it, L_CE=0.1291, L_OOD=0.0000, β=16.0]2025-09-02 00:51:28,891 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 14:  25%|██████▋                    | 101/408 [03:20<09:57,  1.95s/it, L_CE=0.1648, L_OOD=0.0000, β=16.0]2025-09-02 00:51:38,611 - WARNING - Poor separation (0.065) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 14:  25%|██████▊                    | 103/408 [03:24<09:56,  1.95s/it, L_CE=0.1578, L_OOD=0.0000, β=16.0]2025-09-02 00:51:42,555 - WARNING - Poor separation (0.083) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 14:  36%|█████████▎                | 146/408 [04:48<08:33,  1.96s/it, L_CE=0.2804, L_OOD=-1.5697, β=16.0]2025-09-02 00:53:06,488 - INFO - Step 5450 Loss Debug:
+2025-09-02 00:53:06,489 - INFO -  CE: 0.1061
+2025-09-02 00:53:06,489 - INFO -  OOD: -2.3131
+2025-09-02 00:53:06,489 - INFO -  β: 16.00
+2025-09-02 00:53:06,489 - INFO -  ID: 29362, OOD(254): 94
+Training Epoch 14:  48%|████████████▊              | 194/408 [06:21<06:58,  1.96s/it, L_CE=0.1260, L_OOD=0.0000, β=16.0]2025-09-02 00:54:40,219 - WARNING - Poor separation (0.025) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 14:  48%|████████████▍             | 196/408 [06:25<06:56,  1.97s/it, L_CE=0.2095, L_OOD=-1.9757, β=16.0]2025-09-02 00:54:44,175 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 14:  53%|█████████████▉            | 218/408 [07:08<06:11,  1.95s/it, L_CE=0.1318, L_OOD=-0.9075, β=16.0]2025-09-02 00:55:27,121 - WARNING - Poor separation (0.083) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 14:  59%|███████████████▍          | 242/408 [07:55<05:24,  1.95s/it, L_CE=0.1454, L_OOD=-2.5170, β=16.0]2025-09-02 00:56:14,032 - INFO - CORRECTED Energy stats: β=16.0, min=0.6633, max=1.0000, mean=0.8520, pos_ratio=1.000
+2025-09-02 00:56:14,033 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 14:  62%|████████████████▋          | 252/408 [08:15<05:03,  1.94s/it, L_CE=0.1973, L_OOD=0.0000, β=16.0]2025-09-02 00:56:33,518 - WARNING - Poor separation (0.083) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 14:  73%|███████████████████▌       | 296/408 [09:41<03:37,  1.95s/it, L_CE=0.1433, L_OOD=0.0000, β=16.0]2025-09-02 00:57:59,438 - INFO - Step 5600 Loss Debug:
+2025-09-02 00:57:59,438 - INFO -  CE: 0.1337
+2025-09-02 00:57:59,439 - INFO -  OOD: -1.4060
+2025-09-02 00:57:59,439 - INFO -  β: 16.00
+2025-09-02 00:57:59,439 - INFO -  ID: 25623, OOD(254): 200
+Training Epoch 14:  85%|██████████████████████▉    | 346/408 [11:18<02:01,  1.95s/it, L_CE=0.0929, L_OOD=0.0000, β=16.0]2025-09-02 00:59:37,172 - INFO - Step 5650 Loss Debug:
+2025-09-02 00:59:37,172 - INFO -  CE: 0.2054
+2025-09-02 00:59:37,173 - INFO -  OOD: -2.6713
+2025-09-02 00:59:37,173 - INFO -  β: 16.00
+2025-09-02 00:59:37,173 - INFO -  ID: 28159, OOD(254): 120
+Training Epoch 14:  92%|████████████████████████▊  | 374/408 [12:13<01:06,  1.95s/it, L_CE=0.1410, L_OOD=0.0000, β=16.0]2025-09-02 01:00:31,867 - INFO - CORRECTED Energy stats: β=16.0, min=0.0834, max=1.0000, mean=0.5315, pos_ratio=1.000
+2025-09-02 01:00:31,867 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 14:  97%|█████████████████████████▏| 396/408 [12:56<00:23,  1.96s/it, L_CE=0.1624, L_OOD=-1.2801, β=16.0]2025-09-02 01:01:15,083 - INFO - Step 5700 Loss Debug:
+2025-09-02 01:01:15,084 - INFO -  CE: 0.1445
+2025-09-02 01:01:15,084 - INFO -  OOD: -1.8683
+2025-09-02 01:01:15,084 - INFO -  β: 16.00
+2025-09-02 01:01:15,084 - INFO -  ID: 25245, OOD(254): 215
+Training Epoch 14: 100%|███████████████████████████| 408/408 [13:20<00:00,  1.96s/it, L_CE=0.1782, L_OOD=0.0000, β=16.0]
+2025-09-02 01:01:36,683 - INFO - Epoch 14 - Avg CE: 0.1578, Avg OOD: -0.5792, β: 16
+2025-09-02 01:01:36,787 - INFO -
+Starting Epoch 15/100
+2025-09-02 01:01:36,788 - INFO - ============================================================
+2025-09-02 01:01:36,788 - INFO -
+Updating Hopfield boosting weights at epoch 15...
+2025-09-02 01:01:38,535 - INFO - Weights updated successfully
+Training Epoch 15:   9%|██▌                        | 38/408 [01:16<12:15,  1.99s/it, L_CE=0.2129, L_OOD=-0.5514, β=16.0]2025-09-02 01:02:57,419 - INFO - Step 5750 Loss Debug:
+2025-09-02 01:02:57,420 - INFO -  CE: 0.1728
+2025-09-02 01:02:57,420 - INFO -  OOD: -2.2845
+2025-09-02 01:02:57,420 - INFO -  β: 16.00
+2025-09-02 01:02:57,421 - INFO -  ID: 28466, OOD(254): 168
+Training Epoch 15:  17%|████▋                       | 68/408 [02:15<11:06,  1.96s/it, L_CE=0.2198, L_OOD=0.0000, β=16.0]2025-09-02 01:03:56,271 - INFO - CORRECTED Energy stats: β=16.0, min=0.2661, max=1.0000, mean=0.6076, pos_ratio=1.000
+2025-09-02 01:03:56,271 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 15:  22%|█████▊                     | 88/408 [02:55<10:28,  1.96s/it, L_CE=0.1902, L_OOD=-1.5752, β=16.0]2025-09-02 01:04:35,581 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 15:  23%|██████▍                     | 94/408 [03:06<10:13,  1.95s/it, L_CE=0.1504, L_OOD=0.0000, β=16.0]2025-09-02 01:04:47,300 - WARNING - Poor separation (0.052) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 15:  46%|████████████▍              | 188/408 [06:10<07:08,  1.95s/it, L_CE=0.1359, L_OOD=0.0000, β=16.0]2025-09-02 01:07:51,030 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 15:  47%|████████████▏             | 191/408 [06:16<07:05,  1.96s/it, L_CE=0.1555, L_OOD=-0.6751, β=16.0]2025-09-02 01:07:56,912 - INFO - CORRECTED Energy stats: β=16.0, min=0.1116, max=0.9999, mean=0.5221, pos_ratio=1.000
+2025-09-02 01:07:56,913 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 15:  58%|███████████████▋           | 237/408 [07:46<05:32,  1.94s/it, L_CE=0.1354, L_OOD=0.0000, β=16.0]2025-09-02 01:09:26,715 - WARNING - Poor separation (0.097) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 15:  71%|██████████████████▎       | 288/408 [09:25<03:54,  1.96s/it, L_CE=0.1296, L_OOD=-0.6927, β=16.0]2025-09-02 01:11:06,036 - INFO - Step 6000 Loss Debug:
+2025-09-02 01:11:06,036 - INFO -  CE: 0.1670
+2025-09-02 01:11:06,036 - INFO -  OOD: -0.6417
+2025-09-02 01:11:06,036 - INFO -  β: 16.00
+2025-09-02 01:11:06,036 - INFO -  ID: 29171, OOD(254): 453
+Training Epoch 15:  83%|██████████████████████▎    | 338/408 [11:03<02:16,  1.95s/it, L_CE=0.1174, L_OOD=0.0000, β=16.0]2025-09-02 01:12:43,808 - INFO - Step 6050 Loss Debug:
+2025-09-02 01:12:43,808 - INFO -  CE: 0.1232
+2025-09-02 01:12:43,808 - INFO -  OOD: -2.2115
+2025-09-02 01:12:43,809 - INFO -  β: 16.00
+2025-09-02 01:12:43,809 - INFO -  ID: 27137, OOD(254): 111
+Training Epoch 15:  83%|██████████████████████▌    | 340/408 [11:07<02:12,  1.95s/it, L_CE=0.1770, L_OOD=0.0000, β=16.0]2025-09-02 01:12:47,704 - INFO - CORRECTED Energy stats: β=16.0, min=0.0060, max=0.9979, mean=0.0359, pos_ratio=1.000
+2025-09-02 01:12:47,704 - INFO - Applied imbalance weighting: ratio=62.50, weight=10.00
+2025-09-02 01:12:47,705 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 15:  95%|█████████████████████████▋ | 388/408 [12:40<00:39,  1.96s/it, L_CE=0.1190, L_OOD=0.0000, β=16.0]2025-09-02 01:14:21,386 - INFO - Step 6100 Loss Debug:
+2025-09-02 01:14:21,387 - INFO -  CE: 0.2759
+2025-09-02 01:14:21,387 - INFO -  OOD: -1.6843
+2025-09-02 01:14:21,387 - INFO -  β: 16.00
+2025-09-02 01:14:21,387 - INFO -  ID: 23332, OOD(254): 211
+Training Epoch 15: 100%|███████████████████████████| 408/408 [13:20<00:00,  1.96s/it, L_CE=0.1401, L_OOD=0.0000, β=16.0]
+2025-09-02 01:14:58,701 - INFO - Epoch 15 - Avg CE: 0.1597, Avg OOD: -0.5095, β: 16
+2025-09-02 01:14:58,701 - INFO -
+Running evaluation with β=16...
+Starting OOD evaluation...
+Dataset size: 30
+ID memory shape: torch.Size([249767, 256])
+AUX memory shape: torch.Size([100000, 256])
+First image - unique labels: [  0   1 255]
+First image - OOD pixels: 59867/2097152 (2.85%)
+Image 0: in=3480, ood=121
+  Scores shape: torch.Size([4096]), Labels shape: torch.Size([4096])
+Image 1: in=3478, ood=90
+  Scores shape: torch.Size([4096]), Labels shape: torch.Size([4096])
+Image 2: in=3524, ood=36
+  Scores shape: torch.Size([4096]), Labels shape: torch.Size([4096])
+Processed 30/30 images, 30 had OOD pixels
+Total in-distribution batches: 30
+Total OOD batches: 30
+Final scores - In: 101478, Out: 1780
+In-scores range: [0.150, 0.308]
+Out-scores range: [0.236, 0.308]
+✅ AUROC: 0.1287
+✅ FPR95: 0.9961
+✅ AUPRS: 0.9545
+2025-09-02 01:15:17,005 - INFO -
+Evaluation Summary for Epoch 15:
+2025-09-02 01:15:17,005 - INFO -  AUROC: 0.1287
+2025-09-02 01:15:17,006 - INFO -  FPR95: 0.9961
+2025-09-02 01:15:17,006 - INFO -  AUPRS: 0.9545
+2025-09-02 01:15:17,104 - INFO -
+Starting Epoch 16/100
+2025-09-02 01:15:17,104 - INFO - ============================================================
+2025-09-02 01:15:17,104 - INFO -
+Updating Hopfield boosting weights at epoch 16...
+2025-09-02 01:15:18,850 - INFO - Weights updated successfully
+Training Epoch 16:   7%|█▉                         | 30/408 [01:00<12:33,  1.99s/it, L_CE=0.1828, L_OOD=-0.6037, β=16.0]2025-09-02 01:16:21,325 - INFO - Step 6150 Loss Debug:
+2025-09-02 01:16:21,325 - INFO -  CE: 0.1970
+2025-09-02 01:16:21,326 - INFO -  OOD: -1.6854
+2025-09-02 01:16:21,326 - INFO -  β: 16.00
+2025-09-02 01:16:21,326 - INFO -  ID: 29176, OOD(254): 215
+Training Epoch 16:  14%|███▉                        | 58/408 [01:55<11:26,  1.96s/it, L_CE=0.1229, L_OOD=0.0000, β=16.0]2025-09-02 01:17:16,439 - INFO - CORRECTED Energy stats: β=16.0, min=0.0046, max=0.9997, mean=0.0939, pos_ratio=1.000
+2025-09-02 01:17:16,440 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 16:  20%|█████▍                      | 80/408 [02:38<10:41,  1.95s/it, L_CE=0.2430, L_OOD=0.0000, β=16.0]2025-09-02 01:17:59,475 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 16:  32%|████████▌                  | 130/408 [04:16<09:03,  1.95s/it, L_CE=0.1028, L_OOD=0.0000, β=16.0]2025-09-02 01:19:37,223 - INFO - Step 6250 Loss Debug:
+2025-09-02 01:19:37,224 - INFO -  CE: 0.1895
+2025-09-02 01:19:37,224 - INFO -  OOD: -0.6164
+2025-09-02 01:19:37,224 - INFO -  β: 16.00
+2025-09-02 01:19:37,224 - INFO -  ID: 28257, OOD(254): 387
+Training Epoch 16:  37%|█████████▋                | 152/408 [04:59<08:22,  1.96s/it, L_CE=0.1574, L_OOD=-0.5640, β=16.0]2025-09-02 01:20:20,170 - WARNING - Poor separation (0.017) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 16:  39%|██████████▎               | 161/408 [05:16<08:02,  1.95s/it, L_CE=0.1512, L_OOD=-1.8161, β=16.0]2025-09-02 01:20:37,741 - WARNING - Poor separation (0.054) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 16:  44%|███████████▉               | 180/408 [05:54<07:24,  1.95s/it, L_CE=0.2061, L_OOD=0.0000, β=16.0]2025-09-02 01:21:14,955 - INFO - CORRECTED Energy stats: β=16.0, min=0.0259, max=1.0000, mean=0.2179, pos_ratio=1.000
+2025-09-02 01:21:14,955 - INFO - Applied imbalance weighting: ratio=4.18, weight=6.28
+2025-09-02 01:21:14,955 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+2025-09-02 01:21:14,967 - INFO - Step 6300 Loss Debug:
+2025-09-02 01:21:14,967 - INFO -  CE: 0.1740
+2025-09-02 01:21:14,967 - INFO -  OOD: -1.3692
+2025-09-02 01:21:14,967 - INFO -  β: 16.00
+2025-09-02 01:21:14,967 - INFO -  ID: 25029, OOD(254): 239
+Training Epoch 16:  54%|██████████████▌            | 220/408 [07:12<06:07,  1.95s/it, L_CE=0.1074, L_OOD=0.0000, β=16.0]2025-09-02 01:22:33,281 - WARNING - Poor separation (-0.014) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 16:  56%|███████████████▏           | 230/408 [07:32<05:47,  1.95s/it, L_CE=0.1693, L_OOD=0.0000, β=16.0]2025-09-02 01:22:52,831 - INFO - Step 6350 Loss Debug:
+2025-09-02 01:22:52,832 - INFO -  CE: 0.1497
+2025-09-02 01:22:52,832 - INFO -  OOD: -2.7179
+2025-09-02 01:22:52,832 - INFO -  β: 16.00
+2025-09-02 01:22:52,833 - INFO -  ID: 28272, OOD(254): 146
+Training Epoch 16:  61%|████████████████▌          | 250/408 [08:11<05:07,  1.94s/it, L_CE=0.2200, L_OOD=0.0000, β=16.0]2025-09-02 01:23:31,821 - WARNING - Poor separation (-0.017) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 16:  64%|█████████████████▍         | 263/408 [08:36<04:42,  1.95s/it, L_CE=0.1754, L_OOD=0.0000, β=16.0]2025-09-02 01:23:57,268 - WARNING - Poor separation (-0.020) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 16:  67%|██████████████████         | 273/408 [08:56<04:23,  1.95s/it, L_CE=0.1487, L_OOD=0.0000, β=16.0]2025-09-02 01:24:16,816 - WARNING - Poor separation (0.065) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 16:  69%|██████████████████▌        | 280/408 [09:09<04:09,  1.95s/it, L_CE=0.1683, L_OOD=0.0000, β=16.0]2025-09-02 01:24:30,548 - INFO - Step 6400 Loss Debug:
+2025-09-02 01:24:30,548 - INFO -  CE: 0.1491
+2025-09-02 01:24:30,548 - INFO -  OOD: -0.6692
+2025-09-02 01:24:30,548 - INFO -  β: 16.00
+2025-09-02 01:24:30,549 - INFO -  ID: 25425, OOD(254): 371
+Training Epoch 16:  74%|███████████████████▏      | 301/408 [09:50<03:29,  1.96s/it, L_CE=0.1630, L_OOD=-0.6601, β=16.0]2025-09-02 01:25:11,571 - INFO - CORRECTED Energy stats: β=16.0, min=0.0035, max=0.9999, mean=0.0874, pos_ratio=1.000
+2025-09-02 01:25:11,572 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 16:  93%|█████████████████████████▏ | 380/408 [12:25<00:54,  1.95s/it, L_CE=0.1249, L_OOD=0.0000, β=16.0]2025-09-02 01:27:45,962 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 16: 100%|██████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1362, L_OOD=-0.5105, β=16.0]
+2025-09-02 01:28:38,802 - INFO - Epoch 16 - Avg CE: 0.1579, Avg OOD: -0.5021, β: 16
+2025-09-02 01:28:38,908 - INFO -
+Starting Epoch 17/100
+2025-09-02 01:28:38,908 - INFO - ============================================================
+2025-09-02 01:28:38,909 - INFO -
+Updating Hopfield boosting weights at epoch 17...
+2025-09-02 01:28:40,656 - INFO - Weights updated successfully
+Training Epoch 17:   3%|▊                           | 12/408 [00:25<12:53,  1.95s/it, L_CE=0.1926, L_OOD=0.0000, β=16.0]2025-09-02 01:29:07,985 - WARNING - Poor separation (-0.003) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 17:   8%|██▏                        | 33/408 [01:06<12:17,  1.97s/it, L_CE=0.1465, L_OOD=-0.4850, β=16.0]2025-09-02 01:29:49,179 - INFO - CORRECTED Energy stats: β=16.0, min=0.0000, max=0.9337, mean=0.0010, pos_ratio=1.000
+2025-09-02 01:29:49,180 - INFO - Applied imbalance weighting: ratio=1000.00, weight=10.00
+2025-09-02 01:29:49,180 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 17:  17%|████▋                       | 69/408 [02:16<11:00,  1.95s/it, L_CE=0.1404, L_OOD=0.0000, β=16.0]2025-09-02 01:30:59,562 - WARNING - Poor separation (0.067) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 17:  18%|████▊                      | 72/408 [02:22<11:01,  1.97s/it, L_CE=0.1350, L_OOD=-0.6134, β=16.0]2025-09-02 01:31:05,511 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 17:  32%|████████▌                  | 130/408 [04:16<09:01,  1.95s/it, L_CE=0.1735, L_OOD=0.0000, β=16.0]2025-09-02 01:32:58,975 - WARNING - Poor separation (0.019) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 17:  38%|██████████▎                | 155/408 [05:05<08:11,  1.94s/it, L_CE=0.1919, L_OOD=0.0000, β=16.0]2025-09-02 01:33:47,979 - INFO - CORRECTED Energy stats: β=16.0, min=0.0083, max=0.9393, mean=0.0626, pos_ratio=1.000
+2025-09-02 01:33:47,980 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 17:  42%|███████████▍               | 172/408 [05:38<07:39,  1.95s/it, L_CE=0.1258, L_OOD=0.0000, β=16.0]2025-09-02 01:34:21,184 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 17:  50%|█████████████             | 204/408 [06:41<06:39,  1.96s/it, L_CE=0.2171, L_OOD=-2.0978, β=16.0]2025-09-02 01:35:23,764 - WARNING - Poor separation (0.068) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 17:  51%|█████████████▊             | 209/408 [06:50<06:28,  1.95s/it, L_CE=0.1530, L_OOD=0.0000, β=16.0]2025-09-02 01:35:33,570 - WARNING - Poor separation (0.063) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 17:  52%|█████████████▌            | 213/408 [06:58<06:23,  1.97s/it, L_CE=0.1705, L_OOD=-0.5684, β=16.0]2025-09-02 01:35:41,454 - WARNING - Poor separation (0.072) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 17:  54%|██████████████▏           | 222/408 [07:16<06:03,  1.96s/it, L_CE=0.1746, L_OOD=-0.3278, β=16.0]2025-09-02 01:35:59,057 - INFO - Step 6750 Loss Debug:
+2025-09-02 01:35:59,057 - INFO -  CE: 0.1238
+2025-09-02 01:35:59,057 - INFO -  OOD: -1.8368
+2025-09-02 01:35:59,058 - INFO -  β: 16.00
+2025-09-02 01:35:59,058 - INFO -  ID: 26971, OOD(254): 212
+Training Epoch 17:  57%|███████████████▎           | 232/408 [07:35<05:42,  1.94s/it, L_CE=0.0927, L_OOD=0.0000, β=16.0]2025-09-02 01:36:18,534 - WARNING - Poor separation (0.080) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 17:  67%|██████████████████         | 272/408 [08:54<04:24,  1.94s/it, L_CE=0.1613, L_OOD=0.0000, β=16.0]2025-09-02 01:37:36,808 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 17:  70%|██████████████████▉        | 287/408 [09:23<03:55,  1.95s/it, L_CE=0.1586, L_OOD=0.0000, β=16.0]2025-09-02 01:38:06,098 - INFO - CORRECTED Energy stats: β=16.0, min=0.3502, max=1.0000, mean=0.7187, pos_ratio=1.000
+2025-09-02 01:38:06,098 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 17:  85%|██████████████████████▉    | 346/408 [11:18<02:00,  1.94s/it, L_CE=0.2474, L_OOD=0.0000, β=16.0]2025-09-02 01:40:01,337 - WARNING - Poor separation (-0.129) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 17:  91%|███████████████████████▋  | 372/408 [12:09<01:10,  1.96s/it, L_CE=0.1226, L_OOD=-2.4444, β=16.0]2025-09-02 01:40:52,292 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 17: 100%|██████████████████████████| 408/408 [13:20<00:00,  1.96s/it, L_CE=0.1241, L_OOD=-2.1950, β=16.0]
+2025-09-02 01:42:00,904 - INFO - Epoch 17 - Avg CE: 0.1542, Avg OOD: -0.5551, β: 16
+2025-09-02 01:42:01,009 - INFO -
+Starting Epoch 18/100
+2025-09-02 01:42:01,009 - INFO - ============================================================
+2025-09-02 01:42:01,010 - INFO -
+Updating Hopfield boosting weights at epoch 18...
+2025-09-02 01:42:02,759 - INFO - Weights updated successfully
+Training Epoch 18:   0%|▏                           | 2/408 [00:05<18:52,  2.79s/it, L_CE=0.2060, L_OOD=-0.4755, β=16.0]2025-09-02 01:42:10,613 - INFO - CORRECTED Energy stats: β=16.0, min=0.0821, max=1.0000, mean=0.6372, pos_ratio=1.000
+2025-09-02 01:42:10,613 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 18:  16%|████▏                      | 64/408 [02:07<11:21,  1.98s/it, L_CE=0.1863, L_OOD=-0.6444, β=16.0]2025-09-02 01:44:12,248 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 18:  28%|███████▎                  | 114/408 [03:45<09:32,  1.95s/it, L_CE=0.1668, L_OOD=-1.9371, β=16.0]2025-09-02 01:45:49,936 - INFO - Step 7050 Loss Debug:
+2025-09-02 01:45:49,937 - INFO -  CE: 0.1414
+2025-09-02 01:45:49,937 - INFO -  OOD: -2.3533
+2025-09-02 01:45:49,937 - INFO -  β: 16.00
+2025-09-02 01:45:49,937 - INFO -  ID: 24784, OOD(254): 165
+Training Epoch 18:  31%|████████                  | 127/408 [04:10<09:11,  1.96s/it, L_CE=0.1670, L_OOD=-0.5813, β=16.0]2025-09-02 01:46:15,426 - INFO - CORRECTED Energy stats: β=16.0, min=0.0110, max=1.0000, mean=0.1333, pos_ratio=1.000
+2025-09-02 01:46:15,426 - INFO - Applied imbalance weighting: ratio=7.63, weight=10.00
+2025-09-02 01:46:15,426 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 18:  40%|██████████▍               | 164/408 [05:23<07:59,  1.97s/it, L_CE=0.1521, L_OOD=-0.4889, β=16.0]2025-09-02 01:47:27,729 - INFO - Step 7100 Loss Debug:
+2025-09-02 01:47:27,730 - INFO -  CE: 0.1951
+2025-09-02 01:47:27,730 - INFO -  OOD: -1.8280
+2025-09-02 01:47:27,730 - INFO -  β: 16.00
+2025-09-02 01:47:27,730 - INFO -  ID: 26960, OOD(254): 25
+Training Epoch 18:  49%|█████████████▎             | 201/408 [06:35<06:45,  1.96s/it, L_CE=0.1897, L_OOD=0.0000, β=16.0]2025-09-02 01:48:40,057 - WARNING - Poor separation (0.026) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 18:  52%|██████████████▏            | 214/408 [07:00<06:20,  1.96s/it, L_CE=0.1423, L_OOD=0.0000, β=16.0]2025-09-02 01:49:05,566 - INFO - Step 7150 Loss Debug:
+2025-09-02 01:49:05,567 - INFO -  CE: 0.1044
+2025-09-02 01:49:05,567 - INFO -  OOD: -0.5231
+2025-09-02 01:49:05,567 - INFO -  β: 16.00
+2025-09-02 01:49:05,567 - INFO -  ID: 25554, OOD(254): 1147
+Training Epoch 18:  55%|██████████████▉            | 226/408 [07:24<05:55,  1.95s/it, L_CE=0.1598, L_OOD=0.0000, β=16.0]2025-09-02 01:49:29,012 - WARNING - Poor separation (0.086) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 18:  65%|█████████████████▍         | 264/408 [08:38<04:41,  1.96s/it, L_CE=0.1287, L_OOD=0.0000, β=16.0]2025-09-02 01:50:43,125 - INFO - Step 7200 Loss Debug:
+2025-09-02 01:50:43,125 - INFO -  CE: 0.2235
+2025-09-02 01:50:43,126 - INFO -  OOD: -2.4045
+2025-09-02 01:50:43,126 - INFO -  β: 16.00
+2025-09-02 01:50:43,126 - INFO -  ID: 25205, OOD(254): 101
+Training Epoch 18:  67%|██████████████████▏        | 274/408 [08:57<04:20,  1.94s/it, L_CE=0.1536, L_OOD=0.0000, β=16.0]2025-09-02 01:51:02,613 - INFO - CORRECTED Energy stats: β=16.0, min=0.0195, max=1.0000, mean=0.2008, pos_ratio=1.000
+2025-09-02 01:51:02,614 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 18:  75%|███████████████████▍      | 305/408 [09:58<03:21,  1.95s/it, L_CE=0.2257, L_OOD=-2.3703, β=16.0]2025-09-02 01:52:03,270 - WARNING - Poor separation (-0.002) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 18:  89%|████████████████████████   | 364/408 [11:53<01:25,  1.95s/it, L_CE=0.1992, L_OOD=0.0000, β=16.0]2025-09-02 01:53:58,412 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 18: 100%|█████████████████████████▊| 406/408 [13:15<00:03,  1.97s/it, L_CE=0.1157, L_OOD=-2.5820, β=16.0]2025-09-02 01:55:20,369 - INFO - CORRECTED Energy stats: β=16.0, min=0.0116, max=1.0000, mean=0.4091, pos_ratio=1.000
+2025-09-02 01:55:20,369 - INFO - Applied imbalance weighting: ratio=4.00, weight=6.00
+2025-09-02 01:55:20,369 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 18: 100%|███████████████████████████| 408/408 [13:19<00:00,  1.96s/it, L_CE=0.1990, L_OOD=0.0000, β=16.0]
+2025-09-02 01:55:22,426 - INFO - Epoch 18 - Avg CE: 0.1533, Avg OOD: -0.5093, β: 16
+2025-09-02 01:55:22,526 - INFO -
+Starting Epoch 19/100
+2025-09-02 01:55:22,526 - INFO - ============================================================
+2025-09-02 01:55:22,526 - INFO -
+Updating Hopfield boosting weights at epoch 19...
+2025-09-02 01:55:24,273 - INFO - Weights updated successfully
+Training Epoch 19:  14%|███▊                        | 56/408 [01:52<11:31,  1.96s/it, L_CE=0.1294, L_OOD=0.0000, β=16.0]2025-09-02 01:57:18,496 - WARNING - No anomaly pixels (254) found in batch
+Training Epoch 19:  18%|████▉                      | 75/408 [02:29<10:54,  1.96s/it, L_CE=0.1494, L_OOD=-0.5457, β=16.0]2025-09-02 01:57:55,682 - WARNING - Poor separation (0.013) at fixed β=8 - consider manual adjustment if persists
+Training Epoch 19:  31%|████████▍                  | 127/408 [04:11<09:08,  1.95s/it, L_CE=0.1099, L_OOD=0.0000, β=16.0]2025-09-02 01:59:37,474 - INFO - CORRECTED Energy stats: β=16.0, min=0.0009, max=0.9842, mean=0.0557, pos_ratio=1.000
+2025-09-02 01:59:37,474 - INFO - Applied sep reg: margin=0.100, sep_loss=0.0000
+Training Epoch 19:  36%|█████████▋                 | 146/408 [04:48<08:31,  1.95s/it, L_CE=0.1325, L_OOD=0.0000, β=16.0]

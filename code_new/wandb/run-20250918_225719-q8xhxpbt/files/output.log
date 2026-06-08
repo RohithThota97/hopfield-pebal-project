@@ -1,0 +1,13 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Backbone fully frozen as per request.
+INFO:__main__:Building initial memories on CPU to avoid OOM...
+INFO:feature_extractor:Feature stats: mean=0.0003, std=0.0150
+INFO:hopfield_memory_builder:Starting improved memory building with diversity sampling...
+Collecting features:   0%|                                                                               | 0/4453 [00:00<?, ?it/s]INFO:feature_extractor:Feature stats: mean=0.0001, std=0.0170
+Collecting features:   0%|                                                                   | 1/4453 [01:29<110:54:49, 89.69s/it]INFO:feature_extractor:Feature stats: mean=0.0001, std=0.0169
+Collecting features:   0%|                                                                   | 2/4453 [03:00<111:43:16, 90.36s/it]

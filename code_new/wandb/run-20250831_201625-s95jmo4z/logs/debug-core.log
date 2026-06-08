@@ -1,0 +1,7 @@
+{"time":"2025-08-31T20:16:25.23984636+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpxzptrr3s/port-2389930.txt","pid":2389930,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-08-31T20:16:25.245815982+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":2389930}
+{"time":"2025-08-31T20:16:25.245831734+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":41265,"Zone":""}}
+{"time":"2025-08-31T20:16:25.428138429+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:41722"}
+{"time":"2025-08-31T20:16:25.460573551+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"s95jmo4z","id":"127.0.0.1:41722"}
+{"time":"2025-08-31T20:16:25.720861788+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"s95jmo4z","id":"127.0.0.1:41722"}
+{"time":"2025-08-31T20:17:14.769908592+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

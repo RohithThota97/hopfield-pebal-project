@@ -1,0 +1,8 @@
+{"time":"2025-09-10T13:53:45.144946494+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/offline-run-20250910_135344-9t3f696r/logs/debug-core.log"}
+{"time":"2025-09-10T13:53:45.247700341+02:00","level":"WARN","msg":"GraphQL client is nil, skipping feature loading"}
+{"time":"2025-09-10T13:53:45.249526288+02:00","level":"INFO","msg":"stream: created new stream","id":"9t3f696r"}
+{"time":"2025-09-10T13:53:45.249587045+02:00","level":"INFO","msg":"stream: started","id":"9t3f696r"}
+{"time":"2025-09-10T13:53:45.249612998+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"9t3f696r"}
+{"time":"2025-09-10T13:53:45.249628518+02:00","level":"INFO","msg":"handler: started","stream_id":"9t3f696r"}
+{"time":"2025-09-10T13:53:45.249659449+02:00","level":"INFO","msg":"sender: started","stream_id":"9t3f696r"}
+{"time":"2025-09-10T13:53:45.255295362+02:00","level":"INFO","msg":"Starting system monitor"}

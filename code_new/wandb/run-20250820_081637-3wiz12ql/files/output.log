@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "run_training.py", line 342, in <module>
+    main()
+  File "run_training.py", line 337, in main
+    trainer = HopfieldBoostingTrainer(train_config, train_loader)
+  File "run_training.py", line 78, in __init__
+    self.aux_sampler = OODSampler(
+NameError: name 'OODSampler' is not defined

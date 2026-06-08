@@ -1,0 +1,8 @@
+{"time":"2025-09-04T09:53:17.819010679+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250904_095317-0xetg4sw/logs/debug-core.log"}
+{"time":"2025-09-04T09:53:18.076752694+02:00","level":"INFO","msg":"stream: created new stream","id":"0xetg4sw"}
+{"time":"2025-09-04T09:53:18.076843925+02:00","level":"INFO","msg":"stream: started","id":"0xetg4sw"}
+{"time":"2025-09-04T09:53:18.076934147+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"0xetg4sw"}
+{"time":"2025-09-04T09:53:18.077004686+02:00","level":"INFO","msg":"sender: started","stream_id":"0xetg4sw"}
+{"time":"2025-09-04T09:53:18.077019637+02:00","level":"INFO","msg":"handler: started","stream_id":"0xetg4sw"}
+{"time":"2025-09-04T09:53:18.336789677+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-09-04T19:19:14.942159583+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/hopfield-pixel-wise-pebal-aligned/0xetg4sw/file_stream\": read tcp 10.203.141.24:56664->35.186.228.49:443: read: connection reset by peer"}

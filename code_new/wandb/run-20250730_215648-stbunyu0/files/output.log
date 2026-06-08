@@ -1,0 +1,18 @@
+2025-07-30 21:56:49,692 - HopfieldTraining - INFO - Starting training...
+2025-07-30 21:56:49,693 - HopfieldTraining - INFO - Building initial memories...
+2025-07-30 21:56:49,693 - hopfield_memory_builder - INFO - HopfieldMemoryBuilder initialized.
+2025-07-30 21:56:49,694 - hopfield_memory_builder - INFO - Starting to collect pixels for memory building...
+Collecting pixels for memory: 100%|██████████████████████████████████████████████████████████████████████| 1634/1634 [06:03<00:00,  4.50it/s]
+2025-07-30 22:02:52,970 - hopfield_memory_builder - INFO - Finished collecting pixels.
+2025-07-30 22:02:52,971 - hopfield_memory_builder - INFO - Building final memory tensors...
+2025-07-30 22:02:53,021 - hopfield_memory_builder - INFO - Final ID Memory: torch.Size([48740, 128]), AUX Memory: torch.Size([50000, 128])
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 238, in <module>
+    main()
+  File "train_pixel_hopfield_boosting.py", line 235, in main
+    trainer.train(train_loader, num_epochs=training_config['num_epochs'], accumulation_steps=training_config['accumulation_steps'])
+  File "train_pixel_hopfield_boosting.py", line 178, in train
+    self.build_initial_memories(dataloader)
+  File "train_pixel_hopfield_boosting.py", line 97, in build_initial_memories
+    self.weight_updater = HopfieldBoostingWeightUpdater(
+NameError: name 'HopfieldBoostingWeightUpdater' is not defined

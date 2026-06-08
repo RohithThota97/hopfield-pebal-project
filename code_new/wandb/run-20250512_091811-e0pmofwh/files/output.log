@@ -1,0 +1,33 @@
+2025-05-12 09:18:11,824 - hopfield_trainer - INFO - Experiment tracking with wandb initialized
+2025-05-12 09:18:11,825 - hopfield_trainer - INFO - Starting Hopfield Boosting training with args: Namespace(accumulation_steps=8, batch_size=1, beta=4.0, bits_per_quantizer=8, checkpoint_freq=10, energy_chunk_size=128, energy_margin_in=-2.0, energy_margin_out=2.0, learning_rate=0.001, max_batches=100, max_memory_patterns=5000, max_patterns=10000, n_subquantizers=8, num_embeddings=256, num_epochs=5, output_dir='./checkpoints', patch_size=256, proj_hidden_dim=512, proj_output_dim=128, resume=None, smoothness_weight=1e-06, sparsity_weight=0.0001, stride=2, use_amp=True, use_checkpoint=False, use_class_balanced=True, use_patch_based=False, use_pq=False, use_reservoir=True, use_vq=False)
+2025-05-12 09:18:11,931 - hopfield_trainer - INFO - Initializing feature extractor...
+2025-05-12 09:18:11,931 - feature_extractor - INFO - Using target layer: dec0 with stride=2
+2025-05-12 09:18:11,933 - feature_extractor - INFO - Loading model...
+2025-05-12 09:18:14,878 - feature_extractor - INFO - Model loaded and parameters frozen
+2025-05-12 09:18:14,879 - feature_extractor - INFO - Registering hooks for feature extraction...
+2025-05-12 09:18:14,880 - feature_extractor - INFO - Hooks registered successfully
+2025-05-12 09:18:14,880 - hopfield_trainer - INFO - Setting up dataloader...
+2025-05-12 09:18:14,880 - feature_extractor - INFO - Creating dataloader...
+/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/utils/data/dataloader.py:474: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 6, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+2025-05-12 09:18:15,013 - feature_extractor - INFO - Dataloader created with 409 batches
+2025-05-12 09:18:15,013 - hopfield_trainer - INFO - Dataloader created with 409 batches
+2025-05-12 09:18:15,014 - hopfield_trainer - INFO - Extracting features to determine dimensions...
+Traceback (most recent call last):
+  File "hopfield_trainer.py", line 501, in <module>
+    model, best_loss, model_path = train_hopfield(args)
+  File "hopfield_trainer.py", line 156, in train_hopfield
+    sample_batch = next(iter(dataloader))
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 517, in __next__
+    data = self._next_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1182, in _next_data
+    idx, data = self._get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1138, in _get_data
+    success, data = self._try_get_data()
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 986, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/queue.py", line 179, in get
+    self.not_empty.wait(remaining)
+  File "/home/ha51dybi/anaconda3/envs/pebal/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

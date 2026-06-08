@@ -1,0 +1,17 @@
+{"time":"2025-08-17T23:33:11.216022205+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250817_233310-b0393a3k/logs/debug-core.log"}
+{"time":"2025-08-17T23:33:11.4613249+02:00","level":"INFO","msg":"stream: created new stream","id":"b0393a3k"}
+{"time":"2025-08-17T23:33:11.461356113+02:00","level":"INFO","msg":"stream: started","id":"b0393a3k"}
+{"time":"2025-08-17T23:33:11.461362662+02:00","level":"INFO","msg":"handler: started","stream_id":"b0393a3k"}
+{"time":"2025-08-17T23:33:11.461386746+02:00","level":"INFO","msg":"sender: started","stream_id":"b0393a3k"}
+{"time":"2025-08-17T23:33:11.4613984+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"b0393a3k"}
+{"time":"2025-08-17T23:33:11.778083645+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-18T00:47:27.121217988+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-08-18T08:14:41.845285852+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-18T08:14:41.849148134+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-18T08:14:42.86262609+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-18T08:14:42.864615719+02:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading history steps 10021-10021, summary, console lines 514-543","runtime_seconds":0.001903077}],"total_operations":1}}
+{"time":"2025-08-18T08:14:43.079096757+02:00","level":"INFO","msg":"stream: closing","id":"b0393a3k"}
+{"time":"2025-08-18T08:14:43.079109275+02:00","level":"INFO","msg":"handler: closed","stream_id":"b0393a3k"}
+{"time":"2025-08-18T08:14:43.079115639+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"b0393a3k"}
+{"time":"2025-08-18T08:14:43.081023598+02:00","level":"INFO","msg":"sender: closed","stream_id":"b0393a3k"}
+{"time":"2025-08-18T08:14:43.081327141+02:00","level":"INFO","msg":"stream: closed","id":"b0393a3k"}

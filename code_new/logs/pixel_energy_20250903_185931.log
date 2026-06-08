@@ -1,0 +1,1478 @@
+2025-09-03 18:59:34,584 - INFO - 
+Building memory with β = 32...
+2025-09-03 18:59:34,584 - INFO - Building memories from loader...
+2025-09-03 18:59:34,707 - INFO - Starting redesigned hybrid memory building over full dataset...
+2025-09-03 19:03:22,790 - INFO - Label statistics - Found 254 in 281 batches, 255 in 445 batches
+2025-09-03 19:03:22,793 - INFO - Skipped 2459712 pixels with label 255 (ignore class)
+2025-09-03 19:06:43,046 - INFO - Final memory ratio (AUX:ID): 0.85
+2025-09-03 19:06:43,053 - INFO - Memory separation - Ratio: 0.724, Cross-similarity: -0.007, Overlap: 0.000
+2025-09-03 19:06:43,055 - INFO - ID spread: 0.487, OOD spread: 0.859, Distance: 0.975
+2025-09-03 19:06:48,720 - INFO - Results saved automatically.
+2025-09-03 19:06:48,725 - INFO - Memory building completed in 434.0 seconds
+2025-09-03 19:06:48,769 - INFO - Memory sizes - ID: 210055, OOD: 179583
+2025-09-03 19:06:48,812 - INFO - Memory norms - ID: 1.0000, OOD: 1.0000
+2025-09-03 19:06:48,910 - INFO - Energy check - Mean: 0.8174
+2025-09-03 19:07:03,139 - INFO - Monitoring - ID Mean: 0.724, OOD Mean: 0.211, Separation: -0.512
+2025-09-03 19:07:03,139 - WARNING - Low initial ID/OOD separation - check memory quality.
+2025-09-03 19:07:03,140 - INFO - HopfieldBoostingManager initialized with aligned beta=32, lambda_ood=0.5
+2025-09-03 19:07:03,141 - INFO - Memory built with β=32:
+2025-09-03 19:07:03,142 - INFO -  ID: 210055, AUX: 179583, Ratio: 0.85
+2025-09-03 19:07:08,636 - INFO - PixelWiseHopfieldTrainer initialization complete with β=32!
+2025-09-03 19:07:08,637 - INFO - 
+Starting Epoch 1/100
+2025-09-03 19:07:08,638 - INFO - ============================================================
+2025-09-03 19:07:08,639 - INFO - 
+Updating Hopfield boosting weights at epoch 1...
+2025-09-03 19:07:25,860 - INFO - Weights updated successfully
+2025-09-03 19:07:29,668 - INFO - Step 0: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  17  18 254 255], OOD(254) count=3147, Ignore(255) count=1286011, is_ood=tensor([False, False, False, False, False,  True, False, False])
+2025-09-03 19:07:30,224 - INFO - Boosted OOD loss: -0.3513
+2025-09-03 19:07:30,225 - INFO - Step 0 Loss Debug:
+2025-09-03 19:07:30,228 - INFO -  CE: 2.9904
+2025-09-03 19:07:30,230 - INFO -  OOD: -0.3513
+2025-09-03 19:07:30,233 - INFO -  β: 32.00
+2025-09-03 19:07:30,235 - INFO -  ID: 26174, OOD(254): 17
+2025-09-03 19:07:31,068 - INFO - Step 1: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  14  17  18 254 255], OOD(254) count=112605, Ignore(255) count=1857185, is_ood=tensor([False,  True, False, False, False, False, False, False])
+2025-09-03 19:07:31,526 - INFO - Boosted OOD loss: -0.1079
+2025-09-03 19:07:32,069 - INFO - Step 2: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 254
+ 255], OOD(254) count=260779, Ignore(255) count=2270356, is_ood=tensor([False,  True, False, False,  True, False, False, False])
+2025-09-03 19:07:32,524 - INFO - Boosted OOD loss: -0.0864
+2025-09-03 19:07:32,848 - INFO - Step 3: labels=[  0   1   2   4   5   6   7   8   9  10  11  13  17  18 255], OOD(254) count=0, Ignore(255) count=918731, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-03 19:07:33,635 - INFO - Step 4: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  16  17  18 255], OOD(254) count=0, Ignore(255) count=1002428, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-03 19:07:34,541 - INFO - Step 5: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 254 255], OOD(254) count=951, Ignore(255) count=1551498, is_ood=tensor([False, False, False,  True, False, False, False, False])
+2025-09-03 19:07:34,992 - INFO - Boosted OOD loss: -0.3642
+2025-09-03 19:07:35,436 - INFO - Step 6: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  18 255], OOD(254) count=0, Ignore(255) count=362252, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-03 19:07:36,296 - INFO - Step 7: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  14  15  16  17  18
+ 255], OOD(254) count=0, Ignore(255) count=1445887, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-03 19:07:37,257 - INFO - Step 8: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  18 255], OOD(254) count=0, Ignore(255) count=1609137, is_ood=tensor([False, False, False, False, False, False, False, False])
+2025-09-03 19:07:38,055 - INFO - Step 9: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  17  18 254 255], OOD(254) count=198932, Ignore(255) count=1473026, is_ood=tensor([False,  True,  True, False, False, False, False, False])
+2025-09-03 19:07:38,521 - INFO - Boosted OOD loss: -0.0850
+2025-09-03 19:07:38,993 - INFO - Boosted OOD loss: -0.3073
+2025-09-03 19:07:39,464 - INFO - Boosted OOD loss: -0.3527
+2025-09-03 19:07:39,937 - INFO - Boosted OOD loss: -0.2124
+2025-09-03 19:07:40,419 - INFO - Boosted OOD loss: -0.0855
+2025-09-03 19:07:40,894 - INFO - Boosted OOD loss: -0.1738
+2025-09-03 19:07:41,371 - INFO - Boosted OOD loss: -0.2548
+2025-09-03 19:07:41,845 - INFO - Boosted OOD loss: -0.2743
+2025-09-03 19:07:42,321 - INFO - Boosted OOD loss: -0.1952
+2025-09-03 19:07:42,799 - INFO - Boosted OOD loss: -0.2824
+2025-09-03 19:07:43,280 - INFO - Boosted OOD loss: -0.0854
+2025-09-03 19:07:43,755 - INFO - Boosted OOD loss: -0.0871
+2025-09-03 19:07:44,233 - INFO - Boosted OOD loss: -0.1728
+2025-09-03 19:07:44,714 - INFO - Boosted OOD loss: -0.2953
+2025-09-03 19:07:45,209 - INFO - Boosted OOD loss: -0.2681
+2025-09-03 19:07:45,693 - INFO - Boosted OOD loss: -0.2443
+2025-09-03 19:07:46,172 - INFO - Boosted OOD loss: -0.2106
+2025-09-03 19:07:46,650 - INFO - Boosted OOD loss: -0.1510
+2025-09-03 19:07:48,522 - INFO - Boosted OOD loss: -0.3520
+2025-09-03 19:07:49,004 - INFO - Boosted OOD loss: -0.0857
+2025-09-03 19:07:49,488 - INFO - Boosted OOD loss: -0.2868
+2025-09-03 19:07:50,898 - INFO - Boosted OOD loss: -0.2250
+2025-09-03 19:07:51,382 - INFO - Boosted OOD loss: -0.2376
+2025-09-03 19:07:52,329 - INFO - Boosted OOD loss: -0.2068
+2025-09-03 19:07:52,811 - INFO - Boosted OOD loss: -0.0852
+2025-09-03 19:07:53,295 - INFO - Boosted OOD loss: -0.3505
+2025-09-03 19:07:54,244 - INFO - Boosted OOD loss: -0.1950
+2025-09-03 19:07:54,726 - INFO - Boosted OOD loss: -0.3534
+2025-09-03 19:07:55,210 - INFO - Boosted OOD loss: -0.2029
+2025-09-03 19:07:57,562 - INFO - Boosted OOD loss: -0.0844
+2025-09-03 19:07:58,517 - INFO - Boosted OOD loss: -0.1646
+2025-09-03 19:07:59,936 - INFO - Boosted OOD loss: -0.3188
+2025-09-03 19:08:00,893 - INFO - Boosted OOD loss: -0.0911
+2025-09-03 19:08:01,851 - INFO - Boosted OOD loss: -0.2170
+2025-09-03 19:08:02,811 - INFO - Boosted OOD loss: -0.2228
+2025-09-03 19:08:03,775 - INFO - Boosted OOD loss: -0.1201
+2025-09-03 19:08:04,265 - INFO - Boosted OOD loss: -0.1716
+2025-09-03 19:08:04,759 - INFO - Boosted OOD loss: -0.3507
+2025-09-03 19:08:06,658 - INFO - Boosted OOD loss: -0.2817
+2025-09-03 19:08:07,158 - INFO - Boosted OOD loss: -0.3515
+2025-09-03 19:08:07,656 - INFO - Boosted OOD loss: -0.0846
+2025-09-03 19:08:08,621 - INFO - Boosted OOD loss: -0.0858
+2025-09-03 19:08:09,587 - INFO - Boosted OOD loss: -0.0858
+2025-09-03 19:08:10,076 - INFO - Boosted OOD loss: -0.3498
+2025-09-03 19:08:10,570 - INFO - Boosted OOD loss: -0.2043
+2025-09-03 19:08:12,621 - INFO - Boosted OOD loss: -0.0971
+2025-09-03 19:08:13,591 - INFO - Boosted OOD loss: -0.0861
+2025-09-03 19:08:14,087 - INFO - Boosted OOD loss: -0.0879
+2025-09-03 19:08:14,580 - INFO - Boosted OOD loss: -0.2713
+2025-09-03 19:08:15,595 - INFO - Boosted OOD loss: -0.1079
+2025-09-03 19:08:16,092 - INFO - Boosted OOD loss: -0.0850
+2025-09-03 19:08:16,586 - INFO - Boosted OOD loss: -0.0854
+2025-09-03 19:08:17,086 - INFO - Boosted OOD loss: -0.1124
+2025-09-03 19:08:17,585 - INFO - Boosted OOD loss: -0.2125
+2025-09-03 19:08:18,080 - INFO - Boosted OOD loss: -0.2880
+2025-09-03 19:08:19,004 - INFO - Boosted OOD loss: -0.1440
+2025-09-03 19:08:19,499 - INFO - Boosted OOD loss: -0.2319
+2025-09-03 19:08:19,996 - INFO - Boosted OOD loss: -0.1222
+2025-09-03 19:08:20,493 - INFO - Boosted OOD loss: -0.0859
+2025-09-03 19:08:20,990 - INFO - Boosted OOD loss: -0.0857
+2025-09-03 19:08:21,484 - INFO - Boosted OOD loss: -0.3510
+2025-09-03 19:08:22,457 - INFO - Boosted OOD loss: -0.1086
+2025-09-03 19:08:22,953 - INFO - Boosted OOD loss: -0.2836
+2025-09-03 19:08:22,954 - INFO - Step 100 Loss Debug:
+2025-09-03 19:08:22,956 - INFO -  CE: 1.7018
+2025-09-03 19:08:22,956 - INFO -  OOD: -0.2836
+2025-09-03 19:08:22,957 - INFO -  β: 32.00
+2025-09-03 19:08:22,957 - INFO -  ID: 25555, OOD(254): 130
+2025-09-03 19:08:24,885 - INFO - Boosted OOD loss: -0.2188
+2025-09-03 19:08:25,383 - INFO - Boosted OOD loss: -0.1902
+2025-09-03 19:08:26,838 - INFO - Boosted OOD loss: -0.3413
+2025-09-03 19:08:27,825 - INFO - Boosted OOD loss: -0.3489
+2025-09-03 19:08:28,325 - INFO - Boosted OOD loss: -0.3129
+2025-09-03 19:08:28,836 - INFO - Boosted OOD loss: -0.1133
+2025-09-03 19:08:30,769 - INFO - Boosted OOD loss: -0.3505
+2025-09-03 19:08:31,270 - INFO - Boosted OOD loss: -0.2382
+2025-09-03 19:08:32,737 - INFO - Boosted OOD loss: -0.0874
+2025-09-03 19:08:33,721 - INFO - Boosted OOD loss: -0.1768
+2025-09-03 19:08:35,662 - INFO - Boosted OOD loss: -0.2906
+2025-09-03 19:08:37,133 - INFO - Boosted OOD loss: -0.3497
+2025-09-03 19:08:37,631 - INFO - Boosted OOD loss: -0.0872
+2025-09-03 19:08:38,611 - INFO - Boosted OOD loss: -0.0872
+2025-09-03 19:08:39,114 - INFO - Boosted OOD loss: -0.0882
+2025-09-03 19:08:41,065 - INFO - Boosted OOD loss: -0.1132
+2025-09-03 19:08:43,009 - INFO - Boosted OOD loss: -0.2801
+2025-09-03 19:08:44,473 - INFO - Boosted OOD loss: -0.2373
+2025-09-03 19:08:44,975 - INFO - Boosted OOD loss: -0.1740
+2025-09-03 19:08:46,440 - INFO - Boosted OOD loss: -0.2879
+2025-09-03 19:08:46,946 - INFO - Boosted OOD loss: -0.1010
+2025-09-03 19:08:47,939 - INFO - Boosted OOD loss: -0.0888
+2025-09-03 19:08:49,406 - INFO - Boosted OOD loss: -0.3171
+2025-09-03 19:08:50,395 - INFO - Boosted OOD loss: -0.1911
+2025-09-03 19:08:50,899 - INFO - Boosted OOD loss: -0.2877
+2025-09-03 19:08:51,893 - INFO - Boosted OOD loss: -0.0824
+2025-09-03 19:08:52,885 - INFO - Boosted OOD loss: -0.0838
+2025-09-03 19:08:53,389 - INFO - Boosted OOD loss: -0.3294
+2025-09-03 19:08:55,136 - INFO - Boosted OOD loss: -0.0918
+2025-09-03 19:08:55,639 - INFO - Boosted OOD loss: -0.1865
+2025-09-03 19:08:56,250 - INFO - Boosted OOD loss: -0.2373
+2025-09-03 19:08:56,754 - INFO - Boosted OOD loss: -0.1722
+2025-09-03 19:08:57,261 - INFO - Boosted OOD loss: -0.2077
+2025-09-03 19:08:57,771 - INFO - Boosted OOD loss: -0.3441
+2025-09-03 19:08:58,276 - INFO - Boosted OOD loss: -0.0848
+2025-09-03 19:08:59,745 - INFO - Boosted OOD loss: -0.1178
+2025-09-03 19:09:00,252 - INFO - Boosted OOD loss: -0.1659
+2025-09-03 19:09:01,722 - INFO - Boosted OOD loss: -0.3460
+2025-09-03 19:09:03,686 - INFO - Boosted OOD loss: -0.0910
+2025-09-03 19:09:04,195 - INFO - Boosted OOD loss: -0.0867
+2025-09-03 19:09:05,186 - INFO - Boosted OOD loss: -0.0877
+2025-09-03 19:09:06,211 - INFO - Boosted OOD loss: -0.0854
+2025-09-03 19:09:06,721 - INFO - Boosted OOD loss: -0.2500
+2025-09-03 19:09:07,232 - INFO - Boosted OOD loss: -0.1888
+2025-09-03 19:09:08,646 - INFO - Boosted OOD loss: -0.1312
+2025-09-03 19:09:09,152 - INFO - Boosted OOD loss: -0.1401
+2025-09-03 19:09:09,662 - INFO - Boosted OOD loss: -0.3517
+2025-09-03 19:09:10,173 - INFO - Boosted OOD loss: -0.0907
+2025-09-03 19:09:10,677 - INFO - Boosted OOD loss: -0.3460
+2025-09-03 19:09:11,183 - INFO - Boosted OOD loss: -0.2767
+2025-09-03 19:09:11,689 - INFO - Boosted OOD loss: -0.0897
+2025-09-03 19:09:12,196 - INFO - Boosted OOD loss: -0.1460
+2025-09-03 19:09:12,707 - INFO - Boosted OOD loss: -0.2274
+2025-09-03 19:09:13,216 - INFO - Boosted OOD loss: -0.0840
+2025-09-03 19:09:13,217 - INFO - Step 200 Loss Debug:
+2025-09-03 19:09:13,219 - INFO -  CE: 1.5950
+2025-09-03 19:09:13,219 - INFO -  OOD: -0.0840
+2025-09-03 19:09:13,219 - INFO -  β: 32.00
+2025-09-03 19:09:13,219 - INFO -  ID: 21838, OOD(254): 1521
+2025-09-03 19:09:14,213 - INFO - Boosted OOD loss: -0.1145
+2025-09-03 19:09:14,719 - INFO - Boosted OOD loss: -0.2627
+2025-09-03 19:09:15,225 - INFO - Boosted OOD loss: -0.0950
+2025-09-03 19:09:16,701 - INFO - Boosted OOD loss: -0.3554
+2025-09-03 19:09:17,212 - INFO - Boosted OOD loss: -0.1262
+2025-09-03 19:09:18,205 - INFO - Boosted OOD loss: -0.1889
+2025-09-03 19:09:18,716 - INFO - Boosted OOD loss: -0.1488
+2025-09-03 19:09:19,225 - INFO - Boosted OOD loss: -0.0853
+2025-09-03 19:09:19,734 - INFO - Boosted OOD loss: -0.2840
+2025-09-03 19:09:20,249 - INFO - Boosted OOD loss: -0.3239
+2025-09-03 19:09:20,756 - INFO - Boosted OOD loss: -0.2398
+2025-09-03 19:09:21,263 - INFO - Boosted OOD loss: -0.0889
+2025-09-03 19:09:21,769 - INFO - Boosted OOD loss: -0.2558
+2025-09-03 19:09:23,247 - INFO - Boosted OOD loss: -0.0866
+2025-09-03 19:09:23,754 - INFO - Boosted OOD loss: -0.3526
+2025-09-03 19:09:24,262 - INFO - Boosted OOD loss: -0.2294
+2025-09-03 19:09:24,772 - INFO - Boosted OOD loss: -0.3000
+2025-09-03 19:09:25,282 - INFO - Boosted OOD loss: -0.1017
+2025-09-03 19:09:26,279 - INFO - Boosted OOD loss: -0.1294
+2025-09-03 19:09:26,788 - INFO - Boosted OOD loss: -0.1989
+2025-09-03 19:09:27,294 - INFO - Boosted OOD loss: -0.2022
+2025-09-03 19:09:28,288 - INFO - Boosted OOD loss: -0.1690
+2025-09-03 19:09:28,799 - INFO - Boosted OOD loss: -0.0868
+2025-09-03 19:09:29,315 - INFO - Boosted OOD loss: -0.1704
+2025-09-03 19:09:30,311 - INFO - Boosted OOD loss: -0.1297
+2025-09-03 19:09:30,823 - INFO - Boosted OOD loss: -0.2345
+2025-09-03 19:09:31,825 - INFO - Boosted OOD loss: -0.1308
+2025-09-03 19:09:33,314 - INFO - Boosted OOD loss: -0.2335
+2025-09-03 19:09:34,810 - INFO - Boosted OOD loss: -0.2239
+2025-09-03 19:09:35,325 - INFO - Boosted OOD loss: -0.2035
+2025-09-03 19:09:36,821 - INFO - Boosted OOD loss: -0.2064
+2025-09-03 19:09:37,828 - INFO - Boosted OOD loss: -0.2225
+2025-09-03 19:09:38,344 - INFO - Boosted OOD loss: -0.2476
+2025-09-03 19:09:38,344 - INFO - Step 250 Loss Debug:
+2025-09-03 19:09:38,347 - INFO -  CE: 1.3847
+2025-09-03 19:09:38,347 - INFO -  OOD: -0.2476
+2025-09-03 19:09:38,347 - INFO -  β: 32.00
+2025-09-03 19:09:38,348 - INFO -  ID: 28954, OOD(254): 194
+2025-09-03 19:09:38,858 - INFO - Boosted OOD loss: -0.3523
+2025-09-03 19:09:39,867 - INFO - Boosted OOD loss: -0.2358
+2025-09-03 19:09:40,879 - INFO - Boosted OOD loss: -0.2242
+2025-09-03 19:09:41,882 - INFO - Boosted OOD loss: -0.3510
+2025-09-03 19:09:42,401 - INFO - Boosted OOD loss: -0.2005
+2025-09-03 19:09:42,914 - INFO - Boosted OOD loss: -0.0859
+2025-09-03 19:09:44,920 - INFO - Boosted OOD loss: -0.3305
+2025-09-03 19:09:45,926 - INFO - Boosted OOD loss: -0.3148
+2025-09-03 19:09:46,441 - INFO - Boosted OOD loss: -0.3582
+2025-09-03 19:09:46,954 - INFO - Boosted OOD loss: -0.1404
+2025-09-03 19:09:47,969 - INFO - Boosted OOD loss: -0.1095
+2025-09-03 19:09:48,484 - INFO - Boosted OOD loss: -0.2279
+2025-09-03 19:09:48,998 - INFO - Boosted OOD loss: -0.2460
+2025-09-03 19:09:49,513 - INFO - Boosted OOD loss: -0.3375
+2025-09-03 19:09:50,023 - INFO - Boosted OOD loss: -0.3552
+2025-09-03 19:09:50,538 - INFO - Boosted OOD loss: -0.0854
+2025-09-03 19:09:51,547 - INFO - Boosted OOD loss: -0.1715
+2025-09-03 19:09:52,557 - INFO - Boosted OOD loss: -0.0864
+2025-09-03 19:09:55,044 - INFO - Boosted OOD loss: -0.0864
+2025-09-03 19:09:55,560 - INFO - Boosted OOD loss: -0.0865
+2025-09-03 19:09:56,079 - INFO - Boosted OOD loss: -0.0997
+2025-09-03 19:09:57,093 - INFO - Boosted OOD loss: -0.2037
+2025-09-03 19:09:58,108 - INFO - Boosted OOD loss: -0.2818
+2025-09-03 19:09:58,622 - INFO - Boosted OOD loss: -0.3613
+2025-09-03 19:09:59,139 - INFO - Boosted OOD loss: -0.2724
+2025-09-03 19:10:00,153 - INFO - Boosted OOD loss: -0.0955
+2025-09-03 19:10:01,168 - INFO - Boosted OOD loss: -0.2644
+2025-09-03 19:10:01,687 - INFO - Boosted OOD loss: -0.2487
+2025-09-03 19:10:02,212 - INFO - Boosted OOD loss: -0.1571
+2025-09-03 19:10:02,731 - INFO - Boosted OOD loss: -0.3521
+2025-09-03 19:10:03,744 - INFO - Boosted OOD loss: -0.2993
+2025-09-03 19:10:03,744 - INFO - Step 300 Loss Debug:
+2025-09-03 19:10:03,748 - INFO -  CE: 1.6076
+2025-09-03 19:10:03,750 - INFO -  OOD: -0.2993
+2025-09-03 19:10:03,752 - INFO -  β: 32.00
+2025-09-03 19:10:03,754 - INFO -  ID: 28620, OOD(254): 101
+2025-09-03 19:10:04,274 - INFO - Boosted OOD loss: -0.0862
+2025-09-03 19:10:04,791 - INFO - Boosted OOD loss: -0.0850
+2025-09-03 19:10:05,317 - INFO - Boosted OOD loss: -0.1268
+2025-09-03 19:10:05,828 - INFO - Boosted OOD loss: -0.1531
+2025-09-03 19:10:06,347 - INFO - Boosted OOD loss: -0.0859
+2025-09-03 19:10:07,368 - INFO - Boosted OOD loss: -0.1083
+2025-09-03 19:10:07,885 - INFO - Boosted OOD loss: -0.1439
+2025-09-03 19:10:08,407 - INFO - Boosted OOD loss: -0.3297
+2025-09-03 19:10:09,421 - INFO - Boosted OOD loss: -0.1167
+2025-09-03 19:10:10,434 - INFO - Boosted OOD loss: -0.2876
+2025-09-03 19:10:10,960 - INFO - Boosted OOD loss: -0.2556
+2025-09-03 19:10:12,972 - INFO - Boosted OOD loss: -0.3512
+2025-09-03 19:10:13,491 - INFO - Boosted OOD loss: -0.0907
+2025-09-03 19:10:14,010 - INFO - Boosted OOD loss: -0.0865
+2025-09-03 19:10:14,539 - INFO - Boosted OOD loss: -0.2522
+2025-09-03 19:10:15,065 - INFO - Boosted OOD loss: -0.2334
+2025-09-03 19:10:16,087 - INFO - Boosted OOD loss: -0.2019
+2025-09-03 19:10:16,609 - INFO - Boosted OOD loss: -0.0986
+2025-09-03 19:10:18,637 - INFO - Boosted OOD loss: -0.1302
+2025-09-03 19:10:19,657 - INFO - Boosted OOD loss: -0.1943
+2025-09-03 19:10:21,161 - INFO - Boosted OOD loss: -0.3451
+2025-09-03 19:10:22,181 - INFO - Boosted OOD loss: -0.2156
+2025-09-03 19:10:22,705 - INFO - Boosted OOD loss: -0.2910
+2025-09-03 19:10:23,228 - INFO - Boosted OOD loss: -0.2083
+2025-09-03 19:10:24,248 - INFO - Boosted OOD loss: -0.1060
+2025-09-03 19:10:26,769 - INFO - Boosted OOD loss: -0.1054
+2025-09-03 19:10:27,792 - INFO - Boosted OOD loss: -0.0977
+2025-09-03 19:10:29,319 - INFO - Boosted OOD loss: -0.1580
+2025-09-03 19:10:29,320 - INFO - Step 350 Loss Debug:
+2025-09-03 19:10:29,321 - INFO -  CE: 1.9444
+2025-09-03 19:10:29,321 - INFO -  OOD: -0.1580
+2025-09-03 19:10:29,321 - INFO -  β: 32.00
+2025-09-03 19:10:29,321 - INFO -  ID: 25834, OOD(254): 445
+2025-09-03 19:10:30,849 - INFO - Boosted OOD loss: -0.2599
+2025-09-03 19:10:31,874 - INFO - Boosted OOD loss: -0.0962
+2025-09-03 19:10:32,399 - INFO - Boosted OOD loss: -0.1012
+2025-09-03 19:10:32,926 - INFO - Boosted OOD loss: -0.0874
+2025-09-03 19:10:33,952 - INFO - Boosted OOD loss: -0.2716
+2025-09-03 19:10:34,987 - INFO - Boosted OOD loss: -0.2310
+2025-09-03 19:10:36,510 - INFO - Boosted OOD loss: -0.1377
+2025-09-03 19:10:38,033 - INFO - Boosted OOD loss: -0.2221
+2025-09-03 19:10:38,555 - INFO - Boosted OOD loss: -0.2243
+2025-09-03 19:10:39,082 - INFO - Boosted OOD loss: -0.1728
+2025-09-03 19:10:39,603 - INFO - Boosted OOD loss: -0.1828
+2025-09-03 19:10:40,129 - INFO - Boosted OOD loss: -0.3262
+2025-09-03 19:10:41,149 - INFO - Boosted OOD loss: -0.2282
+2025-09-03 19:10:41,665 - INFO - Boosted OOD loss: -0.3311
+2025-09-03 19:10:42,188 - INFO - Boosted OOD loss: -0.3532
+2025-09-03 19:10:42,707 - INFO - Boosted OOD loss: -0.2825
+2025-09-03 19:10:43,734 - INFO - Boosted OOD loss: -0.3240
+2025-09-03 19:10:44,262 - INFO - Boosted OOD loss: -0.0876
+2025-09-03 19:10:44,789 - INFO - Boosted OOD loss: -0.1768
+2025-09-03 19:10:45,308 - INFO - Boosted OOD loss: -0.3682
+2025-09-03 19:10:46,332 - INFO - Boosted OOD loss: -0.3572
+2025-09-03 19:10:47,359 - INFO - Boosted OOD loss: -0.1225
+2025-09-03 19:10:47,887 - INFO - Boosted OOD loss: -0.0872
+2025-09-03 19:10:48,407 - INFO - Boosted OOD loss: -0.2710
+2025-09-03 19:10:48,943 - INFO - Boosted OOD loss: -0.0887
+2025-09-03 19:10:49,972 - INFO - Boosted OOD loss: -0.3671
+2025-09-03 19:10:50,491 - INFO - Boosted OOD loss: -0.1936
+2025-09-03 19:10:51,517 - INFO - Boosted OOD loss: -0.2783
+2025-09-03 19:10:53,050 - INFO - Boosted OOD loss: -0.3250
+2025-09-03 19:10:53,571 - INFO - Boosted OOD loss: -0.1200
+2025-09-03 19:10:54,095 - INFO - Boosted OOD loss: -0.1357
+2025-09-03 19:10:54,617 - INFO - Boosted OOD loss: -0.2073
+2025-09-03 19:10:55,141 - INFO - Boosted OOD loss: -0.1577
+2025-09-03 19:10:55,142 - INFO - Step 400 Loss Debug:
+2025-09-03 19:10:55,142 - INFO -  CE: 1.6062
+2025-09-03 19:10:55,143 - INFO -  OOD: -0.1577
+2025-09-03 19:10:55,143 - INFO -  β: 32.00
+2025-09-03 19:10:55,143 - INFO -  ID: 30249, OOD(254): 457
+2025-09-03 19:10:56,669 - INFO - Boosted OOD loss: -0.3168
+2025-09-03 19:10:57,697 - INFO - Boosted OOD loss: -0.1597
+2025-09-03 19:10:58,755 - INFO - Boosted OOD loss: -0.3086
+2025-09-03 19:10:59,275 - INFO - Boosted OOD loss: -0.0896
+2025-09-03 19:10:59,800 - INFO - Boosted OOD loss: -0.3615
+2025-09-03 19:11:01,824 - INFO - Boosted OOD loss: -0.1200
+2025-09-03 19:11:02,340 - INFO - Boosted OOD loss: -0.3575
+2025-09-03 19:11:03,366 - INFO - Boosted OOD loss: -0.3081
+2025-09-03 19:11:03,889 - INFO - Boosted OOD loss: -0.1943
+2025-09-03 19:11:04,410 - INFO - Boosted OOD loss: -0.1089
+2025-09-03 19:11:04,936 - INFO - Boosted OOD loss: -0.3399
+2025-09-03 19:11:05,455 - INFO - Boosted OOD loss: -0.1963
+2025-09-03 19:11:05,980 - INFO - Boosted OOD loss: -0.0897
+2025-09-03 19:11:07,009 - INFO - Boosted OOD loss: -0.1809
+2025-09-03 19:11:07,537 - INFO - Boosted OOD loss: -0.1798
+2025-09-03 19:11:08,566 - INFO - Boosted OOD loss: -0.0870
+2025-09-03 19:11:10,602 - INFO - Boosted OOD loss: -0.2550
+2025-09-03 19:11:11,629 - INFO - Boosted OOD loss: -0.1622
+2025-09-03 19:11:12,152 - INFO - Boosted OOD loss: -0.3230
+2025-09-03 19:11:13,179 - INFO - Boosted OOD loss: -0.1162
+2025-09-03 19:11:13,708 - INFO - Boosted OOD loss: -0.1202
+2025-09-03 19:11:14,225 - INFO - Boosted OOD loss: -0.2179
+2025-09-03 19:11:14,748 - INFO - Boosted OOD loss: -0.2762
+2025-09-03 19:11:15,769 - INFO - Boosted OOD loss: -0.2826
+2025-09-03 19:11:16,286 - INFO - Boosted OOD loss: -0.1243
+2025-09-03 19:11:16,809 - INFO - Boosted OOD loss: -0.2489
+2025-09-03 19:11:17,326 - INFO - Boosted OOD loss: -0.1373
+2025-09-03 19:11:18,864 - INFO - Updated beta to 11.87 (exp decay)
+2025-09-03 19:11:39,977 - INFO - Weights updated successfully
+2025-09-03 19:11:39,978 - INFO - Advanced epoch 1 - Updated beta: 11.87
+2025-09-03 19:11:39,979 - INFO - Epoch 1 - Avg CE: 1.8075, Avg OOD: -0.1235, β: 32
+2025-09-03 19:11:40,091 - INFO - 
+Starting Epoch 2/100
+2025-09-03 19:11:40,091 - INFO - ============================================================
+2025-09-03 19:11:40,093 - INFO - 
+Updating Hopfield boosting weights at epoch 2...
+2025-09-03 19:11:57,053 - INFO - Weights updated successfully
+2025-09-03 19:11:59,715 - INFO - Boosted OOD loss: -0.2974
+2025-09-03 19:12:00,206 - INFO - Boosted OOD loss: -0.0990
+2025-09-03 19:12:00,699 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:12:02,232 - INFO - Boosted OOD loss: -0.0665
+2025-09-03 19:12:02,234 - INFO - Step 450 Loss Debug:
+2025-09-03 19:12:02,234 - INFO -  CE: 1.3804
+2025-09-03 19:12:02,235 - INFO -  OOD: -0.0665
+2025-09-03 19:12:02,235 - INFO -  β: 32.00
+2025-09-03 19:12:02,235 - INFO -  ID: 27961, OOD(254): 1437
+2025-09-03 19:12:03,199 - INFO - Boosted OOD loss: -0.2875
+2025-09-03 19:12:03,688 - INFO - Boosted OOD loss: -0.0649
+2025-09-03 19:12:05,123 - INFO - Boosted OOD loss: -0.2864
+2025-09-03 19:12:05,986 - INFO - Boosted OOD loss: -0.3039
+2025-09-03 19:12:06,576 - INFO - Boosted OOD loss: -0.2932
+2025-09-03 19:12:07,068 - INFO - Boosted OOD loss: -0.0669
+2025-09-03 19:12:08,590 - INFO - Boosted OOD loss: -0.2748
+2025-09-03 19:12:09,087 - INFO - Boosted OOD loss: -0.0940
+2025-09-03 19:12:09,579 - INFO - Boosted OOD loss: -0.0696
+2025-09-03 19:12:10,074 - INFO - Boosted OOD loss: -0.0655
+2025-09-03 19:12:10,571 - INFO - Boosted OOD loss: -0.2432
+2025-09-03 19:12:11,070 - INFO - Boosted OOD loss: -0.2524
+2025-09-03 19:12:11,565 - INFO - Boosted OOD loss: -0.0671
+2025-09-03 19:12:12,062 - INFO - Boosted OOD loss: -0.0811
+2025-09-03 19:12:12,559 - INFO - Boosted OOD loss: -0.2124
+2025-09-03 19:12:13,533 - INFO - Boosted OOD loss: -0.3078
+2025-09-03 19:12:14,030 - INFO - Boosted OOD loss: -0.3189
+2025-09-03 19:12:15,958 - INFO - Boosted OOD loss: -0.1098
+2025-09-03 19:12:16,918 - INFO - Boosted OOD loss: -0.0807
+2025-09-03 19:12:17,416 - INFO - Boosted OOD loss: -0.1275
+2025-09-03 19:12:17,915 - INFO - Boosted OOD loss: -0.3197
+2025-09-03 19:12:18,414 - INFO - Boosted OOD loss: -0.2244
+2025-09-03 19:12:19,414 - INFO - Boosted OOD loss: -0.0736
+2025-09-03 19:12:19,915 - INFO - Boosted OOD loss: -0.2799
+2025-09-03 19:12:20,413 - INFO - Boosted OOD loss: -0.0659
+2025-09-03 19:12:20,912 - INFO - Boosted OOD loss: -0.1918
+2025-09-03 19:12:22,368 - INFO - Boosted OOD loss: -0.0672
+2025-09-03 19:12:22,874 - INFO - Boosted OOD loss: -0.0655
+2025-09-03 19:12:23,374 - INFO - Boosted OOD loss: -0.2926
+2025-09-03 19:12:23,874 - INFO - Boosted OOD loss: -0.0650
+2025-09-03 19:12:26,291 - INFO - Boosted OOD loss: -0.1749
+2025-09-03 19:12:26,795 - INFO - Boosted OOD loss: -0.0659
+2025-09-03 19:12:27,298 - INFO - Boosted OOD loss: -0.0956
+2025-09-03 19:12:27,796 - WARNING - No anomaly pixels (254) found in batch
+2025-09-03 19:12:28,765 - INFO - Boosted OOD loss: -0.0693
+2025-09-03 19:12:29,271 - INFO - Boosted OOD loss: -0.3120
+2025-09-03 19:12:29,776 - INFO - Boosted OOD loss: -0.0669
+2025-09-03 19:12:32,886 - INFO - Boosted OOD loss: -0.1287
+2025-09-03 19:12:33,391 - INFO - Boosted OOD loss: -0.0667
+2025-09-03 19:12:33,896 - INFO - Boosted OOD loss: -0.3018
+2025-09-03 19:12:34,411 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:12:36,380 - INFO - Boosted OOD loss: -0.0668
+2025-09-03 19:12:36,920 - INFO - Boosted OOD loss: -0.2865
+2025-09-03 19:12:37,440 - INFO - Boosted OOD loss: -0.0687
+2025-09-03 19:12:37,947 - INFO - Boosted OOD loss: -0.0846
+2025-09-03 19:12:38,453 - INFO - Boosted OOD loss: -0.3146
+2025-09-03 19:12:39,203 - INFO - Boosted OOD loss: -0.2496
+2025-09-03 19:12:40,681 - INFO - Boosted OOD loss: -0.1874
+2025-09-03 19:12:41,667 - INFO - Boosted OOD loss: -0.0676
+2025-09-03 19:12:42,173 - INFO - Boosted OOD loss: -0.2210
+2025-09-03 19:12:42,678 - INFO - Boosted OOD loss: -0.3004
+2025-09-03 19:12:44,158 - INFO - Boosted OOD loss: -0.2384
+2025-09-03 19:12:44,663 - INFO - Boosted OOD loss: -0.2842
+2025-09-03 19:12:45,171 - INFO - Boosted OOD loss: -0.3095
+2025-09-03 19:12:46,661 - INFO - Boosted OOD loss: -0.3052
+2025-09-03 19:12:47,171 - INFO - Boosted OOD loss: -0.0677
+2025-09-03 19:12:48,171 - INFO - Boosted OOD loss: -0.0670
+2025-09-03 19:12:48,685 - INFO - Boosted OOD loss: -0.0747
+2025-09-03 19:12:49,197 - INFO - Boosted OOD loss: -0.0675
+2025-09-03 19:12:49,707 - INFO - Boosted OOD loss: -0.2933
+2025-09-03 19:12:50,706 - INFO - Boosted OOD loss: -0.2832
+2025-09-03 19:12:51,708 - INFO - Boosted OOD loss: -0.0674
+2025-09-03 19:12:52,708 - INFO - Boosted OOD loss: -0.0702
+2025-09-03 19:12:53,222 - INFO - Boosted OOD loss: -0.0787
+2025-09-03 19:12:54,222 - INFO - Boosted OOD loss: -0.2531
+2025-09-03 19:12:54,740 - INFO - Boosted OOD loss: -0.2472
+2025-09-03 19:12:55,256 - INFO - Boosted OOD loss: -0.1452
+2025-09-03 19:12:56,262 - INFO - Boosted OOD loss: -0.2933
+2025-09-03 19:12:56,780 - INFO - Boosted OOD loss: -0.0707
+2025-09-03 19:12:57,795 - INFO - Boosted OOD loss: -0.0658
+2025-09-03 19:12:58,312 - INFO - Boosted OOD loss: -0.1360
+2025-09-03 19:12:58,829 - INFO - Boosted OOD loss: -0.2415
+2025-09-03 19:12:59,353 - INFO - Boosted OOD loss: -0.2990
+2025-09-03 19:13:00,366 - INFO - Boosted OOD loss: -0.0673
+2025-09-03 19:13:00,885 - INFO - Boosted OOD loss: -0.0688
+2025-09-03 19:13:01,904 - INFO - Boosted OOD loss: -0.2485
+2025-09-03 19:13:03,424 - INFO - Boosted OOD loss: -0.1409
+2025-09-03 19:13:06,447 - INFO - Boosted OOD loss: -0.1827
+2025-09-03 19:13:06,969 - INFO - Boosted OOD loss: -0.0686
+2025-09-03 19:13:07,491 - INFO - Boosted OOD loss: -0.0693
+2025-09-03 19:13:08,018 - INFO - Boosted OOD loss: -0.2401
+2025-09-03 19:13:08,536 - INFO - Boosted OOD loss: -0.3025
+2025-09-03 19:13:09,556 - INFO - Boosted OOD loss: -0.1861
+2025-09-03 19:13:10,580 - INFO - Boosted OOD loss: -0.0676
+2025-09-03 19:13:11,604 - INFO - Boosted OOD loss: -0.0671
+2025-09-03 19:13:12,127 - INFO - Boosted OOD loss: -0.0889
+2025-09-03 19:13:13,654 - INFO - Boosted OOD loss: -0.0837
+2025-09-03 19:13:16,173 - INFO - Boosted OOD loss: -0.2188
+2025-09-03 19:13:16,695 - INFO - Boosted OOD loss: -0.0683
+2025-09-03 19:13:17,218 - INFO - Boosted OOD loss: -0.0717
+2025-09-03 19:13:17,739 - INFO - Boosted OOD loss: -0.1966
+2025-09-03 19:13:18,266 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:13:18,793 - INFO - Boosted OOD loss: -0.0848
+2025-09-03 19:13:19,315 - INFO - Boosted OOD loss: -0.1883
+2025-09-03 19:13:19,315 - INFO - Step 600 Loss Debug:
+2025-09-03 19:13:19,317 - INFO -  CE: 1.9503
+2025-09-03 19:13:19,317 - INFO -  OOD: -0.1883
+2025-09-03 19:13:19,317 - INFO -  β: 32.00
+2025-09-03 19:13:19,317 - INFO -  ID: 24952, OOD(254): 207
+2025-09-03 19:13:19,843 - INFO - Boosted OOD loss: -0.1236
+2025-09-03 19:13:20,363 - INFO - Boosted OOD loss: -0.3190
+2025-09-03 19:13:21,387 - INFO - Boosted OOD loss: -0.2342
+2025-09-03 19:13:21,913 - INFO - Boosted OOD loss: -0.1088
+2025-09-03 19:13:23,429 - INFO - Boosted OOD loss: -0.2439
+2025-09-03 19:13:23,954 - INFO - Boosted OOD loss: -0.2637
+2025-09-03 19:13:24,473 - INFO - Boosted OOD loss: -0.1439
+2025-09-03 19:13:25,000 - INFO - Boosted OOD loss: -0.2032
+2025-09-03 19:13:26,025 - INFO - Boosted OOD loss: -0.2929
+2025-09-03 19:13:27,050 - INFO - Boosted OOD loss: -0.3242
+2025-09-03 19:13:27,570 - INFO - Boosted OOD loss: -0.2994
+2025-09-03 19:13:28,602 - INFO - Boosted OOD loss: -0.1865
+2025-09-03 19:13:30,130 - INFO - Boosted OOD loss: -0.2098
+2025-09-03 19:13:32,146 - INFO - Boosted OOD loss: -0.1242
+2025-09-03 19:13:33,170 - INFO - Boosted OOD loss: -0.0753
+2025-09-03 19:13:33,691 - INFO - Boosted OOD loss: -0.0976
+2025-09-03 19:13:34,716 - INFO - Boosted OOD loss: -0.0673
+2025-09-03 19:13:35,740 - INFO - Boosted OOD loss: -0.0707
+2025-09-03 19:13:36,268 - INFO - Boosted OOD loss: -0.0731
+2025-09-03 19:13:36,792 - INFO - Boosted OOD loss: -0.0954
+2025-09-03 19:13:37,322 - INFO - Boosted OOD loss: -0.0677
+2025-09-03 19:13:37,845 - INFO - Boosted OOD loss: -0.3022
+2025-09-03 19:13:38,369 - INFO - Boosted OOD loss: -0.0682
+2025-09-03 19:13:39,401 - INFO - Boosted OOD loss: -0.2372
+2025-09-03 19:13:39,925 - INFO - Boosted OOD loss: -0.1005
+2025-09-03 19:13:40,450 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:13:41,979 - INFO - Boosted OOD loss: -0.1811
+2025-09-03 19:13:42,509 - INFO - Boosted OOD loss: -0.0707
+2025-09-03 19:13:43,040 - INFO - Boosted OOD loss: -0.0683
+2025-09-03 19:13:44,571 - INFO - Boosted OOD loss: -0.0686
+2025-09-03 19:13:46,615 - INFO - Boosted OOD loss: -0.2142
+2025-09-03 19:13:47,141 - INFO - Boosted OOD loss: -0.3115
+2025-09-03 19:13:47,673 - INFO - Boosted OOD loss: -0.0682
+2025-09-03 19:13:48,198 - INFO - Boosted OOD loss: -0.0733
+2025-09-03 19:13:49,739 - INFO - Boosted OOD loss: -0.1796
+2025-09-03 19:13:50,768 - INFO - Boosted OOD loss: -0.0695
+2025-09-03 19:13:51,292 - INFO - Boosted OOD loss: -0.0666
+2025-09-03 19:13:51,824 - INFO - Boosted OOD loss: -0.1417
+2025-09-03 19:13:53,867 - INFO - Boosted OOD loss: -0.0869
+2025-09-03 19:13:54,388 - INFO - Boosted OOD loss: -0.3168
+2025-09-03 19:13:54,921 - INFO - Boosted OOD loss: -0.3107
+2025-09-03 19:13:55,444 - INFO - Boosted OOD loss: -0.2927
+2025-09-03 19:13:56,474 - INFO - Boosted OOD loss: -0.0745
+2025-09-03 19:13:57,507 - INFO - Boosted OOD loss: -0.0664
+2025-09-03 19:13:59,555 - INFO - Boosted OOD loss: -0.0674
+2025-09-03 19:14:00,596 - INFO - Boosted OOD loss: -0.1127
+2025-09-03 19:14:01,122 - INFO - Boosted OOD loss: -0.2262
+2025-09-03 19:14:01,653 - INFO - Boosted OOD loss: -0.0745
+2025-09-03 19:14:03,690 - INFO - Boosted OOD loss: -0.2423
+2025-09-03 19:14:04,718 - INFO - Boosted OOD loss: -0.0676
+2025-09-03 19:14:05,239 - INFO - Boosted OOD loss: -0.2819
+2025-09-03 19:14:05,775 - INFO - Boosted OOD loss: -0.1231
+2025-09-03 19:14:06,299 - INFO - Boosted OOD loss: -0.0906
+2025-09-03 19:14:07,835 - INFO - Boosted OOD loss: -0.2434
+2025-09-03 19:14:10,384 - INFO - Boosted OOD loss: -0.2089
+2025-09-03 19:14:10,918 - INFO - Boosted OOD loss: -0.0695
+2025-09-03 19:14:10,919 - INFO - Step 700 Loss Debug:
+2025-09-03 19:14:10,920 - INFO -  CE: 1.6943
+2025-09-03 19:14:10,920 - INFO -  OOD: -0.0695
+2025-09-03 19:14:10,920 - INFO -  β: 32.00
+2025-09-03 19:14:10,920 - INFO -  ID: 24029, OOD(254): 879
+2025-09-03 19:14:11,449 - INFO - Boosted OOD loss: -0.3105
+2025-09-03 19:14:12,480 - INFO - Boosted OOD loss: -0.3034
+2025-09-03 19:14:13,004 - INFO - Boosted OOD loss: -0.1142
+2025-09-03 19:14:13,537 - INFO - Boosted OOD loss: -0.0993
+2025-09-03 19:14:14,573 - INFO - Boosted OOD loss: -0.0697
+2025-09-03 19:14:16,109 - INFO - Boosted OOD loss: -0.0667
+2025-09-03 19:14:16,639 - INFO - Boosted OOD loss: -0.1558
+2025-09-03 19:14:18,681 - INFO - Boosted OOD loss: -0.1231
+2025-09-03 19:14:19,209 - INFO - Boosted OOD loss: -0.2717
+2025-09-03 19:14:19,734 - INFO - Boosted OOD loss: -0.0680
+2025-09-03 19:14:20,838 - INFO - Boosted OOD loss: -0.1609
+2025-09-03 19:14:22,382 - INFO - Boosted OOD loss: -0.0667
+2025-09-03 19:14:23,414 - INFO - Boosted OOD loss: -0.1693
+2025-09-03 19:14:23,942 - INFO - Boosted OOD loss: -0.2768
+2025-09-03 19:14:24,473 - INFO - Boosted OOD loss: -0.0749
+2025-09-03 19:14:25,005 - INFO - Boosted OOD loss: -0.1535
+2025-09-03 19:14:25,527 - INFO - Boosted OOD loss: -0.1342
+2025-09-03 19:14:26,055 - INFO - Boosted OOD loss: -0.1228
+2025-09-03 19:14:26,582 - INFO - Boosted OOD loss: -0.0680
+2025-09-03 19:14:27,107 - INFO - Boosted OOD loss: -0.3154
+2025-09-03 19:14:28,143 - INFO - Boosted OOD loss: -0.3068
+2025-09-03 19:14:29,173 - INFO - Boosted OOD loss: -0.0680
+2025-09-03 19:14:30,702 - INFO - Boosted OOD loss: -0.2418
+2025-09-03 19:14:31,730 - INFO - Boosted OOD loss: -0.2906
+2025-09-03 19:14:32,253 - INFO - Boosted OOD loss: -0.3020
+2025-09-03 19:14:33,278 - INFO - Boosted OOD loss: -0.2619
+2025-09-03 19:14:34,304 - INFO - Boosted OOD loss: -0.1351
+2025-09-03 19:14:34,829 - INFO - Boosted OOD loss: -0.3153
+2025-09-03 19:14:36,848 - INFO - Boosted OOD loss: -0.0719
+2025-09-03 19:14:36,849 - INFO - Step 750 Loss Debug:
+2025-09-03 19:14:36,849 - INFO -  CE: 1.9073
+2025-09-03 19:14:36,851 - INFO -  OOD: -0.0719
+2025-09-03 19:14:36,851 - INFO -  β: 32.00
+2025-09-03 19:14:36,853 - INFO -  ID: 27961, OOD(254): 882
+2025-09-03 19:14:38,376 - INFO - Boosted OOD loss: -0.1805
+2025-09-03 19:14:38,901 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:14:39,932 - INFO - Boosted OOD loss: -0.3146
+2025-09-03 19:14:40,453 - INFO - Boosted OOD loss: -0.1952
+2025-09-03 19:14:40,980 - INFO - Boosted OOD loss: -0.1976
+2025-09-03 19:14:41,501 - INFO - Boosted OOD loss: -0.3179
+2025-09-03 19:14:42,528 - INFO - Boosted OOD loss: -0.2820
+2025-09-03 19:14:43,053 - INFO - Boosted OOD loss: -0.0825
+2025-09-03 19:14:43,582 - INFO - Boosted OOD loss: -0.2665
+2025-09-03 19:14:44,609 - INFO - Boosted OOD loss: -0.1412
+2025-09-03 19:14:45,130 - INFO - Boosted OOD loss: -0.2461
+2025-09-03 19:14:45,654 - INFO - Boosted OOD loss: -0.2126
+2025-09-03 19:14:46,172 - INFO - Boosted OOD loss: -0.0689
+2025-09-03 19:14:47,197 - INFO - Boosted OOD loss: -0.1530
+2025-09-03 19:14:48,217 - INFO - Boosted OOD loss: -0.0697
+2025-09-03 19:14:49,745 - INFO - Boosted OOD loss: -0.0718
+2025-09-03 19:14:50,762 - INFO - Boosted OOD loss: -0.2610
+2025-09-03 19:14:51,285 - INFO - Boosted OOD loss: -0.0673
+2025-09-03 19:14:51,808 - INFO - Boosted OOD loss: -0.1027
+2025-09-03 19:14:52,324 - INFO - Boosted OOD loss: -0.0923
+2025-09-03 19:14:53,840 - INFO - Boosted OOD loss: -0.1257
+2025-09-03 19:14:54,361 - INFO - Boosted OOD loss: -0.0684
+2025-09-03 19:14:54,882 - INFO - Boosted OOD loss: -0.0686
+2025-09-03 19:14:55,399 - INFO - Boosted OOD loss: -0.0695
+2025-09-03 19:14:55,920 - INFO - Boosted OOD loss: -0.0979
+2025-09-03 19:14:56,435 - INFO - Boosted OOD loss: -0.1190
+2025-09-03 19:14:58,442 - INFO - Boosted OOD loss: -0.0768
+2025-09-03 19:14:58,961 - INFO - Boosted OOD loss: -0.0693
+2025-09-03 19:14:59,479 - INFO - Boosted OOD loss: -0.0866
+2025-09-03 19:14:59,999 - INFO - Boosted OOD loss: -0.2665
+2025-09-03 19:15:01,007 - INFO - Boosted OOD loss: -0.1651
+2025-09-03 19:15:02,518 - WARNING - No anomaly pixels (254) found in batch
+2025-09-03 19:15:03,021 - INFO - Boosted OOD loss: -0.2899
+2025-09-03 19:15:05,021 - INFO - Boosted OOD loss: -0.2709
+2025-09-03 19:15:05,541 - INFO - Boosted OOD loss: -0.1497
+2025-09-03 19:15:06,546 - INFO - Boosted OOD loss: -0.3186
+2025-09-03 19:15:07,061 - INFO - Boosted OOD loss: -0.2380
+2025-09-03 19:15:07,581 - INFO - Boosted OOD loss: -0.1368
+2025-09-03 19:15:08,094 - INFO - Boosted OOD loss: -0.0889
+2025-09-03 19:15:09,600 - INFO - Boosted OOD loss: -0.0710
+2025-09-03 19:15:11,593 - INFO - Boosted OOD loss: -0.1856
+2025-09-03 19:15:13,585 - INFO - Boosted OOD loss: -0.1710
+2025-09-03 19:15:14,600 - INFO - Boosted OOD loss: -0.1189
+2025-09-03 19:15:15,611 - INFO - Boosted OOD loss: -0.1524
+2025-09-03 19:15:16,121 - INFO - Boosted OOD loss: -0.2269
+2025-09-03 19:15:16,640 - INFO - Boosted OOD loss: -0.0700
+2025-09-03 19:15:17,156 - INFO - Boosted OOD loss: -0.3084
+2025-09-03 19:15:17,674 - INFO - Boosted OOD loss: -0.0740
+2025-09-03 19:15:18,186 - INFO - Boosted OOD loss: -0.3119
+2025-09-03 19:15:19,687 - INFO - Boosted OOD loss: -0.0687
+2025-09-03 19:15:21,184 - INFO - Boosted OOD loss: -0.0839
+2025-09-03 19:15:22,188 - INFO - Boosted OOD loss: -0.2374
+2025-09-03 19:15:24,680 - INFO - Boosted OOD loss: -0.0825
+2025-09-03 19:15:25,692 - INFO - Boosted OOD loss: -0.2979
+2025-09-03 19:15:26,695 - INFO - Boosted OOD loss: -0.0744
+2025-09-03 19:15:27,213 - INFO - Boosted OOD loss: -0.0678
+2025-09-03 19:15:27,731 - INFO - Boosted OOD loss: -0.0666
+2025-09-03 19:15:27,732 - INFO - Step 850 Loss Debug:
+2025-09-03 19:15:27,732 - INFO -  CE: 1.2197
+2025-09-03 19:15:27,732 - INFO -  OOD: -0.0666
+2025-09-03 19:15:27,733 - INFO -  β: 32.00
+2025-09-03 19:15:27,735 - INFO -  ID: 27724, OOD(254): 1892
+2025-09-03 19:15:28,742 - INFO - Boosted OOD loss: -0.1071
+2025-09-03 19:15:29,261 - INFO - Boosted OOD loss: -0.0844
+2025-09-03 19:15:29,783 - INFO - Boosted OOD loss: -0.2656
+2025-09-03 19:15:30,293 - INFO - Boosted OOD loss: -0.3191
+2025-09-03 19:15:31,295 - INFO - Boosted OOD loss: -0.2119
+2025-09-03 19:15:32,307 - INFO - Boosted OOD loss: -0.0704
+2025-09-03 19:15:32,824 - INFO - Boosted OOD loss: -0.0678
+2025-09-03 19:15:33,335 - INFO - Boosted OOD loss: -0.2360
+2025-09-03 19:15:33,849 - INFO - Boosted OOD loss: -0.1888
+2025-09-03 19:15:34,855 - INFO - Boosted OOD loss: -0.2327
+2025-09-03 19:15:35,867 - INFO - Boosted OOD loss: -0.0733
+2025-09-03 19:15:36,384 - INFO - Boosted OOD loss: -0.0689
+2025-09-03 19:15:38,868 - INFO - Boosted OOD loss: -0.0704
+2025-09-03 19:15:39,408 - INFO - Boosted OOD loss: -0.0745
+2025-09-03 19:15:39,920 - INFO - Boosted OOD loss: -0.1774
+2025-09-03 19:15:40,922 - INFO - Boosted OOD loss: -0.0702
+2025-09-03 19:15:41,432 - INFO - Boosted OOD loss: -0.3228
+2025-09-03 19:15:41,949 - INFO - Boosted OOD loss: -0.0668
+2025-09-03 19:15:42,955 - INFO - Boosted OOD loss: -0.1201
+2025-09-03 19:15:43,475 - INFO - Boosted OOD loss: -0.2357
+2025-09-03 19:15:43,986 - INFO - Boosted OOD loss: -0.1769
+2025-09-03 19:15:44,989 - INFO - Boosted OOD loss: -0.1785
+2025-09-03 19:15:45,498 - INFO - Boosted OOD loss: -0.3168
+2025-09-03 19:15:46,103 - INFO - Boosted OOD loss: -0.0728
+2025-09-03 19:15:47,584 - INFO - Boosted OOD loss: -0.0745
+2025-09-03 19:15:47,733 - INFO - Updated beta to 11.74 (exp decay)
+2025-09-03 19:16:06,401 - INFO - Weights updated successfully
+2025-09-03 19:16:06,401 - INFO - Advanced epoch 2 - Updated beta: 11.74
+2025-09-03 19:16:06,404 - INFO - Epoch 2 - Avg CE: 1.5752, Avg OOD: -0.0952, β: 32
+2025-09-03 19:16:06,515 - INFO - 
+Starting Epoch 3/100
+2025-09-03 19:16:06,516 - INFO - ============================================================
+2025-09-03 19:16:06,518 - INFO - 
+Updating Hopfield boosting weights at epoch 3...
+2025-09-03 19:16:23,967 - INFO - Weights updated successfully
+2025-09-03 19:16:27,041 - INFO - Boosted OOD loss: -0.2269
+2025-09-03 19:16:27,554 - INFO - Boosted OOD loss: -0.1405
+2025-09-03 19:16:28,044 - INFO - Boosted OOD loss: -0.1687
+2025-09-03 19:16:29,079 - INFO - Boosted OOD loss: -0.0736
+2025-09-03 19:16:30,041 - INFO - Boosted OOD loss: -0.0737
+2025-09-03 19:16:30,531 - INFO - Boosted OOD loss: -0.3191
+2025-09-03 19:16:31,337 - INFO - Boosted OOD loss: -0.0659
+2025-09-03 19:16:31,828 - INFO - Boosted OOD loss: -0.0697
+2025-09-03 19:16:32,322 - INFO - Boosted OOD loss: -0.1631
+2025-09-03 19:16:32,323 - INFO - Step 900 Loss Debug:
+2025-09-03 19:16:32,324 - INFO -  CE: 1.4941
+2025-09-03 19:16:32,324 - INFO -  OOD: -0.1631
+2025-09-03 19:16:32,324 - INFO -  β: 32.00
+2025-09-03 19:16:32,324 - INFO -  ID: 27850, OOD(254): 270
+2025-09-03 19:16:33,758 - INFO - Boosted OOD loss: -0.0716
+2025-09-03 19:16:34,729 - INFO - Boosted OOD loss: -0.2708
+2025-09-03 19:16:35,223 - INFO - Boosted OOD loss: -0.2041
+2025-09-03 19:16:35,727 - INFO - Boosted OOD loss: -0.0707
+2025-09-03 19:16:36,226 - INFO - Boosted OOD loss: -0.0957
+2025-09-03 19:16:36,720 - INFO - Boosted OOD loss: -0.0741
+2025-09-03 19:16:37,692 - INFO - Boosted OOD loss: -0.1673
+2025-09-03 19:16:38,185 - INFO - Boosted OOD loss: -0.0915
+2025-09-03 19:16:39,161 - INFO - Boosted OOD loss: -0.2752
+2025-09-03 19:16:40,139 - INFO - Boosted OOD loss: -0.0718
+2025-09-03 19:16:40,641 - INFO - Boosted OOD loss: -0.1721
+2025-09-03 19:16:41,687 - INFO - Boosted OOD loss: -0.2839
+2025-09-03 19:16:43,144 - INFO - Boosted OOD loss: -0.0687
+2025-09-03 19:16:43,640 - INFO - Boosted OOD loss: -0.2776
+2025-09-03 19:16:44,140 - INFO - Boosted OOD loss: -0.0697
+2025-09-03 19:16:45,123 - INFO - Boosted OOD loss: -0.0856
+2025-09-03 19:16:46,576 - INFO - Boosted OOD loss: -0.3197
+2025-09-03 19:16:47,076 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:16:47,579 - INFO - Boosted OOD loss: -0.0660
+2025-09-03 19:16:48,091 - INFO - Boosted OOD loss: -0.3200
+2025-09-03 19:16:48,594 - INFO - Boosted OOD loss: -0.3062
+2025-09-03 19:16:49,574 - INFO - Boosted OOD loss: -0.1923
+2025-09-03 19:16:51,044 - INFO - Boosted OOD loss: -0.2340
+2025-09-03 19:16:52,028 - INFO - Boosted OOD loss: -0.0680
+2025-09-03 19:16:52,531 - INFO - Boosted OOD loss: -0.2661
+2025-09-03 19:16:53,518 - INFO - Boosted OOD loss: -0.0721
+2025-09-03 19:16:54,022 - INFO - Boosted OOD loss: -0.0673
+2025-09-03 19:16:54,526 - INFO - Boosted OOD loss: -0.2470
+2025-09-03 19:16:55,028 - INFO - Boosted OOD loss: -0.2721
+2025-09-03 19:16:56,011 - INFO - Boosted OOD loss: -0.0952
+2025-09-03 19:16:57,970 - INFO - Boosted OOD loss: -0.0675
+2025-09-03 19:16:58,475 - INFO - Boosted OOD loss: -0.0769
+2025-09-03 19:16:58,980 - INFO - Boosted OOD loss: -0.0932
+2025-09-03 19:16:59,484 - INFO - Boosted OOD loss: -0.2273
+2025-09-03 19:16:59,989 - INFO - Boosted OOD loss: -0.3217
+2025-09-03 19:17:00,494 - INFO - Boosted OOD loss: -0.3151
+2025-09-03 19:17:00,997 - INFO - Boosted OOD loss: -0.2305
+2025-09-03 19:17:01,988 - INFO - Boosted OOD loss: -0.2329
+2025-09-03 19:17:02,492 - INFO - Boosted OOD loss: -0.1854
+2025-09-03 19:17:02,998 - INFO - Boosted OOD loss: -0.1889
+2025-09-03 19:17:03,987 - INFO - Boosted OOD loss: -0.1847
+2025-09-03 19:17:04,495 - INFO - Boosted OOD loss: -0.2606
+2025-09-03 19:17:05,489 - INFO - Boosted OOD loss: -0.1635
+2025-09-03 19:17:05,998 - INFO - Boosted OOD loss: -0.0660
+2025-09-03 19:17:06,502 - INFO - Boosted OOD loss: -0.2990
+2025-09-03 19:17:08,471 - INFO - Boosted OOD loss: -0.3136
+2025-09-03 19:17:08,984 - INFO - Boosted OOD loss: -0.0674
+2025-09-03 19:17:09,496 - INFO - Boosted OOD loss: -0.2054
+2025-09-03 19:17:10,499 - INFO - Boosted OOD loss: -0.0722
+2025-09-03 19:17:11,500 - INFO - Boosted OOD loss: -0.0701
+2025-09-03 19:17:12,013 - INFO - Boosted OOD loss: -0.1248
+2025-09-03 19:17:13,510 - INFO - Boosted OOD loss: -0.0776
+2025-09-03 19:17:14,033 - INFO - Boosted OOD loss: -0.1353
+2025-09-03 19:17:14,550 - INFO - Boosted OOD loss: -0.1203
+2025-09-03 19:17:15,065 - INFO - Boosted OOD loss: -0.1378
+2025-09-03 19:17:15,583 - INFO - Boosted OOD loss: -0.2805
+2025-09-03 19:17:16,095 - INFO - Boosted OOD loss: -0.1259
+2025-09-03 19:17:17,103 - INFO - Boosted OOD loss: -0.1521
+2025-09-03 19:17:17,622 - INFO - Boosted OOD loss: -0.2848
+2025-09-03 19:17:18,136 - INFO - Boosted OOD loss: -0.1006
+2025-09-03 19:17:18,654 - INFO - Boosted OOD loss: -0.0845
+2025-09-03 19:17:19,664 - INFO - Boosted OOD loss: -0.1290
+2025-09-03 19:17:20,672 - INFO - Boosted OOD loss: -0.1573
+2025-09-03 19:17:21,189 - INFO - Boosted OOD loss: -0.0726
+2025-09-03 19:17:21,706 - INFO - Boosted OOD loss: -0.2268
+2025-09-03 19:17:22,221 - INFO - Boosted OOD loss: -0.2249
+2025-09-03 19:17:22,221 - INFO - Step 1000 Loss Debug:
+2025-09-03 19:17:22,222 - INFO -  CE: 1.5915
+2025-09-03 19:17:22,223 - INFO -  OOD: -0.2249
+2025-09-03 19:17:22,224 - INFO -  β: 32.00
+2025-09-03 19:17:22,225 - INFO -  ID: 24150, OOD(254): 157
+2025-09-03 19:17:22,743 - INFO - Boosted OOD loss: -0.3071
+2025-09-03 19:17:23,259 - INFO - Boosted OOD loss: -0.1120
+2025-09-03 19:17:23,775 - INFO - Boosted OOD loss: -0.1550
+2025-09-03 19:17:25,786 - INFO - Boosted OOD loss: -0.2800
+2025-09-03 19:17:26,810 - INFO - Boosted OOD loss: -0.2766
+2025-09-03 19:17:28,333 - INFO - Boosted OOD loss: -0.2953
+2025-09-03 19:17:29,356 - INFO - Boosted OOD loss: -0.0678
+2025-09-03 19:17:30,377 - INFO - Boosted OOD loss: -0.3118
+2025-09-03 19:17:30,899 - INFO - Boosted OOD loss: -0.2426
+2025-09-03 19:17:31,921 - INFO - Boosted OOD loss: -0.2277
+2025-09-03 19:17:33,950 - INFO - Boosted OOD loss: -0.1535
+2025-09-03 19:17:34,474 - INFO - Boosted OOD loss: -0.2244
+2025-09-03 19:17:35,095 - INFO - Boosted OOD loss: -0.1082
+2025-09-03 19:17:35,624 - INFO - Boosted OOD loss: -0.3121
+2025-09-03 19:17:36,146 - INFO - Boosted OOD loss: -0.2768
+2025-09-03 19:17:36,675 - INFO - Boosted OOD loss: -0.0694
+2025-09-03 19:17:37,195 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:17:37,725 - INFO - Boosted OOD loss: -0.2136
+2025-09-03 19:17:38,246 - INFO - Boosted OOD loss: -0.0686
+2025-09-03 19:17:38,772 - INFO - Boosted OOD loss: -0.2473
+2025-09-03 19:17:39,803 - INFO - Boosted OOD loss: -0.1343
+2025-09-03 19:17:40,323 - INFO - Boosted OOD loss: -0.2348
+2025-09-03 19:17:41,349 - INFO - Boosted OOD loss: -0.3090
+2025-09-03 19:17:41,870 - INFO - Boosted OOD loss: -0.0749
+2025-09-03 19:17:42,396 - INFO - Boosted OOD loss: -0.1250
+2025-09-03 19:17:43,421 - INFO - Boosted OOD loss: -0.2760
+2025-09-03 19:17:43,942 - INFO - Boosted OOD loss: -0.1356
+2025-09-03 19:17:44,475 - INFO - Boosted OOD loss: -0.1649
+2025-09-03 19:17:44,997 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:17:46,022 - INFO - Boosted OOD loss: -0.1451
+2025-09-03 19:17:47,560 - INFO - Boosted OOD loss: -0.1047
+2025-09-03 19:17:48,585 - INFO - Boosted OOD loss: -0.2896
+2025-09-03 19:17:49,105 - INFO - Boosted OOD loss: -0.0676
+2025-09-03 19:17:49,634 - INFO - Boosted OOD loss: -0.0799
+2025-09-03 19:17:50,159 - INFO - Boosted OOD loss: -0.3133
+2025-09-03 19:17:51,699 - INFO - Boosted OOD loss: -0.0729
+2025-09-03 19:17:53,740 - INFO - Boosted OOD loss: -0.1254
+2025-09-03 19:17:54,774 - INFO - Boosted OOD loss: -0.1378
+2025-09-03 19:17:55,299 - INFO - Boosted OOD loss: -0.0664
+2025-09-03 19:17:55,825 - INFO - Boosted OOD loss: -0.0711
+2025-09-03 19:17:56,857 - INFO - Boosted OOD loss: -0.0699
+2025-09-03 19:17:58,894 - INFO - Boosted OOD loss: -0.0787
+2025-09-03 19:18:00,428 - INFO - Boosted OOD loss: -0.3107
+2025-09-03 19:18:01,966 - INFO - Boosted OOD loss: -0.2460
+2025-09-03 19:18:03,001 - INFO - Boosted OOD loss: -0.1625
+2025-09-03 19:18:04,032 - INFO - Boosted OOD loss: -0.2448
+2025-09-03 19:18:05,582 - INFO - Boosted OOD loss: -0.0696
+2025-09-03 19:18:06,106 - INFO - Boosted OOD loss: -0.3167
+2025-09-03 19:18:07,146 - INFO - Boosted OOD loss: -0.2646
+2025-09-03 19:18:07,673 - INFO - Boosted OOD loss: -0.0667
+2025-09-03 19:18:09,229 - INFO - Boosted OOD loss: -0.0692
+2025-09-03 19:18:10,769 - INFO - Boosted OOD loss: -0.2726
+2025-09-03 19:18:11,301 - INFO - Boosted OOD loss: -0.0660
+2025-09-03 19:18:12,334 - INFO - Boosted OOD loss: -0.2686
+2025-09-03 19:18:12,857 - INFO - Boosted OOD loss: -0.1383
+2025-09-03 19:18:13,392 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:18:13,912 - WARNING - No anomaly pixels (254) found in batch
+2025-09-03 19:18:14,423 - INFO - Boosted OOD loss: -0.3089
+2025-09-03 19:18:14,952 - INFO - Boosted OOD loss: -0.2243
+2025-09-03 19:18:15,478 - INFO - Boosted OOD loss: -0.0737
+2025-09-03 19:18:16,512 - INFO - Boosted OOD loss: -0.2635
+2025-09-03 19:18:17,544 - INFO - Boosted OOD loss: -0.3132
+2025-09-03 19:18:18,575 - INFO - Boosted OOD loss: -0.2101
+2025-09-03 19:18:20,127 - INFO - Boosted OOD loss: -0.1056
+2025-09-03 19:18:20,651 - INFO - Boosted OOD loss: -0.0692
+2025-09-03 19:18:21,692 - INFO - Boosted OOD loss: -0.2436
+2025-09-03 19:18:22,218 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:18:23,251 - INFO - Boosted OOD loss: -0.1594
+2025-09-03 19:18:23,782 - INFO - Boosted OOD loss: -0.2504
+2025-09-03 19:18:25,829 - INFO - Boosted OOD loss: -0.2271
+2025-09-03 19:18:27,363 - INFO - Boosted OOD loss: -0.2802
+2025-09-03 19:18:28,400 - INFO - Boosted OOD loss: -0.0670
+2025-09-03 19:18:29,439 - INFO - Boosted OOD loss: -0.2335
+2025-09-03 19:18:29,976 - INFO - Boosted OOD loss: -0.0708
+2025-09-03 19:18:30,509 - INFO - Boosted OOD loss: -0.2578
+2025-09-03 19:18:31,041 - INFO - Boosted OOD loss: -0.1047
+2025-09-03 19:18:33,097 - INFO - Boosted OOD loss: -0.0676
+2025-09-03 19:18:33,632 - INFO - Boosted OOD loss: -0.2818
+2025-09-03 19:18:34,157 - INFO - Boosted OOD loss: -0.0694
+2025-09-03 19:18:34,693 - INFO - Boosted OOD loss: -0.1214
+2025-09-03 19:18:35,225 - INFO - Boosted OOD loss: -0.0668
+2025-09-03 19:18:35,756 - INFO - Boosted OOD loss: -0.1012
+2025-09-03 19:18:36,281 - INFO - Boosted OOD loss: -0.2710
+2025-09-03 19:18:37,335 - INFO - Boosted OOD loss: -0.3135
+2025-09-03 19:18:40,395 - INFO - Boosted OOD loss: -0.2319
+2025-09-03 19:18:41,426 - INFO - Boosted OOD loss: -0.0770
+2025-09-03 19:18:41,952 - INFO - Boosted OOD loss: -0.1164
+2025-09-03 19:18:42,479 - INFO - Boosted OOD loss: -0.3204
+2025-09-03 19:18:43,013 - INFO - Boosted OOD loss: -0.2525
+2025-09-03 19:18:43,538 - INFO - Boosted OOD loss: -0.2131
+2025-09-03 19:18:44,069 - INFO - Boosted OOD loss: -0.0692
+2025-09-03 19:18:44,598 - INFO - Boosted OOD loss: -0.0890
+2025-09-03 19:18:45,130 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:18:45,656 - INFO - Boosted OOD loss: -0.0955
+2025-09-03 19:18:46,180 - INFO - Boosted OOD loss: -0.0976
+2025-09-03 19:18:46,712 - INFO - Boosted OOD loss: -0.1267
+2025-09-03 19:18:47,237 - INFO - Boosted OOD loss: -0.0709
+2025-09-03 19:18:47,765 - INFO - Boosted OOD loss: -0.1360
+2025-09-03 19:18:48,285 - INFO - Boosted OOD loss: -0.0668
+2025-09-03 19:18:49,825 - INFO - Boosted OOD loss: -0.1737
+2025-09-03 19:18:50,346 - INFO - Boosted OOD loss: -0.0965
+2025-09-03 19:18:50,876 - INFO - Boosted OOD loss: -0.0800
+2025-09-03 19:18:52,412 - INFO - Boosted OOD loss: -0.0669
+2025-09-03 19:18:53,446 - INFO - Boosted OOD loss: -0.1782
+2025-09-03 19:18:53,971 - INFO - Boosted OOD loss: -0.3221
+2025-09-03 19:18:54,493 - INFO - Boosted OOD loss: -0.3120
+2025-09-03 19:18:55,522 - INFO - Boosted OOD loss: -0.2079
+2025-09-03 19:18:56,042 - INFO - Boosted OOD loss: -0.0684
+2025-09-03 19:18:56,563 - INFO - Boosted OOD loss: -0.2601
+2025-09-03 19:18:59,088 - INFO - Boosted OOD loss: -0.0806
+2025-09-03 19:19:00,615 - INFO - Boosted OOD loss: -0.2811
+2025-09-03 19:19:01,137 - INFO - Boosted OOD loss: -0.1656
+2025-09-03 19:19:02,160 - INFO - Boosted OOD loss: -0.3117
+2025-09-03 19:19:03,685 - INFO - Boosted OOD loss: -0.2580
+2025-09-03 19:19:04,206 - INFO - Boosted OOD loss: -0.2436
+2025-09-03 19:19:04,724 - INFO - Boosted OOD loss: -0.2179
+2025-09-03 19:19:05,746 - INFO - Boosted OOD loss: -0.0677
+2025-09-03 19:19:05,746 - INFO - Step 1200 Loss Debug:
+2025-09-03 19:19:05,748 - INFO -  CE: 1.1286
+2025-09-03 19:19:05,748 - INFO -  OOD: -0.0677
+2025-09-03 19:19:05,748 - INFO -  β: 32.00
+2025-09-03 19:19:05,749 - INFO -  ID: 27598, OOD(254): 2195
+2025-09-03 19:19:06,268 - INFO - Boosted OOD loss: -0.2028
+2025-09-03 19:19:06,794 - INFO - Boosted OOD loss: -0.0696
+2025-09-03 19:19:07,310 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:19:07,833 - INFO - Boosted OOD loss: -0.0685
+2025-09-03 19:19:08,354 - INFO - Boosted OOD loss: -0.0680
+2025-09-03 19:19:08,877 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:19:09,399 - INFO - Boosted OOD loss: -0.2303
+2025-09-03 19:19:11,914 - INFO - Boosted OOD loss: -0.1752
+2025-09-03 19:19:12,432 - INFO - Boosted OOD loss: -0.2858
+2025-09-03 19:19:13,452 - INFO - Boosted OOD loss: -0.0705
+2025-09-03 19:19:13,973 - INFO - Boosted OOD loss: -0.0697
+2025-09-03 19:19:14,494 - INFO - Boosted OOD loss: -0.1721
+2025-09-03 19:19:15,018 - INFO - Boosted OOD loss: -0.0687
+2025-09-03 19:19:16,033 - INFO - Boosted OOD loss: -0.3188
+2025-09-03 19:19:16,548 - INFO - Boosted OOD loss: -0.1761
+2025-09-03 19:19:18,558 - INFO - Boosted OOD loss: -0.0694
+2025-09-03 19:19:19,079 - INFO - Boosted OOD loss: -0.0976
+2025-09-03 19:19:19,596 - INFO - Boosted OOD loss: -0.0686
+2025-09-03 19:19:20,612 - INFO - Boosted OOD loss: -0.0692
+2025-09-03 19:19:22,119 - INFO - Boosted OOD loss: -0.1153
+2025-09-03 19:19:23,134 - INFO - Boosted OOD loss: -0.1393
+2025-09-03 19:19:23,655 - INFO - Boosted OOD loss: -0.2278
+2025-09-03 19:19:24,173 - INFO - Boosted OOD loss: -0.2858
+2025-09-03 19:19:24,691 - INFO - Boosted OOD loss: -0.0814
+2025-09-03 19:19:25,210 - INFO - Boosted OOD loss: -0.0774
+2025-09-03 19:19:26,222 - INFO - Boosted OOD loss: -0.3221
+2025-09-03 19:19:27,228 - INFO - Boosted OOD loss: -0.3168
+2025-09-03 19:19:27,743 - INFO - Boosted OOD loss: -0.1918
+2025-09-03 19:19:28,264 - INFO - Boosted OOD loss: -0.0700
+2025-09-03 19:19:28,786 - INFO - Boosted OOD loss: -0.3197
+2025-09-03 19:19:29,792 - INFO - Boosted OOD loss: -0.3217
+2025-09-03 19:19:31,293 - INFO - Boosted OOD loss: -0.3073
+2025-09-03 19:19:31,294 - INFO - Step 1250 Loss Debug:
+2025-09-03 19:19:31,295 - INFO -  CE: 1.3062
+2025-09-03 19:19:31,296 - INFO -  OOD: -0.3073
+2025-09-03 19:19:31,296 - INFO -  β: 32.00
+2025-09-03 19:19:31,297 - INFO -  ID: 27999, OOD(254): 40
+2025-09-03 19:19:36,239 - INFO - Boosted OOD loss: -0.2691
+2025-09-03 19:19:36,755 - INFO - Boosted OOD loss: -0.2490
+2025-09-03 19:19:37,273 - INFO - Boosted OOD loss: -0.1662
+2025-09-03 19:19:37,789 - INFO - Boosted OOD loss: -0.2479
+2025-09-03 19:19:38,304 - INFO - Boosted OOD loss: -0.3157
+2025-09-03 19:19:38,822 - INFO - Boosted OOD loss: -0.1630
+2025-09-03 19:19:39,338 - INFO - Boosted OOD loss: -0.1035
+2025-09-03 19:19:39,852 - INFO - Boosted OOD loss: -0.0791
+2025-09-03 19:19:40,365 - INFO - Boosted OOD loss: -0.3159
+2025-09-03 19:19:40,878 - INFO - Boosted OOD loss: -0.3212
+2025-09-03 19:19:41,391 - INFO - Boosted OOD loss: -0.3182
+2025-09-03 19:19:42,398 - INFO - Boosted OOD loss: -0.3114
+2025-09-03 19:19:43,403 - INFO - Boosted OOD loss: -0.2902
+2025-09-03 19:19:45,401 - INFO - Boosted OOD loss: -0.0759
+2025-09-03 19:19:45,918 - INFO - Boosted OOD loss: -0.3179
+2025-09-03 19:19:46,916 - INFO - Boosted OOD loss: -0.0871
+2025-09-03 19:19:47,925 - INFO - Boosted OOD loss: -0.0689
+2025-09-03 19:19:48,441 - INFO - Boosted OOD loss: -0.3235
+2025-09-03 19:19:48,953 - INFO - Boosted OOD loss: -0.1308
+2025-09-03 19:19:50,448 - INFO - Boosted OOD loss: -0.0678
+2025-09-03 19:19:50,958 - INFO - Boosted OOD loss: -0.1924
+2025-09-03 19:19:51,476 - INFO - Boosted OOD loss: -0.1089
+2025-09-03 19:19:51,992 - INFO - Boosted OOD loss: -0.1205
+2025-09-03 19:19:52,504 - INFO - Boosted OOD loss: -0.2031
+2025-09-03 19:19:54,003 - INFO - Boosted OOD loss: -0.1746
+2025-09-03 19:19:54,515 - INFO - Boosted OOD loss: -0.2670
+2025-09-03 19:19:55,522 - INFO - Boosted OOD loss: -0.3248
+2025-09-03 19:19:56,040 - INFO - Boosted OOD loss: -0.1255
+2025-09-03 19:19:56,557 - INFO - Boosted OOD loss: -0.0682
+2025-09-03 19:19:56,558 - INFO - Step 1300 Loss Debug:
+2025-09-03 19:19:56,560 - INFO -  CE: 1.4644
+2025-09-03 19:19:56,565 - INFO -  OOD: -0.0682
+2025-09-03 19:19:56,567 - INFO -  β: 32.00
+2025-09-03 19:19:56,569 - INFO -  ID: 24672, OOD(254): 1910
+2025-09-03 19:19:57,082 - INFO - Boosted OOD loss: -0.3216
+2025-09-03 19:19:58,581 - INFO - Boosted OOD loss: -0.0704
+2025-09-03 19:19:59,095 - INFO - Boosted OOD loss: -0.0677
+2025-09-03 19:20:00,096 - INFO - Boosted OOD loss: -0.3036
+2025-09-03 19:20:00,607 - INFO - Boosted OOD loss: -0.1092
+2025-09-03 19:20:01,607 - INFO - Boosted OOD loss: -0.2341
+2025-09-03 19:20:02,606 - INFO - Boosted OOD loss: -0.2941
+2025-09-03 19:20:03,119 - INFO - Boosted OOD loss: -0.1859
+2025-09-03 19:20:04,121 - INFO - Boosted OOD loss: -0.1028
+2025-09-03 19:20:04,636 - INFO - Boosted OOD loss: -0.0790
+2025-09-03 19:20:05,156 - INFO - Boosted OOD loss: -0.2800
+2025-09-03 19:20:06,156 - INFO - Boosted OOD loss: -0.1104
+2025-09-03 19:20:07,159 - INFO - Boosted OOD loss: -0.1868
+2025-09-03 19:20:08,653 - INFO - Boosted OOD loss: -0.1629
+2025-09-03 19:20:09,166 - INFO - Boosted OOD loss: -0.0674
+2025-09-03 19:20:09,676 - INFO - Boosted OOD loss: -0.3157
+2025-09-03 19:20:10,187 - INFO - Boosted OOD loss: -0.2120
+2025-09-03 19:20:11,670 - INFO - Boosted OOD loss: -0.0754
+2025-09-03 19:20:12,670 - INFO - Boosted OOD loss: -0.2975
+2025-09-03 19:20:13,664 - INFO - Boosted OOD loss: -0.0798
+2025-09-03 19:20:13,819 - INFO - Updated beta to 11.61 (exp decay)
+2025-09-03 19:20:33,134 - INFO - Weights updated successfully
+2025-09-03 19:20:33,135 - INFO - Advanced epoch 3 - Updated beta: 11.61
+2025-09-03 19:20:33,136 - INFO - Epoch 3 - Avg CE: 1.5326, Avg OOD: -0.1053, β: 32
+2025-09-03 19:20:33,248 - INFO - 
+Starting Epoch 4/100
+2025-09-03 19:20:33,248 - INFO - ============================================================
+2025-09-03 19:20:33,250 - INFO - 
+Updating Hopfield boosting weights at epoch 4...
+2025-09-03 19:20:51,600 - INFO - Weights updated successfully
+2025-09-03 19:20:54,316 - INFO - Boosted OOD loss: -0.0716
+2025-09-03 19:20:55,748 - INFO - Boosted OOD loss: -0.2406
+2025-09-03 19:20:56,738 - INFO - Boosted OOD loss: -0.2370
+2025-09-03 19:20:58,638 - INFO - Boosted OOD loss: -0.0685
+2025-09-03 19:20:59,131 - INFO - Boosted OOD loss: -0.2011
+2025-09-03 19:20:59,624 - INFO - Boosted OOD loss: -0.3093
+2025-09-03 19:21:00,119 - INFO - Boosted OOD loss: -0.1879
+2025-09-03 19:21:01,559 - INFO - Boosted OOD loss: -0.3115
+2025-09-03 19:21:02,531 - INFO - Boosted OOD loss: -0.1643
+2025-09-03 19:21:03,027 - INFO - Boosted OOD loss: -0.3097
+2025-09-03 19:21:03,525 - INFO - Boosted OOD loss: -0.1910
+2025-09-03 19:21:04,023 - INFO - Boosted OOD loss: -0.0655
+2025-09-03 19:21:04,997 - INFO - Boosted OOD loss: -0.2333
+2025-09-03 19:21:05,494 - INFO - Boosted OOD loss: -0.1277
+2025-09-03 19:21:05,992 - INFO - Boosted OOD loss: -0.2573
+2025-09-03 19:21:06,492 - INFO - Boosted OOD loss: -0.1716
+2025-09-03 19:21:06,987 - INFO - Boosted OOD loss: -0.3228
+2025-09-03 19:21:08,436 - INFO - Boosted OOD loss: -0.0807
+2025-09-03 19:21:09,902 - INFO - Boosted OOD loss: -0.2678
+2025-09-03 19:21:10,406 - INFO - Boosted OOD loss: -0.0682
+2025-09-03 19:21:11,384 - INFO - Boosted OOD loss: -0.0886
+2025-09-03 19:21:14,285 - INFO - Boosted OOD loss: -0.0714
+2025-09-03 19:21:15,265 - INFO - Boosted OOD loss: -0.3094
+2025-09-03 19:21:15,768 - INFO - Boosted OOD loss: -0.0715
+2025-09-03 19:21:16,268 - INFO - Boosted OOD loss: -0.0977
+2025-09-03 19:21:16,772 - INFO - Boosted OOD loss: -0.1740
+2025-09-03 19:21:17,277 - INFO - Boosted OOD loss: -0.0954
+2025-09-03 19:21:18,259 - INFO - Boosted OOD loss: -0.3150
+2025-09-03 19:21:19,735 - INFO - Boosted OOD loss: -0.2084
+2025-09-03 19:21:20,728 - INFO - Boosted OOD loss: -0.0685
+2025-09-03 19:21:21,229 - INFO - Boosted OOD loss: -0.0706
+2025-09-03 19:21:21,731 - INFO - Boosted OOD loss: -0.3070
+2025-09-03 19:21:22,718 - INFO - Boosted OOD loss: -0.0711
+2025-09-03 19:21:24,676 - INFO - Boosted OOD loss: -0.0697
+2025-09-03 19:21:25,182 - INFO - Boosted OOD loss: -0.0731
+2025-09-03 19:21:25,686 - INFO - Boosted OOD loss: -0.1567
+2025-09-03 19:21:26,674 - INFO - Boosted OOD loss: -0.2862
+2025-09-03 19:21:26,674 - INFO - Step 1400 Loss Debug:
+2025-09-03 19:21:26,675 - INFO -  CE: 1.3306
+2025-09-03 19:21:26,676 - INFO -  OOD: -0.2862
+2025-09-03 19:21:26,676 - INFO -  β: 32.00
+2025-09-03 19:21:26,676 - INFO -  ID: 24608, OOD(254): 50
+2025-09-03 19:21:27,179 - INFO - Boosted OOD loss: -0.1835
+2025-09-03 19:21:28,665 - INFO - Boosted OOD loss: -0.0687
+2025-09-03 19:21:29,177 - INFO - Boosted OOD loss: -0.2239
+2025-09-03 19:21:29,687 - INFO - Boosted OOD loss: -0.1000
+2025-09-03 19:21:30,680 - INFO - Boosted OOD loss: -0.2184
+2025-09-03 19:21:31,198 - INFO - Boosted OOD loss: -0.2451
+2025-09-03 19:21:31,708 - INFO - Boosted OOD loss: -0.2520
+2025-09-03 19:21:32,215 - INFO - Boosted OOD loss: -0.1691
+2025-09-03 19:21:32,725 - INFO - Boosted OOD loss: -0.0693
+2025-09-03 19:21:35,183 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:21:35,692 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:21:36,205 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:21:36,721 - INFO - Boosted OOD loss: -0.0676
+2025-09-03 19:21:37,235 - INFO - Boosted OOD loss: -0.0798
+2025-09-03 19:21:38,728 - INFO - Boosted OOD loss: -0.2625
+2025-09-03 19:21:39,733 - INFO - Boosted OOD loss: -0.2968
+2025-09-03 19:21:40,245 - INFO - Boosted OOD loss: -0.0800
+2025-09-03 19:21:41,746 - INFO - Boosted OOD loss: -0.2136
+2025-09-03 19:21:42,268 - INFO - Boosted OOD loss: -0.2406
+2025-09-03 19:21:42,784 - INFO - Boosted OOD loss: -0.3133
+2025-09-03 19:21:43,300 - INFO - Boosted OOD loss: -0.0688
+2025-09-03 19:21:44,804 - INFO - Boosted OOD loss: -0.3126
+2025-09-03 19:21:46,315 - INFO - Boosted OOD loss: -0.0662
+2025-09-03 19:21:46,829 - INFO - Boosted OOD loss: -0.0696
+2025-09-03 19:21:50,348 - INFO - Boosted OOD loss: -0.1607
+2025-09-03 19:21:51,868 - INFO - Boosted OOD loss: -0.2231
+2025-09-03 19:21:51,869 - INFO - Step 1450 Loss Debug:
+2025-09-03 19:21:51,870 - INFO -  CE: 1.4704
+2025-09-03 19:21:51,870 - INFO -  OOD: -0.2231
+2025-09-03 19:21:51,870 - INFO -  β: 32.00
+2025-09-03 19:21:51,871 - INFO -  ID: 28912, OOD(254): 146
+2025-09-03 19:21:52,894 - INFO - Boosted OOD loss: -0.0694
+2025-09-03 19:21:53,415 - INFO - Boosted OOD loss: -0.1675
+2025-09-03 19:21:54,940 - INFO - Boosted OOD loss: -0.0690
+2025-09-03 19:21:55,462 - INFO - Boosted OOD loss: -0.1744
+2025-09-03 19:21:55,991 - INFO - Boosted OOD loss: -0.0682
+2025-09-03 19:21:57,018 - INFO - Boosted OOD loss: -0.0759
+2025-09-03 19:21:57,542 - INFO - Boosted OOD loss: -0.0664
+2025-09-03 19:21:59,593 - INFO - Boosted OOD loss: -0.0722
+2025-09-03 19:22:00,116 - INFO - Boosted OOD loss: -0.2207
+2025-09-03 19:22:01,146 - INFO - Boosted OOD loss: -0.0711
+2025-09-03 19:22:02,178 - INFO - Boosted OOD loss: -0.0726
+2025-09-03 19:22:02,704 - INFO - Boosted OOD loss: -0.0687
+2025-09-03 19:22:04,237 - INFO - Boosted OOD loss: -0.0689
+2025-09-03 19:22:05,268 - INFO - Boosted OOD loss: -0.0664
+2025-09-03 19:22:05,800 - INFO - Boosted OOD loss: -0.2093
+2025-09-03 19:22:06,323 - INFO - Boosted OOD loss: -0.0752
+2025-09-03 19:22:07,355 - INFO - Boosted OOD loss: -0.0682
+2025-09-03 19:22:07,885 - INFO - Boosted OOD loss: -0.0663
+2025-09-03 19:22:08,409 - INFO - Boosted OOD loss: -0.0857
+2025-09-03 19:22:09,945 - INFO - Boosted OOD loss: -0.1875
+2025-09-03 19:22:10,475 - INFO - Boosted OOD loss: -0.1615
+2025-09-03 19:22:11,002 - INFO - Boosted OOD loss: -0.0690
+2025-09-03 19:22:12,033 - INFO - Boosted OOD loss: -0.3077
+2025-09-03 19:22:12,564 - INFO - Boosted OOD loss: -0.0666
+2025-09-03 19:22:13,091 - INFO - Boosted OOD loss: -0.0798
+2025-09-03 19:22:15,646 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:22:17,180 - INFO - Boosted OOD loss: -0.3158
+2025-09-03 19:22:17,706 - WARNING - No anomaly pixels (254) found in batch
+2025-09-03 19:22:18,729 - INFO - Boosted OOD loss: -0.0788
+2025-09-03 19:22:19,760 - INFO - Boosted OOD loss: -0.2401
+2025-09-03 19:22:22,323 - INFO - Boosted OOD loss: -0.2705
+2025-09-03 19:22:22,850 - INFO - Boosted OOD loss: -0.3199
+2025-09-03 19:22:24,898 - INFO - Boosted OOD loss: -0.1597
+2025-09-03 19:22:25,430 - INFO - Boosted OOD loss: -0.1446
+2025-09-03 19:22:25,957 - INFO - Boosted OOD loss: -0.3155
+2025-09-03 19:22:26,487 - INFO - Boosted OOD loss: -0.0661
+2025-09-03 19:22:27,024 - INFO - Boosted OOD loss: -0.0684
+2025-09-03 19:22:27,561 - INFO - Boosted OOD loss: -0.1619
+2025-09-03 19:22:28,597 - INFO - Boosted OOD loss: -0.1084
+2025-09-03 19:22:29,128 - INFO - Boosted OOD loss: -0.2387
+2025-09-03 19:22:30,153 - INFO - Boosted OOD loss: -0.2113
+2025-09-03 19:22:30,674 - INFO - Boosted OOD loss: -0.2513
+2025-09-03 19:22:31,704 - INFO - Boosted OOD loss: -0.1680
+2025-09-03 19:22:32,241 - INFO - Boosted OOD loss: -0.2442
+2025-09-03 19:22:32,770 - INFO - Boosted OOD loss: -0.3203
+2025-09-03 19:22:33,806 - INFO - Boosted OOD loss: -0.2330
+2025-09-03 19:22:34,335 - INFO - Boosted OOD loss: -0.3157
+2025-09-03 19:22:35,368 - INFO - Boosted OOD loss: -0.2490
+2025-09-03 19:22:37,405 - INFO - Boosted OOD loss: -0.2990
+2025-09-03 19:22:38,435 - INFO - Boosted OOD loss: -0.3089
+2025-09-03 19:22:38,962 - INFO - Boosted OOD loss: -0.2482
+2025-09-03 19:22:39,485 - INFO - Boosted OOD loss: -0.2629
+2025-09-03 19:22:40,015 - INFO - Boosted OOD loss: -0.2110
+2025-09-03 19:22:40,541 - INFO - Boosted OOD loss: -0.0688
+2025-09-03 19:22:41,075 - INFO - Boosted OOD loss: -0.0866
+2025-09-03 19:22:42,109 - INFO - Boosted OOD loss: -0.1885
+2025-09-03 19:22:42,640 - INFO - Boosted OOD loss: -0.2163
+2025-09-03 19:22:43,164 - INFO - Boosted OOD loss: -0.0678
+2025-09-03 19:22:44,198 - INFO - Boosted OOD loss: -0.2736
+2025-09-03 19:22:45,232 - INFO - Boosted OOD loss: -0.2358
+2025-09-03 19:22:45,765 - INFO - Boosted OOD loss: -0.0890
+2025-09-03 19:22:46,295 - INFO - Boosted OOD loss: -0.2041
+2025-09-03 19:22:48,855 - INFO - Boosted OOD loss: -0.2361
+2025-09-03 19:22:49,889 - INFO - Boosted OOD loss: -0.0728
+2025-09-03 19:22:50,419 - INFO - Boosted OOD loss: -0.0813
+2025-09-03 19:22:50,945 - INFO - Boosted OOD loss: -0.0880
+2025-09-03 19:22:51,479 - INFO - Boosted OOD loss: -0.0669
+2025-09-03 19:22:52,007 - INFO - Boosted OOD loss: -0.0688
+2025-09-03 19:22:53,052 - INFO - Boosted OOD loss: -0.3197
+2025-09-03 19:22:54,597 - INFO - Boosted OOD loss: -0.0795
+2025-09-03 19:22:55,128 - INFO - Boosted OOD loss: -0.3024
+2025-09-03 19:22:55,656 - INFO - Boosted OOD loss: -0.0682
+2025-09-03 19:22:56,690 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:22:57,219 - INFO - Boosted OOD loss: -0.2919
+2025-09-03 19:22:57,753 - INFO - Boosted OOD loss: -0.2100
+2025-09-03 19:22:58,284 - INFO - Boosted OOD loss: -0.2980
+2025-09-03 19:22:58,814 - INFO - Boosted OOD loss: -0.1142
+2025-09-03 19:22:59,341 - INFO - Boosted OOD loss: -0.2259
+2025-09-03 19:22:59,874 - INFO - Boosted OOD loss: -0.0737
+2025-09-03 19:23:01,927 - INFO - Boosted OOD loss: -0.2638
+2025-09-03 19:23:02,452 - INFO - Boosted OOD loss: -0.2331
+2025-09-03 19:23:03,502 - INFO - Boosted OOD loss: -0.0861
+2025-09-03 19:23:04,541 - INFO - Boosted OOD loss: -0.3136
+2025-09-03 19:23:05,067 - INFO - Boosted OOD loss: -0.3014
+2025-09-03 19:23:05,601 - INFO - Boosted OOD loss: -0.2781
+2025-09-03 19:23:06,128 - INFO - Boosted OOD loss: -0.2619
+2025-09-03 19:23:06,669 - INFO - Boosted OOD loss: -0.0721
+2025-09-03 19:23:07,709 - INFO - Boosted OOD loss: -0.0711
+2025-09-03 19:23:08,241 - INFO - Boosted OOD loss: -0.2726
+2025-09-03 19:23:09,276 - INFO - Boosted OOD loss: -0.2619
+2025-09-03 19:23:09,793 - WARNING - No anomaly pixels (254) found in batch
+2025-09-03 19:23:10,305 - INFO - Boosted OOD loss: -0.3162
+2025-09-03 19:23:11,334 - INFO - Boosted OOD loss: -0.0675
+2025-09-03 19:23:11,862 - INFO - Boosted OOD loss: -0.2146
+2025-09-03 19:23:12,901 - INFO - Boosted OOD loss: -0.1270
+2025-09-03 19:23:14,953 - INFO - Boosted OOD loss: -0.1650
+2025-09-03 19:23:15,481 - INFO - Boosted OOD loss: -0.2928
+2025-09-03 19:23:16,011 - INFO - Boosted OOD loss: -0.3146
+2025-09-03 19:23:16,532 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:23:17,565 - INFO - Boosted OOD loss: -0.1885
+2025-09-03 19:23:18,599 - INFO - Boosted OOD loss: -0.1985
+2025-09-03 19:23:20,132 - INFO - Boosted OOD loss: -0.0823
+2025-09-03 19:23:20,649 - INFO - Boosted OOD loss: -0.2557
+2025-09-03 19:23:21,177 - INFO - Boosted OOD loss: -0.0689
+2025-09-03 19:23:21,698 - INFO - Boosted OOD loss: -0.1652
+2025-09-03 19:23:22,232 - INFO - Boosted OOD loss: -0.0992
+2025-09-03 19:23:22,760 - INFO - Boosted OOD loss: -0.3178
+2025-09-03 19:23:23,281 - INFO - Boosted OOD loss: -0.2911
+2025-09-03 19:23:24,307 - INFO - Boosted OOD loss: -0.2300
+2025-09-03 19:23:25,838 - INFO - Boosted OOD loss: -0.0686
+2025-09-03 19:23:26,871 - INFO - Boosted OOD loss: -0.2304
+2025-09-03 19:23:27,394 - INFO - Boosted OOD loss: -0.2574
+2025-09-03 19:23:28,420 - INFO - Boosted OOD loss: -0.0690
+2025-09-03 19:23:28,945 - INFO - Boosted OOD loss: -0.0687
+2025-09-03 19:23:29,463 - INFO - Boosted OOD loss: -0.0687
+2025-09-03 19:23:29,986 - INFO - Boosted OOD loss: -0.2890
+2025-09-03 19:23:30,507 - INFO - Boosted OOD loss: -0.0664
+2025-09-03 19:23:31,530 - INFO - Boosted OOD loss: -0.0712
+2025-09-03 19:23:32,055 - INFO - Boosted OOD loss: -0.2776
+2025-09-03 19:23:33,583 - INFO - Boosted OOD loss: -0.0840
+2025-09-03 19:23:35,109 - INFO - Boosted OOD loss: -0.2413
+2025-09-03 19:23:36,628 - INFO - Boosted OOD loss: -0.0931
+2025-09-03 19:23:37,652 - INFO - Boosted OOD loss: -0.0780
+2025-09-03 19:23:38,668 - INFO - Boosted OOD loss: -0.2158
+2025-09-03 19:23:39,194 - INFO - Boosted OOD loss: -0.0690
+2025-09-03 19:23:42,229 - INFO - Boosted OOD loss: -0.0744
+2025-09-03 19:23:43,750 - INFO - Boosted OOD loss: -0.0684
+2025-09-03 19:23:44,272 - INFO - Boosted OOD loss: -0.0685
+2025-09-03 19:23:44,789 - INFO - Boosted OOD loss: -0.1694
+2025-09-03 19:23:45,312 - INFO - Boosted OOD loss: -0.2254
+2025-09-03 19:23:45,830 - INFO - Boosted OOD loss: -0.1705
+2025-09-03 19:23:46,854 - INFO - Boosted OOD loss: -0.3208
+2025-09-03 19:23:48,361 - INFO - Boosted OOD loss: -0.0988
+2025-09-03 19:23:49,375 - INFO - Boosted OOD loss: -0.0677
+2025-09-03 19:23:49,891 - INFO - Boosted OOD loss: -0.0707
+2025-09-03 19:23:50,413 - INFO - Boosted OOD loss: -0.0842
+2025-09-03 19:23:51,421 - INFO - Boosted OOD loss: -0.2667
+2025-09-03 19:23:51,938 - INFO - Boosted OOD loss: -0.0670
+2025-09-03 19:23:52,458 - INFO - Boosted OOD loss: -0.2140
+2025-09-03 19:23:52,973 - INFO - Boosted OOD loss: -0.2104
+2025-09-03 19:23:53,487 - INFO - Boosted OOD loss: -0.2433
+2025-09-03 19:23:54,989 - INFO - Boosted OOD loss: -0.1802
+2025-09-03 19:23:55,509 - INFO - Boosted OOD loss: -0.1047
+2025-09-03 19:23:56,031 - INFO - Boosted OOD loss: -0.2366
+2025-09-03 19:23:57,543 - INFO - Boosted OOD loss: -0.3106
+2025-09-03 19:24:01,033 - INFO - Boosted OOD loss: -0.2617
+2025-09-03 19:24:01,034 - INFO - Step 1700 Loss Debug:
+2025-09-03 19:24:01,039 - INFO -  CE: 1.0474
+2025-09-03 19:24:01,040 - INFO -  OOD: -0.2617
+2025-09-03 19:24:01,040 - INFO -  β: 32.00
+2025-09-03 19:24:01,040 - INFO -  ID: 26245, OOD(254): 97
+2025-09-03 19:24:01,556 - INFO - Boosted OOD loss: -0.2923
+2025-09-03 19:24:02,073 - INFO - Boosted OOD loss: -0.1195
+2025-09-03 19:24:02,586 - INFO - Boosted OOD loss: -0.3140
+2025-09-03 19:24:03,598 - INFO - Boosted OOD loss: -0.2415
+2025-09-03 19:24:04,609 - INFO - Boosted OOD loss: -0.3046
+2025-09-03 19:24:05,122 - INFO - Boosted OOD loss: -0.0788
+2025-09-03 19:24:05,638 - INFO - Boosted OOD loss: -0.0690
+2025-09-03 19:24:06,156 - INFO - Boosted OOD loss: -0.1584
+2025-09-03 19:24:06,672 - INFO - Boosted OOD loss: -0.1511
+2025-09-03 19:24:07,185 - INFO - Boosted OOD loss: -0.2666
+2025-09-03 19:24:07,697 - INFO - Boosted OOD loss: -0.2816
+2025-09-03 19:24:08,208 - INFO - Boosted OOD loss: -0.3252
+2025-09-03 19:24:08,725 - INFO - Boosted OOD loss: -0.2023
+2025-09-03 19:24:09,242 - INFO - Boosted OOD loss: -0.2313
+2025-09-03 19:24:09,754 - INFO - Boosted OOD loss: -0.3016
+2025-09-03 19:24:10,275 - INFO - Boosted OOD loss: -0.0801
+2025-09-03 19:24:11,277 - INFO - Boosted OOD loss: -0.3066
+2025-09-03 19:24:11,790 - INFO - Boosted OOD loss: -0.1569
+2025-09-03 19:24:12,303 - INFO - Boosted OOD loss: -0.2060
+2025-09-03 19:24:14,782 - INFO - Boosted OOD loss: -0.2420
+2025-09-03 19:24:15,787 - INFO - Boosted OOD loss: -0.0665
+2025-09-03 19:24:16,304 - INFO - Boosted OOD loss: -0.3114
+2025-09-03 19:24:17,799 - INFO - Boosted OOD loss: -0.0682
+2025-09-03 19:24:18,315 - INFO - Boosted OOD loss: -0.2678
+2025-09-03 19:24:18,829 - INFO - Boosted OOD loss: -0.0667
+2025-09-03 19:24:19,837 - INFO - Boosted OOD loss: -0.1603
+2025-09-03 19:24:20,352 - INFO - Boosted OOD loss: -0.2120
+2025-09-03 19:24:20,863 - INFO - Boosted OOD loss: -0.2492
+2025-09-03 19:24:21,378 - INFO - Boosted OOD loss: -0.0684
+2025-09-03 19:24:22,381 - INFO - Boosted OOD loss: -0.2361
+2025-09-03 19:24:22,899 - INFO - Boosted OOD loss: -0.1258
+2025-09-03 19:24:23,413 - INFO - Boosted OOD loss: -0.1989
+2025-09-03 19:24:23,924 - INFO - Boosted OOD loss: -0.0701
+2025-09-03 19:24:24,440 - INFO - Boosted OOD loss: -0.3078
+2025-09-03 19:24:25,927 - INFO - Boosted OOD loss: -0.2073
+2025-09-03 19:24:26,441 - INFO - Boosted OOD loss: -0.2570
+2025-09-03 19:24:26,442 - INFO - Step 1750 Loss Debug:
+2025-09-03 19:24:26,443 - INFO -  CE: 1.2175
+2025-09-03 19:24:26,443 - INFO -  OOD: -0.2570
+2025-09-03 19:24:26,443 - INFO -  β: 32.00
+2025-09-03 19:24:26,444 - INFO -  ID: 28745, OOD(254): 102
+2025-09-03 19:24:26,962 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:24:27,971 - INFO - Boosted OOD loss: -0.0670
+2025-09-03 19:24:28,974 - INFO - Boosted OOD loss: -0.0680
+2025-09-03 19:24:29,982 - INFO - Boosted OOD loss: -0.0680
+2025-09-03 19:24:30,978 - INFO - Boosted OOD loss: -0.2985
+2025-09-03 19:24:31,488 - INFO - Boosted OOD loss: -0.0689
+2025-09-03 19:24:32,007 - INFO - Boosted OOD loss: -0.0679
+2025-09-03 19:24:32,517 - INFO - Boosted OOD loss: -0.2015
+2025-09-03 19:24:33,033 - INFO - Boosted OOD loss: -0.1816
+2025-09-03 19:24:33,551 - INFO - Boosted OOD loss: -0.3059
+2025-09-03 19:24:34,549 - INFO - Boosted OOD loss: -0.1734
+2025-09-03 19:24:37,033 - INFO - Boosted OOD loss: -0.1434
+2025-09-03 19:24:38,036 - INFO - Boosted OOD loss: -0.0701
+2025-09-03 19:24:39,035 - INFO - Boosted OOD loss: -0.1921
+2025-09-03 19:24:40,520 - INFO - Boosted OOD loss: -0.2611
+2025-09-03 19:24:41,025 - INFO - Boosted OOD loss: -0.3168
+2025-09-03 19:24:41,171 - INFO - Updated beta to 11.48 (exp decay)
+2025-09-03 19:24:57,937 - INFO - Weights updated successfully
+2025-09-03 19:24:57,938 - INFO - Advanced epoch 4 - Updated beta: 11.48
+2025-09-03 19:24:57,938 - INFO - Epoch 4 - Avg CE: 1.4858, Avg OOD: -0.1004, β: 32
+2025-09-03 19:24:58,047 - INFO - 
+Starting Epoch 5/100
+2025-09-03 19:24:58,048 - INFO - ============================================================
+2025-09-03 19:24:58,050 - INFO - 
+Updating Hopfield boosting weights at epoch 5...
+2025-09-03 19:25:15,790 - INFO - Weights updated successfully
+2025-09-03 19:25:18,886 - INFO - Boosted OOD loss: -0.0663
+2025-09-03 19:25:19,381 - INFO - Boosted OOD loss: -0.2797
+2025-09-03 19:25:20,840 - INFO - Boosted OOD loss: -0.0667
+2025-09-03 19:25:21,798 - INFO - Boosted OOD loss: -0.3052
+2025-09-03 19:25:22,296 - INFO - Boosted OOD loss: -0.2332
+2025-09-03 19:25:24,209 - INFO - Boosted OOD loss: -0.1890
+2025-09-03 19:25:24,709 - INFO - Boosted OOD loss: -0.3071
+2025-09-03 19:25:25,692 - INFO - Boosted OOD loss: -0.3118
+2025-09-03 19:25:26,668 - INFO - Boosted OOD loss: -0.0716
+2025-09-03 19:25:27,163 - INFO - Boosted OOD loss: -0.3044
+2025-09-03 19:25:27,660 - INFO - Boosted OOD loss: -0.2380
+2025-09-03 19:25:28,157 - INFO - Boosted OOD loss: -0.2935
+2025-09-03 19:25:28,649 - WARNING - No anomaly pixels (254) found in batch
+2025-09-03 19:25:29,605 - INFO - Boosted OOD loss: -0.2315
+2025-09-03 19:25:32,007 - INFO - Boosted OOD loss: -0.0675
+2025-09-03 19:25:32,506 - INFO - Boosted OOD loss: -0.1628
+2025-09-03 19:25:33,005 - INFO - Boosted OOD loss: -0.2428
+2025-09-03 19:25:33,984 - INFO - Boosted OOD loss: -0.1870
+2025-09-03 19:25:34,961 - INFO - Boosted OOD loss: -0.2630
+2025-09-03 19:25:35,460 - INFO - Boosted OOD loss: -0.2190
+2025-09-03 19:25:36,920 - INFO - Boosted OOD loss: -0.0810
+2025-09-03 19:25:37,900 - INFO - Boosted OOD loss: -0.0659
+2025-09-03 19:25:38,401 - INFO - Boosted OOD loss: -0.2958
+2025-09-03 19:25:38,903 - INFO - Boosted OOD loss: -0.1806
+2025-09-03 19:25:39,886 - INFO - Boosted OOD loss: -0.0676
+2025-09-03 19:25:40,868 - INFO - Boosted OOD loss: -0.0673
+2025-09-03 19:25:41,848 - INFO - Boosted OOD loss: -0.2469
+2025-09-03 19:25:42,349 - INFO - Boosted OOD loss: -0.0684
+2025-09-03 19:25:42,854 - INFO - Boosted OOD loss: -0.0790
+2025-09-03 19:25:43,366 - INFO - Boosted OOD loss: -0.1334
+2025-09-03 19:25:43,867 - INFO - Boosted OOD loss: -0.2801
+2025-09-03 19:25:44,368 - INFO - Boosted OOD loss: -0.0671
+2025-09-03 19:25:44,872 - INFO - Boosted OOD loss: -0.2540
+2025-09-03 19:25:45,373 - INFO - Boosted OOD loss: -0.1083
+2025-09-03 19:25:45,875 - INFO - Boosted OOD loss: -0.0782
+2025-09-03 19:25:46,861 - INFO - Boosted OOD loss: -0.1188
+2025-09-03 19:25:47,362 - INFO - Boosted OOD loss: -0.1755
+2025-09-03 19:25:47,865 - INFO - Boosted OOD loss: -0.0726
+2025-09-03 19:25:48,367 - INFO - Boosted OOD loss: -0.2903
+2025-09-03 19:25:48,871 - INFO - Boosted OOD loss: -0.0665
+2025-09-03 19:25:49,868 - INFO - Boosted OOD loss: -0.0755
+2025-09-03 19:25:50,371 - INFO - Boosted OOD loss: -0.1812
+2025-09-03 19:25:50,875 - INFO - Boosted OOD loss: -0.2921
+2025-09-03 19:25:51,386 - INFO - Boosted OOD loss: -0.0655
+2025-09-03 19:25:52,861 - INFO - Boosted OOD loss: -0.0691
+2025-09-03 19:25:53,858 - INFO - Boosted OOD loss: -0.0730
+2025-09-03 19:25:54,366 - INFO - Boosted OOD loss: -0.2365
+2025-09-03 19:25:55,358 - INFO - Boosted OOD loss: -0.3098
+2025-09-03 19:25:55,864 - INFO - Boosted OOD loss: -0.0666
+2025-09-03 19:25:56,859 - INFO - Boosted OOD loss: -0.2296
+2025-09-03 19:25:57,371 - INFO - Boosted OOD loss: -0.0695
+2025-09-03 19:25:57,880 - INFO - Boosted OOD loss: -0.2653
+2025-09-03 19:25:58,392 - INFO - Boosted OOD loss: -0.0960
+2025-09-03 19:25:58,901 - INFO - Boosted OOD loss: -0.0662
+2025-09-03 19:25:59,411 - INFO - Boosted OOD loss: -0.0857
+2025-09-03 19:26:00,893 - INFO - Boosted OOD loss: -0.0664
+2025-09-03 19:26:01,893 - INFO - Boosted OOD loss: -0.0745
+2025-09-03 19:26:02,896 - INFO - Boosted OOD loss: -0.2383
+2025-09-03 19:26:03,903 - INFO - Boosted OOD loss: -0.0662
+2025-09-03 19:26:05,894 - INFO - Boosted OOD loss: -0.3103
+2025-09-03 19:26:07,406 - INFO - Boosted OOD loss: -0.2558
+2025-09-03 19:26:08,424 - INFO - Boosted OOD loss: -0.0812
+2025-09-03 19:26:08,941 - INFO - Boosted OOD loss: -0.0678
+2025-09-03 19:26:09,462 - INFO - Boosted OOD loss: -0.0734
+2025-09-03 19:26:09,977 - INFO - Boosted OOD loss: -0.1645
+2025-09-03 19:26:10,496 - INFO - Boosted OOD loss: -0.1991
+2025-09-03 19:26:11,012 - INFO - Boosted OOD loss: -0.0861
+2025-09-03 19:26:11,533 - INFO - Boosted OOD loss: -0.1555
+2025-09-03 19:26:12,554 - INFO - Boosted OOD loss: -0.1213
+2025-09-03 19:26:14,568 - INFO - Boosted OOD loss: -0.2387
+2025-09-03 19:26:15,092 - INFO - Boosted OOD loss: -0.0872
+2025-09-03 19:26:16,617 - INFO - Boosted OOD loss: -0.1078
+2025-09-03 19:26:17,137 - INFO - Boosted OOD loss: -0.0948
+2025-09-03 19:26:17,672 - INFO - Boosted OOD loss: -0.0693
+2025-09-03 19:26:18,189 - INFO - Boosted OOD loss: -0.3046
+2025-09-03 19:26:18,713 - INFO - Boosted OOD loss: -0.2917
+2025-09-03 19:26:18,713 - INFO - Step 1900 Loss Debug:
+2025-09-03 19:26:18,714 - INFO -  CE: 1.5651
+2025-09-03 19:26:18,715 - INFO -  OOD: -0.2917
+2025-09-03 19:26:18,716 - INFO -  β: 32.00
+2025-09-03 19:26:18,717 - INFO -  ID: 28098, OOD(254): 40
+2025-09-03 19:26:19,228 - INFO - Boosted OOD loss: -0.3091
+2025-09-03 19:26:19,750 - INFO - Boosted OOD loss: -0.1764
+2025-09-03 19:26:20,265 - INFO - Boosted OOD loss: -0.3118
+2025-09-03 19:26:20,789 - INFO - Boosted OOD loss: -0.2869
+2025-09-03 19:26:21,306 - INFO - Boosted OOD loss: -0.2391
+2025-09-03 19:26:21,830 - INFO - Boosted OOD loss: -0.2940
+2025-09-03 19:26:22,855 - INFO - Boosted OOD loss: -0.0711
+2025-09-03 19:26:23,892 - INFO - Boosted OOD loss: -0.2973
+2025-09-03 19:26:24,417 - INFO - Boosted OOD loss: -0.1443
+2025-09-03 19:26:25,445 - INFO - Boosted OOD loss: -0.0995
+2025-09-03 19:26:25,968 - INFO - Boosted OOD loss: -0.0680
+2025-09-03 19:26:26,495 - INFO - Boosted OOD loss: -0.1508
+2025-09-03 19:26:27,517 - INFO - Boosted OOD loss: -0.0781
+2025-09-03 19:26:28,039 - INFO - Boosted OOD loss: -0.1107
+2025-09-03 19:26:28,568 - INFO - Boosted OOD loss: -0.2405
+2025-09-03 19:26:29,091 - INFO - Boosted OOD loss: -0.2058
+2025-09-03 19:26:30,124 - INFO - Boosted OOD loss: -0.1484
+2025-09-03 19:26:30,651 - INFO - Boosted OOD loss: -0.1373
+2025-09-03 19:26:31,178 - INFO - Boosted OOD loss: -0.0980
+2025-09-03 19:26:31,701 - INFO - Boosted OOD loss: -0.0792
+2025-09-03 19:26:33,241 - INFO - Boosted OOD loss: -0.0799
+2025-09-03 19:26:35,280 - INFO - Boosted OOD loss: -0.1212
+2025-09-03 19:26:36,814 - INFO - Boosted OOD loss: -0.1000
+2025-09-03 19:26:37,342 - INFO - Boosted OOD loss: -0.2456
+2025-09-03 19:26:38,868 - INFO - Boosted OOD loss: -0.3033
+2025-09-03 19:26:39,402 - INFO - Boosted OOD loss: -0.1219
+2025-09-03 19:26:39,920 - INFO - Boosted OOD loss: -0.0671
+2025-09-03 19:26:40,952 - INFO - Boosted OOD loss: -0.2688
+2025-09-03 19:26:41,489 - INFO - Boosted OOD loss: -0.2594
+2025-09-03 19:26:42,014 - INFO - Boosted OOD loss: -0.2536
+2025-09-03 19:26:43,042 - INFO - Boosted OOD loss: -0.0659
+2025-09-03 19:26:44,585 - INFO - Boosted OOD loss: -0.0676
+2025-09-03 19:26:44,585 - INFO - Step 1950 Loss Debug:
+2025-09-03 19:26:44,588 - INFO -  CE: 1.6636
+2025-09-03 19:26:44,588 - INFO -  OOD: -0.0676
+2025-09-03 19:26:44,588 - INFO -  β: 32.00
+2025-09-03 19:26:44,588 - INFO -  ID: 25974, OOD(254): 1114
+2025-09-03 19:26:47,148 - INFO - Boosted OOD loss: -0.1331
+2025-09-03 19:26:48,685 - INFO - Boosted OOD loss: -0.3198
+2025-09-03 19:26:50,221 - INFO - Boosted OOD loss: -0.3122
+2025-09-03 19:26:50,749 - INFO - Boosted OOD loss: -0.2434
+2025-09-03 19:26:51,283 - INFO - Boosted OOD loss: -0.0738
+2025-09-03 19:26:51,810 - INFO - Boosted OOD loss: -0.1855
+2025-09-03 19:26:52,845 - INFO - Boosted OOD loss: -0.1506
+2025-09-03 19:26:55,466 - INFO - Boosted OOD loss: -0.1646
+2025-09-03 19:26:56,001 - INFO - Boosted OOD loss: -0.0834
+2025-09-03 19:26:56,523 - INFO - Boosted OOD loss: -0.1419
+2025-09-03 19:26:57,056 - INFO - Boosted OOD loss: -0.2566
+2025-09-03 19:27:00,124 - INFO - Boosted OOD loss: -0.0668
+2025-09-03 19:27:00,652 - INFO - Boosted OOD loss: -0.2529
+2025-09-03 19:27:01,179 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:27:02,206 - INFO - Boosted OOD loss: -0.3152
+2025-09-03 19:27:03,242 - INFO - Boosted OOD loss: -0.1081
+2025-09-03 19:27:04,783 - INFO - Boosted OOD loss: -0.1047
+2025-09-03 19:27:05,311 - INFO - Boosted OOD loss: -0.0734
+2025-09-03 19:27:05,844 - INFO - Boosted OOD loss: -0.1732
+2025-09-03 19:27:06,370 - INFO - Boosted OOD loss: -0.2189
+2025-09-03 19:27:08,939 - INFO - Boosted OOD loss: -0.3011
+2025-09-03 19:27:09,466 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:27:10,500 - WARNING - No anomaly pixels (254) found in batch
+2025-09-03 19:27:11,018 - INFO - Boosted OOD loss: -0.0829
+2025-09-03 19:27:13,067 - INFO - Boosted OOD loss: -0.0754
+2025-09-03 19:27:13,597 - INFO - Boosted OOD loss: -0.0776
+2025-09-03 19:27:15,135 - INFO - Boosted OOD loss: -0.0737
+2025-09-03 19:27:16,170 - INFO - Boosted OOD loss: -0.0670
+2025-09-03 19:27:16,705 - INFO - Boosted OOD loss: -0.0659
+2025-09-03 19:27:17,746 - INFO - Boosted OOD loss: -0.3053
+2025-09-03 19:27:18,272 - INFO - Boosted OOD loss: -0.2933
+2025-09-03 19:27:19,820 - INFO - Boosted OOD loss: -0.0667
+2025-09-03 19:27:20,352 - INFO - Boosted OOD loss: -0.2809
+2025-09-03 19:27:21,388 - INFO - Boosted OOD loss: -0.0682
+2025-09-03 19:27:21,912 - INFO - Boosted OOD loss: -0.2982
+2025-09-03 19:27:22,447 - INFO - Boosted OOD loss: -0.2452
+2025-09-03 19:27:22,980 - INFO - Boosted OOD loss: -0.2892
+2025-09-03 19:27:23,506 - INFO - Boosted OOD loss: -0.2214
+2025-09-03 19:27:25,566 - INFO - Boosted OOD loss: -0.1862
+2025-09-03 19:27:26,098 - INFO - Boosted OOD loss: -0.1376
+2025-09-03 19:27:27,134 - INFO - Boosted OOD loss: -0.0654
+2025-09-03 19:27:27,665 - INFO - Boosted OOD loss: -0.0808
+2025-09-03 19:27:28,204 - INFO - Boosted OOD loss: -0.2242
+2025-09-03 19:27:28,738 - INFO - Boosted OOD loss: -0.1505
+2025-09-03 19:27:29,265 - INFO - Boosted OOD loss: -0.0979
+2025-09-03 19:27:29,800 - INFO - Boosted OOD loss: -0.0681
+2025-09-03 19:27:30,327 - INFO - Boosted OOD loss: -0.1054
+2025-09-03 19:27:30,862 - INFO - Boosted OOD loss: -0.2362
+2025-09-03 19:27:32,404 - INFO - Boosted OOD loss: -0.2168
+2025-09-03 19:27:34,960 - INFO - Boosted OOD loss: -0.0898
+2025-09-03 19:27:35,998 - INFO - Boosted OOD loss: -0.2720
+2025-09-03 19:27:36,531 - INFO - Boosted OOD loss: -0.0676
+2025-09-03 19:27:36,531 - INFO - Step 2050 Loss Debug:
+2025-09-03 19:27:36,534 - INFO -  CE: 1.3641
+2025-09-03 19:27:36,534 - INFO -  OOD: -0.0676
+2025-09-03 19:27:36,534 - INFO -  β: 32.00
+2025-09-03 19:27:36,534 - INFO -  ID: 29632, OOD(254): 974
+2025-09-03 19:27:37,560 - INFO - Boosted OOD loss: -0.1919
+2025-09-03 19:27:38,079 - INFO - Boosted OOD loss: -0.2513
+2025-09-03 19:27:38,611 - INFO - Boosted OOD loss: -0.2607
+2025-09-03 19:27:39,649 - INFO - Boosted OOD loss: -0.1897
+2025-09-03 19:27:40,684 - INFO - Boosted OOD loss: -0.0669
+2025-09-03 19:27:42,221 - INFO - Boosted OOD loss: -0.2050
+2025-09-03 19:27:43,250 - INFO - Boosted OOD loss: -0.2584
+2025-09-03 19:27:44,286 - INFO - Boosted OOD loss: -0.2150
+2025-09-03 19:27:45,311 - INFO - Boosted OOD loss: -0.0694
+2025-09-03 19:27:46,338 - INFO - Boosted OOD loss: -0.3161
+2025-09-03 19:27:46,859 - INFO - Boosted OOD loss: -0.2056
+2025-09-03 19:27:47,384 - INFO - Boosted OOD loss: -0.1659
+2025-09-03 19:27:47,906 - INFO - Boosted OOD loss: -0.1539
+2025-09-03 19:27:48,434 - INFO - Boosted OOD loss: -0.1561
+2025-09-03 19:27:48,954 - INFO - Boosted OOD loss: -0.0702
+2025-09-03 19:27:49,481 - INFO - Boosted OOD loss: -0.3123
+2025-09-03 19:27:51,007 - INFO - Boosted OOD loss: -0.0711
+2025-09-03 19:27:51,531 - INFO - Boosted OOD loss: -0.1081
+2025-09-03 19:27:52,053 - INFO - Boosted OOD loss: -0.3001
+2025-09-03 19:27:53,076 - INFO - Boosted OOD loss: -0.3182
+2025-09-03 19:27:53,595 - INFO - Boosted OOD loss: -0.3087
+2025-09-03 19:27:54,119 - INFO - Boosted OOD loss: -0.2344
+2025-09-03 19:27:54,640 - INFO - Boosted OOD loss: -0.1945
+2025-09-03 19:27:55,163 - INFO - Boosted OOD loss: -0.0991
+2025-09-03 19:27:56,180 - INFO - Boosted OOD loss: -0.1284
+2025-09-03 19:27:57,198 - INFO - Boosted OOD loss: -0.3162
+2025-09-03 19:27:57,720 - INFO - Boosted OOD loss: -0.1083
+2025-09-03 19:27:58,244 - INFO - Boosted OOD loss: -0.0897
+2025-09-03 19:27:58,763 - INFO - Boosted OOD loss: -0.1655
+2025-09-03 19:27:59,282 - INFO - Boosted OOD loss: -0.2937
+2025-09-03 19:28:00,298 - INFO - Boosted OOD loss: -0.1670
+2025-09-03 19:28:01,312 - INFO - Boosted OOD loss: -0.1376
+2025-09-03 19:28:01,827 - INFO - Boosted OOD loss: -0.2948
+2025-09-03 19:28:02,340 - WARNING - No anomaly pixels (254) found in batch
+2025-09-03 19:28:04,342 - INFO - Boosted OOD loss: -0.0712
+2025-09-03 19:28:04,862 - INFO - Boosted OOD loss: -0.0876
+2025-09-03 19:28:05,886 - INFO - Boosted OOD loss: -0.1345
+2025-09-03 19:28:06,409 - INFO - Boosted OOD loss: -0.2110
+2025-09-03 19:28:06,925 - INFO - Boosted OOD loss: -0.3065
+2025-09-03 19:28:07,441 - INFO - Boosted OOD loss: -0.0757
+2025-09-03 19:28:07,955 - INFO - Boosted OOD loss: -0.1192
+2025-09-03 19:28:08,972 - INFO - Boosted OOD loss: -0.1099
+2025-09-03 19:28:09,490 - INFO - Boosted OOD loss: -0.1965
+2025-09-03 19:28:10,508 - INFO - Boosted OOD loss: -0.1354
+2025-09-03 19:28:11,025 - INFO - Boosted OOD loss: -0.1034
+2025-09-03 19:28:11,542 - INFO - Boosted OOD loss: -0.0753
+2025-09-03 19:28:13,053 - INFO - Boosted OOD loss: -0.0816
+2025-09-03 19:28:13,576 - INFO - Boosted OOD loss: -0.0894

@@ -1,0 +1,45 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+
+================================================================================
+INITIALIZING HOPFIELD BOOSTING WITH PAPER-ALIGNED PARAMETERS
+================================================================================
+Building memory with updated, paper-aligned approach...
+Collecting Features: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 408/408 [13:13<00:00,  1.95s/it]
+WARNING: Negative energies detected—check normalization!
+HopfieldBoostingManager initialized with aligned beta=4.0
+Memory balance check:
+  ID memory: 49992 samples
+  AUX memory: 50000 samples
+  AUX/ID ratio: 1.00
+Hopfield Boosting initialization complete!
+================================================================================
+PixelWiseHopfieldTrainer initialization complete with updated, paper-aligned components!
+
+================================================================================
+STARTING TRAINING WITH PAPER-ALIGNED PARAMETERS FOR PEBAL
+================================================================================
+
+Starting Epoch 1/100
+============================================================
+
+Updating Hopfield boosting weights at epoch 1...
+Traceback (most recent call last):
+  File "run_training.py", line 418, in <module>
+    main()
+  File "run_training.py", line 412, in main
+    trainer.train()
+  File "run_training.py", line 250, in train
+    self.boosting_manager.update_sampling_weights(memory_size=50000)  # Full aligned
+  File "/home/ha51dybi/PEBAL/code/hopfield_weight_updater.py", line 82, in update_sampling_weights
+    energies = energy_calc(self.aux_features_full)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 87, in forward
+    lse_combined = lse(self.beta, combined_similarities, dim=1)  # [batch]
+  File "/home/ha51dybi/PEBAL/code/pixel_energy.py", line 13, in lse
+    return torch.logsumexp(beta * scores, dim=dim) / beta
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 782.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 691.38 MiB is free. Process 92004 has 2.52 GiB memory in use. Including non-PyTorch memory, this process has 4.39 GiB memory in use. Of the allocated memory 3.18 GiB is allocated by PyTorch, and 1.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

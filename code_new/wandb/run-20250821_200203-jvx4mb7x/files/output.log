@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "run_training.py", line 275, in <module>
+    main()
+  File "run_training.py", line 269, in main
+    trainer = PixelWiseHopfieldTrainer(train_config, train_loader, val_loader, evaluator)
+  File "run_training.py", line 42, in __init__
+    self._init_models()
+  File "run_training.py", line 57, in _init_models
+    self.feature_extractor = FeatureExtractor(
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 29, in __init__
+    self.engine = self._setup_engine()
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 44, in _setup_engine
+    return Engine(custom_arg=args, logger=None)
+TypeError: __init__() missing 1 required positional argument: 'continue_state_object'

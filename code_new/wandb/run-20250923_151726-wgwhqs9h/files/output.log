@@ -1,0 +1,84 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Backbone fully frozen.
+INFO:__main__:Building initial memories...
+INFO:feature_extractor:Feature stats: mean=0.0008, std=0.0350
+INFO:hopfield_memory_builder:Starting improved memory building with diversity sampling...
+Collecting features:   0%|                                                                                                                               | 0/2969 [00:00<?, ?it/s]INFO:feature_extractor:Feature stats: mean=0.0004, std=0.0295
+Collecting features:   0%|                                                                                                                     | 1/2969 [00:03<3:12:47,  3.90s/it]INFO:feature_extractor:Feature stats: mean=0.0003, std=0.0294
+Collecting features:   0%|                                                                                                                     | 2/2969 [00:07<3:01:09,  3.66s/it]INFO:feature_extractor:Feature stats: mean=0.0004, std=0.0292
+Collecting features:   0%|                                                                                                                     | 3/2969 [00:10<2:59:30,  3.63s/it]INFO:feature_extractor:Feature stats: mean=0.0002, std=0.0302
+Collecting features:   0%|▏                                                                                                                    | 4/2969 [00:14<2:57:37,  3.59s/it]INFO:feature_extractor:Feature stats: mean=0.0002, std=0.0293
+Collecting features:   0%|▏                                                                                                                    | 5/2969 [00:18<2:59:03,  3.62s/it]ERROR:feature_extractor:Error in forward: CUDA out of memory. Tried to allocate 864.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 89.38 MiB is free. Including non-PyTorch memory, this process has 7.51 GiB memory in use. Of the allocated memory 5.50 GiB is allocated by PyTorch, and 1.86 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR:feature_extractor:Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 280, in forward
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 864.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 89.38 MiB is free. Including non-PyTorch memory, this process has 7.51 GiB memory in use. Of the allocated memory 5.50 GiB is allocated by PyTorch, and 1.86 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+INFO:feature_extractor:Feature stats: mean=0.0000, std=0.0000
+Collecting features:   0%|▏                                                                                                                    | 6/2969 [00:21<2:56:27,  3.57s/it]ERROR:feature_extractor:Error in forward: CUDA out of memory. Tried to allocate 864.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 89.38 MiB is free. Including non-PyTorch memory, this process has 7.51 GiB memory in use. Of the allocated memory 5.50 GiB is allocated by PyTorch, and 1.86 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR:feature_extractor:Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 280, in forward
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 152, in forward
+    dec1 = self.final(dec0)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 176, in forward
+    return F.batch_norm(
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 2512, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 864.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 89.38 MiB is free. Including non-PyTorch memory, this process has 7.51 GiB memory in use. Of the allocated memory 5.50 GiB is allocated by PyTorch, and 1.86 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+INFO:feature_extractor:Feature stats: mean=0.0000, std=0.0000
+Collecting features:   0%|▎                                                                                                                    | 7/2969 [00:25<2:57:24,  3.59s/it]INFO:feature_extractor:Feature stats: mean=0.0004, std=0.0291
+Collecting features:   0%|▎                                                                                                                    | 8/2969 [00:29<3:01:32,  3.68s/it]INFO:feature_extractor:Feature stats: mean=0.0004, std=0.0290
+Collecting features:   0%|▎                                                                                                                    | 9/2969 [00:32<3:02:43,  3.70s/it]

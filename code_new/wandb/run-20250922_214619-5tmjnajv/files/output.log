@@ -1,0 +1,84 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:Backbone fully frozen as per request.
+INFO:__main__:Building initial memories...
+ERROR:feature_extractor:Error in forward: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 22.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 832.00 MiB memory in use. Of the allocated memory 698.60 MiB is allocated by PyTorch, and 21.40 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR:feature_extractor:Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 301, in forward
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 139, in forward
+    m2 = self.mod2(self.pool2(x))
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/pooling.py", line 164, in forward
+    return F.max_pool2d(input, self.kernel_size, self.stride,
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/_jit_internal.py", line 503, in fn
+    return if_false(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/functional.py", line 796, in _max_pool2d
+    return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 22.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 832.00 MiB memory in use. Of the allocated memory 698.60 MiB is allocated by PyTorch, and 21.40 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+ERROR:feature_extractor:Error in extract_features_batch: CUDA out of memory. Tried to allocate 40.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 22.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 832.00 MiB memory in use. Of the allocated memory 698.60 MiB is allocated by PyTorch, and 21.40 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+WARNING:hopfield_memory_builder:Failed to infer dimension: CUDA out of memory. Tried to allocate 40.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 22.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 832.00 MiB memory in use. Of the allocated memory 698.60 MiB is allocated by PyTorch, and 21.40 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables), using 64
+INFO:hopfield_memory_builder:Starting improved memory building with diversity sampling...
+Collecting features:   0%|                                                                                                                                | 0/890 [00:00<?, ?it/s]ERROR:feature_extractor:Error in forward: CUDA out of memory. Tried to allocate 640.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 10.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 677.84 MiB is allocated by PyTorch, and 54.16 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR:feature_extractor:Traceback (most recent call last):
+  File "/home/ha51dybi/PEBAL/code/feature_extractor.py", line 301, in forward
+    _ = self.model(images)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/network.py", line 13, in forward
+    return self.branch1(data, output_anomaly=output_anomaly)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/PEBAL/code/model/wide_network.py", line 138, in forward
+    x = self.mod1(inp)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 458, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 454, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 640.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 10.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 677.84 MiB is allocated by PyTorch, and 54.16 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+ERROR:feature_extractor:Error in extract_features_batch: CUDA out of memory. Tried to allocate 200.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 10.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 677.84 MiB is allocated by PyTorch, and 54.16 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+INFO:feature_extractor:Possibly bad files: ['hamburg_000000_096063', 'ulm_000050_000019', 'strasbourg_000001_002216', 'aachen_000102_000019', '000000034418']
+ERROR:hopfield_memory_builder:Error in batch 0: CUDA out of memory. Tried to allocate 308.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 10.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 677.84 MiB is allocated by PyTorch, and 54.16 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Collecting features:   0%|▏                                                                                                                       | 1/890 [00:01<16:41,  1.13s/it]ERROR:feature_extractor:Error in extract_features_batch: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 10.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 724.19 MiB is allocated by PyTorch, and 7.81 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+INFO:feature_extractor:Possibly bad files: ['erfurt_000011_000019', '000000351566', '000000089861', '000000557609', 'bremen_000142_000019']
+ERROR:hopfield_memory_builder:Error in batch 1: CUDA out of memory. Tried to allocate 308.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 10.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 724.19 MiB is allocated by PyTorch, and 7.81 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Collecting features:   0%|▎                                                                                                                       | 2/890 [00:02<16:38,  1.12s/it]ERROR:feature_extractor:Error in extract_features_batch: CUDA out of memory. Tried to allocate 48.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 10.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 724.19 MiB is allocated by PyTorch, and 7.81 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+INFO:feature_extractor:Possibly bad files: ['000000557768', 'erfurt_000095_000019', '000000431323', '000000256250', '000000521025']
+ERROR:hopfield_memory_builder:Error in batch 2: CUDA out of memory. Tried to allocate 308.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 10.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 724.19 MiB is allocated by PyTorch, and 7.81 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Collecting features:   0%|▍                                                                                                                       | 3/890 [00:03<15:58,  1.08s/it]ERROR:feature_extractor:Error in extract_features_batch: CUDA out of memory. Tried to allocate 48.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 8.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 724.19 MiB is allocated by PyTorch, and 7.81 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+INFO:feature_extractor:Possibly bad files: ['hamburg_000000_071150', 'dusseldorf_000202_000019', 'bochum_000000_023435', 'monchengladbach_000000_010860', 'hamburg_000000_039420']
+ERROR:hopfield_memory_builder:Error in batch 3: CUDA out of memory. Tried to allocate 308.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 8.38 MiB is free. Process 737094 has 6.76 GiB memory in use. Including non-PyTorch memory, this process has 844.00 MiB memory in use. Of the allocated memory 724.19 MiB is allocated by PyTorch, and 7.81 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Collecting features:   0%|▌                                                                                                                       | 4/890 [00:04<14:35,  1.01it/s]

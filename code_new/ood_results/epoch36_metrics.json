@@ -1,0 +1,15 @@
+{
+    "auroc_static": 0.5914770465846673,
+    "fpr95_static": 0.996794050869752,
+    "auprs_static": 0.478828726457746,
+    "auroc_lf": 0.31562458194514914,
+    "fpr95_lf": 0.9849307843253058,
+    "auprs_lf": 0.07815563207200116,
+    "auroc_road_anomaly": 0.8017919935151103,
+    "fpr95_road_anomaly": 0.8270846809983,
+    "auprs_road_anomaly": 0.2620657722158116,
+    "auroc_lost_and_found": 0.4560816417889511,
+    "fpr95_lost_and_found": 0.9984466970236388,
+    "auprs_lost_and_found": 0.0780462167971586,
+    "fpr95": 0.9518140533042492
+}

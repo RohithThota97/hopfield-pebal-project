@@ -1,0 +1,39 @@
+🚀 Started W&B run: comprehensive_T_10000_N_200_mem_50000_beta_64.0
+🏗️ Initializing models...
+✅ Models initialized on cuda
+⚙️ Initializing training components...
+✅ Training components initialized
+📊 Initializing data components...
+✅ Data components initialized
+📈 Initializing evaluation...
+Initialized dataset with 30 images
+✅ Evaluation initialized
+🚀 Starting comprehensive Hopfield Boosting training
+Configuration: T=10000, N=200, Beta=64.0
+🧠 Building high-quality memories...
+Building high-quality memories:   0%|▏                                                           | 4/1307 [00:03<17:18,  1.26it/s]/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py:296: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /opt/conda/conda-bld/pytorch_1724789116784/work/torch/csrc/utils/tensor_new.cpp:278.)
+  existing_features = torch.tensor(
+Building high-quality memories: 100%|█████████████████████████████████████████████████████████| 1307/1307 [15:50<00:00,  1.37it/s]
+
+📊 Enhanced Memory Building Summary:
+   Images used for ID memory: 1258 Cityscapes images
+   Images used for AUX memory: 138 COCO images
+   Total unique images processed: 1396
+   Dataset coverage: 0.7%
+   ID pixels per class: {0: 3127, 1: 1196, 2: 1956, 3: 114, 4: 177, 5: 724, 6: 125, 7: 269, 8: 525, 9: 37, 10: 149, 11: 188, 12: 5, 13: 265, 14: 3, 15: 0, 16: 10, 17: 1, 18: 27}
+   Total AUX pixels collected: 2245
+   Average quality scores: {0: 0.5027291231684157, 1: 0.5279774737323208, 2: 0.5135026441799412, 11: 0.5362605524903282, 13: 0.5189675108385535, 5: 0.5136547913167687, 7: 0.5051432436062058, 6: 0.5576221892118455, 4: 0.5181393523926788, 8: 0.513831130127112, 3: 0.5539520386802523, 9: 0.6176931152472624, 12: 0.899383849799633, 14: 0.9823304533958436, 18: 0.5562459280645405, 10: 0.5410632678326344, 17: 0.9823468521237374, 16: 0.9823637229204178}
+   ⚠️ Low pixel count for classes: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+   ❌ Insufficient AUX features: 2245 < 5000
+
+❌ Training failed with error: Failed to build memories
+Traceback (most recent call last):
+  File "run_training.py", line 725, in main
+    trainer.train(train_loader)
+  File "run_training.py", line 532, in train
+    self._collect_and_build_memories(train_loader)
+  File "run_training.py", line 205, in _collect_and_build_memories
+    raise RuntimeError("Failed to build memories")
+RuntimeError: Failed to build memories
+💾 Checkpoint saved: checkpoints_comprehensive/hopfield_comprehensive_error_0.pth
+✅ Training script completed

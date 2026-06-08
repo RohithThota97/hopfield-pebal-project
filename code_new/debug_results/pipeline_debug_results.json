@@ -1,0 +1,10 @@
+{
+  "energy_validation": true,
+  "model_loading": true,
+  "data_loading": true,
+  "feature_extraction": true,
+  "energy_computation": true,
+  "memory_building": true,
+  "boosting_manager": true,
+  "evaluation_pipeline": true
+}

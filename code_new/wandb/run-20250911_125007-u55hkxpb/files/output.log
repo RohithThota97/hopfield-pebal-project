@@ -1,0 +1,33 @@
+INFO:__main__:Initializing models...
+INFO:__main__:Loaded 268/268 model parameters flexibly
+WARNING:__main__:Skipped keys: ['criterion.nll_loss.weight']
+INFO:__main__:Missing keys: []
+INFO:__main__:Unexpected keys: []
+INFO:__main__:Loaded 100.0% of parameters successfully
+Traceback (most recent call last):
+  File "run_training.py", line 1190, in <module>
+    main()
+  File "run_training.py", line 1173, in main
+    trainer = PixelWiseHopfieldTrainer(
+  File "run_training.py", line 515, in __init__
+    self._init_models()
+  File "run_training.py", line 539, in _init_models
+    self.feature_extractor = FeatureExtractor(
+  File "run_training.py", line 93, in __init__
+    model = self._load_model(model_path)
+  File "run_training.py", line 132, in _load_model
+    model = model.to(self.device, dtype=torch.float32)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1174, in to
+    return self._apply(convert)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 780, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 805, in _apply
+    param_applied = fn(param)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in convert
+    return t.to(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.60 GiB of which 16.38 MiB is free. Process 3962926 has 7.07 GiB memory in use. Including non-PyTorch memory, this process has 500.00 MiB memory in use. Of the allocated memory 400.95 MiB is allocated by PyTorch, and 5.05 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

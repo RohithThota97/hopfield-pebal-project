@@ -1,0 +1,90 @@
+_wandb:
+    value:
+        cli_version: 0.20.1
+        m: []
+        python_version: 3.8.20
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+            "3":
+                - 13
+                - 16
+                - 55
+            "4": 3.8.20
+            "5": 0.20.1
+            "12": 0.20.1
+            "13": linux-x86_64
+batch_size:
+    value: 4
+beta_end:
+    value: 48
+beta_start:
+    value: 8
+beta1_smoothness:
+    value: 0.1
+beta2_sparsity:
+    value: 0.01
+boosting_update_epoch_freq:
+    value: 5
+checkpoint_dir:
+    value: /home/ha51dybi/PEBAL/code/checkpoints_pixel_wise_final
+ebm_balance_weight:
+    value: 0.5
+fishyscapes_path:
+    value: /home/ha51dybi/PEBAL/fishyscapes_lostandfound
+focal_gamma:
+    value: 2
+id_memory_size:
+    value: 3000
+lambda_ebm:
+    value: 0.8
+lambda_reg:
+    value: 0.2
+learning_rate:
+    value: 0.001
+margin_in:
+    value: 0.1
+margin_out:
+    value: 0.8
+max_pixel_pool_size:
+    value: 50000
+memory_update_batches:
+    value: 100
+memory_update_freq:
+    value: 10
+model_path:
+    value: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+num_classes:
+    value: 19
+num_hard_ood_samples:
+    value: 1024
+ood_memory_size:
+    value: 1500
+pixel_beta_border_static:
+    value: 32
+pixel_beta_inference:
+    value: 64
+pixel_beta_sampling:
+    value: 16
+processing_resolution:
+    value:
+        - 256
+        - 256
+projection_dim:
+    value: 128
+top_k_percent:
+    value: 0.3
+total_epochs:
+    value: 50
+use_beta_scheduling:
+    value: true
+weight_decay:
+    value: 0.0001

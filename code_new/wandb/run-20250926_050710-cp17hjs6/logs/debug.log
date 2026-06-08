@@ -1,0 +1,22 @@
+2025-09-26 05:07:10,489 INFO    MainThread:1438564 [wandb_setup.py:_flush():81] Current SDK version is 0.20.1
+2025-09-26 05:07:10,489 INFO    MainThread:1438564 [wandb_setup.py:_flush():81] Configure stats pid to 1438564
+2025-09-26 05:07:10,489 INFO    MainThread:1438564 [wandb_setup.py:_flush():81] Loading settings from /home/ha51dybi/.config/wandb/settings
+2025-09-26 05:07:10,489 INFO    MainThread:1438564 [wandb_setup.py:_flush():81] Loading settings from /home/ha51dybi/PEBAL/code/wandb/settings
+2025-09-26 05:07:10,489 INFO    MainThread:1438564 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-09-26 05:07:10,489 INFO    MainThread:1438564 [wandb_init.py:setup_run_log_directory():703] Logging user logs to /home/ha51dybi/PEBAL/code/wandb/run-20250926_050710-cp17hjs6/logs/debug.log
+2025-09-26 05:07:10,489 INFO    MainThread:1438564 [wandb_init.py:setup_run_log_directory():704] Logging internal logs to /home/ha51dybi/PEBAL/code/wandb/run-20250926_050710-cp17hjs6/logs/debug-internal.log
+2025-09-26 05:07:10,489 INFO    MainThread:1438564 [wandb_init.py:init():831] calling init triggers
+2025-09-26 05:07:10,490 INFO    MainThread:1438564 [wandb_init.py:init():836] wandb.init called with sweep_config: {}
+config: {'model_path': '/home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth', 'checkpoint_dir': './checkpoints_improved_ood_segmentation', 'num_classes': 19, 'learning_rate': 1e-05, 'weight_decay': 5e-05, 'batch_size': 2, 'num_workers': 0, '_wandb': {}}
+2025-09-26 05:07:10,490 INFO    MainThread:1438564 [wandb_init.py:init():872] starting backend
+2025-09-26 05:07:10,725 INFO    MainThread:1438564 [wandb_init.py:init():875] sending inform_init request
+2025-09-26 05:07:10,761 INFO    MainThread:1438564 [wandb_init.py:init():883] backend started and connected
+2025-09-26 05:07:10,764 INFO    MainThread:1438564 [wandb_init.py:init():956] updated telemetry
+2025-09-26 05:07:10,791 INFO    MainThread:1438564 [wandb_init.py:init():980] communicating run to backend with 90.0 second timeout
+2025-09-26 05:07:11,306 INFO    MainThread:1438564 [wandb_init.py:init():1032] starting run threads in backend
+2025-09-26 05:07:11,444 INFO    MainThread:1438564 [wandb_run.py:_console_start():2453] atexit reg
+2025-09-26 05:07:11,445 INFO    MainThread:1438564 [wandb_run.py:_redirect():2301] redirect: wrap_raw
+2025-09-26 05:07:11,550 INFO    MainThread:1438564 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-09-26 05:07:11,550 INFO    MainThread:1438564 [wandb_run.py:_redirect():2393] Redirects installed.
+2025-09-26 05:07:11,555 INFO    MainThread:1438564 [wandb_init.py:init():1078] run started, returning control to user process
+2025-09-26 08:38:23,212 INFO    MsgRouterThr:1438564 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 1 handles.

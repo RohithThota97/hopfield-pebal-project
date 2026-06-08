@@ -1,0 +1,239 @@
+2025-07-08 15:10:31,814 - PixelHopfieldBoostingTrainer - INFO - Training dataset size: 3268
+2025-07-08 15:10:31,814 - Pixel_Utils - INFO - Analyzing Fishyscapes dataset for OOD content...
+2025-07-08 15:10:31,857 - Pixel_Utils - INFO - Sample image_0.png:
+2025-07-08 15:10:31,857 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 15:10:31,857 - Pixel_Utils - INFO -   ID pixels (0): 1,801,918
+2025-07-08 15:10:31,858 - Pixel_Utils - INFO -   OOD pixels (1): 59,867
+2025-07-08 15:10:31,858 - Pixel_Utils - INFO -   Ignore pixels (2/255): 235,367
+2025-07-08 15:10:31,887 - Pixel_Utils - INFO - Sample image_1.png:
+2025-07-08 15:10:31,887 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 15:10:31,887 - Pixel_Utils - INFO -   ID pixels (0): 1,799,432
+2025-07-08 15:10:31,887 - Pixel_Utils - INFO -   OOD pixels (1): 47,165
+2025-07-08 15:10:31,887 - Pixel_Utils - INFO -   Ignore pixels (2/255): 250,555
+2025-07-08 15:10:31,916 - Pixel_Utils - INFO - Sample image_10.png:
+2025-07-08 15:10:31,917 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 15:10:31,917 - Pixel_Utils - INFO -   ID pixels (0): 1,825,295
+2025-07-08 15:10:31,917 - Pixel_Utils - INFO -   OOD pixels (1): 18,661
+2025-07-08 15:10:31,917 - Pixel_Utils - INFO -   Ignore pixels (2/255): 253,196
+2025-07-08 15:10:31,946 - Pixel_Utils - INFO - Sample image_11.png:
+2025-07-08 15:10:31,946 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 15:10:31,946 - Pixel_Utils - INFO -   ID pixels (0): 1,861,327
+2025-07-08 15:10:31,946 - Pixel_Utils - INFO -   OOD pixels (1): 4,777
+2025-07-08 15:10:31,946 - Pixel_Utils - INFO -   Ignore pixels (2/255): 231,048
+2025-07-08 15:10:31,976 - Pixel_Utils - INFO - Sample image_12.png:
+2025-07-08 15:10:31,976 - Pixel_Utils - INFO -   Unique labels: [  0   1 255]
+2025-07-08 15:10:31,976 - Pixel_Utils - INFO -   ID pixels (0): 1,825,428
+2025-07-08 15:10:31,976 - Pixel_Utils - INFO -   OOD pixels (1): 39,394
+2025-07-08 15:10:31,977 - Pixel_Utils - INFO -   Ignore pixels (2/255): 232,330
+2025-07-08 15:10:31,984 - Pixel_Utils - INFO - Found 30 valid images from 30 total
+2025-07-08 15:10:31,984 - Pixel_Utils - INFO - Total OOD pixels in sample: 169,864
+2025-07-08 15:10:31,984 - PixelHopfieldBoostingTrainer - INFO - Validation dataset size: 30
+2025-07-08 15:10:31,984 - PixelHopfieldBoostingTrainer - INFO - Building initial Hopfield memories...
+Building memories: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1634/1634 [14:00<00:00,  1.94it/s]
+2025-07-08 15:24:32,783 - PixelHopfieldBoostingTrainer - INFO - Built initial memories - ID: torch.Size([68383, 128]), AUX: torch.Size([75000, 128])
+2025-07-08 15:24:32,793 - PixelHopfieldBoostingTrainer - INFO - Initialization completed!
+Epoch 1: 100%|███████████████████████████████████████| 1634/1634 [15:54<00:00,  1.71it/s, Loss=0.2375, CE=0.1491, OOD=0.1769, PixelAcc=0.9600, LR=0.002000, ID=600, AUX=589, GradNorm=0.62]
+2025-07-08 15:40:26,938 - PixelHopfieldBoostingTrainer - INFO - Epoch 1 - Loss: 1.6108, CE: 1.5964, OOD: 0.0288, Pixel Acc: 0.5976, LR: 0.002000, Skipped batches: 0
+Epoch 2: 100%|█████████████████████████████████████████| 1634/1634 [15:53<00:00,  1.71it/s, Loss=0.5134, CE=0.5134, OOD=0.0000, PixelAcc=0.8602, LR=0.004000, ID=744, AUX=0, GradNorm=0.31]
+2025-07-08 15:56:20,898 - PixelHopfieldBoostingTrainer - INFO - Epoch 2 - Loss: 0.7507, CE: 0.7379, OOD: 0.0256, Pixel Acc: 0.8039, LR: 0.004000, Skipped batches: 0
+Epoch 3: 100%|█████████████████████████████████████████| 1634/1634 [15:55<00:00,  1.71it/s, Loss=0.7515, CE=0.7515, OOD=0.0000, PixelAcc=0.7688, LR=0.006000, ID=597, AUX=0, GradNorm=0.32]
+2025-07-08 16:12:15,996 - PixelHopfieldBoostingTrainer - INFO - Epoch 3 - Loss: 0.6158, CE: 0.6030, OOD: 0.0256, Pixel Acc: 0.8347, LR: 0.006000, Skipped batches: 0
+Epoch 4: 100%|█████████████████████████████████████████| 1634/1634 [15:53<00:00,  1.71it/s, Loss=0.2687, CE=0.2687, OOD=0.0000, PixelAcc=0.9163, LR=0.008000, ID=633, AUX=0, GradNorm=0.26]
+2025-07-08 16:28:09,747 - PixelHopfieldBoostingTrainer - INFO - Epoch 4 - Loss: 0.5478, CE: 0.5351, OOD: 0.0253, Pixel Acc: 0.8499, LR: 0.008000, Skipped batches: 0
+Epoch 5: 100%|███████████████████████████████████████| 1634/1634 [15:49<00:00,  1.72it/s, Loss=0.3955, CE=0.3084, OOD=0.1741, PixelAcc=0.9176, LR=0.010000, ID=522, AUX=155, GradNorm=0.17]
+2025-07-08 16:43:59,245 - PixelHopfieldBoostingTrainer - INFO - Epoch 5 - Loss: 0.5118, CE: 0.4995, OOD: 0.0247, Pixel Acc: 0.8548, LR: 0.010000, Skipped batches: 1
+2025-07-08 16:43:59,245 - PixelHopfieldBoostingTrainer - INFO - Updating auxiliary weights at epoch 5...
+Collecting AUX features:   1%|█▌                                                                                                                         | 20/1634 [00:11<14:54,  1.80it/s]
+Limiting to 20 batches to prevent memory issues
+Warning: Only collected 2522 AUX features, which is less than expected.
+Computing border energies: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 32.71it/s]
+Updated aux memory with 2522 samples
+ID memory preserved during update
+2025-07-08 16:44:10,560 - PixelHopfieldBoostingTrainer - INFO - Auxiliary weights updated successfully (ID memory preserved)
+2025-07-08 16:44:10,560 - PixelHopfieldBoostingTrainer - INFO - Updated memories - ID: torch.Size([68383, 128]), AUX: torch.Size([2522, 128])
+Epoch 6: 100%|█████████████████████████████████████████| 1634/1634 [14:59<00:00,  1.82it/s, Loss=0.1338, CE=0.1338, OOD=0.0000, PixelAcc=0.9690, LR=0.010000, ID=549, AUX=0, GradNorm=0.24]
+2025-07-08 16:59:10,230 - PixelHopfieldBoostingTrainer - INFO - Epoch 6 - Loss: 0.4856, CE: 0.4688, OOD: 0.0336, Pixel Acc: 0.8615, LR: 0.010000, Skipped batches: 0
+Epoch 7: 100%|███████████████████████████████████████| 1634/1634 [15:02<00:00,  1.81it/s, Loss=0.1766, CE=0.0878, OOD=0.1775, PixelAcc=0.9742, LR=0.010000, ID=619, AUX=400, GradNorm=0.08]
+2025-07-08 17:14:12,410 - PixelHopfieldBoostingTrainer - INFO - Epoch 7 - Loss: 0.4624, CE: 0.4491, OOD: 0.0264, Pixel Acc: 0.8650, LR: 0.010000, Skipped batches: 0
+Epoch 8: 100%|█████████████████████████████████████████| 1634/1634 [15:02<00:00,  1.81it/s, Loss=0.4795, CE=0.4795, OOD=0.0000, PixelAcc=0.8439, LR=0.010000, ID=538, AUX=0, GradNorm=0.36]
+2025-07-08 17:29:14,515 - PixelHopfieldBoostingTrainer - INFO - Epoch 8 - Loss: 0.4535, CE: 0.4408, OOD: 0.0254, Pixel Acc: 0.8673, LR: 0.010000, Skipped batches: 0
+Epoch 9: 100%|███████████████████████████████████████| 1634/1634 [15:04<00:00,  1.81it/s, Loss=0.0966, CE=0.0092, OOD=0.1747, PixelAcc=1.0000, LR=0.010000, ID=702, AUX=800, GradNorm=0.04]
+2025-07-08 17:44:19,509 - PixelHopfieldBoostingTrainer - INFO - Epoch 9 - Loss: 0.4441, CE: 0.4306, OOD: 0.0269, Pixel Acc: 0.8700, LR: 0.010000, Skipped batches: 0
+Epoch 10: 100%|████████████████████████████████████████| 1634/1634 [15:00<00:00,  1.81it/s, Loss=0.4628, CE=0.4628, OOD=0.0000, PixelAcc=0.8638, LR=0.010000, ID=661, AUX=0, GradNorm=0.32]
+2025-07-08 17:59:20,445 - PixelHopfieldBoostingTrainer - INFO - Epoch 10 - Loss: 0.4400, CE: 0.4274, OOD: 0.0253, Pixel Acc: 0.8699, LR: 0.010000, Skipped batches: 0
+2025-07-08 17:59:20,445 - PixelHopfieldBoostingTrainer - INFO - Updating auxiliary weights at epoch 10...
+Collecting AUX features:   1%|█▌                                                                                                                         | 20/1634 [00:10<14:35,  1.84it/s]
+Limiting to 20 batches to prevent memory issues
+Warning: Only collected 1745 AUX features, which is less than expected.
+Computing border energies: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:00<00:00, 66.06it/s]
+Updated aux memory with 1745 samples
+ID memory preserved during update
+2025-07-08 17:59:31,376 - PixelHopfieldBoostingTrainer - INFO - Auxiliary weights updated successfully (ID memory preserved)
+2025-07-08 17:59:31,376 - PixelHopfieldBoostingTrainer - INFO - Updated memories - ID: torch.Size([68383, 128]), AUX: torch.Size([1745, 128])
+2025-07-08 17:59:31,377 - PixelHopfieldBoostingTrainer - INFO - Running validation at epoch 10...
+2025-07-08 17:59:31,535 - Pixel_Utils - INFO - Label remapping for image_0.png:
+2025-07-08 17:59:31,536 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 17:59:31,536 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 17:59:31,541 - Pixel_Utils - INFO -   OOD pixels after remapping: 59,867
+2025-07-08 17:59:31,698 - Pixel_Utils - INFO - Label remapping for image_1.png:
+2025-07-08 17:59:31,698 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 17:59:31,699 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 17:59:31,701 - Pixel_Utils - INFO -   OOD pixels after remapping: 47,165
+2025-07-08 17:59:32,358 - Pixel_Utils - INFO - Label remapping for image_10.png:
+2025-07-08 17:59:32,358 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 17:59:32,358 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 17:59:32,361 - Pixel_Utils - INFO -   OOD pixels after remapping: 18,661
+2025-07-08 17:59:41,996 - PixelHopfieldBoostingTrainer - INFO - Validation dataset OOD ratio: 0.0172 (1780/103258)
+2025-07-08 17:59:41,997 - ood_evaluator - INFO - Running OOD evaluation at epoch 10...
+OOD Evaluation:   0%|                                                                                                                                               | 0/15 [00:00<?, ?it/s]2025-07-08 17:59:42,128 - Pixel_Utils - INFO - Label remapping for image_0.png:
+2025-07-08 17:59:42,128 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 17:59:42,128 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 17:59:42,131 - Pixel_Utils - INFO -   OOD pixels after remapping: 59,867
+2025-07-08 17:59:42,278 - Pixel_Utils - INFO - Label remapping for image_1.png:
+2025-07-08 17:59:42,278 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 17:59:42,279 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 17:59:42,281 - Pixel_Utils - INFO -   OOD pixels after remapping: 47,165
+OOD Evaluation:   7%|█████████                                                                                                                              | 1/15 [00:00<00:13,  1.01it/s]2025-07-08 17:59:43,120 - Pixel_Utils - INFO - Label remapping for image_10.png:
+2025-07-08 17:59:43,121 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 17:59:43,121 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 17:59:43,124 - Pixel_Utils - INFO -   OOD pixels after remapping: 18,661
+OOD Evaluation:  67%|█████████████████████████████████████████████████████████████████████████████████████████▎                                            | 10/15 [00:09<00:04,  1.09it/s]
+2025-07-08 17:59:51,237 - ood_evaluator - INFO - OOD Evaluation Results - Epoch 10:
+2025-07-08 17:59:51,237 - ood_evaluator - INFO -   AUROC: 0.4972
+2025-07-08 17:59:51,237 - ood_evaluator - INFO -   AUPRS: 0.0119
+2025-07-08 17:59:51,237 - ood_evaluator - INFO -   FPR95: 0.9130
+2025-07-08 17:59:51,237 - ood_evaluator - INFO -   Pixels evaluated: 68493
+2025-07-08 17:59:51,237 - ood_evaluator - INFO -   OOD ratio: 0.0132
+2025-07-08 17:59:51,237 - ood_evaluator - INFO -   Score range: [-0.3500, -0.0449]
+2025-07-08 17:59:51,238 - ood_evaluator - INFO -   ID score mean: -0.2476 ± 0.0425
+2025-07-08 17:59:51,238 - ood_evaluator - INFO -   OOD score mean: -0.2474 ± 0.0322
+Classification Evaluation:   0%|                                                                                                                                    | 0/15 [00:00<?, ?it/s]2025-07-08 17:59:51,376 - Pixel_Utils - INFO - Label remapping for image_0.png:
+2025-07-08 17:59:51,377 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 17:59:51,377 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 17:59:51,380 - Pixel_Utils - INFO -   OOD pixels after remapping: 59,867
+2025-07-08 17:59:51,526 - Pixel_Utils - INFO - Label remapping for image_1.png:
+2025-07-08 17:59:51,527 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 17:59:51,527 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 17:59:51,530 - Pixel_Utils - INFO -   OOD pixels after remapping: 47,165
+Classification Evaluation:   7%|████████▎                                                                                                                   | 1/15 [00:00<00:11,  1.22it/s]2025-07-08 17:59:52,196 - Pixel_Utils - INFO - Label remapping for image_10.png:
+2025-07-08 17:59:52,196 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 17:59:52,197 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 17:59:52,200 - Pixel_Utils - INFO -   OOD pixels after remapping: 18,661
+Classification Evaluation: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 15/15 [00:10<00:00,  1.39it/s]
+2025-07-08 18:00:02,007 - ood_evaluator - INFO - Classification Results:
+2025-07-08 18:00:02,007 - ood_evaluator - INFO -   Accuracy: 0.3633
+2025-07-08 18:00:02,007 - ood_evaluator - INFO -   Average Loss: 4.1030
+2025-07-08 18:00:02,007 - ood_evaluator - INFO -   Predictions: 1090/3000
+2025-07-08 18:00:02,522 - PixelHopfieldBoostingTrainer - INFO - Model saved to models/hopfield_best_epoch_10.pth
+2025-07-08 18:00:04,255 - PixelHopfieldBoostingTrainer - INFO - Model saved to models/hopfield_latest.pth
+Epoch 11: 100%|██████████████████████████████████████| 1634/1634 [14:59<00:00,  1.82it/s, Loss=0.2443, CE=0.1572, OOD=0.1741, PixelAcc=0.9491, LR=0.010000, ID=688, AUX=400, GradNorm=0.16]
+2025-07-08 18:15:05,215 - PixelHopfieldBoostingTrainer - INFO - Epoch 11 - Loss: 0.4305, CE: 0.4164, OOD: 0.0282, Pixel Acc: 0.8728, LR: 0.010000, Skipped batches: 0
+Epoch 12: 100%|████████████████████████████████████████| 1634/1634 [14:53<00:00,  1.83it/s, Loss=0.3494, CE=0.3494, OOD=0.0000, PixelAcc=0.9049, LR=0.010000, ID=673, AUX=0, GradNorm=0.17]
+2025-07-08 18:29:58,471 - PixelHopfieldBoostingTrainer - INFO - Epoch 12 - Loss: 0.4293, CE: 0.4165, OOD: 0.0255, Pixel Acc: 0.8731, LR: 0.010000, Skipped batches: 0
+Epoch 13: 100%|████████████████████████████████████████| 1634/1634 [14:51<00:00,  1.83it/s, Loss=0.4245, CE=0.4245, OOD=0.0000, PixelAcc=0.8676, LR=0.010000, ID=521, AUX=0, GradNorm=0.24]
+2025-07-08 18:44:50,034 - PixelHopfieldBoostingTrainer - INFO - Epoch 13 - Loss: 0.4231, CE: 0.4103, OOD: 0.0257, Pixel Acc: 0.8747, LR: 0.010000, Skipped batches: 0
+Epoch 14: 100%|████████████████████████████████████████| 1634/1634 [14:54<00:00,  1.83it/s, Loss=0.6275, CE=0.6275, OOD=0.0000, PixelAcc=0.7906, LR=0.010000, ID=363, AUX=0, GradNorm=0.39]
+2025-07-08 18:59:44,328 - PixelHopfieldBoostingTrainer - INFO - Epoch 14 - Loss: 0.4233, CE: 0.4107, OOD: 0.0253, Pixel Acc: 0.8741, LR: 0.010000, Skipped batches: 0
+Epoch 15: 100%|████████████████████████████████████████| 1634/1634 [14:53<00:00,  1.83it/s, Loss=0.7090, CE=0.7090, OOD=0.0000, PixelAcc=0.7788, LR=0.010000, ID=633, AUX=0, GradNorm=0.30]
+2025-07-08 19:14:38,052 - PixelHopfieldBoostingTrainer - INFO - Epoch 15 - Loss: 0.4256, CE: 0.4131, OOD: 0.0249, Pixel Acc: 0.8741, LR: 0.010000, Skipped batches: 1
+2025-07-08 19:14:38,052 - PixelHopfieldBoostingTrainer - INFO - Updating auxiliary weights at epoch 15...
+Collecting AUX features:   1%|█▌                                                                                                                         | 20/1634 [00:11<15:07,  1.78it/s]
+Limiting to 20 batches to prevent memory issues
+Warning: Only collected 3262 AUX features, which is less than expected.
+Computing border energies: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7/7 [00:00<00:00, 58.60it/s]
+Updated aux memory with 3262 samples
+ID memory preserved during update
+2025-07-08 19:14:49,430 - PixelHopfieldBoostingTrainer - INFO - Auxiliary weights updated successfully (ID memory preserved)
+2025-07-08 19:14:49,430 - PixelHopfieldBoostingTrainer - INFO - Updated memories - ID: torch.Size([68383, 128]), AUX: torch.Size([3262, 128])
+Epoch 16: 100%|████████████████████████████████████████| 1634/1634 [15:03<00:00,  1.81it/s, Loss=0.4332, CE=0.4332, OOD=0.0000, PixelAcc=0.8607, LR=0.010000, ID=596, AUX=0, GradNorm=0.22]
+2025-07-08 19:29:52,846 - PixelHopfieldBoostingTrainer - INFO - Epoch 16 - Loss: 0.4156, CE: 0.4022, OOD: 0.0267, Pixel Acc: 0.8767, LR: 0.010000, Skipped batches: 0
+Epoch 17: 100%|█| 1634/1634 [15:01<00:00,  1.81it/s, Loss=0.3041, CE=0.3041, OOD
+2025-07-08 19:44:53,895 - PixelHopfieldBoostingTrainer - INFO - Epoch 17 - Loss: 0.4154, CE: 0.4030, OOD: 0.0249, Pixel Acc: 0.8770, LR: 0.010000, Skipped batches: 0
+Epoch 18: 100%|█| 1634/1634 [14:57<00:00,  1.82it/s, Loss=0.3316, CE=0.3316, OOD
+2025-07-08 19:59:51,355 - PixelHopfieldBoostingTrainer - INFO - Epoch 18 - Loss: 0.4178, CE: 0.4059, OOD: 0.0238, Pixel Acc: 0.8757, LR: 0.010000, Skipped batches: 0
+Epoch 19: 100%|█| 1634/1634 [15:04<00:00,  1.81it/s, Loss=0.5048, CE=0.5048, OOD
+2025-07-08 20:14:56,010 - PixelHopfieldBoostingTrainer - INFO - Epoch 19 - Loss: 0.4190, CE: 0.4055, OOD: 0.0270, Pixel Acc: 0.8755, LR: 0.010000, Skipped batches: 0
+Epoch 20: 100%|█| 1634/1634 [15:04<00:00,  1.81it/s, Loss=0.4188, CE=0.4188, OOD
+2025-07-08 20:30:00,448 - PixelHopfieldBoostingTrainer - INFO - Epoch 20 - Loss: 0.4190, CE: 0.4060, OOD: 0.0259, Pixel Acc: 0.8759, LR: 0.010000, Skipped batches: 0
+2025-07-08 20:30:00,448 - PixelHopfieldBoostingTrainer - INFO - Updating auxiliary weights at epoch 20...
+Collecting AUX features:   1%|▏               | 20/1634 [00:11<14:59,  1.79it/s]
+Limiting to 20 batches to prevent memory issues
+Warning: Only collected 427 AUX features, which is less than expected.
+Computing border energies: 100%|██████████████████| 1/1 [00:00<00:00, 42.26it/s]
+Updated aux memory with 427 samples
+ID memory preserved during update
+2025-07-08 20:30:11,633 - PixelHopfieldBoostingTrainer - INFO - Auxiliary weights updated successfully (ID memory preserved)
+2025-07-08 20:30:11,633 - PixelHopfieldBoostingTrainer - INFO - Updated memories - ID: torch.Size([68383, 128]), AUX: torch.Size([427, 128])
+2025-07-08 20:30:11,633 - PixelHopfieldBoostingTrainer - INFO - Running validation at epoch 20...
+2025-07-08 20:30:11,779 - Pixel_Utils - INFO - Label remapping for image_0.png:
+2025-07-08 20:30:11,780 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 20:30:11,780 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 20:30:11,782 - Pixel_Utils - INFO -   OOD pixels after remapping: 59,867
+2025-07-08 20:30:11,931 - Pixel_Utils - INFO - Label remapping for image_1.png:
+2025-07-08 20:30:11,931 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 20:30:11,931 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 20:30:11,934 - Pixel_Utils - INFO -   OOD pixels after remapping: 47,165
+2025-07-08 20:30:12,599 - Pixel_Utils - INFO - Label remapping for image_10.png:
+2025-07-08 20:30:12,599 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 20:30:12,599 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 20:30:12,602 - Pixel_Utils - INFO -   OOD pixels after remapping: 18,661
+2025-07-08 20:30:22,203 - PixelHopfieldBoostingTrainer - INFO - Validation dataset OOD ratio: 0.0172 (1780/103258)
+2025-07-08 20:30:22,204 - ood_evaluator - INFO - Running OOD evaluation at epoch 20...
+OOD Evaluation:   0%|                                    | 0/15 [00:00<?, ?it/s]2025-07-08 20:30:22,331 - Pixel_Utils - INFO - Label remapping for image_0.png:
+2025-07-08 20:30:22,332 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 20:30:22,332 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 20:30:22,335 - Pixel_Utils - INFO -   OOD pixels after remapping: 59,867
+2025-07-08 20:30:22,481 - Pixel_Utils - INFO - Label remapping for image_1.png:
+2025-07-08 20:30:22,481 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 20:30:22,481 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 20:30:22,484 - Pixel_Utils - INFO -   OOD pixels after remapping: 47,165
+OOD Evaluation:   7%|█▊                          | 1/15 [00:00<00:13,  1.01it/s]2025-07-08 20:30:23,324 - Pixel_Utils - INFO - Label remapping for image_10.png:
+2025-07-08 20:30:23,324 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 20:30:23,325 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 20:30:23,327 - Pixel_Utils - INFO -   OOD pixels after remapping: 18,661
+OOD Evaluation:  67%|██████████████████         | 10/15 [00:09<00:04,  1.09it/s]
+2025-07-08 20:30:31,429 - ood_evaluator - INFO - OOD Evaluation Results - Epoch 20:
+2025-07-08 20:30:31,429 - ood_evaluator - INFO -   AUROC: 0.4290
+2025-07-08 20:30:31,429 - ood_evaluator - INFO -   AUPRS: 0.0104
+2025-07-08 20:30:31,429 - ood_evaluator - INFO -   FPR95: 0.9532
+2025-07-08 20:30:31,430 - ood_evaluator - INFO -   Pixels evaluated: 68493
+2025-07-08 20:30:31,430 - ood_evaluator - INFO -   OOD ratio: 0.0132
+2025-07-08 20:30:31,430 - ood_evaluator - INFO -   Score range: [0.1708, 0.2760]
+2025-07-08 20:30:31,430 - ood_evaluator - INFO -   ID score mean: 0.2154 ± 0.0146
+2025-07-08 20:30:31,430 - ood_evaluator - INFO -   OOD score mean: 0.2189 ± 0.0115
+Classification Evaluation:   0%|                         | 0/15 [00:00<?, ?it/s]2025-07-08 20:30:31,565 - Pixel_Utils - INFO - Label remapping for image_0.png:
+2025-07-08 20:30:31,566 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 20:30:31,566 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 20:30:31,569 - Pixel_Utils - INFO -   OOD pixels after remapping: 59,867
+2025-07-08 20:30:31,717 - Pixel_Utils - INFO - Label remapping for image_1.png:
+2025-07-08 20:30:31,718 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 20:30:31,718 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 20:30:31,721 - Pixel_Utils - INFO -   OOD pixels after remapping: 47,165
+Classification Evaluation:   7%|█▏               | 1/15 [00:00<00:11,  1.22it/s]2025-07-08 20:30:32,384 - Pixel_Utils - INFO - Label remapping for image_10.png:
+2025-07-08 20:30:32,384 - Pixel_Utils - INFO -   Original: [0, 1, 255]
+2025-07-08 20:30:32,385 - Pixel_Utils - INFO -   Remapped: [0, 254, 255]
+2025-07-08 20:30:32,387 - Pixel_Utils - INFO -   OOD pixels after remapping: 18,661
+Classification Evaluation: 100%|████████████████| 15/15 [00:10<00:00,  1.43it/s]
+2025-07-08 20:30:41,953 - ood_evaluator - INFO - Classification Results:
+2025-07-08 20:30:41,954 - ood_evaluator - INFO -   Accuracy: 0.3657
+2025-07-08 20:30:41,954 - ood_evaluator - INFO -   Average Loss: 3.8770
+2025-07-08 20:30:41,954 - ood_evaluator - INFO -   Predictions: 1097/3000
+2025-07-08 20:30:42,501 - PixelHopfieldBoostingTrainer - INFO - Model saved to models/hopfield_best_epoch_20.pth
+2025-07-08 20:30:43,834 - PixelHopfieldBoostingTrainer - INFO - Model saved to models/hopfield_latest.pth
+Epoch 21: 100%|█| 1634/1634 [15:00<00:00,  1.81it/s, Loss=0.6066, CE=0.5151, OOD
+2025-07-08 20:45:45,196 - PixelHopfieldBoostingTrainer - INFO - Epoch 21 - Loss: 0.4201, CE: 0.4048, OOD: 0.0306, Pixel Acc: 0.8755, LR: 0.010000, Skipped batches: 0
+Epoch 22: 100%|█| 1634/1634 [14:53<00:00,  1.83it/s, Loss=0.5163, CE=0.5163, OOD
+2025-07-08 21:00:38,693 - PixelHopfieldBoostingTrainer - INFO - Epoch 22 - Loss: 0.4184, CE: 0.4063, OOD: 0.0243, Pixel Acc: 0.8751, LR: 0.010000, Skipped batches: 1
+Epoch 23: 100%|█| 1634/1634 [15:02<00:00,  1.81it/s, Loss=0.4485, CE=0.4485, OOD
+2025-07-08 21:15:41,008 - PixelHopfieldBoostingTrainer - INFO - Epoch 23 - Loss: 0.4166, CE: 0.4037, OOD: 0.0258, Pixel Acc: 0.8760, LR: 0.010000, Skipped batches: 0
+Epoch 24:  32%|▎| 525/1634 [04:52<10:17,  1.79it/s, Loss=0.3761, CE=0.3761, OOD=
+Traceback (most recent call last):
+  File "train_pixel_hopfield_boosting.py", line 849, in <module>
+    trainer.train(num_epochs=100, batch_size=2) # You can adjust num_epochs and batch_size here
+  File "train_pixel_hopfield_boosting.py", line 778, in train
+    avg_loss, avg_ce_loss, avg_ood_loss, avg_pixel_accuracy = self.train_epoch(train_loader, epoch)
+  File "train_pixel_hopfield_boosting.py", line 460, in train_epoch
+    id_pixels, id_labels, aux_pixels = sample_pixels_for_batch(
+  File "/home/ha51dybi/PEBAL/code/Pixel_Utils.py", line 152, in sample_pixels_for_batch
+    if id_mask.sum() >= min_pixels_per_image:
+KeyboardInterrupt

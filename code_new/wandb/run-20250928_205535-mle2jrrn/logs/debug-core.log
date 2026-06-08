@@ -1,0 +1,14 @@
+{"time":"2025-09-28T20:55:35.70286342+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpyn8zxsh3/port-955061.txt","pid":955061,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-28T20:55:35.708391271+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":955061}
+{"time":"2025-09-28T20:55:35.708358557+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":37571,"Zone":""}}
+{"time":"2025-09-28T20:55:35.892722189+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:44674"}
+{"time":"2025-09-28T20:55:35.954753306+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"mle2jrrn","id":"127.0.0.1:44674"}
+{"time":"2025-09-28T20:55:36.2107893+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"mle2jrrn","id":"127.0.0.1:44674"}
+{"time":"2025-09-28T20:55:36.624553848+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:44674"}
+{"time":"2025-09-28T20:55:36.624602778+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-09-28T20:55:36.624596604+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:44674"}
+{"time":"2025-09-28T20:55:36.624662901+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:44674"}
+{"time":"2025-09-28T20:55:36.859087653+02:00","level":"ERROR","msg":"processOutgoingData: flush error","error":"write tcp 127.0.0.1:37571->127.0.0.1:44674: use of closed network connection","id":"127.0.0.1:44674"}
+{"time":"2025-09-28T20:55:37.624050133+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:44674"}
+{"time":"2025-09-28T20:55:37.624077047+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:44674"}
+{"time":"2025-09-28T20:55:37.624093067+02:00","level":"INFO","msg":"server is closed"}

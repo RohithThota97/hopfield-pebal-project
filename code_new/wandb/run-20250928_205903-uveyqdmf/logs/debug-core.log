@@ -1,0 +1,14 @@
+{"time":"2025-09-28T20:59:03.442768574+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp3hjfix7d/port-958745.txt","pid":958745,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-28T20:59:03.444007387+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":33289,"Zone":""}}
+{"time":"2025-09-28T20:59:03.444037851+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":958745}
+{"time":"2025-09-28T20:59:03.633098286+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:39894"}
+{"time":"2025-09-28T20:59:03.666635022+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"uveyqdmf","id":"127.0.0.1:39894"}
+{"time":"2025-09-28T20:59:03.922653739+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"uveyqdmf","id":"127.0.0.1:39894"}
+{"time":"2025-09-28T20:59:04.351397347+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:39894"}
+{"time":"2025-09-28T20:59:04.351428546+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-09-28T20:59:04.351421642+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:39894"}
+{"time":"2025-09-28T20:59:04.351482691+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:39894"}
+{"time":"2025-09-28T20:59:04.534675103+02:00","level":"ERROR","msg":"processOutgoingData: flush error","error":"write tcp 127.0.0.1:33289->127.0.0.1:39894: use of closed network connection","id":"127.0.0.1:39894"}
+{"time":"2025-09-28T20:59:05.329891674+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:39894"}
+{"time":"2025-09-28T20:59:05.329917297+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:39894"}
+{"time":"2025-09-28T20:59:05.329933069+02:00","level":"INFO","msg":"server is closed"}

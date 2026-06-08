@@ -1,0 +1,125 @@
+2025-09-10 16:52:02,830 - INFO - Initializing models...
+2025-09-10 16:52:03,899 - INFO - Loaded 268/268 model parameters flexibly
+2025-09-10 16:52:03,899 - WARNING - Skipped keys: ['criterion.nll_loss.weight']
+2025-09-10 16:52:03,977 - INFO - Missing keys: []
+2025-09-10 16:52:03,977 - INFO - Unexpected keys: []
+2025-09-10 16:52:03,978 - INFO - Loaded 100.0% of parameters successfully
+2025-09-10 16:52:04,205 - INFO - Initializing training components...
+2025-09-10 16:52:04,207 - INFO - SegmentationTrainer initialization complete!
+2025-09-10 16:52:04,208 - INFO - 
+Starting Epoch 1/100
+2025-09-10 16:52:04,208 - INFO - ============================================================
+2025-09-10 16:52:05,549 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:05,550 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:05,812 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:05,813 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:06,077 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:06,077 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:06,341 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:06,341 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:06,606 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:06,606 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:06,873 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:06,873 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:07,138 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:07,138 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:07,403 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:07,403 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:07,668 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:07,668 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:07,932 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:07,933 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:08,197 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:08,198 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:08,466 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:08,467 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:08,732 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:08,732 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:08,997 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:08,997 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:09,262 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:09,263 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:09,529 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:09,530 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:09,795 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:09,795 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:10,061 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:10,061 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:10,327 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:10,327 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:10,592 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:10,593 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:10,858 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:10,859 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:11,125 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:11,125 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:11,390 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:11,391 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:11,657 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:11,657 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:11,924 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:11,924 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:12,191 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:12,191 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:12,457 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:12,458 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:12,722 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:12,722 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:12,990 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:12,990 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:13,257 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:13,258 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:13,524 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:13,524 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:13,791 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:13,792 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:14,059 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:14,059 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:14,325 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:14,325 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:14,594 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:14,595 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:14,862 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:14,862 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:15,129 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:15,130 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:15,397 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:15,398 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:15,664 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:15,665 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:15,931 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:15,932 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:16,198 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:16,198 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:16,465 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:16,466 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:16,732 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:16,733 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:17,000 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:17,001 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:17,267 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:17,268 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:17,535 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:17,536 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:17,803 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:17,804 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:18,071 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:18,071 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:18,338 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:18,339 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:18,606 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:18,607 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:18,874 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:18,874 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:19,141 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:19,142 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:19,409 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:19,410 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:19,675 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:19,675 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:19,943 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:19,943 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:20,212 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:20,212 - WARNING - Invalid total_loss: 0.0. Skipping batch.
+2025-09-10 16:52:20,481 - ERROR - Loss computation error: 'SegmentationTrainer' object has no attribute 'parameters'
+2025-09-10 16:52:20,482 - WARNING - Invalid total_loss: 0.0. Skipping batch.

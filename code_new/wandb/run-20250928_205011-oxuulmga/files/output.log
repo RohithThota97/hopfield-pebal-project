@@ -1,0 +1,12 @@
+INFO:__main__:AblationStudyManager initialized on cuda
+INFO:__main__:Results will be saved to: ./ablation_results
+INFO:__main__:Starting comprehensive ablation studies...
+ERROR:__main__:Ablation study failed: __init__() got an unexpected keyword argument 'cityscapes_root'
+Traceback (most recent call last):
+  File "tester.py", line 2334, in main
+    results = manager.run_all_ablation_studies()
+  File "tester.py", line 297, in run_all_ablation_studies
+    train_loader, val_loader = self._load_datasets()
+  File "tester.py", line 683, in _load_datasets
+    train_dataset = CityscapesCocoMix(
+TypeError: __init__() got an unexpected keyword argument 'cityscapes_root'

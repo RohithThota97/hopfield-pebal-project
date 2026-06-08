@@ -1,0 +1,13 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+
+================================================================================
+INITIALIZING HOPFIELD BOOSTING WITH PAPER-ALIGNED PARAMETERS
+================================================================================
+Building memory with updated, paper-aligned approach...
+/home/ha51dybi/PEBAL/code/hopfield_memory_builder.py:66: UserWarning: Failed to infer, default 128: Expected 3D (unbatched) or 4D (batched) input to conv2d, but got input of size: [4096, 1280]
+  warnings.warn(f"Failed to infer, default 128: {e}")
+Collecting Pixel Features:   0%|                                                              | 0/408 [00:00<?, ?it/s]ERROR:hopfield_memory_builder:Error processing batch: Expected 3D (unbatched) or 4D (batched) input to conv2d, but got input of size: [32768, 1280]. Skipping.
+Collecting Pixel Features:   0%|▏                                                     | 1/408 [00:03<27:01,  3.98s/it]ERROR:hopfield_memory_builder:Error processing batch: Expected 3D (unbatched) or 4D (batched) input to conv2d, but got input of size: [32768, 1280]. Skipping.
+Collecting Pixel Features:   0%|▎                                                     | 2/408 [00:04<11:46,  1.74s/it]

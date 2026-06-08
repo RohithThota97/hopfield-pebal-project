@@ -1,0 +1,585 @@
+Loaded 268/268 model parameters
+Successfully loaded checkpoint from /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+Registered hook on aspp layer
+
+============================================================
+CROSS-VALIDATING β FOR SEGMENTATION
+============================================================
+
+Testing β = 4
+Collecting Features with Stratification:   0%|                                                | 0/125 [00:00<?, ?it/s]
+  Error testing β=4: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 515, in __getitem__
+    image, target = self.transform(image, target)
+TypeError: __call__() takes 2 positional arguments but 3 were given
+
+
+Testing β = 8
+Collecting Features with Stratification:   0%|                                                | 0/125 [00:00<?, ?it/s]
+  Error testing β=8: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 515, in __getitem__
+    image, target = self.transform(image, target)
+TypeError: __call__() takes 2 positional arguments but 3 were given
+
+
+Testing β = 16
+Collecting Features with Stratification:   0%|                                                | 0/125 [00:00<?, ?it/s]
+  Error testing β=16: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 515, in __getitem__
+    image, target = self.transform(image, target)
+TypeError: __call__() takes 2 positional arguments but 3 were given
+
+
+Testing β = 32
+Collecting Features with Stratification:   0%|                                                | 0/125 [00:00<?, ?it/s]
+  Error testing β=32: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 515, in __getitem__
+    image, target = self.transform(image, target)
+TypeError: __call__() takes 2 positional arguments but 3 were given
+
+
+Testing β = 64
+Collecting Features with Stratification:   0%|                                                | 0/125 [00:00<?, ?it/s]
+  Error testing β=64: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 515, in __getitem__
+    image, target = self.transform(image, target)
+TypeError: __call__() takes 2 positional arguments but 3 were given
+
+
+Testing β = 128
+Collecting Features with Stratification:   0%|                                                | 0/125 [00:00<?, ?it/s]
+  Error testing β=128: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 50, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/data/dataset.py", line 420, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+  File "/home/ha51dybi/PEBAL/code/dataset/data_loader.py", line 515, in __getitem__
+    image, target = self.transform(image, target)
+TypeError: __call__() takes 2 positional arguments but 3 were given
+
+
+β Cross-validation Results:
+  β=4: separation=-1.0000
+  β=8: separation=-1.0000
+  β=16: separation=-1.0000
+  β=32: separation=-1.0000
+  β=64: separation=-1.0000
+  β=128: separation=-1.0000
+Selected optimal β = 4 (separation: -1.0000)
+
+Building memory with optimized β = 4...
+Collecting Features with Stratification: 100%|██████████████████████████████████████| 408/408 [13:21<00:00,  1.97s/it]
+WARNING: Negative energies detected—check normalization!
+WARNING: Negative energies in monitoring
+Monitoring - ID Mean: -0.348, OOD Mean: -0.352, Separation: -0.004
+WARNING: Low initial ID/OOD separation - check memory quality.
+HopfieldBoostingManager initialized with aligned beta=4, lambda_ood=0.5
+Memory built with β=4:
+  ID memory: 9991 samples
+  AUX memory: 10000 samples
+  AUX/ID ratio: 1.00
+Hopfield Boosting initialization complete with β optimization!
+PixelWiseHopfieldTrainer initialization complete with optimal β=4!
+
+================================================================================
+STARTING TRAINING WITH β CROSS-VALIDATION AND SPATIAL SCALING
+================================================================================
+
+Starting Epoch 1/100
+============================================================
+
+Updating Hopfield boosting weights at epoch 1...
+WARNING: Negative mean energy—verify E_b formula/signs
+Weights updated.
+Training Epoch 1:   1%|▎                           | 5/408 [00:12<14:48,  2.21s/it, L_CE=3.4710, L_OOD=-0.1014, β=4.0]
+Step 0: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  17  18
+ 254 255], is_ood=tensor([False, False, False, False,  True, False, False, False])
+  Found 254! Count: 9556
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.023)
+Step 0 Loss Debug:
+  CE: 5.3389
+  OOD: -0.1018
+  Effective β: 4.00
+  ID pixels: 24836, OOD pixels: 7932
+Step 1: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.070)
+Step 2: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.013)
+Step 3: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  18 254 255], is_ood=tensor([False, False,  True, False, False, False,  True, False])
+  Found 254! Count: 55050
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.054)
+Step 4: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.018)
+Step 5: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 254
+ 255], is_ood=tensor([False,  True, False, False, False, False, False, False])
+  Found 254! Count: 57725
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.085)
+Step 6: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 254 255], is_ood=tensor([False,  True, False,  True, False, False, False, False])
+  Found 254! Count: 85946
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.038)
+Step 7: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.070)
+Step 8: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 254
+ 255], is_ood=tensor([ True, False, False, False, False, False, False, False])
+  Found 254! Count: 233245
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.008)
+Step 9: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.008)
+Step 10: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  14  16  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.007)
+Step 11: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.035)
+Step 12: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 254 255], is_ood=tensor([False, False, False, False, False,  True, False, False])
+  Found 254! Count: 153240
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.018)
+Step 13: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.000)
+Step 14: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.005)
+Step 15: labels=[  0   1   2   3   5   6   7   8  10  11  12  13  17  18 254 255], is_ood=tensor([False, False, False, False, False, False, False,  True])
+  Found 254! Count: 78941
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.056)
+Step 16: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  16 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.004)
+Step 17: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([False,  True, False, False, False, False, False, False])
+  Found 254! Count: 186496
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.002)
+Step 18: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.002)
+Step 19: labels=[  0   1   2   4   5   6   7   8  10  11  12  13  17  18 254 255], is_ood=tensor([False, False, False, False, False, False,  True, False])
+  Found 254! Count: 6677
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.069)
+Step 20: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.062)
+Step 21: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  16  18 254 255], is_ood=tensor([False, False, False, False, False, False,  True, False])
+  Found 254! Count: 57249
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.019)
+Step 22: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  16  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.012)
+Step 23: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.001)
+Step 24: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.028)
+Step 25: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.081)
+Step 26: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 254
+ 255], is_ood=tensor([False, False, False, False,  True, False, False, False])
+  Found 254! Count: 956
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.053)
+Step 27: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([ True, False, False, False, False, False, False, False])
+  Found 254! Count: 36445
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.022)
+Step 28: labels=[  0   1   2   3   4   5   6   7   8  10  11  13  16  18 254 255], is_ood=tensor([False,  True, False, False, False, False, False, False])
+  Found 254! Count: 24192
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.059)
+Step 29: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 254 255], is_ood=tensor([False, False, False, False, False,  True, False,  True])
+  Found 254! Count: 32021
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.059)
+Step 30: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.107)
+Step 31: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.040)
+Step 32: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  17  18
+ 254 255], is_ood=tensor([ True, False, False, False, False, False,  True, False])
+  Found 254! Count: 26722
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.056)
+Step 33: labels=[  0   1   2   3   4   5   7   8  10  11  13  16  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.004)
+Step 34: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.017)
+Step 35: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.145)
+Step 36: labels=[  0   1   2   3   4   5   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.063)
+Step 37: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.125)
+Step 38: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 254
+ 255], is_ood=tensor([False, False, False,  True, False, False, False, False])
+  Found 254! Count: 2629
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.014)
+Step 39: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.020)
+Step 40: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([False, False, False, False, False, False,  True, False])
+  Found 254! Count: 28693
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.041)
+Step 41: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.188)
+Step 42: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.039)
+Step 43: labels=[  0   1   2   3   5   6   7   8   9  10  11  13  16  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.043)
+Step 44: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.012)
+Step 45: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  18 254
+ 255], is_ood=tensor([False, False, False,  True, False, False, False, False])
+  Found 254! Count: 311250
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.013)
+Step 46: labels=[  0   1   2   3   4   5   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 1847/1847 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.178)
+Step 47: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.135)
+Step 48: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.073)
+Step 49: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  15  18 254 255], is_ood=tensor([False, False, False,  True, False, False, False, False])
+  Found 254! Count: 125641
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Energy stats: β=4.0, min=-0.9040, max=-0.3466, mean=-0.6148, neg_ratio=1.000
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.026)
+Step 50: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18 254 255], is_ood=tensor([False, False,  True, False, False,  True, False, False])
+  Found 254! Count: 53801
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.082)
+Step 50 Loss Debug:
+  CE: 0.3241
+  OOD: -0.1805
+  Effective β: 4.00
+  ID pixels: 26316, OOD pixels: 6452
+Step 51: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.201)
+Step 52: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  17  18
+ 254 255], is_ood=tensor([False, False, False,  True, False, False, False, False])
+  Found 254! Count: 28819
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.035)
+Step 53: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 254
+ 255], is_ood=tensor([False, False, False, False, False, False, False,  True])
+  Found 254! Count: 41100
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.005)
+Step 54: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.006)
+Step 55: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.002)
+Step 56: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.102)
+Step 57: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.000)
+Step 58: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.084)
+Step 59: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  16  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.022)
+Step 60: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14  15  18 254 255], is_ood=tensor([False, False, False, False, False, False, False,  True])
+  Found 254! Count: 177008
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.103)
+Step 61: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.101)
+Step 62: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.257)
+Step 63: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  17  18 254
+ 255], is_ood=tensor([False, False, False, False, False,  True, False, False])
+  Found 254! Count: 69502
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.204)
+Step 64: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 254 255], is_ood=tensor([False, False, False, False, False, False,  True, False])
+  Found 254! Count: 70228
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.054)
+Step 65: labels=[  0   1   2   4   5   6   7   8   9  10  11  13  14  16  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.246)
+Step 66: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 254 255], is_ood=tensor([False, False, False,  True, False, False, False, False])
+  Found 254! Count: 13717
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.084)
+Step 67: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.165)
+Step 68: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 254
+ 255], is_ood=tensor([False, False,  True, False, False, False, False, False])
+  Found 254! Count: 18856
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.063)
+Step 69: labels=[  0   1   2   5   6   7   8   9  10  11  12  13  14  15  17 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.175)
+Step 70: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.121)
+Step 71: labels=[  0   1   2   5   6   7   8   9  10  11  12  13  14  15  17  18 254 255], is_ood=tensor([ True, False, False, False, False, False, False, False])
+  Found 254! Count: 26305
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.348)
+Step 72: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  14  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.170)
+Step 73: labels=[  0   1   2   3   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.146)
+Step 74: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  16  17  18
+ 254 255], is_ood=tensor([False, False,  True, False,  True, False, False, False])
+  Found 254! Count: 300898
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.260)
+Step 75: labels=[  0   1   2   4   5   6   7   8   9  10  11  12  13  14  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.003)
+Step 76: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.024)
+Step 77: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  13  14  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.301)
+Step 78: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.086)
+Step 79: labels=[  0   1   2   3   4   5   7   8   9  10  11  13  14  15 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.130)
+Step 80: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  17  18
+ 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.071)
+Step 81: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  18 254 255], is_ood=tensor([False, False, False, False, False, False,  True, False])
+  Found 254! Count: 13961
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.279)
+Step 82: labels=[  0   1   2   3   4   5   6   7   8  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.393)
+Step 83: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  16  18 254 255], is_ood=tensor([False, False, False,  True, False, False, False,  True])
+  Found 254! Count: 41596
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.027)
+Step 84: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.294)
+Step 85: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  16  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.076)
+Step 86: labels=[  0   1   2   4   5   6   7   8   9  10  11  13  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.044)
+Step 87: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.186)
+Step 88: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([False, False, False, False, False,  True, False, False])
+  Found 254! Count: 46845
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.253)
+Step 89: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([False, False, False,  True, False, False, False, False])
+  Found 254! Count: 2893
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.127)
+Step 90: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  17  18 254 255], is_ood=tensor([ True, False, False,  True, False, False, False, False])
+  Found 254! Count: 98384
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.042)
+Step 91: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  15  18 254 255], is_ood=tensor([False, False, False, False, False, False,  True, False])
+  Found 254! Count: 20598
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.067)
+Step 92: labels=[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.421)
+Step 93: labels=[  0   1   2   4   5   6   7   8   9  10  11  13  15  18 255], is_ood=tensor([False, False, False, False, False, False, False, False])
+Warning: Failed to create spatial beta map: t() expects a tensor with <= 2 dimensions, but self is 4D
+NOTE: 2000/2000 negative energies (100.0%) - preserving as-is
+Adaptive β increase: from 4.0 to 8.0 (neg_ratio=1.000, sep=0.178)

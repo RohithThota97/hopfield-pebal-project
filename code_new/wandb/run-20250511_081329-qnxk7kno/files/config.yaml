@@ -1,0 +1,85 @@
+_wandb:
+    value:
+        cli_version: 0.18.3
+        m: []
+        python_version: 3.8.8
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+                - 55
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+                - 55
+            "3":
+                - 3
+                - 16
+                - 23
+                - 55
+            "4": 3.8.8
+            "5": 0.18.3
+            "8":
+                - 5
+            "12": 0.18.3
+            "13": linux-x86_64
+accumulation_steps:
+    value: 4
+batch_size:
+    value: 1
+beta:
+    value: 4
+bits_per_quantizer:
+    value: 8
+checkpoint_freq:
+    value: 10
+energy_margin_in:
+    value: -2
+energy_margin_out:
+    value: 2
+learning_rate:
+    value: 0.001
+max_batches:
+    value: 10
+max_patterns:
+    value: 10000
+n_subquantizers:
+    value: 8
+num_embeddings:
+    value: 256
+num_epochs:
+    value: 5
+output_dir:
+    value: ./outputs
+patch_size:
+    value: 256
+proj_hidden_dim:
+    value: 512
+proj_output_dim:
+    value: 128
+resume:
+    value: null
+smoothness_weight:
+    value: 1e-06
+sparsity_weight:
+    value: 0.0001
+stride:
+    value: 2
+use_amp:
+    value: true
+use_checkpoint:
+    value: false
+use_class_balanced:
+    value: true
+use_patch_based:
+    value: true
+use_pq:
+    value: false
+use_reservoir:
+    value: true
+use_vq:
+    value: false

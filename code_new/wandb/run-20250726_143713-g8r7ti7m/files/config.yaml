@@ -1,0 +1,125 @@
+_wandb:
+    value:
+        cli_version: 0.20.1
+        m: []
+        python_version: 3.8.20
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+            "3":
+                - 13
+                - 16
+                - 55
+            "4": 3.8.20
+            "5": 0.20.1
+            "12": 0.20.1
+            "13": linux-x86_64
+batch_size:
+    value: 8
+bn_eps:
+    value: 1e-05
+bn_momentum:
+    value: 0.1
+city_root_path:
+    value: /home/ha51dybi/PEBAL/cityscapes
+coco_root_path:
+    value: /home/ha51dybi/PEBAL/coco
+display_iter:
+    value: 50
+eval_base_size:
+    value: 800
+eval_crop_size:
+    value: 800
+eval_epoch:
+    value: 1
+eval_flip:
+    value: false
+eval_scale_array:
+    value:
+        - 1
+eval_stride_rate:
+    value: 0.6666666666666666
+experiment_name:
+    value: your_pebal_exp
+fishy_root_path:
+    value: fis/home/ha51dybi/PEBAL/fishyscapes_lostandfound
+fix_bias:
+    value: true
+image_height:
+    value: 900
+image_mean:
+    value:
+        - 0.485
+        - 0.456
+        - 0.406
+image_std:
+    value:
+        - 0.229
+        - 0.224
+        - 0.225
+image_width:
+    value: 900
+lr:
+    value: 1e-05
+lr_power:
+    value: 0.9
+momentum:
+    value: 0.9
+nepochs:
+    value: 40
+niters_per_epoch:
+    value: 371
+num_classes:
+    value: 20
+num_eval_imgs:
+    value: 500
+num_train_imgs:
+    value: 2975
+num_workers:
+    value: 4
+pebal_weight_path:
+    value: /home/ha51dybi/PEBAL/code/ckpts/pebal/best_ad_ckpt.pth
+pretrained_weight_path:
+    value: /home/ha51dybi/PEBAL/code/ckpts/pretrained_ckpts/cityscapes_best.pth
+proj_name:
+    value: OoD_Segmentation
+record_info_iter:
+    value: 20
+repo_name:
+    value: pebal
+root_dir:
+    value: /home/ha51dybi/PEBAL/code
+saved_dir:
+    value: /home/ha51dybi/PEBAL/code/ckpts/your_pebal_exp
+seed:
+    value: 666
+train_scale_array:
+    value:
+        - 0.5
+        - 0.75
+        - 1
+        - 1.5
+        - 1.75
+        - 2
+upload_image_step:
+    value:
+        - 0
+        - 185
+void_number:
+    value: 5
+wandb_key:
+    value: 45977db017695275c4093e5018892b03a4a14c7d
+wandb_online:
+    value: true
+warm_up_epoch:
+    value: 0
+weight_decay:
+    value: 0.0001

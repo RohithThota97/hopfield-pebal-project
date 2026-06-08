@@ -1,0 +1,111 @@
+INFO:__main__:Initializing models...
+INFO:feature_extractor:Loaded 268/268 model parameters flexibly
+WARNING:feature_extractor:Skipped keys: ['criterion.nll_loss.weight']
+INFO:feature_extractor:Missing keys: []
+INFO:feature_extractor:Unexpected keys: []
+INFO:feature_extractor:Loaded 100.0% of parameters successfully
+INFO:__main__:✓ Feature extractor FROZEN
+INFO:__main__:Segmentation head parameters: 399,123
+INFO:__main__:Projection head parameters: 985,216
+INFO:__main__:Total trainable parameters: 1,384,339
+INFO:__main__:Building initial memories using HopfieldBoostingManager...
+INFO:hopfield_weight_updater:Building memories from loader...
+/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py:600: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.4 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/utils/checkpoint.py:92: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+INFO:hopfield_memory_builder:Starting modified memory building over full dataset...
+Collecting Features (Modified): 100%|████████████████████████████████████████████████████████| 1113/1113 [49:29<00:00,  2.67s/it]
+wrong size
+(480, 640)
+wrong size
+(480, 640)
+INFO:hopfield_memory_builder:Pixels seen after entire dataset:
+INFO:hopfield_memory_builder:Class 0: 5913979 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 1: 829141 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 2: 2999956 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 3: 104009 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 4: 135081 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 5: 192052 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 6: 30557 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 7: 80978 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 8: 2226867 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 9: 171793 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 10: 492092 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 11: 249640 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 12: 26363 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 13: 1220699 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 14: 46554 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 15: 52253 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 16: 41886 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 17: 15388 seen, 2631 sampled
+INFO:hopfield_memory_builder:Class 18: 75238 seen, 2631 sampled
+INFO:hopfield_memory_builder:OOD (254): 385383 seen, 100000 sampled
+WARNING:hopfield_memory_builder:Total ID pixels sampled 49989 < 50000
+INFO:hopfield_memory_builder:Within-class average cosine similarities:
+INFO:hopfield_memory_builder:Class 0: 0.864
+INFO:hopfield_memory_builder:Class 1: 0.841
+INFO:hopfield_memory_builder:Class 2: 0.821
+INFO:hopfield_memory_builder:Class 3: 0.849
+INFO:hopfield_memory_builder:Class 4: 0.836
+INFO:hopfield_memory_builder:Class 5: 0.817
+INFO:hopfield_memory_builder:Class 6: 0.808
+INFO:hopfield_memory_builder:Class 7: 0.803
+INFO:hopfield_memory_builder:Class 8: 0.843
+INFO:hopfield_memory_builder:Class 9: 0.853
+INFO:hopfield_memory_builder:Class 10: 0.820
+INFO:hopfield_memory_builder:Class 11: 0.827
+INFO:hopfield_memory_builder:Class 12: 0.829
+INFO:hopfield_memory_builder:Class 13: 0.831
+INFO:hopfield_memory_builder:Class 14: 0.837
+INFO:hopfield_memory_builder:Class 15: 0.817
+INFO:hopfield_memory_builder:Class 16: 0.838
+INFO:hopfield_memory_builder:Class 17: 0.825
+INFO:hopfield_memory_builder:Class 18: 0.838
+INFO:hopfield_memory_builder:Between-class average cosine similarities:
+INFO:hopfield_memory_builder:Average between ID classes: 0.821
+INFO:hopfield_memory_builder:Average ID-OOD cosine similarity: 0.801
+INFO:hopfield_memory_builder:ID-OOD Separation Rate: 0.138
+INFO:hopfield_memory_builder:Memories saved.
+INFO:hopfield_weight_updater:Memory building completed in 2972.7 seconds
+INFO:hopfield_weight_updater:Memory sizes - ID: 49989, OOD: 100000
+INFO:hopfield_weight_updater:Memory norms - ID: 1.0000, OOD: 1.0000
+INFO:hopfield_weight_updater:Energy check - Mean: -0.1077
+WARNING:pixel_energy:Non-unit norms detected - renormalizing
+INFO:hopfield_weight_updater:Monitoring - ID Mean: -0.050, OOD Mean: -0.044, Separation: 0.006
+INFO:hopfield_weight_updater:ID energy histogram (10 bins): [14.0, 22.0, 34.0, 37.0, 57.0, 99.0, 169.0, 189.0, 188.0, 191.0]
+INFO:hopfield_weight_updater:OOD energy histogram (10 bins): [1.0, 0.0, 0.0, 1.0, 7.0, 8.0, 18.0, 41.0, 113.0, 811.0]
+WARNING:hopfield_weight_updater:Low initial ID/OOD separation - consider rebuilding memories
+INFO:hopfield_weight_updater:HopfieldBoostingManager initialized with fixed beta=32, lambda_ood=0.5, memory_subset_size=50000, positive_shift=False
+INFO:__main__:Initial memories: ID=torch.Size([49989, 128]), AUX=torch.Size([100000, 128])
+INFO:__main__:Training components initialized with separate optimizers
+INFO:__main__:
+================================================================================
+INFO:__main__:STARTING TRAINING
+INFO:__main__:Total epochs: 70
+INFO:__main__:Frozen backbone: Yes
+INFO:__main__:Separate optimizers: Yes
+INFO:__main__:================================================================================
+
+INFO:__main__:
+============================================================
+INFO:__main__:EPOCH 1/70
+INFO:__main__:============================================================
+Epoch 1:   0%|                                                                                   | 0/1113 [00:00<?, ?it/s]INFO:__main__:Features mean/std: 0.0002/0.0279
+INFO:__main__:Logits mean/std: 0.0459/1.5251
+INFO:pixel_energy:Energy stats: β=32, min=-0.5627, max=-0.0433, mean=-0.0909, id_mean=-0.1322, ood_mean=-0.0496
+Epoch 1:   0%|                                                                                   | 0/1113 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "run_training.py", line 981, in <module>
+    main()
+  File "run_training.py", line 975, in main
+    best_miou, best_fpr95 = trainer.train()
+  File "run_training.py", line 777, in train
+    train_metrics = self._train_epoch(epoch)
+  File "run_training.py", line 537, in _train_epoch
+    self.scaler.unscale_(self.optimizer_seg)
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/amp/grad_scaler.py", line 322, in unscale_
+    self._check_scale_growth_tracker("unscale_")
+  File "/home/ha51dybi/anaconda3/envs/pebal_new/lib/python3.8/site-packages/torch/amp/grad_scaler.py", line 158, in _check_scale_growth_tracker
+    assert self._scale is not None, (
+AssertionError: Attempted unscale_ but _scale is None.  This may indicate your script did not use scaler.scale(loss or outputs) earlier in the iteration.

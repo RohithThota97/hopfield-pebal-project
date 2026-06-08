@@ -1,0 +1,13 @@
+{"time":"2025-09-11T20:09:00.981504889+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpsgaeihme/port-520869.txt","pid":520869,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-11T20:09:00.986986968+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":520869}
+{"time":"2025-09-11T20:09:00.986988634+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":42757,"Zone":""}}
+{"time":"2025-09-11T20:09:01.170353076+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:46918"}
+{"time":"2025-09-11T20:09:01.196434095+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"gikp2t3e","id":"127.0.0.1:46918"}
+{"time":"2025-09-11T20:09:01.45524914+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"gikp2t3e","id":"127.0.0.1:46918"}
+{"time":"2025-09-11T20:09:04.064977225+02:00","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"127.0.0.1:46918"}
+{"time":"2025-09-11T20:09:04.065098052+02:00","level":"INFO","msg":"connection: closing","id":"127.0.0.1:46918"}
+{"time":"2025-09-11T20:09:04.065120015+02:00","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-09-11T20:09:04.065341096+02:00","level":"INFO","msg":"connection: closed successfully","id":"127.0.0.1:46918"}
+{"time":"2025-09-11T20:09:05.023214075+02:00","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"127.0.0.1:46918"}
+{"time":"2025-09-11T20:09:05.023561693+02:00","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"127.0.0.1:46918"}
+{"time":"2025-09-11T20:09:05.023598976+02:00","level":"INFO","msg":"server is closed"}

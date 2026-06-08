@@ -1,0 +1,7 @@
+{"time":"2025-09-20T21:59:49.921645665+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpv0xkd5i6/port-4177871.txt","pid":4177871,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-09-20T21:59:49.931483668+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":45739,"Zone":""}}
+{"time":"2025-09-20T21:59:49.929006325+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":4177871}
+{"time":"2025-09-20T21:59:49.938487681+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:53926"}
+{"time":"2025-09-20T21:59:50.066872251+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"wzpsego2","id":"127.0.0.1:53926"}
+{"time":"2025-09-20T21:59:50.340232609+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"wzpsego2","id":"127.0.0.1:53926"}
+{"time":"2025-09-22T06:32:05.299666553+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

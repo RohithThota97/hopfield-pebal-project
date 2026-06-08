@@ -1,0 +1,18 @@
+{"time":"2025-05-12T08:45:14.011393561+02:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-05-12T08:45:14.011402857+02:00","level":"INFO","msg":"created symlink","path":"/home/ha51dybi/PEBAL/code/wandb/run-20250512_084513-hs7t27r3/logs/debug-core.log"}
+{"time":"2025-05-12T08:45:14.011879402+02:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-05-12T08:45:14.015794419+02:00","level":"INFO","msg":"created new stream","id":"hs7t27r3"}
+{"time":"2025-05-12T08:45:14.015815987+02:00","level":"INFO","msg":"stream: started","id":"hs7t27r3"}
+{"time":"2025-05-12T08:45:14.015835168+02:00","level":"INFO","msg":"sender: started","stream_id":{"value":"hs7t27r3"}}
+{"time":"2025-05-12T08:45:14.0158284+02:00","level":"INFO","msg":"handler: started","stream_id":{"value":"hs7t27r3"}}
+{"time":"2025-05-12T08:45:14.015824011+02:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"hs7t27r3"}}
+{"time":"2025-05-12T08:45:14.34336726+02:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-05-12T08:45:14.346111862+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-12T08:57:11.14491894+02:00","level":"INFO","msg":"stream: closing","id":"hs7t27r3"}
+{"time":"2025-05-12T08:57:11.145017437+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-12T08:57:11.147297799+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-12T08:57:12.215059303+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-12T08:57:12.474203639+02:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"hs7t27r3"}}
+{"time":"2025-05-12T08:57:12.474304411+02:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"hs7t27r3"}}
+{"time":"2025-05-12T08:57:12.474276625+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"hs7t27r3"}}
+{"time":"2025-05-12T08:57:12.476860239+02:00","level":"INFO","msg":"stream: closed","id":"hs7t27r3"}

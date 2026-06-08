@@ -1,0 +1,175 @@
+{
+  "memory_scale_study": {
+    "10000": {
+      "id_memory_shape": [
+        0,
+        128
+      ],
+      "aux_memory_shape": [
+        0,
+        128
+      ],
+      "build_time_seconds": 61.83643651008606,
+      "peak_memory_mb": 917.5146484375,
+      "diversity_score": 0.0,
+      "separation_score": 0.0,
+      "warnings": [
+        "No features for class 0 meet separation threshold",
+        "No features for class 1 meet separation threshold",
+        "No features for class 2 meet separation threshold",
+        "No features for class 3 meet separation threshold",
+        "No features for class 4 meet separation threshold",
+        "No features for class 5 meet separation threshold",
+        "No features for class 6 meet separation threshold",
+        "No features for class 7 meet separation threshold",
+        "No features for class 8 meet separation threshold",
+        "No features for class 9 meet separation threshold",
+        "No features for class 10 meet separation threshold",
+        "No features for class 11 meet separation threshold",
+        "No features for class 12 meet separation threshold",
+        "No features for class 13 meet separation threshold",
+        "No features for class 14 meet separation threshold",
+        "No features for class 15 meet separation threshold",
+        "No features for class 16 meet separation threshold",
+        "No features for class 17 meet separation threshold",
+        "No features for class 18 meet separation threshold",
+        "No OOD candidates"
+      ]
+    },
+    "20000": {
+      "id_memory_shape": [
+        0,
+        128
+      ],
+      "aux_memory_shape": [
+        0,
+        128
+      ],
+      "build_time_seconds": 63.25233721733093,
+      "peak_memory_mb": 917.62744140625,
+      "diversity_score": 0.0,
+      "separation_score": 0.0,
+      "warnings": [
+        "No features for class 0 meet separation threshold",
+        "No features for class 1 meet separation threshold",
+        "No features for class 2 meet separation threshold",
+        "No features for class 3 meet separation threshold",
+        "No features for class 4 meet separation threshold",
+        "No features for class 5 meet separation threshold",
+        "No features for class 6 meet separation threshold",
+        "No features for class 7 meet separation threshold",
+        "No features for class 8 meet separation threshold",
+        "No features for class 9 meet separation threshold",
+        "No features for class 10 meet separation threshold",
+        "No features for class 11 meet separation threshold",
+        "No features for class 12 meet separation threshold",
+        "No features for class 13 meet separation threshold",
+        "No features for class 14 meet separation threshold",
+        "No features for class 15 meet separation threshold",
+        "No features for class 16 meet separation threshold",
+        "No features for class 17 meet separation threshold",
+        "No features for class 18 meet separation threshold",
+        "No OOD candidates"
+      ]
+    },
+    "30000": {
+      "id_memory_shape": [
+        0,
+        128
+      ],
+      "aux_memory_shape": [
+        0,
+        128
+      ],
+      "build_time_seconds": 62.401692152023315,
+      "peak_memory_mb": 917.62744140625,
+      "diversity_score": 0.0,
+      "separation_score": 0.0,
+      "warnings": [
+        "No features for class 0 meet separation threshold",
+        "No features for class 1 meet separation threshold",
+        "No features for class 2 meet separation threshold",
+        "No features for class 3 meet separation threshold",
+        "No features for class 4 meet separation threshold",
+        "No features for class 5 meet separation threshold",
+        "No features for class 6 meet separation threshold",
+        "No features for class 7 meet separation threshold",
+        "No features for class 8 meet separation threshold",
+        "No features for class 9 meet separation threshold",
+        "No features for class 10 meet separation threshold",
+        "No features for class 11 meet separation threshold",
+        "No features for class 12 meet separation threshold",
+        "No features for class 13 meet separation threshold",
+        "No features for class 14 meet separation threshold",
+        "No features for class 15 meet separation threshold",
+        "No features for class 16 meet separation threshold",
+        "No features for class 17 meet separation threshold",
+        "No features for class 18 meet separation threshold",
+        "No OOD candidates"
+      ]
+    },
+    "50000": {
+      "id_memory_shape": [
+        0,
+        128
+      ],
+      "aux_memory_shape": [
+        0,
+        128
+      ],
+      "build_time_seconds": 62.34053349494934,
+      "peak_memory_mb": 917.62744140625,
+      "diversity_score": 0.0,
+      "separation_score": 0.0,
+      "warnings": [
+        "No features for class 0 meet separation threshold",
+        "No features for class 1 meet separation threshold",
+        "No features for class 2 meet separation threshold",
+        "No features for class 3 meet separation threshold",
+        "No features for class 4 meet separation threshold",
+        "No features for class 5 meet separation threshold",
+        "No features for class 6 meet separation threshold",
+        "No features for class 7 meet separation threshold",
+        "No features for class 8 meet separation threshold",
+        "No features for class 9 meet separation threshold",
+        "No features for class 10 meet separation threshold",
+        "No features for class 11 meet separation threshold",
+        "No features for class 12 meet separation threshold",
+        "No features for class 13 meet separation threshold",
+        "No features for class 14 meet separation threshold",
+        "No features for class 15 meet separation threshold",
+        "No features for class 16 meet separation threshold",
+        "No features for class 17 meet separation threshold",
+        "No features for class 18 meet separation threshold",
+        "No OOD candidates"
+      ]
+    }
+  },
+  "beta_analysis": {
+    "4": {
+      "error": "The expanded size of the tensor (500) must match the existing size (0) at non-singleton dimension 0.  Target sizes: [500].  Tensor sizes: [0]"
+    },
+    "8": {
+      "error": "The expanded size of the tensor (500) must match the existing size (0) at non-singleton dimension 0.  Target sizes: [500].  Tensor sizes: [0]"
+    },
+    "16": {
+      "error": "The expanded size of the tensor (500) must match the existing size (0) at non-singleton dimension 0.  Target sizes: [500].  Tensor sizes: [0]"
+    },
+    "32": {
+      "error": "The expanded size of the tensor (500) must match the existing size (0) at non-singleton dimension 0.  Target sizes: [500].  Tensor sizes: [0]"
+    }
+  },
+  "memory_statistics": {
+    "id_memory_shape": [
+      0,
+      128
+    ],
+    "aux_memory_shape": [
+      0,
+      128
+    ],
+    "id_memory_mb": 0.0,
+    "aux_memory_mb": 0.0,
+    "total_memory_mb": 0.0
+  }
+}
