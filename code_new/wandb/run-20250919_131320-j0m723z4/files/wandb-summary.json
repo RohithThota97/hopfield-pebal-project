@@ -1,1 +1,0 @@
-{"lr_seg":0.001,"global_step":1110,"_wandb":{"runtime":6716},"_timestamp":1.758286775060401e+09,"seg_loss":1.445517659187317,"seg_grad_std":10.748847007751465,"lr_proj":0.001,"_step":111,"_runtime":6374.132102348,"ood_loss":-0.04712244123220444}

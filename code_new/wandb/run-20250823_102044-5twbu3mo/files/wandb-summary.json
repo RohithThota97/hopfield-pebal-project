@@ -1,1 +1,0 @@
-{"Training/lr":1e-06,"_runtime":44898.855315167,"Training/loss_ce":2.005434989929199,"epoch":50,"_step":40931,"step":40850,"_timestamp":1.7559821433536692e+09,"Training/current_beta":47.957283189590036,"_wandb":{"runtime":44934},"Training/loss_ood":0}

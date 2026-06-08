@@ -1,7 +1,0 @@
-{"time":"2025-08-21T17:57:54.264019275+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250821_175753-rj645g8r/logs/debug-core.log"}
-{"time":"2025-08-21T17:57:54.516319653+02:00","level":"INFO","msg":"stream: created new stream","id":"rj645g8r"}
-{"time":"2025-08-21T17:57:54.516408354+02:00","level":"INFO","msg":"stream: started","id":"rj645g8r"}
-{"time":"2025-08-21T17:57:54.51644201+02:00","level":"INFO","msg":"handler: started","stream_id":"rj645g8r"}
-{"time":"2025-08-21T17:57:54.516458398+02:00","level":"INFO","msg":"sender: started","stream_id":"rj645g8r"}
-{"time":"2025-08-21T17:57:54.516512755+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"rj645g8r"}
-{"time":"2025-08-21T17:57:54.780008838+02:00","level":"INFO","msg":"Starting system monitor"}

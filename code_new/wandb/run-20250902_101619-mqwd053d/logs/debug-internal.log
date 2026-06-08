@@ -1,7 +1,0 @@
-{"time":"2025-09-02T10:16:19.850665716+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250902_101619-mqwd053d/logs/debug-core.log"}
-{"time":"2025-09-02T10:16:20.103264181+02:00","level":"INFO","msg":"stream: created new stream","id":"mqwd053d"}
-{"time":"2025-09-02T10:16:20.103364059+02:00","level":"INFO","msg":"stream: started","id":"mqwd053d"}
-{"time":"2025-09-02T10:16:20.103444496+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"mqwd053d"}
-{"time":"2025-09-02T10:16:20.103464246+02:00","level":"INFO","msg":"handler: started","stream_id":"mqwd053d"}
-{"time":"2025-09-02T10:16:20.103534075+02:00","level":"INFO","msg":"sender: started","stream_id":"mqwd053d"}
-{"time":"2025-09-02T10:16:20.388591665+02:00","level":"INFO","msg":"Starting system monitor"}

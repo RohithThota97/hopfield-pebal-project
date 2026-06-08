@@ -1,8 +1,0 @@
-🎯 Starting training...
-🏗️ Building Hopfield memories...
-   🎯 Target: 50000 ID + 50000 AUX pixels
-   📊 Per class: 2631 (min: 2500, max: 2700)
-   🔍 ID sampling: 5-15 pixels/image (CONSERVATIVE)
-   🔍 OOD sampling: 20-40 pixels/OOD area (CONSERVATIVE)
-   📈 Coverage target: 99.0% of training data
-Building diverse memories:  10%|▎  | 167/1634 [01:29<13:18,  1.84it/s, ID=20065/50000, AUX=7580/50000, MinClass=60, Coverage=9.3%]

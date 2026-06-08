@@ -1,6 +1,0 @@
-🔄 Boosting Update at Epoch 1
-
-🔄 Boosting Step 1: Updating OOD pixel weight distribution...
-Computing pixel energies for boosting: 100%|██████████████████████████| 3268/3268 [03:42<00:00, 14.71it/s]
-✅ Built global pool of 25369 OOD pixels.
-Training Epoch 1:   2%| | 56/3268 [00:14<13:45,  3.89it/s, L_CE=5.2021, L_OOD=-2.2856, L_DIV=0.0398, LR=0.

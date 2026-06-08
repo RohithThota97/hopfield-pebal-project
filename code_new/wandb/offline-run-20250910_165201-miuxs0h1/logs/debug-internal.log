@@ -1,8 +1,0 @@
-{"time":"2025-09-10T16:52:01.637615009+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/offline-run-20250910_165201-miuxs0h1/logs/debug-core.log"}
-{"time":"2025-09-10T16:52:01.741288178+02:00","level":"WARN","msg":"GraphQL client is nil, skipping feature loading"}
-{"time":"2025-09-10T16:52:01.743240385+02:00","level":"INFO","msg":"stream: created new stream","id":"miuxs0h1"}
-{"time":"2025-09-10T16:52:01.74330177+02:00","level":"INFO","msg":"stream: started","id":"miuxs0h1"}
-{"time":"2025-09-10T16:52:01.74336902+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"miuxs0h1"}
-{"time":"2025-09-10T16:52:01.74339372+02:00","level":"INFO","msg":"sender: started","stream_id":"miuxs0h1"}
-{"time":"2025-09-10T16:52:01.74346511+02:00","level":"INFO","msg":"handler: started","stream_id":"miuxs0h1"}
-{"time":"2025-09-10T16:52:01.749587031+02:00","level":"INFO","msg":"Starting system monitor"}

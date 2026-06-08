@@ -1,1 +1,0 @@
-{"_timestamp":1.7469427446101143e+09,"_runtime":16.613129593,"_step":0,"error":"The expanded size of the tensor (128) must match the existing size (66) at non-singleton dimension 3.  Target sizes: [1, 304, 128, 128].  Tensor sizes: [304, 128, 66]","_wandb":{"runtime":16}}

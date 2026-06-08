@@ -1,1 +1,0 @@
-{"step":8910,"_runtime":5666.598947747,"_step":895,"Training/loss_ood":-0.04390322417020798,"Training/epoch_avg_ood":-0.009930680622999984,"Training/beta":32,"_wandb":{"runtime":5666},"epoch":5,"_timestamp":1.757070595333241e+09,"Training/epoch_avg_ce":1.8565588709213652,"Training/loss_ce":1.4650940895080566,"Training/lr":0.001}

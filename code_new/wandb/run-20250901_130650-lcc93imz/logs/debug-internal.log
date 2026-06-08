@@ -1,7 +1,0 @@
-{"time":"2025-09-01T13:06:50.464972233+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250901_130650-lcc93imz/logs/debug-core.log"}
-{"time":"2025-09-01T13:06:50.716012945+02:00","level":"INFO","msg":"stream: created new stream","id":"lcc93imz"}
-{"time":"2025-09-01T13:06:50.716089309+02:00","level":"INFO","msg":"stream: started","id":"lcc93imz"}
-{"time":"2025-09-01T13:06:50.716122296+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"lcc93imz"}
-{"time":"2025-09-01T13:06:50.716189752+02:00","level":"INFO","msg":"handler: started","stream_id":"lcc93imz"}
-{"time":"2025-09-01T13:06:50.716213554+02:00","level":"INFO","msg":"sender: started","stream_id":"lcc93imz"}
-{"time":"2025-09-01T13:06:50.957813014+02:00","level":"INFO","msg":"Starting system monitor"}

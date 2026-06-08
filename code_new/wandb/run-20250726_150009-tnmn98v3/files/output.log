@@ -1,6 +1,0 @@
-2025-07-26 15:00:11,366 - segmentation_head - INFO - SegmentationClassifierHead initialized: in_channels=1280, num_classes=19, dropout_rate=0.1
-Model components setup complete. Using device: cuda
-Could not create validation loader, using train loader for validation
-Building Hopfield memories...
-Processing images for memory building...
-Building memories:   2%|█▎                                                                                    | 25/1634 [00:12<12:45,  2.10it/s]

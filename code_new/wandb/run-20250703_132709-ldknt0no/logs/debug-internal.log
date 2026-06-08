@@ -1,7 +1,0 @@
-{"time":"2025-07-03T13:27:09.314009081+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250703_132709-ldknt0no/logs/debug-core.log"}
-{"time":"2025-07-03T13:27:09.566108795+02:00","level":"INFO","msg":"stream: created new stream","id":"ldknt0no"}
-{"time":"2025-07-03T13:27:09.566250696+02:00","level":"INFO","msg":"stream: started","id":"ldknt0no"}
-{"time":"2025-07-03T13:27:09.566318729+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"ldknt0no"}
-{"time":"2025-07-03T13:27:09.566336092+02:00","level":"INFO","msg":"handler: started","stream_id":"ldknt0no"}
-{"time":"2025-07-03T13:27:09.566413231+02:00","level":"INFO","msg":"sender: started","stream_id":"ldknt0no"}
-{"time":"2025-07-03T13:27:09.875734367+02:00","level":"INFO","msg":"Starting system monitor"}

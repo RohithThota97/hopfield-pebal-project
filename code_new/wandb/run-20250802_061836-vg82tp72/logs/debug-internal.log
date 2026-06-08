@@ -1,7 +1,0 @@
-{"time":"2025-08-02T06:18:36.929240372+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250802_061836-vg82tp72/logs/debug-core.log"}
-{"time":"2025-08-02T06:18:37.187715622+02:00","level":"INFO","msg":"stream: created new stream","id":"vg82tp72"}
-{"time":"2025-08-02T06:18:37.187787389+02:00","level":"INFO","msg":"stream: started","id":"vg82tp72"}
-{"time":"2025-08-02T06:18:37.187824095+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"vg82tp72"}
-{"time":"2025-08-02T06:18:37.187838268+02:00","level":"INFO","msg":"sender: started","stream_id":"vg82tp72"}
-{"time":"2025-08-02T06:18:37.18786199+02:00","level":"INFO","msg":"handler: started","stream_id":"vg82tp72"}
-{"time":"2025-08-02T06:18:37.403585781+02:00","level":"INFO","msg":"Starting system monitor"}

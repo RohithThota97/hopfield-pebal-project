@@ -1,1 +1,0 @@
-{"seg_loss":1.3955581188201904,"ood_loss":0.3331528306007385,"global_step":2220,"_step":222,"seg_grad_std":46.172760009765625,"_timestamp":1.758003196731376e+09,"_runtime":4230.47788924,"lr_proj":0.001,"lr_seg":0.001,"_wandb":{"runtime":4235}}

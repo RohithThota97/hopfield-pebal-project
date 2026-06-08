@@ -1,7 +1,0 @@
-{"time":"2025-09-01T19:14:34.721316509+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250901_191434-ta3g68lz/logs/debug-core.log"}
-{"time":"2025-09-01T19:14:34.972769248+02:00","level":"INFO","msg":"stream: created new stream","id":"ta3g68lz"}
-{"time":"2025-09-01T19:14:34.972873686+02:00","level":"INFO","msg":"stream: started","id":"ta3g68lz"}
-{"time":"2025-09-01T19:14:34.972909031+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"ta3g68lz"}
-{"time":"2025-09-01T19:14:34.972937051+02:00","level":"INFO","msg":"sender: started","stream_id":"ta3g68lz"}
-{"time":"2025-09-01T19:14:34.973007938+02:00","level":"INFO","msg":"handler: started","stream_id":"ta3g68lz"}
-{"time":"2025-09-01T19:14:35.233509597+02:00","level":"INFO","msg":"Starting system monitor"}

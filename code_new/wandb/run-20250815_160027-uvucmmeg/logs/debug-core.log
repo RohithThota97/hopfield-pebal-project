@@ -1,7 +1,0 @@
-{"time":"2025-08-15T16:00:27.755564844+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpezy2ftkc/port-742760.txt","pid":742760,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
-{"time":"2025-08-15T16:00:27.785714759+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":742760}
-{"time":"2025-08-15T16:00:27.785695388+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":45277,"Zone":""}}
-{"time":"2025-08-15T16:00:27.946057043+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:55296"}
-{"time":"2025-08-15T16:00:28.008531391+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"uvucmmeg","id":"127.0.0.1:55296"}
-{"time":"2025-08-15T16:00:28.283436149+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"uvucmmeg","id":"127.0.0.1:55296"}
-{"time":"2025-08-17T18:30:38.426810871+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

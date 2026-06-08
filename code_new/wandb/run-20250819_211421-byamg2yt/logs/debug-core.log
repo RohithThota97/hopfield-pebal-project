@@ -1,7 +1,0 @@
-{"time":"2025-08-19T21:14:21.432513889+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp_dssgnc7/port-3303043.txt","pid":3303043,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
-{"time":"2025-08-19T21:14:21.438136437+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3303043}
-{"time":"2025-08-19T21:14:21.438137468+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":44231,"Zone":""}}
-{"time":"2025-08-19T21:14:21.61644151+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:49220"}
-{"time":"2025-08-19T21:14:21.64042377+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"byamg2yt","id":"127.0.0.1:49220"}
-{"time":"2025-08-19T21:14:21.887875656+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"byamg2yt","id":"127.0.0.1:49220"}
-{"time":"2025-08-19T21:18:40.330422924+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

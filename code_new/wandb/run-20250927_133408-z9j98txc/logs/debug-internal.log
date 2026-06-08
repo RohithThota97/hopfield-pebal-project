@@ -1,9 +1,0 @@
-{"time":"2025-09-27T13:34:09.132926604+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250927_133408-z9j98txc/logs/debug-core.log"}
-{"time":"2025-09-27T13:34:09.387041214+02:00","level":"INFO","msg":"stream: created new stream","id":"z9j98txc"}
-{"time":"2025-09-27T13:34:09.387150032+02:00","level":"INFO","msg":"stream: started","id":"z9j98txc"}
-{"time":"2025-09-27T13:34:09.387183661+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"z9j98txc"}
-{"time":"2025-09-27T13:34:09.387221218+02:00","level":"INFO","msg":"sender: started","stream_id":"z9j98txc"}
-{"time":"2025-09-27T13:34:09.387239605+02:00","level":"INFO","msg":"handler: started","stream_id":"z9j98txc"}
-{"time":"2025-09-27T13:34:09.640214325+02:00","level":"INFO","msg":"Starting system monitor"}
-{"time":"2025-09-27T16:21:42.190072693+02:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/z9j98txc/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}
-{"time":"2025-09-27T16:21:44.543053629+02:00","level":"INFO","msg":"api: retrying HTTP error","status":429,"url":"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/z9j98txc/file_stream","body":"{\"error\":\"rate limit exceeded\"}"}

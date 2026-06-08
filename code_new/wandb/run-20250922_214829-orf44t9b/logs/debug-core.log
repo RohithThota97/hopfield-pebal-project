@@ -1,7 +1,0 @@
-{"time":"2025-09-22T21:48:29.593577753+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpoeexfttf/port-747130.txt","pid":747130,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
-{"time":"2025-09-22T21:48:29.59908984+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":747130}
-{"time":"2025-09-22T21:48:29.599070486+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":33393,"Zone":""}}
-{"time":"2025-09-22T21:48:29.780734166+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:44350"}
-{"time":"2025-09-22T21:48:29.837500927+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"orf44t9b","id":"127.0.0.1:44350"}
-{"time":"2025-09-22T21:48:30.110623333+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"orf44t9b","id":"127.0.0.1:44350"}
-{"time":"2025-09-22T21:48:49.691209199+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

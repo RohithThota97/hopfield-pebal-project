@@ -1,7 +1,0 @@
-{"time":"2025-08-19T21:28:27.1011616+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpx_ceep_0/port-3327083.txt","pid":3327083,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
-{"time":"2025-08-19T21:28:27.131064831+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3327083}
-{"time":"2025-08-19T21:28:27.131065346+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":40857,"Zone":""}}
-{"time":"2025-08-19T21:28:27.290409278+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:43392"}
-{"time":"2025-08-19T21:28:27.322139323+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"iiz37esi","id":"127.0.0.1:43392"}
-{"time":"2025-08-19T21:28:27.577666876+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"iiz37esi","id":"127.0.0.1:43392"}
-{"time":"2025-08-19T23:33:16.834120362+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

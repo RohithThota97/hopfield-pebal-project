@@ -1,7 +1,0 @@
-{"time":"2025-09-27T13:50:36.508546882+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpzbr840gk/port-3761369.txt","pid":3761369,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
-{"time":"2025-09-27T13:50:36.514019875+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":3761369}
-{"time":"2025-09-27T13:50:36.514017734+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":34815,"Zone":""}}
-{"time":"2025-09-27T13:50:36.698810619+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:45630"}
-{"time":"2025-09-27T13:50:36.720585999+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"nrvvipah","id":"127.0.0.1:45630"}
-{"time":"2025-09-27T13:50:36.968815026+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"nrvvipah","id":"127.0.0.1:45630"}
-{"time":"2025-09-27T17:33:23.066637308+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

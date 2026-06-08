@@ -1,8 +1,0 @@
-{"time":"2025-09-20T21:59:50.072879016+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250920_215949-wzpsego2/logs/debug-core.log"}
-{"time":"2025-09-20T21:59:50.340146153+02:00","level":"INFO","msg":"stream: created new stream","id":"wzpsego2"}
-{"time":"2025-09-20T21:59:50.340218416+02:00","level":"INFO","msg":"stream: started","id":"wzpsego2"}
-{"time":"2025-09-20T21:59:50.340288436+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"wzpsego2"}
-{"time":"2025-09-20T21:59:50.340346322+02:00","level":"INFO","msg":"handler: started","stream_id":"wzpsego2"}
-{"time":"2025-09-20T21:59:50.340372433+02:00","level":"INFO","msg":"sender: started","stream_id":"wzpsego2"}
-{"time":"2025-09-20T21:59:50.628577856+02:00","level":"INFO","msg":"Starting system monitor"}
-{"time":"2025-09-22T01:57:31.75917886+02:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/rohiththota79-fau-erlangen-n-rnberg/ood-seg-improved/wzpsego2/file_stream\": dial tcp 35.186.228.49:443: connect: connection timed out"}

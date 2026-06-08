@@ -1,8 +1,0 @@
-{"time":"2025-09-01T21:32:33.187633813+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250901_213232-jkntfyva/logs/debug-core.log"}
-{"time":"2025-09-01T21:32:33.441020231+02:00","level":"INFO","msg":"stream: created new stream","id":"jkntfyva"}
-{"time":"2025-09-01T21:32:33.441103147+02:00","level":"INFO","msg":"stream: started","id":"jkntfyva"}
-{"time":"2025-09-01T21:32:33.441147762+02:00","level":"INFO","msg":"sender: started","stream_id":"jkntfyva"}
-{"time":"2025-09-01T21:32:33.441144161+02:00","level":"INFO","msg":"handler: started","stream_id":"jkntfyva"}
-{"time":"2025-09-01T21:32:33.441225088+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"jkntfyva"}
-{"time":"2025-09-01T21:32:33.668052811+02:00","level":"INFO","msg":"Starting system monitor"}
-{"time":"2025-09-02T05:07:18.66900594+02:00","level":"ERROR","msg":"monitor: error sampling metrics: open /proc/2301530/statm: no such file or directory\nopen /proc/2301530/stat: no such file or directory\nopen /proc/2301530/status: no such file or directory"}

@@ -1,7 +1,0 @@
-{"time":"2025-09-27T13:31:44.101677994+02:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpu3nsc4fq/port-2728918.txt","pid":2728918,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
-{"time":"2025-09-27T13:31:44.10298711+02:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":2728918}
-{"time":"2025-09-27T13:31:44.10299209+02:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":33653,"Zone":""}}
-{"time":"2025-09-27T13:31:44.289555243+02:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:55232"}
-{"time":"2025-09-27T13:31:44.416889952+02:00","level":"INFO","msg":"handleInformInit: received","streamId":"fc39ojql","id":"127.0.0.1:55232"}
-{"time":"2025-09-27T13:31:44.672776513+02:00","level":"INFO","msg":"handleInformInit: stream started","streamId":"fc39ojql","id":"127.0.0.1:55232"}
-{"time":"2025-09-27T13:33:38.795006513+02:00","level":"INFO","msg":"Parent process exited, terminating service process."}

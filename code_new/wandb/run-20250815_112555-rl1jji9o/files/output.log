@@ -1,5 +1,0 @@
-   🎯 Target: 50000 ID + 50000 AUX pixels
-   📊 Per class: 2631 (min: 2500, max: 2700)
-   🔍 ID sampling: 10-30 pixels/image
-   🔍 OOD sampling: 100-175 pixels/OOD area
-Building memories:  43%|██████████▎             | 705/1634 [06:47<08:55,  1.73it/s, ID=44444/50000, AUX=50000/50000, MinClass=519]

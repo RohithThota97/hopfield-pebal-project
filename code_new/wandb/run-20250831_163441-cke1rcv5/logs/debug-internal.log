@@ -1,7 +1,0 @@
-{"time":"2025-08-31T16:34:41.980195058+02:00","level":"INFO","msg":"stream: starting","core version":"0.20.1","symlink path":"/home/ha51dybi/PEBAL/code/wandb/run-20250831_163441-cke1rcv5/logs/debug-core.log"}
-{"time":"2025-08-31T16:34:42.234423108+02:00","level":"INFO","msg":"stream: created new stream","id":"cke1rcv5"}
-{"time":"2025-08-31T16:34:42.234510767+02:00","level":"INFO","msg":"stream: started","id":"cke1rcv5"}
-{"time":"2025-08-31T16:34:42.234559796+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"cke1rcv5"}
-{"time":"2025-08-31T16:34:42.234615888+02:00","level":"INFO","msg":"handler: started","stream_id":"cke1rcv5"}
-{"time":"2025-08-31T16:34:42.234658874+02:00","level":"INFO","msg":"sender: started","stream_id":"cke1rcv5"}
-{"time":"2025-08-31T16:34:42.443812376+02:00","level":"INFO","msg":"Starting system monitor"}
